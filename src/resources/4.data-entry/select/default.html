@@ -1,0 +1,9 @@
+<nz-select [(ngModel)]="${1}" [nzPlaceHolder]="'${2}'"${3: [nzAllowClear]="true" }>
+    <nz-option 
+        *ngFor="let ${5:item} of ${4:list}" 
+        [nzLabel]="${5:item}.label"
+        [nzValue]="${5:item}.value"
+        [nzDisabled]="${5:item}.disabled">
+    </nz-option>
+</nz-select>
+$0

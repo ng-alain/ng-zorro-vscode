@@ -1,0 +1,6 @@
+.vscode/**
+node_modules/**
+src/**
+.editorconfig
+.gitignore
+vsc-extension-quickstart.md

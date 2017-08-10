@@ -1,0 +1,6 @@
+# IDE
+.vscode
+
+/node_modules
+npm-debug.log
+*.vsix

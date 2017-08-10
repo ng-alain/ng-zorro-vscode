@@ -1,0 +1,34 @@
+<nz-table #nzTable [nzDataSource]="${1}" [nzPageSize]="${2:10}">
+    <thead nz-thead>
+        <tr>
+            <th nz-th><span>标题</span></th>
+            $3
+            <th nz-th><span></span></th>
+        </tr>
+    </thead>
+    <tbody nz-tbody>
+        <tr nz-tbody-tr *ngFor="let i of nzTable.data">
+            <td nz-td>{{i.title}}</td>
+            $4
+            <td nz-td>
+                <span>
+                    <a href="#" (click)="edit(i)">编辑</a>
+                    <span nz-table-divider></span>
+                    <a href="#" (click)="del(i)">删除</a>${5:
+                    <span nz-table-divider></span>
+                    <nz-dropdown>
+                        <a class="ant-dropdown-link" nz-dropdown>
+                            更多 <i class="anticon anticon-down"></i>
+                        </a>
+                        <ul nz-menu>
+                            <li nz-menu-item>
+                                <a (click)="">active</a>
+                            </li>
+                        </ul>
+                    </nz-dropdown>
+                    }
+                </span>
+            </td>
+        </tr>
+    </tbody>
+</nz-table>

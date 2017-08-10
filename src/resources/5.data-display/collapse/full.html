@@ -1,0 +1,10 @@
+<nz-collapseset${1: [nzBordered]="false"}${2: [nzAccordion]="true"}>
+    <nz-collapse 
+        *ngFor="let ${4:item} of ${3:list}" 
+        [nzTitle]="${4:item}.title"
+        [nzActive]="${4:item}.active"
+        [nzDisabled]="${4:item}.disabled">
+        ${5}
+    </nz-collapse>
+</nz-collapseset>
+$0

@@ -1,0 +1,19 @@
+<nz-modal
+    [(nzVisible)]="isVisible"
+    [nzConfirmLoading]="false|true"
+    [nzTitle]="'标题'"
+    [nzClosable]="false|true"
+    [nzBody]="'这是内容'"
+    [nzWidth]="520"
+    [nzContent]="modalContent"
+    [nzOkText]="'确定'"
+    [nzCancelText]="'取消'"
+    [nzMaskClosable]="false|true"
+    [nzZIndex]="1000"
+    [nzStyle]="{}"
+    [nzWrapClassName]="''"
+    (nzOnCancel)="handleCancel($event)"
+    (nzOnOk)="handleOk($event)">
+    <ng-template #modalContent>对话框的内容</ng-template>
+</nz-modal>
+$0
