@@ -39,6 +39,7 @@
         ]
     },
     "scripts": {
+        "publish": "run-s build package",
         "package": "vsce package",
         "watch": "gulp watch",
         "build": "gulp prod"

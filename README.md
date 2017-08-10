@@ -14,6 +14,8 @@
 
 ## 文档
 
+更多API接口请参考[ng-zorro-antd](https://github.com/NG-ZORRO/ng-zorro-antd)。
+
 ### 根组件
 
 Trigger | Description
@@ -85,10 +87,10 @@ input-number | 带数字输入框
 input-prefix | 带有前缀图标的输入框
 input-suffix | 带有后缀图标的输入框
 input-textarea | 多行输入框
+rate | 评分组件
 radio-button | 按钮样式的单选组合
 radio | 单选框（注：必须配合nz-radio-group使用）
 radio-group | 单选框组合，用于包裹一组 nz-radio/nz-radio-button
-rate | 评分组件
 select | 选择器
 select-search | 搜索框选择器
 slider | 滑动输入条

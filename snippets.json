@@ -357,13 +357,6 @@
         "scope": ""
     }
 
-    , "data-entry rate": {
-        "prefix": "nz-rate",
-        "body": "<nz-rate [(ngModel)]=\"${1}\" [nzCount]=\"${2}\"${3: [nzDefaultValue]=\"${4}\"}${5: [nzAllowHalf]=\"true\"}${6: [nzDisabled]=\"true\"}></nz-rate>",
-        "description": "评分组件",
-        "scope": ""
-    }
-
     , "data-entry radio button": {
         "prefix": "nz-radio-button",
         "body": "<label nz-radio-button [nzValue]=\"${1}\"${2: [nzDisabled]=\"${3}\"}>\r\n    <span>$4</span>\r\n</label>\r\n$0",
@@ -382,6 +375,13 @@
         "prefix": "nz-radio-group",
         "body": "<nz-radio-group [(ngModel)]=\"${1}\"${2: [nzSize]=\"'${3:large|small}'\"}>\r\n    $0\r\n</nz-radio-group>",
         "description": "单选框组合，用于包裹一组 nz-radio/nz-radio-button",
+        "scope": ""
+    }
+
+    , "data-entry rate": {
+        "prefix": "nz-rate",
+        "body": "<nz-rate [(ngModel)]=\"${1}\" [nzCount]=\"${2}\"${3: [nzDefaultValue]=\"${4}\"}${5: [nzAllowHalf]=\"true\"}${6: [nzDisabled]=\"true\"}></nz-rate>",
+        "description": "评分组件",
         "scope": ""
     }
 
@@ -438,6 +438,76 @@
         "prefix": "nz-timepicker-format",
         "body": "<nz-timepicker [(ngModel)]=\"${1}\" [nzFormat]=\"${2:HH:mm:ss}\" [nzPlaceHolder]=\"'${3:请选择时间}'\"${4: [nzSize]=\"'${5:large|small}'\"}></nz-timepicker>\r\n$0",
         "description": "输入或选择时间的控件（指定时间格式）",
+        "scope": ""
+    }
+
+    , "feedback alert body": {
+        "prefix": "nz-alert-body",
+        "body": "<nz-alert [nzType]=\"'${1:success|info|warning|error}'\"${2: [nzShowIcon]=\"true\"}\n    ${3: [nzCloseable]=\"true\"}${4: [nzCloseText]=\"'${5:关闭}'\"}${6: (nzOnCloses)=\"${7:_close}(\\$event)\"}\n    ${8: [nzBanner]=\"true\"}>\n    <div alert-body>${9}</div>${10:\n    <div alert-description></div>}\n</nz-alert>\n$0",
+        "description": "警告提示（标题与内容使用ng-template格式）",
+        "scope": ""
+    }
+
+    , "feedback alert": {
+        "prefix": "nz-alert",
+        "body": "<nz-alert [nzType]=\"'${1:success|info|warning|error}'\"\n    [nzMessage]=\"'${2}'\"${3: [nzDescription]=\"'${4}'\"}${5: [nzShowIcon]=\"true\"}${6: [nzCloseable]=\"true\"}></nz-alert>\n$0",
+        "description": "警告提示",
+        "scope": ""
+    }
+
+    , "feedback alert full": {
+        "prefix": "nz-alert-full",
+        "body": "<nz-alert [nzType]=\"'${1:success|info|warning|error}'\"\n    [nzMessage]=\"'${2}'\"${3: [nzDescription]=\"'${4}'\"}${5: [nzShowIcon]=\"true\"}\n    ${6: [nzCloseable]=\"true\"}${7: [nzCloseText]=\"'${8:关闭}'\"}${9: (nzOnCloses)=\"${10:_close}(\\$event)\"}\n    ${11: [nzBanner]=\"true\"}></nz-alert>\n$0",
+        "description": "警告提示（完整结构）",
+        "scope": ""
+    }
+
+    , "feedback modal": {
+        "prefix": "nz-modal",
+        "body": "<nz-modal\n    [(nzVisible)]=\"isVisible\"\n    [nzConfirmLoading]=\"false|true\"\n    [nzTitle]=\"'标题'\"\n    [nzClosable]=\"false|true\"\n    [nzBody]=\"'这是内容'\"\n    [nzWidth]=\"520\"\n    [nzContent]=\"modalContent\"\n    [nzOkText]=\"'确定'\"\n    [nzCancelText]=\"'取消'\"\n    [nzMaskClosable]=\"false|true\"\n    [nzZIndex]=\"1000\"\n    [nzStyle]=\"{}\"\n    [nzWrapClassName]=\"''\"\n    (nzOnCancel)=\"handleCancel(\\$event)\"\n    (nzOnOk)=\"handleOk(\\$event)\">\n    <ng-template #modalContent>对话框的内容</ng-template>\n</nz-modal>\n$0",
+        "description": "对话框（完整结构，因为需要放置HTML的情况时，认为是比较特别的需求；平常尽可能采用NzModalService服务调用方式）",
+        "scope": ""
+    }
+
+    , "feedback popconfirm": {
+        "prefix": "nz-popconfirm",
+        "body": "<nz-popconfirm [nzTitle]=\"'${1:确定要删除吗？}'\" (nzOnConfirm)=\"${2:confirm(i)}\">\n    <a nz-popconfirm>${3:删除}</a>\n</nz-popconfirm>\n$0",
+        "description": "气泡确认框",
+        "scope": ""
+    }
+
+    , "feedback popconfirm full": {
+        "prefix": "nz-popconfirm-full",
+        "body": "<nz-popconfirm [nzTitle]=\"'${1:确定要删除吗？}'\"\n    [nzOkText]=\"'确定'\"\n    [nzCancelText]=\"'取消'\"\n    (nzOnConfirm)=\"confirm(i)\"\n    (nzOnCancel)=\"cancel(\\$event)\"\n    [nzCondition]=\"true\"\n    [nzPlacement]=\"'(top|left|right|bottom)(Top|Left|Right|Bottom)?'\"\n    [nzTrigger]=\"'hover|focus|click'\"\n    [(nzVisible)]=\"isVisible\"\n    (nzVisibleChange)=\"visibleChange()\"\n    [nzOverlayClassName]=\"''\"\n    [nzOverlayStyle]=\"{}\">\n    <a nz-popconfirm>按钮内容</a>\n</nz-popconfirm>\n$0",
+        "description": "气泡确认框（完整结构）",
+        "scope": ""
+    }
+
+    , "feedback progress circle": {
+        "prefix": "nz-progress-circle",
+        "body": "<nz-progress [(ngModel)]=\"${1}\" [nzStatus]=\"'${2:success|exception|active}'\" [nzType]=\"'circle'\"\n     [nzStrokeWidth]=\"${3:6}\" [nzWidth]=\"${4:132}\"></nz-progress>\n$0",
+        "description": "进度条（圈形）",
+        "scope": ""
+    }
+
+    , "feedback progress": {
+        "prefix": "nz-progress",
+        "body": "<nz-progress [(ngModel)]=\"${1}\" [nzType]=\"'${2:circle|line}'\"\n    [nzStatus]=\"'${3:success|exception|active}'\"${4: [nzFormat]=\"function\"}${5: [nzShowInfo]=\"false\"}></nz-progress>\n$0",
+        "description": "进度条（完整结构）",
+        "scope": ""
+    }
+
+    , "feedback progress line": {
+        "prefix": "nz-progress-line",
+        "body": "<nz-progress [(ngModel)]=\"${1}\" [nzStatus]=\"'${2:success|exception|active}'\" [nzType]=\"'line'\"\n     [nzStrokeWidth]=\"${3:10}\"></nz-progress>\n$0",
+        "description": "进度条（线形）",
+        "scope": ""
+    }
+
+    , "feedback spin": {
+        "prefix": "nz-spin",
+        "body": "<nz-spin${1: [nzTip]=\"'${2:加载中...}'\"}${3: [nzSize]=\"'${4:small|large|default}'\"}${5: [nzSpinning]=\"false\"}></nz-spin>\n$0",
+        "description": "加载中（用于页面和区块的加载中状态）",
         "scope": ""
     }
 
@@ -683,76 +753,6 @@
         "prefix": "nz-tooltip-full",
         "body": "<nz-tooltip ${2: [nzPlacement]=\"${3:(top|left|right|bottom)}\"}${4: [nzTrigger]=\"${5:hover|focus|click}\"}>\r\n    <span nz-tooltip>${1}</span>\r\n    <ng-template #nzTemplate>\r\n        ${6}\r\n    </ng-template>\r\n</nz-popover>\r\n$0",
         "description": "文字提示（完整结构）",
-        "scope": ""
-    }
-
-    , "feedback alert body": {
-        "prefix": "nz-alert-body",
-        "body": "<nz-alert [nzType]=\"'${1:success|info|warning|error}'\"${2: [nzShowIcon]=\"true\"}\n    ${3: [nzCloseable]=\"true\"}${4: [nzCloseText]=\"'${5:关闭}'\"}${6: (nzOnCloses)=\"${7:_close}(\\$event)\"}\n    ${8: [nzBanner]=\"true\"}>\n    <div alert-body>${9}</div>${10:\n    <div alert-description></div>}\n</nz-alert>\n$0",
-        "description": "警告提示（标题与内容使用ng-template格式）",
-        "scope": ""
-    }
-
-    , "feedback alert": {
-        "prefix": "nz-alert",
-        "body": "<nz-alert [nzType]=\"'${1:success|info|warning|error}'\"\n    [nzMessage]=\"'${2}'\"${3: [nzDescription]=\"'${4}'\"}${5: [nzShowIcon]=\"true\"}${6: [nzCloseable]=\"true\"}></nz-alert>\n$0",
-        "description": "警告提示",
-        "scope": ""
-    }
-
-    , "feedback alert full": {
-        "prefix": "nz-alert-full",
-        "body": "<nz-alert [nzType]=\"'${1:success|info|warning|error}'\"\n    [nzMessage]=\"'${2}'\"${3: [nzDescription]=\"'${4}'\"}${5: [nzShowIcon]=\"true\"}\n    ${6: [nzCloseable]=\"true\"}${7: [nzCloseText]=\"'${8:关闭}'\"}${9: (nzOnCloses)=\"${10:_close}(\\$event)\"}\n    ${11: [nzBanner]=\"true\"}></nz-alert>\n$0",
-        "description": "警告提示（完整结构）",
-        "scope": ""
-    }
-
-    , "feedback modal": {
-        "prefix": "nz-modal",
-        "body": "<nz-modal\n    [(nzVisible)]=\"isVisible\"\n    [nzConfirmLoading]=\"false|true\"\n    [nzTitle]=\"'标题'\"\n    [nzClosable]=\"false|true\"\n    [nzBody]=\"'这是内容'\"\n    [nzWidth]=\"520\"\n    [nzContent]=\"modalContent\"\n    [nzOkText]=\"'确定'\"\n    [nzCancelText]=\"'取消'\"\n    [nzMaskClosable]=\"false|true\"\n    [nzZIndex]=\"1000\"\n    [nzStyle]=\"{}\"\n    [nzWrapClassName]=\"''\"\n    (nzOnCancel)=\"handleCancel(\\$event)\"\n    (nzOnOk)=\"handleOk(\\$event)\">\n    <ng-template #modalContent>对话框的内容</ng-template>\n</nz-modal>\n$0",
-        "description": "对话框（完整结构，因为需要放置HTML的情况时，认为是比较特别的需求；平常尽可能采用NzModalService服务调用方式）",
-        "scope": ""
-    }
-
-    , "feedback popconfirm": {
-        "prefix": "nz-popconfirm",
-        "body": "<nz-popconfirm [nzTitle]=\"'${1:确定要删除吗？}'\" (nzOnConfirm)=\"${2:confirm(i)}\">\n    <a nz-popconfirm>${3:删除}</a>\n</nz-popconfirm>\n$0",
-        "description": "气泡确认框",
-        "scope": ""
-    }
-
-    , "feedback popconfirm full": {
-        "prefix": "nz-popconfirm-full",
-        "body": "<nz-popconfirm [nzTitle]=\"'${1:确定要删除吗？}'\"\n    [nzOkText]=\"'确定'\"\n    [nzCancelText]=\"'取消'\"\n    (nzOnConfirm)=\"confirm(i)\"\n    (nzOnCancel)=\"cancel(\\$event)\"\n    [nzCondition]=\"true\"\n    [nzPlacement]=\"'(top|left|right|bottom)(Top|Left|Right|Bottom)?'\"\n    [nzTrigger]=\"'hover|focus|click'\"\n    [(nzVisible)]=\"isVisible\"\n    (nzVisibleChange)=\"visibleChange()\"\n    [nzOverlayClassName]=\"''\"\n    [nzOverlayStyle]=\"{}\">\n    <a nz-popconfirm>按钮内容</a>\n</nz-popconfirm>\n$0",
-        "description": "气泡确认框（完整结构）",
-        "scope": ""
-    }
-
-    , "feedback progress circle": {
-        "prefix": "nz-progress-circle",
-        "body": "<nz-progress [(ngModel)]=\"${1}\" [nzStatus]=\"'${2:success|exception|active}'\" [nzType]=\"'circle'\"\n     [nzStrokeWidth]=\"${3:6}\" [nzWidth]=\"${4:132}\"></nz-progress>\n$0",
-        "description": "进度条（圈形）",
-        "scope": ""
-    }
-
-    , "feedback progress": {
-        "prefix": "nz-progress",
-        "body": "<nz-progress [(ngModel)]=\"${1}\" [nzType]=\"'${2:circle|line}'\"\n    [nzStatus]=\"'${3:success|exception|active}'\"${4: [nzFormat]=\"function\"}${5: [nzShowInfo]=\"false\"}></nz-progress>\n$0",
-        "description": "进度条（完整结构）",
-        "scope": ""
-    }
-
-    , "feedback progress line": {
-        "prefix": "nz-progress-line",
-        "body": "<nz-progress [(ngModel)]=\"${1}\" [nzStatus]=\"'${2:success|exception|active}'\" [nzType]=\"'line'\"\n     [nzStrokeWidth]=\"${3:10}\"></nz-progress>\n$0",
-        "description": "进度条（线形）",
-        "scope": ""
-    }
-
-    , "feedback spin": {
-        "prefix": "nz-spin",
-        "body": "<nz-spin${1: [nzTip]=\"'${2:加载中...}'\"}${3: [nzSize]=\"'${4:small|large|default}'\"}${5: [nzSpinning]=\"false\"}></nz-spin>\n$0",
-        "description": "加载中（用于页面和区块的加载中状态）",
         "scope": ""
     }  
 }

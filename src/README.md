@@ -14,6 +14,8 @@
 
 ## 文档
 
+更多API接口请参考[ng-zorro-antd](https://github.com/NG-ZORRO/ng-zorro-antd)。
+
 {{#each @global.i18n}}
 ### {{ title }}
 
