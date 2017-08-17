@@ -9,35 +9,42 @@
 
     , "general button": {
         "prefix": "nz-button",
-        "body": "<button nz-button [nzType]=\"'${2:primary|dashed|danger|default}'\"${3: [nzSize]=\"'${4:small|large}'\"}>\r\n    <span>$1</span>\r\n</button>",
+        "body": "<button nz-button (click)=\"${2}\" [nzType]=\"'${3:primary|dashed|danger|default}'\"${4: [nzSize]=\"'${5:small|large}'\"}>\n    <span>$1</span>\n</button>\n$0",
         "description": "按钮（只含type&size）",
         "scope": ""
     }
 
     , "general button full": {
         "prefix": "nz-button-full",
-        "body": "<button nz-button [nzType]=\"'${2:primary|dashed|danger|default}'\"${3: [nzSize]=\"'${4:small|large}'\"}${5: nzGhost}${6: nzLoading}${7: nzShape}>\r\n    <span>$1</span>\r\n</button>",
+        "body": "<button nz-button (click)=\"${2}\" [nzType]=\"'${3:primary|dashed|danger|default}'\"${4: [nzShape]=\"'circle'\"}${5: [nzSize]=\"'${6:small|large}'\"}${7: [nzLoading]=\"true\"}${8: [nzGhost]=\"true\"}>\n    <span>$1</span>\n</button>\n$0",
         "description": "一个完整指令的按钮",
+        "scope": ""
+    }
+
+    , "general button group": {
+        "prefix": "nz-button-group",
+        "body": "<nz-button-group${1: [nzSize]=\"'${2:small|large}'\"}>\n    <button nz-button (click)=\"${4}\"${5: [nzType]=\"'${6:primary|dashed|danger|default}'\"}>\n        <span>$3</span>\n    </button>\n    $0\n</nz-button-group>",
+        "description": "general button group",
         "scope": ""
     }
 
     , "general button icon text left": {
         "prefix": "nz-button-icon-text-left",
-        "body": "<button nz-button [nzType]=\"'${3:primary|dashed|danger|default}'\" [nzShape]=\"'${4:circle}'\">\r\n    <span>${1}</span><i class=\"anticon anticon-${2}\"></i>\r\n</button>",
+        "body": "<button nz-button (click)=\"${3}\" [nzType]=\"'${4:primary|dashed|danger|default}'\"${5: [nzShape]=\"'circle'\"}>\n    <span>${1}</span><i class=\"anticon anticon-${2}\"></i>\n</button>\n$0",
         "description": "文本在左边的图标按钮",
         "scope": ""
     }
 
     , "general button icon text right": {
         "prefix": "nz-button-icon-text-right",
-        "body": "<button nz-button [nzType]=\"'${3:primary|dashed|danger|default}'\" [nzShape]=\"'${4:circle}'\">\r\n    <i class=\"anticon anticon-${2}\"></i><span>${1}</span>\r\n</button>",
+        "body": "<button nz-button (click)=\"${3}\" [nzType]=\"'${4:primary|dashed|danger|default}'\"${5: [nzShape]=\"'circle'\"}>\n    <i class=\"anticon anticon-${2}\"></i><span>${1}</span>\n</button>\n$0",
         "description": "文本在右边的图标按钮",
         "scope": ""
     }
 
     , "general button icon": {
         "prefix": "nz-button-icon",
-        "body": "<button nz-button [nzType]=\"'${2:primary|dashed|danger|default}'\" [nzShape]=\"'${3:circle}'\">\r\n    <i class=\"anticon anticon-${1}\"></i>\r\n</button>",
+        "body": "<button nz-button (click)=\"${2}\" [nzType]=\"'${3:primary|dashed|danger|default}'\"${4: [nzShape]=\"'circle'\"}>\n    <i class=\"anticon anticon-${1}\"></i>\n</button>\n$0",
         "description": "图标按钮",
         "scope": ""
     }
@@ -79,22 +86,29 @@
 
     , "layout layout": {
         "prefix": "nz-layout",
-        "body": "<nz-layout>\r\n    <nz-header>\r\n        $1\r\n    </nz-header>\r\n    <nz-content>\r\n\r\n    </nz-content>\r\n    <nz-footer>\r\n\r\n    </nz-footer>\r\n</nz-layout>",
+        "body": "<nz-layout>\n    <nz-header>\n        $0\n    </nz-header>\n    <nz-content>\n\n    </nz-content>\n    <nz-footer>\n\n    </nz-footer>\n</nz-layout>",
         "description": "上中下 Layout 布局",
         "scope": ""
     }
 
     , "layout layout sider": {
         "prefix": "nz-layout-sider",
-        "body": "<nz-sider [nzCollapsible]=\"true\"${1: [nzWidth]=\"${2:200}\"}${3: [nzCollapsedWidth]=\"${4:64}\"}>\r\n    $5\r\n</nz-sider>",
+        "body": "<nz-sider [nzCollapsible]=\"true\"${1: [nzWidth]=\"${2:200}\"}${3: [nzCollapsedWidth]=\"${4:64}\"}>\n    $0\n</nz-sider>",
         "description": "侧边栏",
         "scope": ""
     }
 
     , "navigation breadcrumb": {
         "prefix": "nz-breadcrumb",
-        "body": "<nz-breadcrumb${1: [nzSeparator]=\"'${2:>}'\"}>\r\n    <nz-breadcrumb-item>\r\n        $3\r\n    </nz-breadcrumb-item>\r\n    $4\r\n</nz-breadcrumb>",
+        "body": "<nz-breadcrumb${1: [nzSeparator]=\"'${2:>}'\"}>\n    <nz-breadcrumb-item>\n        <a [routerLink]=\"['/${3}']\">${4}</a>\n    </nz-breadcrumb-item>\n    $0\n</nz-breadcrumb>",
         "description": "面包屑",
+        "scope": ""
+    }
+
+    , "navigation breadcrumb icon": {
+        "prefix": "nz-breadcrumb-icon",
+        "body": "<nz-breadcrumb-item>\n    <a [routerLink]=\"['/${1}']\"><i class=\"anticon anticon-${2:home}\"></i>${3:<span>${4:首页}</span>}</a>\n</nz-breadcrumb-item>\n$0",
+        "description": "navigation breadcrumb icon",
         "scope": ""
     }
 
@@ -441,76 +455,6 @@
         "scope": ""
     }
 
-    , "feedback alert body": {
-        "prefix": "nz-alert-body",
-        "body": "<nz-alert [nzType]=\"'${1:success|info|warning|error}'\"${2: [nzShowIcon]=\"true\"}\n    ${3: [nzCloseable]=\"true\"}${4: [nzCloseText]=\"'${5:关闭}'\"}${6: (nzOnCloses)=\"${7:_close}(\\$event)\"}\n    ${8: [nzBanner]=\"true\"}>\n    <div alert-body>${9}</div>${10:\n    <div alert-description></div>}\n</nz-alert>\n$0",
-        "description": "警告提示（标题与内容使用ng-template格式）",
-        "scope": ""
-    }
-
-    , "feedback alert": {
-        "prefix": "nz-alert",
-        "body": "<nz-alert [nzType]=\"'${1:success|info|warning|error}'\"\n    [nzMessage]=\"'${2}'\"${3: [nzDescription]=\"'${4}'\"}${5: [nzShowIcon]=\"true\"}${6: [nzCloseable]=\"true\"}></nz-alert>\n$0",
-        "description": "警告提示",
-        "scope": ""
-    }
-
-    , "feedback alert full": {
-        "prefix": "nz-alert-full",
-        "body": "<nz-alert [nzType]=\"'${1:success|info|warning|error}'\"\n    [nzMessage]=\"'${2}'\"${3: [nzDescription]=\"'${4}'\"}${5: [nzShowIcon]=\"true\"}\n    ${6: [nzCloseable]=\"true\"}${7: [nzCloseText]=\"'${8:关闭}'\"}${9: (nzOnCloses)=\"${10:_close}(\\$event)\"}\n    ${11: [nzBanner]=\"true\"}></nz-alert>\n$0",
-        "description": "警告提示（完整结构）",
-        "scope": ""
-    }
-
-    , "feedback modal": {
-        "prefix": "nz-modal",
-        "body": "<nz-modal\n    [(nzVisible)]=\"isVisible\"\n    [nzConfirmLoading]=\"false|true\"\n    [nzTitle]=\"'标题'\"\n    [nzClosable]=\"false|true\"\n    [nzBody]=\"'这是内容'\"\n    [nzWidth]=\"520\"\n    [nzContent]=\"modalContent\"\n    [nzOkText]=\"'确定'\"\n    [nzCancelText]=\"'取消'\"\n    [nzMaskClosable]=\"false|true\"\n    [nzZIndex]=\"1000\"\n    [nzStyle]=\"{}\"\n    [nzWrapClassName]=\"''\"\n    (nzOnCancel)=\"handleCancel(\\$event)\"\n    (nzOnOk)=\"handleOk(\\$event)\">\n    <ng-template #modalContent>对话框的内容</ng-template>\n</nz-modal>\n$0",
-        "description": "对话框（完整结构，因为需要放置HTML的情况时，认为是比较特别的需求；平常尽可能采用NzModalService服务调用方式）",
-        "scope": ""
-    }
-
-    , "feedback popconfirm": {
-        "prefix": "nz-popconfirm",
-        "body": "<nz-popconfirm [nzTitle]=\"'${1:确定要删除吗？}'\" (nzOnConfirm)=\"${2:confirm(i)}\">\n    <a nz-popconfirm>${3:删除}</a>\n</nz-popconfirm>\n$0",
-        "description": "气泡确认框",
-        "scope": ""
-    }
-
-    , "feedback popconfirm full": {
-        "prefix": "nz-popconfirm-full",
-        "body": "<nz-popconfirm [nzTitle]=\"'${1:确定要删除吗？}'\"\n    [nzOkText]=\"'确定'\"\n    [nzCancelText]=\"'取消'\"\n    (nzOnConfirm)=\"confirm(i)\"\n    (nzOnCancel)=\"cancel(\\$event)\"\n    [nzCondition]=\"true\"\n    [nzPlacement]=\"'(top|left|right|bottom)(Top|Left|Right|Bottom)?'\"\n    [nzTrigger]=\"'hover|focus|click'\"\n    [(nzVisible)]=\"isVisible\"\n    (nzVisibleChange)=\"visibleChange()\"\n    [nzOverlayClassName]=\"''\"\n    [nzOverlayStyle]=\"{}\">\n    <a nz-popconfirm>按钮内容</a>\n</nz-popconfirm>\n$0",
-        "description": "气泡确认框（完整结构）",
-        "scope": ""
-    }
-
-    , "feedback progress circle": {
-        "prefix": "nz-progress-circle",
-        "body": "<nz-progress [(ngModel)]=\"${1}\" [nzStatus]=\"'${2:success|exception|active}'\" [nzType]=\"'circle'\"\n     [nzStrokeWidth]=\"${3:6}\" [nzWidth]=\"${4:132}\"></nz-progress>\n$0",
-        "description": "进度条（圈形）",
-        "scope": ""
-    }
-
-    , "feedback progress": {
-        "prefix": "nz-progress",
-        "body": "<nz-progress [(ngModel)]=\"${1}\" [nzType]=\"'${2:circle|line}'\"\n    [nzStatus]=\"'${3:success|exception|active}'\"${4: [nzFormat]=\"function\"}${5: [nzShowInfo]=\"false\"}></nz-progress>\n$0",
-        "description": "进度条（完整结构）",
-        "scope": ""
-    }
-
-    , "feedback progress line": {
-        "prefix": "nz-progress-line",
-        "body": "<nz-progress [(ngModel)]=\"${1}\" [nzStatus]=\"'${2:success|exception|active}'\" [nzType]=\"'line'\"\n     [nzStrokeWidth]=\"${3:10}\"></nz-progress>\n$0",
-        "description": "进度条（线形）",
-        "scope": ""
-    }
-
-    , "feedback spin": {
-        "prefix": "nz-spin",
-        "body": "<nz-spin${1: [nzTip]=\"'${2:加载中...}'\"}${3: [nzSize]=\"'${4:small|large|default}'\"}${5: [nzSpinning]=\"false\"}></nz-spin>\n$0",
-        "description": "加载中（用于页面和区块的加载中状态）",
-        "scope": ""
-    }
-
     , "data-display badge": {
         "prefix": "nz-badge",
         "body": "<nz-badge [nzCount]=\"${1}\"${2: [nzDot]=\"true\"}>\r\n    <ng-template #content>\r\n        $3\r\n    </ng-template>\r\n</nz-badge>\r\n$0",
@@ -562,7 +506,7 @@
 
     , "data-display carousel": {
         "prefix": "nz-carousel",
-        "body": "<nz-carousel [nzEffect]=\"'${1:scrollx|fade}'\" [nzDots]=\"${2:false|true}\"${3: [nzVertical]=\"true\"}${4: [nzAutoplay]=\"true\"}>\r\n    <div nz-carousel-content *ngFor=\"let ${6:item} of ${5:list}\">\r\n        ${7}\r\n    </div>\r\n</nz-carousel>\r\n$0",
+        "body": "<nz-carousel [nzEffect]=\"'${1:scrollx|fade}'\" [nzDots]=\"${2:false|true}\"${3: [nzVertical]=\"true\"}${4: [nzAutoPlay]=\"true\"}>\n    <div nz-carousel-content *ngFor=\"let ${6:item} of ${5:list}\">\n        ${7}\n    </div>\n</nz-carousel>\n$0",
         "description": "走马灯（旋转木马，一组轮播的区域。）",
         "scope": ""
     }
@@ -753,6 +697,76 @@
         "prefix": "nz-tooltip-full",
         "body": "<nz-tooltip ${2: [nzPlacement]=\"${3:(top|left|right|bottom)}\"}${4: [nzTrigger]=\"${5:hover|focus|click}\"}>\r\n    <span nz-tooltip>${1}</span>\r\n    <ng-template #nzTemplate>\r\n        ${6}\r\n    </ng-template>\r\n</nz-popover>\r\n$0",
         "description": "文字提示（完整结构）",
+        "scope": ""
+    }
+
+    , "feedback alert body": {
+        "prefix": "nz-alert-body",
+        "body": "<nz-alert [nzType]=\"'${1:success|info|warning|error}'\"${2: [nzShowIcon]=\"true\"}\n    ${3: [nzCloseable]=\"true\"}${4: [nzCloseText]=\"'${5:关闭}'\"}${6: (nzOnCloses)=\"${7:_close}(\\$event)\"}\n    ${8: [nzBanner]=\"true\"}>\n    <div alert-body>${9}</div>${10:\n    <div alert-description></div>}\n</nz-alert>\n$0",
+        "description": "警告提示（标题与内容使用ng-template格式）",
+        "scope": ""
+    }
+
+    , "feedback alert": {
+        "prefix": "nz-alert",
+        "body": "<nz-alert [nzType]=\"'${1:success|info|warning|error}'\"\n    [nzMessage]=\"'${2}'\"${3: [nzDescription]=\"'${4}'\"}${5: [nzShowIcon]=\"true\"}${6: [nzCloseable]=\"true\"}></nz-alert>\n$0",
+        "description": "警告提示",
+        "scope": ""
+    }
+
+    , "feedback alert full": {
+        "prefix": "nz-alert-full",
+        "body": "<nz-alert [nzType]=\"'${1:success|info|warning|error}'\"\n    [nzMessage]=\"'${2}'\"${3: [nzDescription]=\"'${4}'\"}${5: [nzShowIcon]=\"true\"}\n    ${6: [nzCloseable]=\"true\"}${7: [nzCloseText]=\"'${8:关闭}'\"}${9: (nzOnCloses)=\"${10:_close}(\\$event)\"}\n    ${11: [nzBanner]=\"true\"}></nz-alert>\n$0",
+        "description": "警告提示（完整结构）",
+        "scope": ""
+    }
+
+    , "feedback modal": {
+        "prefix": "nz-modal",
+        "body": "<nz-modal\n    [(nzVisible)]=\"isVisible\"\n    [nzConfirmLoading]=\"false|true\"\n    [nzTitle]=\"'标题'\"\n    [nzClosable]=\"false|true\"\n    [nzBody]=\"'这是内容'\"\n    [nzWidth]=\"520\"\n    [nzContent]=\"modalContent\"\n    [nzOkText]=\"'确定'\"\n    [nzCancelText]=\"'取消'\"\n    [nzMaskClosable]=\"false|true\"\n    [nzZIndex]=\"1000\"\n    [nzStyle]=\"{}\"\n    [nzWrapClassName]=\"''\"\n    (nzOnCancel)=\"handleCancel(\\$event)\"\n    (nzOnOk)=\"handleOk(\\$event)\">\n    <ng-template #modalContent>对话框的内容</ng-template>\n</nz-modal>\n$0",
+        "description": "对话框（完整结构，因为需要放置HTML的情况时，认为是比较特别的需求；平常尽可能采用NzModalService服务调用方式）",
+        "scope": ""
+    }
+
+    , "feedback popconfirm": {
+        "prefix": "nz-popconfirm",
+        "body": "<nz-popconfirm [nzTitle]=\"'${1:确定要删除吗？}'\" (nzOnConfirm)=\"${2:confirm(i)}\">\n    <a nz-popconfirm>${3:删除}</a>\n</nz-popconfirm>\n$0",
+        "description": "气泡确认框",
+        "scope": ""
+    }
+
+    , "feedback popconfirm full": {
+        "prefix": "nz-popconfirm-full",
+        "body": "<nz-popconfirm [nzTitle]=\"'${1:确定要删除吗？}'\"\n    [nzOkText]=\"'确定'\"\n    [nzCancelText]=\"'取消'\"\n    (nzOnConfirm)=\"confirm(i)\"\n    (nzOnCancel)=\"cancel(\\$event)\"\n    [nzCondition]=\"true\"\n    [nzPlacement]=\"'(top|left|right|bottom)(Top|Left|Right|Bottom)?'\"\n    [nzTrigger]=\"'hover|focus|click'\"\n    [(nzVisible)]=\"isVisible\"\n    (nzVisibleChange)=\"visibleChange()\"\n    [nzOverlayClassName]=\"''\"\n    [nzOverlayStyle]=\"{}\">\n    <a nz-popconfirm>按钮内容</a>\n</nz-popconfirm>\n$0",
+        "description": "气泡确认框（完整结构）",
+        "scope": ""
+    }
+
+    , "feedback progress circle": {
+        "prefix": "nz-progress-circle",
+        "body": "<nz-progress [(ngModel)]=\"${1}\" [nzStatus]=\"'${2:success|exception|active}'\" [nzType]=\"'circle'\"\n     [nzStrokeWidth]=\"${3:6}\" [nzWidth]=\"${4:132}\"></nz-progress>\n$0",
+        "description": "进度条（圈形）",
+        "scope": ""
+    }
+
+    , "feedback progress": {
+        "prefix": "nz-progress",
+        "body": "<nz-progress [(ngModel)]=\"${1}\" [nzType]=\"'${2:circle|line}'\"\n    [nzStatus]=\"'${3:success|exception|active}'\"${4: [nzFormat]=\"function\"}${5: [nzShowInfo]=\"false\"}></nz-progress>\n$0",
+        "description": "进度条（完整结构）",
+        "scope": ""
+    }
+
+    , "feedback progress line": {
+        "prefix": "nz-progress-line",
+        "body": "<nz-progress [(ngModel)]=\"${1}\" [nzStatus]=\"'${2:success|exception|active}'\" [nzType]=\"'line'\"\n     [nzStrokeWidth]=\"${3:10}\"></nz-progress>\n$0",
+        "description": "进度条（线形）",
+        "scope": ""
+    }
+
+    , "feedback spin": {
+        "prefix": "nz-spin",
+        "body": "<nz-spin${1: [nzTip]=\"'${2:加载中...}'\"}${3: [nzSize]=\"'${4:small|large|default}'\"}${5: [nzSpinning]=\"false\"}></nz-spin>\n$0",
+        "description": "加载中（用于页面和区块的加载中状态）",
         "scope": ""
     }  
 }

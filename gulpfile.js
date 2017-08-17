@@ -33,7 +33,7 @@ gulp.task('build', () => {
         .pipe(gulp.dest(DEF.dest));
 });
 
-gulp.task('watch', [ 'build' ], () => {
+gulp.task('watch', () => {
     gulp.watch(DEF.resources, [ 'build' ]);
 });
 
@@ -81,5 +81,7 @@ gulp.task('gen-readme', () => {
 });
 
 gulp.task('build-i18n', gulpSequence([ 'build', 'gen-i18n', 'build' ]));
+
+gulp.task('serve', gulpSequence([ 'build', 'gen-i18n', 'watch' ]));
 
 gulp.task('prod', gulpSequence([ 'build', 'gen-i18n', 'gen-readme', 'build' ]));

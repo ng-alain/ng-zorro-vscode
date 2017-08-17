@@ -27,6 +27,7 @@ Trigger | Description
 --- | ---
 button | 按钮（只含type&amp;size）
 button-full | 一个完整指令的按钮
+button-group | general button group
 button-icon-text-left | 文本在左边的图标按钮
 button-icon-text-right | 文本在右边的图标按钮
 button-icon | 图标按钮
@@ -41,24 +42,6 @@ grid-row-flex | 栅格：一行flex（含：nzAlign、nzJustify）
 grid-row | 栅格：一行
 layout | 上中下 Layout 布局
 layout-sider | 侧边栏
-### 导航
-
-Trigger | Description
---- | ---
-breadcrumb | 面包屑
-dropdown-button-full | 按钮式下拉菜单（含一个菜单）
-dropdown-button | 按钮式下拉菜单
-dropdown | 下拉菜单
-dropdown-full | 下拉菜单（含一个菜单）
-menu | 导航菜单
-menu-group | 分组菜单
-menu-item-divider | 菜单项分割线
-menu-item | 菜单项
-menu-submenu | 子菜单
-pagination | 分页
-steps | 整体步骤条
-steps-step-icon | 步骤条内的每一个步骤（自定义图标）
-steps-step | 步骤条内的每一个步骤
 ### 数据录入
 
 Trigger | Description
@@ -87,10 +70,10 @@ input-number | 带数字输入框
 input-prefix | 带有前缀图标的输入框
 input-suffix | 带有后缀图标的输入框
 input-textarea | 多行输入框
-rate | 评分组件
 radio-button | 按钮样式的单选组合
 radio | 单选框（注：必须配合nz-radio-group使用）
 radio-group | 单选框组合，用于包裹一组 nz-radio/nz-radio-button
+rate | 评分组件
 select | 选择器
 select-search | 搜索框选择器
 slider | 滑动输入条
@@ -99,6 +82,25 @@ switch-icon | 开关选择器（带图标）
 switch-text | 开关选择器（带文本）
 timepicker | 输入或选择时间的控件
 timepicker-format | 输入或选择时间的控件（指定时间格式）
+### 导航
+
+Trigger | Description
+--- | ---
+breadcrumb | 面包屑
+breadcrumb-icon | navigation breadcrumb icon
+dropdown-button-full | 按钮式下拉菜单（含一个菜单）
+dropdown-button | 按钮式下拉菜单
+dropdown | 下拉菜单
+dropdown-full | 下拉菜单（含一个菜单）
+menu | 导航菜单
+menu-group | 分组菜单
+menu-item-divider | 菜单项分割线
+menu-item | 菜单项
+menu-submenu | 子菜单
+pagination | 分页
+steps | 整体步骤条
+steps-step-icon | 步骤条内的每一个步骤（自定义图标）
+steps-step | 步骤条内的每一个步骤
 ### 数据显示
 
 Trigger | Description
