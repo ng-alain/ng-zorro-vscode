@@ -1,9 +1,9 @@
-<nz-dropdown${2: [nzTrigger]="'${4:click|hover}'"}${4: [nzPlacement]="'${5:(bottom|top)(Left|Center|Right)}'"}>
+<nz-dropdown${2: [nzTrigger]="'${3|click,hover|}'"}${4: [nzPlacement]="'${5|bottomLeft,bottomCenter,bottomRight,topLeft,topCenter,topRight|}'"}>
     <a class="ant-dropdown-link" nz-dropdown>
         ${1} <i class="anticon anticon-down"></i>
     </a>
     <ul nz-menu>
         <li nz-menu-item>${6}</li>
-        ${7}
+        $0
     </ul>
 </nz-dropdown>

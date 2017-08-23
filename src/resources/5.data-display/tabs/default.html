@@ -1,5 +1,5 @@
-<nz-tabset${1: [nzType]="${2:card|line}"}${3: [nzSize]="${4:small|default}"}
-    ${5: [nzTabPosition]="${6:top|right|bottom|left}"}${7: (nzSelectChange)="${8:_tabChange}($event)"}>
+<nz-tabset${1: [nzType]="${2|card,line|}"}${3: [nzSize]="${4|small,default|}"}
+    ${5: [nzTabPosition]="${6|top,right,bottom,left|}"}${7: (nzSelectChange)="${8:_tabChange}($event)"}>
     <nz-tab *ngFor="let ${10:tab} of ${9}">
         <ng-template #nzTabHeading>
             {{${10:tab}.title}}

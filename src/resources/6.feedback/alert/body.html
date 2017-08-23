@@ -1,4 +1,4 @@
-<nz-alert [nzType]="'${1:success|info|warning|error}'"${2: [nzShowIcon]="true"}
+<nz-alert [nzType]="'${1|success,info,warning,error|}'"${2: [nzShowIcon]="true"}
     ${3: [nzCloseable]="true"}${4: [nzCloseText]="'${5:关闭}'"}${6: (nzOnCloses)="${7:_close}($event)"}
     ${8: [nzBanner]="true"}>
     <div alert-body>${9}</div>${10:

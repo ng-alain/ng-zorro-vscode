@@ -27,7 +27,7 @@ Trigger | Description
 --- | ---
 button | 按钮（只含type&amp;size）
 button-full | 一个完整指令的按钮
-button-group | general button group
+button-group | 按钮组
 button-icon-text-left | 文本在左边的图标按钮
 button-icon-text-right | 文本在右边的图标按钮
 button-icon | 图标按钮
@@ -36,12 +36,32 @@ icon | Icon图标
 
 Trigger | Description
 --- | ---
+grid-col-responsive | 栅格：一列（响应式）
 grid-col | 栅格：一列（含：nzSpan、nzOffset）
 grid | 栅格：一行一列
 grid-row-flex | 栅格：一行flex（含：nzAlign、nzJustify）
 grid-row | 栅格：一行
 layout | 上中下 Layout 布局
 layout-sider | 侧边栏
+### 导航
+
+Trigger | Description
+--- | ---
+breadcrumb | 面包屑
+breadcrumb-icon | 面包屑ICON图标
+dropdown-button-full | 按钮式下拉菜单（含一个菜单）
+dropdown-button | 按钮式下拉菜单
+dropdown | 下拉菜单
+dropdown-full | 下拉菜单（含一个菜单）
+menu | 导航菜单
+menu-group | 分组菜单
+menu-item-divider | 菜单项分割线
+menu-item | 菜单项
+menu-submenu | 子菜单
+pagination | 分页
+steps | 整体步骤条
+steps-step-icon | 步骤条内的每一个步骤（自定义图标）
+steps-step | 步骤条内的每一个步骤
 ### 数据录入
 
 Trigger | Description
@@ -52,12 +72,14 @@ checkbox-group | 多选框组
 datepicker | 日期选择框
 datepicker-format | 日期选择框（指定时间格式）
 datepicker-time | 日期时间选择框
+form-control-responsive | 表单控制区域，通常用于放置input，select等组件（响应式）
 form-control | 表单控制区域，通常用于放置input，select等组件
 form | 原生form的增强，用于加强form的样式
 form-explain | 用于显示提示信息，会根据当前&#x60;nzValidateStatus&#x60;显示不同的颜色
 form-extra | 用于显示表单额外提示信息
 form-item-required | 给label添加require样式
 form-item | 用于标定一个form item区域
+form-label-responsive | 用于标定label区域（响应式）
 form-label | 用于标定label区域
 form-split | 用于显示 &#x60;-&#x60; 分隔符
 input-add-on | 带有前后置标签的输入框
@@ -82,25 +104,6 @@ switch-icon | 开关选择器（带图标）
 switch-text | 开关选择器（带文本）
 timepicker | 输入或选择时间的控件
 timepicker-format | 输入或选择时间的控件（指定时间格式）
-### 导航
-
-Trigger | Description
---- | ---
-breadcrumb | 面包屑
-breadcrumb-icon | navigation breadcrumb icon
-dropdown-button-full | 按钮式下拉菜单（含一个菜单）
-dropdown-button | 按钮式下拉菜单
-dropdown | 下拉菜单
-dropdown-full | 下拉菜单（含一个菜单）
-menu | 导航菜单
-menu-group | 分组菜单
-menu-item-divider | 菜单项分割线
-menu-item | 菜单项
-menu-submenu | 子菜单
-pagination | 分页
-steps | 整体步骤条
-steps-step-icon | 步骤条内的每一个步骤（自定义图标）
-steps-step | 步骤条内的每一个步骤
 ### 数据显示
 
 Trigger | Description
@@ -154,6 +157,13 @@ progress-circle | 进度条（圈形）
 progress | 进度条（完整结构）
 progress-line | 进度条（线形）
 spin | 加载中（用于页面和区块的加载中状态）
+### 属性
+
+Trigger | Description
+--- | ---
+attr-responsive | 响应式属性
+attr-size | 大小属性
+attr-type | 按钮类型属性
 
 ## 更新日志
 

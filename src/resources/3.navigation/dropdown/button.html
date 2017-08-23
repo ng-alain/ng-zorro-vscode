@@ -1,5 +1,5 @@
-<nz-dropdown-button${2: [nzType]="'${3:primary|dashed|danger|default}'"}${4: [nzSize]="'${5:small|large}'"}
-    ${6: [nzTrigger]="'${7:click|hover}'"}${8: [nzPlacement]="'${9:(bottom|top)(Left|Center|Right)}'"}>
+<nz-dropdown-button${2: [nzType]="'${3|primary,dashed,danger,default|}'"}${4: [nzSize]="'${5|small,large|}'"}
+    ${6: [nzTrigger]="'${7|click,hover|}'"}${8: [nzPlacement]="'${9|bottomLeft,bottomCenter,bottomRight,topLeft,topCenter,topRight|}'"}>
     <button nz-button nz-dropdown>${1}</button>
-    ${10}
+    $0
 </nz-dropdown-button>
