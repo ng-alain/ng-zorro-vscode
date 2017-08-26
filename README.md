@@ -25,13 +25,13 @@ root | 根组件只能引入一次，所有ng-zorro组件都应该包裹在下�
 
 Trigger | Description
 --- | ---
+icon | Icon图标
 button | 按钮（只含type&amp;size）
 button-full | 一个完整指令的按钮
 button-group | 按钮组
 button-icon-text-left | 文本在左边的图标按钮
 button-icon-text-right | 文本在右边的图标按钮
 button-icon | 图标按钮
-icon | Icon图标
 ### 布局
 
 Trigger | Description
@@ -47,6 +47,8 @@ layout-sider | 侧边栏
 
 Trigger | Description
 --- | ---
+affix | 固钉
+affix-target | 固钉（指定容器）
 breadcrumb | 面包屑
 breadcrumb-icon | 面包屑ICON图标
 dropdown-button-full | 按钮式下拉菜单（含一个菜单）
@@ -108,6 +110,10 @@ timepicker-format | 输入或选择时间的控件（指定时间格式）
 
 Trigger | Description
 --- | ---
+avatar | 头像
+avatar-icon | Icon头像
+avatar-img | 图片头像
+avatar-text | 文本头像（自动调整字符大小）
 badge | 徽标数
 badge-dot | 徽标数（只有小圆点）
 badge-standalone | 徽标数（独立使用，不包裹任何元素）
@@ -157,6 +163,13 @@ progress-circle | 进度条（圈形）
 progress | 进度条（完整结构）
 progress-line | 进度条（线形）
 spin | 加载中（用于页面和区块的加载中状态）
+### 其它
+
+Trigger | Description
+--- | ---
+anchor | 锚点（若需要固定，配合 nz-affix 使用）
+anchor-link | 锚点项，允许嵌套使用
+back-top | 回到顶部
 ### 属性
 
 Trigger | Description

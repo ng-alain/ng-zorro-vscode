@@ -8,13 +8,13 @@
 	"general": {
 		"title": "General",
 		"list": {
+			"icon": "Icon图标",
 			"button": "按钮（只含type&size）",
 			"button-full": "一个完整指令的按钮",
 			"button-group": "general button group",
 			"button-icon-text-left": "文本在左边的图标按钮",
 			"button-icon-text-right": "文本在右边的图标按钮",
-			"button-icon": "图标按钮",
-			"icon": "Icon图标"
+			"button-icon": "图标按钮"
 		}
 	},
 	"layout": {
@@ -32,6 +32,8 @@
 	"navigation": {
 		"title": "Navigation",
 		"list": {
+			"affix": "navigation affix",
+			"affix-target": "navigation affix target",
 			"breadcrumb": "面包屑",
 			"breadcrumb-icon": "navigation breadcrumb icon",
 			"dropdown-button-full": "按钮式下拉菜单（含一个菜单）",
@@ -95,6 +97,10 @@
 	"data-display": {
 		"title": "Data Display",
 		"list": {
+			"avatar": "data-display avatar",
+			"avatar-icon": "data-display avatar icon",
+			"avatar-img": "data-display avatar img",
+			"avatar-text": "data-display avatar text",
 			"badge": "徽标数",
 			"badge-dot": "徽标数（只有小圆点）",
 			"badge-standalone": "徽标数（独立使用，不包裹任何元素）",
@@ -145,6 +151,14 @@
 			"progress": "进度条（完整结构）",
 			"progress-line": "进度条（线形）",
 			"spin": "加载中（用于页面和区块的加载中状态）"
+		}
+	},
+	"other": {
+		"title": "Other",
+		"list": {
+			"anchor": "other anchor",
+			"anchor-link": "other anchor link",
+			"back-top": "other back-top"
 		}
 	},
 	"attributes": {

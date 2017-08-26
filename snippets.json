@@ -56,6 +56,20 @@
         "scope": ""
     }
 
+    , "layout layout": {
+        "prefix": "nz-layout",
+        "body": "<nz-layout>\n    <nz-header>\n        $0\n    </nz-header>\n    <nz-content>\n\n    </nz-content>\n    <nz-footer>\n\n    </nz-footer>\n</nz-layout>",
+        "description": "上中下 Layout 布局",
+        "scope": ""
+    }
+
+    , "layout layout sider": {
+        "prefix": "nz-layout-sider",
+        "body": "<nz-sider [nzCollapsible]=\"true\"${1: [nzWidth]=\"${2:200}\"}${3: [nzCollapsedWidth]=\"${4:64}\"}>\n    $0\n</nz-sider>",
+        "description": "侧边栏",
+        "scope": ""
+    }
+
     , "layout grid col responsive": {
         "prefix": "nz-grid-col-responsive",
         "body": "<div nz-col [nzXs]=\"${1:1-24}\" [nzSm]=\"${2:1-24}\" [nzMd]=\"${3:1-24}\" [nzLg]=\"${4:1-24}\" [nzXl]=\"${5:1-24}\"${6: [nzOffset]=\"${7:1-24}\"}>\n    $0\n</div>",
@@ -91,17 +105,17 @@
         "scope": ""
     }
 
-    , "layout layout": {
-        "prefix": "nz-layout",
-        "body": "<nz-layout>\n    <nz-header>\n        $0\n    </nz-header>\n    <nz-content>\n\n    </nz-content>\n    <nz-footer>\n\n    </nz-footer>\n</nz-layout>",
-        "description": "上中下 Layout 布局",
+    , "navigation affix": {
+        "prefix": "nz-affix",
+        "body": "<nz-affix${1: [nzOffsetTop]=\"${2}\"}${3: (nzChange)=\"onChange(\\$event)\"}>\n    $0\n</nz-affix>",
+        "description": "固钉",
         "scope": ""
     }
 
-    , "layout layout sider": {
-        "prefix": "nz-layout-sider",
-        "body": "<nz-sider [nzCollapsible]=\"true\"${1: [nzWidth]=\"${2:200}\"}${3: [nzCollapsedWidth]=\"${4:64}\"}>\n    $0\n</nz-sider>",
-        "description": "侧边栏",
+    , "navigation affix target": {
+        "prefix": "nz-affix-target",
+        "body": "<div class=\"scrollable-container\" #target>\n    <nz-affix [nzTarget]=\"target\"${1: [nzOffsetTop]=\"${2}\"}${3: (nzChange)=\"onChange(\\$event)\"}>\n        $0\n    </nz-affix>\n</div>",
+        "description": "固钉（指定容器）",
         "scope": ""
     }
 
@@ -476,6 +490,34 @@
         "scope": ""
     }
 
+    , "data-display avatar": {
+        "prefix": "nz-avatar",
+        "body": "<nz-avatar [nzSrc]=\"$1\"${2: [nzSize]=\"'${3|default,small,large|}'\"}${4: [nzShape]=\"'square'\"}></nz-avatar>\n$0",
+        "description": "头像",
+        "scope": ""
+    }
+
+    , "data-display avatar icon": {
+        "prefix": "nz-avatar-icon",
+        "body": "<nz-avatar [nzIcon]=\"'$1'\"${2: [nzSize]=\"'${3|default,small,large|}'\"}${4: [nzShape]=\"'square'\"}></nz-avatar>\n$0",
+        "description": "Icon头像",
+        "scope": ""
+    }
+
+    , "data-display avatar img": {
+        "prefix": "nz-avatar-img",
+        "body": "<nz-avatar [nzSrc]=\"$1\"${2: [nzSize]=\"'${3|default,small,large|}'\"}${4 [nzIcon]=\"'$5'\"}${6: [nzShape]=\"'square'\"}></nz-avatar>\n$0",
+        "description": "图片头像",
+        "scope": ""
+    }
+
+    , "data-display avatar text": {
+        "prefix": "nz-avatar-text",
+        "body": "<nz-avatar [nzText]=\"$1\"${2: [nzSize]=\"'${3|default,small,large|}'\"}${4: [nzShape]=\"'square'\"}></nz-avatar>\n$0",
+        "description": "文本头像（自动调整字符大小）",
+        "scope": ""
+    }
+
     , "data-display badge": {
         "prefix": "nz-badge",
         "body": "<nz-badge [nzCount]=\"${1}\"${2: [nzDot]=\"true\"}>\r\n    <ng-template #content>\r\n        $3\r\n    </ng-template>\r\n</nz-badge>\r\n$0",
@@ -709,14 +751,14 @@
 
     , "data-display tooltip": {
         "prefix": "nz-tooltip",
-        "body": "<nz-tooltip [nzTitle]=\"'${2}'\">\r\n    <span nz-tooltip>${1}</span>\r\n</nz-popover>\r\n$0",
+        "body": "<nz-tooltip [nzTitle]=\"'${2}'\">\n    <span nz-tooltip>${1}</span>\n</nz-tooltip>\n$0",
         "description": "文字提示",
         "scope": ""
     }
 
     , "data-display tooltip full": {
         "prefix": "nz-tooltip-full",
-        "body": "<nz-tooltip ${2: [nzPlacement]=\"${3|top,left,right,bottom|}\"}${4: [nzTrigger]=\"${5|hover,focus,click|}\"}>\n    <span nz-tooltip>${1}</span>\n    <ng-template #nzTemplate>\n        ${6}\n    </ng-template>\n</nz-popover>\n$0",
+        "body": "<nz-tooltip ${2: [nzPlacement]=\"${3|top,left,right,bottom|}\"}${4: [nzTrigger]=\"${5|hover,focus,click|}\"}>\n    <span nz-tooltip>${1}</span>\n    <ng-template #nzTemplate>\n        ${6}\n    </ng-template>\n</nz-tooltip>\n$0",
         "description": "文字提示（完整结构）",
         "scope": ""
     }
@@ -788,6 +830,27 @@
         "prefix": "nz-spin",
         "body": "<nz-spin${1: [nzTip]=\"'${2:加载中...}'\"}${3: [nzSize]=\"'${4|small,large,default|}'\"}${5: [nzSpinning]=\"false\"}></nz-spin>\n$0",
         "description": "加载中（用于页面和区块的加载中状态）",
+        "scope": ""
+    }
+
+    , "other anchor": {
+        "prefix": "nz-anchor",
+        "body": "<nz-anchor${1: [nzOffsetTop]=\"$2\"}${3: [nzBounds]=\"$4\"}${5: (nzScroll)=\"onScroll(\\$event)\"}>\n    $0\n</nz-anchor>",
+        "description": "锚点（若需要固定，配合 nz-affix 使用）",
+        "scope": ""
+    }
+
+    , "other anchor link": {
+        "prefix": "nz-anchor-link",
+        "body": "<nz-link [nzHref]=\"'${1}'\" [nzTitle]=\"'${2}'\">${3:\n    <ng-template #nzTemplate>\n        $4\n    </ng-template>\n}</nz-link>\n$0",
+        "description": "锚点项，允许嵌套使用",
+        "scope": ""
+    }
+
+    , "other back-top": {
+        "prefix": "nz-back-top",
+        "body": "<nz-back-top${1: [nzVisibilityHeight]=\"$2\"}>${3:\n    <ng-template #nzTemplate>\n        $4\n    </ng-template>\n}</nz-back-top>$0",
+        "description": "回到顶部",
         "scope": ""
     }
 
