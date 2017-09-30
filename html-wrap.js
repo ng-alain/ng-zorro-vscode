@@ -31,7 +31,9 @@ module.exports = function (options) {
                 fileNames.splice(0, 0, ...prefixs);
 
             ret.key = fileNames.join(' ');
-            ret.prefix = fileNames.slice(1).join('-');
+            ret.prefix = fileNames[1];
+            if (fileNames.length > 2)
+                ret.prefix += `.${fileNames.slice(2).join('-')}`;
             ret.description = options.i18n[fileNames[0]].list[ret.prefix] || ret.key || '';
             ret.escapedContent = getEscapedTemplateContent(ret.content);
 
