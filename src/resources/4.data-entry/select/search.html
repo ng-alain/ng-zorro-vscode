@@ -1,4 +1,4 @@
-<nz-select [(ngModel)]="${1}" [nzSearchChange]="${2}" [nzMode]="'${3|multiple,tags|}'"
+<nz-select [(ngModel)]="${1}" name="${1}" [nzSearchChange]="${2}" [nzMode]="'${3|multiple,tags|}'"
     [nzNotFoundContent]="'${4}'" [nzPlaceHolder]="'${5}'"${6: [nzAllowClear]="true" }>
     <nz-option
         *ngFor="let ${8} of ${7}"

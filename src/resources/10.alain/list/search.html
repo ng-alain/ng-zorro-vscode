@@ -1,0 +1,30 @@
+<form nz-form [nzLayout]="'inline'" class="search-form">
+    <div nz-form-item>
+        <div nz-form-control>
+            <nz-select [(ngModel)]="s.time_type" name="time_type">
+                <nz-option nzValue="created" nzLabel="创建时间"></nz-option>
+                <nz-option nzValue="end_time" nzLabel="完成时间"></nz-option>
+            </nz-select>
+        </div>
+    </div>
+    <div nz-form-item>
+        <div nz-form-control>
+            <nz-datepicker [(ngModel)]="s.start" name="start" nzPlaceHolder="开始时间"></nz-datepicker>
+        </div>
+    </div>
+    <div nz-form-item>
+        <div nz-form-control>
+            <nz-datepicker [(ngModel)]="s.end" name="end" nzPlaceHolder="结束时间"></nz-datepicker>
+        </div>
+    </div>
+    <div nz-form-item>
+        <div nz-form-control>
+            <nz-input [(ngModel)]="s.q" name="q" nzPlaceHolder="名称"></nz-input>
+        </div>
+    </div>
+    <div nz-form-item>
+        <div nz-form-control>
+            <button nz-button [nzType]="'primary'" (click)="load()">搜索</button>
+        </div>
+    </div>
+</form>

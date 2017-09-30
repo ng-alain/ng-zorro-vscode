@@ -12,43 +12,80 @@
 
 你可以任意 `.html`、`.ts` 文件，输入 `nz-` 开头会自动出现在智能提醒列表当中；仅此而已！
 
+片断中带有 `attr-` 表示属性，`fn-` 表示事件。
+
+> 建议开启 `"editor.snippetSuggestions": "top"` 配置，可确保代码片断优先级高于内置。
+
 ## 文档
 
 更多API接口请参考[ng-zorro-antd](https://github.com/NG-ZORRO/ng-zorro-antd)。
+
 
 ### 根组件
 
 Trigger | Description
 --- | ---
-root | 根组件只能引入一次，所有ng-zorro组件都应该包裹在下面
+root | 根组件只能引入一次，非必选
+
 ### 常规
 
 Trigger | Description
 --- | ---
 icon | Icon图标
+button-attr-ghost | 设置幽灵按钮
+button-attr-loading | 设置按钮载入状态
 button | 按钮（只含type&amp;size）
 button-full | 一个完整指令的按钮
 button-group | 按钮组
 button-icon-text-left | 文本在左边的图标按钮
 button-icon-text-right | 文本在右边的图标按钮
 button-icon | 图标按钮
+
+### [ng-alain](https://github.com/cipchk/ng-alain) 片断
+
+Trigger | Description
+--- | ---
+content | 主标题
+content-right-input | 主标题且右边按钮
+content-right-inputgroup | 主标题且右边按钮组
+form-checkbox | 多选框
+form-input-number | 数字输入框
+form-input | 输入框
+form-radio | 单选框
+form-select | 下拉框
+form-textarea | 多行文本框
+list | 列表页表格
+list-search | 列表页搜索表单
+modal | 对话框
+
 ### 布局
 
 Trigger | Description
 --- | ---
-grid-col-responsive | 栅格：一列（响应式）
+grid-attr-col-offset | 栅格左侧的间隔格数，间隔内不可以有栅格
+grid-attr-col-order | 栅格顺序
+grid-attr-col-pull | 栅格向左移动格数
+grid-attr-col-push | 栅格向右移动格数
+grid-attr-col-responsive | 栅格占位响应式
+grid-attr-col-span | 栅格占位格数，为 0 时相当于 display: none
+grid-attr-flex-align | flex 布局下的垂直对齐方式
+grid-attr-flex-justify | flex 布局下的水平排列方式
+grid-attr-gutter | 栅格间隔
 grid-col | 栅格：一列（含：nzSpan、nzOffset）
 grid | 栅格：一行一列
+grid-responsive | 响应式栅格
 grid-row-flex | 栅格：一行flex（含：nzAlign、nzJustify）
 grid-row | 栅格：一行
 layout | 上中下 Layout 布局
 layout-sider | 侧边栏
+
 ### 导航
 
 Trigger | Description
 --- | ---
 affix | 固钉
 affix-target | 固钉（指定容器）
+breadcrumb-attr-separator | 分隔符自定义
 breadcrumb | 面包屑
 breadcrumb-icon | 面包屑ICON图标
 dropdown-button-full | 按钮式下拉菜单（含一个菜单）
@@ -64,6 +101,7 @@ pagination | 分页
 steps | 整体步骤条
 steps-step-icon | 步骤条内的每一个步骤（自定义图标）
 steps-step | 步骤条内的每一个步骤
+
 ### 数据录入
 
 Trigger | Description
@@ -71,9 +109,13 @@ Trigger | Description
 checkbox-all | 多选框（全选）
 checkbox | 多选框
 checkbox-group | 多选框组
+datepicker-attr-format | 展示的日期格式，配置参考 Moment.js文档
 datepicker | 日期选择框
 datepicker-format | 日期选择框（指定时间格式）
 datepicker-time | 日期时间选择框
+form-attr-control-feedback | 当添加该属性时，配合 nzValidateStatus 属性使用，展示校验状态图标，建议只配合 nz-input 组件使用
+form-attr-control-validstatus | 校验状态，属性定义为当前formControl名称可以根据异步返回数据自动显示，也可手动定义
+form-attr-layout | 表单布局
 form-control-responsive | 表单控制区域，通常用于放置input，select等组件（响应式）
 form-control | 表单控制区域，通常用于放置input，select等组件
 form | 原生form的增强，用于加强form的样式
@@ -85,6 +127,9 @@ form-label-responsive | 用于标定label区域（响应式）
 form-label | 用于标定label区域
 form-split | 用于显示 &#x60;-&#x60; 分隔符
 input-add-on | 带有前后置标签的输入框
+input-attr-autosize | 自适应内容高度（textarea 有效）
+input-attr-group-compact | 是否用紧凑模式
+input-attr-number-step | data-entry input attr number step
 input | 输入框
 input-group | 输入框组合
 input-input-add-on-after | 带有前缀图标的输入框
@@ -93,19 +138,29 @@ input-input-prefix-suffix | 带有前后缀图标的输入框
 input-number | 带数字输入框
 input-prefix | 带有前缀图标的输入框
 input-suffix | 带有后缀图标的输入框
+input-TD | 模板驱动风格
 input-textarea | 多行输入框
 radio-button | 按钮样式的单选组合
 radio | 单选框（注：必须配合nz-radio-group使用）
 radio-group | 单选框组合，用于包裹一组 nz-radio/nz-radio-button
 rate | 评分组件
+select-attr-allow-clear | 支持清除, 单选模式有效
+select-attr-filter | 是否根据输入过滤选项
+select-attr-fn-open-change | 下拉菜单打开关闭回调函数
+select-attr-fn-search-change | 搜索内容变化回调函数，参数为搜索内容
+select-attr-mode | 设置 Select 的模式
+select-attr-not-found | 当下拉列表为空时显示的内容
+select-attr-show-search | 是否启用搜索框
 select | 选择器
 select-search | 搜索框选择器
 slider | 滑动输入条
 switch | 开关选择器
 switch-icon | 开关选择器（带图标）
 switch-text | 开关选择器（带文本）
+timepicker-attr-format | 展示的时间格式
 timepicker | 输入或选择时间的控件
 timepicker-format | 输入或选择时间的控件（指定时间格式）
+
 ### 数据显示
 
 Trigger | Description
@@ -114,10 +169,15 @@ avatar | 头像
 avatar-icon | Icon头像
 avatar-img | 图片头像
 avatar-text | 文本头像（自动调整字符大小）
+badge-attr-overflow-count | 展示封顶的数字值
+badge-attr-show-zero | 当添加该属性时，当数值为 0 时，展示 Badge
+badge-attr-status | 设置 Badge 为状态点（nzDot小红点有效）
 badge | 徽标数
 badge-dot | 徽标数（只有小圆点）
 badge-standalone | 徽标数（独立使用，不包裹任何元素）
 calendar | 日历
+card-attr-bordered | 是否有边框
+card-attr-no-hovering | 取消鼠标移过浮起
 card | 卡片
 card-full | 卡片（完整结构）
 card-image | 卡片（带图片）
@@ -128,6 +188,9 @@ collapse-set | 折叠面板
 popover | 气泡卡片
 popover-full | 气泡卡片（完整结构）
 table-ajax | 表格（远程异步数据）
+table-attr-bordered | 是否显示边框
+table-attr-data-source | 同步数据（含无分页）
+table-attr-size | table大小
 table | 表格
 table-divider | 表格：td中分隔数据
 table-footer | 表格：标定footer（需要在 nz-table 设定 nzShowFooter 才会生效）
@@ -142,27 +205,48 @@ table-td-checkbox | 表格：标定td且含有checkbox
 table-td | 表格：标定td
 table-th | 表格：标定th
 table-thead | 表格：标定thead
+tabs-attr-fn-change | 当前激活的Tab Index回调
+tabs-attr-position | 页签位置
+tabs-attr-type | 页签的基本样式
 tabs | 标签页
 tabs-tab | 标签页：选项卡
+tag-attr-closable | 标签是否可以关闭
+tag-attr-color | 标签色（支持css颜色值）
+tag-attr-fn-close | 关闭后事件
+tag-checkable | 可选择标签
+tag | 标签
 timeline | 时间轴
 timeline-item | 时间轴：项
 timeline-pending | 时间轴：幽灵节点（表示时间轴未完成）必须放在nz-timeline下
 tooltip | 文字提示
 tooltip-full | 文字提示（完整结构）
+
 ### 反馈
 
 Trigger | Description
 --- | ---
+alert-attr-banner | 是否用作顶部公告
+alert-attr-closeable | 是否显示关闭按钮
+alert-attr-description | 警告提示的辅助性文字介绍
+alert-attr-fn-close | 关闭时触发的回调函数
+alert-attr-showicon | 是否显示辅助图标
+alert-attr-type | 指定警告提示的样式
 alert-body | 警告提示（标题与内容使用ng-template格式）
 alert | 警告提示
 alert-full | 警告提示（完整结构）
 modal | 对话框（完整结构，因为需要放置HTML的情况时，认为是比较特别的需求；平常尽可能采用NzModalService服务调用方式）
+popconfirm-attr-canceltext | 取消按钮文字
+popconfirm-attr-condition | 是否直接执行确定方法
+popconfirm-attr-oktext | 确认按钮文字
 popconfirm | 气泡确认框
 popconfirm-full | 气泡确认框（完整结构）
 progress-circle | 进度条（圈形）
 progress | 进度条（完整结构）
 progress-line | 进度条（线形）
+spin-attr-spinning | 是否用于内嵌其他组件的模式
+spin-attr-tip | 自定义描述文案
 spin | 加载中（用于页面和区块的加载中状态）
+
 ### 其它
 
 Trigger | Description
@@ -170,13 +254,23 @@ Trigger | Description
 anchor | 锚点（若需要固定，配合 nz-affix 使用）
 anchor-link | 锚点项，允许嵌套使用
 back-top | 回到顶部
-### 属性
+
+### 通用属性
 
 Trigger | Description
 --- | ---
-attr-responsive | 响应式属性
+attr-checked | 是否选中
+attr-disabled | 是否禁用
+attr-fn-click | 点击事件
+attr-fn-select | 选中后事件
+attr-label | Label值
+attr-loading | 是否加载中
+attr-placeholder | 提示信息
+attr-placement | 位置
 attr-size | 大小属性
+attr-trigger | 触发行为
 attr-type | 按钮类型属性
+attr-value | Value值
 
 ## 更新日志
 

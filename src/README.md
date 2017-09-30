@@ -12,11 +12,16 @@
 
 你可以任意 `.html`、`.ts` 文件，输入 `nz-` 开头会自动出现在智能提醒列表当中；仅此而已！
 
+片断中带有 `attr-` 表示属性，`fn-` 表示事件。
+
+> 建议开启 `"editor.snippetSuggestions": "top"` 配置，可确保代码片断优先级高于内置。
+
 ## 文档
 
 更多API接口请参考[ng-zorro-antd](https://github.com/NG-ZORRO/ng-zorro-antd)。
 
 {{#each @global.i18n}}
+
 ### {{ title }}
 
 Trigger | Description

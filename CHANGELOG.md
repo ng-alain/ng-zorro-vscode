@@ -1,3 +1,10 @@
+# 1.1.0
+
++ 新增所有 nz-zorro-antd 组件常用属性片断
++ 新增 `tag` 组件
++ 新增 [ng-alain](https://github.com/cipchk/ng-alain) 片断
++ 优化 `nz-button`
+
 # 1.0.3
 
 + 新增 `affix`、`avatar`、`anchor`、`back-top` 组件。
