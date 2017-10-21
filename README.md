@@ -31,7 +31,6 @@ root | 根组件只能引入一次，非必选
 
 Trigger | Description
 --- | ---
-icon | Icon图标
 button-attr-ghost | 设置幽灵按钮
 button-attr-loading | 设置按钮载入状态
 button | 按钮（只含type&amp;size）
@@ -40,6 +39,7 @@ button-group | 按钮组
 button-icon-text-left | 文本在左边的图标按钮
 button-icon-text-right | 文本在右边的图标按钮
 button-icon | 图标按钮
+icon | Icon图标
 
 ### [ng-alain](https://github.com/cipchk/ng-alain) 片断
 

@@ -5,7 +5,7 @@ let fs = require('fs'),
     wrap = require("gulp-wrap"),
     gulpSequence = require('gulp-sequence'),
     hb = require('gulp-hb'),
-    htmlWrap = require('./html-wrap');
+    generate = require('./generate');
 
 const DEF = {
     resources: './src/resources/**/*.html',
@@ -18,7 +18,7 @@ const i18n = JSON.parse(fs.readFileSync(`./src/i18n/${DEF.defaultLan}.json`)) ||
 
 gulp.task('build', () => {
     gulp.src(DEF.resources)
-        .pipe(htmlWrap({
+        .pipe(generate({
             i18n: i18n,
             template: `
     <%=item.key=='root root'?'':',' %> "<%=item.key %>": {

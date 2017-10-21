@@ -7,6 +7,34 @@
         "scope": ""
     }
 
+    , "general icon": {
+        "prefix": "nz-icon",
+        "body": "<i class=\"anticon anticon-${1|left,right,search|}\"></i>",
+        "description": "Icon图标",
+        "scope": ""
+    }
+
+    , "alain content": {
+        "prefix": "nz-alain-content",
+        "body": "<div class=\"content__title\">\r\n    <h1>${1}</h1>\r\n</div>\r\n$0",
+        "description": "alain content",
+        "scope": ""
+    }
+
+    , "alain content right input": {
+        "prefix": "nz-alain-content.right-input",
+        "body": "<div class=\"content__title\">\r\n    <h1>$1</h1>\r\n    <button nz-button (click)=\"${2}()\" [nzType]=\"'primary'\">${2:添加}</button>\r\n</div>\r\n$0",
+        "description": "alain content right input",
+        "scope": ""
+    }
+
+    , "alain content right inputgroup": {
+        "prefix": "nz-alain-content.right-inputgroup",
+        "body": "<div class=\"content__title\">\r\n    <h1>$1</h1>\r\n    <nz-input-group [nzCompact]=\"true\">\r\n        <nz-input [(ngModel)]=\"${4:val}\"></nz-input>\r\n        <button nz-button (click)=\"${3}\" [nzLoading]=\"http.loading\" [disabled]=\"!${4}\">${2:切换}</button>\r\n    </nz-input-group>\r\n</div>\r\n$0",
+        "description": "alain content right inputgroup",
+        "scope": ""
+    }
+
     , "general button attr ghost": {
         "prefix": "nz-button.attr-ghost",
         "body": "[nzGhost]=\"${1|true,false|}\"",
@@ -63,94 +91,178 @@
         "scope": ""
     }
 
-    , "general icon": {
-        "prefix": "nz-icon",
-        "body": "<i class=\"anticon anticon-${1|left,right,search|}\"></i>",
-        "description": "Icon图标",
-        "scope": ""
-    }
-
-    , "alain content": {
-        "prefix": "nz-content",
-        "body": "<div class=\"content__title\">\r\n    <h1>${1}</h1>\r\n</div>\r\n$0",
-        "description": "主标题",
-        "scope": ""
-    }
-
-    , "alain content right input": {
-        "prefix": "nz-content.right-input",
-        "body": "<div class=\"content__title\">\r\n    <h1>$1</h1>\r\n    <button nz-button (click)=\"${2}()\" [nzType]=\"'primary'\">${2:添加}</button>\r\n</div>\r\n$0",
-        "description": "alain content right input",
-        "scope": ""
-    }
-
-    , "alain content right inputgroup": {
-        "prefix": "nz-content.right-inputgroup",
-        "body": "<div class=\"content__title\">\r\n    <h1>$1</h1>\r\n    <nz-input-group [nzCompact]=\"true\">\r\n        <nz-input [(ngModel)]=\"${4:val}\"></nz-input>\r\n        <button nz-button (click)=\"${3}\" [nzLoading]=\"http.loading\" [disabled]=\"!${4}\">${2:切换}</button>\r\n    </nz-input-group>\r\n</div>\r\n$0",
-        "description": "alain content right inputgroup",
-        "scope": ""
-    }
-
     , "alain form checkbox": {
-        "prefix": "nz-form.checkbox",
+        "prefix": "nz-alain-form.checkbox",
         "body": "<div nz-form-control nz-col [nzSpan]=\"8\" [nzOffset]=\"4\">\r\n    <label nz-checkbox [(ngModel)]=\"i.${1}\" name=\"${1}\">\r\n        <span>$2</span>\r\n    </label>\r\n</div>\r\n$0",
         "description": "alain form checkbox",
         "scope": ""
     }
 
     , "alain form input number": {
-        "prefix": "nz-form.input-number",
+        "prefix": "nz-alain-form.input-number",
         "body": "<div nz-form-label nz-col [nzSpan]=\"4\"><label>$1</label></div>\r\n<div nz-form-control nz-col [nzSpan]=\"8\">\r\n    <nz-input-number [(ngModel)]=\"i.${2}\" name=\"${2}\" [nzMin]=\"${3:1}\" [nzMax]=\"${4:100}\"></nz-input-number>\r\n</div>",
         "description": "alain form input number",
         "scope": ""
     }
 
     , "alain form input": {
-        "prefix": "nz-form.input",
+        "prefix": "nz-alain-form.input",
         "body": "<div nz-form-label nz-col [nzSpan]=\"4\"><label>$1</label></div>\r\n<div nz-form-control nz-col [nzSpan]=\"8\">\r\n    <input nz-input [(ngModel)]=\"i.${2}\" name=\"${2}\"${3: required}${4: maxlength=\"${5|30,50,100,140|}\"}>\r\n</div>",
         "description": "alain form input",
         "scope": ""
     }
 
     , "alain form radio": {
-        "prefix": "nz-form.radio",
+        "prefix": "nz-alain-form.radio",
         "body": "<div nz-form-label nz-col [nzSpan]=\"4\"><label>$1</label></div>\r\n<div nz-form-control nz-col [nzSpan]=\"8\">\r\n    <nz-radio-group [(ngModel)]=\"i.${2}\" name=\"${2}\">\r\n        <label nz-radio [nzValue]=\"'A'\"><span>A</span></label>\r\n        <label nz-radio [nzValue]=\"'B'\"><span>B</span></label>\r\n    </nz-radio-group>{3:\r\n    <div nz-form-explain>$4</div>}\r\n</div>",
         "description": "alain form radio",
         "scope": ""
     }
 
     , "alain form select": {
-        "prefix": "nz-form.select",
+        "prefix": "nz-alain-form.select",
         "body": "<div nz-form-label nz-col [nzSpan]=\"4\"><label>$1</label></div>\r\n<div nz-form-control nz-col [nzSpan]=\"8\">\r\n    <nz-select [(ngModel)]=\"i.${2}\" name=\"${2}\">\r\n        <nz-option [nzValue]=\"0\" [nzLabel]=\"'不限'\"></nz-option>\r\n    </nz-select>{3:\r\n    <div nz-form-explain>$4</div>}\r\n</div>",
         "description": "alain form select",
         "scope": ""
     }
 
     , "alain form textarea": {
-        "prefix": "nz-form.textarea",
+        "prefix": "nz-alain-form.textarea",
         "body": "<div nz-form-label nz-col [nzSpan]=\"4\"><label>$1</label></div>\r\n<div nz-form-control nz-col [nzSpan]=\"20\">\r\n    <textarea nz-input [(ngModel)]=\"i.${2}\" name=\"${2}\" nzPlaceHolder=\"${3:选填，最多250个字}\" maxlength=\"${4}\"></textarea>\r\n</div>",
         "description": "alain form textarea",
         "scope": ""
     }
 
     , "alain list": {
-        "prefix": "nz-list",
+        "prefix": "nz-alain-list",
         "body": "<nz-table #nzTable class=\"simple-table\"\r\n    [nzAjaxData]=\"list\"\r\n    [nzLoading]=\"http.loading\"\r\n    [nzTotal]=\"total\"\r\n    [(nzPageIndex)]=\"s.pi\"\r\n    [(nzPageSize)]=\"s.ps\"\r\n    (nzPageIndexChange)=\"load()\"\r\n    [nzBordered]=\"true\"\r\n    [nzSize]=\"'middle'\">\r\n    <thead nz-thead>\r\n        <tr>\r\n            <th nz-th>编号</th>\r\n            <th nz-th>时间</th>\r\n            <th nz-th>状态</th>\r\n            <th nz-th></th>\r\n        </tr>\r\n    </thead>\r\n    <tbody nz-tbody>\r\n        <tr nz-tbody-tr *ngFor=\"let i of nzTable.data\">\r\n            <td>{{i.id}}</td>\r\n            <td>{{i.modified | _date}}</td>\r\n            <td [innerHTML]=\"i.enabled | yn\"></td>\r\n            <td>\r\n                <a (click)=\"edit(i)\">编辑</a>\r\n                <span nz-table-divider></span>\r\n                <a (click)=\"cached(i.id)\">缓存</a>\r\n                <span nz-table-divider></span>\r\n                <a (click)=\"edit(i, true)\">复制</a>\r\n            </td>\r\n        </tr>\r\n    </tbody>\r\n</nz-table>",
-        "description": "列表页表格",
+        "description": "alain list",
         "scope": ""
     }
 
     , "alain list search": {
-        "prefix": "nz-list.search",
+        "prefix": "nz-alain-list.search",
         "body": "<form nz-form [nzLayout]=\"'inline'\" class=\"search-form\">\r\n    <div nz-form-item>\r\n        <div nz-form-control>\r\n            <nz-select [(ngModel)]=\"s.time_type\" name=\"time_type\">\r\n                <nz-option nzValue=\"created\" nzLabel=\"创建时间\"></nz-option>\r\n                <nz-option nzValue=\"end_time\" nzLabel=\"完成时间\"></nz-option>\r\n            </nz-select>\r\n        </div>\r\n    </div>\r\n    <div nz-form-item>\r\n        <div nz-form-control>\r\n            <nz-datepicker [(ngModel)]=\"s.start\" name=\"start\" nzPlaceHolder=\"开始时间\"></nz-datepicker>\r\n        </div>\r\n    </div>\r\n    <div nz-form-item>\r\n        <div nz-form-control>\r\n            <nz-datepicker [(ngModel)]=\"s.end\" name=\"end\" nzPlaceHolder=\"结束时间\"></nz-datepicker>\r\n        </div>\r\n    </div>\r\n    <div nz-form-item>\r\n        <div nz-form-control>\r\n            <nz-input [(ngModel)]=\"s.q\" name=\"q\" nzPlaceHolder=\"名称\"></nz-input>\r\n        </div>\r\n    </div>\r\n    <div nz-form-item>\r\n        <div nz-form-control>\r\n            <button nz-button [nzType]=\"'primary'\" (click)=\"load()\">搜索</button>\r\n        </div>\r\n    </div>\r\n</form>",
         "description": "alain list search",
         "scope": ""
     }
 
     , "alain modal": {
-        "prefix": "nz-modal",
+        "prefix": "nz-alain-modal",
         "body": "<div class=\"modal-header\">\r\n    <div class=\"modal-title\">$1</div>\r\n</div>\r\n<form #f=\"ngForm\" (ngSubmit)=\"save()\" nz-form [nzType]=\"'horizontal'\">\r\n    $0\r\n</form>\r\n<div class=\"modal-footer\">\r\n    <button nz-button type=\"button\" (click)=\"subject.destroy()\">关闭</button>\r\n    <button nz-button [disabled]=\"!f.form.valid || !f.form.dirty\" [nzLoading]=\"http.loading\" [nzType]=\"'primary'\">保存</button>\r\n</div>",
-        "description": "对话框",
+        "description": "alain modal",
+        "scope": ""
+    }
+
+    , "layout grid attr col offset": {
+        "prefix": "nz-grid.attr-col-offset",
+        "body": "[nzOffset]=\"${1|8,16,24,32,64|}\"",
+        "description": "layout grid attr col offset",
+        "scope": ""
+    }
+
+    , "layout grid attr col order": {
+        "prefix": "nz-grid.attr-col-order",
+        "body": "[nzOrder]=\"${1|8,16,24,32,64|}\"",
+        "description": "layout grid attr col order",
+        "scope": ""
+    }
+
+    , "layout grid attr col pull": {
+        "prefix": "nz-grid.attr-col-pull",
+        "body": "[nzPull]=\"${1|8,16,24,32,64|}\"",
+        "description": "layout grid attr col pull",
+        "scope": ""
+    }
+
+    , "layout grid attr col push": {
+        "prefix": "nz-grid.attr-col-push",
+        "body": "[nzPush]=\"${1|8,16,24,32,64|}\"",
+        "description": "layout grid attr col push",
+        "scope": ""
+    }
+
+    , "layout grid attr col responsive": {
+        "prefix": "nz-grid.attr-col-responsive",
+        "body": "<div nz-col [nzXs]=\"${1:1-24}\" [nzSm]=\"${2:1-24}\" [nzMd]=\"${3:1-24}\" [nzLg]=\"${4:1-24}\" [nzXl]=\"${5:1-24}\"${6: [nzOffset]=\"${7:1-24}\"}>\r\n    $0\r\n</div>",
+        "description": "layout grid attr col responsive",
+        "scope": ""
+    }
+
+    , "layout grid attr col span": {
+        "prefix": "nz-grid.attr-col-span",
+        "body": "[nzSpan]=\"${1|8,16,24,32,64|}\"",
+        "description": "layout grid attr col span",
+        "scope": ""
+    }
+
+    , "layout grid attr flex align": {
+        "prefix": "nz-grid.attr-flex-align",
+        "body": "[nzAlign]=\"'${1|middle,bottom,top|}''\"",
+        "description": "layout grid attr flex align",
+        "scope": ""
+    }
+
+    , "layout grid attr flex justify": {
+        "prefix": "nz-grid.attr-flex-justify",
+        "body": "[nzJustify]=\"'${1|center,space-around,space-between,start,end|}''\"",
+        "description": "layout grid attr flex justify",
+        "scope": ""
+    }
+
+    , "layout grid attr gutter": {
+        "prefix": "nz-grid.attr-gutter",
+        "body": "[nzGutter]=\"${1|8,16,24,32,64|}\"",
+        "description": "layout grid attr gutter",
+        "scope": ""
+    }
+
+    , "layout grid col": {
+        "prefix": "nz-grid.col",
+        "body": "<div nz-col [nzSpan]=\"${1:1-24}\"${2: [nzOffset]=\"${3:1-24}\"}>\r\n    $4\r\n</div>",
+        "description": "layout grid col",
+        "scope": ""
+    }
+
+    , "layout grid": {
+        "prefix": "nz-grid",
+        "body": "<div nz-row${1: [nzGutter]=\"${2|8,16,24,32,64|}\"}>\r\n    <div nz-col [nzSpan]=\"${3:1-24}\"${4: [nzOffset]=\"${5:1-24}\"}>\r\n        $0\r\n    </div>\r\n</div>",
+        "description": "栅格：一行一列",
+        "scope": ""
+    }
+
+    , "layout grid responsive": {
+        "prefix": "nz-grid.responsive",
+        "body": "[nzXs]=\"${1:1-24}\" [nzSm]=\"${2:1-24}\" [nzMd]=\"${3:1-24}\" [nzLg]=\"${4:1-24}\" [nzXl]=\"${5:1-24}\"",
+        "description": "layout grid responsive",
+        "scope": ""
+    }
+
+    , "layout grid row flex": {
+        "prefix": "nz-grid.row-flex",
+        "body": "<div nz-row [nzType]=\"'flex'\"${1: [nzJustify]=\"'${2|start,center,end,space-between,space-around|}'\"}${3: [nzAlign]=\"'${4|top,middle,bottom|}'\"}>\r\n    $0\r\n</div>",
+        "description": "layout grid row flex",
+        "scope": ""
+    }
+
+    , "layout grid row": {
+        "prefix": "nz-grid.row",
+        "body": "<div nz-row${1: [nzGutter]=\"${2|8,16,24,32,64|}\"}>\r\n    $0\r\n</div>",
+        "description": "layout grid row",
+        "scope": ""
+    }
+
+    , "layout layout": {
+        "prefix": "nz-layout",
+        "body": "<nz-layout>\r\n    <nz-header>\r\n        $0\r\n    </nz-header>\r\n    <nz-content>\r\n\r\n    </nz-content>\r\n    <nz-footer>\r\n\r\n    </nz-footer>\r\n</nz-layout>",
+        "description": "上中下 Layout 布局",
+        "scope": ""
+    }
+
+    , "layout layout sider": {
+        "prefix": "nz-layout.sider",
+        "body": "<nz-sider [nzCollapsible]=\"true\"${1: [nzWidth]=\"${2:200}\"}${3: [nzCollapsedWidth]=\"${4:64}\"}>\r\n    $0\r\n</nz-sider>",
+        "description": "layout layout sider",
         "scope": ""
     }
 
@@ -277,118 +389,6 @@
         "prefix": "nz-steps.step",
         "body": "<nz-step [nzTitle]=\"'${1}'\" [nzDescription]=\"'${2}'\"${3: [nzStatus]=\"'${4|wait,process,finish,error|}'\"}></nz-step>",
         "description": "navigation steps step",
-        "scope": ""
-    }
-
-    , "layout grid attr col offset": {
-        "prefix": "nz-grid.attr-col-offset",
-        "body": "[nzOffset]=\"${1|8,16,24,32,64|}\"",
-        "description": "layout grid attr col offset",
-        "scope": ""
-    }
-
-    , "layout grid attr col order": {
-        "prefix": "nz-grid.attr-col-order",
-        "body": "[nzOrder]=\"${1|8,16,24,32,64|}\"",
-        "description": "layout grid attr col order",
-        "scope": ""
-    }
-
-    , "layout grid attr col pull": {
-        "prefix": "nz-grid.attr-col-pull",
-        "body": "[nzPull]=\"${1|8,16,24,32,64|}\"",
-        "description": "layout grid attr col pull",
-        "scope": ""
-    }
-
-    , "layout grid attr col push": {
-        "prefix": "nz-grid.attr-col-push",
-        "body": "[nzPush]=\"${1|8,16,24,32,64|}\"",
-        "description": "layout grid attr col push",
-        "scope": ""
-    }
-
-    , "layout grid attr col responsive": {
-        "prefix": "nz-grid.attr-col-responsive",
-        "body": "<div nz-col [nzXs]=\"${1:1-24}\" [nzSm]=\"${2:1-24}\" [nzMd]=\"${3:1-24}\" [nzLg]=\"${4:1-24}\" [nzXl]=\"${5:1-24}\"${6: [nzOffset]=\"${7:1-24}\"}>\r\n    $0\r\n</div>",
-        "description": "layout grid attr col responsive",
-        "scope": ""
-    }
-
-    , "layout grid attr col span": {
-        "prefix": "nz-grid.attr-col-span",
-        "body": "[nzSpan]=\"${1|8,16,24,32,64|}\"",
-        "description": "layout grid attr col span",
-        "scope": ""
-    }
-
-    , "layout grid attr flex align": {
-        "prefix": "nz-grid.attr-flex-align",
-        "body": "[nzAlign]=\"'${1|middle,bottom,top|}''\"",
-        "description": "layout grid attr flex align",
-        "scope": ""
-    }
-
-    , "layout grid attr flex justify": {
-        "prefix": "nz-grid.attr-flex-justify",
-        "body": "[nzJustify]=\"'${1|center,space-around,space-between,start,end|}''\"",
-        "description": "layout grid attr flex justify",
-        "scope": ""
-    }
-
-    , "layout grid attr gutter": {
-        "prefix": "nz-grid.attr-gutter",
-        "body": "[nzGutter]=\"${1|8,16,24,32,64|}\"",
-        "description": "layout grid attr gutter",
-        "scope": ""
-    }
-
-    , "layout grid col": {
-        "prefix": "nz-grid.col",
-        "body": "<div nz-col [nzSpan]=\"${1:1-24}\"${2: [nzOffset]=\"${3:1-24}\"}>\r\n    $4\r\n</div>",
-        "description": "layout grid col",
-        "scope": ""
-    }
-
-    , "layout grid": {
-        "prefix": "nz-grid",
-        "body": "<div nz-row${1: [nzGutter]=\"${2|8,16,24,32,64|}\"}>\r\n    <div nz-col [nzSpan]=\"${3:1-24}\"${4: [nzOffset]=\"${5:1-24}\"}>\r\n        $0\r\n    </div>\r\n</div>",
-        "description": "栅格：一行一列",
-        "scope": ""
-    }
-
-    , "layout grid responsive": {
-        "prefix": "nz-grid.responsive",
-        "body": "[nzXs]=\"${1:1-24}\" [nzSm]=\"${2:1-24}\" [nzMd]=\"${3:1-24}\" [nzLg]=\"${4:1-24}\" [nzXl]=\"${5:1-24}\"",
-        "description": "layout grid responsive",
-        "scope": ""
-    }
-
-    , "layout grid row flex": {
-        "prefix": "nz-grid.row-flex",
-        "body": "<div nz-row [nzType]=\"'flex'\"${1: [nzJustify]=\"'${2|start,center,end,space-between,space-around|}'\"}${3: [nzAlign]=\"'${4|top,middle,bottom|}'\"}>\r\n    $0\r\n</div>",
-        "description": "layout grid row flex",
-        "scope": ""
-    }
-
-    , "layout grid row": {
-        "prefix": "nz-grid.row",
-        "body": "<div nz-row${1: [nzGutter]=\"${2|8,16,24,32,64|}\"}>\r\n    $0\r\n</div>",
-        "description": "layout grid row",
-        "scope": ""
-    }
-
-    , "layout layout": {
-        "prefix": "nz-layout",
-        "body": "<nz-layout>\r\n    <nz-header>\r\n        $0\r\n    </nz-header>\r\n    <nz-content>\r\n\r\n    </nz-content>\r\n    <nz-footer>\r\n\r\n    </nz-footer>\r\n</nz-layout>",
-        "description": "上中下 Layout 布局",
-        "scope": ""
-    }
-
-    , "layout layout sider": {
-        "prefix": "nz-layout.sider",
-        "body": "<nz-sider [nzCollapsible]=\"true\"${1: [nzWidth]=\"${2:200}\"}${3: [nzCollapsedWidth]=\"${4:64}\"}>\r\n    $0\r\n</nz-sider>",
-        "description": "layout layout sider",
         "scope": ""
     }
 
@@ -1302,27 +1302,6 @@
         "scope": ""
     }
 
-    , "other anchor": {
-        "prefix": "nz-anchor",
-        "body": "<nz-anchor${1: [nzOffsetTop]=\"$2\"}${3: [nzBounds]=\"$4\"}${5: (nzScroll)=\"onScroll(\\$event)\"}>\r\n    $0\r\n</nz-anchor>",
-        "description": "锚点（若需要固定，配合 nz-affix 使用）",
-        "scope": ""
-    }
-
-    , "other anchor link": {
-        "prefix": "nz-anchor.link",
-        "body": "<nz-link [nzHref]=\"'${1}'\" [nzTitle]=\"'${2}'\">${3:\r\n    <ng-template #nzTemplate>\r\n        $4\r\n    </ng-template>\r\n}</nz-link>\r\n$0",
-        "description": "other anchor link",
-        "scope": ""
-    }
-
-    , "other back-top": {
-        "prefix": "nz-back-top",
-        "body": "<nz-back-top${1: [nzVisibilityHeight]=\"$2\"}>${3:\r\n    <ng-template #nzTemplate>\r\n        $4\r\n    </ng-template>\r\n}</nz-back-top>$0",
-        "description": "回到顶部",
-        "scope": ""
-    }
-
     , "attributes attr checked": {
         "prefix": "nz-attr.checked",
         "body": "[nzChecked]=\"${1|true,false|}\"",
@@ -1404,6 +1383,27 @@
         "prefix": "nz-attr.value",
         "body": "[nzValue]=\"${1}\"",
         "description": "attributes attr value",
+        "scope": ""
+    }
+
+    , "other anchor": {
+        "prefix": "nz-anchor",
+        "body": "<nz-anchor${1: [nzOffsetTop]=\"$2\"}${3: [nzBounds]=\"$4\"}${5: (nzScroll)=\"onScroll(\\$event)\"}>\r\n    $0\r\n</nz-anchor>",
+        "description": "锚点（若需要固定，配合 nz-affix 使用）",
+        "scope": ""
+    }
+
+    , "other anchor link": {
+        "prefix": "nz-anchor.link",
+        "body": "<nz-link [nzHref]=\"'${1}'\" [nzTitle]=\"'${2}'\">${3:\r\n    <ng-template #nzTemplate>\r\n        $4\r\n    </ng-template>\r\n}</nz-link>\r\n$0",
+        "description": "other anchor link",
+        "scope": ""
+    }
+
+    , "other back-top": {
+        "prefix": "nz-back-top",
+        "body": "<nz-back-top${1: [nzVisibilityHeight]=\"$2\"}>${3:\r\n    <ng-template #nzTemplate>\r\n        $4\r\n    </ng-template>\r\n}</nz-back-top>$0",
+        "description": "回到顶部",
         "scope": ""
     }  
 }
