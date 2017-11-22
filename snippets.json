@@ -7,45 +7,17 @@
         "scope": ""
     }
 
-    , "general icon": {
-        "prefix": "nz-icon",
-        "body": "<i class=\"anticon anticon-${1|left,right,search|}\"></i>",
-        "description": "Icon图标",
-        "scope": ""
-    }
-
-    , "alain content": {
-        "prefix": "nz-alain-content",
-        "body": "<div class=\"content__title\">\r\n    <h1>${1}</h1>\r\n</div>\r\n$0",
-        "description": "alain content",
-        "scope": ""
-    }
-
-    , "alain content right input": {
-        "prefix": "nz-alain-content.right-input",
-        "body": "<div class=\"content__title\">\r\n    <h1>$1</h1>\r\n    <button nz-button (click)=\"${2}()\" [nzType]=\"'primary'\">${2:添加}</button>\r\n</div>\r\n$0",
-        "description": "alain content right input",
-        "scope": ""
-    }
-
-    , "alain content right inputgroup": {
-        "prefix": "nz-alain-content.right-inputgroup",
-        "body": "<div class=\"content__title\">\r\n    <h1>$1</h1>\r\n    <nz-input-group [nzCompact]=\"true\">\r\n        <nz-input [(ngModel)]=\"${4:val}\"></nz-input>\r\n        <button nz-button (click)=\"${3}\" [nzLoading]=\"http.loading\" [disabled]=\"!${4}\">${2:切换}</button>\r\n    </nz-input-group>\r\n</div>\r\n$0",
-        "description": "alain content right inputgroup",
-        "scope": ""
-    }
-
     , "general button attr ghost": {
         "prefix": "nz-button.attr-ghost",
         "body": "[nzGhost]=\"${1|true,false|}\"",
-        "description": "general button attr ghost",
+        "description": "设置幽灵按钮",
         "scope": ""
     }
 
     , "general button attr loading": {
         "prefix": "nz-button.attr-loading",
         "body": "[nzLoading]=\"${1|true,false|}\"",
-        "description": "general button attr loading",
+        "description": "设置按钮载入状态",
         "scope": ""
     }
 
@@ -59,168 +31,231 @@
     , "general button full": {
         "prefix": "nz-button.full",
         "body": "<button nz-button (click)=\"${2}\" [nzType]=\"'${3|primary,dashed,danger,default|}'\"${4: [nzShape]=\"'circle'\"}${5: [nzSize]=\"'${6|small,large|}'\"}${7: [nzLoading]=\"true\"}${8: [nzGhost]=\"true\"}>$1</button>\r\n$0",
-        "description": "general button full",
+        "description": "一个完整指令的按钮",
         "scope": ""
     }
 
     , "general button group": {
         "prefix": "nz-button.group",
         "body": "<nz-button-group${1: [nzSize]=\"'${2|small,large|}'\"}>\r\n    <button nz-button (click)=\"${4}\"${5: [nzType]=\"'${6|primary,dashed,danger,default|}'\"}>$3</button>\r\n    $0\r\n</nz-button-group>",
-        "description": "general button group",
+        "description": "按钮组",
         "scope": ""
     }
 
     , "general button icon text left": {
         "prefix": "nz-button.icon-text-left",
         "body": "<button nz-button (click)=\"${3}\" [nzType]=\"'${4|primary,dashed,danger,default|}'\"${5: [nzShape]=\"'circle'\"}>\r\n    <span>${1}</span><i class=\"anticon anticon-${2}\"></i>\r\n</button>\r\n$0",
-        "description": "general button icon text left",
+        "description": "文本在左边的图标按钮",
         "scope": ""
     }
 
     , "general button icon text right": {
         "prefix": "nz-button.icon-text-right",
         "body": "<button nz-button (click)=\"${3}\" [nzType]=\"'${4|primary,dashed,danger,default|}'\"${5: [nzShape]=\"'circle'\"}>\r\n    <i class=\"anticon anticon-${2}\"></i><span>${1}</span>\r\n</button>\r\n$0",
-        "description": "general button icon text right",
+        "description": "文本在右边的图标按钮",
         "scope": ""
     }
 
     , "general button icon": {
         "prefix": "nz-button.icon",
         "body": "<button nz-button (click)=\"${2}\" [nzType]=\"'${3|primary,dashed,danger,default|}'\"${4: [nzShape]=\"'circle'\"}>\r\n    <i class=\"anticon anticon-${1}\"></i>\r\n</button>\r\n$0",
-        "description": "general button icon",
+        "description": "图标按钮",
+        "scope": ""
+    }
+
+    , "general icon": {
+        "prefix": "nz-icon",
+        "body": "<i class=\"anticon anticon-${1|left,right,search|}\"></i>",
+        "description": "Icon图标",
+        "scope": ""
+    }
+
+    , "general icon extra spin": {
+        "prefix": "nz-icon.extra-spin",
+        "body": "<nz-icon nzType=\"$1\" nzSpin></nz-icon>$0",
+        "description": "Extra：Icon图标（旋转动画）",
+        "scope": ""
+    }
+
+    , "general icon extra": {
+        "prefix": "nz-icon.extra",
+        "body": "<nz-icon nzType=\"$1\"></nz-icon>$0",
+        "description": "Extra：Icon图标",
+        "scope": ""
+    }
+
+    , "alain content": {
+        "prefix": "nz-alain-content",
+        "body": "<div class=\"content__title\">\r\n    <h1>${1}</h1>\r\n</div>\r\n$0",
+        "description": "主标题",
+        "scope": ""
+    }
+
+    , "alain content right input": {
+        "prefix": "nz-alain-content.right-input",
+        "body": "<div class=\"content__title\">\r\n    <h1>$1</h1>\r\n    <button nz-button (click)=\"${2}()\" [nzType]=\"'primary'\">${2:添加}</button>\r\n</div>\r\n$0",
+        "description": "主标题且右边按钮",
+        "scope": ""
+    }
+
+    , "alain content right inputgroup": {
+        "prefix": "nz-alain-content.right-inputgroup",
+        "body": "<div class=\"content__title\">\r\n    <h1>$1</h1>\r\n    <nz-input-group [nzCompact]=\"true\">\r\n        <nz-input [(ngModel)]=\"${4:val}\"></nz-input>\r\n        <button nz-button (click)=\"${3}\" [nzLoading]=\"http.loading\" [disabled]=\"!${4}\">${2:切换}</button>\r\n    </nz-input-group>\r\n</div>\r\n$0",
+        "description": "主标题且右边按钮组",
         "scope": ""
     }
 
     , "alain form checkbox": {
         "prefix": "nz-alain-form.checkbox",
         "body": "<div nz-form-control nz-col [nzSpan]=\"8\" [nzOffset]=\"4\">\r\n    <label nz-checkbox [(ngModel)]=\"i.${1}\" name=\"${1}\">\r\n        <span>$2</span>\r\n    </label>\r\n</div>\r\n$0",
-        "description": "alain form checkbox",
+        "description": "多选框",
         "scope": ""
     }
 
     , "alain form input number": {
         "prefix": "nz-alain-form.input-number",
         "body": "<div nz-form-label nz-col [nzSpan]=\"4\"><label>$1</label></div>\r\n<div nz-form-control nz-col [nzSpan]=\"8\">\r\n    <nz-input-number [(ngModel)]=\"i.${2}\" name=\"${2}\" [nzMin]=\"${3:1}\" [nzMax]=\"${4:100}\"></nz-input-number>\r\n</div>",
-        "description": "alain form input number",
+        "description": "数字输入框",
         "scope": ""
     }
 
     , "alain form input": {
         "prefix": "nz-alain-form.input",
         "body": "<div nz-form-label nz-col [nzSpan]=\"4\"><label>$1</label></div>\r\n<div nz-form-control nz-col [nzSpan]=\"8\">\r\n    <input nz-input [(ngModel)]=\"i.${2}\" name=\"${2}\"${3: required}${4: maxlength=\"${5|30,50,100,140|}\"}>\r\n</div>",
-        "description": "alain form input",
+        "description": "输入框",
         "scope": ""
     }
 
     , "alain form radio": {
         "prefix": "nz-alain-form.radio",
         "body": "<div nz-form-label nz-col [nzSpan]=\"4\"><label>$1</label></div>\r\n<div nz-form-control nz-col [nzSpan]=\"8\">\r\n    <nz-radio-group [(ngModel)]=\"i.${2}\" name=\"${2}\">\r\n        <label nz-radio [nzValue]=\"'A'\"><span>A</span></label>\r\n        <label nz-radio [nzValue]=\"'B'\"><span>B</span></label>\r\n    </nz-radio-group>{3:\r\n    <div nz-form-explain>$4</div>}\r\n</div>",
-        "description": "alain form radio",
+        "description": "单选框",
         "scope": ""
     }
 
     , "alain form select": {
         "prefix": "nz-alain-form.select",
         "body": "<div nz-form-label nz-col [nzSpan]=\"4\"><label>$1</label></div>\r\n<div nz-form-control nz-col [nzSpan]=\"8\">\r\n    <nz-select [(ngModel)]=\"i.${2}\" name=\"${2}\">\r\n        <nz-option [nzValue]=\"0\" [nzLabel]=\"'不限'\"></nz-option>\r\n    </nz-select>{3:\r\n    <div nz-form-explain>$4</div>}\r\n</div>",
-        "description": "alain form select",
+        "description": "下拉框",
         "scope": ""
     }
 
     , "alain form textarea": {
         "prefix": "nz-alain-form.textarea",
         "body": "<div nz-form-label nz-col [nzSpan]=\"4\"><label>$1</label></div>\r\n<div nz-form-control nz-col [nzSpan]=\"20\">\r\n    <textarea nz-input [(ngModel)]=\"i.${2}\" name=\"${2}\" nzPlaceHolder=\"${3:选填，最多250个字}\" maxlength=\"${4}\"></textarea>\r\n</div>",
-        "description": "alain form textarea",
+        "description": "多行文本框",
         "scope": ""
     }
 
     , "alain list": {
         "prefix": "nz-alain-list",
         "body": "<nz-table #nzTable class=\"simple-table\"\r\n    [nzAjaxData]=\"list\"\r\n    [nzLoading]=\"http.loading\"\r\n    [nzTotal]=\"total\"\r\n    [(nzPageIndex)]=\"s.pi\"\r\n    [(nzPageSize)]=\"s.ps\"\r\n    (nzPageIndexChange)=\"load()\"\r\n    [nzBordered]=\"true\"\r\n    [nzSize]=\"'middle'\">\r\n    <thead nz-thead>\r\n        <tr>\r\n            <th nz-th>编号</th>\r\n            <th nz-th>时间</th>\r\n            <th nz-th>状态</th>\r\n            <th nz-th></th>\r\n        </tr>\r\n    </thead>\r\n    <tbody nz-tbody>\r\n        <tr nz-tbody-tr *ngFor=\"let i of nzTable.data\">\r\n            <td>{{i.id}}</td>\r\n            <td>{{i.modified | _date}}</td>\r\n            <td [innerHTML]=\"i.enabled | yn\"></td>\r\n            <td>\r\n                <a (click)=\"edit(i)\">编辑</a>\r\n                <span nz-table-divider></span>\r\n                <a (click)=\"cached(i.id)\">缓存</a>\r\n                <span nz-table-divider></span>\r\n                <a (click)=\"edit(i, true)\">复制</a>\r\n            </td>\r\n        </tr>\r\n    </tbody>\r\n</nz-table>",
-        "description": "alain list",
+        "description": "列表页表格",
         "scope": ""
     }
 
     , "alain list search": {
         "prefix": "nz-alain-list.search",
         "body": "<form nz-form [nzLayout]=\"'inline'\" class=\"search-form\">\r\n    <div nz-form-item>\r\n        <div nz-form-control>\r\n            <nz-select [(ngModel)]=\"s.time_type\" name=\"time_type\">\r\n                <nz-option nzValue=\"created\" nzLabel=\"创建时间\"></nz-option>\r\n                <nz-option nzValue=\"end_time\" nzLabel=\"完成时间\"></nz-option>\r\n            </nz-select>\r\n        </div>\r\n    </div>\r\n    <div nz-form-item>\r\n        <div nz-form-control>\r\n            <nz-datepicker [(ngModel)]=\"s.start\" name=\"start\" nzPlaceHolder=\"开始时间\"></nz-datepicker>\r\n        </div>\r\n    </div>\r\n    <div nz-form-item>\r\n        <div nz-form-control>\r\n            <nz-datepicker [(ngModel)]=\"s.end\" name=\"end\" nzPlaceHolder=\"结束时间\"></nz-datepicker>\r\n        </div>\r\n    </div>\r\n    <div nz-form-item>\r\n        <div nz-form-control>\r\n            <nz-input [(ngModel)]=\"s.q\" name=\"q\" nzPlaceHolder=\"名称\"></nz-input>\r\n        </div>\r\n    </div>\r\n    <div nz-form-item>\r\n        <div nz-form-control>\r\n            <button nz-button [nzType]=\"'primary'\" (click)=\"load()\">搜索</button>\r\n        </div>\r\n    </div>\r\n</form>",
-        "description": "alain list search",
+        "description": "列表页搜索表单",
         "scope": ""
     }
 
     , "alain modal": {
         "prefix": "nz-alain-modal",
         "body": "<div class=\"modal-header\">\r\n    <div class=\"modal-title\">$1</div>\r\n</div>\r\n<form #f=\"ngForm\" (ngSubmit)=\"save()\" nz-form [nzType]=\"'horizontal'\">\r\n    $0\r\n</form>\r\n<div class=\"modal-footer\">\r\n    <button nz-button type=\"button\" (click)=\"subject.destroy()\">关闭</button>\r\n    <button nz-button [disabled]=\"!f.form.valid || !f.form.dirty\" [nzLoading]=\"http.loading\" [nzType]=\"'primary'\">保存</button>\r\n</div>",
-        "description": "alain modal",
+        "description": "对话框",
+        "scope": ""
+    }
+
+    , "alain pro desc list": {
+        "prefix": "nz-alain-pro.desc-list",
+        "body": "<desc-list col=\"${1|2,3,4|}\"${2: size=\"${3|small,large|}\"}>\n    <desc-list-item term=\"$4\">$5</desc-list-item>\n</desc-list>\n$0",
+        "description": "PRO：描述列表",
+        "scope": ""
+    }
+
+    , "alain pro header": {
+        "prefix": "nz-alain-pro.header",
+        "body": "<pro-header [title]=\"'$1'\"></pro-header>\n$0",
+        "description": "PRO：标题",
+        "scope": ""
+    }
+
+    , "alain ts form get control": {
+        "prefix": "nz-alain-ts.form-get-control",
+        "body": "get $1() { return this.form.controls.$1; }\n$0",
+        "description": "TS：获取表单字段",
         "scope": ""
     }
 
     , "layout grid attr col offset": {
         "prefix": "nz-grid.attr-col-offset",
         "body": "[nzOffset]=\"${1|8,16,24,32,64|}\"",
-        "description": "layout grid attr col offset",
+        "description": "栅格左侧的间隔格数，间隔内不可以有栅格",
         "scope": ""
     }
 
     , "layout grid attr col order": {
         "prefix": "nz-grid.attr-col-order",
         "body": "[nzOrder]=\"${1|8,16,24,32,64|}\"",
-        "description": "layout grid attr col order",
+        "description": "栅格顺序",
         "scope": ""
     }
 
     , "layout grid attr col pull": {
         "prefix": "nz-grid.attr-col-pull",
         "body": "[nzPull]=\"${1|8,16,24,32,64|}\"",
-        "description": "layout grid attr col pull",
+        "description": "栅格向左移动格数",
         "scope": ""
     }
 
     , "layout grid attr col push": {
         "prefix": "nz-grid.attr-col-push",
         "body": "[nzPush]=\"${1|8,16,24,32,64|}\"",
-        "description": "layout grid attr col push",
+        "description": "栅格向右移动格数",
         "scope": ""
     }
 
     , "layout grid attr col responsive": {
         "prefix": "nz-grid.attr-col-responsive",
         "body": "<div nz-col [nzXs]=\"${1:1-24}\" [nzSm]=\"${2:1-24}\" [nzMd]=\"${3:1-24}\" [nzLg]=\"${4:1-24}\" [nzXl]=\"${5:1-24}\"${6: [nzOffset]=\"${7:1-24}\"}>\r\n    $0\r\n</div>",
-        "description": "layout grid attr col responsive",
+        "description": "栅格占位响应式",
         "scope": ""
     }
 
     , "layout grid attr col span": {
         "prefix": "nz-grid.attr-col-span",
         "body": "[nzSpan]=\"${1|8,16,24,32,64|}\"",
-        "description": "layout grid attr col span",
+        "description": "栅格占位格数，为 0 时相当于 display: none",
         "scope": ""
     }
 
     , "layout grid attr flex align": {
         "prefix": "nz-grid.attr-flex-align",
         "body": "[nzAlign]=\"'${1|middle,bottom,top|}''\"",
-        "description": "layout grid attr flex align",
+        "description": "flex 布局下的垂直对齐方式",
         "scope": ""
     }
 
     , "layout grid attr flex justify": {
         "prefix": "nz-grid.attr-flex-justify",
         "body": "[nzJustify]=\"'${1|center,space-around,space-between,start,end|}''\"",
-        "description": "layout grid attr flex justify",
+        "description": "flex 布局下的水平排列方式",
         "scope": ""
     }
 
     , "layout grid attr gutter": {
         "prefix": "nz-grid.attr-gutter",
         "body": "[nzGutter]=\"${1|8,16,24,32,64|}\"",
-        "description": "layout grid attr gutter",
+        "description": "栅格间隔",
         "scope": ""
     }
 
     , "layout grid col": {
         "prefix": "nz-grid.col",
         "body": "<div nz-col [nzSpan]=\"${1:1-24}\"${2: [nzOffset]=\"${3:1-24}\"}>\r\n    $4\r\n</div>",
-        "description": "layout grid col",
+        "description": "栅格：一列（含：nzSpan、nzOffset）",
         "scope": ""
     }
 
@@ -234,21 +269,21 @@
     , "layout grid responsive": {
         "prefix": "nz-grid.responsive",
         "body": "[nzXs]=\"${1:1-24}\" [nzSm]=\"${2:1-24}\" [nzMd]=\"${3:1-24}\" [nzLg]=\"${4:1-24}\" [nzXl]=\"${5:1-24}\"",
-        "description": "layout grid responsive",
+        "description": "响应式栅格",
         "scope": ""
     }
 
     , "layout grid row flex": {
         "prefix": "nz-grid.row-flex",
         "body": "<div nz-row [nzType]=\"'flex'\"${1: [nzJustify]=\"'${2|start,center,end,space-between,space-around|}'\"}${3: [nzAlign]=\"'${4|top,middle,bottom|}'\"}>\r\n    $0\r\n</div>",
-        "description": "layout grid row flex",
+        "description": "栅格：一行flex（含：nzAlign、nzJustify）",
         "scope": ""
     }
 
     , "layout grid row": {
         "prefix": "nz-grid.row",
         "body": "<div nz-row${1: [nzGutter]=\"${2|8,16,24,32,64|}\"}>\r\n    $0\r\n</div>",
-        "description": "layout grid row",
+        "description": "栅格：一行",
         "scope": ""
     }
 
@@ -262,7 +297,7 @@
     , "layout layout sider": {
         "prefix": "nz-layout.sider",
         "body": "<nz-sider [nzCollapsible]=\"true\"${1: [nzWidth]=\"${2:200}\"}${3: [nzCollapsedWidth]=\"${4:64}\"}>\r\n    $0\r\n</nz-sider>",
-        "description": "layout layout sider",
+        "description": "侧边栏",
         "scope": ""
     }
 
@@ -276,14 +311,14 @@
     , "navigation affix target": {
         "prefix": "nz-affix.target",
         "body": "<div class=\"scrollable-container\" #target>\r\n    <nz-affix [nzTarget]=\"target\"${1: [nzOffsetTop]=\"${2}\"}${3: (nzChange)=\"onChange(\\$event)\"}>\r\n        $0\r\n    </nz-affix>\r\n</div>",
-        "description": "navigation affix target",
+        "description": "固钉（指定容器）",
         "scope": ""
     }
 
     , "navigation breadcrumb attr separator": {
         "prefix": "nz-breadcrumb.attr-separator",
         "body": "[nzSeparator]=\"'${1:>}'\"",
-        "description": "navigation breadcrumb attr separator",
+        "description": "分隔符自定义",
         "scope": ""
     }
 
@@ -297,21 +332,21 @@
     , "navigation breadcrumb icon": {
         "prefix": "nz-breadcrumb.icon",
         "body": "<nz-breadcrumb-item>\r\n    <a [routerLink]=\"['/${1}']\"><i class=\"anticon anticon-${2:home}\"></i>${3:<span>${4:首页}</span>}</a>\r\n</nz-breadcrumb-item>\r\n$0",
-        "description": "navigation breadcrumb icon",
+        "description": "面包屑ICON图标",
         "scope": ""
     }
 
     , "navigation dropdown button full": {
         "prefix": "nz-dropdown.button-full",
         "body": "<nz-dropdown-button${2: [nzType]=\"'${3|primary,dashed,danger,default|}'\"}${4: [nzSize]=\"'${5|small,large|}'\"}\r\n    ${6: [nzTrigger]=\"'${7|click,hover|}'\"}${8: [nzPlacement]=\"'${9|bottomLeft,bottomCenter,bottomRight,topLeft,topCenter,topRight|}'\"}>\r\n    <button nz-button nz-dropdown>${1}</button>\r\n    <ul nz-menu>\r\n        <li nz-menu-item>${10}</li>\r\n        $0\r\n    </ul>\r\n</nz-dropdown-button>",
-        "description": "navigation dropdown button full",
+        "description": "按钮式下拉菜单（含一个菜单）",
         "scope": ""
     }
 
     , "navigation dropdown button": {
         "prefix": "nz-dropdown.button",
         "body": "<nz-dropdown-button${2: [nzType]=\"'${3|primary,dashed,danger,default|}'\"}${4: [nzSize]=\"'${5|small,large|}'\"}\r\n    ${6: [nzTrigger]=\"'${7|click,hover|}'\"}${8: [nzPlacement]=\"'${9|bottomLeft,bottomCenter,bottomRight,topLeft,topCenter,topRight|}'\"}>\r\n    <button nz-button nz-dropdown>${1}</button>\r\n    $0\r\n</nz-dropdown-button>",
-        "description": "navigation dropdown button",
+        "description": "按钮式下拉菜单",
         "scope": ""
     }
 
@@ -325,7 +360,7 @@
     , "navigation dropdown full": {
         "prefix": "nz-dropdown.full",
         "body": "<nz-dropdown${2: [nzTrigger]=\"'${3|click,hover|}'\"}${4: [nzPlacement]=\"'${5|bottomLeft,bottomCenter,bottomRight,topLeft,topCenter,topRight|}'\"}>\r\n    <a class=\"ant-dropdown-link\" nz-dropdown>\r\n        ${1} <i class=\"anticon anticon-down\"></i>\r\n    </a>\r\n    <ul nz-menu>\r\n        <li nz-menu-item>${6}</li>\r\n        $0\r\n    </ul>\r\n</nz-dropdown>",
-        "description": "navigation dropdown full",
+        "description": "下拉菜单（含一个菜单）",
         "scope": ""
     }
 
@@ -339,28 +374,28 @@
     , "navigation menu group": {
         "prefix": "nz-menu.group",
         "body": "<li nz-menu-group>\r\n    <span title>${1}</span>\r\n    $0\r\n</li>",
-        "description": "navigation menu group",
+        "description": "分组菜单",
         "scope": ""
     }
 
     , "navigation menu item divider": {
         "prefix": "nz-menu.item-divider",
         "body": "<li nz-menu-divider></li>\r\n$0",
-        "description": "navigation menu item divider",
+        "description": "菜单项分割线",
         "scope": ""
     }
 
     , "navigation menu item": {
         "prefix": "nz-menu.item",
         "body": "<li nz-menu-item>${1}</li>\r\n$0",
-        "description": "navigation menu item",
+        "description": "菜单项",
         "scope": ""
     }
 
     , "navigation menu submenu": {
         "prefix": "nz-menu.submenu",
         "body": "<li nz-submenu${1: [nzOpen]=\"true\"}>\r\n    <span title>${2}</span>\r\n    <ul>\r\n        $0\r\n    </ul>\r\n</li>",
-        "description": "navigation menu submenu",
+        "description": "子菜单",
         "scope": ""
     }
 
@@ -381,21 +416,21 @@
     , "navigation steps step icon": {
         "prefix": "nz-steps.step-icon",
         "body": "<nz-step [nzTitle]=\"'${1}'\" [nzDescription]=\"'${2}'\"${3: [nzStatus]=\"'${4|wait,process,finish,error|}'\"}>\r\n    <ng-template #nzIcon>$6</ng-template>\r\n</nz-step>",
-        "description": "navigation steps step icon",
+        "description": "步骤条内的每一个步骤（自定义图标）",
         "scope": ""
     }
 
     , "navigation steps step": {
         "prefix": "nz-steps.step",
         "body": "<nz-step [nzTitle]=\"'${1}'\" [nzDescription]=\"'${2}'\"${3: [nzStatus]=\"'${4|wait,process,finish,error|}'\"}></nz-step>",
-        "description": "navigation steps step",
+        "description": "步骤条内的每一个步骤",
         "scope": ""
     }
 
     , "data-entry checkbox all": {
         "prefix": "nz-checkbox.all",
         "body": "<label nz-checkbox [(ngModel)]=\"${1:allChecked}\" name=\"${1}\"${2: (ngModelChange)=\"${3}\"} [nzIndeterminate]=\"indeterminate\">\r\n    <span>${4}</span>\r\n</label>",
-        "description": "data-entry checkbox all",
+        "description": "多选框（全选）",
         "scope": ""
     }
 
@@ -409,14 +444,14 @@
     , "data-entry checkbox group": {
         "prefix": "nz-checkbox.group",
         "body": "<nz-checkbox-group [(ngModel)]=\"${1}\" name=\"${1}\"${2: (ngModelChange)=\"${3}\"}></nz-checkbox-group>",
-        "description": "data-entry checkbox group",
+        "description": "多选框组",
         "scope": ""
     }
 
     , "data-entry datepicker attr format": {
         "prefix": "nz-datepicker.attr-format",
         "body": "[nzFormat]=\"'${1|YYYY-MM-DD HH:mm:ss,YYYY年MM月DD日 HH:mm:ss,YYYY-MM-DD,YYYY年MM月DD日,YYYY-MM-DD HH:mm,YYYY年MM月DD日 HH:mm|}'\"",
-        "description": "data-entry datepicker attr format",
+        "description": "展示的日期格式，配置参考 Moment.js文档",
         "scope": ""
     }
 
@@ -430,49 +465,49 @@
     , "data-entry datepicker format": {
         "prefix": "nz-datepicker.format",
         "body": "<nz-datepicker [(ngModel)]=\"${1:begin}\" name=\"${1}\" [nzPlaceHolder]=\"'${2:请选择日期}'\"\r\n     [nzFormat]=\"'${3|YYYY-MM-DD HH:mm:ss,YYYY年MM月DD日 HH:mm:ss,YYYY-MM-DD,YYYY年MM月DD日,YYYY-MM-DD HH:mm,YYYY年MM月DD日 HH:mm|}'\"${4: [nzSize]=\"'${5|large,small|}'\"}></nz-datepicker>",
-        "description": "data-entry datepicker format",
+        "description": "日期选择框（指定时间格式）",
         "scope": ""
     }
 
     , "data-entry datepicker time": {
         "prefix": "nz-datepicker.time",
         "body": "<nz-datepicker [(ngModel)]=\"${1:begin}\" name=\"${1}\" [nzPlaceHolder]=\"'${2:请选择日期时间}'\"${3: [nzSize]=\"'${4|large,small|}'\"}\r\n     [nzShowTime]=\"true\" [nzFormat]=\"'${5|YYYY-MM-DD HH:mm:ss,YYYY年MM月DD日 HH:mm:ss,YYYY-MM-DD,YYYY年MM月DD日,YYYY-MM-DD HH:mm,YYYY年MM月DD日 HH:mm|}'\"></nz-datepicker>",
-        "description": "data-entry datepicker time",
+        "description": "日期时间选择框",
         "scope": ""
     }
 
     , "data-entry form attr control feedback": {
         "prefix": "nz-form.attr-control-feedback",
         "body": "[nzHasFeedback]=\"$1\"",
-        "description": "data-entry form attr control feedback",
+        "description": "当添加该属性时，配合 nzValidateStatus 属性使用，展示校验状态图标，建议只配合 nz-input 组件使用",
         "scope": ""
     }
 
     , "data-entry form attr control validstatus": {
         "prefix": "nz-form.attr-control-validstatus",
         "body": "[nzValidateStatus]=\"${1|'error','warning','validating','success'|}\"",
-        "description": "data-entry form attr control validstatus",
+        "description": "校验状态，属性定义为当前formControl名称可以根据异步返回数据自动显示，也可手动定义",
         "scope": ""
     }
 
     , "data-entry form attr layout": {
         "prefix": "nz-form.attr-layout",
         "body": "[nzLayout]=\"'${1|horizontal,vertical,inline|}'\"",
-        "description": "data-entry form attr layout",
+        "description": "表单布局",
         "scope": ""
     }
 
     , "data-entry form control responsive": {
         "prefix": "nz-form.control-responsive",
         "body": "<div nz-form-control nz-col [nzXs]=\"${1:1-24}\" [nzSm]=\"${2:1-24}\" [nzMd]=\"${3:1-24}\" [nzLg]=\"${4:1-24}\" [nzXl]=\"${5:1-24}\"${6: [nzHasFeedback]=\"'true'\"}${7: [nzValidateStatus]=\"${8|success,warning,error,validating|}\"}>\r\n    $0\r\n</div>",
-        "description": "data-entry form control responsive",
+        "description": "表单控制区域，通常用于放置input，select等组件（响应式）",
         "scope": ""
     }
 
     , "data-entry form control": {
         "prefix": "nz-form.control",
         "body": "<div nz-form-control nz-col [nzSpan]=\"${1:1-24}\"${2: [nzHasFeedback]=\"'true'\"}${3: [nzValidateStatus]=\"${4|success,warning,error,validating|}\"}>\r\n    $0\r\n</div>",
-        "description": "data-entry form control",
+        "description": "表单控制区域，通常用于放置input，select等组件",
         "scope": ""
     }
 
@@ -486,77 +521,77 @@
     , "data-entry form explain": {
         "prefix": "nz-form.explain",
         "body": "<div nz-form-explain>$0</div>",
-        "description": "data-entry form explain",
+        "description": "用于显示提示信息，会根据当前`nzValidateStatus`显示不同的颜色",
         "scope": ""
     }
 
     , "data-entry form extra": {
         "prefix": "nz-form.extra",
         "body": "<div nz-form-extra>$0</div>",
-        "description": "data-entry form extra",
+        "description": "用于显示表单额外提示信息",
         "scope": ""
     }
 
     , "data-entry form item required": {
         "prefix": "nz-form.item-required",
         "body": "<label for=\"${1:id}\" nz-form-item-required>${2:text}</label>$0",
-        "description": "data-entry form item required",
+        "description": "给label添加require样式",
         "scope": ""
     }
 
     , "data-entry form item": {
         "prefix": "nz-form.item",
         "body": "<div nz-form-item nz-row>\r\n    $0\r\n</div>",
-        "description": "data-entry form item",
+        "description": "用于标定一个form item区域",
         "scope": ""
     }
 
     , "data-entry form label responsive": {
         "prefix": "nz-form.label-responsive",
         "body": "<div nz-form-label nz-col [nzXs]=\"${1:1-24}\" [nzSm]=\"${2:1-24}\" [nzMd]=\"${3:1-24}\" [nzLg]=\"${4:1-24}\" [nzXl]=\"${5:1-24}\">\r\n    <label for=\"${6:id}\"${7: nz-form-item-required}>${8:text}</label>\r\n</div>\r\n$0",
-        "description": "data-entry form label responsive",
+        "description": "用于标定label区域（响应式）",
         "scope": ""
     }
 
     , "data-entry form label": {
         "prefix": "nz-form.label",
         "body": "<div nz-form-label nz-col [nzSpan]=\"${1:1-24}\">\r\n    <label for=\"${2:id}\"${3: nz-form-item-required}>${4:text}</label>\r\n</div>\r\n$0",
-        "description": "data-entry form label",
+        "description": "用于标定label区域",
         "scope": ""
     }
 
     , "data-entry form split": {
         "prefix": "nz-form.split",
         "body": "<div nz-form-split>${1:\/}</div>",
-        "description": "data-entry form split",
+        "description": "用于显示 `-` 分隔符",
         "scope": ""
     }
 
     , "data-entry input add on": {
         "prefix": "nz-input.add-on",
         "body": "<nz-input [(ngModel)]=\"${1}\" [nzPlaceHolder]=\"'${2}'\"${3: [nzSize]=\"'${4|large,small|}'\"}>\r\n    <ng-template #addOnBefore>$5</ng-template>\r\n    <ng-template #addOnAfter>$6</ng-template>\r\n</nz-input>",
-        "description": "data-entry input add on",
+        "description": "带有前后置标签的输入框",
         "scope": ""
     }
 
     , "data-entry input attr autosize": {
         "prefix": "nz-input.attr-autosize",
         "body": "[nzAutosize]=\"${1|true,false,{ minRows: 2 <自行改为逗号> maxRows: 6 }|}\"",
-        "description": "data-entry input attr autosize",
+        "description": "自适应内容高度（textarea 有效）",
         "scope": ""
     }
 
     , "data-entry input attr group compact": {
         "prefix": "nz-input.attr-group-compact",
         "body": "[nzCompact]=\"${1|true,false|}\"",
-        "description": "data-entry input attr group compact",
+        "description": "是否用紧凑模式",
         "scope": ""
     }
 
     , "data-entry input attr number step": {
         "prefix": "nz-input.attr-number-step",
         "body": "[nzStep]=\"${1|2,3,4,5,6,7,8,9,10|}\"",
-        "description": "data-entry input attr number step",
+        "description": "每次改变步数",
         "scope": ""
     }
 
@@ -570,70 +605,70 @@
     , "data-entry input group": {
         "prefix": "nz-input.group",
         "body": "<nz-input-group${1: [nzCompact]=\"true\"}${2: [nzSize]=\"'${3|large,small|}'\"}>\r\n    $0\r\n</nz-input-group>",
-        "description": "data-entry input group",
+        "description": "输入框组合",
         "scope": ""
     }
 
     , "data-entry input input add on after": {
         "prefix": "nz-input.input-add-on-after",
         "body": "<nz-input [(ngModel)]=\"${1}\" name=\"${1}\" [nzPlaceHolder]=\"'${2}'\"${3: [nzSize]=\"'${4|large,small|}'\"}>\r\n    <ng-template #addOnAfter>$5</ng-template>\r\n</nz-input>",
-        "description": "data-entry input input add on after",
+        "description": "带有前缀图标的输入框",
         "scope": ""
     }
 
     , "data-entry input input add on before": {
         "prefix": "nz-input.input-add-on-before",
         "body": "<nz-input [(ngModel)]=\"${1}\" name=\"${1}\" [nzPlaceHolder]=\"'${2}'\"${3: [nzSize]=\"'${4|large,small|}'\"}>\r\n    <ng-template #addOnBefore>$5</ng-template>\r\n</nz-input>",
-        "description": "data-entry input input add on before",
+        "description": "带有后缀图标的输入框",
         "scope": ""
     }
 
     , "data-entry input input prefix suffix": {
         "prefix": "nz-input.input-prefix-suffix",
         "body": "<nz-input [(ngModel)]=\"${1}\" name=\"${1}\" [nzPlaceHolder]=\"'${2}'\"${3: [nzSize]=\"'${4|large,small|}'\"}>\r\n    <ng-template #prefix>$5</ng-template>\r\n    <ng-template #suffix>$6</ng-template>\r\n</nz-input>",
-        "description": "data-entry input input prefix suffix",
+        "description": "带有前后缀图标的输入框",
         "scope": ""
     }
 
     , "data-entry input number": {
         "prefix": "nz-input.number",
         "body": "<nz-input-number [(ngModel)]=\"${1:num}\" name=\"${1}\" [nzMin]=\"${2:1}\" [nzMax]=\"${3:100}\" [nzStep]=\"${4:1}\"\r\n    ${5: [nzPlaceHolder]=\"'${6}'\"}${7: [nzSize]=\"'${8|large,small|}'\"}${9: [nzDisabled]=\"'${10|true,false|}'\"}></nz-input-number>",
-        "description": "data-entry input number",
+        "description": "带数字输入框",
         "scope": ""
     }
 
     , "data-entry input prefix": {
         "prefix": "nz-input.prefix",
         "body": "<nz-input [(ngModel)]=\"${1}\" name=\"${1}\" [nzPlaceHolder]=\"'${2}'\"${3: [nzSize]=\"'${4|large,small|}'\"}>\r\n    <ng-template #prefix>$5</ng-template>\r\n</nz-input>",
-        "description": "data-entry input prefix",
+        "description": "带有前缀图标的输入框",
         "scope": ""
     }
 
     , "data-entry input suffix": {
         "prefix": "nz-input.suffix",
         "body": "<nz-input [(ngModel)]=\"${1}\" name=\"${1}\" [nzPlaceHolder]=\"'${2}'\"${3: [nzSize]=\"'${4|large,small|}'\"}>\r\n    <ng-template #suffix>$5</ng-template>\r\n</nz-input>",
-        "description": "data-entry input suffix",
+        "description": "带有后缀图标的输入框",
         "scope": ""
     }
 
     , "data-entry input TD": {
         "prefix": "nz-input.TD",
         "body": "<input nz-input [(ngModel)]=\"${1}\" name=\"${1}\"></input>\r\n$0",
-        "description": "data-entry input TD",
+        "description": "模板驱动风格",
         "scope": ""
     }
 
     , "data-entry input textarea": {
         "prefix": "nz-input.textarea",
         "body": "<nz-input [(ngModel)]=\"${1}\" name=\"${1}\" [nzType]=\"'textarea'\" [nzRows]=\"'${2:4}'\" [nzPlaceHolder]=\"'${3}'\"></nz-input>$0",
-        "description": "data-entry input textarea",
+        "description": "多行输入框",
         "scope": ""
     }
 
     , "data-entry radio button": {
         "prefix": "nz-radio.button",
         "body": "<label nz-radio-button [nzValue]=\"${1}\"${2: [nzDisabled]=\"${3}\"}>\r\n    <span>$4</span>\r\n</label>\r\n$0",
-        "description": "data-entry radio button",
+        "description": "按钮样式的单选组合",
         "scope": ""
     }
 
@@ -647,7 +682,7 @@
     , "data-entry radio group": {
         "prefix": "nz-radio.group",
         "body": "<nz-radio-group [(ngModel)]=\"${1}\" name=\"${1}\"${2: [nzSize]=\"'${3|large,small|}'\"}>\r\n    $0\r\n</nz-radio-group>",
-        "description": "data-entry radio group",
+        "description": "单选框组合，用于包裹一组 nz-radio/nz-radio-button",
         "scope": ""
     }
 
@@ -661,49 +696,49 @@
     , "data-entry select attr allow clear": {
         "prefix": "nz-select.attr-allow-clear",
         "body": "nzAllowClear",
-        "description": "data-entry select attr allow clear",
+        "description": "支持清除, 单选模式有效",
         "scope": ""
     }
 
     , "data-entry select attr filter": {
         "prefix": "nz-select.attr-filter",
         "body": "[nzFilter]=\"${1|true,false|}\"",
-        "description": "data-entry select attr filter",
+        "description": "是否根据输入过滤选项",
         "scope": ""
     }
 
     , "data-entry select attr fn open change": {
         "prefix": "nz-select.attr-fn-open-change",
         "body": "(nzOpenChange)=\"${1}\"",
-        "description": "data-entry select attr fn open change",
+        "description": "下拉菜单打开关闭回调函数",
         "scope": ""
     }
 
     , "data-entry select attr fn search change": {
         "prefix": "nz-select.attr-fn-search-change",
         "body": "(nzSearchChange)=\"${1}\"",
-        "description": "data-entry select attr fn search change",
+        "description": "搜索内容变化回调函数，参数为搜索内容",
         "scope": ""
     }
 
     , "data-entry select attr mode": {
         "prefix": "nz-select.attr-mode",
         "body": "[nzMode]=\"'${1|multiple,tags|}'\"",
-        "description": "data-entry select attr mode",
+        "description": "设置 Select 的模式",
         "scope": ""
     }
 
     , "data-entry select attr not found": {
         "prefix": "nz-select.attr-not-found",
         "body": "[nzNotFoundContent]=\"'${1|未找到,请重新选择,必选项|}'\"",
-        "description": "data-entry select attr not found",
+        "description": "当下拉列表为空时显示的内容",
         "scope": ""
     }
 
     , "data-entry select attr show search": {
         "prefix": "nz-select.attr-show-search",
         "body": "[nzShowSearch]=\"${1|true,false|}\"",
-        "description": "data-entry select attr show search",
+        "description": "是否启用搜索框",
         "scope": ""
     }
 
@@ -717,7 +752,7 @@
     , "data-entry select search": {
         "prefix": "nz-select.search",
         "body": "<nz-select [(ngModel)]=\"${1}\" name=\"${1}\" [nzSearchChange]=\"${2}\" [nzMode]=\"'${3|multiple,tags|}'\"\r\n    [nzNotFoundContent]=\"'${4}'\" [nzPlaceHolder]=\"'${5}'\"${6: [nzAllowClear]=\"true\" }>\r\n    <nz-option\r\n        *ngFor=\"let ${8} of ${7}\"\r\n        [nzLabel]=\"${8}.label\"\r\n        [nzValue]=\"${8}.value\"\r\n        [nzDisabled]=\"${8}.disabled\">\r\n    </nz-option>\r\n</nz-select>\r\n$0",
-        "description": "data-entry select search",
+        "description": "搜索框选择器",
         "scope": ""
     }
 
@@ -738,21 +773,21 @@
     , "data-entry switch icon": {
         "prefix": "nz-switch.icon",
         "body": "<nz-switch [(ngModel)]=\"${1}\" name=\"${1}\"${2: [nzSize]=\"'${3|large,small|}'\"}>\r\n    <i class=\"anticon anticon-${4:check}\" checked></i>\r\n    <i class=\"anticon anticon-${5:cross}\" unchecked></i>\r\n</nz-switch>\r\n$0",
-        "description": "data-entry switch icon",
+        "description": "开关选择器（带图标）",
         "scope": ""
     }
 
     , "data-entry switch text": {
         "prefix": "nz-switch.text",
         "body": "<nz-switch [(ngModel)]=\"${1}\" name=\"${1}\"${2: [nzSize]=\"'${3|large,small|}'\"}>\r\n    <span checked>${4:开}</span>\r\n    <span unchecked>${5:关}</span>\r\n</nz-switch>\r\n$0",
-        "description": "data-entry switch text",
+        "description": "开关选择器（带文本）",
         "scope": ""
     }
 
     , "data-entry timepicker attr format": {
         "prefix": "nz-timepicker.attr-format",
         "body": "[nzFormat]=\"'${1|HH:mm:ss,HH:mm,mm:ss|}'\"",
-        "description": "data-entry timepicker attr format",
+        "description": "展示的时间格式",
         "scope": ""
     }
 
@@ -766,7 +801,21 @@
     , "data-entry timepicker format": {
         "prefix": "nz-timepicker.format",
         "body": "<nz-timepicker [(ngModel)]=\"${1}\" name=\"${1}\" [nzFormat]=\"${2|HH:mm:ss,HH:mm,mm:ss|}\" [nzPlaceHolder]=\"'${3:请选择时间}'\"${4: [nzSize]=\"'${5|large,small|}'\"}></nz-timepicker>\r\n$0",
-        "description": "data-entry timepicker format",
+        "description": "输入或选择时间的控件（指定时间格式）",
+        "scope": ""
+    }
+
+    , "data-entry transfer": {
+        "prefix": "nz-transfer",
+        "body": "<nz-transfer\n    [nzDataSource]=\"$1\"\n    (nzChange)=\"$2(\\$event)\">\n</nz-transfer>\n$0",
+        "description": "穿梭框",
+        "scope": ""
+    }
+
+    , "data-entry transfer full": {
+        "prefix": "nz-transfer.full",
+        "body": "<nz-transfer\n    [nzDataSource]=\"$1\"\n    [nzTitles]=\"['Source', 'Target']\"\n    [nzOperations]=\"['to right', 'to left']\"\n    [nzListStyle]=\"{'width.px': 300, 'height.px': 300}\"\n    [nzShowSearch]=\"true\"\n    [nzSearchPlaceholder]=\"'请输入搜索内容'\"\n    [nzNotFoundContent]=\"'列表为空'\"\n    [nzFilterOption]=\"filterOption\"\n    (nzSearchChange)=\"searchChange(\\$event)\"\n    (nzChange)=\"$2(\\$event)\">\n    <ng-template #render let-item>\n        {{item.$2}}\n    </ng-template>\n    <ng-template #footer let-direction>\n\n    </ng-template>\n</nz-transfer>\n$0",
+        "description": "穿梭框（完整版）",
         "scope": ""
     }
 
@@ -780,42 +829,42 @@
     , "data-display avatar icon": {
         "prefix": "nz-avatar.icon",
         "body": "<nz-avatar [nzIcon]=\"'$1'\"${2: [nzSize]=\"'${3|default,small,large|}'\"}${4: [nzShape]=\"'square'\"}></nz-avatar>\r\n$0",
-        "description": "data-display avatar icon",
+        "description": "Icon头像",
         "scope": ""
     }
 
     , "data-display avatar img": {
         "prefix": "nz-avatar.img",
         "body": "<nz-avatar [nzSrc]=\"$1\"${2: [nzSize]=\"'${3|default,small,large|}'\"}${4 [nzIcon]=\"'$5'\"}${6: [nzShape]=\"'square'\"}></nz-avatar>\r\n$0",
-        "description": "data-display avatar img",
+        "description": "图片头像",
         "scope": ""
     }
 
     , "data-display avatar text": {
         "prefix": "nz-avatar.text",
         "body": "<nz-avatar [nzText]=\"$1\"${2: [nzSize]=\"'${3|default,small,large|}'\"}${4: [nzShape]=\"'square'\"}></nz-avatar>\r\n$0",
-        "description": "data-display avatar text",
+        "description": "文本头像（自动调整字符大小）",
         "scope": ""
     }
 
     , "data-display badge attr overflow count": {
         "prefix": "nz-badge.attr-overflow-count",
         "body": "[nzOverflowCount]=\"${1|10,99,999|}\"",
-        "description": "data-display badge attr overflow count",
+        "description": "展示封顶的数字值",
         "scope": ""
     }
 
     , "data-display badge attr show zero": {
         "prefix": "nz-badge.attr-show-zero",
         "body": "nzShowZero",
-        "description": "data-display badge attr show zero",
+        "description": "当添加该属性时，当数值为 0 时，展示 Badge",
         "scope": ""
     }
 
     , "data-display badge attr status": {
         "prefix": "nz-badge.attr-status",
         "body": "[nzStatus]=\"'${1|success,error,default,processing,warning|}'\"",
-        "description": "data-display badge attr status",
+        "description": "设置 Badge 为状态点（nzDot小红点有效）",
         "scope": ""
     }
 
@@ -829,14 +878,14 @@
     , "data-display badge dot": {
         "prefix": "nz-badge.dot",
         "body": "<nz-badge [nzStatus]=\"'${1|success,error,default,processing,warning|}'\"></nz-badge>\r\n$0",
-        "description": "data-display badge dot",
+        "description": "徽标数（只有小圆点）",
         "scope": ""
     }
 
     , "data-display badge standalone": {
         "prefix": "nz-badge.standalone",
         "body": "<nz-badge [nzCount]=\"${1}\" [nzStyle]=\"style${2|1,2,3|}\"></nz-badge>\r\n$0",
-        "description": "data-display badge standalone",
+        "description": "徽标数（独立使用，不包裹任何元素）",
         "scope": ""
     }
 
@@ -850,14 +899,14 @@
     , "data-display card attr bordered": {
         "prefix": "nz-card.attr-bordered",
         "body": "[nzBordered]=\"${1|true,false|}\"",
-        "description": "data-display card attr bordered",
+        "description": "是否有边框",
         "scope": ""
     }
 
     , "data-display card attr no hovering": {
         "prefix": "nz-card.attr-no-hovering",
         "body": "[nzNoHovering]=\"${1|true,false|}\"",
-        "description": "data-display card attr no hovering",
+        "description": "取消鼠标移过浮起",
         "scope": ""
     }
 
@@ -868,17 +917,52 @@
         "scope": ""
     }
 
+    , "data-display card extra action": {
+        "prefix": "nz-card.extra-action",
+        "body": "<nz-card-action>$0</nz-card-action>",
+        "description": "Extra：操作区域组件",
+        "scope": ""
+    }
+
+    , "data-display card extra grid": {
+        "prefix": "nz-card.extra-grid",
+        "body": "<div nz-card-grid>$0</div>",
+        "description": "Extra：网格型内嵌卡片",
+        "scope": ""
+    }
+
+    , "data-display card extra meta": {
+        "prefix": "nz-card.extra-meta",
+        "body": "<nz-card-meta\n    [nzAvatar]=\"$1\"\n    [nzTitle]=\"$2\"\n    [nzDescription]=\"$3\"></nz-card-meta>\n$0",
+        "description": "Extra：卡片元信息",
+        "scope": ""
+    }
+
+    , "data-display card extra tab": {
+        "prefix": "nz-card.extra-tab",
+        "body": "<nz-card-tab [nzTabHeading]=\"'$1'\">\n    $2\n</nz-card-tab>\n$0",
+        "description": "Extra：卡片选项卡组件",
+        "scope": ""
+    }
+
+    , "data-display card extra": {
+        "prefix": "nz-card.extra",
+        "body": "<nz-card${1: [nzTitle]=\"'$2'\"}>\n    $3\n</nz-card>\n$0",
+        "description": "Extra：卡片",
+        "scope": ""
+    }
+
     , "data-display card full": {
         "prefix": "nz-card.full",
         "body": "<nz-card${1: [nzBordered]=\"false\"}${2: [nzNoHovering]=\"true\"}${3: [nzLoading]=\"true\"}>\r\n    <ng-template #title>${4}</ng-template>\r\n    <ng-template #extra>${5}</ng-template>\r\n    <ng-template #body>\r\n        ${6}\r\n    </ng-template>\r\n</nz-card>\r\n$0\r\n\r\n",
-        "description": "data-display card full",
+        "description": "卡片（完整结构）",
         "scope": ""
     }
 
     , "data-display card image": {
         "prefix": "nz-card.image",
         "body": "<nz-card>\r\n    <ng-template #body>\r\n        <div class=\"custom-image\">\r\n          <img width=\"100%\" src=\"${1}\" alt=\"${2}\" />\r\n        </div>\r\n        <div class=\"custom-card\">\r\n          <h3>${3}</h3>\r\n          <p>${4}</p>\r\n        </div>\r\n    </ng-template>\r\n</nz-card>\r\n$0",
-        "description": "data-display card image",
+        "description": "卡片（带图片）",
         "scope": ""
     }
 
@@ -899,14 +983,63 @@
     , "data-display collapse full": {
         "prefix": "nz-collapse.full",
         "body": "<nz-collapseset${1: [nzBordered]=\"false\"}${2: [nzAccordion]=\"true\"}>\r\n    <nz-collapse \r\n        *ngFor=\"let ${4:item} of ${3:list}\" \r\n        [nzTitle]=\"${4:item}.title\"\r\n        [nzActive]=\"${4:item}.active\"\r\n        [nzDisabled]=\"${4:item}.disabled\">\r\n        ${5}\r\n    </nz-collapse>\r\n</nz-collapseset>\r\n$0",
-        "description": "data-display collapse full",
+        "description": "折叠面板（带*ngFor）",
         "scope": ""
     }
 
     , "data-display collapse set": {
         "prefix": "nz-collapse.set",
         "body": "<nz-collapseset${1: [nzBordered]=\"false\"}${2: [nzAccordion]=\"true\"}>\r\n    $0\r\n</nz-collapseset>",
-        "description": "data-display collapse set",
+        "description": "折叠面板",
+        "scope": ""
+    }
+
+    , "data-display list basic": {
+        "prefix": "nz-list.basic",
+        "body": "<nz-list\n    [nzDataSource]=\"$1\"\n    [nzBordered]=\"${2|true,false|}\"\n    [nzLoading]=\"$3\"\n    [nzHeader]=\"'$4'\"\n    [nzFooter]=\"'$5'\">\n    <ng-template #item let-${6:item}>\n        <nz-list-item>{{$6}}</nz-list-item>\n    </ng-template>\n</nz-list>\n$0",
+        "description": "Extra：基础型列表",
+        "scope": ""
+    }
+
+    , "data-display list": {
+        "prefix": "nz-list",
+        "body": "<nz-list [nzDataSource]=\"$1\">\n    <ng-template #item let-$2>\n        <nz-list-item>\n            <nz-list-item-meta\n                [nzTitle]=\"$2.title\"\n                [nzAvatar]=\"$2.avatar\"\n                [nzDescription]=\"$2.description\">\n                <ng-template #itemTitle>\n                    <a>{{$2.title}}</a>\n                </ng-template>\n            </nz-list-item-meta>\n        </nz-list-item>\n    </ng-template>\n</nz-list>",
+        "description": "Extra：通用列表",
+        "scope": ""
+    }
+
+    , "data-display list item action": {
+        "prefix": "nz-list.item-action",
+        "body": "<nz-list-item-action>$0</nz-list-item-action>",
+        "description": "Extra：列表操作组",
+        "scope": ""
+    }
+
+    , "data-display list item meta": {
+        "prefix": "nz-list.item-meta",
+        "body": "<nz-card-meta\n    [nzAvatar]=\"$1\"\n    [nzTitle]=\"$2\"\n    [nzDescription]=\"$3\"></nz-card-meta>\n$0",
+        "description": "Extra：列表元素",
+        "scope": ""
+    }
+
+    , "data-display list item": {
+        "prefix": "nz-list.item",
+        "body": "<nz-list-item>\n    $0\n</nz-list-item>",
+        "description": "Extra：列表项",
+        "scope": ""
+    }
+
+    , "data-display list responsive": {
+        "prefix": "nz-list.responsive",
+        "body": "<nz-list [nzDataSource]=\"$1\" [nzGrid]=\"{gutter: 16, xs: 24, sm: 12, md: 6, lg: 6, xl: 4 }\">\n    <ng-template #item let-$2>\n        <nz-list-item>\n            <nz-list-item-meta\n                [nzTitle]=\"$2.title\"\n                [nzAvatar]=\"$2.avatar\"\n                [nzDescription]=\"$2.description\">\n                <ng-template #itemTitle>\n                    <a>{{$2.title}}</a>\n                </ng-template>\n            </nz-list-item-meta>\n        </nz-list-item>\n    </ng-template>\n</nz-list>",
+        "description": "Extra：栅格列表",
+        "scope": ""
+    }
+
+    , "data-display list simple": {
+        "prefix": "nz-list.simple",
+        "body": "<nz-list [nzBordered]=\"${1|true,false|}\" [nzHeader]=\"nzHeader\" [nzFooter]=\"nzFooter\">\n    <ng-template #nzHeader>$2</ng-template>\n    <ng-template #nzFooter>$3</ng-template>\n    <nz-list-item>$4</nz-list-item>\n    <nz-list-item>$5</nz-list-item>\n</nz-list>\n$0",
+        "description": "Extra：简单列表（无数据源方式）",
         "scope": ""
     }
 
@@ -920,35 +1053,35 @@
     , "data-display popover full": {
         "prefix": "nz-popover.full",
         "body": "<nz-popover ${2: [nzPlacement]=\"${3|top,left,right,bottom,topLeft,topRight,bottomLeft,bottomRight,leftTop,leftBottom,rightTop,rightBottom|}\"}${4: [nzTrigger]=\"${5|hover,focus,click|}\"}>\r\n    <button nz-button nz-popover>${1}</button>\r\n    <ng-template #nzTemplate>\r\n        ${6}\r\n    </ng-template>\r\n</nz-popover>\r\n$0",
-        "description": "data-display popover full",
+        "description": "气泡卡片（完整结构）",
         "scope": ""
     }
 
     , "data-display table ajax": {
         "prefix": "nz-table.ajax",
         "body": "<nz-table #nzTable [nzAjaxData]=\"${1}\" (nzDataChange)=\"_dataChange(\\$event)\"\r\n    [nzPageIndex]=\"_pageIndex\" (nzPageIndexChange)=\"_pageIndexChange(\\$event)\" (nzPageIndexChangeClick)=\"_pageIndexChangeClick(\\$event)\"\r\n    [nzPageSize]=\"_pageSize\" (nzPageSizeChange)=\"_pageSizeChange(\\$event)\"\r\n    [nzTotal]=\"_total\"\r\n    [nzBordered]=\"true\"\r\n    [nzSize]=\"'small|middle|default'\"\r\n    [nzCustomNoResult]=\"true\"\r\n    [nzShowFooter]=\"true\"\r\n    [nzShowTitle]=\"true\"\r\n    [nzIsPagination]=\"true\"\r\n    [nzLoading]=\"true\"\r\n    [nzShowSizeChanger]=\"true\"\r\n    [nzShowQuickJumper]=\"true\"\r\n    [nzShowTotal]=\"true\">\r\n    <div noResult>无数据时内容</div>\r\n    <div nz-table-table>表头内容</div>\r\n    <thead nz-thead>\r\n        <tr>\r\n            <th nz-th [nzCheckbox]=\"true\">\r\n                <label nz-checkbox [(ngModel)]=\"_allChecked\" (ngModelChange)=\"_checkAll(\\$event)\" [nzIndeterminate]=\"_indeterminate\"></label>\r\n            </th>\r\n            <th nz-th><span></span></th>\r\n        </tr>\r\n    </thead>\r\n    <tbody nz-tbody>\r\n        <tr nz-tbody-tr *ngFor=\"let i of nzTable.data\">\r\n            <td nz-td [nzCheckbox]=\"true\">\r\n                <label nz-checkbox [(ngModel)]=\"i.checked\" (ngModelChange)=\"_refreshStatus(\\$event)\"></label>\r\n            </td>\r\n            <td nz-td>\r\n                <span>\r\n                    <a href=\"#\" (click)=\"edit(i)\">编辑</a>\r\n                    <span nz-table-divider></span>\r\n                    <a href=\"#\" (click)=\"del(i)\">删除</a>\r\n                    <span nz-table-divider></span>\r\n                    <nz-dropdown>\r\n                        <a class=\"ant-dropdown-link\" nz-dropdown>\r\n                            更多 <i class=\"anticon anticon-down\"></i>\r\n                        </a>\r\n                        <ul nz-menu>\r\n                            <li nz-menu-item>\r\n                                <a (click)=\"active(i)\">active</a>\r\n                            </li>\r\n                        </ul>\r\n                    </nz-dropdown>\r\n                </span>\r\n            </td>\r\n        </tr>\r\n    </tbody>\r\n    <tfoot nz-table-footer></tfoot>\r\n</nz-table>",
-        "description": "data-display table ajax",
+        "description": "表格（远程异步数据）",
         "scope": ""
     }
 
     , "data-display table attr bordered": {
         "prefix": "nz-table.attr-bordered",
         "body": "[nzBordered]=\"${1|true,false|}\"",
-        "description": "data-display table attr bordered",
+        "description": "是否显示边框",
         "scope": ""
     }
 
     , "data-display table attr data source": {
         "prefix": "nz-table.attr-data-source",
         "body": "[nzDataSource]=\"${1:list}\" [nzIsPagination]=\"false\"",
-        "description": "data-display table attr data source",
+        "description": "同步数据（含无分页）",
         "scope": ""
     }
 
     , "data-display table attr size": {
         "prefix": "nz-table.attr-size",
         "body": "[nzSize]=\"'${1|small,middle,default|}'\"",
-        "description": "data-display table attr size",
+        "description": "table大小",
         "scope": ""
     }
 
@@ -962,112 +1095,112 @@
     , "data-display table divider": {
         "prefix": "nz-table.divider",
         "body": "<span nz-table-divider></span>\r\n$0",
-        "description": "data-display table divider",
+        "description": "表格：td中分隔数据",
         "scope": ""
     }
 
     , "data-display table footer": {
         "prefix": "nz-table.footer",
         "body": "<tfoot nz-table-footer>$0</tfoot>",
-        "description": "data-display table footer",
+        "description": "表格：标定footer（需要在 nz-table 设定 nzShowFooter 才会生效）",
         "scope": ""
     }
 
     , "data-display table full": {
         "prefix": "nz-table.full",
         "body": "<nz-table #nzTable [nzDataSource]=\"${1}\" (nzDataChange)=\"_dataChange(\\$event)\"\r\n    [nzPageIndex]=\"_pageIndex\" (nzPageIndexChange)=\"_pageIndexChange(\\$event)\" (nzPageIndexChangeClick)=\"_pageIndexChangeClick(\\$event)\"\r\n    [nzPageSize]=\"_pageSize\" (nzPageSizeChange)=\"_pageSizeChange(\\$event)\"\r\n    [nzBordered]=\"true\"\r\n    [nzSize]=\"'small|middle|default'\"\r\n    [nzCustomNoResult]=\"true\"\r\n    [nzShowFooter]=\"true\"\r\n    [nzShowTitle]=\"true\"\r\n    [nzIsPagination]=\"true\"\r\n    [nzLoading]=\"true\"\r\n    [nzShowSizeChanger]=\"true\"\r\n    [nzShowQuickJumper]=\"true\"\r\n    [nzShowTotal]=\"true\">\r\n    <div noResult>无数据时内容</div>\r\n    <div nz-table-table>表头内容</div>\r\n    <thead nz-thead>\r\n        <tr>\r\n            <th nz-th [nzCheckbox]=\"true\">\r\n                <label nz-checkbox [(ngModel)]=\"_allChecked\" (ngModelChange)=\"_checkAll(\\$event)\" [nzIndeterminate]=\"_indeterminate\"></label>\r\n            </th>\r\n            <th nz-th><span></span></th>\r\n        </tr>\r\n    </thead>\r\n    <tbody nz-tbody>\r\n        <tr nz-tbody-tr *ngFor=\"let i of nzTable.data\">\r\n            <td nz-td [nzCheckbox]=\"true\">\r\n                <label nz-checkbox [(ngModel)]=\"i.checked\" (ngModelChange)=\"_refreshStatus(\\$event)\"></label>\r\n            </td>\r\n            <td nz-td>\r\n                <span>\r\n                    <a href=\"#\" (click)=\"edit(i)\">编辑</a>\r\n                    <span nz-table-divider></span>\r\n                    <a href=\"#\" (click)=\"del(i)\">删除</a>\r\n                    <span nz-table-divider></span>\r\n                    <nz-dropdown>\r\n                        <a class=\"ant-dropdown-link\" nz-dropdown>\r\n                            更多 <i class=\"anticon anticon-down\"></i>\r\n                        </a>\r\n                        <ul nz-menu>\r\n                            <li nz-menu-item>\r\n                                <a (click)=\"active(i)\">active</a>\r\n                            </li>\r\n                        </ul>\r\n                    </nz-dropdown>\r\n                </span>\r\n            </td>\r\n        </tr>\r\n    </tbody>\r\n    <tfoot nz-table-footer></tfoot>\r\n</nz-table>",
-        "description": "data-display table full",
+        "description": "表格（完成所有结构）",
         "scope": ""
     }
 
     , "data-display table selection": {
         "prefix": "nz-table.selection",
         "body": "<nz-table #nzTable [nzDataSource]=\"${1}\" [nzPageSize]=\"${2:10}\"\r\n     (nzDataChange)=\"${3:_dataChange}(\\$event)\"\r\n     (nzPageIndexChange)=\"${4:_refreshStatus}()\"\r\n     (nzPageSizeChange)=\"${4:_refreshStatus}()\">\r\n    <thead nz-thead>\r\n        <tr>\r\n            <th nz-th [nzCheckbox]=\"true\">\r\n                <label nz-checkbox [(ngModel)]=\"${5:_allChecked}\" (ngModelChange)=\"${6:_checkAll}(\\$event)\"\r\n                    [nzIndeterminate]=\"${7:_indeterminate}\"></label>\r\n            </th>\r\n            <th nz-th><span>标题</span></th>\r\n            $8\r\n            <th nz-th><span></span></th>\r\n        </tr>\r\n    </thead>\r\n    <tbody nz-tbody>\r\n        <tr nz-tbody-tr *ngFor=\"let i of nzTable.data\">\r\n            <td nz-td [nzCheckbox]=\"true\">\r\n                <label nz-checkbox [(ngModel)]=\"i.checked\" (ngModelChange)=\"${4:_refreshStatus}(\\$event)\"></label>\r\n            </td>\r\n            <td nz-td>{{i.title}}</td>\r\n            $9\r\n            <td nz-td>\r\n                <span>\r\n                    <a href=\"#\" (click)=\"edit(i)\">编辑</a>\r\n                    <span nz-table-divider></span>\r\n                    <a href=\"#\" (click)=\"del(i)\">删除</a>${10:\r\n                    <span nz-table-divider></span>\r\n                    <nz-dropdown>\r\n                        <a class=\"ant-dropdown-link\" nz-dropdown>\r\n                            更多 <i class=\"anticon anticon-down\"></i>\r\n                        </a>\r\n                        <ul nz-menu>\r\n                            <li nz-menu-item>\r\n                                <a (click)=\"\">active</a>\r\n                            </li>\r\n                        </ul>\r\n                    </nz-dropdown>\r\n                    }\r\n                </span>\r\n            </td>\r\n        </tr>\r\n    </tbody>\r\n</nz-table>",
-        "description": "data-display table selection",
+        "description": "表格（带选择框操作）",
         "scope": ""
     }
 
     , "data-display table sort": {
         "prefix": "nz-table.sort",
         "body": "<nz-table-sort [(nzValue)]=\"${1:idSort}\" (nzValueChange)=\"${1:idSort}Change(\\$event)\"></nz-table-sort>\r\n$0",
-        "description": "data-display table sort",
+        "description": "表格：嵌入th中显示排序状态",
         "scope": ""
     }
 
     , "data-display table tbody tr": {
         "prefix": "nz-table.tbody-tr",
         "body": "<tr nz-tbody-tr *ngFor=\"let i of nzTable.data\">\r\n    <td nz-td>{{i.${1}}}</td>\r\n    $0\r\n</tr>",
-        "description": "data-display table tbody tr",
+        "description": "表格：标定tbody中tr",
         "scope": ""
     }
 
     , "data-display table tbody": {
         "prefix": "nz-table.tbody",
         "body": "<tbody nz-tbody>\r\n    <tr nz-tbody-tr *ngFor=\"let i of nzTable.data\">\r\n        <td nz-td>{{i.${1}}}</td>\r\n        $0\r\n    </tr>\r\n</tbody>",
-        "description": "data-display table tbody",
+        "description": "表格：标定tbody",
         "scope": ""
     }
 
     , "data-display table td active more": {
         "prefix": "nz-table.td-active-more",
         "body": "<td nz-td>\r\n    <span>\r\n        <a href=\"#\" (click)=\"${1}(i)\">${2:编辑}</a>\r\n        <span nz-table-divider></span>\r\n        <nz-dropdown>\r\n            <a class=\"ant-dropdown-link\" nz-dropdown>\r\n                ${3:更多} <i class=\"anticon anticon-down\"></i>\r\n            </a>\r\n            <ul nz-menu>\r\n                <li nz-menu-item>\r\n                    <a (click)=\"${4}\">${5}</a>\r\n                </li>\r\n            </ul>\r\n        </nz-dropdown>\r\n    </span>\r\n</td>\r\n$0",
-        "description": "data-display table td active more",
+        "description": "表格：构建带有功能按钮及更多选项的td",
         "scope": ""
     }
 
     , "data-display table td active": {
         "prefix": "nz-table.td-active",
         "body": "<td nz-td>\r\n    <span>\r\n        <a href=\"#\" (click)=\"edit(i)\">编辑</a>\r\n        <span nz-table-divider></span>\r\n        ${1}\r\n    </span>\r\n</td>\r\n$0",
-        "description": "data-display table td active",
+        "description": "表格：构建带有功能按钮的td",
         "scope": ""
     }
 
     , "data-display table td checkbox": {
         "prefix": "nz-table.td-checkbox",
         "body": "<td nz-td [nzCheckbox]=\"true\">{{i.${1}}}</td>$0",
-        "description": "data-display table td checkbox",
+        "description": "表格：标定td且含有checkbox",
         "scope": ""
     }
 
     , "data-display table td": {
         "prefix": "nz-table.td",
         "body": "<td nz-td>{{i.${1}}}</td>$0",
-        "description": "data-display table td",
+        "description": "表格：标定td",
         "scope": ""
     }
 
     , "data-display table th": {
         "prefix": "nz-table.th",
         "body": "<th nz-th><span>${1}</span></th>$0",
-        "description": "data-display table th",
+        "description": "表格：标定th",
         "scope": ""
     }
 
     , "data-display table thead": {
         "prefix": "nz-table.thead",
         "body": "<thead nz-thead>\r\n    <tr>\r\n        <th nz-th><span>${1}</span></th>\r\n        $0\r\n    </tr>\r\n</thead>",
-        "description": "data-display table thead",
+        "description": "表格：标定thead",
         "scope": ""
     }
 
     , "data-display tabs attr fn change": {
         "prefix": "nz-tabs.attr-fn-change",
         "body": "(nzSelectedIndexChange)=\"$1(\\$event)\"",
-        "description": "data-display tabs attr fn change",
+        "description": "当前激活的Tab Index回调",
         "scope": ""
     }
 
     , "data-display tabs attr position": {
         "prefix": "nz-tabs.attr-position",
         "body": "[nzTabPosition]=\"'${1|top,right,bottom,left|}'\"",
-        "description": "data-display tabs attr position",
+        "description": "页签位置",
         "scope": ""
     }
 
     , "data-display tabs attr type": {
         "prefix": "nz-tabs.attr-type",
         "body": "[nzType]=\"'${1|card,line|}'\"",
-        "description": "data-display tabs attr type",
+        "description": "页签的基本样式",
         "scope": ""
     }
 
@@ -1081,35 +1214,35 @@
     , "data-display tabs tab": {
         "prefix": "nz-tabs.tab",
         "body": "<nz-tab${1: [nzDisabled]=\"tab.disabled\"}${2: (nzClick)=\"tabClick(\\$event)\"}${3: (nzSelect)=\"tabSelect(\\$event)\"}${4: (nzDeselect)=\"tabDeSelect(\\$event)\"}>\r\n    <ng-template #nzTabHeading>\r\n        ${5}\r\n    </ng-template>\r\n    ${6}\r\n</nz-tab>",
-        "description": "data-display tabs tab",
+        "description": "标签页：选项卡",
         "scope": ""
     }
 
     , "data-display tag attr closable": {
         "prefix": "nz-tag.attr-closable",
         "body": "[nzClosable]=\"${1|true,false|}\"",
-        "description": "data-display tag attr closable",
+        "description": "标签是否可以关闭",
         "scope": ""
     }
 
     , "data-display tag attr color": {
         "prefix": "nz-tag.attr-color",
         "body": "[nzColor]=\"'${1|green,red,orange,pink,cyan,blue,purple|}'\"",
-        "description": "data-display tag attr color",
+        "description": "标签色（支持css颜色值）",
         "scope": ""
     }
 
     , "data-display tag attr fn close": {
         "prefix": "nz-tag.attr-fn-close",
         "body": "(nzClose)=\"${1:closeTag}(\\$event)\"",
-        "description": "data-display tag attr fn close",
+        "description": "关闭后事件",
         "scope": ""
     }
 
     , "data-display tag checkable": {
         "prefix": "nz-tag.checkable",
         "body": "<nz-checkable-tag *ngFor=\"let ${2:i} of ${1:tags}\"\r\n    [nzChecked]=\"${1}.indexOf(${2}) > -1\" (nzChange)=\"${1}Change(\\$event, ${2})\">\r\n    {{${2}}}\r\n</nz-checkable-tag>\r\n$0",
-        "description": "data-display tag checkable",
+        "description": "可选择标签",
         "scope": ""
     }
 
@@ -1130,14 +1263,14 @@
     , "data-display timeline item": {
         "prefix": "nz-timeline.item",
         "body": "<nz-timeline-item${1: [nzColor]=\"${2|green,red,blue|}\"}>\r\n    ${3:<ng-template #custom></ng-template>}\r\n</nz-timeline-item>$0",
-        "description": "data-display timeline item",
+        "description": "时间轴：项",
         "scope": ""
     }
 
     , "data-display timeline pending": {
         "prefix": "nz-timeline.pending",
         "body": "<ng-template #pending>\r\n    ${1}\r\n</ng-template>$0",
-        "description": "data-display timeline pending",
+        "description": "时间轴：幽灵节点（表示时间轴未完成）必须放在nz-timeline下",
         "scope": ""
     }
 
@@ -1151,56 +1284,63 @@
     , "data-display tooltip full": {
         "prefix": "nz-tooltip.full",
         "body": "<nz-tooltip ${2: [nzPlacement]=\"${3|top,left,right,bottom|}\"}${4: [nzTrigger]=\"${5|hover,focus,click|}\"}>\r\n    <span nz-tooltip>${1}</span>\r\n    <ng-template #nzTemplate>\r\n        ${6}\r\n    </ng-template>\r\n</nz-tooltip>\r\n$0",
-        "description": "data-display tooltip full",
+        "description": "文字提示（完整结构）",
+        "scope": ""
+    }
+
+    , "feedback modal": {
+        "prefix": "nz-modal",
+        "body": "<nz-modal\r\n    [(nzVisible)]=\"isVisible\"\r\n    [nzConfirmLoading]=\"false|true\"\r\n    [nzTitle]=\"'标题'\"\r\n    [nzClosable]=\"false|true\"\r\n    [nzBody]=\"'这是内容'\"\r\n    [nzWidth]=\"520\"\r\n    [nzContent]=\"modalContent\"\r\n    [nzOkText]=\"'确定'\"\r\n    [nzCancelText]=\"'取消'\"\r\n    [nzMaskClosable]=\"false|true\"\r\n    [nzZIndex]=\"1000\"\r\n    [nzStyle]=\"{}\"\r\n    [nzWrapClassName]=\"''\"\r\n    (nzOnCancel)=\"handleCancel(\\$event)\"\r\n    (nzOnOk)=\"handleOk(\\$event)\">\r\n    <ng-template #modalContent>对话框的内容</ng-template>\r\n</nz-modal>\r\n$0",
+        "description": "对话框（完整结构，因为需要放置HTML的情况时，认为是比较特别的需求；平常尽可能采用NzModalService服务调用方式）",
         "scope": ""
     }
 
     , "feedback alert attr banner": {
         "prefix": "nz-alert.attr-banner",
         "body": "[nzBanner]=\"${1|true,false|}\"",
-        "description": "feedback alert attr banner",
+        "description": "是否用作顶部公告",
         "scope": ""
     }
 
     , "feedback alert attr closeable": {
         "prefix": "nz-alert.attr-closeable",
         "body": "[nzCloseable]=\"${1|true,false|}\"",
-        "description": "feedback alert attr closeable",
+        "description": "是否显示关闭按钮",
         "scope": ""
     }
 
     , "feedback alert attr description": {
         "prefix": "nz-alert.attr-description",
         "body": "[nzDescription]=\"'${1}'\"",
-        "description": "feedback alert attr description",
+        "description": "警告提示的辅助性文字介绍",
         "scope": ""
     }
 
     , "feedback alert attr fn close": {
         "prefix": "nz-alert.attr-fn-close",
         "body": "(nzOnClose)=\"${1:close}()\"",
-        "description": "feedback alert attr fn close",
+        "description": "关闭时触发的回调函数",
         "scope": ""
     }
 
     , "feedback alert attr showicon": {
         "prefix": "nz-alert.attr-showicon",
         "body": "[nzShowIcon]=\"${1|true,false|}\"",
-        "description": "feedback alert attr showicon",
+        "description": "是否显示辅助图标",
         "scope": ""
     }
 
     , "feedback alert attr type": {
         "prefix": "nz-alert.attr-type",
         "body": "[nzType]=\"'${1|success,info,warning,error|}'\"",
-        "description": "feedback alert attr type",
+        "description": "指定警告提示的样式",
         "scope": ""
     }
 
     , "feedback alert body": {
         "prefix": "nz-alert.body",
         "body": "<nz-alert [nzType]=\"'${1|success,info,warning,error|}'\"${2: [nzShowIcon]=\"true\"}\r\n    ${3: [nzCloseable]=\"true\"}${4: [nzCloseText]=\"'${5:关闭}'\"}${6: (nzOnCloses)=\"${7:_close}(\\$event)\"}\r\n    ${8: [nzBanner]=\"true\"}>\r\n    <div alert-body>${9}</div>${10:\r\n    <div alert-description></div>}\r\n</nz-alert>\r\n$0",
-        "description": "feedback alert body",
+        "description": "警告提示（标题与内容使用ng-template格式）",
         "scope": ""
     }
 
@@ -1214,35 +1354,28 @@
     , "feedback alert full": {
         "prefix": "nz-alert.full",
         "body": "<nz-alert [nzType]=\"'${1|success,info,warning,error|}'\"\r\n    [nzMessage]=\"'${2}'\"${3: [nzDescription]=\"'${4}'\"}${5: [nzShowIcon]=\"true\"}\r\n    ${6: [nzCloseable]=\"true\"}${7: [nzCloseText]=\"'${8:关闭}'\"}${9: (nzOnCloses)=\"${10:_close}(\\$event)\"}\r\n    ${11: [nzBanner]=\"true\"}></nz-alert>\r\n$0",
-        "description": "feedback alert full",
-        "scope": ""
-    }
-
-    , "feedback modal": {
-        "prefix": "nz-modal",
-        "body": "<nz-modal\r\n    [(nzVisible)]=\"isVisible\"\r\n    [nzConfirmLoading]=\"false|true\"\r\n    [nzTitle]=\"'标题'\"\r\n    [nzClosable]=\"false|true\"\r\n    [nzBody]=\"'这是内容'\"\r\n    [nzWidth]=\"520\"\r\n    [nzContent]=\"modalContent\"\r\n    [nzOkText]=\"'确定'\"\r\n    [nzCancelText]=\"'取消'\"\r\n    [nzMaskClosable]=\"false|true\"\r\n    [nzZIndex]=\"1000\"\r\n    [nzStyle]=\"{}\"\r\n    [nzWrapClassName]=\"''\"\r\n    (nzOnCancel)=\"handleCancel(\\$event)\"\r\n    (nzOnOk)=\"handleOk(\\$event)\">\r\n    <ng-template #modalContent>对话框的内容</ng-template>\r\n</nz-modal>\r\n$0",
-        "description": "对话框（完整结构，因为需要放置HTML的情况时，认为是比较特别的需求；平常尽可能采用NzModalService服务调用方式）",
+        "description": "警告提示（完整结构）",
         "scope": ""
     }
 
     , "feedback popconfirm attr canceltext": {
         "prefix": "nz-popconfirm.attr-canceltext",
         "body": "[nzCancelText]=\"'${1|取消,关闭|}'\"",
-        "description": "feedback popconfirm attr canceltext",
+        "description": "取消按钮文字",
         "scope": ""
     }
 
     , "feedback popconfirm attr condition": {
         "prefix": "nz-popconfirm.attr-condition",
         "body": "[nzCondition]=\"${1|true,false|}\"",
-        "description": "feedback popconfirm attr condition",
+        "description": "是否直接执行确定方法",
         "scope": ""
     }
 
     , "feedback popconfirm attr oktext": {
         "prefix": "nz-popconfirm.attr-oktext",
         "body": "[nzOkText]=\"'${1|确定,确认,移除,删除|}'\"",
-        "description": "feedback popconfirm attr oktext",
+        "description": "确认按钮文字",
         "scope": ""
     }
 
@@ -1256,14 +1389,14 @@
     , "feedback popconfirm full": {
         "prefix": "nz-popconfirm.full",
         "body": "<nz-popconfirm [nzTitle]=\"'${1:确定要删除吗？}'\"\r\n    [nzOkText]=\"'确定'\"\r\n    [nzCancelText]=\"'取消'\"\r\n    (nzOnConfirm)=\"confirm(i)\"\r\n    (nzOnCancel)=\"cancel(\\$event)\"\r\n    [nzCondition]=\"true\"\r\n    [nzPlacement]=\"'(top|left|right|bottom)(Top|Left|Right|Bottom)?'\"\r\n    [nzTrigger]=\"'hover|focus|click'\"\r\n    [(nzVisible)]=\"isVisible\"\r\n    (nzVisibleChange)=\"visibleChange()\"\r\n    [nzOverlayClassName]=\"''\"\r\n    [nzOverlayStyle]=\"{}\">\r\n    <a nz-popconfirm>按钮内容</a>\r\n</nz-popconfirm>\r\n$0",
-        "description": "feedback popconfirm full",
+        "description": "气泡确认框（完整结构）",
         "scope": ""
     }
 
     , "feedback progress circle": {
         "prefix": "nz-progress.circle",
         "body": "<nz-progress [(ngModel)]=\"${1}\" [nzStatus]=\"'${2|success,exception,active|}'\" [nzType]=\"'circle'\"\r\n     [nzStrokeWidth]=\"${3:6}\" [nzWidth]=\"${4:132}\"></nz-progress>\r\n$0",
-        "description": "feedback progress circle",
+        "description": "进度条（圈形）",
         "scope": ""
     }
 
@@ -1277,21 +1410,21 @@
     , "feedback progress line": {
         "prefix": "nz-progress.line",
         "body": "<nz-progress [(ngModel)]=\"${1}\" [nzStatus]=\"'${2|success,exception,active|}'\" [nzType]=\"'line'\"\r\n     [nzStrokeWidth]=\"${3:10}\"></nz-progress>\r\n$0",
-        "description": "feedback progress line",
+        "description": "进度条（线形）",
         "scope": ""
     }
 
     , "feedback spin attr spinning": {
         "prefix": "nz-spin.attr-spinning",
         "body": "[nzSpinning]=\"${1|true,false|}\"",
-        "description": "feedback spin attr spinning",
+        "description": "是否用于内嵌其他组件的模式",
         "scope": ""
     }
 
     , "feedback spin attr tip": {
         "prefix": "nz-spin.attr-tip",
         "body": "[nzTip]=\"'${1|加载中...,正在读取数据...|}'\"",
-        "description": "feedback spin attr tip",
+        "description": "自定义描述文案",
         "scope": ""
     }
 
@@ -1299,90 +1432,6 @@
         "prefix": "nz-spin",
         "body": "<nz-spin${1: [nzTip]=\"'${2|加载中...,正在读取数据...|}'\"}${3: [nzSize]=\"'${4|small,large,default|}'\"}${5: [nzSpinning]=\"false\"}></nz-spin>\r\n$0",
         "description": "加载中（用于页面和区块的加载中状态）",
-        "scope": ""
-    }
-
-    , "attributes attr checked": {
-        "prefix": "nz-attr.checked",
-        "body": "[nzChecked]=\"${1|true,false|}\"",
-        "description": "attributes attr checked",
-        "scope": ""
-    }
-
-    , "attributes attr disabled": {
-        "prefix": "nz-attr.disabled",
-        "body": "[nzDisabled]=\"${1|true,false|}\"",
-        "description": "attributes attr disabled",
-        "scope": ""
-    }
-
-    , "attributes attr fn click": {
-        "prefix": "nz-attr.fn-click",
-        "body": "(nzClick)=\"$1\"",
-        "description": "attributes attr fn click",
-        "scope": ""
-    }
-
-    , "attributes attr fn select": {
-        "prefix": "nz-attr.fn-select",
-        "body": "(nzSelect)=\"$1\"",
-        "description": "attributes attr fn select",
-        "scope": ""
-    }
-
-    , "attributes attr label": {
-        "prefix": "nz-attr.label",
-        "body": "nzLabel=\"${1}\"",
-        "description": "attributes attr label",
-        "scope": ""
-    }
-
-    , "attributes attr loading": {
-        "prefix": "nz-attr.loading",
-        "body": "[nzLoading]=\"${1|true,false,http.loading|}\"",
-        "description": "attributes attr loading",
-        "scope": ""
-    }
-
-    , "attributes attr placeholder": {
-        "prefix": "nz-attr.placeholder",
-        "body": "[nzPlaceHolder]=\"'${1}'\"",
-        "description": "attributes attr placeholder",
-        "scope": ""
-    }
-
-    , "attributes attr placement": {
-        "prefix": "nz-attr.placement",
-        "body": "[nzPlacement]=\"'${1|bottomLeft,bottomCenter,bottomRight,topLeft,topCenter,topRight|}'\"",
-        "description": "attributes attr placement",
-        "scope": ""
-    }
-
-    , "attributes attr size": {
-        "prefix": "nz-attr.size",
-        "body": "[nzSize]=\"'${1|small,large,default|}'\"",
-        "description": "attributes attr size",
-        "scope": ""
-    }
-
-    , "attributes attr trigger": {
-        "prefix": "nz-attr.trigger",
-        "body": "[nzTrigger]=\"'${1|click,focus,hover|}'\"",
-        "description": "attributes attr trigger",
-        "scope": ""
-    }
-
-    , "attributes attr type": {
-        "prefix": "nz-attr.type",
-        "body": "[nzType]=\"'${1|primary,dashed,danger,default|}'\"",
-        "description": "attributes attr type",
-        "scope": ""
-    }
-
-    , "attributes attr value": {
-        "prefix": "nz-attr.value",
-        "body": "[nzValue]=\"${1}\"",
-        "description": "attributes attr value",
         "scope": ""
     }
 
@@ -1396,7 +1445,7 @@
     , "other anchor link": {
         "prefix": "nz-anchor.link",
         "body": "<nz-link [nzHref]=\"'${1}'\" [nzTitle]=\"'${2}'\">${3:\r\n    <ng-template #nzTemplate>\r\n        $4\r\n    </ng-template>\r\n}</nz-link>\r\n$0",
-        "description": "other anchor link",
+        "description": "锚点项，允许嵌套使用",
         "scope": ""
     }
 
@@ -1404,6 +1453,104 @@
         "prefix": "nz-back-top",
         "body": "<nz-back-top${1: [nzVisibilityHeight]=\"$2\"}>${3:\r\n    <ng-template #nzTemplate>\r\n        $4\r\n    </ng-template>\r\n}</nz-back-top>$0",
         "description": "回到顶部",
+        "scope": ""
+    }
+
+    , "other divider": {
+        "prefix": "nz-divider",
+        "body": "<nz-divider${1: nzTitle=\"$2\"}></nz-divider>$0",
+        "description": "Extra：分割线",
+        "scope": ""
+    }
+
+    , "other divider full": {
+        "prefix": "nz-divider.full",
+        "body": "<nz-divider${1: nzTitle=\"$2\"}${3: nzType=\"${4|vertical,horizontal|}\"}${5: nzDashed}></nz-divider>$0",
+        "description": "Extra：分割线（完整）",
+        "scope": ""
+    }
+
+    , "attributes attr checked": {
+        "prefix": "nz-attr.checked",
+        "body": "[nzChecked]=\"${1|true,false|}\"",
+        "description": "是否选中",
+        "scope": ""
+    }
+
+    , "attributes attr disabled": {
+        "prefix": "nz-attr.disabled",
+        "body": "[nzDisabled]=\"${1|true,false|}\"",
+        "description": "是否禁用",
+        "scope": ""
+    }
+
+    , "attributes attr fn click": {
+        "prefix": "nz-attr.fn-click",
+        "body": "(nzClick)=\"$1\"",
+        "description": "点击事件",
+        "scope": ""
+    }
+
+    , "attributes attr fn select": {
+        "prefix": "nz-attr.fn-select",
+        "body": "(nzSelect)=\"$1\"",
+        "description": "选中后事件",
+        "scope": ""
+    }
+
+    , "attributes attr label": {
+        "prefix": "nz-attr.label",
+        "body": "nzLabel=\"${1}\"",
+        "description": "Label值",
+        "scope": ""
+    }
+
+    , "attributes attr loading": {
+        "prefix": "nz-attr.loading",
+        "body": "[nzLoading]=\"${1|true,false,http.loading|}\"",
+        "description": "是否加载中",
+        "scope": ""
+    }
+
+    , "attributes attr placeholder": {
+        "prefix": "nz-attr.placeholder",
+        "body": "[nzPlaceHolder]=\"'${1}'\"",
+        "description": "提示信息",
+        "scope": ""
+    }
+
+    , "attributes attr placement": {
+        "prefix": "nz-attr.placement",
+        "body": "[nzPlacement]=\"'${1|bottomLeft,bottomCenter,bottomRight,topLeft,topCenter,topRight|}'\"",
+        "description": "位置",
+        "scope": ""
+    }
+
+    , "attributes attr size": {
+        "prefix": "nz-attr.size",
+        "body": "[nzSize]=\"'${1|small,large,default|}'\"",
+        "description": "大小属性",
+        "scope": ""
+    }
+
+    , "attributes attr trigger": {
+        "prefix": "nz-attr.trigger",
+        "body": "[nzTrigger]=\"'${1|click,focus,hover|}'\"",
+        "description": "触发行为",
+        "scope": ""
+    }
+
+    , "attributes attr type": {
+        "prefix": "nz-attr.type",
+        "body": "[nzType]=\"'${1|primary,dashed,danger,default|}'\"",
+        "description": "按钮类型属性",
+        "scope": ""
+    }
+
+    , "attributes attr value": {
+        "prefix": "nz-attr.value",
+        "body": "[nzValue]=\"${1}\"",
+        "description": "Value值",
         "scope": ""
     }  
 }

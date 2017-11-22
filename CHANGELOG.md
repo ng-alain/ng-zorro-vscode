@@ -1,3 +1,10 @@
+# 1.1.2
+
++ 新增 `transfer` 组件
++ 新增 [ng-zorro-antd-extra](https://github.com/cipchk/ng-zorro-antd-extra) 番外篇系列组件：`nz-list`、`nz-icon`、`nz-divider`、`nz-card`
++ 新增部分 [ng-alain](https://github.com/cipchk/ng-alain) 部分片断
++ 优化翻译
+
 # 1.1.1
 
 + 修复 `nz-alain-` 前缀问题

@@ -1,0 +1,11 @@
+<nz-list
+    [nzDataSource]="$1"
+    [nzBordered]="${2|true,false|}"
+    [nzLoading]="$3"
+    [nzHeader]="'$4'"
+    [nzFooter]="'$5'">
+    <ng-template #item let-${6:item}>
+        <nz-list-item>{{$6}}</nz-list-item>
+    </ng-template>
+</nz-list>
+$0

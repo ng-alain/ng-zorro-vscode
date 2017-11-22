@@ -58,7 +58,7 @@ gulp.task('gen-i18n', () => {
                 };
             }
             // list
-            let newKey = keyArr.length > 1 ? keyArr.slice(1).join('-') : keyArr[0];
+            const newKey = snippetJson[key].prefix;
             newJson[categoryKey].list[newKey] = curItem.list[newKey] || snippetJson[key].description;
         }
         let jsonStr = JSON.stringify(newJson, null, '\t');
