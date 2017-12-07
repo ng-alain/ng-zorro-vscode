@@ -1,3 +1,7 @@
+# 1.1.3
+
++ 新增 `nz-form.explain-error` 响应式错误信息
+
 # 1.1.2
 
 + 新增 `transfer` 组件

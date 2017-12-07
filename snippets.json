@@ -518,6 +518,13 @@
         "scope": ""
     }
 
+    , "data-entry form explain error": {
+        "prefix": "nz-form.explain-error",
+        "body": "<div nz-form-explain *ngIf=\"(${1:name}.dirty || ${1:name}.touched) && ${1:name}.errors?.${2|required,pattern,email,maxlength,minlength,min,max|}\">$3</div>\n$0",
+        "description": "用于响应式错误信息",
+        "scope": ""
+    }
+
     , "data-entry form explain": {
         "prefix": "nz-form.explain",
         "body": "<div nz-form-explain>$0</div>",
@@ -1288,13 +1295,6 @@
         "scope": ""
     }
 
-    , "feedback modal": {
-        "prefix": "nz-modal",
-        "body": "<nz-modal\r\n    [(nzVisible)]=\"isVisible\"\r\n    [nzConfirmLoading]=\"false|true\"\r\n    [nzTitle]=\"'标题'\"\r\n    [nzClosable]=\"false|true\"\r\n    [nzBody]=\"'这是内容'\"\r\n    [nzWidth]=\"520\"\r\n    [nzContent]=\"modalContent\"\r\n    [nzOkText]=\"'确定'\"\r\n    [nzCancelText]=\"'取消'\"\r\n    [nzMaskClosable]=\"false|true\"\r\n    [nzZIndex]=\"1000\"\r\n    [nzStyle]=\"{}\"\r\n    [nzWrapClassName]=\"''\"\r\n    (nzOnCancel)=\"handleCancel(\\$event)\"\r\n    (nzOnOk)=\"handleOk(\\$event)\">\r\n    <ng-template #modalContent>对话框的内容</ng-template>\r\n</nz-modal>\r\n$0",
-        "description": "对话框（完整结构，因为需要放置HTML的情况时，认为是比较特别的需求；平常尽可能采用NzModalService服务调用方式）",
-        "scope": ""
-    }
-
     , "feedback alert attr banner": {
         "prefix": "nz-alert.attr-banner",
         "body": "[nzBanner]=\"${1|true,false|}\"",
@@ -1355,6 +1355,13 @@
         "prefix": "nz-alert.full",
         "body": "<nz-alert [nzType]=\"'${1|success,info,warning,error|}'\"\r\n    [nzMessage]=\"'${2}'\"${3: [nzDescription]=\"'${4}'\"}${5: [nzShowIcon]=\"true\"}\r\n    ${6: [nzCloseable]=\"true\"}${7: [nzCloseText]=\"'${8:关闭}'\"}${9: (nzOnCloses)=\"${10:_close}(\\$event)\"}\r\n    ${11: [nzBanner]=\"true\"}></nz-alert>\r\n$0",
         "description": "警告提示（完整结构）",
+        "scope": ""
+    }
+
+    , "feedback modal": {
+        "prefix": "nz-modal",
+        "body": "<nz-modal\r\n    [(nzVisible)]=\"isVisible\"\r\n    [nzConfirmLoading]=\"false|true\"\r\n    [nzTitle]=\"'标题'\"\r\n    [nzClosable]=\"false|true\"\r\n    [nzBody]=\"'这是内容'\"\r\n    [nzWidth]=\"520\"\r\n    [nzContent]=\"modalContent\"\r\n    [nzOkText]=\"'确定'\"\r\n    [nzCancelText]=\"'取消'\"\r\n    [nzMaskClosable]=\"false|true\"\r\n    [nzZIndex]=\"1000\"\r\n    [nzStyle]=\"{}\"\r\n    [nzWrapClassName]=\"''\"\r\n    (nzOnCancel)=\"handleCancel(\\$event)\"\r\n    (nzOnOk)=\"handleOk(\\$event)\">\r\n    <ng-template #modalContent>对话框的内容</ng-template>\r\n</nz-modal>\r\n$0",
+        "description": "对话框（完整结构，因为需要放置HTML的情况时，认为是比较特别的需求；平常尽可能采用NzModalService服务调用方式）",
         "scope": ""
     }
 
