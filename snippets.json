@@ -63,6 +63,13 @@
         "scope": ""
     }
 
+    , "alain abc st": {
+        "prefix": "nz-alain-abc.st",
+        "body": "<simple-table [data]=\"${1:url}\" [columns]=\"${2:columns}\"${3: [extraParams]=\"${4:q}\"}></simple-table>\n$0",
+        "description": "构建simple-table",
+        "scope": ""
+    }
+
     , "general icon": {
         "prefix": "nz-icon",
         "body": "<i class=\"anticon anticon-${1|left,right,search|}\"></i>",

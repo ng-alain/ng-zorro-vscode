@@ -47,17 +47,18 @@ nz-icon.extra | Extra：Icon图标
 
 Trigger | Description
 --- | ---
+nz-alain-abc.st | 构建simple-table
 nz-alain-content | 主标题
 nz-alain-content.right-input | 主标题且右边按钮
 nz-alain-content.right-inputgroup | 主标题且右边按钮组
-nz-alain-list | 列表页表格
-nz-alain-list.search | 列表页搜索表单
 nz-alain-form.checkbox | 多选框
 nz-alain-form.input-number | 数字输入框
 nz-alain-form.input | 输入框
 nz-alain-form.radio | 单选框
 nz-alain-form.select | 下拉框
 nz-alain-form.textarea | 多行文本框
+nz-alain-list | 列表页表格
+nz-alain-list.search | 列表页搜索表单
 nz-alain-modal | 对话框
 nz-alain-pro.desc-list | PRO：描述列表
 nz-alain-pro.header | PRO：标题
