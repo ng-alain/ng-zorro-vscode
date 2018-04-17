@@ -1,4 +1,7 @@
-<nz-collapse [nzTitle]="${1}" [nzActive]="${2|true,false|}" [nzDisabled]="${3|true,false|}">
-    $4
+<nz-collapse>
+    <nz-collapse-panel
+        *ngFor="let ${2:panel} of ${1:panels}"
+        [nzHeader]="$2.name" [nzActive]="$2.active" [nzDisabled]="$2.disabled">
+        $0
+    </nz-collapse-panel>
 </nz-collapse>
-$0

@@ -1,5 +1,5 @@
-<nz-list [nzDataSource]="$1">
-    <ng-template #item let-$2>
+<nz-list [nzDataSource]="$1" [nzRenderItem]="item">
+    <ng-template #item let-${2:i}>
         <nz-list-item>
             <nz-list-item-meta
                 [nzTitle]="$2.title"

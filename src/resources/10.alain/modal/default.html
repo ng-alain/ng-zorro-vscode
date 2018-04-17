@@ -5,6 +5,6 @@
     $0
 </form>
 <div class="modal-footer">
-    <button nz-button type="button" (click)="subject.destroy()">关闭</button>
-    <button nz-button [disabled]="!f.form.valid || !f.form.dirty" [nzLoading]="http.loading" [nzType]="'primary'">保存</button>
+    <button nz-button type="button" (click)="modal.destroy()">关闭</button>
+    <button nz-button [disabled]="!f.form.valid || !f.form.dirty" [nzLoading]="http.loading" nzType="primary">保存</button>
 </div>

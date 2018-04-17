@@ -1,3 +1,12 @@
+# 2.0.0
+
++ 同步 `0.7.0`
+
+**注意：**
+
+- 由于市场并不支持多版本，因此暂时[手动下载](https://github.com/cipchk/ng-zorro-vscode/blob/dev/ng-zorro-vscode-2.0.0-beta.1.vsix)进行本地安装
+- 简化关键词，以 `nz-` 开头表示完整代码片断，`nzType` 表示属性
+
 # 1.1.3
 
 + 新增 `nz-form.explain-error` 响应式错误信息

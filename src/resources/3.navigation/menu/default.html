@@ -1,3 +1,10 @@
-<ul nz-menu${1: [nzMode]="'${2|vertical,horizontal,inline|}'"}${3: [nzTheme]="'${4|light,dark|}'"}>
-    $0
+<ul nz-menu>
+    <li nz-menu-item>${1:菜单项}</li>
+    <li nz-menu-divider></li>
+    <li nz-submenu>
+        <span title>子菜单</span>
+        <ul>
+            <li nz-menu-item>子菜单项</li>
+        </ul>
+    </li>
 </ul>

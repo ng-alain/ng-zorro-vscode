@@ -21,8 +21,8 @@ gulp.task('build', () => {
         .pipe(generate({
             i18n: i18n,
             template: `
-    <%=item.key=='root root'?'':',' %> "<%=item.key %>": {
-        "prefix": "nz-<%=item.prefix %>",
+    <%=item.point==1?'':',' %> "<%=item.key %>": {
+        "prefix": "<%=item.prefix %>",
         "body": "<%=item.escapedContent %>",
         "description": "<%=item.description %>",
         "scope": "<%=item.scope %>"

@@ -3,9 +3,10 @@ let _ = require("lodash"),
     map = require("map-stream");
 
 module.exports = function (options) {
+    let tick = 0;
     options.template = _.template(options.template);
 
-    function generateJsCode(htmlFile) {
+    function generateJsCode(htmlFile, point) {
         let params = {
             item: getTemplateParams()
         };
@@ -13,6 +14,7 @@ module.exports = function (options) {
 
         function getTemplateParams() {
             let ret = {
+                    point,
                     content: String(htmlFile.contents),
                     scope: ''
                 },
@@ -25,19 +27,29 @@ module.exports = function (options) {
                 prefixs = [ ...fileNames ]
             }
             prefixs[0] = prefixs[0].includes('.') ? prefixs[0].split('.')[1] : prefixs[0];
-            if (fileNames[0] === 'default')
+            // ignore default.html name
+            const isDefault = fileNames[0] === 'default';
+            if (isDefault)
                 fileNames = prefixs;
             else
                 fileNames.splice(0, 0, ...prefixs);
 
-            ret.key = fileNames.join(' ');
+            // fix alain
             ret.prefix = fileNames[0] === 'alain' ? 'alain-' : '';
+            // ignore root directory, like: `general`
             ret.prefix += fileNames[1];
-            if (fileNames.length > 2)
-                ret.prefix += `.${fileNames.slice(2).join('-')}`;
+            ret.prefix += `.${fileNames.slice(2).join('-')}`;
+            // separate component and attribute
+            if (!isDefault && fileNames[2].startsWith('nz')) {
+                ret.prefix = fileNames.slice(2).join('-');
+            } else {
+                ret.prefix = 'nz-' + ret.prefix;
+            }
+            if (ret.prefix.endsWith('.'))
+                ret.prefix = ret.prefix.substr(0, ret.prefix.length - 1);
 
-            // console.log(fileNames[0], ret.prefix, options.i18n[fileNames[0]].list[ret.prefix]);
-            ret.description = options.i18n[fileNames[0]].list['nz-' + ret.prefix] || ret.key || '';
+            ret.key = fileNames.join(' ');
+            ret.description = options.i18n[fileNames[0]].list[ret.prefix] || ret.key || '';
             ret.escapedContent = getEscapedTemplateContent(ret.content);
 
             return ret;
@@ -59,7 +71,7 @@ module.exports = function (options) {
                 return callback(new Error('Streaming not supported'));
             }
             if (file.isBuffer()) {
-                file.contents = new Buffer(generateJsCode(file));
+                file.contents = new Buffer(generateJsCode(file, ++tick));
             }
         }
 

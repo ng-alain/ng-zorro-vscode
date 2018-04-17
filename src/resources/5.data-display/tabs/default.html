@@ -1,12 +1,11 @@
-<nz-tabset${1: [nzType]="${2|card,line|}"}${3: [nzSize]="${4|small,default|}"}
-    ${5: [nzTabPosition]="${6|top,right,bottom,left|}"}${7: (nzSelectChange)="${8:_tabChange}($event)"}>
-    <nz-tab *ngFor="let ${10:tab} of ${9}">
-        <ng-template #nzTabHeading>
-            {{${10:tab}.title}}
-        </ng-template>
-        {{${10:tab}.content}}
-    </nz-tab>${11:
-    <ng-template #nzTabBarExtraContent>
-        <i class="ant-tabs-new-tab anticon anticon-plus" (click)="newTab()"></i>
-    </ng-template>}
+<nz-tabset>
+    <nz-tab nzTitle="Tab 1">
+        Content of Tab Pane 1
+    </nz-tab>
+    <nz-tab nzTitle="Tab 2">
+        Content of Tab Pane 2
+    </nz-tab>
+    <nz-tab nzTitle="Tab 3">
+        Content of Tab Pane 3
+    </nz-tab>
 </nz-tabset>
