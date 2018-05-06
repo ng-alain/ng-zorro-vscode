@@ -1,15 +1,15 @@
 <nz-modal
-    [(nzVisible)]="isVisible"
-    [nzTitle]="'标题'"
-    [nzClosable]="false|true"
-    [nzWidth]="520"
-    [nzContent]="modalContent"
-    [nzOkText]="'确定'"
-    [nzCancelText]="'取消'"
-    [nzMaskClosable]="false|true"
-    [nzWrapClassName]="''"
-    (nzOnCancel)="handleCancel($event)"
-    (nzOnOk)="handleOk($event)">
-    <ng-template #modalContent>对话框的内容</ng-template>
+  [(nzVisible)]="isVisible"
+  [nzTitle]="'标题'"
+  [nzClosable]="false|true"
+  [nzWidth]="520"
+  [nzContent]="modalContent"
+  [nzOkText]="'确定'"
+  [nzCancelText]="'取消'"
+  [nzMaskClosable]="false|true"
+  [nzWrapClassName]="''"
+  (nzOnCancel)="handleCancel($event)"
+  (nzOnOk)="handleOk($event)">
+  <ng-template #modalContent>对话框的内容</ng-template>
 </nz-modal>
 $0
