@@ -1,6 +1,6 @@
 # 关于 `2.x` 版本
 
-当前 ng-zorro-antd 0.7.x 有很多破坏性变更，且还处于 beta 当中，因此所有 `2.x` 版本暂时不在 vscode 市场上更新，若你希望使用它，请从这里[下载](https://github.com/cipchk/ng-zorro-vscode/blob/dev/ng-zorro-vscode-2.0.0-beta.1.vsix)本地安装。本次主要变更：
+当前 ng-zorro-antd 0.7.x 有很多破坏性变更，且还处于 beta 当中，因此所有 `2.x` 版本暂时不在 vscode 市场上更新，若你希望使用它，请从这里[下载](https://github.com/cipchk/ng-zorro-vscode/raw/dev/ng-zorro-vscode.vsix)本地安装。本次主要变更：
 
 - 简化关键词，以 `nz-` 开头表示完整代码片断，`nzType` 表示属性
 

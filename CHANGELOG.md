@@ -1,4 +1,12 @@
-# 2.0.0
+# 2.0.0-beta.2
+
+- 优化代码风格
+- 移除不必要引号，例如：`nzType="primary"` 好于 `[nzType]="'primary'"`
+- ng-alain
+  - 增加 `modal` 系列
+  - 增加 `form` 系列
+
+# 2.0.0-beta.1
 
 + 同步 `0.7.0`
 

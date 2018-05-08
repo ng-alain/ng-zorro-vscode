@@ -1,6 +1,69 @@
 {
  
-     "alain abc desc list": {
+     "general button": {
+        "prefix": "nz-button",
+        "body": "<button (click)=\"${2}\" nz-button$0>$1</button>",
+        "description": "按钮",
+        "scope": ""
+    }
+
+    , "general button group": {
+        "prefix": "nz-button.group",
+        "body": "<nz-button-group>\n  <button (click)=\"${2}\" nz-button>$1</button>\n  <button (click)=\"${4}\" nz-button>$3</button>\n  $0\n</nz-button-group>",
+        "description": "按钮组",
+        "scope": ""
+    }
+
+    , "general button icon text left": {
+        "prefix": "nz-button.icon-text-left",
+        "body": "<button (click)=\"${3}\" nz-button>\n  $1\n  <i class=\"anticon anticon-${2|left,right|}\"></i>\n</button>\n$0",
+        "description": "按钮带图标且文本在左",
+        "scope": ""
+    }
+
+    , "general button icon text right": {
+        "prefix": "nz-button.icon-text-right",
+        "body": "<button (click)=\"${3}\" nz-button>\n  <i class=\"anticon anticon-${2|left,right|}\"></i>$1\n</button>\n$0",
+        "description": "按钮带图标且文本在右",
+        "scope": ""
+    }
+
+    , "general button nzGhost": {
+        "prefix": "nzGhost",
+        "body": "nzGhost",
+        "description": "幽灵属性，使按钮背景透明",
+        "scope": ""
+    }
+
+    , "general button type": {
+        "prefix": "nz-button.type",
+        "body": "<button (click)=\"${2}\" nz-button nzType=\"${3|primary,dashed,danger,default|}\">$1</button>\n$0",
+        "description": "按钮带设置类型",
+        "scope": ""
+    }
+
+    , "general icon anticon": {
+        "prefix": "nz-icon.anticon",
+        "body": "anticon anticon-${1}",
+        "description": "anticon样式",
+        "scope": ""
+    }
+
+    , "general icon": {
+        "prefix": "nz-icon",
+        "body": "<i class=\"anticon anticon-${1}\"></i>",
+        "description": "图标",
+        "scope": ""
+    }
+
+    , "general icon spin": {
+        "prefix": "nz-icon.spin",
+        "body": "<i class=\"anticon anticon-spin anticon-${1}\"></i>",
+        "description": "旋转图标",
+        "scope": ""
+    }
+
+    , "alain abc desc list": {
         "prefix": "nz-alain-abc.desc-list",
         "body": "<desc-list col=\"${1|2,3,4|}\"${2: size=\"${3|small,large|}\"}>\n  <desc-list-item term=\"$4\">$5</desc-list-item>\n</desc-list>\n$0",
         "description": "描述列表",
@@ -252,146 +315,6 @@
         "scope": ""
     }
 
-    , "navigation affix": {
-        "prefix": "nz-affix",
-        "body": "<nz-affix${1: [nzOffsetTop]=\"${2}\"}${3: (nzChange)=\"onChange(\\$event)\"}>\n  $0\n</nz-affix>",
-        "description": "固钉",
-        "scope": ""
-    }
-
-    , "navigation affix target": {
-        "prefix": "nz-affix.target",
-        "body": "<div class=\"scrollable-container\" #target>\n  <nz-affix [nzTarget]=\"target\"${1: [nzOffsetTop]=\"${2}\"}${3: (nzChange)=\"onChange(\\$event)\"}>\n    $0\n  </nz-affix>\n</div>",
-        "description": "固钉：指定滚动容器",
-        "scope": ""
-    }
-
-    , "navigation breadcrumb": {
-        "prefix": "nz-breadcrumb",
-        "body": "<nz-breadcrumb>\n  <nz-breadcrumb-item><a routerLink=\"/${2}\">${1}</a></nz-breadcrumb-item>\n  $0\n</nz-breadcrumb>",
-        "description": "面包屑",
-        "scope": ""
-    }
-
-    , "navigation breadcrumb icon": {
-        "prefix": "nz-breadcrumb.icon",
-        "body": "<nz-breadcrumb-item>\n  <a [routerLink]=\"['/${1}']\"><i class=\"anticon anticon-${2:home}\"></i>${3:<span>${4:首页}</span>}</a>\n</nz-breadcrumb-item>\n$0",
-        "description": "面包屑：图标",
-        "scope": ""
-    }
-
-    , "navigation breadcrumb item": {
-        "prefix": "nz-breadcrumb.item",
-        "body": "<nz-breadcrumb-item><a routerLink=\"/${2}\">${1}</a></nz-breadcrumb-item>\n$0",
-        "description": "面包屑项",
-        "scope": ""
-    }
-
-    , "navigation breadcrumb nzSeparator": {
-        "prefix": "nzSeparator",
-        "body": "nzSeparator=\"${1:>}\"",
-        "description": "分隔符自定义",
-        "scope": ""
-    }
-
-    , "navigation dropdown button": {
-        "prefix": "nz-dropdown.button",
-        "body": "<nz-dropdown-button>\n  ${1}\n  <ul nz-menu>\n    <li nz-menu-item>$0</li>\n    <li nz-menu-item><a>2nd menu item</a></li>\n  </ul>\n</nz-dropdown-button>",
-        "description": "下拉菜单按钮",
-        "scope": ""
-    }
-
-    , "navigation dropdown button.style": {
-        "prefix": "nz-dropdown.button.style",
-        "body": "<nz-dropdown>\n  <button nz-button nz-dropdown><span>${1}</span><i class=\"anticon anticon-down\"></i></button>\n  <ul nz-menu>\n    <li nz-menu-item>$0</li>\n    <li nz-menu-item><a>2nd menu item</a></li>\n  </ul>\n</nz-dropdown>",
-        "description": "下拉菜单按钮内风格",
-        "scope": ""
-    }
-
-    , "navigation dropdown": {
-        "prefix": "nz-dropdown",
-        "body": "<nz-dropdown>\n  <a nz-dropdown>${1} <i class=\"anticon anticon-down\"></i></a>\n  <ul nz-menu nzSelectable>\n    <li nz-menu-item>$0</li>\n    <li nz-menu-item><a>2nd menu item</a></li>\n  </ul>\n</nz-dropdown>",
-        "description": "下拉菜单",
-        "scope": ""
-    }
-
-    , "navigation dropdown nzClickHide": {
-        "prefix": "nzClickHide",
-        "body": "nzClickHide=\"false\"",
-        "description": "点击后是否隐藏菜单",
-        "scope": ""
-    }
-
-    , "navigation menu": {
-        "prefix": "nz-menu",
-        "body": "<ul nz-menu>\n  <li nz-menu-item>${1:菜单项}</li>\n  <li nz-menu-divider></li>\n  <li nz-submenu>\n    <span title>子菜单</span>\n    <ul>\n      <li nz-menu-item>子菜单项</li>\n    </ul>\n  </li>\n</ul>",
-        "description": "导航菜单",
-        "scope": ""
-    }
-
-    , "navigation menu group": {
-        "prefix": "nz-menu.group",
-        "body": "<li nz-menu-group>\n  <span title>${1}</span>\n  $0\n</li>",
-        "description": "导航菜单：组",
-        "scope": ""
-    }
-
-    , "navigation menu item divider": {
-        "prefix": "nz-menu.item-divider",
-        "body": "<li nz-menu-divider></li>\r\n$0",
-        "description": "导航菜单：分割线",
-        "scope": ""
-    }
-
-    , "navigation menu item": {
-        "prefix": "nz-menu.item",
-        "body": "<li nz-menu-item>${1}</li>\r\n$0",
-        "description": "导航菜单：项",
-        "scope": ""
-    }
-
-    , "navigation menu submenu": {
-        "prefix": "nz-menu.submenu",
-        "body": "<li nz-submenu>\n  <span title>${1}</span>\n  <ul>\n    $0\n  </ul>\n</li>",
-        "description": "导航菜单：子项",
-        "scope": ""
-    }
-
-    , "navigation pagination": {
-        "prefix": "nz-pagination",
-        "body": "<nz-pagination [nzPageIndex]=\"${1}\" [nzPageSize]=\"${2}\" [nzTotal]=\"${3}\"${4: nzSize=\"small\"}></nz-pagination>\n$0",
-        "description": "分页",
-        "scope": ""
-    }
-
-    , "navigation pagination nzHideOnSinglePage": {
-        "prefix": "nzHideOnSinglePage",
-        "body": "nzHideOnSinglePage",
-        "description": "只有一页时是否隐藏分页器",
-        "scope": ""
-    }
-
-    , "navigation steps": {
-        "prefix": "nz-steps",
-        "body": "<nz-steps [(nzCurrent)]=\"${1:current}\"${2: [nzStatus]=\"'${3|wait,process,finish,error|}'\"}${4: nzSize=\"small\"}${5: nzDirection=\"${6|horizontal,vertical|}\"}${7: nzProgressDot}>\n  <nz-step [nzTitle]=\"'${8}'\" [nzDescription]=\"'${9}'\"></nz-step>\n  $0\n</nz-steps>\n<div class=\"steps-content\">\n\n</div>",
-        "description": "步骤条",
-        "scope": ""
-    }
-
-    , "navigation steps step icon": {
-        "prefix": "nz-steps.step-icon",
-        "body": "<nz-step [nzIcon]=\"nzIconTpl\" [nzTitle]=\"'${1}'\" [nzDescription]=\"'${2}'\"${3: [nzStatus]=\"'${4|wait,process,finish,error|}'\"}>\n  <ng-template #nzIconTpl>$0</ng-template>\n</nz-step>",
-        "description": "步骤条：项带图标",
-        "scope": ""
-    }
-
-    , "navigation steps step": {
-        "prefix": "nz-steps.step",
-        "body": "<nz-step [nzTitle]=\"'${1}'\" [nzDescription]=\"'${2}'\"${3: [nzStatus]=\"'${4|wait,process,finish,error|}'\"}></nz-step>",
-        "description": "步骤条：项",
-        "scope": ""
-    }
-
     , "data-entry autocomplete custom label": {
         "prefix": "nz-autocomplete.custom-label",
         "body": "<nz-input-group nzSize=\"large\" [nzSuffix]=\"suffixIcon\">\n  <input [(ngModel)]=\"$1\" (input)=\"$2(\\$event.target?.value)\" placeholder=\"$3\" nz-input [nzAutocomplete]=\"${4:auto}\" />\n  <ng-template #suffixIcon>\n    <i class=\"anticon anticon-search\"></i>\n  </ng-template>\n</nz-input-group>\n<nz-autocomplete nzBackfill #$4>\n  <nz-auto-optgroup *ngFor=\"let group of optionGroups\" [nzLabel]=\"groupTitle\">\n    <ng-template #groupTitle>\n      <span>\n        {{group.title}}\n        <a class=\"more-link\" href=\"https://www.google.com/search?q=ng+zorro\" target=\"_blank\">更多</a>\n      </span>\n    </ng-template>\n    <nz-auto-option *ngFor=\"let option of group.children\" [nzValue]=\"option.title\">\n      {{option.title}}\n      <span class=\"certain-search-item-count\">{{option.count}} 人 关注</span>\n    </nz-auto-option>\n  </nz-auto-optgroup>\n</nz-autocomplete>",
@@ -616,13 +539,6 @@
         "scope": ""
     }
 
-    , "data-entry mention": {
-        "prefix": "nz-mention",
-        "body": "<nz-mention [nzSuggestions]=\"$1\" (nzOnSelect)=\"$2(\\$event)\">\n  <input [(ngModel)]=\"$3\" (ngModelChange)=\"$4(\\$event)\" placeholder=\"$5\" nzMentionTrigger nz-input>\n</nz-mention>\n$0",
-        "description": "提及",
-        "scope": ""
-    }
-
     , "data-entry number": {
         "prefix": "nz-number",
         "body": "<nz-input-number\n  [(ngModel)]=\"${1:num}\" name=\"${1}\" id=\"${1}\"\n  [nzMin]=\"${2:1}\" [nzMax]=\"${3:100}\" [nzStep]=\"${4:1}\" ${5: [nzPlaceHolder]=\"'${6}'\"}></nz-input-number>",
@@ -669,6 +585,13 @@
         "prefix": "nz-radio.simple",
         "body": "<label nz-radio [nzValue]=\"${1}\">$0</label>\n",
         "description": "单选框最简单的用法",
+        "scope": ""
+    }
+
+    , "data-entry mention": {
+        "prefix": "nz-mention",
+        "body": "<nz-mention [nzSuggestions]=\"$1\" (nzOnSelect)=\"$2(\\$event)\">\n  <input [(ngModel)]=\"$3\" (ngModelChange)=\"$4(\\$event)\" placeholder=\"$5\" nzMentionTrigger nz-input>\n</nz-mention>\n$0",
+        "description": "提及",
         "scope": ""
     }
 
@@ -812,13 +735,6 @@
         "scope": ""
     }
 
-    , "data-entry transfer": {
-        "prefix": "nz-transfer",
-        "body": "<nz-transfer\n  [nzDataSource]=\"$1\"\n  (nzChange)=\"$2(\\$event)\">\n</nz-transfer>\n$0",
-        "description": "穿梭框",
-        "scope": ""
-    }
-
     , "data-entry upload": {
         "prefix": "nz-upload",
         "body": "<nz-upload nzAction=\"${1:/upload}\">\n  <button nz-button>\n    <i class=\"anticon anticon-upload\"></i>\n    <span>${2:点击上传}</span>\n  </button>\n</nz-upload>\n$0",
@@ -907,6 +823,279 @@
         "prefix": "nzWithCredentials",
         "body": "nzWithCredentials",
         "description": "上传：上传请求时是否携带 cookie",
+        "scope": ""
+    }
+
+    , "data-entry transfer": {
+        "prefix": "nz-transfer",
+        "body": "<nz-transfer\n  [nzDataSource]=\"$1\"\n  (nzChange)=\"$2(\\$event)\">\n</nz-transfer>\n$0",
+        "description": "穿梭框",
+        "scope": ""
+    }
+
+    , "navigation affix": {
+        "prefix": "nz-affix",
+        "body": "<nz-affix${1: [nzOffsetTop]=\"${2}\"}${3: (nzChange)=\"onChange(\\$event)\"}>\n  $0\n</nz-affix>",
+        "description": "固钉",
+        "scope": ""
+    }
+
+    , "navigation affix target": {
+        "prefix": "nz-affix.target",
+        "body": "<div class=\"scrollable-container\" #target>\n  <nz-affix [nzTarget]=\"target\"${1: [nzOffsetTop]=\"${2}\"}${3: (nzChange)=\"onChange(\\$event)\"}>\n    $0\n  </nz-affix>\n</div>",
+        "description": "固钉：指定滚动容器",
+        "scope": ""
+    }
+
+    , "navigation breadcrumb": {
+        "prefix": "nz-breadcrumb",
+        "body": "<nz-breadcrumb>\n  <nz-breadcrumb-item><a routerLink=\"/${2}\">${1}</a></nz-breadcrumb-item>\n  $0\n</nz-breadcrumb>",
+        "description": "面包屑",
+        "scope": ""
+    }
+
+    , "navigation breadcrumb icon": {
+        "prefix": "nz-breadcrumb.icon",
+        "body": "<nz-breadcrumb-item>\n  <a [routerLink]=\"['/${1}']\"><i class=\"anticon anticon-${2:home}\"></i>${3:<span>${4:首页}</span>}</a>\n</nz-breadcrumb-item>\n$0",
+        "description": "面包屑：图标",
+        "scope": ""
+    }
+
+    , "navigation breadcrumb item": {
+        "prefix": "nz-breadcrumb.item",
+        "body": "<nz-breadcrumb-item><a routerLink=\"/${2}\">${1}</a></nz-breadcrumb-item>\n$0",
+        "description": "面包屑项",
+        "scope": ""
+    }
+
+    , "navigation breadcrumb nzSeparator": {
+        "prefix": "nzSeparator",
+        "body": "nzSeparator=\"${1:>}\"",
+        "description": "分隔符自定义",
+        "scope": ""
+    }
+
+    , "navigation dropdown button": {
+        "prefix": "nz-dropdown.button",
+        "body": "<nz-dropdown-button>\n  ${1}\n  <ul nz-menu>\n    <li nz-menu-item>$0</li>\n    <li nz-menu-item><a>2nd menu item</a></li>\n  </ul>\n</nz-dropdown-button>",
+        "description": "下拉菜单按钮",
+        "scope": ""
+    }
+
+    , "navigation dropdown button.style": {
+        "prefix": "nz-dropdown.button.style",
+        "body": "<nz-dropdown>\n  <button nz-button nz-dropdown><span>${1}</span><i class=\"anticon anticon-down\"></i></button>\n  <ul nz-menu>\n    <li nz-menu-item>$0</li>\n    <li nz-menu-item><a>2nd menu item</a></li>\n  </ul>\n</nz-dropdown>",
+        "description": "下拉菜单按钮内风格",
+        "scope": ""
+    }
+
+    , "navigation dropdown": {
+        "prefix": "nz-dropdown",
+        "body": "<nz-dropdown>\n  <a nz-dropdown>${1} <i class=\"anticon anticon-down\"></i></a>\n  <ul nz-menu nzSelectable>\n    <li nz-menu-item>$0</li>\n    <li nz-menu-item><a>2nd menu item</a></li>\n  </ul>\n</nz-dropdown>",
+        "description": "下拉菜单",
+        "scope": ""
+    }
+
+    , "navigation dropdown nzClickHide": {
+        "prefix": "nzClickHide",
+        "body": "nzClickHide=\"false\"",
+        "description": "点击后是否隐藏菜单",
+        "scope": ""
+    }
+
+    , "navigation menu": {
+        "prefix": "nz-menu",
+        "body": "<ul nz-menu>\n  <li nz-menu-item>${1:菜单项}</li>\n  <li nz-menu-divider></li>\n  <li nz-submenu>\n    <span title>子菜单</span>\n    <ul>\n      <li nz-menu-item>子菜单项</li>\n    </ul>\n  </li>\n</ul>",
+        "description": "导航菜单",
+        "scope": ""
+    }
+
+    , "navigation menu group": {
+        "prefix": "nz-menu.group",
+        "body": "<li nz-menu-group>\n  <span title>${1}</span>\n  $0\n</li>",
+        "description": "导航菜单：组",
+        "scope": ""
+    }
+
+    , "navigation menu item divider": {
+        "prefix": "nz-menu.item-divider",
+        "body": "<li nz-menu-divider></li>\r\n$0",
+        "description": "导航菜单：分割线",
+        "scope": ""
+    }
+
+    , "navigation menu item": {
+        "prefix": "nz-menu.item",
+        "body": "<li nz-menu-item>${1}</li>\r\n$0",
+        "description": "导航菜单：项",
+        "scope": ""
+    }
+
+    , "navigation menu submenu": {
+        "prefix": "nz-menu.submenu",
+        "body": "<li nz-submenu>\n  <span title>${1}</span>\n  <ul>\n    $0\n  </ul>\n</li>",
+        "description": "导航菜单：子项",
+        "scope": ""
+    }
+
+    , "navigation pagination": {
+        "prefix": "nz-pagination",
+        "body": "<nz-pagination [nzPageIndex]=\"${1}\" [nzPageSize]=\"${2}\" [nzTotal]=\"${3}\"${4: nzSize=\"small\"}></nz-pagination>\n$0",
+        "description": "分页",
+        "scope": ""
+    }
+
+    , "navigation pagination nzHideOnSinglePage": {
+        "prefix": "nzHideOnSinglePage",
+        "body": "nzHideOnSinglePage",
+        "description": "只有一页时是否隐藏分页器",
+        "scope": ""
+    }
+
+    , "navigation steps": {
+        "prefix": "nz-steps",
+        "body": "<nz-steps [(nzCurrent)]=\"${1:current}\"${2: [nzStatus]=\"'${3|wait,process,finish,error|}'\"}${4: nzSize=\"small\"}${5: nzDirection=\"${6|horizontal,vertical|}\"}${7: nzProgressDot}>\n  <nz-step [nzTitle]=\"'${8}'\" [nzDescription]=\"'${9}'\"></nz-step>\n  $0\n</nz-steps>\n<div class=\"steps-content\">\n\n</div>",
+        "description": "步骤条",
+        "scope": ""
+    }
+
+    , "navigation steps step icon": {
+        "prefix": "nz-steps.step-icon",
+        "body": "<nz-step [nzIcon]=\"nzIconTpl\" [nzTitle]=\"'${1}'\" [nzDescription]=\"'${2}'\"${3: [nzStatus]=\"'${4|wait,process,finish,error|}'\"}>\n  <ng-template #nzIconTpl>$0</ng-template>\n</nz-step>",
+        "description": "步骤条：项带图标",
+        "scope": ""
+    }
+
+    , "navigation steps step": {
+        "prefix": "nz-steps.step",
+        "body": "<nz-step [nzTitle]=\"'${1}'\" [nzDescription]=\"'${2}'\"${3: [nzStatus]=\"'${4|wait,process,finish,error|}'\"}></nz-step>",
+        "description": "步骤条：项",
+        "scope": ""
+    }
+
+    , "feedback alert body": {
+        "prefix": "nz-alert.body",
+        "body": "<nz-alert\n  nzType=\"${1|success,info,warning,error|}\" nzShowIcon\n  nzMessage=\"$2\"\n  nzDescription=\"$3\">\n</nz-alert>\n$0",
+        "description": "警告提示：含辅助性文字介绍",
+        "scope": ""
+    }
+
+    , "feedback alert": {
+        "prefix": "nz-alert",
+        "body": "<nz-alert nzType=\"${1|success,info,warning,error|}\" nzMessage=\"$2\"></nz-alert>\n$0",
+        "description": "警告提示",
+        "scope": ""
+    }
+
+    , "feedback alert nzAlertType": {
+        "prefix": "nzAlertType",
+        "body": "[nzType]=\"'${1|success,info,warning,error|}'\"",
+        "description": "指定警告提示的样式",
+        "scope": ""
+    }
+
+    , "feedback alert nzBanner": {
+        "prefix": "nzBanner",
+        "body": "nzBanner",
+        "description": "是否用作顶部公告",
+        "scope": ""
+    }
+
+    , "feedback alert nzClosable": {
+        "prefix": "nzClosable",
+        "body": "[nzClosable]=\"${1|true,false|}\"",
+        "description": "默认不显示关闭按钮",
+        "scope": ""
+    }
+
+    , "feedback alert nzMessage": {
+        "prefix": "nzMessage",
+        "body": "nzMessage=\"$1\"",
+        "description": "警告提示内容",
+        "scope": ""
+    }
+
+    , "feedback alert nzShowIcon": {
+        "prefix": "nzShowIcon",
+        "body": "[nzShowIcon]=\"${1|true,false|}\"",
+        "description": "是否显示辅助图标",
+        "scope": ""
+    }
+
+    , "feedback modal": {
+        "prefix": "nz-modal",
+        "body": "<nz-modal\n  [(nzVisible)]=\"isVisible\"\n  [nzTitle]=\"'标题'\"\n  [nzClosable]=\"false|true\"\n  [nzWidth]=\"520\"\n  [nzContent]=\"modalContent\"\n  [nzOkText]=\"'确定'\"\n  [nzCancelText]=\"'取消'\"\n  [nzMaskClosable]=\"false|true\"\n  [nzWrapClassName]=\"''\"\n  (nzOnCancel)=\"handleCancel(\\$event)\"\n  (nzOnOk)=\"handleOk(\\$event)\">\n  <ng-template #modalContent>对话框的内容</ng-template>\n</nz-modal>\n$0",
+        "description": "对话框",
+        "scope": ""
+    }
+
+    , "feedback popconfirm": {
+        "prefix": "nz-popconfirm",
+        "body": "<nz-popconfirm [nzTitle]=\"'${1:确定要删除吗？}'\" (nzOnConfirm)=\"${2:confirm(i)}\">\n  <a nz-popconfirm>${3:删除}</a>\n</nz-popconfirm>\n$0",
+        "description": "气泡确认框",
+        "scope": ""
+    }
+
+    , "feedback popconfirm nzCondition": {
+        "prefix": "nzCondition",
+        "body": "[nzCondition]=\"${1|true,false|}\"",
+        "description": "气泡确认框：是否直接触发 nzOnConfirm 而不弹出框",
+        "scope": ""
+    }
+
+    , "feedback progress circle": {
+        "prefix": "nz-progress.circle",
+        "body": "<nz-progress nzType=\"circle\" [nzPercent]=\"${1}\" [nzStrokeWidth]=\"${3:6}\" [nzWidth]=\"${4:132}\"></nz-progress>\n$0",
+        "description": "进度条：圆风格",
+        "scope": ""
+    }
+
+    , "feedback progress dashboard": {
+        "prefix": "nz-progress.dashboard",
+        "body": "<nz-progress nzType=\"dashboard\" [nzPercent]=\"${1}\"></nz-progress>\n$0",
+        "description": "进度条：仪表盘风格",
+        "scope": ""
+    }
+
+    , "feedback progress": {
+        "prefix": "nz-progress",
+        "body": "<nz-progress [nzPercent]=\"${1}\" [nzType]=\"'${2|circle,line|}'\"></nz-progress>\n$0",
+        "description": "进度条",
+        "scope": ""
+    }
+
+    , "feedback progress line": {
+        "prefix": "nz-progress.line",
+        "body": "<nz-progress nzType=\"line\" [nzPercent]=\"${1}\" [nzStrokeWidth]=\"${3:10}\"></nz-progress>\n$0",
+        "description": "进度条：线风格",
+        "scope": ""
+    }
+
+    , "feedback progress nzProgressStatus": {
+        "prefix": "nzProgressStatus",
+        "body": "[nzStatus]=\"'${1|success,exception,active|}'\"",
+        "description": "进度条：状态",
+        "scope": ""
+    }
+
+    , "feedback spin": {
+        "prefix": "nz-spin",
+        "body": "<nz-spin${1: [nzTip]=\"'${2|加载中...,正在读取数据...|}'\"}${3: [nzSpinning]=\"false\"}></nz-spin>\n$0",
+        "description": "加载中",
+        "scope": ""
+    }
+
+    , "feedback spin nzSpinning": {
+        "prefix": "nzSpinning",
+        "body": "[nzSpinning]=\"${1|true,false|}\"",
+        "description": "加载中：是否旋转",
+        "scope": ""
+    }
+
+    , "feedback spin nzTip": {
+        "prefix": "nzTip",
+        "body": "[nzTip]=\"'${1|加载中...,正在读取数据...|}'\"",
+        "description": "加载中：当作为包裹元素时，可以自定义描述文案",
         "scope": ""
     }
 
@@ -1365,97 +1554,6 @@
         "scope": ""
     }
 
-    , "feedback alert body": {
-        "prefix": "nz-alert.body",
-        "body": "<nz-alert\n  nzType=\"${1|success,info,warning,error|}\" nzShowIcon\n  nzMessage=\"$2\"\n  nzDescription=\"$3\">\n</nz-alert>\n$0",
-        "description": "警告提示：含辅助性文字介绍",
-        "scope": ""
-    }
-
-    , "feedback alert": {
-        "prefix": "nz-alert",
-        "body": "<nz-alert nzType=\"${1|success,info,warning,error|}\" nzMessage=\"$2\"></nz-alert>\n$0",
-        "description": "警告提示",
-        "scope": ""
-    }
-
-    , "feedback alert nzAlertType": {
-        "prefix": "nzAlertType",
-        "body": "[nzType]=\"'${1|success,info,warning,error|}'\"",
-        "description": "指定警告提示的样式",
-        "scope": ""
-    }
-
-    , "feedback alert nzBanner": {
-        "prefix": "nzBanner",
-        "body": "nzBanner",
-        "description": "是否用作顶部公告",
-        "scope": ""
-    }
-
-    , "feedback alert nzClosable": {
-        "prefix": "nzClosable",
-        "body": "[nzClosable]=\"${1|true,false|}\"",
-        "description": "默认不显示关闭按钮",
-        "scope": ""
-    }
-
-    , "feedback alert nzMessage": {
-        "prefix": "nzMessage",
-        "body": "nzMessage=\"$1\"",
-        "description": "警告提示内容",
-        "scope": ""
-    }
-
-    , "feedback alert nzShowIcon": {
-        "prefix": "nzShowIcon",
-        "body": "[nzShowIcon]=\"${1|true,false|}\"",
-        "description": "是否显示辅助图标",
-        "scope": ""
-    }
-
-    , "feedback modal": {
-        "prefix": "nz-modal",
-        "body": "<nz-modal\n  [(nzVisible)]=\"isVisible\"\n  [nzTitle]=\"'标题'\"\n  [nzClosable]=\"false|true\"\n  [nzWidth]=\"520\"\n  [nzContent]=\"modalContent\"\n  [nzOkText]=\"'确定'\"\n  [nzCancelText]=\"'取消'\"\n  [nzMaskClosable]=\"false|true\"\n  [nzWrapClassName]=\"''\"\n  (nzOnCancel)=\"handleCancel(\\$event)\"\n  (nzOnOk)=\"handleOk(\\$event)\">\n  <ng-template #modalContent>对话框的内容</ng-template>\n</nz-modal>\n$0",
-        "description": "对话框",
-        "scope": ""
-    }
-
-    , "feedback popconfirm": {
-        "prefix": "nz-popconfirm",
-        "body": "<nz-popconfirm [nzTitle]=\"'${1:确定要删除吗？}'\" (nzOnConfirm)=\"${2:confirm(i)}\">\n  <a nz-popconfirm>${3:删除}</a>\n</nz-popconfirm>\n$0",
-        "description": "气泡确认框",
-        "scope": ""
-    }
-
-    , "feedback popconfirm nzCondition": {
-        "prefix": "nzCondition",
-        "body": "[nzCondition]=\"${1|true,false|}\"",
-        "description": "气泡确认框：是否直接触发 nzOnConfirm 而不弹出框",
-        "scope": ""
-    }
-
-    , "feedback spin": {
-        "prefix": "nz-spin",
-        "body": "<nz-spin${1: [nzTip]=\"'${2|加载中...,正在读取数据...|}'\"}${3: [nzSpinning]=\"false\"}></nz-spin>\n$0",
-        "description": "加载中",
-        "scope": ""
-    }
-
-    , "feedback spin nzSpinning": {
-        "prefix": "nzSpinning",
-        "body": "[nzSpinning]=\"${1|true,false|}\"",
-        "description": "加载中：是否旋转",
-        "scope": ""
-    }
-
-    , "feedback spin nzTip": {
-        "prefix": "nzTip",
-        "body": "[nzTip]=\"'${1|加载中...,正在读取数据...|}'\"",
-        "description": "加载中：当作为包裹元素时，可以自定义描述文案",
-        "scope": ""
-    }
-
     , "other anchor": {
         "prefix": "nz-anchor",
         "body": "<nz-anchor${1: [nzOffsetTop]=\"$2\"}>\n  $0\n</nz-anchor>",
@@ -1467,41 +1565,6 @@
         "prefix": "nz-anchor.link",
         "body": "<nz-link [nzHref]=\"$1\" [nzTitle]=\"$2\"></nz-link>\n$0",
         "description": "锚点：链接项",
-        "scope": ""
-    }
-
-    , "feedback progress circle": {
-        "prefix": "nz-progress.circle",
-        "body": "<nz-progress nzType=\"circle\" [nzPercent]=\"${1}\" [nzStrokeWidth]=\"${3:6}\" [nzWidth]=\"${4:132}\"></nz-progress>\n$0",
-        "description": "进度条：圆风格",
-        "scope": ""
-    }
-
-    , "feedback progress dashboard": {
-        "prefix": "nz-progress.dashboard",
-        "body": "<nz-progress nzType=\"dashboard\" [nzPercent]=\"${1}\"></nz-progress>\n$0",
-        "description": "进度条：仪表盘风格",
-        "scope": ""
-    }
-
-    , "feedback progress": {
-        "prefix": "nz-progress",
-        "body": "<nz-progress [nzPercent]=\"${1}\" [nzType]=\"'${2|circle,line|}'\"></nz-progress>\n$0",
-        "description": "进度条",
-        "scope": ""
-    }
-
-    , "feedback progress line": {
-        "prefix": "nz-progress.line",
-        "body": "<nz-progress nzType=\"line\" [nzPercent]=\"${1}\" [nzStrokeWidth]=\"${3:10}\"></nz-progress>\n$0",
-        "description": "进度条：线风格",
-        "scope": ""
-    }
-
-    , "feedback progress nzProgressStatus": {
-        "prefix": "nzProgressStatus",
-        "body": "[nzStatus]=\"'${1|success,exception,active|}'\"",
-        "description": "进度条：状态",
         "scope": ""
     }
 
@@ -1761,69 +1824,6 @@
         "prefix": "nzVisible",
         "body": "[nzVisible]=\"$1\"",
         "description": "显示状态",
-        "scope": ""
-    }
-
-    , "general button": {
-        "prefix": "nz-button",
-        "body": "<button (click)=\"${2}\" nz-button$0>$1</button>",
-        "description": "按钮",
-        "scope": ""
-    }
-
-    , "general button group": {
-        "prefix": "nz-button.group",
-        "body": "<nz-button-group>\n  <button (click)=\"${2}\" nz-button>$1</button>\n  <button (click)=\"${4}\" nz-button>$3</button>\n  $0\n</nz-button-group>",
-        "description": "按钮组",
-        "scope": ""
-    }
-
-    , "general button icon text left": {
-        "prefix": "nz-button.icon-text-left",
-        "body": "<button (click)=\"${3}\" nz-button>\n  $1\n  <i class=\"anticon anticon-${2|left,right|}\"></i>\n</button>\n$0",
-        "description": "按钮带图标且文本在左",
-        "scope": ""
-    }
-
-    , "general button icon text right": {
-        "prefix": "nz-button.icon-text-right",
-        "body": "<button (click)=\"${3}\" nz-button>\n  <i class=\"anticon anticon-${2|left,right|}\"></i>$1\n</button>\n$0",
-        "description": "按钮带图标且文本在右",
-        "scope": ""
-    }
-
-    , "general button nzGhost": {
-        "prefix": "nzGhost",
-        "body": "nzGhost",
-        "description": "幽灵属性，使按钮背景透明",
-        "scope": ""
-    }
-
-    , "general button type": {
-        "prefix": "nz-button.type",
-        "body": "<button (click)=\"${2}\" nz-button nzType=\"${3|primary,dashed,danger,default|}\">$1</button>\n$0",
-        "description": "按钮带设置类型",
-        "scope": ""
-    }
-
-    , "general icon anticon": {
-        "prefix": "nz-icon.anticon",
-        "body": "anticon anticon-${1}",
-        "description": "anticon样式",
-        "scope": ""
-    }
-
-    , "general icon": {
-        "prefix": "nz-icon",
-        "body": "<i class=\"anticon anticon-${1}\"></i>",
-        "description": "图标",
-        "scope": ""
-    }
-
-    , "general icon spin": {
-        "prefix": "nz-icon.spin",
-        "body": "<i class=\"anticon anticon-spin anticon-${1}\"></i>",
-        "description": "旋转图标",
         "scope": ""
     }  
 }
