@@ -2,43 +2,15 @@
 	"general": {
 		"title": "常规",
 		"list": {
+			"nz-icon.anticon": "general icon anticon",
+			"nz-icon": "general icon",
+			"nz-icon.spin": "general icon spin",
 			"nz-button": "general button",
 			"nz-button.group": "general button group",
 			"nz-button.icon-text-left": "general button icon text left",
 			"nz-button.icon-text-right": "general button icon text right",
 			"nzGhost": "general button nzGhost",
-			"nz-button.type": "general button type",
-			"nz-icon.anticon": "general icon anticon",
-			"nz-icon": "general icon",
-			"nz-icon.spin": "general icon spin"
-		}
-	},
-	"layout": {
-		"title": "布局",
-		"list": {
-			"nz-grid.col": "layout grid col",
-			"nz-grid": "layout grid",
-			"nzAlign": "layout grid nzAlign",
-			"nzFlex": "layout grid nzFlex",
-			"nzGutter": "layout grid nzGutter",
-			"nzJustify": "layout grid nzJustify",
-			"nzLg": "layout grid nzLg",
-			"nzMd": "layout grid nzMd",
-			"nzOffset": "layout grid nzOffset",
-			"nzOrder": "layout grid nzOrder",
-			"nzPull": "layout grid nzPull",
-			"nzPush": "layout grid nzPush",
-			"nzResponsive": "layout grid nzResponsive",
-			"nzSm": "layout grid nzSm",
-			"nzSpan": "layout grid nzSpan",
-			"nzXl": "layout grid nzXl",
-			"nzXs": "layout grid nzXs",
-			"nzXXl": "layout grid nzXXl",
-			"nz-grid.responsive": "layout grid responsive",
-			"nz-grid.row-flex": "layout grid row flex",
-			"nz-grid.row": "layout grid row",
-			"nz-layout": "layout layout",
-			"nz-layout.sider": "layout layout sider"
+			"nz-button.type": "general button type"
 		}
 	},
 	"alain": {
@@ -53,21 +25,21 @@
 			"nz-alain-form": "alain form",
 			"nz-alain-form.edit": "alain form edit",
 			"nz-alain-form.search": "alain form search",
-			"nz-alain-ts.form-get-control": "alain ts form get control",
 			"nz-alain-modal": "alain modal",
 			"nz-alain-modal.edit": "alain modal edit",
-			"nz-alain-modal.view": "alain modal view"
+			"nz-alain-modal.view": "alain modal view",
+			"nz-alain-ts.form-get-control": "alain ts form get control"
 		}
 	},
 	"navigation": {
 		"title": "导航",
 		"list": {
-			"nz-affix": "navigation affix",
-			"nz-affix.target": "navigation affix target",
 			"nz-breadcrumb": "navigation breadcrumb",
 			"nz-breadcrumb.icon": "navigation breadcrumb icon",
 			"nz-breadcrumb.item": "navigation breadcrumb item",
 			"nzSeparator": "navigation breadcrumb nzSeparator",
+			"nz-affix": "navigation affix",
+			"nz-affix.target": "navigation affix target",
 			"nz-dropdown.button": "navigation dropdown button",
 			"nz-dropdown.button.style": "navigation dropdown button.style",
 			"nz-dropdown": "navigation dropdown",
@@ -90,10 +62,10 @@
 			"nz-autocomplete.custom-label": "data-entry autocomplete custom label",
 			"nz-autocomplete.data-source": "data-entry autocomplete data source",
 			"nz-autocomplete": "data-entry autocomplete",
-			"nz-cascader": "data-entry cascader",
 			"nz-checkbox": "data-entry checkbox",
 			"nz-checkbox.group": "data-entry checkbox group",
 			"nz-checkbox.layout": "data-entry checkbox layout",
+			"nz-cascader": "data-entry cascader",
 			"nz-form.control-responsive": "data-entry form control responsive",
 			"nz-form.control": "data-entry form control",
 			"nz-form": "data-entry form",
@@ -175,6 +147,7 @@
 			"nzOverflowCount": "data-display badge nzOverflowCount",
 			"nzShowZero": "data-display badge nzShowZero",
 			"nz-calendar": "data-display calendar",
+			"nz-carousel": "data-display carousel",
 			"nz-card": "data-display card",
 			"nz-card.extra": "data-display card extra",
 			"nz-card.meta": "data-display card meta",
@@ -182,7 +155,6 @@
 			"nzTypeInner": "data-display card nzTypeInner",
 			"nz-card.simple": "data-display card simple",
 			"nz-card.tab": "data-display card tab",
-			"nz-carousel": "data-display carousel",
 			"nz-collapse": "data-display collapse",
 			"nzAccordion": "data-display collapse nzAccordion",
 			"nzShowArrow": "data-display collapse nzShowArrow",
@@ -195,6 +167,7 @@
 			"nzPagination": "data-display list nzPagination",
 			"nzRenderItem": "data-display list nzRenderItem",
 			"nz-list.simple": "data-display list simple",
+			"nz-popover": "data-display popover",
 			"nz-table": "data-display table",
 			"nzExpand": "data-display table nzExpand",
 			"nzFilterMultiple": "data-display table nzFilterMultiple",
@@ -214,7 +187,6 @@
 			"nzShowSort": "data-display table nzShowSort",
 			"nzSort": "data-display table nzSort",
 			"nzWidth": "data-display table nzWidth",
-			"nz-popover": "data-display popover",
 			"nz-tabs": "data-display tabs",
 			"nzAnimated": "data-display tabs nzAnimated",
 			"nzTabPosition": "data-display tabs nzTabPosition",
@@ -254,6 +226,34 @@
 			"nz-spin": "feedback spin",
 			"nzSpinning": "feedback spin nzSpinning",
 			"nzTip": "feedback spin nzTip"
+		}
+	},
+	"layout": {
+		"title": "布局",
+		"list": {
+			"nz-layout": "layout layout",
+			"nz-layout.sider": "layout layout sider",
+			"nz-grid.col": "layout grid col",
+			"nz-grid": "layout grid",
+			"nzAlign": "layout grid nzAlign",
+			"nzFlex": "layout grid nzFlex",
+			"nzGutter": "layout grid nzGutter",
+			"nzJustify": "layout grid nzJustify",
+			"nzLg": "layout grid nzLg",
+			"nzMd": "layout grid nzMd",
+			"nzOffset": "layout grid nzOffset",
+			"nzOrder": "layout grid nzOrder",
+			"nzPull": "layout grid nzPull",
+			"nzPush": "layout grid nzPush",
+			"nzResponsive": "layout grid nzResponsive",
+			"nzSm": "layout grid nzSm",
+			"nzSpan": "layout grid nzSpan",
+			"nzXl": "layout grid nzXl",
+			"nzXs": "layout grid nzXs",
+			"nzXXl": "layout grid nzXXl",
+			"nz-grid.responsive": "layout grid responsive",
+			"nz-grid.row-flex": "layout grid row flex",
+			"nz-grid.row": "layout grid row"
 		}
 	},
 	"other": {

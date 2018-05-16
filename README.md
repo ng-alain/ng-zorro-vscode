@@ -1,12 +1,8 @@
-# 关于 `2.x` 版本
-
-当前 ng-zorro-antd 0.7.x 有很多破坏性变更，且还处于 beta 当中，因此所有 `2.x` 版本暂时不在 vscode 市场上更新，若你希望使用它，请从这里[下载](https://github.com/cipchk/ng-zorro-vscode/raw/dev/ng-zorro-vscode.vsix)本地安装。本次主要变更：
-
-- 简化关键词，以 `nz-` 开头表示完整代码片断，`nzType` 表示属性
-
 # ng-zorro 的 vscode 代码片断
 
 ![Plugin in action](help.gif)
+
+当前版本只支持 `0.7.x`，低版本请自行下载 [cipchk.ng-zorro-vscode-1.1.4](https://github.com/cipchk/ng-zorro-vscode/raw/dev/cipchk.ng-zorro-vscode-1.1.4.vsix)本地安装。
 
 请至[Issuses](https://github.com/cipchk/ng-zorro-vscode/issues)提交可能遇到的问题或期望增加的代码片断。
 
@@ -31,43 +27,15 @@
 
 Trigger | Description
 --- | ---
+nz-icon.anticon | anticon样式
+nz-icon | 图标
+nz-icon.spin | 旋转图标
 nz-button | 按钮
 nz-button.group | 按钮组
 nz-button.icon-text-left | 按钮带图标且文本在左
 nz-button.icon-text-right | 按钮带图标且文本在右
 nzGhost | 幽灵属性，使按钮背景透明
 nz-button.type | 按钮带设置类型
-nz-icon.anticon | anticon样式
-nz-icon | 图标
-nz-icon.spin | 旋转图标
-
-### 布局
-
-Trigger | Description
---- | ---
-nz-grid.col | 栅格系统：列
-nz-grid | 栅格系统
-nzAlign | flex 布局下的垂直对齐方式
-nzFlex | flex 布局模式
-nzGutter | 栅格间隔，支持数字或响应式对象 { xs: 8, sm: 16, md: 24, lg: 32, xl: 32, xxl: 32 }
-nzJustify | flex 布局下的水平排列方式
-nzLg | ≥992px 响应式栅格，可为栅格数或一个包含其他属性的对象
-nzMd | ≥768px 响应式栅格，可为栅格数或一个包含其他属性的对象
-nzOffset | 栅格左侧的间隔格数，间隔内不可以有栅格
-nzOrder | 栅格顺序，flex 布局模式下有效
-nzPull | 栅格向左移动格数
-nzPush | 栅格向右移动格数
-nzResponsive | 响应式属性
-nzSm | ≥576px 响应式栅格，可为栅格数或一个包含其他属性的对象
-nzSpan | 栅格占位格数，为 0 时相当于 display: none
-nzXl | ≥1200px 响应式栅格，可为栅格数或一个包含其他属性的对象
-nzXs | &lt;576px 响应式栅格，可为栅格数或一个包含其他属性的对象
-nzXXl | ≥1600px 响应式栅格，可为栅格数或一个包含其他属性的对象
-nz-grid.responsive | 响应式栅格系统
-nz-grid.row-flex | flex 响应式栅格系统
-nz-grid.row | 栅格系统：行
-nz-layout | 布局
-nz-layout.sider | 布局：侧边栏
 
 ### [ng-alain](https://github.com/cipchk/ng-alain) 片断
 
@@ -82,21 +50,21 @@ nz-alain-content.right-inputgroup | HTML页标题且右边按钮组
 nz-alain-form | 动态表单
 nz-alain-form.edit | 动态表单(编辑模式)
 nz-alain-form.search | 动态表单(搜索模式)
-nz-alain-ts.form-get-control | 获取表单字段
 nz-alain-modal | 自定义对话框组件
 nz-alain-modal.edit | 自定义对话框组件（编辑风格）
 nz-alain-modal.view | 自定义对话框组件（查看风格）
+nz-alain-ts.form-get-control | 获取表单字段
 
 ### 导航
 
 Trigger | Description
 --- | ---
-nz-affix | 固钉
-nz-affix.target | 固钉：指定滚动容器
 nz-breadcrumb | 面包屑
 nz-breadcrumb.icon | 面包屑：图标
 nz-breadcrumb.item | 面包屑项
 nzSeparator | 分隔符自定义
+nz-affix | 固钉
+nz-affix.target | 固钉：指定滚动容器
 nz-dropdown.button | 下拉菜单按钮
 nz-dropdown.button.style | 下拉菜单按钮内风格
 nz-dropdown | 下拉菜单
@@ -119,10 +87,10 @@ Trigger | Description
 nz-autocomplete.custom-label | 自动完成：自定义选项
 nz-autocomplete.data-source | 自动完成：指定数据源
 nz-autocomplete | 自动完成
-nz-cascader | 级联选择
 nz-checkbox | 多选框
 nz-checkbox.group | 多选框组
 nz-checkbox.layout | 多选框组布局
+nz-cascader | 级联选择
 nz-form.control-responsive | 表单：控件为响应式
 nz-form.control | 表单：控件
 nz-form | 表单，向下为表单项
@@ -204,6 +172,7 @@ nzBadgeStatus | 徽标数：设置 nz-badge 为状态点
 nzOverflowCount | 徽标数：展示封顶的数字值
 nzShowZero | 徽标数：当数值为 0 时，是否展示 Badge
 nz-calendar | 日历
+nz-carousel | 走马灯
 nz-card | 卡片
 nz-card.extra | 卡片：带右上角的操作区域
 nz-card.meta | 卡片：完整内容配置
@@ -211,7 +180,6 @@ nzHoverable | 卡片：鼠标移过时可浮起
 nzTypeInner | 卡片：层级类型
 nz-card.simple | 卡片：最简单使用方法
 nz-card.tab | 卡片：带标签风格
-nz-carousel | 走马灯
 nz-collapse | 折叠面板
 nzAccordion | 折叠面板：是否每次只打开一个tab
 nzShowArrow | 折叠面板：是否展示箭头
@@ -224,6 +192,7 @@ nzLoadMore | 列表：加载更多
 nzPagination | 列表：对应的 pagination 配置
 nzRenderItem | 列表：自定义列表项
 nz-list.simple | 列表：最简单的用法
+nz-popover | 气泡卡片
 nz-table | 表格
 nzExpand | 表格：可展开
 nzFilterMultiple | 表格：是否为多选过滤器
@@ -243,7 +212,6 @@ nzShowSizeChanger | 表格：是否可以改变 nzPageSize
 nzShowSort | 表格：是否显示排序
 nzSort | 表格：当前排序状态，受控模式使用，可双向绑定
 nzWidth | 表格：指定该列宽度，表头未分组时可用
-nz-popover | 气泡卡片
 nz-tabs | 标签页
 nzAnimated | 标签页：是否使用动画切换 Tabs，在 &#x60;nzTabPosition&#x3D;top
 nzTabPosition | 标签页：页签位置
@@ -283,6 +251,34 @@ nzProgressStatus | 进度条：状态
 nz-spin | 加载中
 nzSpinning | 加载中：是否旋转
 nzTip | 加载中：当作为包裹元素时，可以自定义描述文案
+
+### 布局
+
+Trigger | Description
+--- | ---
+nz-layout | 布局
+nz-layout.sider | 布局：侧边栏
+nz-grid.col | 栅格系统：列
+nz-grid | 栅格系统
+nzAlign | flex 布局下的垂直对齐方式
+nzFlex | flex 布局模式
+nzGutter | 栅格间隔，支持数字或响应式对象 { xs: 8, sm: 16, md: 24, lg: 32, xl: 32, xxl: 32 }
+nzJustify | flex 布局下的水平排列方式
+nzLg | ≥992px 响应式栅格，可为栅格数或一个包含其他属性的对象
+nzMd | ≥768px 响应式栅格，可为栅格数或一个包含其他属性的对象
+nzOffset | 栅格左侧的间隔格数，间隔内不可以有栅格
+nzOrder | 栅格顺序，flex 布局模式下有效
+nzPull | 栅格向左移动格数
+nzPush | 栅格向右移动格数
+nzResponsive | 响应式属性
+nzSm | ≥576px 响应式栅格，可为栅格数或一个包含其他属性的对象
+nzSpan | 栅格占位格数，为 0 时相当于 display: none
+nzXl | ≥1200px 响应式栅格，可为栅格数或一个包含其他属性的对象
+nzXs | &lt;576px 响应式栅格，可为栅格数或一个包含其他属性的对象
+nzXXl | ≥1600px 响应式栅格，可为栅格数或一个包含其他属性的对象
+nz-grid.responsive | 响应式栅格系统
+nz-grid.row-flex | flex 响应式栅格系统
+nz-grid.row | 栅格系统：行
 
 ### 其它
 

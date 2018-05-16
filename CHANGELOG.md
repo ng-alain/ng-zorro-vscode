@@ -1,19 +1,12 @@
-# 2.0.0-beta.2
+# 2.0.0
 
+- 同步 `0.7.0`
+- 简化关键词，以 `nz-` 开头表示完整代码片断，`nzType` 表示属性
 - 优化代码风格
 - 移除不必要引号，例如：`nzType="primary"` 好于 `[nzType]="'primary'"`
 - ng-alain
   - 增加 `modal` 系列
   - 增加 `form` 系列
-
-# 2.0.0-beta.1
-
-+ 同步 `0.7.0`
-
-**注意：**
-
-- 由于市场并不支持多版本，因此暂时[手动下载](https://github.com/cipchk/ng-zorro-vscode/blob/dev/ng-zorro-vscode-2.0.0-beta.1.vsix)进行本地安装
-- 简化关键词，以 `nz-` 开头表示完整代码片断，`nzType` 表示属性
 
 # 1.1.3
 
