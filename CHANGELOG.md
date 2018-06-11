@@ -1,3 +1,11 @@
+# 2.1.0
+
+- 同步 `1.0.0`
+- 移除 ng-alain 部分，保持 ng-zorro-antd 的纯洁性，有兴趣可以下载 [https://github.com/cipchk/ng-alain-vscode]
+- 一些小细节
+  - 增加 `nz-table.static-no-pager` 静态数据不分页模板
+  - 优化一些更友好地代码细节
+
 # 2.0.0
 
 - 同步 `0.7.0`

@@ -2,34 +2,15 @@
 	"general": {
 		"title": "常规",
 		"list": {
-			"nz-icon.anticon": "general icon anticon",
-			"nz-icon": "general icon",
-			"nz-icon.spin": "general icon spin",
 			"nz-button": "general button",
 			"nz-button.group": "general button group",
 			"nz-button.icon-text-left": "general button icon text left",
 			"nz-button.icon-text-right": "general button icon text right",
 			"nzGhost": "general button nzGhost",
-			"nz-button.type": "general button type"
-		}
-	},
-	"alain": {
-		"title": "[ng-alain](https://github.com/cipchk/ng-alain) 片断",
-		"list": {
-			"nz-alain-abc.desc-list": "alain abc desc list",
-			"nz-alain-abc.header-action": "alain abc header action",
-			"nz-alain-abc.header": "alain abc header",
-			"nz-alain-abc.st": "alain abc st",
-			"nz-alain-content": "alain content",
-			"nz-alain-content.right-input": "alain content right input",
-			"nz-alain-content.right-inputgroup": "alain content right inputgroup",
-			"nz-alain-form": "alain form",
-			"nz-alain-form.edit": "alain form edit",
-			"nz-alain-form.search": "alain form search",
-			"nz-alain-modal": "alain modal",
-			"nz-alain-modal.edit": "alain modal edit",
-			"nz-alain-modal.view": "alain modal view",
-			"nz-alain-ts.form-get-control": "alain ts form get control"
+			"nz-button.type": "general button type",
+			"nz-icon.anticon": "general icon anticon",
+			"nz-icon": "general icon",
+			"nz-icon.spin": "general icon spin"
 		}
 	},
 	"layout": {
@@ -58,31 +39,6 @@
 			"nz-grid.row": "layout grid row",
 			"nz-layout": "layout layout",
 			"nz-layout.sider": "layout layout sider"
-		}
-	},
-	"navigation": {
-		"title": "导航",
-		"list": {
-			"nz-affix": "navigation affix",
-			"nz-affix.target": "navigation affix target",
-			"nz-breadcrumb": "navigation breadcrumb",
-			"nz-breadcrumb.icon": "navigation breadcrumb icon",
-			"nz-breadcrumb.item": "navigation breadcrumb item",
-			"nzSeparator": "navigation breadcrumb nzSeparator",
-			"nz-dropdown.button": "navigation dropdown button",
-			"nz-dropdown.button.style": "navigation dropdown button.style",
-			"nz-dropdown": "navigation dropdown",
-			"nzClickHide": "navigation dropdown nzClickHide",
-			"nz-menu": "navigation menu",
-			"nz-menu.group": "navigation menu group",
-			"nz-menu.item-divider": "navigation menu item divider",
-			"nz-menu.item": "navigation menu item",
-			"nz-menu.submenu": "navigation menu submenu",
-			"nz-pagination": "navigation pagination",
-			"nzHideOnSinglePage": "navigation pagination nzHideOnSinglePage",
-			"nz-steps": "navigation steps",
-			"nz-steps.step-icon": "navigation steps step icon",
-			"nz-steps.step": "navigation steps step"
 		}
 	},
 	"data-entry": {
@@ -121,13 +77,13 @@
 			"nz-input.prefix": "data-entry input prefix",
 			"nz-input.suffix": "data-entry input suffix",
 			"nz-mention": "data-entry mention",
+			"nz-radio.button": "data-entry radio button",
+			"nz-radio": "data-entry radio",
+			"nz-radio.simple": "data-entry radio simple",
 			"nz-number": "data-entry number",
 			"nzFormatter": "data-entry number nzFormatter",
 			"nzParser": "data-entry number nzParser",
 			"nzPrecision": "data-entry number nzPrecision",
-			"nz-radio.button": "data-entry radio button",
-			"nz-radio": "data-entry radio",
-			"nz-radio.simple": "data-entry radio simple",
 			"nz-rate": "data-entry rate",
 			"nzAllowHalf": "data-entry rate nzAllowHalf",
 			"nz-select": "data-entry select",
@@ -162,6 +118,65 @@
 			"nzShowButton": "data-entry upload nzShowButton",
 			"nzShowUploadList": "data-entry upload nzShowUploadList",
 			"nzWithCredentials": "data-entry upload nzWithCredentials"
+		}
+	},
+	"navigation": {
+		"title": "导航",
+		"list": {
+			"nz-affix": "navigation affix",
+			"nz-affix.target": "navigation affix target",
+			"nz-breadcrumb": "navigation breadcrumb",
+			"nz-breadcrumb.icon": "navigation breadcrumb icon",
+			"nz-breadcrumb.item": "navigation breadcrumb item",
+			"nzSeparator": "navigation breadcrumb nzSeparator",
+			"nz-dropdown.button": "navigation dropdown button",
+			"nz-dropdown.button.style": "navigation dropdown button.style",
+			"nz-dropdown": "navigation dropdown",
+			"nzClickHide": "navigation dropdown nzClickHide",
+			"nz-menu": "navigation menu",
+			"nz-menu.group": "navigation menu group",
+			"nz-menu.item-divider": "navigation menu item divider",
+			"nz-menu.item": "navigation menu item",
+			"nz-menu.submenu": "navigation menu submenu",
+			"nz-pagination": "navigation pagination",
+			"nzHideOnSinglePage": "navigation pagination nzHideOnSinglePage",
+			"nz-steps": "navigation steps",
+			"nz-steps.step-icon": "navigation steps step icon",
+			"nz-steps.step": "navigation steps step"
+		}
+	},
+	"feedback": {
+		"title": "反馈",
+		"list": {
+			"nz-alert.body": "feedback alert body",
+			"nz-alert": "feedback alert",
+			"nzAlertType": "feedback alert nzAlertType",
+			"nzBanner": "feedback alert nzBanner",
+			"nzClosable": "feedback alert nzClosable",
+			"nzMessage": "feedback alert nzMessage",
+			"nzShowIcon": "feedback alert nzShowIcon",
+			"nz-modal": "feedback modal",
+			"nz-popconfirm.button": "feedback popconfirm button",
+			"nz-popconfirm": "feedback popconfirm",
+			"nzCondition": "feedback popconfirm nzCondition",
+			"nz-progress.circle": "feedback progress circle",
+			"nz-progress.dashboard": "feedback progress dashboard",
+			"nz-progress": "feedback progress",
+			"nz-progress.line": "feedback progress line",
+			"nzProgressStatus": "feedback progress nzProgressStatus",
+			"nz-spin": "feedback spin",
+			"nzSpinning": "feedback spin nzSpinning",
+			"nzTip": "feedback spin nzTip"
+		}
+	},
+	"other": {
+		"title": "其它",
+		"list": {
+			"nz-anchor": "other anchor",
+			"nz-anchor.link": "other anchor link",
+			"nz-back-top": "other back-top",
+			"nz-divider": "other divider",
+			"nz-divider.full": "other divider full"
 		}
 	},
 	"data-display": {
@@ -216,6 +231,7 @@
 			"nzShowSort": "data-display table nzShowSort",
 			"nzSort": "data-display table nzSort",
 			"nzWidth": "data-display table nzWidth",
+			"nz-table.static-no-pager": "data-display table static no pager",
 			"nz-tabs": "data-display tabs",
 			"nzAnimated": "data-display tabs nzAnimated",
 			"nzTabPosition": "data-display tabs nzTabPosition",
@@ -224,48 +240,14 @@
 			"nz-tag": "data-display tag",
 			"nzColor": "data-display tag nzColor",
 			"nzTagMode": "标签：设定标签工作的模式",
-			"nz-timeline": "data-display timeline",
-			"nz-timeline.item": "data-display timeline item",
-			"nz-timeline.pending": "data-display timeline pending",
 			"nz-tooltip": "data-display tooltip",
 			"nzMouseEnterDelay": "data-display tooltip nzMouseEnterDelay",
 			"nzMouseLeaveDelay": "data-display tooltip nzMouseLeaveDelay",
 			"nz-tooltip.template": "data-display tooltip template",
+			"nz-timeline": "data-display timeline",
+			"nz-timeline.item": "data-display timeline item",
+			"nz-timeline.pending": "data-display timeline pending",
 			"nz-tree": "data-display tree"
-		}
-	},
-	"feedback": {
-		"title": "反馈",
-		"list": {
-			"nz-alert.body": "feedback alert body",
-			"nz-alert": "feedback alert",
-			"nzAlertType": "feedback alert nzAlertType",
-			"nzBanner": "feedback alert nzBanner",
-			"nzClosable": "feedback alert nzClosable",
-			"nzMessage": "feedback alert nzMessage",
-			"nzShowIcon": "feedback alert nzShowIcon",
-			"nz-modal": "feedback modal",
-			"nz-popconfirm.button": "feedback popconfirm button",
-			"nz-popconfirm": "feedback popconfirm",
-			"nzCondition": "feedback popconfirm nzCondition",
-			"nz-progress.circle": "feedback progress circle",
-			"nz-progress.dashboard": "feedback progress dashboard",
-			"nz-progress": "feedback progress",
-			"nz-progress.line": "feedback progress line",
-			"nzProgressStatus": "feedback progress nzProgressStatus",
-			"nz-spin": "feedback spin",
-			"nzSpinning": "feedback spin nzSpinning",
-			"nzTip": "feedback spin nzTip"
-		}
-	},
-	"other": {
-		"title": "其它",
-		"list": {
-			"nz-anchor": "other anchor",
-			"nz-anchor.link": "other anchor link",
-			"nz-back-top": "other back-top",
-			"nz-divider": "other divider",
-			"nz-divider.full": "other divider full"
 		}
 	},
 	"attributes": {

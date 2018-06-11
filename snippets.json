@@ -1,6 +1,27 @@
 {
  
-     "general button": {
+     "general icon anticon": {
+        "prefix": "nz-icon.anticon",
+        "body": "anticon anticon-${1}",
+        "description": "anticon样式",
+        "scope": ""
+    }
+
+    , "general icon": {
+        "prefix": "nz-icon",
+        "body": "<i class=\"anticon anticon-${1}\"></i>",
+        "description": "图标",
+        "scope": ""
+    }
+
+    , "general icon spin": {
+        "prefix": "nz-icon.spin",
+        "body": "<i class=\"anticon anticon-spin anticon-${1}\"></i>",
+        "description": "旋转图标",
+        "scope": ""
+    }
+
+    , "general button": {
         "prefix": "nz-button",
         "body": "<button (click)=\"${2}\" nz-button$0>$1</button>",
         "description": "按钮",
@@ -42,128 +63,9 @@
         "scope": ""
     }
 
-    , "general icon anticon": {
-        "prefix": "nz-icon.anticon",
-        "body": "anticon anticon-${1}",
-        "description": "anticon样式",
-        "scope": ""
-    }
-
-    , "general icon": {
-        "prefix": "nz-icon",
-        "body": "<i class=\"anticon anticon-${1}\"></i>",
-        "description": "图标",
-        "scope": ""
-    }
-
-    , "general icon spin": {
-        "prefix": "nz-icon.spin",
-        "body": "<i class=\"anticon anticon-spin anticon-${1}\"></i>",
-        "description": "旋转图标",
-        "scope": ""
-    }
-
-    , "alain abc desc list": {
-        "prefix": "nz-alain-abc.desc-list",
-        "body": "<desc-list col=\"${1|2,3,4|}\"${2: size=\"${3|small,large|}\"}>\r\n  <desc-list-item term=\"$4\">$5</desc-list-item>\r\n</desc-list>\r\n$0",
-        "description": "描述列表",
-        "scope": ""
-    }
-
-    , "alain abc header action": {
-        "prefix": "nz-alain-abc.header-action",
-        "body": "<page-header>\n  <ng-template #action>\n    <button (click)=\"${2:add()}\" nz-button nzType=\"primary\">${1:新建}</button>\n  </ng-template>\n</page-header>\n$0",
-        "description": "页标题（带操作区域）",
-        "scope": ""
-    }
-
-    , "alain abc header": {
-        "prefix": "nz-alain-abc.header",
-        "body": "<page-header${1: [title]=\"'$2'\"}></page-header>\n$0",
-        "description": "页标题",
-        "scope": ""
-    }
-
-    , "alain abc st": {
-        "prefix": "nz-alain-abc.st",
-        "body": "<simple-table [data]=\"${1:url}\" [columns]=\"${2:columns}\"${3: [extraParams]=\"${4:q}\"}></simple-table>\n$0",
-        "description": "simple-table 简单表格",
-        "scope": ""
-    }
-
-    , "alain content": {
-        "prefix": "nz-alain-content",
-        "body": "<div class=\"content__title\">\r\n  <h1>${1}</h1>\r\n</div>\r\n$0",
-        "description": "HTML页标题",
-        "scope": ""
-    }
-
-    , "alain content right input": {
-        "prefix": "nz-alain-content.right-input",
-        "body": "<div class=\"content__title\">\r\n  <h1>$1</h1>\r\n  <button nz-button (click)=\"${2}()\" [nzType]=\"'primary'\">${2:添加}</button>\r\n</div>\r\n$0",
-        "description": "HTML页标题且右边按钮",
-        "scope": ""
-    }
-
-    , "alain content right inputgroup": {
-        "prefix": "nz-alain-content.right-inputgroup",
-        "body": "<div class=\"content__title\">\r\n  <h1>$1</h1>\r\n  <nz-input-group [nzCompact]=\"true\">\r\n    <nz-input [(ngModel)]=\"${4:val}\"></nz-input>\r\n    <button nz-button (click)=\"${3}\" [nzLoading]=\"http.loading\" [disabled]=\"!${4}\">${2:切换}</button>\r\n  </nz-input-group>\r\n</div>\r\n$0",
-        "description": "HTML页标题且右边按钮组",
-        "scope": ""
-    }
-
-    , "alain form": {
-        "prefix": "nz-alain-form",
-        "body": "<sf #sf [schema]=\"${1:schema}\" [ui]=\"${2:ui}\" [formData]=\"${3:i}\" (formSubmit)=\"${4:submit}(\\$event)\"></sf>",
-        "description": "动态表单",
-        "scope": ""
-    }
-
-    , "alain form edit": {
-        "prefix": "nz-alain-form.edit",
-        "body": "<sf mode=\"edit\" [schema]=\"${1:schema}\" [ui]=\"${2:ui}\" [formData]=\"${3:params}\" (formSubmit)=\"${4:submit}(\\$event)\"></sf>",
-        "description": "动态表单(编辑模式)",
-        "scope": ""
-    }
-
-    , "alain form search": {
-        "prefix": "nz-alain-form.search",
-        "body": "<sf mode=\"search\" [schema]=\"${1:searchSchema}\" [formData]=\"${2:params}\" (formSubmit)=\"${3:st}.reset(\\$event)\" (formReset)=\"$3.reset($2)\"></sf>",
-        "description": "动态表单(搜索模式)",
-        "scope": ""
-    }
-
-    , "alain modal": {
-        "prefix": "nz-alain-modal",
-        "body": "<div class=\"modal-header\">\r\n  <div class=\"modal-title\">$1</div>\r\n</div>\r\n$0\r\n<div class=\"modal-footer\"></div>",
-        "description": "自定义对话框组件",
-        "scope": ""
-    }
-
-    , "alain modal edit": {
-        "prefix": "nz-alain-modal.edit",
-        "body": "<div class=\"modal-header\">\r\n  <div class=\"modal-title\">$1</div>\r\n</div>\r\n<nz-spin *ngIf=\"!${2:i}\" class=\"modal-spin\"></nz-spin>\r\n<sf *ngIf=\"$2\" #sf mode=\"edit\" [schema]=\"schema\" [ui]=\"ui\" [formData]=\"$2\" button=\"none\">\r\n  <div class=\"modal-footer\">\r\n    <button nz-button type=\"button\" (click)=\"close()\">关闭</button>\r\n    <button nz-button type=\"submit\" [nzType]=\"'primary'\" (click)=\"save(sf.value)\" [disabled]=\"!sf.valid\" [nzLoading]=\"http.loading\">保存</button>\r\n  </div>\r\n</sf>",
-        "description": "自定义对话框组件（编辑风格）",
-        "scope": ""
-    }
-
-    , "alain modal view": {
-        "prefix": "nz-alain-modal.view",
-        "body": "<div class=\"modal-header\">\r\n  <div class=\"modal-title\">$1</div>\r\n</div>\r\n<nz-spin *ngIf=\"!${2:i}\" class=\"modal-spin\"></nz-spin>\r\n<desc-list *ngIf=\"$2\">\r\n  $0\r\n</desc-list>\r\n<div class=\"modal-footer\">\r\n  <button nz-button type=\"button\" (click)=\"close()\">关闭</button>\r\n</div>",
-        "description": "自定义对话框组件（查看风格）",
-        "scope": ""
-    }
-
-    , "alain ts form get control": {
-        "prefix": "nz-alain-ts.form-get-control",
-        "body": "get $1() { return this.form.controls.$1; }\n$0",
-        "description": "获取表单字段",
-        "scope": ""
-    }
-
     , "layout grid col": {
         "prefix": "nz-grid.col",
-        "body": "<nz-col${1: [nzSpan]=\"${2:1-24}\" }>\r\n  $0\r\n</nz-col>",
+        "body": "<nz-col${1: nzSpan=\"${2:1-24}\" }>\n  $0\n</nz-col>",
         "description": "栅格系统：列",
         "scope": ""
     }
@@ -289,7 +191,7 @@
 
     , "layout grid responsive": {
         "prefix": "nz-grid.responsive",
-        "body": "<nz-col [nzXs]=\"${1:1-24}\" [nzSm]=\"${2:1-24}\" [nzMd]=\"${3:1-24}\" [nzLg]=\"${4:1-24}\" [nzXl]=\"${5:1-24}\" [nzXXl]=\"${6:1-24}\">\r\n  $0\r\n</nz-col>",
+        "body": "<nz-col nzXs=\"${1:1-24}\" nzSm=\"${2:1-24}\" nzMd=\"${3:1-24}\" nzLg=\"${4:1-24}\" nzXl=\"${5:1-24}\" nzXXl=\"${6:1-24}\">\n  $0\n</nz-col>",
         "description": "响应式栅格系统",
         "scope": ""
     }
@@ -303,7 +205,7 @@
 
     , "layout grid row": {
         "prefix": "nz-grid.row",
-        "body": "<nz-row${1: [nzGutter]=\"${2|8,16,24,32,64|}\"}>\r\n  $0\r\n</nz-row>",
+        "body": "<nz-row${1: nzGutter=\"${2|8,16,24,32,64|}\"}>\n  $0\n</nz-row>",
         "description": "栅格系统：行",
         "scope": ""
     }
@@ -1323,6 +1225,13 @@
         "scope": ""
     }
 
+    , "data-display table static no pager": {
+        "prefix": "nz-table.static-no-pager",
+        "body": "<nz-table [nzData]=\"${1|list,data|}\" [nzShowPagination]=\"false\">\n  <thead>\n    <tr>\n      <th>$0</th>\n      <th nzWidth=\"300px\"></th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr *ngFor=\"let ${2:i} of $1\">\n      <td>{{${2}.title}}</td>\n      <td>\n        <a (click)=\"next(${2})\">下一级</a>\n        <nz-divider nzType=\"vertical\"></nz-divider>\n        <a (click)=\"edit(${2})\">编辑</a>\n        <nz-divider nzType=\"vertical\"></nz-divider>\n        <nz-popconfirm [nzTitle]=\"'确定要删除吗？'\" (nzOnConfirm)=\"del(${2})\">\n          <a nz-popconfirm>删除</a>\n        </nz-popconfirm>\n      </td>\n    </tr>\n  </tbody>\n</nz-table>",
+        "description": "表格：不分页静态数据",
+        "scope": ""
+    }
+
     , "data-display tabs": {
         "prefix": "nz-tabs",
         "body": "<nz-tabset>\r\n  <nz-tab nzTitle=\"Tab 1\">\r\n    Content of Tab Pane 1\r\n  </nz-tab>\r\n  <nz-tab nzTitle=\"Tab 2\">\r\n    Content of Tab Pane 2\r\n  </nz-tab>\r\n  <nz-tab nzTitle=\"Tab 3\">\r\n    Content of Tab Pane 3\r\n  </nz-tab>\r\n</nz-tabset>",
@@ -1360,21 +1269,21 @@
 
     , "data-display tag": {
         "prefix": "nz-tag",
-        "body": "<nz-tag [nzColor]=\"${2:color}\">$1</nz-tag>",
+        "body": "<nz-tag nzColor=\"${2:|green,red,orange,pink,cyan,blue,purple|}\">$1</nz-tag>",
         "description": "标签",
         "scope": ""
     }
 
     , "data-display tag nzColor": {
         "prefix": "nzColor",
-        "body": "[nzColor]=\"'${1|green,red,orange,pink,cyan,blue,purple|}'\"",
+        "body": "nzColor=\"${1|green,red,orange,pink,cyan,blue,purple|}\"",
         "description": "标签：颜色",
         "scope": ""
     }
 
     , "data-display tag nzTagMode": {
         "prefix": "nzTagMode",
-        "body": "[nzMode]=\"${1|closeable,default,checkable|}\"",
+        "body": "nzMode=\"${1|closeable,default,checkable|}\"",
         "description": "标签：设定标签工作的模式",
         "scope": ""
     }
@@ -1565,41 +1474,6 @@
         "prefix": "nzTip",
         "body": "[nzTip]=\"'${1|加载中...,正在读取数据...|}'\"",
         "description": "加载中：当作为包裹元素时，可以自定义描述文案",
-        "scope": ""
-    }
-
-    , "other anchor": {
-        "prefix": "nz-anchor",
-        "body": "<nz-anchor${1: [nzOffsetTop]=\"$2\"}>\r\n  $0\r\n</nz-anchor>",
-        "description": "锚点",
-        "scope": ""
-    }
-
-    , "other anchor link": {
-        "prefix": "nz-anchor.link",
-        "body": "<nz-link [nzHref]=\"$1\" [nzTitle]=\"$2\"></nz-link>\r\n$0",
-        "description": "锚点：链接项",
-        "scope": ""
-    }
-
-    , "other back-top": {
-        "prefix": "nz-back-top",
-        "body": "<nz-back-top></nz-back-top>$0",
-        "description": "回到顶部",
-        "scope": ""
-    }
-
-    , "other divider": {
-        "prefix": "nz-divider",
-        "body": "<nz-divider nzType=\"vertical\"></nz-divider>\r\n$0",
-        "description": "分割线",
-        "scope": ""
-    }
-
-    , "other divider full": {
-        "prefix": "nz-divider.full",
-        "body": "<nz-divider${1: nzText=\"$2\"}${3: nzOrientation=\"${4|left,right|}\"}${5: nzType=\"${6|vertical,horizontal|}\"}${7: nzDashed}></nz-divider>$0",
-        "description": "分割线：完整风格",
         "scope": ""
     }
 
@@ -1838,6 +1712,41 @@
         "prefix": "nzVisible",
         "body": "[nzVisible]=\"$1\"",
         "description": "显示状态",
+        "scope": ""
+    }
+
+    , "other anchor": {
+        "prefix": "nz-anchor",
+        "body": "<nz-anchor${1: [nzOffsetTop]=\"$2\"}>\r\n  $0\r\n</nz-anchor>",
+        "description": "锚点",
+        "scope": ""
+    }
+
+    , "other anchor link": {
+        "prefix": "nz-anchor.link",
+        "body": "<nz-link [nzHref]=\"$1\" [nzTitle]=\"$2\"></nz-link>\r\n$0",
+        "description": "锚点：链接项",
+        "scope": ""
+    }
+
+    , "other back-top": {
+        "prefix": "nz-back-top",
+        "body": "<nz-back-top></nz-back-top>$0",
+        "description": "回到顶部",
+        "scope": ""
+    }
+
+    , "other divider": {
+        "prefix": "nz-divider",
+        "body": "<nz-divider nzType=\"vertical\"></nz-divider>\r\n$0",
+        "description": "分割线",
+        "scope": ""
+    }
+
+    , "other divider full": {
+        "prefix": "nz-divider.full",
+        "body": "<nz-divider${1: nzText=\"$2\"}${3: nzOrientation=\"${4|left,right|}\"}${5: nzType=\"${6|vertical,horizontal|}\"}${7: nzDashed}></nz-divider>$0",
+        "description": "分割线：完整风格",
         "scope": ""
     }  
 }

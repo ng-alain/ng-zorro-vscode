@@ -6,6 +6,10 @@
 
 请至[Issuses](https://github.com/cipchk/ng-zorro-vscode/issues)提交可能遇到的问题或期望增加的代码片断。
 
+**关于ng-alain部分**
+
+从 `2.1.0` 开始移除 ng-alain 部分，保持 ng-zorro-antd 的纯洁性，若你是 ng-alain 用户请另行安装 [ng-alain-vscode](https://marketplace.visualstudio.com/items?itemName=cipchk.ng-alain-vscode)，提供更丰富只针对 ng-alain 的代码片断。
+
 ## 安装扩展
 
 按 `F1` 输入 `ext install ng-zorro-vscode` 后回车。
@@ -27,34 +31,15 @@
 
 Trigger | Description
 --- | ---
-nz-icon.anticon | anticon样式
-nz-icon | 图标
-nz-icon.spin | 旋转图标
 nz-button | 按钮
 nz-button.group | 按钮组
 nz-button.icon-text-left | 按钮带图标且文本在左
 nz-button.icon-text-right | 按钮带图标且文本在右
 nzGhost | 幽灵属性，使按钮背景透明
 nz-button.type | 按钮带设置类型
-
-### [ng-alain](https://github.com/cipchk/ng-alain) 片断
-
-Trigger | Description
---- | ---
-nz-alain-abc.desc-list | 描述列表
-nz-alain-abc.header-action | 页标题（带操作区域）
-nz-alain-abc.header | 页标题
-nz-alain-abc.st | simple-table 简单表格
-nz-alain-content | HTML页标题
-nz-alain-content.right-input | HTML页标题且右边按钮
-nz-alain-content.right-inputgroup | HTML页标题且右边按钮组
-nz-alain-form | 动态表单
-nz-alain-form.edit | 动态表单(编辑模式)
-nz-alain-form.search | 动态表单(搜索模式)
-nz-alain-modal | 自定义对话框组件
-nz-alain-modal.edit | 自定义对话框组件（编辑风格）
-nz-alain-modal.view | 自定义对话框组件（查看风格）
-nz-alain-ts.form-get-control | 获取表单字段
+nz-icon.anticon | anticon样式
+nz-icon | 图标
+nz-icon.spin | 旋转图标
 
 ### 布局
 
@@ -83,31 +68,6 @@ nz-grid.row-flex | flex 响应式栅格系统
 nz-grid.row | 栅格系统：行
 nz-layout | 布局
 nz-layout.sider | 布局：侧边栏
-
-### 导航
-
-Trigger | Description
---- | ---
-nz-affix | 固钉
-nz-affix.target | 固钉：指定滚动容器
-nz-breadcrumb | 面包屑
-nz-breadcrumb.icon | 面包屑：图标
-nz-breadcrumb.item | 面包屑项
-nzSeparator | 分隔符自定义
-nz-dropdown.button | 下拉菜单按钮
-nz-dropdown.button.style | 下拉菜单按钮内风格
-nz-dropdown | 下拉菜单
-nzClickHide | 点击后是否隐藏菜单
-nz-menu | 导航菜单
-nz-menu.group | 导航菜单：组
-nz-menu.item-divider | 导航菜单：分割线
-nz-menu.item | 导航菜单：项
-nz-menu.submenu | 导航菜单：子项
-nz-pagination | 分页
-nzHideOnSinglePage | 只有一页时是否隐藏分页器
-nz-steps | 步骤条
-nz-steps.step-icon | 步骤条：项带图标
-nz-steps.step | 步骤条：项
 
 ### 数据录入
 
@@ -146,13 +106,13 @@ nzSuffix | 带有后缀图标属性
 nz-input.prefix | 带有前缀图标的 input
 nz-input.suffix | 带有后缀图标的 input
 nz-mention | 提及
+nz-radio.button | 单选框按钮风格
+nz-radio | 单选框
+nz-radio.simple | 单选框最简单的用法
 nz-number | 数字输入框
 nzFormatter | 指定输入框展示值的格式
 nzParser | 指定从 nzFormatter 里转换回数字的方式，和 nzFormatter 搭配使用
 nzPrecision | 数值精度
-nz-radio.button | 单选框按钮风格
-nz-radio | 单选框
-nz-radio.simple | 单选框最简单的用法
 nz-rate | 评分
 nzAllowHalf | 是否允许半选
 nz-select | 下拉选择器
@@ -187,6 +147,65 @@ nzMultiple | 上传：是否支持多选文件，ie10+ 支持。开启后按住 
 nzShowButton | 上传：是否展示上传按钮
 nzShowUploadList | 上传：是否展示 uploadList
 nzWithCredentials | 上传：上传请求时是否携带 cookie
+
+### 导航
+
+Trigger | Description
+--- | ---
+nz-affix | 固钉
+nz-affix.target | 固钉：指定滚动容器
+nz-breadcrumb | 面包屑
+nz-breadcrumb.icon | 面包屑：图标
+nz-breadcrumb.item | 面包屑项
+nzSeparator | 分隔符自定义
+nz-dropdown.button | 下拉菜单按钮
+nz-dropdown.button.style | 下拉菜单按钮内风格
+nz-dropdown | 下拉菜单
+nzClickHide | 点击后是否隐藏菜单
+nz-menu | 导航菜单
+nz-menu.group | 导航菜单：组
+nz-menu.item-divider | 导航菜单：分割线
+nz-menu.item | 导航菜单：项
+nz-menu.submenu | 导航菜单：子项
+nz-pagination | 分页
+nzHideOnSinglePage | 只有一页时是否隐藏分页器
+nz-steps | 步骤条
+nz-steps.step-icon | 步骤条：项带图标
+nz-steps.step | 步骤条：项
+
+### 反馈
+
+Trigger | Description
+--- | ---
+nz-alert.body | 警告提示：含辅助性文字介绍
+nz-alert | 警告提示
+nzAlertType | 指定警告提示的样式
+nzBanner | 是否用作顶部公告
+nzClosable | 默认不显示关闭按钮
+nzMessage | 警告提示内容
+nzShowIcon | 是否显示辅助图标
+nz-modal | 对话框
+nz-popconfirm.button | feedback popconfirm button
+nz-popconfirm | 气泡确认框
+nzCondition | 气泡确认框：是否直接触发 nzOnConfirm 而不弹出框
+nz-progress.circle | 进度条：圆风格
+nz-progress.dashboard | 进度条：仪表盘风格
+nz-progress | 进度条
+nz-progress.line | 进度条：线风格
+nzProgressStatus | 进度条：状态
+nz-spin | 加载中
+nzSpinning | 加载中：是否旋转
+nzTip | 加载中：当作为包裹元素时，可以自定义描述文案
+
+### 其它
+
+Trigger | Description
+--- | ---
+nz-anchor | 锚点
+nz-anchor.link | 锚点：链接项
+nz-back-top | 回到顶部
+nz-divider | 分割线
+nz-divider.full | 分割线：完整风格
 
 ### 数据显示
 
@@ -241,6 +260,7 @@ nzShowSizeChanger | 表格：是否可以改变 nzPageSize
 nzShowSort | 表格：是否显示排序
 nzSort | 表格：当前排序状态，受控模式使用，可双向绑定
 nzWidth | 表格：指定该列宽度，表头未分组时可用
+nz-table.static-no-pager | 表格：不分页静态数据
 nz-tabs | 标签页
 nzAnimated | 标签页：是否使用动画切换 Tabs，在 &#x60;nzTabPosition&#x3D;top
 nzTabPosition | 标签页：页签位置
@@ -249,48 +269,14 @@ nz-tabs.tab | 标签页：项
 nz-tag | 标签
 nzColor | 标签：颜色
 nzTagMode | 标签：设定标签工作的模式
-nz-timeline | 时间轴
-nz-timeline.item | 时间轴：项
-nz-timeline.pending | 时间轴：最后一个
 nz-tooltip | 文字提示
 nzMouseEnterDelay | 文字提示：鼠标移入后延时多少才显示 Tooltip，单位：秒
 nzMouseLeaveDelay | 文字提示：鼠标移出后延时多少才隐藏 Tooltip，单位：秒
 nz-tooltip.template | 文字提示：自定义内容风格
+nz-timeline | 时间轴
+nz-timeline.item | 时间轴：项
+nz-timeline.pending | 时间轴：最后一个
 nz-tree | 树形
-
-### 反馈
-
-Trigger | Description
---- | ---
-nz-alert.body | 警告提示：含辅助性文字介绍
-nz-alert | 警告提示
-nzAlertType | 指定警告提示的样式
-nzBanner | 是否用作顶部公告
-nzClosable | 默认不显示关闭按钮
-nzMessage | 警告提示内容
-nzShowIcon | 是否显示辅助图标
-nz-modal | 对话框
-nz-popconfirm.button | feedback popconfirm button
-nz-popconfirm | 气泡确认框
-nzCondition | 气泡确认框：是否直接触发 nzOnConfirm 而不弹出框
-nz-progress.circle | 进度条：圆风格
-nz-progress.dashboard | 进度条：仪表盘风格
-nz-progress | 进度条
-nz-progress.line | 进度条：线风格
-nzProgressStatus | 进度条：状态
-nz-spin | 加载中
-nzSpinning | 加载中：是否旋转
-nzTip | 加载中：当作为包裹元素时，可以自定义描述文案
-
-### 其它
-
-Trigger | Description
---- | ---
-nz-anchor | 锚点
-nz-anchor.link | 锚点：链接项
-nz-back-top | 回到顶部
-nz-divider | 分割线
-nz-divider.full | 分割线：完整风格
 
 ### 通用属性
 

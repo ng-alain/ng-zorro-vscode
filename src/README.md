@@ -6,6 +6,10 @@
 
 请至[Issuses](https://github.com/cipchk/ng-zorro-vscode/issues)提交可能遇到的问题或期望增加的代码片断。
 
+**关于ng-alain部分**
+
+从 `2.1.0` 开始移除 ng-alain 部分，保持 ng-zorro-antd 的纯洁性，若你是 ng-alain 用户请另行安装 [ng-alain-vscode](https://marketplace.visualstudio.com/items?itemName=cipchk.ng-alain-vscode)，提供更丰富只针对 ng-alain 的代码片断。
+
 ## 安装扩展
 
 按 `F1` 输入 `ext install ng-zorro-vscode` 后回车。
