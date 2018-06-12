@@ -41,6 +41,34 @@ nz-icon.anticon | anticon样式
 nz-icon | 图标
 nz-icon.spin | 旋转图标
 
+### 布局
+
+Trigger | Description
+--- | ---
+nz-grid.col | 栅格系统：列
+nz-grid | 栅格系统
+nzAlign | flex 布局下的垂直对齐方式
+nzFlex | flex 布局模式
+nzGutter | 栅格间隔，支持数字或响应式对象 { xs: 8, sm: 16, md: 24, lg: 32, xl: 32, xxl: 32 }
+nzJustify | flex 布局下的水平排列方式
+nzLg | ≥992px 响应式栅格，可为栅格数或一个包含其他属性的对象
+nzMd | ≥768px 响应式栅格，可为栅格数或一个包含其他属性的对象
+nzOffset | 栅格左侧的间隔格数，间隔内不可以有栅格
+nzOrder | 栅格顺序，flex 布局模式下有效
+nzPull | 栅格向左移动格数
+nzPush | 栅格向右移动格数
+nzResponsive | 响应式属性
+nzSm | ≥576px 响应式栅格，可为栅格数或一个包含其他属性的对象
+nzSpan | 栅格占位格数，为 0 时相当于 display: none
+nzXl | ≥1200px 响应式栅格，可为栅格数或一个包含其他属性的对象
+nzXs | &lt;576px 响应式栅格，可为栅格数或一个包含其他属性的对象
+nzXXl | ≥1600px 响应式栅格，可为栅格数或一个包含其他属性的对象
+nz-grid.responsive | 响应式栅格系统
+nz-grid.row-flex | flex 响应式栅格系统
+nz-grid.row | 栅格系统：行
+nz-layout | 布局
+nz-layout.sider | 布局：侧边栏
+
 ### 导航
 
 Trigger | Description
@@ -74,9 +102,6 @@ nz-autocomplete.custom-label | 自动完成：自定义选项
 nz-autocomplete.data-source | 自动完成：指定数据源
 nz-autocomplete | 自动完成
 nz-cascader | 级联选择
-nz-checkbox | 多选框
-nz-checkbox.group | 多选框组
-nz-checkbox.layout | 多选框组布局
 nz-form.control-responsive | 表单：控件为响应式
 nz-form.control | 表单：控件
 nz-form | 表单，向下为表单项
@@ -91,6 +116,21 @@ nzHasFeedback | 是否反馈图标，一般 input 有效
 nzValidateStatus | 校验状态，默认自动从 nz-form-control 中的 NgControl 获得校验状态
 nz-form.split | 表单：分隔符
 nz-form.text | 表单：文本
+nz-input.addon-icon | 前后置标签按钮
+nz-input.addon-text | 前后置文本按钮
+nz-input | 输入框
+nz-input.group | 输入框组合
+nzAddonAfterIcon | 后置标签按钮，nzAddonAfter的快捷使用方式
+nzAddonBeforeIcon | 前置标签按钮，nzAddonBefore的快捷使用方式
+nzCompact | 是否用紧凑模式
+nzPrefix | 带有前缀图标属性
+nzSuffix | 带有后缀图标属性
+nz-input.prefix | 带有前缀图标的 input
+nz-input.suffix | 带有后缀图标的 input
+nz-checkbox | 多选框
+nz-checkbox.group | 多选框组
+nz-checkbox.layout | 多选框组布局
+nz-mention | 提及
 nz-number | 数字输入框
 nzFormatter | 指定输入框展示值的格式
 nzParser | 指定从 nzFormatter 里转换回数字的方式，和 nzFormatter 搭配使用
@@ -98,10 +138,8 @@ nzPrecision | 数值精度
 nz-radio.button | 单选框按钮风格
 nz-radio | 单选框
 nz-radio.simple | 单选框最简单的用法
-nz-mention | 提及
 nz-rate | 评分
 nzAllowHalf | 是否允许半选
-nz-slider | 滑动输入条
 nz-select | 下拉选择器
 nzDropdownClassName | 下拉菜单的 className 属性
 nzDropdownMatchSelectWidth | 下拉菜单和选择器同宽
@@ -114,11 +152,13 @@ nzServerSearch | 下拉选择器：是否使用服务端搜索，当为 true 时
 nzShowSearch | 下拉选择器：使单选模式可搜索
 nz-select.option-group | 下拉选择器：组
 nz-select.option | 下拉选择器：项
+nz-slider | 滑动输入条
 nz-switch | 开关
 nz-switch.icon | 开关：自定义图标
 nz-switch.text | 开关：自定义文本
 nz-textarea | 多选文本框
 nzAutosize | 多选文本框：自适应内容高度
+nz-transfer | 穿梭框
 nz-upload | 上传
 nz-upload.drag | 上传：拖拽风格
 nzBeforeUpload | 上传：上传文件之前的钩子，参数为上传的文件，若返回 false 则停止上传。注意：IE9 不支持该方法；注意：务必使用 &#x3D;&gt; 定义处理方法。
@@ -132,70 +172,6 @@ nzMultiple | 上传：是否支持多选文件，ie10+ 支持。开启后按住 
 nzShowButton | 上传：是否展示上传按钮
 nzShowUploadList | 上传：是否展示 uploadList
 nzWithCredentials | 上传：上传请求时是否携带 cookie
-nz-transfer | 穿梭框
-nz-input.addon-icon | 前后置标签按钮
-nz-input.addon-text | 前后置文本按钮
-nz-input | 输入框
-nz-input.group | 输入框组合
-nzAddonAfterIcon | 后置标签按钮，nzAddonAfter的快捷使用方式
-nzAddonBeforeIcon | 前置标签按钮，nzAddonBefore的快捷使用方式
-nzCompact | 是否用紧凑模式
-nzPrefix | 带有前缀图标属性
-nzSuffix | 带有后缀图标属性
-nz-input.prefix | 带有前缀图标的 input
-nz-input.suffix | 带有后缀图标的 input
-
-### 布局
-
-Trigger | Description
---- | ---
-nz-grid.col | 栅格系统：列
-nz-grid | 栅格系统
-nzAlign | flex 布局下的垂直对齐方式
-nzFlex | flex 布局模式
-nzGutter | 栅格间隔，支持数字或响应式对象 { xs: 8, sm: 16, md: 24, lg: 32, xl: 32, xxl: 32 }
-nzJustify | flex 布局下的水平排列方式
-nzLg | ≥992px 响应式栅格，可为栅格数或一个包含其他属性的对象
-nzMd | ≥768px 响应式栅格，可为栅格数或一个包含其他属性的对象
-nzOffset | 栅格左侧的间隔格数，间隔内不可以有栅格
-nzOrder | 栅格顺序，flex 布局模式下有效
-nzPull | 栅格向左移动格数
-nzPush | 栅格向右移动格数
-nzResponsive | 响应式属性
-nzSm | ≥576px 响应式栅格，可为栅格数或一个包含其他属性的对象
-nzSpan | 栅格占位格数，为 0 时相当于 display: none
-nzXl | ≥1200px 响应式栅格，可为栅格数或一个包含其他属性的对象
-nzXs | &lt;576px 响应式栅格，可为栅格数或一个包含其他属性的对象
-nzXXl | ≥1600px 响应式栅格，可为栅格数或一个包含其他属性的对象
-nz-grid.responsive | 响应式栅格系统
-nz-grid.row-flex | flex 响应式栅格系统
-nz-grid.row | 栅格系统：行
-nz-layout | 布局
-nz-layout.sider | 布局：侧边栏
-
-### 反馈
-
-Trigger | Description
---- | ---
-nz-alert.body | 警告提示：含辅助性文字介绍
-nz-alert | 警告提示
-nzAlertType | 指定警告提示的样式
-nzBanner | 是否用作顶部公告
-nzClosable | 默认不显示关闭按钮
-nzMessage | 警告提示内容
-nzShowIcon | 是否显示辅助图标
-nz-modal | 对话框
-nz-popconfirm.button | feedback popconfirm button
-nz-popconfirm | 气泡确认框
-nzCondition | 气泡确认框：是否直接触发 nzOnConfirm 而不弹出框
-nz-spin | 加载中
-nzSpinning | 加载中：是否旋转
-nzTip | 加载中：当作为包裹元素时，可以自定义描述文案
-nz-progress.circle | 进度条：圆风格
-nz-progress.dashboard | 进度条：仪表盘风格
-nz-progress | 进度条
-nz-progress.line | 进度条：线风格
-nzProgressStatus | 进度条：状态
 
 ### 数据显示
 
@@ -209,7 +185,7 @@ nz-badge.dot | 徽标数：状态点风格
 nzBadgeStatus | 徽标数：设置 nz-badge 为状态点
 nzOverflowCount | 徽标数：展示封顶的数字值
 nzShowZero | 徽标数：当数值为 0 时，是否展示 Badge
-nz-carousel | 走马灯
+nz-calendar | 日历
 nz-card | 卡片
 nz-card.extra | 卡片：带右上角的操作区域
 nz-card.meta | 卡片：完整内容配置
@@ -217,7 +193,10 @@ nzHoverable | 卡片：鼠标移过时可浮起
 nzTypeInner | 卡片：层级类型
 nz-card.simple | 卡片：最简单使用方法
 nz-card.tab | 卡片：带标签风格
-nz-calendar | 日历
+nz-carousel | 走马灯
+nz-collapse | 折叠面板
+nzAccordion | 折叠面板：是否每次只打开一个tab
+nzShowArrow | 折叠面板：是否展示箭头
 nz-list | 列表，向下为项
 nz-list.item-meta | 列表：元素
 nz-list.item | 列表：项，向下为元素
@@ -227,9 +206,6 @@ nzLoadMore | 列表：加载更多
 nzPagination | 列表：对应的 pagination 配置
 nzRenderItem | 列表：自定义列表项
 nz-list.simple | 列表：最简单的用法
-nz-collapse | 折叠面板
-nzAccordion | 折叠面板：是否每次只打开一个tab
-nzShowArrow | 折叠面板：是否展示箭头
 nz-popover | 气泡卡片
 nz-table | 表格
 nzExpand | 表格：可展开
@@ -267,6 +243,40 @@ nzMouseEnterDelay | 文字提示：鼠标移入后延时多少才显示 Tooltip�
 nzMouseLeaveDelay | 文字提示：鼠标移出后延时多少才隐藏 Tooltip，单位：秒
 nz-tooltip.template | 文字提示：自定义内容风格
 nz-tree | 树形
+
+### 反馈
+
+Trigger | Description
+--- | ---
+nz-alert.body | 警告提示：含辅助性文字介绍
+nz-alert | 警告提示
+nzAlertType | 指定警告提示的样式
+nzBanner | 是否用作顶部公告
+nzClosable | 默认不显示关闭按钮
+nzMessage | 警告提示内容
+nzShowIcon | 是否显示辅助图标
+nz-modal | 对话框
+nz-popconfirm.button | feedback popconfirm button
+nz-popconfirm | 气泡确认框
+nzCondition | 气泡确认框：是否直接触发 nzOnConfirm 而不弹出框
+nz-progress.circle | 进度条：圆风格
+nz-progress.dashboard | 进度条：仪表盘风格
+nz-progress | 进度条
+nz-progress.line | 进度条：线风格
+nzProgressStatus | 进度条：状态
+nz-spin | 加载中
+nzSpinning | 加载中：是否旋转
+nzTip | 加载中：当作为包裹元素时，可以自定义描述文案
+
+### 其它
+
+Trigger | Description
+--- | ---
+nz-anchor | 锚点
+nz-anchor.link | 锚点：链接项
+nz-back-top | 回到顶部
+nz-divider | 分割线
+nz-divider.full | 分割线：完整风格
 
 ### 通用属性
 
@@ -306,16 +316,6 @@ nzTrigger | 触发方式
 nzType | 类型
 nzValue | 值
 nzVisible | 显示状态
-
-### 其它
-
-Trigger | Description
---- | ---
-nz-anchor | 锚点
-nz-anchor.link | 锚点：链接项
-nz-back-top | 回到顶部
-nz-divider | 分割线
-nz-divider.full | 分割线：完整风格
 
 ## 更新日志
 
