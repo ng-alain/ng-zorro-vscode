@@ -1,3 +1,9 @@
+# 2.1.1
+
+- 增加 `date-picker`、`time-picker`、`tree-select` 组件
+- 优化 `tag` 颜色建议值
+- 优化图标建议值
+
 # 2.1.0
 
 - 同步 `1.0.0`

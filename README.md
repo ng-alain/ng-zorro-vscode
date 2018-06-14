@@ -27,6 +27,20 @@
 更多API接口请参考[ng-zorro-antd](https://github.com/NG-ZORRO/ng-zorro-antd)。
 
 
+### 常规
+
+Trigger | Description
+--- | ---
+nz-button | 按钮
+nz-button.group | 按钮组
+nz-button.icon-text-left | 按钮带图标且文本在左
+nz-button.icon-text-right | 按钮带图标且文本在右
+nzGhost | 幽灵属性，使按钮背景透明
+nz-button.type | 按钮带设置类型
+nz-icon.anticon | anticon样式
+nz-icon | 图标
+nz-icon.spin | 旋转图标
+
 ### 布局
 
 Trigger | Description
@@ -61,21 +75,21 @@ Trigger | Description
 --- | ---
 nz-affix | 固钉
 nz-affix.target | 固钉：指定滚动容器
-nz-dropdown.button | 下拉菜单按钮
-nz-dropdown.button.style | 下拉菜单按钮内风格
-nz-dropdown | 下拉菜单
-nzClickHide | 点击后是否隐藏菜单
 nz-breadcrumb | 面包屑
 nz-breadcrumb.icon | 面包屑：图标
 nz-breadcrumb.item | 面包屑项
 nzSeparator | 分隔符自定义
-nz-pagination | 分页
-nzHideOnSinglePage | 只有一页时是否隐藏分页器
+nz-dropdown.button | 下拉菜单按钮
+nz-dropdown.button.style | 下拉菜单按钮内风格
+nz-dropdown | 下拉菜单
+nzClickHide | 点击后是否隐藏菜单
 nz-menu | 导航菜单
 nz-menu.group | 导航菜单：组
 nz-menu.item-divider | 导航菜单：分割线
 nz-menu.item | 导航菜单：项
 nz-menu.submenu | 导航菜单：子项
+nz-pagination | 分页
+nzHideOnSinglePage | 只有一页时是否隐藏分页器
 nz-steps | 步骤条
 nz-steps.step-icon | 步骤条：项带图标
 nz-steps.step | 步骤条：项
@@ -87,6 +101,10 @@ Trigger | Description
 nz-autocomplete.custom-label | 自动完成：自定义选项
 nz-autocomplete.data-source | 自动完成：指定数据源
 nz-autocomplete | 自动完成
+nz-cascader | 级联选择
+nz-checkbox | 多选框
+nz-checkbox.group | 多选框组
+nz-checkbox.layout | 多选框组布局
 nz-date | 日期选择框
 nz-date.month | 月份选择框
 nzRenderExtraFooter | 日期属性：在面板中添加额外的页脚
@@ -94,7 +112,6 @@ nzShowTime | 日期属性：增加时间选择功能
 nzShowToday | 日期属性：是否展示“今天”按钮
 nz-date.range | 日期范围选择框
 nz-date.week | 周选择框
-nz-cascader | 级联选择
 nz-form.control-responsive | 表单：控件为响应式
 nz-form.control | 表单：控件
 nz-form | 表单，向下为表单项
@@ -109,10 +126,6 @@ nzHasFeedback | 是否反馈图标，一般 input 有效
 nzValidateStatus | 校验状态，默认自动从 nz-form-control 中的 NgControl 获得校验状态
 nz-form.split | 表单：分隔符
 nz-form.text | 表单：文本
-nz-input-number | 数字输入框
-nzFormatter | 指定输入框展示值的格式
-nzParser | 指定从 nzFormatter 里转换回数字的方式，和 nzFormatter 搭配使用
-nzPrecision | 数值精度
 nz-input.addon-icon | 前后置标签按钮
 nz-input.addon-text | 前后置文本按钮
 nz-input | 输入框
@@ -124,10 +137,16 @@ nzPrefix | 带有前缀图标属性
 nzSuffix | 带有后缀图标属性
 nz-input.prefix | 带有前缀图标的 input
 nz-input.suffix | 带有后缀图标的 input
+nz-input-number | 数字输入框
+nzFormatter | 指定输入框展示值的格式
+nzParser | 指定从 nzFormatter 里转换回数字的方式，和 nzFormatter 搭配使用
+nzPrecision | 数值精度
 nz-mention | 提及
 nz-radio.button | 单选框按钮风格
 nz-radio | 单选框
 nz-radio.simple | 单选框最简单的用法
+nz-rate | 评分
+nzAllowHalf | 是否允许半选
 nz-select | 下拉选择器
 nzDropdownClassName | 下拉菜单的 className 属性
 nzDropdownMatchSelectWidth | 下拉菜单和选择器同宽
@@ -140,8 +159,6 @@ nzServerSearch | 下拉选择器：是否使用服务端搜索，当为 true 时
 nzShowSearch | 下拉选择器：使单选模式可搜索
 nz-select.option-group | 下拉选择器：组
 nz-select.option | 下拉选择器：项
-nz-rate | 评分
-nzAllowHalf | 是否允许半选
 nz-slider | 滑动输入条
 nz-switch | 开关
 nz-switch.icon | 开关：自定义图标
@@ -168,9 +185,40 @@ nzMultiple | 上传：是否支持多选文件，ie10+ 支持。开启后按住 
 nzShowButton | 上传：是否展示上传按钮
 nzShowUploadList | 上传：是否展示 uploadList
 nzWithCredentials | 上传：上传请求时是否携带 cookie
-nz-checkbox | 多选框
-nz-checkbox.group | 多选框组
-nz-checkbox.layout | 多选框组布局
+
+### 反馈
+
+Trigger | Description
+--- | ---
+nz-alert.body | 警告提示：含辅助性文字介绍
+nz-alert | 警告提示
+nzAlertType | 指定警告提示的样式
+nzBanner | 是否用作顶部公告
+nzClosable | 默认不显示关闭按钮
+nzMessage | 警告提示内容
+nzShowIcon | 是否显示辅助图标
+nz-modal | 对话框
+nz-popconfirm.button | 气泡确认框：按钮风格
+nz-popconfirm | 气泡确认框
+nzCondition | 气泡确认框：是否直接触发 nzOnConfirm 而不弹出框
+nz-progress.circle | 进度条：圆风格
+nz-progress.dashboard | 进度条：仪表盘风格
+nz-progress | 进度条
+nz-progress.line | 进度条：线风格
+nzProgressStatus | 进度条：状态
+nz-spin | 加载中
+nzSpinning | 加载中：是否旋转
+nzTip | 加载中：当作为包裹元素时，可以自定义描述文案
+
+### 其它
+
+Trigger | Description
+--- | ---
+nz-anchor | 锚点
+nz-anchor.link | 锚点：链接项
+nz-back-top | 回到顶部
+nz-divider | 分割线
+nz-divider.full | 分割线：完整风格
 
 ### 数据显示
 
@@ -243,40 +291,6 @@ nzMouseLeaveDelay | 文字提示：鼠标移出后延时多少才隐藏 Tooltip�
 nz-tooltip.template | 文字提示：自定义内容风格
 nz-tree | 树形
 
-### 反馈
-
-Trigger | Description
---- | ---
-nz-modal | 对话框
-nz-alert.body | 警告提示：含辅助性文字介绍
-nz-alert | 警告提示
-nzAlertType | 指定警告提示的样式
-nzBanner | 是否用作顶部公告
-nzClosable | 默认不显示关闭按钮
-nzMessage | 警告提示内容
-nzShowIcon | 是否显示辅助图标
-nz-popconfirm.button | 气泡确认框：按钮风格
-nz-popconfirm | 气泡确认框
-nzCondition | 气泡确认框：是否直接触发 nzOnConfirm 而不弹出框
-nz-spin | 加载中
-nzSpinning | 加载中：是否旋转
-nzTip | 加载中：当作为包裹元素时，可以自定义描述文案
-nz-progress.circle | 进度条：圆风格
-nz-progress.dashboard | 进度条：仪表盘风格
-nz-progress | 进度条
-nz-progress.line | 进度条：线风格
-nzProgressStatus | 进度条：状态
-
-### 其它
-
-Trigger | Description
---- | ---
-nz-anchor | 锚点
-nz-anchor.link | 锚点：链接项
-nz-divider | 分割线
-nz-divider.full | 分割线：完整风格
-nz-back-top | 回到顶部
-
 ### 通用属性
 
 Trigger | Description
@@ -315,20 +329,6 @@ nzTrigger | 触发方式
 nzType | 类型
 nzValue | 值
 nzVisible | 显示状态
-
-### 常规
-
-Trigger | Description
---- | ---
-nz-button | 按钮
-nz-button.group | 按钮组
-nz-button.icon-text-left | 按钮带图标且文本在左
-nz-button.icon-text-right | 按钮带图标且文本在右
-nzGhost | 幽灵属性，使按钮背景透明
-nz-button.type | 按钮带设置类型
-nz-icon.anticon | anticon样式
-nz-icon | 图标
-nz-icon.spin | 旋转图标
 
 ## 更新日志
 

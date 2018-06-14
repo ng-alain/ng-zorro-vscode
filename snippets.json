@@ -63,167 +63,6 @@
         "scope": ""
     }
 
-    , "layout grid col": {
-        "prefix": "nz-grid.col",
-        "body": "<nz-col${1: nzSpan=\"${2:1-24}\" }>\n  $0\n</nz-col>",
-        "description": "栅格系统：列",
-        "scope": ""
-    }
-
-    , "layout grid": {
-        "prefix": "nz-grid",
-        "body": "<nz-row${1: nzGutter=\"${2|8,16,24,32,64|}\"}>\r\n  <nz-col nzSpan=\"${3:1-24}\"${4: nzOffset=\"${5:1-24}\"}>\r\n    $0\r\n  </nz-col>\r\n</nz-row>",
-        "description": "栅格系统",
-        "scope": ""
-    }
-
-    , "layout grid nzAlign": {
-        "prefix": "nzAlign",
-        "body": "nzAlign=\"${1|top,middle,bottom|}\"",
-        "description": "flex 布局下的垂直对齐方式",
-        "scope": ""
-    }
-
-    , "layout grid nzFlex": {
-        "prefix": "nzFlex",
-        "body": "nzType=\"flex\"",
-        "description": "flex 布局模式",
-        "scope": ""
-    }
-
-    , "layout grid nzGutter": {
-        "prefix": "nzGutter",
-        "body": "nzGutter=\"${1|8,16,24,32,64,object|}\"",
-        "description": "栅格间隔，支持数字或响应式对象 { xs: 8, sm: 16, md: 24, lg: 32, xl: 32, xxl: 32 }",
-        "scope": ""
-    }
-
-    , "layout grid nzJustify": {
-        "prefix": "nzJustify",
-        "body": "nzJustify=\"${1|center,space-around,space-between,start,end|}\"",
-        "description": "flex 布局下的水平排列方式",
-        "scope": ""
-    }
-
-    , "layout grid nzLg": {
-        "prefix": "nzLg",
-        "body": "nzLg=\"${1:1-24}\"",
-        "description": "≥992px 响应式栅格，可为栅格数或一个包含其他属性的对象",
-        "scope": ""
-    }
-
-    , "layout grid nzMd": {
-        "prefix": "nzMd",
-        "body": "nzMd=\"${1:1-24}\"",
-        "description": "≥768px 响应式栅格，可为栅格数或一个包含其他属性的对象",
-        "scope": ""
-    }
-
-    , "layout grid nzOffset": {
-        "prefix": "nzOffset",
-        "body": "nzOffset=\"${1|8,16,24,32,64|}\"",
-        "description": "栅格左侧的间隔格数，间隔内不可以有栅格",
-        "scope": ""
-    }
-
-    , "layout grid nzOrder": {
-        "prefix": "nzOrder",
-        "body": "nzOrder=\"${1|8,16,24,32,64|}\"",
-        "description": "栅格顺序，flex 布局模式下有效",
-        "scope": ""
-    }
-
-    , "layout grid nzPull": {
-        "prefix": "nzPull",
-        "body": "nzPull=\"${1|8,16,24,32,64|}\"",
-        "description": "栅格向左移动格数",
-        "scope": ""
-    }
-
-    , "layout grid nzPush": {
-        "prefix": "nzPush",
-        "body": "nzPush=\"${1|8,16,24,32,64|}\"",
-        "description": "栅格向右移动格数",
-        "scope": ""
-    }
-
-    , "layout grid nzResponsive": {
-        "prefix": "nzResponsive",
-        "body": "nzXs=\"${1:1-24}\" nzSm=\"${2:1-24}\" nzMd=\"${3:1-24}\" nzLg=\"${4:1-24}\" nzXl=\"${5:1-24}\" nzXXl=\"${6:1-24}\"",
-        "description": "响应式属性",
-        "scope": ""
-    }
-
-    , "layout grid nzSm": {
-        "prefix": "nzSm",
-        "body": "nzSm=\"${1:1-24}\"",
-        "description": "≥576px 响应式栅格，可为栅格数或一个包含其他属性的对象",
-        "scope": ""
-    }
-
-    , "layout grid nzSpan": {
-        "prefix": "nzSpan",
-        "body": "nzSpan=\"${1|8,16,24,32,64|}\"",
-        "description": "栅格占位格数，为 0 时相当于 display: none",
-        "scope": ""
-    }
-
-    , "layout grid nzXl": {
-        "prefix": "nzXl",
-        "body": "nzXl=\"${1:1-24}\"",
-        "description": "≥1200px 响应式栅格，可为栅格数或一个包含其他属性的对象",
-        "scope": ""
-    }
-
-    , "layout grid nzXs": {
-        "prefix": "nzXs",
-        "body": "nzXs=\"${1:1-24}\"",
-        "description": "<576px 响应式栅格，可为栅格数或一个包含其他属性的对象",
-        "scope": ""
-    }
-
-    , "layout grid nzXXl": {
-        "prefix": "nzXXl",
-        "body": "nzXXl=\"${1:1-24}\"",
-        "description": "≥1600px 响应式栅格，可为栅格数或一个包含其他属性的对象",
-        "scope": ""
-    }
-
-    , "layout grid responsive": {
-        "prefix": "nz-grid.responsive",
-        "body": "<nz-col nzXs=\"${1:1-24}\" nzSm=\"${2:1-24}\" nzMd=\"${3:1-24}\" nzLg=\"${4:1-24}\" nzXl=\"${5:1-24}\" nzXXl=\"${6:1-24}\">\n  $0\n</nz-col>",
-        "description": "响应式栅格系统",
-        "scope": ""
-    }
-
-    , "layout grid row flex": {
-        "prefix": "nz-grid.row-flex",
-        "body": "<nz-row nzType=\"flex\"${1: nzJustify=\"${2|start,center,end,space-between,space-around|}\"}${3: nzAlign=\"${4|top,middle,bottom|}\"}>\r\n  $0\r\n</nz-row>",
-        "description": "flex 响应式栅格系统",
-        "scope": ""
-    }
-
-    , "layout grid row": {
-        "prefix": "nz-grid.row",
-        "body": "<nz-row${1: nzGutter=\"${2|8,16,24,32,64|}\"}>\n  $0\n</nz-row>",
-        "description": "栅格系统：行",
-        "scope": ""
-    }
-
-    , "layout layout": {
-        "prefix": "nz-layout",
-        "body": "<nz-layout>\r\n  <nz-header>\r\n    $0\r\n  </nz-header>\r\n  <nz-content>\r\n\r\n  </nz-content>\r\n  <nz-footer>\r\n\r\n  </nz-footer>\r\n</nz-layout>",
-        "description": "布局",
-        "scope": ""
-    }
-
-    , "layout layout sider": {
-        "prefix": "nz-layout.sider",
-        "body": "<nz-sider [nzCollapsible]=\"true\"${1: [nzWidth]=\"${2:200}\"}${3: [nzCollapsedWidth]=\"${4:64}\"}>\r\n  $0\r\n</nz-sider>",
-        "description": "布局：侧边栏",
-        "scope": ""
-    }
-
     , "navigation affix": {
         "prefix": "nz-affix",
         "body": "<nz-affix${1: [nzOffsetTop]=\"${2}\"}${3: (nzChange)=\"onChange(\\$event)\"}>\r\n  $0\r\n</nz-affix>",
@@ -329,20 +168,6 @@
         "scope": ""
     }
 
-    , "navigation pagination": {
-        "prefix": "nz-pagination",
-        "body": "<nz-pagination [nzPageIndex]=\"${1}\" [nzPageSize]=\"${2}\" [nzTotal]=\"${3}\"${4: nzSize=\"small\"}></nz-pagination>\r\n$0",
-        "description": "分页",
-        "scope": ""
-    }
-
-    , "navigation pagination nzHideOnSinglePage": {
-        "prefix": "nzHideOnSinglePage",
-        "body": "nzHideOnSinglePage",
-        "description": "只有一页时是否隐藏分页器",
-        "scope": ""
-    }
-
     , "navigation steps": {
         "prefix": "nz-steps",
         "body": "<nz-steps [(nzCurrent)]=\"${1:current}\"${2: [nzStatus]=\"'${3|wait,process,finish,error|}'\"}${4: nzSize=\"small\"}${5: nzDirection=\"${6|horizontal,vertical|}\"}${7: nzProgressDot}>\r\n  <nz-step [nzTitle]=\"'${8}'\" [nzDescription]=\"'${9}'\"></nz-step>\r\n  $0\r\n</nz-steps>\r\n<div class=\"steps-content\">\r\n\r\n</div>",
@@ -361,6 +186,20 @@
         "prefix": "nz-steps.step",
         "body": "<nz-step [nzTitle]=\"'${1}'\" [nzDescription]=\"'${2}'\"${3: [nzStatus]=\"'${4|wait,process,finish,error|}'\"}></nz-step>",
         "description": "步骤条：项",
+        "scope": ""
+    }
+
+    , "navigation pagination": {
+        "prefix": "nz-pagination",
+        "body": "<nz-pagination [nzPageIndex]=\"${1}\" [nzPageSize]=\"${2}\" [nzTotal]=\"${3}\"${4: nzSize=\"small\"}></nz-pagination>\r\n$0",
+        "description": "分页",
+        "scope": ""
+    }
+
+    , "navigation pagination nzHideOnSinglePage": {
+        "prefix": "nzHideOnSinglePage",
+        "body": "nzHideOnSinglePage",
+        "description": "只有一页时是否隐藏分页器",
         "scope": ""
     }
 
@@ -973,174 +812,6 @@
         "scope": ""
     }
 
-    , "feedback alert body": {
-        "prefix": "nz-alert.body",
-        "body": "<nz-alert\r\n  nzType=\"${1|success,info,warning,error|}\" nzShowIcon\r\n  nzMessage=\"$2\"\r\n  nzDescription=\"$3\">\r\n</nz-alert>\r\n$0",
-        "description": "警告提示：含辅助性文字介绍",
-        "scope": ""
-    }
-
-    , "feedback alert": {
-        "prefix": "nz-alert",
-        "body": "<nz-alert nzType=\"${1|success,info,warning,error|}\" nzMessage=\"$2\"></nz-alert>\r\n$0",
-        "description": "警告提示",
-        "scope": ""
-    }
-
-    , "feedback alert nzAlertType": {
-        "prefix": "nzAlertType",
-        "body": "[nzType]=\"'${1|success,info,warning,error|}'\"",
-        "description": "指定警告提示的样式",
-        "scope": ""
-    }
-
-    , "feedback alert nzBanner": {
-        "prefix": "nzBanner",
-        "body": "nzBanner",
-        "description": "是否用作顶部公告",
-        "scope": ""
-    }
-
-    , "feedback alert nzClosable": {
-        "prefix": "nzClosable",
-        "body": "[nzClosable]=\"${1|true,false|}\"",
-        "description": "默认不显示关闭按钮",
-        "scope": ""
-    }
-
-    , "feedback alert nzMessage": {
-        "prefix": "nzMessage",
-        "body": "nzMessage=\"$1\"",
-        "description": "警告提示内容",
-        "scope": ""
-    }
-
-    , "feedback alert nzShowIcon": {
-        "prefix": "nzShowIcon",
-        "body": "[nzShowIcon]=\"${1|true,false|}\"",
-        "description": "是否显示辅助图标",
-        "scope": ""
-    }
-
-    , "feedback modal": {
-        "prefix": "nz-modal",
-        "body": "<nz-modal\r\n  [(nzVisible)]=\"isVisible\"\r\n  [nzTitle]=\"'标题'\"\r\n  [nzClosable]=\"false|true\"\r\n  [nzWidth]=\"520\"\r\n  [nzContent]=\"modalContent\"\r\n  [nzOkText]=\"'确定'\"\r\n  [nzCancelText]=\"'取消'\"\r\n  [nzMaskClosable]=\"false|true\"\r\n  [nzWrapClassName]=\"''\"\r\n  (nzOnCancel)=\"handleCancel(\\$event)\"\r\n  (nzOnOk)=\"handleOk(\\$event)\">\r\n  <ng-template #modalContent>对话框的内容</ng-template>\r\n</nz-modal>\r\n$0",
-        "description": "对话框",
-        "scope": ""
-    }
-
-    , "feedback popconfirm button": {
-        "prefix": "nz-popconfirm.button",
-        "body": "<nz-popconfirm [nzTitle]=\"'${1:确定要删除吗？}'\" (nzOnConfirm)=\"${2:del(i)}\">\n  <a nz-popconfirm nz-button>${3:删除}</a>\n</nz-popconfirm>\n$0",
-        "description": "气泡确认框：按钮风格",
-        "scope": ""
-    }
-
-    , "feedback popconfirm": {
-        "prefix": "nz-popconfirm",
-        "body": "<nz-popconfirm [nzTitle]=\"'${1:确定要删除吗？}'\" (nzOnConfirm)=\"${2:confirm(i)}\">\r\n  <a nz-popconfirm>${3:删除}</a>\r\n</nz-popconfirm>\r\n$0",
-        "description": "气泡确认框",
-        "scope": ""
-    }
-
-    , "feedback popconfirm nzCondition": {
-        "prefix": "nzCondition",
-        "body": "[nzCondition]=\"${1|true,false|}\"",
-        "description": "气泡确认框：是否直接触发 nzOnConfirm 而不弹出框",
-        "scope": ""
-    }
-
-    , "feedback progress circle": {
-        "prefix": "nz-progress.circle",
-        "body": "<nz-progress nzType=\"circle\" [nzPercent]=\"${1}\" [nzStrokeWidth]=\"${3:6}\" [nzWidth]=\"${4:132}\"></nz-progress>\r\n$0",
-        "description": "进度条：圆风格",
-        "scope": ""
-    }
-
-    , "feedback progress dashboard": {
-        "prefix": "nz-progress.dashboard",
-        "body": "<nz-progress nzType=\"dashboard\" [nzPercent]=\"${1}\"></nz-progress>\r\n$0",
-        "description": "进度条：仪表盘风格",
-        "scope": ""
-    }
-
-    , "feedback progress": {
-        "prefix": "nz-progress",
-        "body": "<nz-progress [nzPercent]=\"${1}\" [nzType]=\"'${2|circle,line|}'\"></nz-progress>\r\n$0",
-        "description": "进度条",
-        "scope": ""
-    }
-
-    , "feedback progress line": {
-        "prefix": "nz-progress.line",
-        "body": "<nz-progress nzType=\"line\" [nzPercent]=\"${1}\" [nzStrokeWidth]=\"${3:10}\"></nz-progress>\r\n$0",
-        "description": "进度条：线风格",
-        "scope": ""
-    }
-
-    , "feedback progress nzProgressStatus": {
-        "prefix": "nzProgressStatus",
-        "body": "[nzStatus]=\"'${1|success,exception,active|}'\"",
-        "description": "进度条：状态",
-        "scope": ""
-    }
-
-    , "feedback spin": {
-        "prefix": "nz-spin",
-        "body": "<nz-spin${1: [nzTip]=\"'${2|加载中...,正在读取数据...|}'\"}${3: [nzSpinning]=\"false\"}></nz-spin>\r\n$0",
-        "description": "加载中",
-        "scope": ""
-    }
-
-    , "feedback spin nzSpinning": {
-        "prefix": "nzSpinning",
-        "body": "[nzSpinning]=\"${1|true,false|}\"",
-        "description": "加载中：是否旋转",
-        "scope": ""
-    }
-
-    , "feedback spin nzTip": {
-        "prefix": "nzTip",
-        "body": "[nzTip]=\"'${1|加载中...,正在读取数据...|}'\"",
-        "description": "加载中：当作为包裹元素时，可以自定义描述文案",
-        "scope": ""
-    }
-
-    , "other anchor": {
-        "prefix": "nz-anchor",
-        "body": "<nz-anchor${1: [nzOffsetTop]=\"$2\"}>\r\n  $0\r\n</nz-anchor>",
-        "description": "锚点",
-        "scope": ""
-    }
-
-    , "other anchor link": {
-        "prefix": "nz-anchor.link",
-        "body": "<nz-link [nzHref]=\"$1\" [nzTitle]=\"$2\"></nz-link>\r\n$0",
-        "description": "锚点：链接项",
-        "scope": ""
-    }
-
-    , "other back-top": {
-        "prefix": "nz-back-top",
-        "body": "<nz-back-top></nz-back-top>$0",
-        "description": "回到顶部",
-        "scope": ""
-    }
-
-    , "other divider": {
-        "prefix": "nz-divider",
-        "body": "<nz-divider nzType=\"vertical\"></nz-divider>\r\n$0",
-        "description": "分割线",
-        "scope": ""
-    }
-
-    , "other divider full": {
-        "prefix": "nz-divider.full",
-        "body": "<nz-divider${1: nzText=\"$2\"}${3: nzOrientation=\"${4|left,right|}\"}${5: nzType=\"${6|vertical,horizontal|}\"}${7: nzDashed}></nz-divider>$0",
-        "description": "分割线：完整风格",
-        "scope": ""
-    }
-
     , "data-display avatar": {
         "prefix": "nz-avatar",
         "body": "<nz-avatar [nzSrc]=\"${1:avatar}\"></nz-avatar>\r\n$0",
@@ -1603,6 +1274,174 @@
         "scope": ""
     }
 
+    , "feedback alert body": {
+        "prefix": "nz-alert.body",
+        "body": "<nz-alert\r\n  nzType=\"${1|success,info,warning,error|}\" nzShowIcon\r\n  nzMessage=\"$2\"\r\n  nzDescription=\"$3\">\r\n</nz-alert>\r\n$0",
+        "description": "警告提示：含辅助性文字介绍",
+        "scope": ""
+    }
+
+    , "feedback alert": {
+        "prefix": "nz-alert",
+        "body": "<nz-alert nzType=\"${1|success,info,warning,error|}\" nzMessage=\"$2\"></nz-alert>\r\n$0",
+        "description": "警告提示",
+        "scope": ""
+    }
+
+    , "feedback alert nzAlertType": {
+        "prefix": "nzAlertType",
+        "body": "[nzType]=\"'${1|success,info,warning,error|}'\"",
+        "description": "指定警告提示的样式",
+        "scope": ""
+    }
+
+    , "feedback alert nzBanner": {
+        "prefix": "nzBanner",
+        "body": "nzBanner",
+        "description": "是否用作顶部公告",
+        "scope": ""
+    }
+
+    , "feedback alert nzClosable": {
+        "prefix": "nzClosable",
+        "body": "[nzClosable]=\"${1|true,false|}\"",
+        "description": "默认不显示关闭按钮",
+        "scope": ""
+    }
+
+    , "feedback alert nzMessage": {
+        "prefix": "nzMessage",
+        "body": "nzMessage=\"$1\"",
+        "description": "警告提示内容",
+        "scope": ""
+    }
+
+    , "feedback alert nzShowIcon": {
+        "prefix": "nzShowIcon",
+        "body": "[nzShowIcon]=\"${1|true,false|}\"",
+        "description": "是否显示辅助图标",
+        "scope": ""
+    }
+
+    , "feedback modal": {
+        "prefix": "nz-modal",
+        "body": "<nz-modal\r\n  [(nzVisible)]=\"isVisible\"\r\n  [nzTitle]=\"'标题'\"\r\n  [nzClosable]=\"false|true\"\r\n  [nzWidth]=\"520\"\r\n  [nzContent]=\"modalContent\"\r\n  [nzOkText]=\"'确定'\"\r\n  [nzCancelText]=\"'取消'\"\r\n  [nzMaskClosable]=\"false|true\"\r\n  [nzWrapClassName]=\"''\"\r\n  (nzOnCancel)=\"handleCancel(\\$event)\"\r\n  (nzOnOk)=\"handleOk(\\$event)\">\r\n  <ng-template #modalContent>对话框的内容</ng-template>\r\n</nz-modal>\r\n$0",
+        "description": "对话框",
+        "scope": ""
+    }
+
+    , "feedback popconfirm button": {
+        "prefix": "nz-popconfirm.button",
+        "body": "<nz-popconfirm [nzTitle]=\"'${1:确定要删除吗？}'\" (nzOnConfirm)=\"${2:del(i)}\">\n  <a nz-popconfirm nz-button>${3:删除}</a>\n</nz-popconfirm>\n$0",
+        "description": "气泡确认框：按钮风格",
+        "scope": ""
+    }
+
+    , "feedback popconfirm": {
+        "prefix": "nz-popconfirm",
+        "body": "<nz-popconfirm [nzTitle]=\"'${1:确定要删除吗？}'\" (nzOnConfirm)=\"${2:confirm(i)}\">\r\n  <a nz-popconfirm>${3:删除}</a>\r\n</nz-popconfirm>\r\n$0",
+        "description": "气泡确认框",
+        "scope": ""
+    }
+
+    , "feedback popconfirm nzCondition": {
+        "prefix": "nzCondition",
+        "body": "[nzCondition]=\"${1|true,false|}\"",
+        "description": "气泡确认框：是否直接触发 nzOnConfirm 而不弹出框",
+        "scope": ""
+    }
+
+    , "feedback progress circle": {
+        "prefix": "nz-progress.circle",
+        "body": "<nz-progress nzType=\"circle\" [nzPercent]=\"${1}\" [nzStrokeWidth]=\"${3:6}\" [nzWidth]=\"${4:132}\"></nz-progress>\r\n$0",
+        "description": "进度条：圆风格",
+        "scope": ""
+    }
+
+    , "feedback progress dashboard": {
+        "prefix": "nz-progress.dashboard",
+        "body": "<nz-progress nzType=\"dashboard\" [nzPercent]=\"${1}\"></nz-progress>\r\n$0",
+        "description": "进度条：仪表盘风格",
+        "scope": ""
+    }
+
+    , "feedback progress": {
+        "prefix": "nz-progress",
+        "body": "<nz-progress [nzPercent]=\"${1}\" [nzType]=\"'${2|circle,line|}'\"></nz-progress>\r\n$0",
+        "description": "进度条",
+        "scope": ""
+    }
+
+    , "feedback progress line": {
+        "prefix": "nz-progress.line",
+        "body": "<nz-progress nzType=\"line\" [nzPercent]=\"${1}\" [nzStrokeWidth]=\"${3:10}\"></nz-progress>\r\n$0",
+        "description": "进度条：线风格",
+        "scope": ""
+    }
+
+    , "feedback progress nzProgressStatus": {
+        "prefix": "nzProgressStatus",
+        "body": "[nzStatus]=\"'${1|success,exception,active|}'\"",
+        "description": "进度条：状态",
+        "scope": ""
+    }
+
+    , "feedback spin": {
+        "prefix": "nz-spin",
+        "body": "<nz-spin${1: [nzTip]=\"'${2|加载中...,正在读取数据...|}'\"}${3: [nzSpinning]=\"false\"}></nz-spin>\r\n$0",
+        "description": "加载中",
+        "scope": ""
+    }
+
+    , "feedback spin nzSpinning": {
+        "prefix": "nzSpinning",
+        "body": "[nzSpinning]=\"${1|true,false|}\"",
+        "description": "加载中：是否旋转",
+        "scope": ""
+    }
+
+    , "feedback spin nzTip": {
+        "prefix": "nzTip",
+        "body": "[nzTip]=\"'${1|加载中...,正在读取数据...|}'\"",
+        "description": "加载中：当作为包裹元素时，可以自定义描述文案",
+        "scope": ""
+    }
+
+    , "other anchor": {
+        "prefix": "nz-anchor",
+        "body": "<nz-anchor${1: [nzOffsetTop]=\"$2\"}>\r\n  $0\r\n</nz-anchor>",
+        "description": "锚点",
+        "scope": ""
+    }
+
+    , "other anchor link": {
+        "prefix": "nz-anchor.link",
+        "body": "<nz-link [nzHref]=\"$1\" [nzTitle]=\"$2\"></nz-link>\r\n$0",
+        "description": "锚点：链接项",
+        "scope": ""
+    }
+
+    , "other back-top": {
+        "prefix": "nz-back-top",
+        "body": "<nz-back-top></nz-back-top>$0",
+        "description": "回到顶部",
+        "scope": ""
+    }
+
+    , "other divider": {
+        "prefix": "nz-divider",
+        "body": "<nz-divider nzType=\"vertical\"></nz-divider>\r\n$0",
+        "description": "分割线",
+        "scope": ""
+    }
+
+    , "other divider full": {
+        "prefix": "nz-divider.full",
+        "body": "<nz-divider${1: nzText=\"$2\"}${3: nzOrientation=\"${4|left,right|}\"}${5: nzType=\"${6|vertical,horizontal|}\"}${7: nzDashed}></nz-divider>$0",
+        "description": "分割线：完整风格",
+        "scope": ""
+    }
+
     , "attributes attr nzActions": {
         "prefix": "nzActions",
         "body": "[nzActions]=\"[${1:a1, a2, a3}]\"",
@@ -1838,6 +1677,167 @@
         "prefix": "nzVisible",
         "body": "[nzVisible]=\"$1\"",
         "description": "显示状态",
+        "scope": ""
+    }
+
+    , "layout grid col": {
+        "prefix": "nz-grid.col",
+        "body": "<nz-col${1: nzSpan=\"${2:1-24}\" }>\n  $0\n</nz-col>",
+        "description": "栅格系统：列",
+        "scope": ""
+    }
+
+    , "layout grid": {
+        "prefix": "nz-grid",
+        "body": "<nz-row${1: nzGutter=\"${2|8,16,24,32,64|}\"}>\r\n  <nz-col nzSpan=\"${3:1-24}\"${4: nzOffset=\"${5:1-24}\"}>\r\n    $0\r\n  </nz-col>\r\n</nz-row>",
+        "description": "栅格系统",
+        "scope": ""
+    }
+
+    , "layout grid nzAlign": {
+        "prefix": "nzAlign",
+        "body": "nzAlign=\"${1|top,middle,bottom|}\"",
+        "description": "flex 布局下的垂直对齐方式",
+        "scope": ""
+    }
+
+    , "layout grid nzFlex": {
+        "prefix": "nzFlex",
+        "body": "nzType=\"flex\"",
+        "description": "flex 布局模式",
+        "scope": ""
+    }
+
+    , "layout grid nzGutter": {
+        "prefix": "nzGutter",
+        "body": "nzGutter=\"${1|8,16,24,32,64,object|}\"",
+        "description": "栅格间隔，支持数字或响应式对象 { xs: 8, sm: 16, md: 24, lg: 32, xl: 32, xxl: 32 }",
+        "scope": ""
+    }
+
+    , "layout grid nzJustify": {
+        "prefix": "nzJustify",
+        "body": "nzJustify=\"${1|center,space-around,space-between,start,end|}\"",
+        "description": "flex 布局下的水平排列方式",
+        "scope": ""
+    }
+
+    , "layout grid nzLg": {
+        "prefix": "nzLg",
+        "body": "nzLg=\"${1:1-24}\"",
+        "description": "≥992px 响应式栅格，可为栅格数或一个包含其他属性的对象",
+        "scope": ""
+    }
+
+    , "layout grid nzMd": {
+        "prefix": "nzMd",
+        "body": "nzMd=\"${1:1-24}\"",
+        "description": "≥768px 响应式栅格，可为栅格数或一个包含其他属性的对象",
+        "scope": ""
+    }
+
+    , "layout grid nzOffset": {
+        "prefix": "nzOffset",
+        "body": "nzOffset=\"${1|8,16,24,32,64|}\"",
+        "description": "栅格左侧的间隔格数，间隔内不可以有栅格",
+        "scope": ""
+    }
+
+    , "layout grid nzOrder": {
+        "prefix": "nzOrder",
+        "body": "nzOrder=\"${1|8,16,24,32,64|}\"",
+        "description": "栅格顺序，flex 布局模式下有效",
+        "scope": ""
+    }
+
+    , "layout grid nzPull": {
+        "prefix": "nzPull",
+        "body": "nzPull=\"${1|8,16,24,32,64|}\"",
+        "description": "栅格向左移动格数",
+        "scope": ""
+    }
+
+    , "layout grid nzPush": {
+        "prefix": "nzPush",
+        "body": "nzPush=\"${1|8,16,24,32,64|}\"",
+        "description": "栅格向右移动格数",
+        "scope": ""
+    }
+
+    , "layout grid nzResponsive": {
+        "prefix": "nzResponsive",
+        "body": "nzXs=\"${1:1-24}\" nzSm=\"${2:1-24}\" nzMd=\"${3:1-24}\" nzLg=\"${4:1-24}\" nzXl=\"${5:1-24}\" nzXXl=\"${6:1-24}\"",
+        "description": "响应式属性",
+        "scope": ""
+    }
+
+    , "layout grid nzSm": {
+        "prefix": "nzSm",
+        "body": "nzSm=\"${1:1-24}\"",
+        "description": "≥576px 响应式栅格，可为栅格数或一个包含其他属性的对象",
+        "scope": ""
+    }
+
+    , "layout grid nzSpan": {
+        "prefix": "nzSpan",
+        "body": "nzSpan=\"${1|8,16,24,32,64|}\"",
+        "description": "栅格占位格数，为 0 时相当于 display: none",
+        "scope": ""
+    }
+
+    , "layout grid nzXl": {
+        "prefix": "nzXl",
+        "body": "nzXl=\"${1:1-24}\"",
+        "description": "≥1200px 响应式栅格，可为栅格数或一个包含其他属性的对象",
+        "scope": ""
+    }
+
+    , "layout grid nzXs": {
+        "prefix": "nzXs",
+        "body": "nzXs=\"${1:1-24}\"",
+        "description": "<576px 响应式栅格，可为栅格数或一个包含其他属性的对象",
+        "scope": ""
+    }
+
+    , "layout grid nzXXl": {
+        "prefix": "nzXXl",
+        "body": "nzXXl=\"${1:1-24}\"",
+        "description": "≥1600px 响应式栅格，可为栅格数或一个包含其他属性的对象",
+        "scope": ""
+    }
+
+    , "layout grid responsive": {
+        "prefix": "nz-grid.responsive",
+        "body": "<nz-col nzXs=\"${1:1-24}\" nzSm=\"${2:1-24}\" nzMd=\"${3:1-24}\" nzLg=\"${4:1-24}\" nzXl=\"${5:1-24}\" nzXXl=\"${6:1-24}\">\n  $0\n</nz-col>",
+        "description": "响应式栅格系统",
+        "scope": ""
+    }
+
+    , "layout grid row flex": {
+        "prefix": "nz-grid.row-flex",
+        "body": "<nz-row nzType=\"flex\"${1: nzJustify=\"${2|start,center,end,space-between,space-around|}\"}${3: nzAlign=\"${4|top,middle,bottom|}\"}>\r\n  $0\r\n</nz-row>",
+        "description": "flex 响应式栅格系统",
+        "scope": ""
+    }
+
+    , "layout grid row": {
+        "prefix": "nz-grid.row",
+        "body": "<nz-row${1: nzGutter=\"${2|8,16,24,32,64|}\"}>\n  $0\n</nz-row>",
+        "description": "栅格系统：行",
+        "scope": ""
+    }
+
+    , "layout layout": {
+        "prefix": "nz-layout",
+        "body": "<nz-layout>\r\n  <nz-header>\r\n    $0\r\n  </nz-header>\r\n  <nz-content>\r\n\r\n  </nz-content>\r\n  <nz-footer>\r\n\r\n  </nz-footer>\r\n</nz-layout>",
+        "description": "布局",
+        "scope": ""
+    }
+
+    , "layout layout sider": {
+        "prefix": "nz-layout.sider",
+        "body": "<nz-sider [nzCollapsible]=\"true\"${1: [nzWidth]=\"${2:200}\"}${3: [nzCollapsedWidth]=\"${4:64}\"}>\r\n  $0\r\n</nz-sider>",
+        "description": "布局：侧边栏",
         "scope": ""
     }  
 }
