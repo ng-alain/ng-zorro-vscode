@@ -1,18 +1,4 @@
 {
-	"general": {
-		"title": "常规",
-		"list": {
-			"nz-button": "general button",
-			"nz-button.group": "general button group",
-			"nz-button.icon-text-left": "general button icon text left",
-			"nz-button.icon-text-right": "general button icon text right",
-			"nzGhost": "general button nzGhost",
-			"nz-button.type": "general button type",
-			"nz-icon.anticon": "general icon anticon",
-			"nz-icon": "general icon",
-			"nz-icon.spin": "general icon spin"
-		}
-	},
 	"layout": {
 		"title": "布局",
 		"list": {
@@ -46,21 +32,21 @@
 		"list": {
 			"nz-affix": "navigation affix",
 			"nz-affix.target": "navigation affix target",
-			"nz-breadcrumb": "navigation breadcrumb",
-			"nz-breadcrumb.icon": "navigation breadcrumb icon",
-			"nz-breadcrumb.item": "navigation breadcrumb item",
-			"nzSeparator": "navigation breadcrumb nzSeparator",
 			"nz-dropdown.button": "navigation dropdown button",
 			"nz-dropdown.button.style": "navigation dropdown button.style",
 			"nz-dropdown": "navigation dropdown",
 			"nzClickHide": "navigation dropdown nzClickHide",
+			"nz-breadcrumb": "navigation breadcrumb",
+			"nz-breadcrumb.icon": "navigation breadcrumb icon",
+			"nz-breadcrumb.item": "navigation breadcrumb item",
+			"nzSeparator": "navigation breadcrumb nzSeparator",
+			"nz-pagination": "navigation pagination",
+			"nzHideOnSinglePage": "navigation pagination nzHideOnSinglePage",
 			"nz-menu": "navigation menu",
 			"nz-menu.group": "navigation menu group",
 			"nz-menu.item-divider": "navigation menu item divider",
 			"nz-menu.item": "navigation menu item",
 			"nz-menu.submenu": "navigation menu submenu",
-			"nz-pagination": "navigation pagination",
-			"nzHideOnSinglePage": "navigation pagination nzHideOnSinglePage",
 			"nz-steps": "navigation steps",
 			"nz-steps.step-icon": "navigation steps step icon",
 			"nz-steps.step": "navigation steps step"
@@ -72,6 +58,13 @@
 			"nz-autocomplete.custom-label": "data-entry autocomplete custom label",
 			"nz-autocomplete.data-source": "data-entry autocomplete data source",
 			"nz-autocomplete": "data-entry autocomplete",
+			"nz-date": "data-entry date",
+			"nz-date.month": "data-entry date month",
+			"nzRenderExtraFooter": "data-entry date nzRenderExtraFooter",
+			"nzShowTime": "data-entry date nzShowTime",
+			"nzShowToday": "data-entry date nzShowToday",
+			"nz-date.range": "data-entry date range",
+			"nz-date.week": "data-entry date week",
 			"nz-cascader": "data-entry cascader",
 			"nz-form.control-responsive": "data-entry form control responsive",
 			"nz-form.control": "data-entry form control",
@@ -87,6 +80,10 @@
 			"nzValidateStatus": "data-entry form nzValidateStatus",
 			"nz-form.split": "data-entry form split",
 			"nz-form.text": "data-entry form text",
+			"nz-input-number": "data-entry input-number",
+			"nzFormatter": "data-entry number nzFormatter",
+			"nzParser": "data-entry number nzParser",
+			"nzPrecision": "data-entry number nzPrecision",
 			"nz-input.addon-icon": "data-entry input addon icon",
 			"nz-input.addon-text": "data-entry input addon text",
 			"nz-input": "data-entry input",
@@ -98,19 +95,10 @@
 			"nzSuffix": "data-entry input nzSuffix",
 			"nz-input.prefix": "data-entry input prefix",
 			"nz-input.suffix": "data-entry input suffix",
-			"nz-checkbox": "data-entry checkbox",
-			"nz-checkbox.group": "data-entry checkbox group",
-			"nz-checkbox.layout": "data-entry checkbox layout",
 			"nz-mention": "data-entry mention",
-			"nz-number": "data-entry number",
-			"nzFormatter": "data-entry number nzFormatter",
-			"nzParser": "data-entry number nzParser",
-			"nzPrecision": "data-entry number nzPrecision",
 			"nz-radio.button": "data-entry radio button",
 			"nz-radio": "data-entry radio",
 			"nz-radio.simple": "data-entry radio simple",
-			"nz-rate": "data-entry rate",
-			"nzAllowHalf": "data-entry rate nzAllowHalf",
 			"nz-select": "data-entry select",
 			"nzDropdownClassName": "data-entry select nzDropdownClassName",
 			"nzDropdownMatchSelectWidth": "data-entry select nzDropdownMatchSelectWidth",
@@ -123,13 +111,21 @@
 			"nzShowSearch": "data-entry select nzShowSearch",
 			"nz-select.option-group": "data-entry select option group",
 			"nz-select.option": "data-entry select option",
+			"nz-rate": "data-entry rate",
+			"nzAllowHalf": "data-entry rate nzAllowHalf",
 			"nz-slider": "data-entry slider",
 			"nz-switch": "data-entry switch",
 			"nz-switch.icon": "data-entry switch icon",
 			"nz-switch.text": "data-entry switch text",
 			"nz-textarea": "data-entry textarea",
 			"nzAutosize": "data-entry input nzAutosize",
+			"nz-time": "data-entry time",
+			"nzAllowEmpty": "data-entry time nzAllowEmpty",
+			"nzHourStep": "data-entry time nzHourStep",
+			"nzMinuteStep": "data-entry time nzMinuteStep",
+			"nzSecondStep": "data-entry time nzSecondStep",
 			"nz-transfer": "data-entry transfer",
+			"nz-tree-select": "data-entry tree-select",
 			"nz-upload": "data-entry upload",
 			"nz-upload.drag": "data-entry upload drag",
 			"nzBeforeUpload": "data-entry upload nzBeforeUpload",
@@ -142,7 +138,10 @@
 			"nzMultiple": "data-entry upload nzMultiple",
 			"nzShowButton": "data-entry upload nzShowButton",
 			"nzShowUploadList": "data-entry upload nzShowUploadList",
-			"nzWithCredentials": "data-entry upload nzWithCredentials"
+			"nzWithCredentials": "data-entry upload nzWithCredentials",
+			"nz-checkbox": "data-entry checkbox",
+			"nz-checkbox.group": "data-entry checkbox group",
+			"nz-checkbox.layout": "data-entry checkbox layout"
 		}
 	},
 	"data-display": {
@@ -219,6 +218,7 @@
 	"feedback": {
 		"title": "反馈",
 		"list": {
+			"nz-modal": "feedback modal",
 			"nz-alert.body": "feedback alert body",
 			"nz-alert": "feedback alert",
 			"nzAlertType": "feedback alert nzAlertType",
@@ -226,18 +226,17 @@
 			"nzClosable": "feedback alert nzClosable",
 			"nzMessage": "feedback alert nzMessage",
 			"nzShowIcon": "feedback alert nzShowIcon",
-			"nz-modal": "feedback modal",
 			"nz-popconfirm.button": "feedback popconfirm button",
 			"nz-popconfirm": "feedback popconfirm",
 			"nzCondition": "feedback popconfirm nzCondition",
+			"nz-spin": "feedback spin",
+			"nzSpinning": "feedback spin nzSpinning",
+			"nzTip": "feedback spin nzTip",
 			"nz-progress.circle": "feedback progress circle",
 			"nz-progress.dashboard": "feedback progress dashboard",
 			"nz-progress": "feedback progress",
 			"nz-progress.line": "feedback progress line",
-			"nzProgressStatus": "feedback progress nzProgressStatus",
-			"nz-spin": "feedback spin",
-			"nzSpinning": "feedback spin nzSpinning",
-			"nzTip": "feedback spin nzTip"
+			"nzProgressStatus": "feedback progress nzProgressStatus"
 		}
 	},
 	"other": {
@@ -245,9 +244,9 @@
 		"list": {
 			"nz-anchor": "other anchor",
 			"nz-anchor.link": "other anchor link",
-			"nz-back-top": "other back-top",
 			"nz-divider": "other divider",
-			"nz-divider.full": "other divider full"
+			"nz-divider.full": "other divider full",
+			"nz-back-top": "other back-top"
 		}
 	},
 	"attributes": {
@@ -287,6 +286,20 @@
 			"nzType": "attributes attr nzType",
 			"nzValue": "attributes attr nzValue",
 			"nzVisible": "attributes attr nzVisible"
+		}
+	},
+	"general": {
+		"title": "常规",
+		"list": {
+			"nz-button": "general button",
+			"nz-button.group": "general button group",
+			"nz-button.icon-text-left": "general button icon text left",
+			"nz-button.icon-text-right": "general button icon text right",
+			"nzGhost": "general button nzGhost",
+			"nz-button.type": "general button type",
+			"nz-icon.anticon": "general icon anticon",
+			"nz-icon": "general icon",
+			"nz-icon.spin": "general icon spin"
 		}
 	}
 }
