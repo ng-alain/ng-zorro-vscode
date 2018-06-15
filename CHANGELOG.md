@@ -1,3 +1,11 @@
+# 2.1.2
+
+- 增加 icon 图标：实心、描线，旋转属性
+- 优化数字输入框
+- 优化 `popconfirm` 按钮风格
+- 优化 `nzPlaceHolder`
+- 优化 `nzSelect`
+
 # 2.1.1
 
 - 增加 `date-picker`、`time-picker`、`tree-select` 组件

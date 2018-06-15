@@ -37,9 +37,37 @@ nz-button.icon-text-left | 按钮带图标且文本在左
 nz-button.icon-text-right | 按钮带图标且文本在右
 nzGhost | 幽灵属性，使按钮背景透明
 nz-button.type | 按钮带设置类型
-nz-icon.anticon | anticon样式
+nz-icon.anticon | icon图标
+nz-icon.circle-o | icon描线图标
+nz-icon.circle | icon实心图标
 nz-icon | 图标
+nzAnticonSpin | icon图标属性：旋转
 nz-icon.spin | 旋转图标
+
+### 导航
+
+Trigger | Description
+--- | ---
+nz-breadcrumb | 面包屑
+nz-breadcrumb.icon | 面包屑：图标
+nz-breadcrumb.item | 面包屑项
+nzSeparator | 分隔符自定义
+nz-affix | 固钉
+nz-affix.target | 固钉：指定滚动容器
+nz-dropdown.button | 下拉菜单按钮
+nz-dropdown.button.style | 下拉菜单按钮内风格
+nz-dropdown | 下拉菜单
+nzClickHide | 点击后是否隐藏菜单
+nz-menu | 导航菜单
+nz-menu.group | 导航菜单：组
+nz-menu.item-divider | 导航菜单：分割线
+nz-menu.item | 导航菜单：项
+nz-menu.submenu | 导航菜单：子项
+nz-pagination | 分页
+nzHideOnSinglePage | 只有一页时是否隐藏分页器
+nz-steps | 步骤条
+nz-steps.step-icon | 步骤条：项带图标
+nz-steps.step | 步骤条：项
 
 ### 布局
 
@@ -69,39 +97,109 @@ nz-grid.row | 栅格系统：行
 nz-layout | 布局
 nz-layout.sider | 布局：侧边栏
 
-### 导航
+### 反馈
 
 Trigger | Description
 --- | ---
-nz-affix | 固钉
-nz-affix.target | 固钉：指定滚动容器
-nz-breadcrumb | 面包屑
-nz-breadcrumb.icon | 面包屑：图标
-nz-breadcrumb.item | 面包屑项
-nzSeparator | 分隔符自定义
-nz-dropdown.button | 下拉菜单按钮
-nz-dropdown.button.style | 下拉菜单按钮内风格
-nz-dropdown | 下拉菜单
-nzClickHide | 点击后是否隐藏菜单
-nz-menu | 导航菜单
-nz-menu.group | 导航菜单：组
-nz-menu.item-divider | 导航菜单：分割线
-nz-menu.item | 导航菜单：项
-nz-menu.submenu | 导航菜单：子项
-nz-pagination | 分页
-nzHideOnSinglePage | 只有一页时是否隐藏分页器
-nz-steps | 步骤条
-nz-steps.step-icon | 步骤条：项带图标
-nz-steps.step | 步骤条：项
+nz-alert.body | 警告提示：含辅助性文字介绍
+nz-alert | 警告提示
+nzAlertType | 指定警告提示的样式
+nzBanner | 是否用作顶部公告
+nzClosable | 默认不显示关闭按钮
+nzMessage | 警告提示内容
+nzShowIcon | 是否显示辅助图标
+nz-modal | 对话框
+nz-popconfirm.button | 气泡确认框：按钮风格
+nz-popconfirm | 气泡确认框
+nzCondition | 气泡确认框：是否直接触发 nzOnConfirm 而不弹出框
+nz-progress.circle | 进度条：圆风格
+nz-progress.dashboard | 进度条：仪表盘风格
+nz-progress | 进度条
+nz-progress.line | 进度条：线风格
+nzProgressStatus | 进度条：状态
+nz-spin | 加载中
+nzSpinning | 加载中：是否旋转
+nzTip | 加载中：当作为包裹元素时，可以自定义描述文案
+
+### 数据显示
+
+Trigger | Description
+--- | ---
+nz-avatar | 头像
+nz-avatar.icon | 头像：图标
+nz-avatar.text | 头像：文本
+nz-badge | 徽标数
+nz-badge.dot | 徽标数：状态点风格
+nzBadgeStatus | 徽标数：设置 nz-badge 为状态点
+nzOverflowCount | 徽标数：展示封顶的数字值
+nzShowZero | 徽标数：当数值为 0 时，是否展示 Badge
+nz-card | 卡片
+nz-card.extra | 卡片：带右上角的操作区域
+nz-card.meta | 卡片：完整内容配置
+nzHoverable | 卡片：鼠标移过时可浮起
+nzTypeInner | 卡片：层级类型
+nz-card.simple | 卡片：最简单使用方法
+nz-card.tab | 卡片：带标签风格
+nz-calendar | 日历
+nz-carousel | 走马灯
+nz-collapse | 折叠面板
+nzAccordion | 折叠面板：是否每次只打开一个tab
+nzShowArrow | 折叠面板：是否展示箭头
+nz-list | 列表，向下为项
+nz-list.item-meta | 列表：元素
+nz-list.item | 列表：项，向下为元素
+nz-list.loadmore | 列表：加载更多示例
+nzItemLayout | 列表样式
+nzLoadMore | 列表：加载更多
+nzPagination | 列表：对应的 pagination 配置
+nzRenderItem | 列表：自定义列表项
+nz-list.simple | 列表：最简单的用法
+nz-popover | 气泡卡片
+nz-table | 表格
+nzExpand | 表格：可展开
+nzFilterMultiple | 表格：是否为多选过滤器
+nzFrontPagination | 表格：是否在前端对数据进行分页，如果在服务器分页数据或者需要在前端显示全部数据时传入 false
+nzLeft | 表格：左侧距离，用于固定左侧列
+nzNoResult | 表格：无数据时显示内容
+nzPageIndex | 表格：当前页码，可双向绑定
+nzPageSize | 表格：每页展示多少数据，可双向绑定
+nzRight | 表格：右侧距离，用于固定右侧列
+nzShowCheckbox | 表格：是否添加checkbox
+nzShowExpand | 表格：是否显示展开按钮
+nzShowFilter | 表格：是否显示过滤
+nzShowPagination | 表格：是否显示分页器
+nzShowQuickJumper | 表格：是否可以快速跳转至某页
+nzShowRowSelection | 表格：是否显示下拉选择
+nzShowSizeChanger | 表格：是否可以改变 nzPageSize
+nzShowSort | 表格：是否显示排序
+nzSort | 表格：当前排序状态，受控模式使用，可双向绑定
+nzWidth | 表格：指定该列宽度，表头未分组时可用
+nz-table.static-no-pager | 表格：不分页静态数据
+nz-tabs | 标签页
+nzAnimated | 标签页：是否使用动画切换 Tabs，在 &#x60;nzTabPosition&#x3D;top
+nzTabPosition | 标签页：页签位置
+nzTabsType | 标签页：页签的基本样式
+nz-tabs.tab | 标签页：项
+nz-tag | 标签
+nzColor | 标签：颜色
+nzTagMode | 标签：设定标签工作的模式
+nz-timeline | 时间轴
+nz-timeline.item | 时间轴：项
+nz-timeline.pending | 时间轴：最后一个
+nz-tree | 树形
+nz-tooltip | 文字提示
+nzMouseEnterDelay | 文字提示：鼠标移入后延时多少才显示 Tooltip，单位：秒
+nzMouseLeaveDelay | 文字提示：鼠标移出后延时多少才隐藏 Tooltip，单位：秒
+nz-tooltip.template | 文字提示：自定义内容风格
 
 ### 数据录入
 
 Trigger | Description
 --- | ---
+nz-cascader | 级联选择
 nz-autocomplete.custom-label | 自动完成：自定义选项
 nz-autocomplete.data-source | 自动完成：指定数据源
 nz-autocomplete | 自动完成
-nz-cascader | 级联选择
 nz-checkbox | 多选框
 nz-checkbox.group | 多选框组
 nz-checkbox.layout | 多选框组布局
@@ -138,6 +236,7 @@ nzSuffix | 带有后缀图标属性
 nz-input.prefix | 带有前缀图标的 input
 nz-input.suffix | 带有后缀图标的 input
 nz-input-number | 数字输入框
+nz-input-number.full | 数字输入框：完整示例
 nzFormatter | 指定输入框展示值的格式
 nzParser | 指定从 nzFormatter 里转换回数字的方式，和 nzFormatter 搭配使用
 nzPrecision | 数值精度
@@ -186,30 +285,6 @@ nzShowButton | 上传：是否展示上传按钮
 nzShowUploadList | 上传：是否展示 uploadList
 nzWithCredentials | 上传：上传请求时是否携带 cookie
 
-### 反馈
-
-Trigger | Description
---- | ---
-nz-alert.body | 警告提示：含辅助性文字介绍
-nz-alert | 警告提示
-nzAlertType | 指定警告提示的样式
-nzBanner | 是否用作顶部公告
-nzClosable | 默认不显示关闭按钮
-nzMessage | 警告提示内容
-nzShowIcon | 是否显示辅助图标
-nz-modal | 对话框
-nz-popconfirm.button | 气泡确认框：按钮风格
-nz-popconfirm | 气泡确认框
-nzCondition | 气泡确认框：是否直接触发 nzOnConfirm 而不弹出框
-nz-progress.circle | 进度条：圆风格
-nz-progress.dashboard | 进度条：仪表盘风格
-nz-progress | 进度条
-nz-progress.line | 进度条：线风格
-nzProgressStatus | 进度条：状态
-nz-spin | 加载中
-nzSpinning | 加载中：是否旋转
-nzTip | 加载中：当作为包裹元素时，可以自定义描述文案
-
 ### 其它
 
 Trigger | Description
@@ -219,77 +294,6 @@ nz-anchor.link | 锚点：链接项
 nz-back-top | 回到顶部
 nz-divider | 分割线
 nz-divider.full | 分割线：完整风格
-
-### 数据显示
-
-Trigger | Description
---- | ---
-nz-avatar | 头像
-nz-avatar.icon | 头像：图标
-nz-avatar.text | 头像：文本
-nz-badge | 徽标数
-nz-badge.dot | 徽标数：状态点风格
-nzBadgeStatus | 徽标数：设置 nz-badge 为状态点
-nzOverflowCount | 徽标数：展示封顶的数字值
-nzShowZero | 徽标数：当数值为 0 时，是否展示 Badge
-nz-calendar | 日历
-nz-card | 卡片
-nz-card.extra | 卡片：带右上角的操作区域
-nz-card.meta | 卡片：完整内容配置
-nzHoverable | 卡片：鼠标移过时可浮起
-nzTypeInner | 卡片：层级类型
-nz-card.simple | 卡片：最简单使用方法
-nz-card.tab | 卡片：带标签风格
-nz-carousel | 走马灯
-nz-collapse | 折叠面板
-nzAccordion | 折叠面板：是否每次只打开一个tab
-nzShowArrow | 折叠面板：是否展示箭头
-nz-list | 列表，向下为项
-nz-list.item-meta | 列表：元素
-nz-list.item | 列表：项，向下为元素
-nz-list.loadmore | 列表：加载更多示例
-nzItemLayout | 列表样式
-nzLoadMore | 列表：加载更多
-nzPagination | 列表：对应的 pagination 配置
-nzRenderItem | 列表：自定义列表项
-nz-list.simple | 列表：最简单的用法
-nz-popover | 气泡卡片
-nz-table | 表格
-nzExpand | 表格：可展开
-nzFilterMultiple | 表格：是否为多选过滤器
-nzFrontPagination | 表格：是否在前端对数据进行分页，如果在服务器分页数据或者需要在前端显示全部数据时传入 false
-nzLeft | 表格：左侧距离，用于固定左侧列
-nzNoResult | 表格：无数据时显示内容
-nzPageIndex | 表格：当前页码，可双向绑定
-nzPageSize | 表格：每页展示多少数据，可双向绑定
-nzRight | 表格：右侧距离，用于固定右侧列
-nzShowCheckbox | 表格：是否添加checkbox
-nzShowExpand | 表格：是否显示展开按钮
-nzShowFilter | 表格：是否显示过滤
-nzShowPagination | 表格：是否显示分页器
-nzShowQuickJumper | 表格：是否可以快速跳转至某页
-nzShowRowSelection | 表格：是否显示下拉选择
-nzShowSizeChanger | 表格：是否可以改变 nzPageSize
-nzShowSort | 表格：是否显示排序
-nzSort | 表格：当前排序状态，受控模式使用，可双向绑定
-nzWidth | 表格：指定该列宽度，表头未分组时可用
-nz-table.static-no-pager | 表格：不分页静态数据
-nz-tabs | 标签页
-nzAnimated | 标签页：是否使用动画切换 Tabs，在 &#x60;nzTabPosition&#x3D;top
-nzTabPosition | 标签页：页签位置
-nzTabsType | 标签页：页签的基本样式
-nz-tabs.tab | 标签页：项
-nz-tag | 标签
-nzColor | 标签：颜色
-nzTagMode | 标签：设定标签工作的模式
-nz-timeline | 时间轴
-nz-timeline.item | 时间轴：项
-nz-timeline.pending | 时间轴：最后一个
-nz-tooltip | 文字提示
-nzMouseEnterDelay | 文字提示：鼠标移入后延时多少才显示 Tooltip，单位：秒
-nzMouseLeaveDelay | 文字提示：鼠标移出后延时多少才隐藏 Tooltip，单位：秒
-nz-tooltip.template | 文字提示：自定义内容风格
-nz-tree | 树形
 
 ### 通用属性
 
