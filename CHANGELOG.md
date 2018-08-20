@@ -1,3 +1,11 @@
+# 2.2.0
+
+- 增加中英文同步描述，持续跟踪 [#56777](https://github.com/Microsoft/vscode/issues/56777) 希望支持不同语言环境独立包
+- 优化部分非重复性属性并入相应组件中：`nzDelay`、`nzGrid`、`nzTheme`
+- 优化 `nz-icon.anticon` 为 `nz-icon.class-name`
+- 优化 `nz-icon.spin` 为 `nzIconSpin`
+- 修复若干不正确模板
+
 # 2.1.3
 
 - 增加文本框搜索示例

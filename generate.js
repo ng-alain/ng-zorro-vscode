@@ -49,7 +49,9 @@ module.exports = function (options) {
                 ret.prefix = ret.prefix.substr(0, ret.prefix.length - 1);
 
             ret.key = fileNames.join(' ');
-            ret.description = options.i18n[fileNames[0]].list[ret.prefix] || ret.key || '';
+            const zhDesc = options.i18n[fileNames[0]].list[ret.prefix] || ret.key || '';
+            const enDesc = options.lans.en[fileNames[0]].list[ret.prefix] || '';
+            ret.description = `${zhDesc}(${enDesc})`;
             ret.escapedContent = getEscapedTemplateContent(ret.content);
 
             return ret;

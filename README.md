@@ -1,340 +1,334 @@
-# ng-zorro 的 vscode 代码片断
+# ng-zorro-antd VSCode Snippets
 
 ![Plugin in action](help.gif)
 
-当前版本只支持 `0.7.x`，低版本请自行下载 [cipchk.ng-zorro-vscode-1.1.4](https://github.com/cipchk/ng-zorro-vscode/raw/dev/cipchk.ng-zorro-vscode-1.1.4.vsix)本地安装。
+[中文](README.zh-CN.md)
 
-请至[Issuses](https://github.com/cipchk/ng-zorro-vscode/issues)提交可能遇到的问题或期望增加的代码片断。
+## Links
 
-**关于ng-alain部分**
+- [issues](https://github.com/cipchk/ng-zorro-vscode/issues)
+- If ng-alain users need additional installation [ng-alain-vscode](https://marketplace.visualstudio.com/items?itemName=cipchk.ng-alain-vscode)
 
-从 `2.1.0` 开始移除 ng-alain 部分，保持 ng-zorro-antd 的纯洁性，若你是 ng-alain 用户请另行安装 [ng-alain-vscode](https://marketplace.visualstudio.com/items?itemName=cipchk.ng-alain-vscode)，提供更丰富只针对 ng-alain 的代码片断。
+## Usage
 
-## 安装扩展
+Typing the beginning of `nz-` will automatically appear in the intellisense list; no more!
 
-按 `F1` 输入 `ext install ng-zorro-vscode` 后回车。
+- `nz-` prefix is complete fragment
+- `nz` (not `-`) prefix is attribute fragment
 
-## 如何使用?
+> To ensure ng-zorro-antd snippets suggestions are always on top in the suggestion list, add the following settings `"editor.snippetSuggestions": "top"`.
 
-你可以任意 `.html`、`.ts` 文件，输入 `nz-` 开头会自动出现在智能提醒列表当中；仅此而已！
-
-片断中带有 `attr-` 表示属性，`fn-` 表示事件。
-
-> 建议开启 `"editor.snippetSuggestions": "top"` 配置，可确保代码片断优先级高于内置。
-
-## 文档
-
-更多API接口请参考[ng-zorro-antd](https://github.com/NG-ZORRO/ng-zorro-antd)。
+## Document
 
 
-### 常规
+### General
 
 Trigger | Description
 --- | ---
-nz-button | 按钮
-nz-button.group | 按钮组
-nz-button.icon-text-left | 按钮带图标且文本在左
-nz-button.icon-text-right | 按钮带图标且文本在右
-nzGhost | 幽灵属性，使按钮背景透明
-nz-button.type | 按钮带设置类型
-nz-icon.anticon | icon图标
-nz-icon.circle-o | icon描线图标
-nz-icon.circle | icon实心图标
-nz-icon | 图标
-nzAnticonSpin | icon图标属性：旋转
-nz-icon.spin | 旋转图标
+nz-button | Button
+nz-button.group | Button group
+nz-button.icon-text-left | Button with icon and text on left
+nz-button.icon-text-right | Button with icon and text on right
+nzGhost | Button Property: make background transparent and invert text and border colors
+nz-button.type | Button include type
+nz-icon.circle-o | Icon full circle
+nz-icon.circle | Icon empty circle
+nz-icon.class-name | Icon class name
+nz-icon | Icon
+nzIconSpin | Icon Property: rotate icon
+nz-icon.spin | Rotate icon
 
-### 布局
-
-Trigger | Description
---- | ---
-nz-grid.col | 栅格系统：列
-nz-grid | 栅格系统
-nzAlign | flex 布局下的垂直对齐方式
-nzFlex | flex 布局模式
-nzGutter | 栅格间隔，支持数字或响应式对象 { xs: 8, sm: 16, md: 24, lg: 32, xl: 32, xxl: 32 }
-nzJustify | flex 布局下的水平排列方式
-nzLg | ≥992px 响应式栅格，可为栅格数或一个包含其他属性的对象
-nzMd | ≥768px 响应式栅格，可为栅格数或一个包含其他属性的对象
-nzOffset | 栅格左侧的间隔格数，间隔内不可以有栅格
-nzOrder | 栅格顺序，flex 布局模式下有效
-nzPull | 栅格向左移动格数
-nzPush | 栅格向右移动格数
-nzResponsive | 响应式属性
-nzSm | ≥576px 响应式栅格，可为栅格数或一个包含其他属性的对象
-nzSpan | 栅格占位格数，为 0 时相当于 display: none
-nzXl | ≥1200px 响应式栅格，可为栅格数或一个包含其他属性的对象
-nzXs | &lt;576px 响应式栅格，可为栅格数或一个包含其他属性的对象
-nzXXl | ≥1600px 响应式栅格，可为栅格数或一个包含其他属性的对象
-nz-grid.responsive | 响应式栅格系统
-nz-grid.row-flex | flex 响应式栅格系统
-nz-grid.row | 栅格系统：行
-nz-layout | 布局
-nz-layout.sider | 布局：侧边栏
-
-### 导航
+### Layout
 
 Trigger | Description
 --- | ---
-nz-affix | 固钉
-nz-affix.target | 固钉：指定滚动容器
-nz-breadcrumb | 面包屑
-nz-breadcrumb.icon | 面包屑：图标
-nz-breadcrumb.item | 面包屑项
-nzSeparator | 分隔符自定义
-nz-dropdown.button | 下拉菜单按钮
-nz-dropdown.button.style | 下拉菜单按钮内风格
-nz-dropdown | 下拉菜单
-nzClickHide | 点击后是否隐藏菜单
-nz-menu | 导航菜单
-nz-menu.group | 导航菜单：组
-nz-menu.item-divider | 导航菜单：分割线
-nz-menu.item | 导航菜单：项
-nz-menu.submenu | 导航菜单：子项
-nz-pagination | 分页
-nzHideOnSinglePage | 只有一页时是否隐藏分页器
-nz-steps | 步骤条
-nz-steps.step-icon | 步骤条：项带图标
-nz-steps.step | 步骤条：项
+nz-grid.col | Grids System: column
+nz-grid | Grids System
+nzAlign | Grid Property: the vertical alignment of the flex layout
+nzFlex | Grid Property: flex layout mode
+nzGutter | Grid Property: spacing between grids
+nzJustify | Grid Property: horizontal arrangement of the flex layout
+nzLg | Grid Property: ≥992px
+nzMd | Grid Property: ≥768px
+nzOffset | Grid Property: the number of cells to offset Col from the left
+nzOrder | Grid Property: raster order, used in &#x60;flex&#x60; layout mode
+nzPull | Grid Property: the number of cells that raster is moved to the left
+nzPush | Grid Property: the number of cells that raster is moved to the right
+nzResponsive | Grid Property: A full responsive attributes
+nzSm | Grid Property: ≥576px
+nzSpan | Grid Property: raster number of cells to occupy, 0 corresponds to &#x60;display: none&#x60;
+nzXl | Grid Property: ≥1200px
+nzXs | Grid Property: &lt;576px
+nzXXl | Grid Property: ≥1600px
+nz-grid.responsive | Responsive grid system
+nz-grid.row-flex | Responsive grid system flex layout
+nz-grid.row | Grids System: row
+nz-layout | Layout
+nz-layout.sider | Layout: sider
 
-### 数据录入
-
-Trigger | Description
---- | ---
-nz-autocomplete.custom-label | 自动完成：自定义选项
-nz-autocomplete.data-source | 自动完成：指定数据源
-nz-autocomplete | 自动完成
-nz-cascader | 级联选择
-nz-checkbox | 多选框
-nz-checkbox.group | 多选框组
-nz-checkbox.layout | 多选框组布局
-nz-date | 日期选择框
-nz-date.month | 月份选择框
-nzRenderExtraFooter | 日期属性：在面板中添加额外的页脚
-nzShowTime | 日期属性：增加时间选择功能
-nzShowToday | 日期属性：是否展示“今天”按钮
-nz-date.range | 日期范围选择框
-nz-date.week | 周选择框
-nz-form.control-responsive | 表单：控件为响应式
-nz-form.control | 表单：控件
-nz-form | 表单，向下为表单项
-nz-form.explain-error | 表单提示信息带响应式表单错误判断（最多同时只能显示一个）
-nz-form.explain | 表单提示信息（最多同时只能显示一个）
-nz-form.extra | 表单额外提示信息
-nz-form.item | 表单项，向下为标签和控件
-nz-form.label-responsive | 表单：标签为响应式
-nz-form.label | 表单：标签
-nzFormLayout | 表单布局
-nzHasFeedback | 是否反馈图标，一般 input 有效
-nzValidateStatus | 校验状态，默认自动从 nz-form-control 中的 NgControl 获得校验状态
-nz-form.split | 表单：分隔符
-nz-form.text | 表单：文本
-nz-input.addon-icon | 前后置标签按钮
-nz-input.addon-text | 前后置文本按钮
-nz-input | 输入框
-nz-input.group | 输入框组合
-nzAddonAfterIcon | 后置标签按钮，nzAddonAfter的快捷使用方式
-nzAddonBeforeIcon | 前置标签按钮，nzAddonBefore的快捷使用方式
-nzCompact | 是否用紧凑模式
-nzPrefix | 带有前缀图标属性
-nzSuffix | 带有后缀图标属性
-nz-input.prefix | 带有前缀图标的 input
-nz-input.search | 搜索示例
-nz-input.suffix | 带有后缀图标的 input
-nz-input-number | 数字输入框
-nz-input-number.full | 数字输入框：完整示例
-nzFormatter | 指定输入框展示值的格式
-nzParser | 指定从 nzFormatter 里转换回数字的方式，和 nzFormatter 搭配使用
-nzPrecision | 数值精度
-nz-mention | 提及
-nz-radio.button | 单选框按钮风格
-nz-radio | 单选框
-nz-radio.simple | 单选框最简单的用法
-nz-rate | 评分
-nzAllowHalf | 是否允许半选
-nz-select | 下拉选择器
-nzDropdownClassName | 下拉菜单的 className 属性
-nzDropdownMatchSelectWidth | 下拉菜单和选择器同宽
-nzDropdownStyle | 下拉菜单的 style 属性
-nzMaxMultipleCount | 下拉选择器：最多选中多少个标签
-nzMode | 下拉选择器：设置 nz-select 的模式
-nzNotFoundContent | 下拉选择器：当下拉列表为空时显示的内容
-nzOnSearch | 下拉选择器：文本框值变化时回调
-nzServerSearch | 下拉选择器：是否使用服务端搜索，当为 true 时，将不再在前端对 nz-option 进行过滤
-nzShowSearch | 下拉选择器：使单选模式可搜索
-nz-select.option-group | 下拉选择器：组
-nz-select.option | 下拉选择器：项
-nz-slider | 滑动输入条
-nz-switch | 开关
-nz-switch.icon | 开关：自定义图标
-nz-switch.text | 开关：自定义文本
-nz-textarea | 多选文本框
-nzAutosize | 多选文本框：自适应内容高度
-nz-time | 时间选择框
-nzAllowEmpty | 时间选择框属性：是否展示清除按钮
-nzHourStep | 时间选择框属性：小时选项间隔
-nzMinuteStep | 时间选择框属性：分钟选项间隔
-nzSecondStep | 时间选择框属性：秒选项间隔
-nz-transfer | 穿梭框
-nz-tree-select | 树选择
-nz-upload | 上传
-nz-upload.drag | 上传：拖拽风格
-nzBeforeUpload | 上传：上传文件之前的钩子，参数为上传的文件，若返回 false 则停止上传。注意：IE9 不支持该方法；注意：务必使用 &#x3D;&gt; 定义处理方法。
-nzCustomRequest | 上传：通过覆盖默认的上传行为，可以自定义自己的上传实现；注意：务必使用 &#x3D;&gt; 定义处理方法。
-nzFileList | 上传：文件列表，双向绑定
-nzFileType | 上传：限制文件类型
-nzFilterLimit | 上传：限制单次最多上传数量，nzMultiple 打开时有效；0 表示不限
-nzFilterSize | 上传：限制文件大小，单位：KB；0 表示不限
-nzListType | 上传：上传列表的内建样式
-nzMultiple | 上传：是否支持多选文件，ie10+ 支持。开启后按住 ctrl 可选择多个文件。
-nzShowButton | 上传：是否展示上传按钮
-nzShowUploadList | 上传：是否展示 uploadList
-nzWithCredentials | 上传：上传请求时是否携带 cookie
-
-### 数据显示
+### Navigation
 
 Trigger | Description
 --- | ---
-nz-avatar | 头像
-nz-avatar.icon | 头像：图标
-nz-avatar.text | 头像：文本
-nz-badge | 徽标数
-nz-badge.dot | 徽标数：状态点风格
-nzBadgeStatus | 徽标数：设置 nz-badge 为状态点
-nzOverflowCount | 徽标数：展示封顶的数字值
-nzShowZero | 徽标数：当数值为 0 时，是否展示 Badge
-nz-calendar | 日历
-nz-card | 卡片
-nz-card.extra | 卡片：带右上角的操作区域
-nz-card.meta | 卡片：完整内容配置
-nzHoverable | 卡片：鼠标移过时可浮起
-nzTypeInner | 卡片：层级类型
-nz-card.simple | 卡片：最简单使用方法
-nz-card.tab | 卡片：带标签风格
-nz-carousel | 走马灯
-nz-collapse | 折叠面板
-nzAccordion | 折叠面板：是否每次只打开一个tab
-nzShowArrow | 折叠面板：是否展示箭头
-nz-list | 列表，向下为项
-nz-list.item-meta | 列表：元素
-nz-list.item | 列表：项，向下为元素
-nz-list.loadmore | 列表：加载更多示例
-nzItemLayout | 列表样式
-nzLoadMore | 列表：加载更多
-nzPagination | 列表：对应的 pagination 配置
-nzRenderItem | 列表：自定义列表项
-nz-list.simple | 列表：最简单的用法
-nz-popover | 气泡卡片
-nz-table | 表格
-nzExpand | 表格：可展开
-nzFilterMultiple | 表格：是否为多选过滤器
-nzFrontPagination | 表格：是否在前端对数据进行分页，如果在服务器分页数据或者需要在前端显示全部数据时传入 false
-nzLeft | 表格：左侧距离，用于固定左侧列
-nzNoResult | 表格：无数据时显示内容
-nzPageIndex | 表格：当前页码，可双向绑定
-nzPageSize | 表格：每页展示多少数据，可双向绑定
-nzRight | 表格：右侧距离，用于固定右侧列
-nzShowCheckbox | 表格：是否添加checkbox
-nzShowExpand | 表格：是否显示展开按钮
-nzShowFilter | 表格：是否显示过滤
-nzShowPagination | 表格：是否显示分页器
-nzShowQuickJumper | 表格：是否可以快速跳转至某页
-nzShowRowSelection | 表格：是否显示下拉选择
-nzShowSizeChanger | 表格：是否可以改变 nzPageSize
-nzShowSort | 表格：是否显示排序
-nzSort | 表格：当前排序状态，受控模式使用，可双向绑定
-nzWidth | 表格：指定该列宽度，表头未分组时可用
-nz-table.static-no-pager | 表格：不分页静态数据
-nz-tabs | 标签页
-nzAnimated | 标签页：是否使用动画切换 Tabs，在 &#x60;nzTabPosition&#x3D;top
-nzTabPosition | 标签页：页签位置
-nzTabsType | 标签页：页签的基本样式
-nz-tabs.tab | 标签页：项
-nz-tag | 标签
-nzColor | 标签：颜色
-nzTagMode | 标签：设定标签工作的模式
-nz-timeline | 时间轴
-nz-timeline.item | 时间轴：项
-nz-timeline.pending | 时间轴：最后一个
-nz-tooltip | 文字提示
-nzMouseEnterDelay | 文字提示：鼠标移入后延时多少才显示 Tooltip，单位：秒
-nzMouseLeaveDelay | 文字提示：鼠标移出后延时多少才隐藏 Tooltip，单位：秒
-nz-tooltip.template | 文字提示：自定义内容风格
-nz-tree | 树形
+nz-affix | Affix
+nz-affix.target | Affix includes target
+nz-breadcrumb | Breadcrumb
+nz-breadcrumb.icon | Breadcrumb includes icon
+nz-breadcrumb.item | Breadcrumb includes item
+nzSeparator | Breadcrumb Property: Custom separator
+nz-dropdown.button | Dropdown button style
+nz-dropdown.button.style | Dropdown button style
+nz-dropdown | Dropdown
+nzClickHide | Dropdown Property: Whether hide menu when click
+nz-menu | Menu
+nz-menu.group | Menu group
+nz-menu.item-divider | Menu item divider
+nz-menu.item | Menu includes item
+nzTheme | Menu Property: color theme of the menu
+nz-menu.submenu | Menu includes submenu
+nz-pagination | Pagination
+nzHideOnSinglePage | Pagination Property: Whether to hide pager on single page
+nz-steps | Steps
+nz-steps.step-icon | Steps inlcudes step and icon
+nz-steps.step | Step in stepds
 
-### 反馈
+### Data Entry
 
 Trigger | Description
 --- | ---
-nz-alert.body | 警告提示：含辅助性文字介绍
-nz-alert | 警告提示
-nzAlertType | 指定警告提示的样式
-nzBanner | 是否用作顶部公告
-nzClosable | 默认不显示关闭按钮
-nzMessage | 警告提示内容
-nzShowIcon | 是否显示辅助图标
-nz-modal | 对话框
-nz-popconfirm.button | 气泡确认框：按钮风格
-nz-popconfirm | 气泡确认框
-nzCondition | 气泡确认框：是否直接触发 nzOnConfirm 而不弹出框
-nz-progress.circle | 进度条：圆风格
-nz-progress.dashboard | 进度条：仪表盘风格
-nz-progress | 进度条
-nz-progress.line | 进度条：线风格
-nzProgressStatus | 进度条：状态
-nz-spin | 加载中
-nzSpinning | 加载中：是否旋转
-nzTip | 加载中：当作为包裹元素时，可以自定义描述文案
+nz-autocomplete.custom-label | Autocomplete includes custom label
+nz-autocomplete.data-source | Autocomplete includes data source
+nz-autocomplete | Autocomplete
+nz-cascader | Cascader
+nz-checkbox | Checkbox
+nz-checkbox.group | Checkbox group
+nz-checkbox.layout | Checkbox use with Grid
+nz-date | Date picker
+nz-date.month | Month picker
+nzRenderExtraFooter | Date Property: render extra footer in panel
+nzShowTime | Date Property: to provide an additional time selection
+nzShowToday | Date Property: whether to show &#x27;Today&#x27; button
+nz-date.range | Date range picker
+nz-date.week | Week picker
+nz-form.control-responsive | Form: Control is responsive
+nz-form.control | Form: Control
+nz-form | Form
+nz-form.explain-error | Form: A error message and only one
+nz-form.explain | Form: Validation message and only one
+nz-form.extra | Form: The extra prompt message. It is similar to help.
+nz-form.item | Form: Used to separate the item in forms, contains label(optional) and control field.
+nz-form.label-responsive | Form：The label of the form item.
+nz-form.label | Form: The label of the form item, optional.
+nzFormLayout | From Property: Form layout
+nzHasFeedback | From Property: Used with &#x60;nzValidateStatus&#x60;, this option specifies the validation status icon. Recommended to be used only with Input.
+nzValidateStatus | From Property: Will generate status based on FormControl
+nz-form.split | Form: The split icon of &#x60;-&#x60;
+nz-form.text | Form: Text in &#x60;nz-form-control&#x60;
+nz-input.addon-icon | Input: addon icon
+nz-input.addon-text | Input: addon text
+nz-input | Input
+nz-input.group | Input group
+nzAddonAfterIcon | Input Property: The label icon&#x27;s ngClass displayed after
+nzAddonBeforeIcon | Input Property: The label icon&#x27;s ngClass displayed before
+nzCompact | Input Property: Whether use compact style
+nzPrefix | Input Property: The prefix icon for the Input
+nzSuffix | Input Property: The suffix icon for the Input
+nz-input.prefix | Input includes prefix
+nz-input.search | Input includes search
+nz-input.suffix | Input includes suffix
+nz-input-number | Input Number
+nz-input-number.full | Input Number inclues min,max,step etc
+nzFormatter | Input Number Property: Specifies the format of the value presented
+nzParser | Input Number Property: Specifies the value extracted from nzFormatter
+nzPrecision | Input Number Property: precision of input value
+nz-mention | Mention
+nz-radio.button | Radio button style
+nz-radio | Radio
+nz-radio.simple | Radio
+nz-rate | Rate
+nzAllowHalf | Rate Property: whether to allow semi selection
+nz-select | Select
+nzDropdownClassName | Select Property: className of dropdown menu
+nzDropdownMatchSelectWidth | Select Property: Whether dropdown&#x27;s with is same with select
+nzDropdownStyle | Select Property: style of dropdown menu
+nzMaxMultipleCount | Select Property: Max selected option can be selected
+nzMode | Select Property: Set mode of Select
+nzNotFoundContent | Select Property: Specify content to show when no result matches
+nzOnSearch | Select Property: Callback function that is fired when input changed
+nzServerSearch | Select Property: nz-option will not be filtered when set to true
+nzShowSearch | Select Property: Whether show search input in single mode
+nz-select.option-group | Select option group
+nz-select.option | Select option
+nz-slider | Slider
+nz-switch | Switch
+nz-switch.icon | Switch includes icon
+nz-switch.text | Switch includes text
+nz-textarea | Textarea
+nzAutosize | Textarea Property: Only used for &#x60;textarea&#x60;, height autosize feature, can be set to boolean or an object &#x60;{ minRows: 2, maxRows: 6 }&#x60;
+nz-time | Time picker
+nzAllowEmpty | Time Property: allow clearing text
+nzHourStep | Time Property: interval between hours in picker
+nzMinuteStep | Time Property: interval between minutes in picker
+nzSecondStep | Time Property: interval between seconds in picker
+nz-transfer | Transfer
+nz-tree-select | Tree Select
+nz-upload | Upload
+nz-upload.drag | Upload of drag
+nzBeforeUpload | Upload Property: Hook function which will be executed before uploading. Uploading will be stopped with false or a Observable. Warning：this function is not supported in &#x60;IE9&#x60;. NOTICE: Muse be use &#x60;&#x3D;&gt;&#x60; to define the method.
+nzCustomRequest | Upload Property: override for the default xhr behavior allowing for additional customization and ability to implement your own XMLHttpRequest. NOTICE: Muse be use &#x60;&#x3D;&gt;&#x60; to define the method.
+nzFileList | Upload Property: List of files, two-way data-binding
+nzFileType | Upload Property: limit file type, e.g: &#x60;image/png,image/jpeg,image/gif,image/bmp&#x60;
+nzFilterLimit | Upload Property: limit single upload count when &#x60;nzMultiple&#x60; has opened. &#x60;0&#x60; unlimited
+nzFilterSize | Upload Property: limit file size (KB). &#x60;0&#x60; unlimited
+nzListType | Upload Property: Built-in stylesheets
+nzMultiple | Upload Property: Whether to support selected multiple file. IE10+ supported. You can select multiple files with CTRL holding down while multiple is set to be true
+nzShowButton | Upload Property: Show upload button
+nzShowUploadList | Upload Property: Whether to show default upload list, could be an object to specify &#x60;showPreviewIcon&#x60; and &#x60;showRemoveIcon&#x60; individually
+nzWithCredentials | Upload Property: ajax upload with cookie sent
 
-### 其它
+### Data Display
 
 Trigger | Description
 --- | ---
-nz-anchor | 锚点
-nz-anchor.link | 锚点：链接项
-nz-back-top | 回到顶部
-nz-divider | 分割线
-nz-divider.full | 分割线：完整风格
+nz-avatar | Avatar
+nz-avatar.icon | Avatar includes icon
+nz-avatar.text | Avatar includes text
+nz-badge | Badge
+nz-badge.dot | Badge dot
+nzBadgeStatus | Badge Property: Set &#x60;nz-badge&#x60; as a status dot
+nzOverflowCount | Badge Property: Max count to show
+nzShowZero | Badge Property: Whether to show badge when &#x60;count&#x60; is zero
+nz-calendar | Calendar
+nz-card | Card
+nz-card.extra | Card includes extra
+nz-card.meta | Card includes meta
+nzHoverable | Card Property: Lift up when hovering card
+nzTypeInner | Card Property: inner card style
+nz-card.simple | Card
+nz-card.tab | Card includes tab
+nz-carousel | Carousel
+nz-collapse | Collapse
+nzAccordion | Collapse Property: Accordion mode
+nzShowArrow | Collapse Property: Display arrow or not
+nz-list | List
+nz-list.item-meta | List includes item and meta
+nz-list.item | List includes item
+nz-list.loadmore | List includes loadmore
+nzGrid | List Property: The grid type of list. You can set grid to something like &#x60;{gutter: 16, column: 4}&#x60;
+nzItemLayout | List Property: The layout of list, default is &#x60;horizontal&#x60;, If a vertical list is desired, set the itemLayout property to &#x60;vertical&#x60;
+nzLoadMore | List Property: Shows a load more content
+nzPagination | List Property: Shows a pagination content
+nzRenderItem | List Property: Custom item renderer
+nz-list.simple | List
+nz-popover | Popover
+nz-table | Table
+nzExpand | Table Property: Current expand status, double binding
+nzFilterMultiple | Table Property: Whether filter multiple mode
+nzFrontPagination | Table Property: Whether paginate data in front side，should set to &#x60;false&#x60; if you want to paginate data in server side or display all data in table
+nzLeft | Table Property: Left pixels, used to fixed column to left
+nzNoResult | Table Property: Custom no result content
+nzPageIndex | Table Property: pageIndex , double binding
+nzPageSize | Table Property: pageSize, double binding
+nzRight | Table Property: Right pixels, used to fixed column to right
+nzShowCheckbox | Table Property: Whether add nz-checkbox
+nzShowExpand | Table Property: Whether show expand icon
+nzShowFilter | Table Property: Whether show filter
+nzShowPagination | Table Property: Whether show pagination component in bottom of the table
+nzShowQuickJumper | Table Property: Determine whether you can jump to pages directly
+nzShowRowSelection | Table Property: Whether show selections
+nzShowSizeChanger | Table Property: Determine whether &#x60;nzPageSize&#x60; can be changed
+nzShowSort | Table Property: Whether show sort
+nzSort | Table Property: define current sort order
+nzWidth | Table Property: Specify the column width, can not used when grouping columns
+nz-table.static-no-pager | Table not pagination
+nz-tabs | Tabs
+nzAnimated | Tabs Property: Whether to change tabs with animation
+nzTabPosition | Tabs Property: Position of tabs
+nzTabsType | Tabs Property: Basic style of tabs
+nz-tabs.tab | Tabs includes tab
+nz-tag | Tag
+nzColor | Tag Property: Color of the Tag
+nzTagMode | Tag Property: Mode of tag
+nz-timeline | Timeline
+nz-timeline.item | Timeline includes item
+nz-timeline.pending | Timeline includes pending
+nz-tooltip | Tooltip
+nzMouseEnterDelay | Tooltip Property: Delay in seconds, before tooltip is shown on mouse enter
+nzMouseLeaveDelay | Tooltip Property: Delay in seconds, before tooltip is hidden on mouse leave
+nz-tooltip.template | Tooltip curstom template
+nz-tree | Tree
 
-### 通用属性
+### Feedback
 
 Trigger | Description
 --- | ---
-nzActions | 操作组
-nzAllowClear | 允许清空
-nzAutoFocus | 自动获得焦点
-nzBordered | 是否有边框
-nzCancelText | 取消文本
-nzChange | 变更时回调
-nzChecked | 是否被选中
-nzClick | 点击项触发
-nzDelay | 延迟显示加载效果的时间
-nzDescription | 描述内容
-nzDisabled | disable 状态
-nzExtra | 额外区域
-nzGrid | 栅格配置
-nzHeader | 头部
-nzIndeterminate | 设置选择框 indeterminate 状态
-nzLoading | 是否loading效果
-nzMax | 最大值
-nzMin | 最小值
-nzName | 名称
-nzOkText | 确认文本
-nzOnClose | 关闭时触发的回调函数
-nzPlaceHolder | 输入框占位文本
-nzPlacement | 位置
-nzSelect | 选中时触发
-nzSelectChange | 选中时触发
-nzShape | 形状
-nzSize | 大小
-nzStep | 步数
-nzTheme | 主题
-nzTotal | 总数
-nzTrigger | 触发方式
-nzType | 类型
-nzValue | 值
-nzVisible | 显示状态
+nz-alert.body | Alert custom body
+nz-alert | Alert
+nzAlertType | Alert Property: Type of Alert styles
+nzBanner | Alert Property: Whether to show as banner
+nzClosable | Alert Property: Whether Alert can be closed
+nzMessage | Alert Property: Content of Alert
+nzShowIcon | Alert Property: Whether to show icon
+nz-modal | Modal
+nz-popconfirm.button | Popconfirm button style
+nz-popconfirm | Popconfirm
+nzCondition | Popconfirm Property: Whether to directly emit &#x60;onConfirm&#x60; without showing Popconfirm
+nz-progress.circle | Progress includes circle
+nz-progress.dashboard | Progress includes dashboard
+nz-progress | Progress
+nz-progress.line | Progress includes line
+nzProgressStatus | Progress Property: to set the status of the Progress
+nz-spin | Spin
+nzDelay | Spin Property: specifies a delay in milliseconds for loading state
+nzSpinning | Spin Property: whether Spin is spinning
+nzTip | Spin Property: customize description content when Spin has children
 
-## 更新日志
+### Other
 
-见[CHANGELOG.md](CHANGELOG.md)
+Trigger | Description
+--- | ---
+nz-anchor | Anchor
+nz-anchor.link | Anchor includes link
+nz-back-top | Back to Top
+nz-divider | Divider
+nz-divider.full | Divider
+
+### General Property
+
+Trigger | Description
+--- | ---
+nzActions | General Property: The action list
+nzAllowClear | General Property: whether allow clear
+nzAutoFocus | General Property: get focus when component mounted
+nzBordered | General Property: Set border style
+nzCancelText | General Property: Text of the Cancel button
+nzChange | General Property: Callback for when component is changed
+nzChecked | General Property: Checked status, double binding
+nzClick | General Property: a click callback function
+nzDescription | General Property: The description
+nzDisabled | General Property: Whether disabled
+nzExtra | General Property: The extra content
+nzHeader | General Property: The header renderer
+nzIndeterminate | General Property: set the status of indeterminate
+nzLoading | General Property: set the loading status
+nzMax | General Property: max value
+nzMin | General Property: min value
+nzName | General Property: name vlaue
+nzOkText | General Property: Text of the OK button
+nzOnClose | General Property: a close callback function
+nzPlaceHolder | General Property: set the placeholder text
+nzPlacement | General Property: set the placement
+nzSelect | General Property: a select callback
+nzSelectChange | General Property: a select callback function
+nzShape | General Property: the shape
+nzSize | General Property: the size
+nzStep | General Property: step value
+nzTotal | General Property: total value
+nzTrigger | General Property: specify the customized trigger
+nzType | General Property: the type value
+nzValue | General Property: the value
+nzVisible | General Property: Whether the component is visible or not.
+
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md).

@@ -1,30 +1,24 @@
-# ng-zorro 的 vscode 代码片断
+# ng-zorro-antd VSCode Snippets
 
 ![Plugin in action](help.gif)
 
-当前版本只支持 `0.7.x`，低版本请自行下载 [cipchk.ng-zorro-vscode-1.1.4](https://github.com/cipchk/ng-zorro-vscode/raw/dev/cipchk.ng-zorro-vscode-1.1.4.vsix)本地安装。
+[中文](README.zh-CN.md)
 
-请至[Issuses](https://github.com/cipchk/ng-zorro-vscode/issues)提交可能遇到的问题或期望增加的代码片断。
+## Links
 
-**关于ng-alain部分**
+- [issues](https://github.com/cipchk/ng-zorro-vscode/issues)
+- If ng-alain users need additional installation [ng-alain-vscode](https://marketplace.visualstudio.com/items?itemName=cipchk.ng-alain-vscode)
 
-从 `2.1.0` 开始移除 ng-alain 部分，保持 ng-zorro-antd 的纯洁性，若你是 ng-alain 用户请另行安装 [ng-alain-vscode](https://marketplace.visualstudio.com/items?itemName=cipchk.ng-alain-vscode)，提供更丰富只针对 ng-alain 的代码片断。
+## Usage
 
-## 安装扩展
+Typing the beginning of `nz-` will automatically appear in the intellisense list; no more!
 
-按 `F1` 输入 `ext install ng-zorro-vscode` 后回车。
+- `nz-` prefix is complete fragment
+- `nz` (not `-`) prefix is attribute fragment
 
-## 如何使用?
+> To ensure ng-zorro-antd snippets suggestions are always on top in the suggestion list, add the following settings `"editor.snippetSuggestions": "top"`.
 
-你可以任意 `.html`、`.ts` 文件，输入 `nz-` 开头会自动出现在智能提醒列表当中；仅此而已！
-
-片断中带有 `attr-` 表示属性，`fn-` 表示事件。
-
-> 建议开启 `"editor.snippetSuggestions": "top"` 配置，可确保代码片断优先级高于内置。
-
-## 文档
-
-更多API接口请参考[ng-zorro-antd](https://github.com/NG-ZORRO/ng-zorro-antd)。
+## Document
 
 {{#each @global.i18n}}
 
@@ -37,6 +31,6 @@ Trigger | Description
 {{/each}}
 {{/each}}
 
-## 更新日志
+## Changelog
 
-见[CHANGELOG.md](CHANGELOG.md)
+See [CHANGELOG.md](CHANGELOG.md).
