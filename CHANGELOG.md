@@ -1,3 +1,11 @@
+# 2.3.0
+
+- 增加 `Drawer`、`Skeleton` 组件
+- 增加若干示例
+  - `steps` 自定义点
+  - `upload` 文件夹上传属性
+  - `timeline` 自定义点
+
 # 2.2.0
 
 - 增加中英文同步描述，持续跟踪 [#56777](https://github.com/Microsoft/vscode/issues/56777) 希望支持不同语言环境独立包

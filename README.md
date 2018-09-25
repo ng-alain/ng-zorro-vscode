@@ -42,6 +42,8 @@ nz-icon.spin | Rotate icon
 
 Trigger | Description
 --- | ---
+nz-layout | Layout
+nz-layout.sider | Layout: sider
 nz-grid.col | Grids System: column
 nz-grid | Grids System
 nzAlign | Grid Property: the vertical alignment of the flex layout
@@ -63,8 +65,6 @@ nzXXl | Grid Property: ≥1600px
 nz-grid.responsive | Responsive grid system
 nz-grid.row-flex | Responsive grid system flex layout
 nz-grid.row | Grids System: row
-nz-layout | Layout
-nz-layout.sider | Layout: sider
 
 ### Navigation
 
@@ -76,19 +76,21 @@ nz-breadcrumb | Breadcrumb
 nz-breadcrumb.icon | Breadcrumb includes icon
 nz-breadcrumb.item | Breadcrumb includes item
 nzSeparator | Breadcrumb Property: Custom separator
-nz-dropdown.button | Dropdown button style
-nz-dropdown.button.style | Dropdown button style
-nz-dropdown | Dropdown
-nzClickHide | Dropdown Property: Whether hide menu when click
 nz-menu | Menu
 nz-menu.group | Menu group
 nz-menu.item-divider | Menu item divider
 nz-menu.item | Menu includes item
 nzTheme | Menu Property: color theme of the menu
 nz-menu.submenu | Menu includes submenu
+nz-dropdown.button | Dropdown button style
+nz-dropdown.button.style | Dropdown button style
+nz-dropdown | Dropdown
+nzClickHide | Dropdown Property: Whether hide menu when click
 nz-pagination | Pagination
 nzHideOnSinglePage | Pagination Property: Whether to hide pager on single page
+nz-steps.custom-dot | Steps: Custom dot
 nz-steps | Steps
+nzStartIndex | Steps Property: To specify the starting number
 nz-steps.step-icon | Steps inlcudes step and icon
 nz-steps.step | Step in stepds
 
@@ -103,13 +105,6 @@ nz-cascader | Cascader
 nz-checkbox | Checkbox
 nz-checkbox.group | Checkbox group
 nz-checkbox.layout | Checkbox use with Grid
-nz-date | Date picker
-nz-date.month | Month picker
-nzRenderExtraFooter | Date Property: render extra footer in panel
-nzShowTime | Date Property: to provide an additional time selection
-nzShowToday | Date Property: whether to show &#x27;Today&#x27; button
-nz-date.range | Date range picker
-nz-date.week | Week picker
 nz-form.control-responsive | Form: Control is responsive
 nz-form.control | Form: Control
 nz-form | Form
@@ -124,6 +119,18 @@ nzHasFeedback | From Property: Used with &#x60;nzValidateStatus&#x60;, this opti
 nzValidateStatus | From Property: Will generate status based on FormControl
 nz-form.split | Form: The split icon of &#x60;-&#x60;
 nz-form.text | Form: Text in &#x60;nz-form-control&#x60;
+nz-date | Date picker
+nz-date.month | Month picker
+nzRenderExtraFooter | Date Property: render extra footer in panel
+nzShowTime | Date Property: to provide an additional time selection
+nzShowToday | Date Property: whether to show &#x27;Today&#x27; button
+nz-date.range | Date range picker
+nz-date.week | Week picker
+nz-input-number | Input Number
+nz-input-number.full | Input Number inclues min,max,step etc
+nzFormatter | Input Number Property: Specifies the format of the value presented
+nzParser | Input Number Property: Specifies the value extracted from nzFormatter
+nzPrecision | Input Number Property: precision of input value
 nz-input.addon-icon | Input: addon icon
 nz-input.addon-text | Input: addon text
 nz-input | Input
@@ -136,17 +143,14 @@ nzSuffix | Input Property: The suffix icon for the Input
 nz-input.prefix | Input includes prefix
 nz-input.search | Input includes search
 nz-input.suffix | Input includes suffix
-nz-input-number | Input Number
-nz-input-number.full | Input Number inclues min,max,step etc
-nzFormatter | Input Number Property: Specifies the format of the value presented
-nzParser | Input Number Property: Specifies the value extracted from nzFormatter
-nzPrecision | Input Number Property: precision of input value
-nz-mention | Mention
 nz-radio.button | Radio button style
 nz-radio | Radio
 nz-radio.simple | Radio
 nz-rate | Rate
 nzAllowHalf | Rate Property: whether to allow semi selection
+nz-mention | Mention
+nz-skeleton | Skeleton
+nz-skeleton.full | Skeleton includes all properties
 nz-select | Select
 nzDropdownClassName | Select Property: className of dropdown menu
 nzDropdownMatchSelectWidth | Select Property: Whether dropdown&#x27;s with is same with select
@@ -163,19 +167,20 @@ nz-slider | Slider
 nz-switch | Switch
 nz-switch.icon | Switch includes icon
 nz-switch.text | Switch includes text
-nz-textarea | Textarea
-nzAutosize | Textarea Property: Only used for &#x60;textarea&#x60;, height autosize feature, can be set to boolean or an object &#x60;{ minRows: 2, maxRows: 6 }&#x60;
 nz-time | Time picker
 nzAllowEmpty | Time Property: allow clearing text
 nzHourStep | Time Property: interval between hours in picker
 nzMinuteStep | Time Property: interval between minutes in picker
 nzSecondStep | Time Property: interval between seconds in picker
-nz-transfer | Transfer
+nz-textarea | Textarea
+nzAutosize | Textarea Property: Only used for &#x60;textarea&#x60;, height autosize feature, can be set to boolean or an object &#x60;{ minRows: 2, maxRows: 6 }&#x60;
 nz-tree-select | Tree Select
+nz-transfer | Transfer
 nz-upload | Upload
 nz-upload.drag | Upload of drag
 nzBeforeUpload | Upload Property: Hook function which will be executed before uploading. Uploading will be stopped with false or a Observable. Warning：this function is not supported in &#x60;IE9&#x60;. NOTICE: Muse be use &#x60;&#x3D;&gt;&#x60; to define the method.
 nzCustomRequest | Upload Property: override for the default xhr behavior allowing for additional customization and ability to implement your own XMLHttpRequest. NOTICE: Muse be use &#x60;&#x3D;&gt;&#x60; to define the method.
+nzDirectory | Upload Property: Support upload whole directory 
 nzFileList | Upload Property: List of files, two-way data-binding
 nzFileType | Upload Property: limit file type, e.g: &#x60;image/png,image/jpeg,image/gif,image/bmp&#x60;
 nzFilterLimit | Upload Property: limit single upload count when &#x60;nzMultiple&#x60; has opened. &#x60;0&#x60; unlimited
@@ -221,6 +226,13 @@ nzPagination | List Property: Shows a pagination content
 nzRenderItem | List Property: Custom item renderer
 nz-list.simple | List
 nz-popover | Popover
+nz-tag | Tag
+nzColor | Tag Property: Color of the Tag
+nzTagMode | Tag Property: Mode of tag
+nz-timeline | Timeline
+nz-timeline.item-custom-dot | Timeline: Custom dot of item
+nz-timeline.item | Timeline includes item
+nz-timeline.pending | Timeline includes pending
 nz-table | Table
 nzExpand | Table Property: Current expand status, double binding
 nzFilterMultiple | Table Property: Whether filter multiple mode
@@ -241,21 +253,15 @@ nzShowSort | Table Property: Whether show sort
 nzSort | Table Property: define current sort order
 nzWidth | Table Property: Specify the column width, can not used when grouping columns
 nz-table.static-no-pager | Table not pagination
+nz-tooltip | Tooltip
+nzMouseEnterDelay | Tooltip Property: Delay in seconds, before tooltip is shown on mouse enter
+nzMouseLeaveDelay | Tooltip Property: Delay in seconds, before tooltip is hidden on mouse leave
+nz-tooltip.template | Tooltip curstom template
 nz-tabs | Tabs
 nzAnimated | Tabs Property: Whether to change tabs with animation
 nzTabPosition | Tabs Property: Position of tabs
 nzTabsType | Tabs Property: Basic style of tabs
 nz-tabs.tab | Tabs includes tab
-nz-tag | Tag
-nzColor | Tag Property: Color of the Tag
-nzTagMode | Tag Property: Mode of tag
-nz-timeline | Timeline
-nz-timeline.item | Timeline includes item
-nz-timeline.pending | Timeline includes pending
-nz-tooltip | Tooltip
-nzMouseEnterDelay | Tooltip Property: Delay in seconds, before tooltip is shown on mouse enter
-nzMouseLeaveDelay | Tooltip Property: Delay in seconds, before tooltip is hidden on mouse leave
-nz-tooltip.template | Tooltip curstom template
 nz-tree | Tree
 
 ### Feedback
@@ -269,15 +275,16 @@ nzBanner | Alert Property: Whether to show as banner
 nzClosable | Alert Property: Whether Alert can be closed
 nzMessage | Alert Property: Content of Alert
 nzShowIcon | Alert Property: Whether to show icon
+nz-drawer | Drawer
 nz-modal | Modal
-nz-popconfirm.button | Popconfirm button style
-nz-popconfirm | Popconfirm
-nzCondition | Popconfirm Property: Whether to directly emit &#x60;onConfirm&#x60; without showing Popconfirm
 nz-progress.circle | Progress includes circle
 nz-progress.dashboard | Progress includes dashboard
 nz-progress | Progress
 nz-progress.line | Progress includes line
 nzProgressStatus | Progress Property: to set the status of the Progress
+nz-popconfirm.button | Popconfirm button style
+nz-popconfirm | Popconfirm
+nzCondition | Popconfirm Property: Whether to directly emit &#x60;onConfirm&#x60; without showing Popconfirm
 nz-spin | Spin
 nzDelay | Spin Property: specifies a delay in milliseconds for loading state
 nzSpinning | Spin Property: whether Spin is spinning
@@ -289,9 +296,9 @@ Trigger | Description
 --- | ---
 nz-anchor | Anchor
 nz-anchor.link | Anchor includes link
-nz-back-top | Back to Top
 nz-divider | Divider
 nz-divider.full | Divider
+nz-back-top | Back to Top
 
 ### General Property
 

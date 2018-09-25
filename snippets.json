@@ -1,6 +1,167 @@
 {
  
-     "general button": {
+     "layout layout": {
+        "prefix": "nz-layout",
+        "body": "<nz-layout>\r\n  <nz-header>\r\n    $0\r\n  </nz-header>\r\n  <nz-content>\r\n\r\n  </nz-content>\r\n  <nz-footer>\r\n\r\n  </nz-footer>\r\n</nz-layout>",
+        "description": "布局(Layout)",
+        "scope": ""
+    }
+
+    , "layout layout sider": {
+        "prefix": "nz-layout.sider",
+        "body": "<nz-sider [nzCollapsible]=\"true\"${1: [nzWidth]=\"${2:200}\"}${3: [nzCollapsedWidth]=\"${4:64}\"}>\r\n  $0\r\n</nz-sider>",
+        "description": "布局：侧边栏(Layout: sider)",
+        "scope": ""
+    }
+
+    , "layout grid col": {
+        "prefix": "nz-grid.col",
+        "body": "<nz-col${1: nzSpan=\"${2:0-24}\" }>\n  $0\n</nz-col>",
+        "description": "栅格系统：列(Grids System: column)",
+        "scope": ""
+    }
+
+    , "layout grid": {
+        "prefix": "nz-grid",
+        "body": "<nz-row${1: nzGutter=\"${2|0,8,16,24,32,64|}\"}>\n  <nz-col nzSpan=\"${3:0-24}\"${4: nzOffset=\"${5:0-24}\"}>\n    $0\n  </nz-col>\n</nz-row>",
+        "description": "栅格系统(Grids System)",
+        "scope": ""
+    }
+
+    , "layout grid nzAlign": {
+        "prefix": "nzAlign",
+        "body": "nzAlign=\"${1|top,middle,bottom|}\"",
+        "description": "flex 布局下的垂直对齐方式(Grid Property: the vertical alignment of the flex layout)",
+        "scope": ""
+    }
+
+    , "layout grid nzFlex": {
+        "prefix": "nzFlex",
+        "body": "nzType=\"flex\"",
+        "description": "flex 布局模式(Grid Property: flex layout mode)",
+        "scope": ""
+    }
+
+    , "layout grid nzGutter": {
+        "prefix": "nzGutter",
+        "body": "nzGutter=\"${1|8,16,24,32,64,object|}\"",
+        "description": "栅格间隔，支持数字或响应式对象 { xs: 8, sm: 16, md: 24, lg: 32, xl: 32, xxl: 32 }(Grid Property: spacing between grids)",
+        "scope": ""
+    }
+
+    , "layout grid nzJustify": {
+        "prefix": "nzJustify",
+        "body": "nzJustify=\"${1|center,space-around,space-between,start,end|}\"",
+        "description": "flex 布局下的水平排列方式(Grid Property: horizontal arrangement of the flex layout)",
+        "scope": ""
+    }
+
+    , "layout grid nzLg": {
+        "prefix": "nzLg",
+        "body": "nzLg=\"${1:1-24}\"",
+        "description": "≥992px 响应式栅格，可为栅格数或一个包含其他属性的对象(Grid Property: ≥992px)",
+        "scope": ""
+    }
+
+    , "layout grid nzMd": {
+        "prefix": "nzMd",
+        "body": "nzMd=\"${1:1-24}\"",
+        "description": "≥768px 响应式栅格，可为栅格数或一个包含其他属性的对象(Grid Property: ≥768px)",
+        "scope": ""
+    }
+
+    , "layout grid nzOffset": {
+        "prefix": "nzOffset",
+        "body": "nzOffset=\"${1|8,16,24,32,64|}\"",
+        "description": "栅格左侧的间隔格数，间隔内不可以有栅格(Grid Property: the number of cells to offset Col from the left)",
+        "scope": ""
+    }
+
+    , "layout grid nzOrder": {
+        "prefix": "nzOrder",
+        "body": "nzOrder=\"${1|8,16,24,32,64|}\"",
+        "description": "栅格顺序，flex 布局模式下有效(Grid Property: raster order, used in `flex` layout mode)",
+        "scope": ""
+    }
+
+    , "layout grid nzPull": {
+        "prefix": "nzPull",
+        "body": "nzPull=\"${1|8,16,24,32,64|}\"",
+        "description": "栅格向左移动格数(Grid Property: the number of cells that raster is moved to the left)",
+        "scope": ""
+    }
+
+    , "layout grid nzPush": {
+        "prefix": "nzPush",
+        "body": "nzPush=\"${1|8,16,24,32,64|}\"",
+        "description": "栅格向右移动格数(Grid Property: the number of cells that raster is moved to the right)",
+        "scope": ""
+    }
+
+    , "layout grid nzResponsive": {
+        "prefix": "nzResponsive",
+        "body": "nzXs=\"${1:1-24}\" nzSm=\"${2:1-24}\" nzMd=\"${3:1-24}\" nzLg=\"${4:1-24}\" nzXl=\"${5:1-24}\" nzXXl=\"${6:1-24}\"",
+        "description": "响应式属性(Grid Property: A full responsive attributes)",
+        "scope": ""
+    }
+
+    , "layout grid nzSm": {
+        "prefix": "nzSm",
+        "body": "nzSm=\"${1:1-24}\"",
+        "description": "≥576px 响应式栅格，可为栅格数或一个包含其他属性的对象(Grid Property: ≥576px)",
+        "scope": ""
+    }
+
+    , "layout grid nzSpan": {
+        "prefix": "nzSpan",
+        "body": "nzSpan=\"${1|0,8,16,24,32,64|}\"",
+        "description": "栅格占位格数，为 0 时相当于 display: none(Grid Property: raster number of cells to occupy, 0 corresponds to `display: none`)",
+        "scope": ""
+    }
+
+    , "layout grid nzXl": {
+        "prefix": "nzXl",
+        "body": "nzXl=\"${1:1-24}\"",
+        "description": "≥1200px 响应式栅格，可为栅格数或一个包含其他属性的对象(Grid Property: ≥1200px)",
+        "scope": ""
+    }
+
+    , "layout grid nzXs": {
+        "prefix": "nzXs",
+        "body": "nzXs=\"${1:1-24}\"",
+        "description": "<576px 响应式栅格，可为栅格数或一个包含其他属性的对象(Grid Property: <576px)",
+        "scope": ""
+    }
+
+    , "layout grid nzXXl": {
+        "prefix": "nzXXl",
+        "body": "nzXXl=\"${1:1-24}\"",
+        "description": "≥1600px 响应式栅格，可为栅格数或一个包含其他属性的对象(Grid Property: ≥1600px)",
+        "scope": ""
+    }
+
+    , "layout grid responsive": {
+        "prefix": "nz-grid.responsive",
+        "body": "<nz-col nzXs=\"${1:1-24}\" nzSm=\"${2:1-24}\" nzMd=\"${3:1-24}\" nzLg=\"${4:1-24}\" nzXl=\"${5:1-24}\" nzXXl=\"${6:1-24}\">\n  $0\n</nz-col>",
+        "description": "响应式栅格系统(Responsive grid system)",
+        "scope": ""
+    }
+
+    , "layout grid row flex": {
+        "prefix": "nz-grid.row-flex",
+        "body": "<nz-row nzType=\"flex\"${1: nzJustify=\"${2|start,center,end,space-between,space-around|}\"}${3: nzAlign=\"${4|top,middle,bottom|}\"}>\r\n  $0\r\n</nz-row>",
+        "description": "响应式栅格系统Flex布局(Responsive grid system flex layout)",
+        "scope": ""
+    }
+
+    , "layout grid row": {
+        "prefix": "nz-grid.row",
+        "body": "<nz-row${1: nzGutter=\"${2|8,16,24,32,64|}\"}>\n  $0\n</nz-row>",
+        "description": "栅格系统：行(Grids System: row)",
+        "scope": ""
+    }
+
+    , "general button": {
         "prefix": "nz-button",
         "body": "<button (click)=\"${2}\" nz-button$0>$1</button>",
         "description": "按钮(Button)",
@@ -81,6 +242,167 @@
         "prefix": "nz-icon.spin",
         "body": "<i class=\"anticon anticon-spin anticon-${1|edit,delete,plus,minus,question,close,check,warning,copy,search,user|}\"></i>",
         "description": "旋转图标(Rotate icon)",
+        "scope": ""
+    }
+
+    , "navigation affix": {
+        "prefix": "nz-affix",
+        "body": "<nz-affix${1: [nzOffsetTop]=\"${2}\"}${3: (nzChange)=\"onChange(\\$event)\"}>\r\n  $0\r\n</nz-affix>",
+        "description": "固钉(Affix)",
+        "scope": ""
+    }
+
+    , "navigation affix target": {
+        "prefix": "nz-affix.target",
+        "body": "<div class=\"scrollable-container\" #target>\r\n  <nz-affix [nzTarget]=\"target\"${1: [nzOffsetTop]=\"${2}\"}${3: (nzChange)=\"onChange(\\$event)\"}>\r\n    $0\r\n  </nz-affix>\r\n</div>",
+        "description": "固钉：指定滚动容器(Affix includes target)",
+        "scope": ""
+    }
+
+    , "navigation breadcrumb": {
+        "prefix": "nz-breadcrumb",
+        "body": "<nz-breadcrumb>\r\n  <nz-breadcrumb-item><a routerLink=\"/${2}\">${1}</a></nz-breadcrumb-item>\r\n  $0\r\n</nz-breadcrumb>",
+        "description": "面包屑(Breadcrumb)",
+        "scope": ""
+    }
+
+    , "navigation breadcrumb icon": {
+        "prefix": "nz-breadcrumb.icon",
+        "body": "<nz-breadcrumb-item>\r\n  <a [routerLink]=\"['/${1}']\"><i class=\"anticon anticon-${2:home}\"></i>${3:<span>${4:首页}</span>}</a>\r\n</nz-breadcrumb-item>\r\n$0",
+        "description": "面包屑：图标(Breadcrumb includes icon)",
+        "scope": ""
+    }
+
+    , "navigation breadcrumb item": {
+        "prefix": "nz-breadcrumb.item",
+        "body": "<nz-breadcrumb-item><a routerLink=\"/${2}\">${1}</a></nz-breadcrumb-item>\r\n$0",
+        "description": "面包屑项(Breadcrumb includes item)",
+        "scope": ""
+    }
+
+    , "navigation breadcrumb nzSeparator": {
+        "prefix": "nzSeparator",
+        "body": "nzSeparator=\"${1:>}\"",
+        "description": "面包屑属性：分隔符自定义(Breadcrumb Property: Custom separator)",
+        "scope": ""
+    }
+
+    , "navigation dropdown button": {
+        "prefix": "nz-dropdown.button",
+        "body": "<nz-dropdown-button>\r\n  ${1}\r\n  <ul nz-menu>\r\n    <li nz-menu-item>$0</li>\r\n    <li nz-menu-item><a>2nd menu item</a></li>\r\n  </ul>\r\n</nz-dropdown-button>",
+        "description": "下拉菜单按钮(Dropdown button style)",
+        "scope": ""
+    }
+
+    , "navigation dropdown button.style": {
+        "prefix": "nz-dropdown.button.style",
+        "body": "<nz-dropdown>\r\n  <button nz-button nz-dropdown><span>${1}</span><i class=\"anticon anticon-down\"></i></button>\r\n  <ul nz-menu>\r\n    <li nz-menu-item>$0</li>\r\n    <li nz-menu-item><a>2nd menu item</a></li>\r\n  </ul>\r\n</nz-dropdown>",
+        "description": "下拉菜单按钮内风格(Dropdown button style)",
+        "scope": ""
+    }
+
+    , "navigation dropdown": {
+        "prefix": "nz-dropdown",
+        "body": "<nz-dropdown>\r\n  <a nz-dropdown>${1} <i class=\"anticon anticon-down\"></i></a>\r\n  <ul nz-menu nzSelectable>\r\n    <li nz-menu-item>$0</li>\r\n    <li nz-menu-item><a>2nd menu item</a></li>\r\n  </ul>\r\n</nz-dropdown>",
+        "description": "下拉菜单(Dropdown)",
+        "scope": ""
+    }
+
+    , "navigation dropdown nzClickHide": {
+        "prefix": "nzClickHide",
+        "body": "nzClickHide=\"false\"",
+        "description": "点击后是否隐藏菜单(Dropdown Property: Whether hide menu when click)",
+        "scope": ""
+    }
+
+    , "navigation menu": {
+        "prefix": "nz-menu",
+        "body": "<ul nz-menu>\r\n  <li nz-menu-item>${1:菜单项}</li>\r\n  <li nz-menu-divider></li>\r\n  <li nz-submenu>\r\n    <span title>子菜单</span>\r\n    <ul>\r\n      <li nz-menu-item>子菜单项</li>\r\n    </ul>\r\n  </li>\r\n</ul>",
+        "description": "导航菜单(Menu)",
+        "scope": ""
+    }
+
+    , "navigation menu group": {
+        "prefix": "nz-menu.group",
+        "body": "<li nz-menu-group>\r\n  <span title>${1}</span>\r\n  $0\r\n</li>",
+        "description": "导航菜单：组(Menu group)",
+        "scope": ""
+    }
+
+    , "navigation menu item divider": {
+        "prefix": "nz-menu.item-divider",
+        "body": "<li nz-menu-divider></li>\r\n$0",
+        "description": "导航菜单：分割线(Menu item divider)",
+        "scope": ""
+    }
+
+    , "navigation menu item": {
+        "prefix": "nz-menu.item",
+        "body": "<li nz-menu-item>${1}</li>\r\n$0",
+        "description": "导航菜单：项(Menu includes item)",
+        "scope": ""
+    }
+
+    , "navigation menu nzTheme": {
+        "prefix": "nzTheme",
+        "body": "nzTheme=\"${1|light,dark|}\"",
+        "description": "导航菜单属性：主题颜色(Menu Property: color theme of the menu)",
+        "scope": ""
+    }
+
+    , "navigation menu submenu": {
+        "prefix": "nz-menu.submenu",
+        "body": "<li nz-submenu>\r\n  <span title>${1}</span>\r\n  <ul>\r\n    $0\r\n  </ul>\r\n</li>",
+        "description": "导航菜单：子项(Menu includes submenu)",
+        "scope": ""
+    }
+
+    , "navigation pagination": {
+        "prefix": "nz-pagination",
+        "body": "<nz-pagination [nzPageIndex]=\"${1}\" [nzPageSize]=\"${2}\" [nzTotal]=\"${3}\"${4: nzSize=\"small\"}></nz-pagination>\r\n$0",
+        "description": "分页(Pagination)",
+        "scope": ""
+    }
+
+    , "navigation pagination nzHideOnSinglePage": {
+        "prefix": "nzHideOnSinglePage",
+        "body": "nzHideOnSinglePage",
+        "description": "分页属性：只有一页时是否隐藏分页器(Pagination Property: Whether to hide pager on single page)",
+        "scope": ""
+    }
+
+    , "navigation steps custom dot": {
+        "prefix": "nz-steps.custom-dot",
+        "body": "<nz-steps [(nzCurrent)]=\"${1:current}\" [nzProgressDot]=\"${2:progressTemplate}\">\n  <nz-step nzTitle=\"Finished\" nzDescription=\"You can hover on the dot.\"></nz-step>\n  $0\n</nz-steps>\n<ng-template #${2} let-dot let-status=\"status\" let-index=\"index\">\n</ng-template>",
+        "description": "步骤条：自定义点(Steps: Custom dot)",
+        "scope": ""
+    }
+
+    , "navigation steps": {
+        "prefix": "nz-steps",
+        "body": "<nz-steps [(nzCurrent)]=\"${1:current}\"${2: [nzStatus]=\"'${3|wait,process,finish,error|}'\"}${4: nzSize=\"small\"}${5: nzDirection=\"${6|horizontal,vertical|}\"}${7: nzProgressDot}>\r\n  <nz-step [nzTitle]=\"'${8}'\" [nzDescription]=\"'${9}'\"></nz-step>\r\n  $0\r\n</nz-steps>\r\n<div class=\"steps-content\">\r\n\r\n</div>",
+        "description": "步骤条(Steps)",
+        "scope": ""
+    }
+
+    , "navigation steps nzStartIndex": {
+        "prefix": "nzStartIndex",
+        "body": "[nzStartIndex]=\"${1}\"",
+        "description": "步骤条属性：指定起始位置的序号(Steps Property: To specify the starting number)",
+        "scope": ""
+    }
+
+    , "navigation steps step icon": {
+        "prefix": "nz-steps.step-icon",
+        "body": "<nz-step [nzIcon]=\"nzIconTpl\" [nzTitle]=\"'${1}'\" [nzDescription]=\"'${2}'\"${3: [nzStatus]=\"'${4|wait,process,finish,error|}'\"}>\r\n  <ng-template #nzIconTpl>$0</ng-template>\r\n</nz-step>",
+        "description": "步骤条：项带图标(Steps inlcudes step and icon)",
+        "scope": ""
+    }
+
+    , "navigation steps step": {
+        "prefix": "nz-steps.step",
+        "body": "<nz-step [nzTitle]=\"'${1}'\" [nzDescription]=\"'${2}'\"${3: [nzStatus]=\"'${4|wait,process,finish,error|}'\"}></nz-step>",
+        "description": "步骤条：项(Step in stepds)",
         "scope": ""
     }
 
@@ -525,6 +847,20 @@
         "scope": ""
     }
 
+    , "data-entry skeleton": {
+        "prefix": "nz-skeleton",
+        "body": "<nz-skeleton [nzLoading]=\"${1:loading}\">$0</nz-skeleton>",
+        "description": "加载占位图(Skeleton)",
+        "scope": ""
+    }
+
+    , "data-entry skeleton full": {
+        "prefix": "nz-skeleton.full",
+        "body": "<nz-skeleton [nzLoading]=\"${1:loading}\"${2: [nzActive]=\"true\"}${3: [nzAvatar]=\"true\"}${4: [nzTitle]=\"false\"}${5: [nzParagraph]=\"false\"}>$0</nz-skeleton>",
+        "description": "加载占位图：完整示例(Skeleton includes all properties)",
+        "scope": ""
+    }
+
     , "data-entry slider": {
         "prefix": "nz-slider",
         "body": "<nz-slider [(ngModel)]=\"${1}\" name=\"${1}\"></nz-slider>",
@@ -644,6 +980,13 @@
         "scope": ""
     }
 
+    , "data-entry upload nzDirectory": {
+        "prefix": "nzDirectory",
+        "body": "nzDirectory",
+        "description": "上传：支持上传文件夹(Upload Property: Support upload whole directory )",
+        "scope": ""
+    }
+
     , "data-entry upload nzFileList": {
         "prefix": "nzFileList",
         "body": "[(nzFileList)]=\"${1:files}\"",
@@ -704,167 +1047,6 @@
         "prefix": "nzWithCredentials",
         "body": "nzWithCredentials",
         "description": "上传：上传请求时是否携带 cookie(Upload Property: ajax upload with cookie sent)",
-        "scope": ""
-    }
-
-    , "layout grid col": {
-        "prefix": "nz-grid.col",
-        "body": "<nz-col${1: nzSpan=\"${2:0-24}\" }>\n  $0\n</nz-col>",
-        "description": "栅格系统：列(Grids System: column)",
-        "scope": ""
-    }
-
-    , "layout grid": {
-        "prefix": "nz-grid",
-        "body": "<nz-row${1: nzGutter=\"${2|0,8,16,24,32,64|}\"}>\n  <nz-col nzSpan=\"${3:0-24}\"${4: nzOffset=\"${5:0-24}\"}>\n    $0\n  </nz-col>\n</nz-row>",
-        "description": "栅格系统(Grids System)",
-        "scope": ""
-    }
-
-    , "layout grid nzAlign": {
-        "prefix": "nzAlign",
-        "body": "nzAlign=\"${1|top,middle,bottom|}\"",
-        "description": "flex 布局下的垂直对齐方式(Grid Property: the vertical alignment of the flex layout)",
-        "scope": ""
-    }
-
-    , "layout grid nzFlex": {
-        "prefix": "nzFlex",
-        "body": "nzType=\"flex\"",
-        "description": "flex 布局模式(Grid Property: flex layout mode)",
-        "scope": ""
-    }
-
-    , "layout grid nzGutter": {
-        "prefix": "nzGutter",
-        "body": "nzGutter=\"${1|8,16,24,32,64,object|}\"",
-        "description": "栅格间隔，支持数字或响应式对象 { xs: 8, sm: 16, md: 24, lg: 32, xl: 32, xxl: 32 }(Grid Property: spacing between grids)",
-        "scope": ""
-    }
-
-    , "layout grid nzJustify": {
-        "prefix": "nzJustify",
-        "body": "nzJustify=\"${1|center,space-around,space-between,start,end|}\"",
-        "description": "flex 布局下的水平排列方式(Grid Property: horizontal arrangement of the flex layout)",
-        "scope": ""
-    }
-
-    , "layout grid nzLg": {
-        "prefix": "nzLg",
-        "body": "nzLg=\"${1:1-24}\"",
-        "description": "≥992px 响应式栅格，可为栅格数或一个包含其他属性的对象(Grid Property: ≥992px)",
-        "scope": ""
-    }
-
-    , "layout grid nzMd": {
-        "prefix": "nzMd",
-        "body": "nzMd=\"${1:1-24}\"",
-        "description": "≥768px 响应式栅格，可为栅格数或一个包含其他属性的对象(Grid Property: ≥768px)",
-        "scope": ""
-    }
-
-    , "layout grid nzOffset": {
-        "prefix": "nzOffset",
-        "body": "nzOffset=\"${1|8,16,24,32,64|}\"",
-        "description": "栅格左侧的间隔格数，间隔内不可以有栅格(Grid Property: the number of cells to offset Col from the left)",
-        "scope": ""
-    }
-
-    , "layout grid nzOrder": {
-        "prefix": "nzOrder",
-        "body": "nzOrder=\"${1|8,16,24,32,64|}\"",
-        "description": "栅格顺序，flex 布局模式下有效(Grid Property: raster order, used in `flex` layout mode)",
-        "scope": ""
-    }
-
-    , "layout grid nzPull": {
-        "prefix": "nzPull",
-        "body": "nzPull=\"${1|8,16,24,32,64|}\"",
-        "description": "栅格向左移动格数(Grid Property: the number of cells that raster is moved to the left)",
-        "scope": ""
-    }
-
-    , "layout grid nzPush": {
-        "prefix": "nzPush",
-        "body": "nzPush=\"${1|8,16,24,32,64|}\"",
-        "description": "栅格向右移动格数(Grid Property: the number of cells that raster is moved to the right)",
-        "scope": ""
-    }
-
-    , "layout grid nzResponsive": {
-        "prefix": "nzResponsive",
-        "body": "nzXs=\"${1:1-24}\" nzSm=\"${2:1-24}\" nzMd=\"${3:1-24}\" nzLg=\"${4:1-24}\" nzXl=\"${5:1-24}\" nzXXl=\"${6:1-24}\"",
-        "description": "响应式属性(Grid Property: A full responsive attributes)",
-        "scope": ""
-    }
-
-    , "layout grid nzSm": {
-        "prefix": "nzSm",
-        "body": "nzSm=\"${1:1-24}\"",
-        "description": "≥576px 响应式栅格，可为栅格数或一个包含其他属性的对象(Grid Property: ≥576px)",
-        "scope": ""
-    }
-
-    , "layout grid nzSpan": {
-        "prefix": "nzSpan",
-        "body": "nzSpan=\"${1|0,8,16,24,32,64|}\"",
-        "description": "栅格占位格数，为 0 时相当于 display: none(Grid Property: raster number of cells to occupy, 0 corresponds to `display: none`)",
-        "scope": ""
-    }
-
-    , "layout grid nzXl": {
-        "prefix": "nzXl",
-        "body": "nzXl=\"${1:1-24}\"",
-        "description": "≥1200px 响应式栅格，可为栅格数或一个包含其他属性的对象(Grid Property: ≥1200px)",
-        "scope": ""
-    }
-
-    , "layout grid nzXs": {
-        "prefix": "nzXs",
-        "body": "nzXs=\"${1:1-24}\"",
-        "description": "<576px 响应式栅格，可为栅格数或一个包含其他属性的对象(Grid Property: <576px)",
-        "scope": ""
-    }
-
-    , "layout grid nzXXl": {
-        "prefix": "nzXXl",
-        "body": "nzXXl=\"${1:1-24}\"",
-        "description": "≥1600px 响应式栅格，可为栅格数或一个包含其他属性的对象(Grid Property: ≥1600px)",
-        "scope": ""
-    }
-
-    , "layout grid responsive": {
-        "prefix": "nz-grid.responsive",
-        "body": "<nz-col nzXs=\"${1:1-24}\" nzSm=\"${2:1-24}\" nzMd=\"${3:1-24}\" nzLg=\"${4:1-24}\" nzXl=\"${5:1-24}\" nzXXl=\"${6:1-24}\">\n  $0\n</nz-col>",
-        "description": "响应式栅格系统(Responsive grid system)",
-        "scope": ""
-    }
-
-    , "layout grid row flex": {
-        "prefix": "nz-grid.row-flex",
-        "body": "<nz-row nzType=\"flex\"${1: nzJustify=\"${2|start,center,end,space-between,space-around|}\"}${3: nzAlign=\"${4|top,middle,bottom|}\"}>\r\n  $0\r\n</nz-row>",
-        "description": "响应式栅格系统Flex布局(Responsive grid system flex layout)",
-        "scope": ""
-    }
-
-    , "layout grid row": {
-        "prefix": "nz-grid.row",
-        "body": "<nz-row${1: nzGutter=\"${2|8,16,24,32,64|}\"}>\n  $0\n</nz-row>",
-        "description": "栅格系统：行(Grids System: row)",
-        "scope": ""
-    }
-
-    , "layout layout": {
-        "prefix": "nz-layout",
-        "body": "<nz-layout>\r\n  <nz-header>\r\n    $0\r\n  </nz-header>\r\n  <nz-content>\r\n\r\n  </nz-content>\r\n  <nz-footer>\r\n\r\n  </nz-footer>\r\n</nz-layout>",
-        "description": "布局(Layout)",
-        "scope": ""
-    }
-
-    , "layout layout sider": {
-        "prefix": "nz-layout.sider",
-        "body": "<nz-sider [nzCollapsible]=\"true\"${1: [nzWidth]=\"${2:200}\"}${3: [nzCollapsedWidth]=\"${4:64}\"}>\r\n  $0\r\n</nz-sider>",
-        "description": "布局：侧边栏(Layout: sider)",
         "scope": ""
     }
 
@@ -1288,9 +1470,16 @@
         "scope": ""
     }
 
+    , "data-display timeline item custom dot": {
+        "prefix": "nz-timeline.item-custom-dot",
+        "body": "<nz-timeline-item [nzDot]=\"${1:dotTpl}\"${2: [nzColor]=\"${3|green,red,blue|}\"}>\n  <ng-template #${1}>\n    $4\n  </ng-template>\n  $0\n</nz-timeline-item>",
+        "description": "时间轴：自定义点(Timeline: Custom dot of item)",
+        "scope": ""
+    }
+
     , "data-display timeline item": {
         "prefix": "nz-timeline.item",
-        "body": "<nz-timeline-item${1: [nzColor]=\"${2|green,red,blue|}\"}>\r\n  ${3:<ng-template #custom></ng-template>}\r\n</nz-timeline-item>$0",
+        "body": "<nz-timeline-item${1: [nzColor]=\"${2|green,red,blue|}\"}>\n  $0\n</nz-timeline-item>",
         "description": "时间轴：项(Timeline includes item)",
         "scope": ""
     }
@@ -1334,188 +1523,6 @@
         "prefix": "nz-tree",
         "body": "<nz-tree [(ngModel)]=\"nodes\">\r\n</nz-tree>",
         "description": "树形(Tree)",
-        "scope": ""
-    }
-
-    , "navigation affix": {
-        "prefix": "nz-affix",
-        "body": "<nz-affix${1: [nzOffsetTop]=\"${2}\"}${3: (nzChange)=\"onChange(\\$event)\"}>\r\n  $0\r\n</nz-affix>",
-        "description": "固钉(Affix)",
-        "scope": ""
-    }
-
-    , "navigation affix target": {
-        "prefix": "nz-affix.target",
-        "body": "<div class=\"scrollable-container\" #target>\r\n  <nz-affix [nzTarget]=\"target\"${1: [nzOffsetTop]=\"${2}\"}${3: (nzChange)=\"onChange(\\$event)\"}>\r\n    $0\r\n  </nz-affix>\r\n</div>",
-        "description": "固钉：指定滚动容器(Affix includes target)",
-        "scope": ""
-    }
-
-    , "navigation breadcrumb": {
-        "prefix": "nz-breadcrumb",
-        "body": "<nz-breadcrumb>\r\n  <nz-breadcrumb-item><a routerLink=\"/${2}\">${1}</a></nz-breadcrumb-item>\r\n  $0\r\n</nz-breadcrumb>",
-        "description": "面包屑(Breadcrumb)",
-        "scope": ""
-    }
-
-    , "navigation breadcrumb icon": {
-        "prefix": "nz-breadcrumb.icon",
-        "body": "<nz-breadcrumb-item>\r\n  <a [routerLink]=\"['/${1}']\"><i class=\"anticon anticon-${2:home}\"></i>${3:<span>${4:首页}</span>}</a>\r\n</nz-breadcrumb-item>\r\n$0",
-        "description": "面包屑：图标(Breadcrumb includes icon)",
-        "scope": ""
-    }
-
-    , "navigation breadcrumb item": {
-        "prefix": "nz-breadcrumb.item",
-        "body": "<nz-breadcrumb-item><a routerLink=\"/${2}\">${1}</a></nz-breadcrumb-item>\r\n$0",
-        "description": "面包屑项(Breadcrumb includes item)",
-        "scope": ""
-    }
-
-    , "navigation breadcrumb nzSeparator": {
-        "prefix": "nzSeparator",
-        "body": "nzSeparator=\"${1:>}\"",
-        "description": "分隔符自定义(Breadcrumb Property: Custom separator)",
-        "scope": ""
-    }
-
-    , "navigation dropdown button": {
-        "prefix": "nz-dropdown.button",
-        "body": "<nz-dropdown-button>\r\n  ${1}\r\n  <ul nz-menu>\r\n    <li nz-menu-item>$0</li>\r\n    <li nz-menu-item><a>2nd menu item</a></li>\r\n  </ul>\r\n</nz-dropdown-button>",
-        "description": "下拉菜单按钮(Dropdown button style)",
-        "scope": ""
-    }
-
-    , "navigation dropdown button.style": {
-        "prefix": "nz-dropdown.button.style",
-        "body": "<nz-dropdown>\r\n  <button nz-button nz-dropdown><span>${1}</span><i class=\"anticon anticon-down\"></i></button>\r\n  <ul nz-menu>\r\n    <li nz-menu-item>$0</li>\r\n    <li nz-menu-item><a>2nd menu item</a></li>\r\n  </ul>\r\n</nz-dropdown>",
-        "description": "下拉菜单按钮内风格(Dropdown button style)",
-        "scope": ""
-    }
-
-    , "navigation dropdown": {
-        "prefix": "nz-dropdown",
-        "body": "<nz-dropdown>\r\n  <a nz-dropdown>${1} <i class=\"anticon anticon-down\"></i></a>\r\n  <ul nz-menu nzSelectable>\r\n    <li nz-menu-item>$0</li>\r\n    <li nz-menu-item><a>2nd menu item</a></li>\r\n  </ul>\r\n</nz-dropdown>",
-        "description": "下拉菜单(Dropdown)",
-        "scope": ""
-    }
-
-    , "navigation dropdown nzClickHide": {
-        "prefix": "nzClickHide",
-        "body": "nzClickHide=\"false\"",
-        "description": "点击后是否隐藏菜单(Dropdown Property: Whether hide menu when click)",
-        "scope": ""
-    }
-
-    , "navigation menu": {
-        "prefix": "nz-menu",
-        "body": "<ul nz-menu>\r\n  <li nz-menu-item>${1:菜单项}</li>\r\n  <li nz-menu-divider></li>\r\n  <li nz-submenu>\r\n    <span title>子菜单</span>\r\n    <ul>\r\n      <li nz-menu-item>子菜单项</li>\r\n    </ul>\r\n  </li>\r\n</ul>",
-        "description": "导航菜单(Menu)",
-        "scope": ""
-    }
-
-    , "navigation menu group": {
-        "prefix": "nz-menu.group",
-        "body": "<li nz-menu-group>\r\n  <span title>${1}</span>\r\n  $0\r\n</li>",
-        "description": "导航菜单：组(Menu group)",
-        "scope": ""
-    }
-
-    , "navigation menu item divider": {
-        "prefix": "nz-menu.item-divider",
-        "body": "<li nz-menu-divider></li>\r\n$0",
-        "description": "导航菜单：分割线(Menu item divider)",
-        "scope": ""
-    }
-
-    , "navigation menu item": {
-        "prefix": "nz-menu.item",
-        "body": "<li nz-menu-item>${1}</li>\r\n$0",
-        "description": "导航菜单：项(Menu includes item)",
-        "scope": ""
-    }
-
-    , "navigation menu nzTheme": {
-        "prefix": "nzTheme",
-        "body": "nzTheme=\"${1|light,dark|}\"",
-        "description": "导航菜单：主题颜色(Menu Property: color theme of the menu)",
-        "scope": ""
-    }
-
-    , "navigation menu submenu": {
-        "prefix": "nz-menu.submenu",
-        "body": "<li nz-submenu>\r\n  <span title>${1}</span>\r\n  <ul>\r\n    $0\r\n  </ul>\r\n</li>",
-        "description": "导航菜单：子项(Menu includes submenu)",
-        "scope": ""
-    }
-
-    , "navigation pagination": {
-        "prefix": "nz-pagination",
-        "body": "<nz-pagination [nzPageIndex]=\"${1}\" [nzPageSize]=\"${2}\" [nzTotal]=\"${3}\"${4: nzSize=\"small\"}></nz-pagination>\r\n$0",
-        "description": "分页(Pagination)",
-        "scope": ""
-    }
-
-    , "navigation pagination nzHideOnSinglePage": {
-        "prefix": "nzHideOnSinglePage",
-        "body": "nzHideOnSinglePage",
-        "description": "只有一页时是否隐藏分页器(Pagination Property: Whether to hide pager on single page)",
-        "scope": ""
-    }
-
-    , "navigation steps": {
-        "prefix": "nz-steps",
-        "body": "<nz-steps [(nzCurrent)]=\"${1:current}\"${2: [nzStatus]=\"'${3|wait,process,finish,error|}'\"}${4: nzSize=\"small\"}${5: nzDirection=\"${6|horizontal,vertical|}\"}${7: nzProgressDot}>\r\n  <nz-step [nzTitle]=\"'${8}'\" [nzDescription]=\"'${9}'\"></nz-step>\r\n  $0\r\n</nz-steps>\r\n<div class=\"steps-content\">\r\n\r\n</div>",
-        "description": "步骤条(Steps)",
-        "scope": ""
-    }
-
-    , "navigation steps step icon": {
-        "prefix": "nz-steps.step-icon",
-        "body": "<nz-step [nzIcon]=\"nzIconTpl\" [nzTitle]=\"'${1}'\" [nzDescription]=\"'${2}'\"${3: [nzStatus]=\"'${4|wait,process,finish,error|}'\"}>\r\n  <ng-template #nzIconTpl>$0</ng-template>\r\n</nz-step>",
-        "description": "步骤条：项带图标(Steps inlcudes step and icon)",
-        "scope": ""
-    }
-
-    , "navigation steps step": {
-        "prefix": "nz-steps.step",
-        "body": "<nz-step [nzTitle]=\"'${1}'\" [nzDescription]=\"'${2}'\"${3: [nzStatus]=\"'${4|wait,process,finish,error|}'\"}></nz-step>",
-        "description": "步骤条：项(Step in stepds)",
-        "scope": ""
-    }
-
-    , "other anchor": {
-        "prefix": "nz-anchor",
-        "body": "<nz-anchor${1: [nzOffsetTop]=\"$2\"}>\r\n  $0\r\n</nz-anchor>",
-        "description": "锚点(Anchor)",
-        "scope": ""
-    }
-
-    , "other anchor link": {
-        "prefix": "nz-anchor.link",
-        "body": "<nz-link [nzHref]=\"$1\" [nzTitle]=\"$2\"></nz-link>\r\n$0",
-        "description": "锚点：链接项(Anchor includes link)",
-        "scope": ""
-    }
-
-    , "other back-top": {
-        "prefix": "nz-back-top",
-        "body": "<nz-back-top></nz-back-top>$0",
-        "description": "回到顶部(Back to Top)",
-        "scope": ""
-    }
-
-    , "other divider": {
-        "prefix": "nz-divider",
-        "body": "<nz-divider nzType=\"vertical\"></nz-divider>\r\n$0",
-        "description": "分割线(Divider)",
-        "scope": ""
-    }
-
-    , "other divider full": {
-        "prefix": "nz-divider.full",
-        "body": "<nz-divider${1: nzText=\"$2\"}${3: nzOrientation=\"${4|left,right|}\"}${5: nzType=\"${6|vertical,horizontal|}\"}${7: nzDashed}></nz-divider>$0",
-        "description": "分割线：完整风格(Divider)",
         "scope": ""
     }
 
@@ -1565,6 +1572,139 @@
         "prefix": "nzShowIcon",
         "body": "[nzShowIcon]=\"${1|true,false|}\"",
         "description": "是否显示辅助图标(Alert Property: Whether to show icon)",
+        "scope": ""
+    }
+
+    , "feedback drawer": {
+        "prefix": "nz-drawer",
+        "body": "<nz-drawer [nzVisible]=\"${1:visible}\" nzPlacement=\"${2|right,left,top,bottom|}\"${3: nzTitle=\"$4\"}\n           (nzOnClose)=\"${5:close}()\">\n  $0\n</nz-drawer>",
+        "description": "抽屉(Drawer)",
+        "scope": ""
+    }
+
+    , "feedback modal": {
+        "prefix": "nz-modal",
+        "body": "<nz-modal\r\n  [(nzVisible)]=\"isVisible\"\r\n  [nzTitle]=\"'标题'\"\r\n  [nzClosable]=\"false|true\"\r\n  [nzWidth]=\"520\"\r\n  [nzContent]=\"modalContent\"\r\n  [nzOkText]=\"'确定'\"\r\n  [nzCancelText]=\"'取消'\"\r\n  [nzMaskClosable]=\"false|true\"\r\n  [nzWrapClassName]=\"''\"\r\n  (nzOnCancel)=\"handleCancel(\\$event)\"\r\n  (nzOnOk)=\"handleOk(\\$event)\">\r\n  <ng-template #modalContent>对话框的内容</ng-template>\r\n</nz-modal>\r\n$0",
+        "description": "对话框(Modal)",
+        "scope": ""
+    }
+
+    , "feedback popconfirm button": {
+        "prefix": "nz-popconfirm.button",
+        "body": "<nz-popconfirm nzTitle=\"${1:确定吗？}\" (nzOnConfirm)=\"${2:del(i)}\">\n  <button nz-popconfirm nz-button nzType=\"danger\">${3:删除}</button>\n</nz-popconfirm>\n$0",
+        "description": "气泡确认框：按钮风格(Popconfirm button style)",
+        "scope": ""
+    }
+
+    , "feedback popconfirm": {
+        "prefix": "nz-popconfirm",
+        "body": "<nz-popconfirm nzTitle=\"${1:确定吗？}\" (nzOnConfirm)=\"${2:confirm(i)}\">\n  <a nz-popconfirm>${3:删除}</a>\n</nz-popconfirm>\n$0",
+        "description": "气泡确认框(Popconfirm)",
+        "scope": ""
+    }
+
+    , "feedback popconfirm nzCondition": {
+        "prefix": "nzCondition",
+        "body": "[nzCondition]=\"${1|true,false|}\"",
+        "description": "气泡确认框：是否直接触发 nzOnConfirm 而不弹出框(Popconfirm Property: Whether to directly emit `onConfirm` without showing Popconfirm)",
+        "scope": ""
+    }
+
+    , "feedback progress circle": {
+        "prefix": "nz-progress.circle",
+        "body": "<nz-progress nzType=\"circle\" [nzPercent]=\"${1}\" [nzStrokeWidth]=\"${3:6}\" [nzWidth]=\"${4:132}\"></nz-progress>\r\n$0",
+        "description": "进度条：圆风格(Progress includes circle)",
+        "scope": ""
+    }
+
+    , "feedback progress dashboard": {
+        "prefix": "nz-progress.dashboard",
+        "body": "<nz-progress nzType=\"dashboard\" [nzPercent]=\"${1}\"></nz-progress>\r\n$0",
+        "description": "进度条：仪表盘风格(Progress includes dashboard)",
+        "scope": ""
+    }
+
+    , "feedback progress": {
+        "prefix": "nz-progress",
+        "body": "<nz-progress [nzPercent]=\"${1}\" [nzType]=\"'${2|circle,line|}'\"></nz-progress>\r\n$0",
+        "description": "进度条(Progress)",
+        "scope": ""
+    }
+
+    , "feedback progress line": {
+        "prefix": "nz-progress.line",
+        "body": "<nz-progress nzType=\"line\" [nzPercent]=\"${1}\" [nzStrokeWidth]=\"${3:10}\"></nz-progress>\r\n$0",
+        "description": "进度条：线风格(Progress includes line)",
+        "scope": ""
+    }
+
+    , "feedback progress nzProgressStatus": {
+        "prefix": "nzProgressStatus",
+        "body": "[nzStatus]=\"'${1|success,exception,active|}'\"",
+        "description": "进度条：状态(Progress Property: to set the status of the Progress)",
+        "scope": ""
+    }
+
+    , "feedback spin": {
+        "prefix": "nz-spin",
+        "body": "<nz-spin${1: [nzTip]=\"'${2|加载中...,正在读取数据...|}'\"}${3: [nzSpinning]=\"false\"}></nz-spin>\r\n$0",
+        "description": "加载中(Spin)",
+        "scope": ""
+    }
+
+    , "feedback spin nzDelay": {
+        "prefix": "nzDelay",
+        "body": "nzDelay=\"${1:500}\"",
+        "description": "延迟显示加载效果的时间(Spin Property: specifies a delay in milliseconds for loading state)",
+        "scope": ""
+    }
+
+    , "feedback spin nzSpinning": {
+        "prefix": "nzSpinning",
+        "body": "[nzSpinning]=\"${1|true,false|}\"",
+        "description": "加载中：是否旋转(Spin Property: whether Spin is spinning)",
+        "scope": ""
+    }
+
+    , "feedback spin nzTip": {
+        "prefix": "nzTip",
+        "body": "[nzTip]=\"'${1|加载中...,正在读取数据...|}'\"",
+        "description": "加载中：当作为包裹元素时，可以自定义描述文案(Spin Property: customize description content when Spin has children)",
+        "scope": ""
+    }
+
+    , "other anchor": {
+        "prefix": "nz-anchor",
+        "body": "<nz-anchor${1: [nzOffsetTop]=\"$2\"}>\r\n  $0\r\n</nz-anchor>",
+        "description": "锚点(Anchor)",
+        "scope": ""
+    }
+
+    , "other anchor link": {
+        "prefix": "nz-anchor.link",
+        "body": "<nz-link [nzHref]=\"$1\" [nzTitle]=\"$2\"></nz-link>\r\n$0",
+        "description": "锚点：链接项(Anchor includes link)",
+        "scope": ""
+    }
+
+    , "other back-top": {
+        "prefix": "nz-back-top",
+        "body": "<nz-back-top></nz-back-top>$0",
+        "description": "回到顶部(Back to Top)",
+        "scope": ""
+    }
+
+    , "other divider": {
+        "prefix": "nz-divider",
+        "body": "<nz-divider nzType=\"vertical\"></nz-divider>\r\n$0",
+        "description": "分割线(Divider)",
+        "scope": ""
+    }
+
+    , "other divider full": {
+        "prefix": "nz-divider.full",
+        "body": "<nz-divider${1: nzText=\"$2\"}${3: nzOrientation=\"${4|left,right|}\"}${5: nzType=\"${6|vertical,horizontal|}\"}${7: nzDashed}></nz-divider>$0",
+        "description": "分割线：完整风格(Divider)",
         "scope": ""
     }
 
@@ -1782,97 +1922,6 @@
         "prefix": "nzVisible",
         "body": "[nzVisible]=\"$1\"",
         "description": "显示状态(General Property: Whether the component is visible or not.)",
-        "scope": ""
-    }
-
-    , "feedback modal": {
-        "prefix": "nz-modal",
-        "body": "<nz-modal\r\n  [(nzVisible)]=\"isVisible\"\r\n  [nzTitle]=\"'标题'\"\r\n  [nzClosable]=\"false|true\"\r\n  [nzWidth]=\"520\"\r\n  [nzContent]=\"modalContent\"\r\n  [nzOkText]=\"'确定'\"\r\n  [nzCancelText]=\"'取消'\"\r\n  [nzMaskClosable]=\"false|true\"\r\n  [nzWrapClassName]=\"''\"\r\n  (nzOnCancel)=\"handleCancel(\\$event)\"\r\n  (nzOnOk)=\"handleOk(\\$event)\">\r\n  <ng-template #modalContent>对话框的内容</ng-template>\r\n</nz-modal>\r\n$0",
-        "description": "对话框(Modal)",
-        "scope": ""
-    }
-
-    , "feedback popconfirm button": {
-        "prefix": "nz-popconfirm.button",
-        "body": "<nz-popconfirm nzTitle=\"${1:确定吗？}\" (nzOnConfirm)=\"${2:del(i)}\">\n  <button nz-popconfirm nz-button nzType=\"danger\">${3:删除}</button>\n</nz-popconfirm>\n$0",
-        "description": "气泡确认框：按钮风格(Popconfirm button style)",
-        "scope": ""
-    }
-
-    , "feedback popconfirm": {
-        "prefix": "nz-popconfirm",
-        "body": "<nz-popconfirm nzTitle=\"${1:确定吗？}\" (nzOnConfirm)=\"${2:confirm(i)}\">\n  <a nz-popconfirm>${3:删除}</a>\n</nz-popconfirm>\n$0",
-        "description": "气泡确认框(Popconfirm)",
-        "scope": ""
-    }
-
-    , "feedback popconfirm nzCondition": {
-        "prefix": "nzCondition",
-        "body": "[nzCondition]=\"${1|true,false|}\"",
-        "description": "气泡确认框：是否直接触发 nzOnConfirm 而不弹出框(Popconfirm Property: Whether to directly emit `onConfirm` without showing Popconfirm)",
-        "scope": ""
-    }
-
-    , "feedback progress circle": {
-        "prefix": "nz-progress.circle",
-        "body": "<nz-progress nzType=\"circle\" [nzPercent]=\"${1}\" [nzStrokeWidth]=\"${3:6}\" [nzWidth]=\"${4:132}\"></nz-progress>\r\n$0",
-        "description": "进度条：圆风格(Progress includes circle)",
-        "scope": ""
-    }
-
-    , "feedback progress dashboard": {
-        "prefix": "nz-progress.dashboard",
-        "body": "<nz-progress nzType=\"dashboard\" [nzPercent]=\"${1}\"></nz-progress>\r\n$0",
-        "description": "进度条：仪表盘风格(Progress includes dashboard)",
-        "scope": ""
-    }
-
-    , "feedback progress": {
-        "prefix": "nz-progress",
-        "body": "<nz-progress [nzPercent]=\"${1}\" [nzType]=\"'${2|circle,line|}'\"></nz-progress>\r\n$0",
-        "description": "进度条(Progress)",
-        "scope": ""
-    }
-
-    , "feedback progress line": {
-        "prefix": "nz-progress.line",
-        "body": "<nz-progress nzType=\"line\" [nzPercent]=\"${1}\" [nzStrokeWidth]=\"${3:10}\"></nz-progress>\r\n$0",
-        "description": "进度条：线风格(Progress includes line)",
-        "scope": ""
-    }
-
-    , "feedback progress nzProgressStatus": {
-        "prefix": "nzProgressStatus",
-        "body": "[nzStatus]=\"'${1|success,exception,active|}'\"",
-        "description": "进度条：状态(Progress Property: to set the status of the Progress)",
-        "scope": ""
-    }
-
-    , "feedback spin": {
-        "prefix": "nz-spin",
-        "body": "<nz-spin${1: [nzTip]=\"'${2|加载中...,正在读取数据...|}'\"}${3: [nzSpinning]=\"false\"}></nz-spin>\r\n$0",
-        "description": "加载中(Spin)",
-        "scope": ""
-    }
-
-    , "feedback spin nzDelay": {
-        "prefix": "nzDelay",
-        "body": "nzDelay=\"${1:500}\"",
-        "description": "延迟显示加载效果的时间(Spin Property: specifies a delay in milliseconds for loading state)",
-        "scope": ""
-    }
-
-    , "feedback spin nzSpinning": {
-        "prefix": "nzSpinning",
-        "body": "[nzSpinning]=\"${1|true,false|}\"",
-        "description": "加载中：是否旋转(Spin Property: whether Spin is spinning)",
-        "scope": ""
-    }
-
-    , "feedback spin nzTip": {
-        "prefix": "nzTip",
-        "body": "[nzTip]=\"'${1|加载中...,正在读取数据...|}'\"",
-        "description": "加载中：当作为包裹元素时，可以自定义描述文案(Spin Property: customize description content when Spin has children)",
         "scope": ""
     }  
 }
