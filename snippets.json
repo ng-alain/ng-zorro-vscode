@@ -28,10 +28,24 @@
         "scope": ""
     }
 
+    , "general button nzBlock": {
+        "prefix": "nzBlock",
+        "body": "nzBlock",
+        "description": "按钮属性：将按钮宽度调整为其父宽度的选项(Button Property: option to fit button width to its parent width)",
+        "scope": ""
+    }
+
     , "general button nzGhost": {
         "prefix": "nzGhost",
         "body": "nzGhost",
-        "description": "属性：幽灵属性，使按钮背景透明(Button Property: make background transparent and invert text and border colors)",
+        "description": "按钮属性：幽灵属性，使按钮背景透明(Button Property: make background transparent and invert text and border colors)",
+        "scope": ""
+    }
+
+    , "general button nzShape": {
+        "prefix": "nzShape",
+        "body": "nzShape=\"${1|circle,square|}\"",
+        "description": "按钮属性：设置按钮形状(Button Property: can be set to `circle` or omitted)",
         "scope": ""
     }
 
@@ -73,7 +87,7 @@
     , "general icon nzIconSpin": {
         "prefix": "nzIconSpin",
         "body": "anticon-spin",
-        "description": "属性：旋转icon图标(Icon Property: rotate icon)",
+        "description": "图标属性：旋转icon图标(Icon Property: rotate icon)",
         "scope": ""
     }
 
@@ -231,6 +245,13 @@
         "scope": ""
     }
 
+    , "layout layout content": {
+        "prefix": "nz-layout.content",
+        "body": "<nz-content>$0</nz-content>",
+        "description": "layout layout content()(layout layout content())",
+        "scope": ""
+    }
+
     , "layout layout": {
         "prefix": "nz-layout",
         "body": "<nz-layout>\r\n  <nz-header>\r\n    $0\r\n  </nz-header>\r\n  <nz-content>\r\n\r\n  </nz-content>\r\n  <nz-footer>\r\n\r\n  </nz-footer>\r\n</nz-layout>",
@@ -238,10 +259,52 @@
         "scope": ""
     }
 
-    , "layout layout sider": {
-        "prefix": "nz-layout.sider",
-        "body": "<nz-sider [nzCollapsible]=\"true\"${1: [nzWidth]=\"${2:200}\"}${3: [nzCollapsedWidth]=\"${4:64}\"}>\r\n  $0\r\n</nz-sider>",
-        "description": "布局：侧边栏(Layout: sider)",
+    , "layout sider": {
+        "prefix": "nz-sider",
+        "body": "<nz-sider [nzCollapsible]=\"true\"${1: [nzWidth]=\"${2:200}\"}${3: [nzCollapsedWidth]=\"${4:64}\"}>\n  $0\n</nz-sider>",
+        "description": "侧边栏(Sider)",
+        "scope": ""
+    }
+
+    , "layout sider nzBreakpoint": {
+        "prefix": "nzBreakpoint",
+        "body": "nzBreakpoint=\"${1|xs,sm,md,lg,xl,xxl|}\"",
+        "description": "侧边栏属性：触发响应式布局的断点(Sider Property: breakpoints of the responsive layout)",
+        "scope": ""
+    }
+
+    , "layout sider nzCollapsed": {
+        "prefix": "nzCollapsed",
+        "body": "[nzCollapsible]=\"${1:collapsible}\"",
+        "description": "侧边栏属性：当前收起状态，可双向绑定(Sider Property: the collapsed status can be double binding)",
+        "scope": ""
+    }
+
+    , "layout sider nzCollapsedWidth": {
+        "prefix": "nzCollapsedWidth",
+        "body": "[nzCollapsedWidth]=\"${1:80}\"",
+        "description": "侧边栏属性：收缩宽度，设置为 0 会出现特殊 trigger(Sider Property: width of the collapsed sidebar, by setting to 0 a special trigger will appear)",
+        "scope": ""
+    }
+
+    , "layout sider nzCollapsible": {
+        "prefix": "nzCollapsible",
+        "body": "nzCollapsible=\"${1|true,false|}\"",
+        "description": "侧边栏属性：是否可收起(Sider Property: whether can be collapsed)",
+        "scope": ""
+    }
+
+    , "layout sider nzReverseArrow": {
+        "prefix": "nzReverseArrow",
+        "body": "nzReverseArrow=\"${1|true,false|}\"",
+        "description": "侧边栏属性：翻转折叠提示箭头的方向，当 Sider 在右边时可以使用(Sider Property: reverse direction of arrow, for a sider that expands from the right)",
+        "scope": ""
+    }
+
+    , "layout sider nzWidth": {
+        "prefix": "nzWidth",
+        "body": "[nzWidth]=\"${1:200}\"",
+        "description": "侧边栏属性：宽度(Sider Property: width of the sidebar)",
         "scope": ""
     }
 
@@ -249,6 +312,20 @@
         "prefix": "nz-affix",
         "body": "<nz-affix${1: [nzOffsetTop]=\"${2}\"}${3: (nzChange)=\"onChange(\\$event)\"}>\r\n  $0\r\n</nz-affix>",
         "description": "固钉(Affix)",
+        "scope": ""
+    }
+
+    , "navigation affix nzOffsetBottom": {
+        "prefix": "nzOffsetBottom",
+        "body": "[nzOffsetBottom]=\"$1\"",
+        "description": "固钉属性：距离窗口底部达到指定偏移量后触发(Affix Property: Pixels to offset from bottom when calculating position of scroll)",
+        "scope": ""
+    }
+
+    , "navigation affix nzOffsetTop": {
+        "prefix": "nzOffsetTop",
+        "body": "[nzOffsetTop]=\"$1\"",
+        "description": "固钉属性：距离窗口顶部达到指定偏移量后触发(Affix Property: Pixels to offset from top when calculating position of scroll)",
         "scope": ""
     }
 
@@ -277,6 +354,13 @@
         "prefix": "nz-breadcrumb.item",
         "body": "<nz-breadcrumb-item><a routerLink=\"/${2}\">${1}</a></nz-breadcrumb-item>\r\n$0",
         "description": "面包屑项(Breadcrumb includes item)",
+        "scope": ""
+    }
+
+    , "navigation breadcrumb nzAutoGenerate": {
+        "prefix": "nzAutoGenerate",
+        "body": "[nzAutoGenerate]=\"${1|true,false|}\"",
+        "description": "面包屑属性：自动生成 Breadcrumb(Breadcrumb Property: Auto generate breadcrumb)",
         "scope": ""
     }
 
@@ -497,9 +581,23 @@
         "scope": ""
     }
 
+    , "data-entry date nzDateRender": {
+        "prefix": "nzDateRender",
+        "body": "[nzDateRender]=\"${1:dateRender}\"",
+        "description": "data-entry date nzDateRender()(data-entry date nzDateRender())",
+        "scope": ""
+    }
+
+    , "data-entry date nzDisabledDate": {
+        "prefix": "nzDisabledDate",
+        "body": "[nzDisabledDate]=\"${1:disabledDate}\"",
+        "description": "data-entry date nzDisabledDate()(data-entry date nzDisabledDate())",
+        "scope": ""
+    }
+
     , "data-entry date nzRenderExtraFooter": {
         "prefix": "nzRenderExtraFooter",
-        "body": "[nzRenderExtraFooter]=\"$0\"",
+        "body": "[nzRenderExtraFooter]=\"$1\"",
         "description": "日期属性：在面板中添加额外的页脚(Date Property: render extra footer in panel)",
         "scope": ""
     }
@@ -1785,6 +1883,13 @@
         "scope": ""
     }
 
+    , "attributes attr nzClassName": {
+        "prefix": "nzClassName",
+        "body": "nzClassName=\"$1\"",
+        "description": "指定类名(General Property: Whether class name)",
+        "scope": ""
+    }
+
     , "attributes attr nzClick": {
         "prefix": "nzClick",
         "body": "(nzClick)=\"${1:onClick}(\\$event)\"",
@@ -1880,6 +1985,13 @@
         "prefix": "nzPlacement",
         "body": "nzPlacement=\"${1|bottomLeft,bottomCenter,bottomRight,topLeft,topCenter,topRight|}\"",
         "description": "位置(General Property: set the placement)",
+        "scope": ""
+    }
+
+    , "attributes attr nzPopupStyle": {
+        "prefix": "nzPopupStyle",
+        "body": "nzPopupStyle=\"$1\"",
+        "description": "attributes attr nzPopupStyle()(attributes attr nzPopupStyle())",
         "scope": ""
     }
 

@@ -29,7 +29,9 @@ nz-button | Button
 nz-button.group | Button group
 nz-button.icon-text-left | Button with icon and text on left
 nz-button.icon-text-right | Button with icon and text on right
+nzBlock | Button Property: option to fit button width to its parent width
 nzGhost | Button Property: make background transparent and invert text and border colors
+nzShape | Button Property: can be set to &#x60;circle&#x60; or omitted
 nz-button.type | Button include type
 nz-icon.circle-o | Icon full circle
 nz-icon.circle | Icon empty circle
@@ -63,18 +65,28 @@ nzXXl | Grid Property: ≥1600px
 nz-grid.responsive | Responsive grid system
 nz-grid.row-flex | Responsive grid system flex layout
 nz-grid.row | Grids System: row
+nz-layout.content | layout layout content()
 nz-layout | Layout
-nz-layout.sider | Layout: sider
+nz-sider | Sider
+nzBreakpoint | Sider Property: breakpoints of the responsive layout
+nzCollapsed | Sider Property: the collapsed status can be double binding
+nzCollapsedWidth | Sider Property: width of the collapsed sidebar, by setting to 0 a special trigger will appear
+nzCollapsible | Sider Property: whether can be collapsed
+nzReverseArrow | Sider Property: reverse direction of arrow, for a sider that expands from the right
+nzWidth | Sider Property: width of the sidebar
 
 ### Navigation
 
 Trigger | Description
 --- | ---
 nz-affix | Affix
+nzOffsetBottom | Affix Property: Pixels to offset from bottom when calculating position of scroll
+nzOffsetTop | Affix Property: Pixels to offset from top when calculating position of scroll
 nz-affix.target | Affix includes target
 nz-breadcrumb | Breadcrumb
 nz-breadcrumb.icon | Breadcrumb includes icon
 nz-breadcrumb.item | Breadcrumb includes item
+nzAutoGenerate | Breadcrumb Property: Auto generate breadcrumb
 nzSeparator | Breadcrumb Property: Custom separator
 nz-dropdown.button | Dropdown button style
 nz-dropdown.button.style | Dropdown button style
@@ -111,6 +123,8 @@ nz-checkbox.group | Checkbox group
 nz-checkbox.layout | Checkbox use with Grid
 nz-date | Date picker
 nz-date.month | Month picker
+nzDateRender | data-entry date nzDateRender()
+nzDisabledDate | data-entry date nzDisabledDate()
 nzRenderExtraFooter | Date Property: render extra footer in panel
 nzShowTime | Date Property: to provide an additional time selection
 nzShowToday | Date Property: whether to show &#x27;Today&#x27; button
@@ -315,6 +329,7 @@ nzBordered | General Property: Set border style
 nzCancelText | General Property: Text of the Cancel button
 nzChange | General Property: Callback for when component is changed
 nzChecked | General Property: Checked status, double binding
+nzClassName | General Property: Whether class name
 nzClick | General Property: a click callback function
 nzDescription | General Property: The description
 nzDisabled | General Property: Whether disabled
@@ -329,6 +344,7 @@ nzOkText | General Property: Text of the OK button
 nzOnClose | General Property: a close callback function
 nzPlaceHolder | General Property: set the placeholder text
 nzPlacement | General Property: set the placement
+nzPopupStyle | attributes attr nzPopupStyle()
 nzSelect | General Property: a select callback
 nzSelectChange | General Property: a select callback function
 nzShape | General Property: the shape

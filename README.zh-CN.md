@@ -29,13 +29,15 @@ nz-button | 按钮
 nz-button.group | 按钮组
 nz-button.icon-text-left | 按钮带图标且文本在左
 nz-button.icon-text-right | 按钮带图标且文本在右
-nzGhost | 属性：幽灵属性，使按钮背景透明
+nzBlock | 按钮属性：将按钮宽度调整为其父宽度的选项
+nzGhost | 按钮属性：幽灵属性，使按钮背景透明
+nzShape | 按钮属性：设置按钮形状
 nz-button.type | 按钮含类型
 nz-icon.circle-o | icon描线图标
 nz-icon.circle | icon实心图标
 nz-icon.class-name | icon图标类名
 nz-icon | 图标
-nzIconSpin | 属性：旋转icon图标
+nzIconSpin | 图标属性：旋转icon图标
 nz-icon.spin | 旋转图标
 
 ### 布局
@@ -63,18 +65,28 @@ nzXXl | ≥1600px 响应式栅格，可为栅格数或一个包含其他属性�
 nz-grid.responsive | 响应式栅格系统
 nz-grid.row-flex | 响应式栅格系统Flex布局
 nz-grid.row | 栅格系统：行
+nz-layout.content | layout layout content()
 nz-layout | 布局
-nz-layout.sider | 布局：侧边栏
+nz-sider | 侧边栏
+nzBreakpoint | 侧边栏属性：触发响应式布局的断点
+nzCollapsed | 侧边栏属性：当前收起状态，可双向绑定
+nzCollapsedWidth | 侧边栏属性：收缩宽度，设置为 0 会出现特殊 trigger
+nzCollapsible | 侧边栏属性：是否可收起
+nzReverseArrow | 侧边栏属性：翻转折叠提示箭头的方向，当 Sider 在右边时可以使用
+nzWidth | 侧边栏属性：宽度
 
 ### 导航
 
 Trigger | Description
 --- | ---
 nz-affix | 固钉
+nzOffsetBottom | 固钉属性：距离窗口底部达到指定偏移量后触发
+nzOffsetTop | 固钉属性：距离窗口顶部达到指定偏移量后触发
 nz-affix.target | 固钉：指定滚动容器
 nz-breadcrumb | 面包屑
 nz-breadcrumb.icon | 面包屑：图标
 nz-breadcrumb.item | 面包屑项
+nzAutoGenerate | 面包屑属性：自动生成 Breadcrumb
 nzSeparator | 面包屑属性：分隔符自定义
 nz-dropdown.button | 下拉菜单按钮
 nz-dropdown.button.style | 下拉菜单按钮内风格
@@ -111,6 +123,8 @@ nz-checkbox.group | 多选框组
 nz-checkbox.layout | 多选框组布局
 nz-date | 日期选择框
 nz-date.month | 月份选择框
+nzDateRender | data-entry date nzDateRender()
+nzDisabledDate | data-entry date nzDisabledDate()
 nzRenderExtraFooter | 日期属性：在面板中添加额外的页脚
 nzShowTime | 日期属性：增加时间选择功能
 nzShowToday | 日期属性：是否展示“今天”按钮
@@ -315,6 +329,7 @@ nzBordered | 是否有边框
 nzCancelText | 取消文本
 nzChange | 变更时回调
 nzChecked | 是否被选中
+nzClassName | 指定类名
 nzClick | 点击项触发
 nzDescription | 描述内容
 nzDisabled | disable 状态
@@ -329,6 +344,7 @@ nzOkText | 确认文本
 nzOnClose | 关闭时触发的回调函数
 nzPlaceHolder | 输入框占位文本
 nzPlacement | 位置
+nzPopupStyle | attributes attr nzPopupStyle()
 nzSelect | 选中时触发
 nzSelectChange | 选中时触发
 nzShape | 形状
