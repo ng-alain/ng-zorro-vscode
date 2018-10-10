@@ -61,6 +61,10 @@
 			"nz-menu.group": "导航菜单：组",
 			"nz-menu.item-divider": "导航菜单：分割线",
 			"nz-menu.item": "导航菜单：项",
+			"nzInlineCollapsed": "导航菜单属性：inline 时菜单是否收起状态",
+			"nzInlineIndent": "导航菜单属性：inline 模式的菜单缩进宽度",
+			"nzMode": "导航菜单属性：菜单类型",
+			"nzSelectable": "导航菜单属性：是否允许选中",
 			"nzTheme": "导航菜单属性：主题颜色",
 			"nz-menu.submenu": "导航菜单：子项",
 			"nz-pagination": "分页",
@@ -126,8 +130,6 @@
 			"nz-radio.simple": "单选框最简单的用法",
 			"nz-rate": "评分",
 			"nzAllowHalf": "是否允许半选",
-			"nz-skeleton": "加载占位图",
-			"nz-skeleton.full": "加载占位图：完整示例",
 			"nz-select": "下拉选择器",
 			"nzDropdownClassName": "下拉菜单的 className 属性",
 			"nzDropdownMatchSelectWidth": "下拉菜单和选择器同宽",
@@ -140,6 +142,8 @@
 			"nzShowSearch": "下拉选择器：使单选模式可搜索",
 			"nz-select.option-group": "下拉选择器：组",
 			"nz-select.option": "下拉选择器：项",
+			"nz-skeleton": "加载占位图",
+			"nz-skeleton.full": "加载占位图：完整示例",
 			"nz-slider": "滑动输入条",
 			"nz-switch": "开关",
 			"nz-switch.icon": "开关：自定义图标",
@@ -253,6 +257,7 @@
 			"nzMessage": "警告提示内容",
 			"nzShowIcon": "是否显示辅助图标",
 			"nz-drawer": "抽屉",
+			"nz-modal": "对话框",
 			"nz-popconfirm.button": "气泡确认框：按钮风格",
 			"nz-popconfirm": "气泡确认框",
 			"nzCondition": "气泡确认框：是否直接触发 nzOnConfirm 而不弹出框",
@@ -264,8 +269,17 @@
 			"nz-spin": "加载中",
 			"nzDelay": "延迟显示加载效果的时间",
 			"nzSpinning": "加载中：是否旋转",
-			"nzTip": "加载中：当作为包裹元素时，可以自定义描述文案",
-			"nz-modal": "对话框"
+			"nzTip": "加载中：当作为包裹元素时，可以自定义描述文案"
+		}
+	},
+	"other": {
+		"title": "其它",
+		"list": {
+			"nz-anchor": "锚点",
+			"nz-anchor.link": "锚点：链接项",
+			"nz-back-top": "回到顶部",
+			"nz-divider": "分割线",
+			"nz-divider.full": "分割线：完整风格"
 		}
 	},
 	"attributes": {
@@ -302,16 +316,6 @@
 			"nzType": "类型",
 			"nzValue": "值",
 			"nzVisible": "显示状态"
-		}
-	},
-	"other": {
-		"title": "其它",
-		"list": {
-			"nz-anchor": "锚点",
-			"nz-anchor.link": "锚点：链接项",
-			"nz-back-top": "回到顶部",
-			"nz-divider": "分割线",
-			"nz-divider.full": "分割线：完整风格"
 		}
 	}
 }

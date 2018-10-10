@@ -61,6 +61,10 @@
 			"nz-menu.group": "Menu group",
 			"nz-menu.item-divider": "Menu item divider",
 			"nz-menu.item": "Menu includes item",
+			"nzInlineCollapsed": "Menu Property: specifies the collapsed status when menu is inline mode",
+			"nzInlineIndent": "Menu Property: indent px of inline menu item on each level",
+			"nzMode": "Menu Property: type of the menu",
+			"nzSelectable": "Menu Property: allow selecting menu items",
 			"nzTheme": "Menu Property: color theme of the menu",
 			"nz-menu.submenu": "Menu includes submenu",
 			"nz-pagination": "Pagination",
@@ -126,8 +130,6 @@
 			"nz-radio.simple": "Radio",
 			"nz-rate": "Rate",
 			"nzAllowHalf": "Rate Property: whether to allow semi selection",
-			"nz-skeleton": "Skeleton",
-			"nz-skeleton.full": "Skeleton includes all properties",
 			"nz-select": "Select",
 			"nzDropdownClassName": "Select Property: className of dropdown menu",
 			"nzDropdownMatchSelectWidth": "Select Property: Whether dropdown's with is same with select",
@@ -140,6 +142,8 @@
 			"nzShowSearch": "Select Property: Whether show search input in single mode",
 			"nz-select.option-group": "Select option group",
 			"nz-select.option": "Select option",
+			"nz-skeleton": "Skeleton",
+			"nz-skeleton.full": "Skeleton includes all properties",
 			"nz-slider": "Slider",
 			"nz-switch": "Switch",
 			"nz-switch.icon": "Switch includes icon",
@@ -253,6 +257,7 @@
 			"nzMessage": "Alert Property: Content of Alert",
 			"nzShowIcon": "Alert Property: Whether to show icon",
 			"nz-drawer": "Drawer",
+			"nz-modal": "Modal",
 			"nz-popconfirm.button": "Popconfirm button style",
 			"nz-popconfirm": "Popconfirm",
 			"nzCondition": "Popconfirm Property: Whether to directly emit `onConfirm` without showing Popconfirm",
@@ -264,8 +269,17 @@
 			"nz-spin": "Spin",
 			"nzDelay": "Spin Property: specifies a delay in milliseconds for loading state",
 			"nzSpinning": "Spin Property: whether Spin is spinning",
-			"nzTip": "Spin Property: customize description content when Spin has children",
-			"nz-modal": "Modal"
+			"nzTip": "Spin Property: customize description content when Spin has children"
+		}
+	},
+	"other": {
+		"title": "Other",
+		"list": {
+			"nz-anchor": "Anchor",
+			"nz-anchor.link": "Anchor includes link",
+			"nz-back-top": "Back to Top",
+			"nz-divider": "Divider",
+			"nz-divider.full": "Divider"
 		}
 	},
 	"attributes": {
@@ -302,16 +316,6 @@
 			"nzType": "General Property: the type value",
 			"nzValue": "General Property: the value",
 			"nzVisible": "General Property: Whether the component is visible or not."
-		}
-	},
-	"other": {
-		"title": "Other",
-		"list": {
-			"nz-anchor": "Anchor",
-			"nz-anchor.link": "Anchor includes link",
-			"nz-back-top": "Back to Top",
-			"nz-divider": "Divider",
-			"nz-divider.full": "Divider"
 		}
 	}
 }

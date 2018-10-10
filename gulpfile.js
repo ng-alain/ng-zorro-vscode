@@ -102,8 +102,6 @@ gulp.task("gen-readme-en", () => {
     .pipe(gulp.dest("./"));
 });
 
-gulp.task("build-i18n", gulpSequence(["build", "gen-i18n", "build"]));
-
 gulp.task("serve", gulpSequence(["build", "gen-i18n", "watch"]));
 
 gulp.task("prod", gulpSequence(["build", "gen-i18n", "gen-readme", "gen-readme-en", "build"]));

@@ -42,8 +42,6 @@ nz-icon.spin | 旋转图标
 
 Trigger | Description
 --- | ---
-nz-layout | 布局
-nz-layout.sider | 布局：侧边栏
 nz-grid.col | 栅格系统：列
 nz-grid | 栅格系统
 nzAlign | flex 布局下的垂直对齐方式
@@ -65,6 +63,8 @@ nzXXl | ≥1600px 响应式栅格，可为栅格数或一个包含其他属性�
 nz-grid.responsive | 响应式栅格系统
 nz-grid.row-flex | 响应式栅格系统Flex布局
 nz-grid.row | 栅格系统：行
+nz-layout | 布局
+nz-layout.sider | 布局：侧边栏
 
 ### 导航
 
@@ -76,16 +76,20 @@ nz-breadcrumb | 面包屑
 nz-breadcrumb.icon | 面包屑：图标
 nz-breadcrumb.item | 面包屑项
 nzSeparator | 面包屑属性：分隔符自定义
-nz-menu | 导航菜单
-nz-menu.group | 导航菜单：组
-nz-menu.item-divider | 导航菜单：分割线
-nz-menu.item | 导航菜单：项
-nzTheme | 导航菜单属性：主题颜色
-nz-menu.submenu | 导航菜单：子项
 nz-dropdown.button | 下拉菜单按钮
 nz-dropdown.button.style | 下拉菜单按钮内风格
 nz-dropdown | 下拉菜单
 nzClickHide | 点击后是否隐藏菜单
+nz-menu | 导航菜单
+nz-menu.group | 导航菜单：组
+nz-menu.item-divider | 导航菜单：分割线
+nz-menu.item | 导航菜单：项
+nzInlineCollapsed | 导航菜单属性：inline 时菜单是否收起状态
+nzInlineIndent | 导航菜单属性：inline 模式的菜单缩进宽度
+nzMode | 导航菜单属性：菜单类型
+nzSelectable | 导航菜单属性：是否允许选中
+nzTheme | 导航菜单属性：主题颜色
+nz-menu.submenu | 导航菜单：子项
 nz-pagination | 分页
 nzHideOnSinglePage | 分页属性：只有一页时是否隐藏分页器
 nz-steps.custom-dot | 步骤条：自定义点
@@ -105,6 +109,13 @@ nz-cascader | 级联选择
 nz-checkbox | 多选框
 nz-checkbox.group | 多选框组
 nz-checkbox.layout | 多选框组布局
+nz-date | 日期选择框
+nz-date.month | 月份选择框
+nzRenderExtraFooter | 日期属性：在面板中添加额外的页脚
+nzShowTime | 日期属性：增加时间选择功能
+nzShowToday | 日期属性：是否展示“今天”按钮
+nz-date.range | 日期范围选择框
+nz-date.week | 周选择框
 nz-form.control-responsive | 表单：控件为响应式
 nz-form.control | 表单：控件
 nz-form | 表单，向下为表单项
@@ -119,18 +130,6 @@ nzHasFeedback | 是否反馈图标，一般 input 有效
 nzValidateStatus | 校验状态，默认自动从 nz-form-control 中的 NgControl 获得校验状态
 nz-form.split | 表单：分隔符
 nz-form.text | 表单：文本
-nz-date | 日期选择框
-nz-date.month | 月份选择框
-nzRenderExtraFooter | 日期属性：在面板中添加额外的页脚
-nzShowTime | 日期属性：增加时间选择功能
-nzShowToday | 日期属性：是否展示“今天”按钮
-nz-date.range | 日期范围选择框
-nz-date.week | 周选择框
-nz-input-number | 数字输入框
-nz-input-number.full | 数字输入框：完整示例
-nzFormatter | 指定输入框展示值的格式
-nzParser | 指定从 nzFormatter 里转换回数字的方式，和 nzFormatter 搭配使用
-nzPrecision | 数值精度
 nz-input.addon-icon | 前后置标签按钮
 nz-input.addon-text | 前后置文本按钮
 nz-input | 输入框
@@ -143,14 +142,17 @@ nzSuffix | 带有后缀图标属性
 nz-input.prefix | 带有前缀图标的 input
 nz-input.search | 搜索示例
 nz-input.suffix | 带有后缀图标的 input
+nz-input-number | 数字输入框
+nz-input-number.full | 数字输入框：完整示例
+nzFormatter | 指定输入框展示值的格式
+nzParser | 指定从 nzFormatter 里转换回数字的方式，和 nzFormatter 搭配使用
+nzPrecision | 数值精度
+nz-mention | 提及
 nz-radio.button | 单选框按钮风格
 nz-radio | 单选框
 nz-radio.simple | 单选框最简单的用法
 nz-rate | 评分
 nzAllowHalf | 是否允许半选
-nz-mention | 提及
-nz-skeleton | 加载占位图
-nz-skeleton.full | 加载占位图：完整示例
 nz-select | 下拉选择器
 nzDropdownClassName | 下拉菜单的 className 属性
 nzDropdownMatchSelectWidth | 下拉菜单和选择器同宽
@@ -163,19 +165,21 @@ nzServerSearch | 下拉选择器：是否使用服务端搜索，当为 true 时
 nzShowSearch | 下拉选择器：使单选模式可搜索
 nz-select.option-group | 下拉选择器：组
 nz-select.option | 下拉选择器：项
+nz-skeleton | 加载占位图
+nz-skeleton.full | 加载占位图：完整示例
 nz-slider | 滑动输入条
 nz-switch | 开关
 nz-switch.icon | 开关：自定义图标
 nz-switch.text | 开关：自定义文本
+nz-textarea | 多选文本框
+nzAutosize | 多选文本框：自适应内容高度
 nz-time | 时间选择框
 nzAllowEmpty | 时间选择框属性：是否展示清除按钮
 nzHourStep | 时间选择框属性：小时选项间隔
 nzMinuteStep | 时间选择框属性：分钟选项间隔
 nzSecondStep | 时间选择框属性：秒选项间隔
-nz-textarea | 多选文本框
-nzAutosize | 多选文本框：自适应内容高度
-nz-tree-select | 树选择
 nz-transfer | 穿梭框
+nz-tree-select | 树选择
 nz-upload | 上传
 nz-upload.drag | 上传：拖拽风格
 nzBeforeUpload | 上传：上传文件之前的钩子，参数为上传的文件，若返回 false 则停止上传。注意：IE9 不支持该方法；注意：务必使用 &#x3D;&gt; 定义处理方法。
@@ -226,13 +230,6 @@ nzPagination | 列表：对应的 pagination 配置
 nzRenderItem | 列表：自定义列表项
 nz-list.simple | 列表：最简单的用法
 nz-popover | 气泡卡片
-nz-tag | 标签
-nzColor | 标签：颜色
-nzTagMode | 标签：设定标签工作的模式
-nz-timeline | 时间轴
-nz-timeline.item-custom-dot | 时间轴：自定义点
-nz-timeline.item | 时间轴：项
-nz-timeline.pending | 时间轴：最后一个
 nz-table | 表格
 nzExpand | 表格：可展开
 nzFilterMultiple | 表格：是否为多选过滤器
@@ -253,15 +250,22 @@ nzShowSort | 表格：是否显示排序
 nzSort | 表格：当前排序状态，受控模式使用，可双向绑定
 nzWidth | 表格：指定该列宽度，表头未分组时可用
 nz-table.static-no-pager | 表格：不分页静态数据
-nz-tooltip | 文字提示
-nzMouseEnterDelay | 文字提示：鼠标移入后延时多少才显示 Tooltip，单位：秒
-nzMouseLeaveDelay | 文字提示：鼠标移出后延时多少才隐藏 Tooltip，单位：秒
-nz-tooltip.template | 文字提示：自定义内容风格
 nz-tabs | 标签页
 nzAnimated | 标签页：是否使用动画切换 Tabs，在 &#x60;nzTabPosition&#x3D;top
 nzTabPosition | 标签页：页签位置
 nzTabsType | 标签页：页签的基本样式
 nz-tabs.tab | 标签页：项
+nz-tag | 标签
+nzColor | 标签：颜色
+nzTagMode | 标签：设定标签工作的模式
+nz-timeline | 时间轴
+nz-timeline.item-custom-dot | 时间轴：自定义点
+nz-timeline.item | 时间轴：项
+nz-timeline.pending | 时间轴：最后一个
+nz-tooltip | 文字提示
+nzMouseEnterDelay | 文字提示：鼠标移入后延时多少才显示 Tooltip，单位：秒
+nzMouseLeaveDelay | 文字提示：鼠标移出后延时多少才隐藏 Tooltip，单位：秒
+nz-tooltip.template | 文字提示：自定义内容风格
 nz-tree | 树形
 
 ### 反馈
@@ -277,14 +281,14 @@ nzMessage | 警告提示内容
 nzShowIcon | 是否显示辅助图标
 nz-drawer | 抽屉
 nz-modal | 对话框
+nz-popconfirm.button | 气泡确认框：按钮风格
+nz-popconfirm | 气泡确认框
+nzCondition | 气泡确认框：是否直接触发 nzOnConfirm 而不弹出框
 nz-progress.circle | 进度条：圆风格
 nz-progress.dashboard | 进度条：仪表盘风格
 nz-progress | 进度条
 nz-progress.line | 进度条：线风格
 nzProgressStatus | 进度条：状态
-nz-popconfirm.button | 气泡确认框：按钮风格
-nz-popconfirm | 气泡确认框
-nzCondition | 气泡确认框：是否直接触发 nzOnConfirm 而不弹出框
 nz-spin | 加载中
 nzDelay | 延迟显示加载效果的时间
 nzSpinning | 加载中：是否旋转
@@ -296,9 +300,9 @@ Trigger | Description
 --- | ---
 nz-anchor | 锚点
 nz-anchor.link | 锚点：链接项
+nz-back-top | 回到顶部
 nz-divider | 分割线
 nz-divider.full | 分割线：完整风格
-nz-back-top | 回到顶部
 
 ### 通用属性
 

@@ -1,16 +1,86 @@
 {
  
-     "layout layout": {
-        "prefix": "nz-layout",
-        "body": "<nz-layout>\r\n  <nz-header>\r\n    $0\r\n  </nz-header>\r\n  <nz-content>\r\n\r\n  </nz-content>\r\n  <nz-footer>\r\n\r\n  </nz-footer>\r\n</nz-layout>",
-        "description": "布局(Layout)",
+     "general button": {
+        "prefix": "nz-button",
+        "body": "<button (click)=\"${2}\" nz-button$0>$1</button>",
+        "description": "按钮(Button)",
         "scope": ""
     }
 
-    , "layout layout sider": {
-        "prefix": "nz-layout.sider",
-        "body": "<nz-sider [nzCollapsible]=\"true\"${1: [nzWidth]=\"${2:200}\"}${3: [nzCollapsedWidth]=\"${4:64}\"}>\r\n  $0\r\n</nz-sider>",
-        "description": "布局：侧边栏(Layout: sider)",
+    , "general button group": {
+        "prefix": "nz-button.group",
+        "body": "<nz-button-group>\r\n  <button (click)=\"${2}\" nz-button>$1</button>\r\n  <button (click)=\"${4}\" nz-button>$3</button>\r\n  $0\r\n</nz-button-group>",
+        "description": "按钮组(Button group)",
+        "scope": ""
+    }
+
+    , "general button icon text left": {
+        "prefix": "nz-button.icon-text-left",
+        "body": "<button (click)=\"${3}\" nz-button>\r\n  $1\r\n  <i class=\"anticon anticon-${2|left,right|}\"></i>\r\n</button>\r\n$0",
+        "description": "按钮带图标且文本在左(Button with icon and text on left)",
+        "scope": ""
+    }
+
+    , "general button icon text right": {
+        "prefix": "nz-button.icon-text-right",
+        "body": "<button (click)=\"${3}\" nz-button>\r\n  <i class=\"anticon anticon-${2|left,right|}\"></i>$1\r\n</button>\r\n$0",
+        "description": "按钮带图标且文本在右(Button with icon and text on right)",
+        "scope": ""
+    }
+
+    , "general button nzGhost": {
+        "prefix": "nzGhost",
+        "body": "nzGhost",
+        "description": "属性：幽灵属性，使按钮背景透明(Button Property: make background transparent and invert text and border colors)",
+        "scope": ""
+    }
+
+    , "general button type": {
+        "prefix": "nz-button.type",
+        "body": "<button (click)=\"${2}\" nz-button nzType=\"${3|primary,dashed,danger,default|}\">$1</button>\r\n$0",
+        "description": "按钮含类型(Button include type)",
+        "scope": ""
+    }
+
+    , "general icon circle o": {
+        "prefix": "nz-icon.circle-o",
+        "body": "<i class=\"anticon anticon-${1|edit,delete,plus,minus,question,close,check,warning,copy,search,user|}-circle-o\"></i>",
+        "description": "icon描线图标(Icon full circle)",
+        "scope": ""
+    }
+
+    , "general icon circle": {
+        "prefix": "nz-icon.circle",
+        "body": "<i class=\"anticon anticon-${1|edit,delete,plus,minus,question,close,check,warning,copy,search,user|}-circle\"></i>",
+        "description": "icon实心图标(Icon empty circle)",
+        "scope": ""
+    }
+
+    , "general icon class name": {
+        "prefix": "nz-icon.class-name",
+        "body": "anticon anticon-${1|edit,delete,plus,minus,question,close,check,warning,copy,search,user|}",
+        "description": "icon图标类名(Icon class name)",
+        "scope": ""
+    }
+
+    , "general icon": {
+        "prefix": "nz-icon",
+        "body": "<i class=\"anticon anticon-${1|edit,delete,plus,minus,question,close,check,warning,copy,search,user|}\"></i>",
+        "description": "图标(Icon)",
+        "scope": ""
+    }
+
+    , "general icon nzIconSpin": {
+        "prefix": "nzIconSpin",
+        "body": "anticon-spin",
+        "description": "属性：旋转icon图标(Icon Property: rotate icon)",
+        "scope": ""
+    }
+
+    , "general icon spin": {
+        "prefix": "nz-icon.spin",
+        "body": "<i class=\"anticon anticon-spin anticon-${1|edit,delete,plus,minus,question,close,check,warning,copy,search,user|}\"></i>",
+        "description": "旋转图标(Rotate icon)",
         "scope": ""
     }
 
@@ -161,87 +231,17 @@
         "scope": ""
     }
 
-    , "general button": {
-        "prefix": "nz-button",
-        "body": "<button (click)=\"${2}\" nz-button$0>$1</button>",
-        "description": "按钮(Button)",
+    , "layout layout": {
+        "prefix": "nz-layout",
+        "body": "<nz-layout>\r\n  <nz-header>\r\n    $0\r\n  </nz-header>\r\n  <nz-content>\r\n\r\n  </nz-content>\r\n  <nz-footer>\r\n\r\n  </nz-footer>\r\n</nz-layout>",
+        "description": "布局(Layout)",
         "scope": ""
     }
 
-    , "general button group": {
-        "prefix": "nz-button.group",
-        "body": "<nz-button-group>\r\n  <button (click)=\"${2}\" nz-button>$1</button>\r\n  <button (click)=\"${4}\" nz-button>$3</button>\r\n  $0\r\n</nz-button-group>",
-        "description": "按钮组(Button group)",
-        "scope": ""
-    }
-
-    , "general button icon text left": {
-        "prefix": "nz-button.icon-text-left",
-        "body": "<button (click)=\"${3}\" nz-button>\r\n  $1\r\n  <i class=\"anticon anticon-${2|left,right|}\"></i>\r\n</button>\r\n$0",
-        "description": "按钮带图标且文本在左(Button with icon and text on left)",
-        "scope": ""
-    }
-
-    , "general button icon text right": {
-        "prefix": "nz-button.icon-text-right",
-        "body": "<button (click)=\"${3}\" nz-button>\r\n  <i class=\"anticon anticon-${2|left,right|}\"></i>$1\r\n</button>\r\n$0",
-        "description": "按钮带图标且文本在右(Button with icon and text on right)",
-        "scope": ""
-    }
-
-    , "general button nzGhost": {
-        "prefix": "nzGhost",
-        "body": "nzGhost",
-        "description": "属性：幽灵属性，使按钮背景透明(Button Property: make background transparent and invert text and border colors)",
-        "scope": ""
-    }
-
-    , "general button type": {
-        "prefix": "nz-button.type",
-        "body": "<button (click)=\"${2}\" nz-button nzType=\"${3|primary,dashed,danger,default|}\">$1</button>\r\n$0",
-        "description": "按钮含类型(Button include type)",
-        "scope": ""
-    }
-
-    , "general icon circle o": {
-        "prefix": "nz-icon.circle-o",
-        "body": "<i class=\"anticon anticon-${1|edit,delete,plus,minus,question,close,check,warning,copy,search,user|}-circle-o\"></i>",
-        "description": "icon描线图标(Icon full circle)",
-        "scope": ""
-    }
-
-    , "general icon circle": {
-        "prefix": "nz-icon.circle",
-        "body": "<i class=\"anticon anticon-${1|edit,delete,plus,minus,question,close,check,warning,copy,search,user|}-circle\"></i>",
-        "description": "icon实心图标(Icon empty circle)",
-        "scope": ""
-    }
-
-    , "general icon class name": {
-        "prefix": "nz-icon.class-name",
-        "body": "anticon anticon-${1|edit,delete,plus,minus,question,close,check,warning,copy,search,user|}",
-        "description": "icon图标类名(Icon class name)",
-        "scope": ""
-    }
-
-    , "general icon": {
-        "prefix": "nz-icon",
-        "body": "<i class=\"anticon anticon-${1|edit,delete,plus,minus,question,close,check,warning,copy,search,user|}\"></i>",
-        "description": "图标(Icon)",
-        "scope": ""
-    }
-
-    , "general icon nzIconSpin": {
-        "prefix": "nzIconSpin",
-        "body": "anticon-spin",
-        "description": "属性：旋转icon图标(Icon Property: rotate icon)",
-        "scope": ""
-    }
-
-    , "general icon spin": {
-        "prefix": "nz-icon.spin",
-        "body": "<i class=\"anticon anticon-spin anticon-${1|edit,delete,plus,minus,question,close,check,warning,copy,search,user|}\"></i>",
-        "description": "旋转图标(Rotate icon)",
+    , "layout layout sider": {
+        "prefix": "nz-layout.sider",
+        "body": "<nz-sider [nzCollapsible]=\"true\"${1: [nzWidth]=\"${2:200}\"}${3: [nzCollapsedWidth]=\"${4:64}\"}>\r\n  $0\r\n</nz-sider>",
+        "description": "布局：侧边栏(Layout: sider)",
         "scope": ""
     }
 
@@ -340,6 +340,34 @@
         "prefix": "nz-menu.item",
         "body": "<li nz-menu-item>${1}</li>\r\n$0",
         "description": "导航菜单：项(Menu includes item)",
+        "scope": ""
+    }
+
+    , "navigation menu nzInlineCollapsed": {
+        "prefix": "nzInlineCollapsed",
+        "body": "nzInlineCollapsed=\"${1|true,false|}\"",
+        "description": "导航菜单属性：inline 时菜单是否收起状态(Menu Property: specifies the collapsed status when menu is inline mode)",
+        "scope": ""
+    }
+
+    , "navigation menu nzInlineIndent": {
+        "prefix": "nzInlineIndent",
+        "body": "[nzInlineIndent]=\"${1|0,8,16,24,32,40|}\"",
+        "description": "导航菜单属性：inline 模式的菜单缩进宽度(Menu Property: indent px of inline menu item on each level)",
+        "scope": ""
+    }
+
+    , "navigation menu nzMode": {
+        "prefix": "nzMode",
+        "body": "nzMode=\"${1|vertical,horizontal,inline|}\"",
+        "description": "导航菜单属性：菜单类型(Menu Property: type of the menu)",
+        "scope": ""
+    }
+
+    , "navigation menu nzSelectable": {
+        "prefix": "nzSelectable",
+        "body": "nzSelectable=\"${1|false,true|}\"",
+        "description": "导航菜单属性：是否允许选中(Menu Property: allow selecting menu items)",
         "scope": ""
     }
 
