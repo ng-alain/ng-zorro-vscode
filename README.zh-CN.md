@@ -123,8 +123,8 @@ nz-checkbox.group | 多选框组
 nz-checkbox.layout | 多选框组布局
 nz-date | 日期选择框
 nz-date.month | 月份选择框
-nzDateRender | data-entry date nzDateRender()
-nzDisabledDate | data-entry date nzDisabledDate()
+nzDateRender | 日期属性：自定义日期单元格的内容（month-picker/year-picker不支持）
+nzDisabledDate | 日期属性：不可选择的日期（year-picker不支持）
 nzRenderExtraFooter | 日期属性：在面板中添加额外的页脚
 nzShowTime | 日期属性：增加时间选择功能
 nzShowToday | 日期属性：是否展示“今天”按钮
@@ -344,7 +344,7 @@ nzOkText | 确认文本
 nzOnClose | 关闭时触发的回调函数
 nzPlaceHolder | 输入框占位文本
 nzPlacement | 位置
-nzPopupStyle | attributes attr nzPopupStyle()
+nzPopupStyle | 额外的弹出样式
 nzSelect | 选中时触发
 nzSelectChange | 选中时触发
 nzShape | 形状

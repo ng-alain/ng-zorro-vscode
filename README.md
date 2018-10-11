@@ -123,8 +123,8 @@ nz-checkbox.group | Checkbox group
 nz-checkbox.layout | Checkbox use with Grid
 nz-date | Date picker
 nz-date.month | Month picker
-nzDateRender | data-entry date nzDateRender()
-nzDisabledDate | data-entry date nzDisabledDate()
+nzDateRender | Date Property: custom rendering function for date cells (Not support by month-picker/year-picker)
+nzDisabledDate | Date Property: specify the date that cannot be selected (Not support by year-picker)
 nzRenderExtraFooter | Date Property: render extra footer in panel
 nzShowTime | Date Property: to provide an additional time selection
 nzShowToday | Date Property: whether to show &#x27;Today&#x27; button
@@ -344,7 +344,7 @@ nzOkText | General Property: Text of the OK button
 nzOnClose | General Property: a close callback function
 nzPlaceHolder | General Property: set the placeholder text
 nzPlacement | General Property: set the placement
-nzPopupStyle | attributes attr nzPopupStyle()
+nzPopupStyle | General Property: to customize the style of the popup
 nzSelect | General Property: a select callback
 nzSelectChange | General Property: a select callback function
 nzShape | General Property: the shape
