@@ -40,13 +40,16 @@
     "build": "gulp prod"
   },
   "devDependencies": {
+    "fs-extra": "^7.0.0",
+    "path": "^0.12.7",
+    "lodash": "^4.17.11",
+    "mark-twain": "^2.0.3",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
     "gulp-hb": "^6.0.2",
     "gulp-mustache": "^3.0.0",
     "gulp-sequence": "^0.4.6",
     "gulp-wrap": "^0.13.0",
-    "lodash": "^4.17.4",
     "map-stream": "0.0.7"
   }
 }
