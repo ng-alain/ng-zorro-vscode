@@ -21,25 +21,6 @@
 ## 文档
 
 
-### 常规
-
-Trigger | Description
---- | ---
-nz-button | 按钮
-nz-button.group | 按钮组
-nz-button.icon-text-left | 按钮带图标且文本在左
-nz-button.icon-text-right | 按钮带图标且文本在右
-nzBlock | 按钮属性：将按钮宽度调整为其父宽度的选项
-nzGhost | 按钮属性：幽灵属性，使按钮背景透明
-nzShape | 按钮属性：设置按钮形状
-nz-button.type | 按钮含类型
-nz-icon.circle-o | icon描线图标
-nz-icon.circle | icon实心图标
-nz-icon.class-name | icon图标类名
-nz-icon | 图标
-nzIconSpin | 图标属性：旋转icon图标
-nz-icon.spin | 旋转图标
-
 ### 布局
 
 Trigger | Description
@@ -74,6 +55,24 @@ nzCollapsedWidth | 侧边栏属性：收缩宽度，设置为 0 会出现特殊 
 nzCollapsible | 侧边栏属性：是否可收起
 nzReverseArrow | 侧边栏属性：翻转折叠提示箭头的方向，当 Sider 在右边时可以使用
 nzWidth | 侧边栏属性：宽度
+
+### 常规
+
+Trigger | Description
+--- | ---
+nz-button | 按钮
+nz-button.group | 按钮组
+nz-button.icon-text-left | 按钮带图标且文本在左
+nz-button.icon-text-right | 按钮带图标且文本在右
+nzBlock | 按钮属性：将按钮宽度调整为其父宽度的选项
+nzGhost | 按钮属性：幽灵属性，使按钮背景透明
+nzShape | 按钮属性：设置按钮形状
+nz-button.type | 按钮含类型
+nz-icon.custom | 自定义图标
+nz-icon | 图标
+nz-icon.iconfont | 使用 Iconfont.cn
+nz-icon.spin | 旋转图标
+nz-icon.twotone | 多色图标
 
 ### 导航
 

@@ -1,3 +1,7 @@
+# 2.4.0
+
+- 优化 1.7.0 Icon [#2304](https://github.com/NG-ZORRO/ng-zorro-antd/issues/2304)
+
 # 2.3.1
 
 - 增加若干高频率组件属性模板

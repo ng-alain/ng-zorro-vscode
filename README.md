@@ -21,25 +21,6 @@ Typing the beginning of `nz-` will automatically appear in the intellisense list
 ## Document
 
 
-### General
-
-Trigger | Description
---- | ---
-nz-button | Button
-nz-button.group | Button group
-nz-button.icon-text-left | Button with icon and text on left
-nz-button.icon-text-right | Button with icon and text on right
-nzBlock | Button Property: option to fit button width to its parent width
-nzGhost | Button Property: make background transparent and invert text and border colors
-nzShape | Button Property: can be set to &#x60;circle&#x60; or omitted
-nz-button.type | Button include type
-nz-icon.circle-o | Icon full circle
-nz-icon.circle | Icon empty circle
-nz-icon.class-name | Icon class name
-nz-icon | Icon
-nzIconSpin | Icon Property: rotate icon
-nz-icon.spin | Rotate icon
-
 ### Layout
 
 Trigger | Description
@@ -74,6 +55,24 @@ nzCollapsedWidth | Sider Property: width of the collapsed sidebar, by setting to
 nzCollapsible | Sider Property: whether can be collapsed
 nzReverseArrow | Sider Property: reverse direction of arrow, for a sider that expands from the right
 nzWidth | Sider Property: width of the sidebar
+
+### General
+
+Trigger | Description
+--- | ---
+nz-button | Button
+nz-button.group | Button group
+nz-button.icon-text-left | Button with icon and text on left
+nz-button.icon-text-right | Button with icon and text on right
+nzBlock | Button Property: option to fit button width to its parent width
+nzGhost | Button Property: make background transparent and invert text and border colors
+nzShape | Button Property: can be set to &#x60;circle&#x60; or omitted
+nz-button.type | Button include type
+nz-icon.custom | Custom icon
+nz-icon | Icon
+nz-icon.iconfont | Use iconfont.cn
+nz-icon.spin | Rotate icon
+nz-icon.twotone | Two-tone icon and colorful icon
 
 ### Navigation
 

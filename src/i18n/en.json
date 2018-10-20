@@ -10,12 +10,11 @@
 			"nzGhost": "Button Property: make background transparent and invert text and border colors",
 			"nzShape": "Button Property: can be set to `circle` or omitted",
 			"nz-button.type": "Button include type",
-			"nz-icon.circle-o": "Icon full circle",
-			"nz-icon.circle": "Icon empty circle",
-			"nz-icon.class-name": "Icon class name",
+			"nz-icon.custom": "Custom icon",
 			"nz-icon": "Icon",
-			"nzIconSpin": "Icon Property: rotate icon",
-			"nz-icon.spin": "Rotate icon"
+			"nz-icon.iconfont": "Use iconfont.cn",
+			"nz-icon.spin": "Rotate icon",
+			"nz-icon.twotone": "Two-tone icon and colorful icon"
 		}
 	},
 	"layout": {
@@ -91,10 +90,10 @@
 	"data-entry": {
 		"title": "Data Entry",
 		"list": {
-			"nz-cascader": "Cascader",
 			"nz-autocomplete.custom-label": "Autocomplete includes custom label",
 			"nz-autocomplete.data-source": "Autocomplete includes data source",
 			"nz-autocomplete": "Autocomplete",
+			"nz-cascader": "Cascader",
 			"nz-checkbox": "Checkbox",
 			"nz-checkbox.group": "Checkbox group",
 			"nz-checkbox.layout": "Checkbox use with Grid",
@@ -199,7 +198,6 @@
 			"nzOverflowCount": "Badge Property: Max count to show",
 			"nzShowZero": "Badge Property: Whether to show badge when `count` is zero",
 			"nz-calendar": "Calendar",
-			"nz-carousel": "Carousel",
 			"nz-card": "Card",
 			"nz-card.extra": "Card includes extra",
 			"nz-card.meta": "Card includes meta",
@@ -207,10 +205,10 @@
 			"nzTypeInner": "Card Property: inner card style",
 			"nz-card.simple": "Card",
 			"nz-card.tab": "Card includes tab",
+			"nz-carousel": "Carousel",
 			"nz-collapse": "Collapse",
 			"nzAccordion": "Collapse Property: Accordion mode",
 			"nzShowArrow": "Collapse Property: Display arrow or not",
-			"nz-popover": "Popover",
 			"nz-list": "List",
 			"nz-list.item-meta": "List includes item and meta",
 			"nz-list.item": "List includes item",
@@ -221,6 +219,7 @@
 			"nzPagination": "List Property: Shows a pagination content",
 			"nzRenderItem": "List Property: Custom item renderer",
 			"nz-list.simple": "List",
+			"nz-popover": "Popover",
 			"nz-table": "Table",
 			"nzExpand": "Table Property: Current expand status, double binding",
 			"nzFilterMultiple": "Table Property: Whether filter multiple mode",
