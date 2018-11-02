@@ -2,6 +2,7 @@
 	"general": {
 		"title": "General",
 		"list": {
+			"nz-button.block": "Block Button",
 			"nz-button": "Button",
 			"nz-button.group": "Button group",
 			"nz-button.icon-text-left": "Button with icon and text on left",

@@ -1,3 +1,7 @@
+# 2.4.1
+
+- 优先使用 `nz-icon` 组件
+
 # 2.4.0
 
 - 优化 1.7.0 Icon [#2304](https://github.com/NG-ZORRO/ng-zorro-antd/issues/2304)

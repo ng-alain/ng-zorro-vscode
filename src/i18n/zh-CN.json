@@ -2,6 +2,7 @@
 	"general": {
 		"title": "常规",
 		"list": {
+			"nz-button.block": "Block 按钮",
 			"nz-button": "按钮",
 			"nz-button.group": "按钮组",
 			"nz-button.icon-text-left": "按钮带图标且文本在左",
