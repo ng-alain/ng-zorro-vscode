@@ -35,10 +35,11 @@ nzGhost | 按钮属性：幽灵属性，使按钮背景透明
 nzShape | 按钮属性：设置按钮形状
 nz-button.type | 按钮含类型
 nz-icon.custom | 自定义图标
-nz-icon | 图标
+nz-icon | 描线图标
+nz-icon.fill | 实心图标
 nz-icon.iconfont | 使用 Iconfont.cn
 nz-icon.spin | 旋转图标
-nz-icon.twotone | 多色图标
+nz-icon.twotone | 双色图标
 
 ### 布局
 
@@ -65,7 +66,7 @@ nzXXl | ≥1600px 响应式栅格，可为栅格数或一个包含其他属性�
 nz-grid.responsive | 响应式栅格系统
 nz-grid.row-flex | 响应式栅格系统Flex布局
 nz-grid.row | 栅格系统：行
-nz-layout.content | layout layout content()
+nz-layout.content | 布局：内容部分
 nz-layout | 布局
 nz-sider | 侧边栏
 nzBreakpoint | 侧边栏属性：触发响应式布局的断点
@@ -244,6 +245,8 @@ nzPagination | 列表：对应的 pagination 配置
 nzRenderItem | 列表：自定义列表项
 nz-list.simple | 列表：最简单的用法
 nz-popover | 气泡卡片
+nz-popover.help-html | 气泡卡片：HTML帮助示例
+nz-popover.help | 气泡卡片：帮助示例
 nz-table | 表格
 nzExpand | 表格：可展开
 nzFilterMultiple | 表格：是否为多选过滤器
@@ -277,8 +280,6 @@ nz-timeline.item-custom-dot | 时间轴：自定义点
 nz-timeline.item | 时间轴：项
 nz-timeline.pending | 时间轴：最后一个
 nz-tooltip | 文字提示
-nzMouseEnterDelay | 文字提示：鼠标移入后延时多少才显示 Tooltip，单位：秒
-nzMouseLeaveDelay | 文字提示：鼠标移出后延时多少才隐藏 Tooltip，单位：秒
 nz-tooltip.template | 文字提示：自定义内容风格
 nz-tree | 树形
 
@@ -339,12 +340,17 @@ nzIndeterminate | 设置选择框 indeterminate 状态
 nzLoading | 是否loading效果
 nzMax | 最大值
 nzMin | 最小值
+nzMouseEnterDelay | 鼠标移入后延时多少才显示 Tooltip，单位：秒
+nzMouseLeaveDelay | 鼠标移出后延时多少才隐藏 Tooltip，单位：秒
 nzName | 名称
 nzOkText | 确认文本
 nzOnClose | 关闭时触发的回调函数
+nzOverlayClassName | 卡片类名
+nzOverlayStyle | 卡片样式
 nzPlaceHolder | 输入框占位文本
 nzPlacement | 位置
 nzPopupStyle | 额外的弹出样式
+nzSelect-twobinding | 选中时触发（双向绑定）
 nzSelect | 选中时触发
 nzSelectChange | 选中时触发
 nzShape | 形状
@@ -354,7 +360,9 @@ nzTotal | 总数
 nzTrigger | 触发方式
 nzType | 类型
 nzValue | 值
+nzVisible-twobinding | 显示状态（双向绑定）
 nzVisible | 显示状态
+nzVisibleChange | 显示状态变更事件
 
 ## 更新日志
 

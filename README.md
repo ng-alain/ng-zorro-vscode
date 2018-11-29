@@ -35,7 +35,8 @@ nzGhost | Button Property: make background transparent and invert text and borde
 nzShape | Button Property: can be set to &#x60;circle&#x60; or omitted
 nz-button.type | Button include type
 nz-icon.custom | Custom icon
-nz-icon | Icon
+nz-icon | Outline Icon
+nz-icon.fill | Fill Icon
 nz-icon.iconfont | Use iconfont.cn
 nz-icon.spin | Rotate icon
 nz-icon.twotone | Two-tone icon and colorful icon
@@ -65,7 +66,7 @@ nzXXl | Grid Property: ≥1600px
 nz-grid.responsive | Responsive grid system
 nz-grid.row-flex | Responsive grid system flex layout
 nz-grid.row | Grids System: row
-nz-layout.content | layout layout content()
+nz-layout.content | Layout: The content layout with default style
 nz-layout | Layout
 nz-sider | Sider
 nzBreakpoint | Sider Property: breakpoints of the responsive layout
@@ -244,6 +245,8 @@ nzPagination | List Property: Shows a pagination content
 nzRenderItem | List Property: Custom item renderer
 nz-list.simple | List
 nz-popover | Popover
+nz-popover.help-html | Popover: Help demo (Include html)
+nz-popover.help | Popover: Help demo
 nz-table | Table
 nzExpand | Table Property: Current expand status, double binding
 nzFilterMultiple | Table Property: Whether filter multiple mode
@@ -277,8 +280,6 @@ nz-timeline.item-custom-dot | Timeline: Custom dot of item
 nz-timeline.item | Timeline includes item
 nz-timeline.pending | Timeline includes pending
 nz-tooltip | Tooltip
-nzMouseEnterDelay | Tooltip Property: Delay in seconds, before tooltip is shown on mouse enter
-nzMouseLeaveDelay | Tooltip Property: Delay in seconds, before tooltip is hidden on mouse leave
 nz-tooltip.template | Tooltip curstom template
 nz-tree | Tree
 
@@ -339,13 +340,18 @@ nzIndeterminate | General Property: set the status of indeterminate
 nzLoading | General Property: set the loading status
 nzMax | General Property: max value
 nzMin | General Property: min value
+nzMouseEnterDelay | General Property: Delay in seconds, before tooltip is shown on mouse enter
+nzMouseLeaveDelay | General Property: Delay in seconds, before tooltip is hidden on mouse leave
 nzName | General Property: name vlaue
 nzOkText | General Property: Text of the OK button
 nzOnClose | General Property: a close callback function
+nzOverlayClassName | General Property: Class name of the tooltip card
+nzOverlayStyle | General Property: Style of the tooltip card
 nzPlaceHolder | General Property: set the placeholder text
 nzPlacement | General Property: set the placement
 nzPopupStyle | General Property: to customize the style of the popup
-nzSelect | General Property: a select callback
+nzSelect-twobinding | General Property: nzSelect two binding
+nzSelect | General Property: nzSelect
 nzSelectChange | General Property: a select callback function
 nzShape | General Property: the shape
 nzSize | General Property: the size
@@ -354,7 +360,9 @@ nzTotal | General Property: total value
 nzTrigger | General Property: specify the customized trigger
 nzType | General Property: the type value
 nzValue | General Property: the value
+nzVisible-twobinding | General Property: two binding
 nzVisible | General Property: Whether the component is visible or not.
+nzVisibleChange | General Property: a visible callback function
 
 ## Changelog
 
