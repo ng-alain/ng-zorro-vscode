@@ -1,0 +1,19 @@
+---
+description:
+  zh-CN: "项"
+  en-US: "Select option"
+---
+
+```html
+<nz-option
+  *ngFor="let ${5:item} of ${4:list}"
+  [nzLabel]="$5.label"
+  [nzValue]="$5.value"
+  [nzDisabled]="$5.disabled"
+  [nzCustomContent]="tpl">
+  <ng-template #tpl>
+    {{ $5 }}
+  </ng-template>
+</nz-option>
+
+```

@@ -1,8 +1,8 @@
 {
   "name": "ng-zorro-vscode",
   "displayName": "ng-zorro snippets",
-  "description": "基于ng-zorro的代码片断，ng-zorro是Ant Design的Angular版本",
-  "version": "2.5.0",
+  "description": "Snippets based on ng-zorro",
+  "version": "2.6.0",
   "icon": "ng-zorro.png",
   "publisher": "cipchk",
   "license": "MIT",
@@ -23,7 +23,9 @@
     "color": "#ffffff",
     "theme": "light"
   },
-  "categories": ["Snippets"],
+  "categories": [
+    "Snippets"
+  ],
   "contributes": {
     "snippets": [
       {
@@ -33,23 +35,12 @@
     ]
   },
   "scripts": {
-    "publish": "run-s build package",
-    "package": "vsce package",
-    "start": "run-s build watch",
-    "watch": "gulp watch",
-    "build": "gulp prod"
+    "build": "bash ./scripts/build/build.sh",
+    "test": "bash ./scripts/build/build.sh -t",
+    "release": "bash ./scripts/build/build.sh -b -p"
   },
   "devDependencies": {
-    "fs-extra": "^7.0.0",
-    "path": "^0.12.7",
-    "lodash": "^4.17.11",
-    "mark-twain": "^2.0.3",
-    "gulp": "^3.9.1",
-    "gulp-concat": "^2.6.1",
-    "gulp-hb": "^6.0.2",
-    "gulp-mustache": "^3.0.0",
-    "gulp-sequence": "^0.4.6",
-    "gulp-wrap": "^0.13.0",
-    "map-stream": "0.0.7"
+    "vscode-snippet-generator": "^1.2.1",
+    "vsce": "^1.53.2"
   }
 }

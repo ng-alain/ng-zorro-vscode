@@ -2,8 +2,10 @@
 # .vscode
 
 /node_modules
-/package-lock.json
-/yarn.lock
-/npm-debug.log
-/ng-zorro-vscode-*.vsix
-/ng-zorro-antd
+package-lock.json
+npm-debug.log
+yarn.lock
+/ng-zorro*.vsix
+/cipchk*.vsix
+/out
+/snippets

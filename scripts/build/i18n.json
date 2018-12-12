@@ -1,0 +1,10 @@
+{
+  "zh-CN": {
+    "displayName": "ng-zorro snippets (简体中文版)",
+    "description": "基于ng-zorro的代码片断，ng-zorro是Ant Design的Angular版本"
+  },
+  "en-US": {
+    "displayName": "ng-zorro snippets",
+    "description": "Snippets based on ng-zorro"
+  }
+}

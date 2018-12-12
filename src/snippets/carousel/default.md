@@ -1,0 +1,13 @@
+---
+description:
+  zh-CN: "走马灯"
+  en-US: "Carousel"
+---
+
+```html
+<nz-carousel [nzEffect]="'${1|scrollx,fade|}'" [nzDots]="${2|false,true|}"${3: nzVertical}${4: nzAutoPlay}>
+  <div nz-carousel-content *ngFor="let ${6:item} of ${5:list}">
+    $0
+  </div>
+</nz-carousel>
+```

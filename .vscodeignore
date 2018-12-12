@@ -1,6 +1,14 @@
 .vscode/**
 node_modules/**
 src/**
+snippets/**
+scripts/**
+
 .editorconfig
 .gitignore
-vsc-extension-quickstart.md
+.prettierrc
+*.vsix
+snippet-config.json
+tsconfig.json
+tslint.json
+yarn.lock

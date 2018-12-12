@@ -1,0 +1,8 @@
+{
+  "$schema": "./node_modules/vscode-snippet-generator/schema.json",
+  "prefix": "nz",
+  "separator": "-",
+  "i18n": "zh-CN",
+  "i18nTpl": "{zh-CN}({en-US})",
+  "ingoreDefaultMd": true
+}

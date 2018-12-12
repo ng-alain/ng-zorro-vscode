@@ -1,3 +1,8 @@
+# 2.6.0
+
+- 使用 [vscode-snippet-generator](https://github.com/cipchk/vscode-snippet-generator) 替代原始生成插件方法
+- 同步中文版本，现版本为英文版本
+
 # 2.5.0
 
 - 增加所有 `nz-icon` 类型

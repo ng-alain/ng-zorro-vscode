@@ -1,0 +1,13 @@
+---
+description:
+  zh-CN: "按钮带图标且文本在左"
+  en-US: "Button with icon and text on left"
+---
+
+```html
+<button (click)="${3}" nz-button>
+  $1
+  <i nz-icon type="${2|edit,search,ellipsis,plus,minus,question-circle,check,close,copy,download|}"></i>
+</button>
+$0
+```
