@@ -1,3 +1,7 @@
+# 2.7.0
+
+- Add `nzForceRender` in `nz-tabset`
+
 # 2.6.0
 
 - 使用 [vscode-snippet-generator](https://github.com/cipchk/vscode-snippet-generator) 替代原始生成插件方法

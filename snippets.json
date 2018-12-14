@@ -1334,6 +1334,11 @@
     "body": "[nzAnimated]=\"false\"",
     "description": "Whether to change tabs with animation"
   },
+  "nz_tabs_nzForceRender": {
+    "prefix": "nz-tabs-nzForceRender",
+    "body": "[nzForceRender]=\"${1|true,false|}\"",
+    "description": "Forced render of content in tabs, not lazy render after clicking on tabs"
+  },
   "nz_tabs_nzTabPosition": {
     "prefix": "nz-tabs-nzTabPosition",
     "body": "[nzTabPosition]=\"'${1|top,right,bottom,left|}'\"",

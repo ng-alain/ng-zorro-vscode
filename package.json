@@ -2,11 +2,16 @@
   "name": "ng-zorro-vscode",
   "displayName": "ng-zorro snippets",
   "description": "Snippets based on ng-zorro",
-  "version": "2.6.0",
+  "version": "2.7.0",
   "icon": "ng-zorro.png",
   "publisher": "cipchk",
   "license": "MIT",
   "licenseUrl": "LICENSE",
+  "scripts": {
+    "build": "bash ./scripts/build/build.sh",
+    "test": "bash ./scripts/build/build.sh -t",
+    "release": "bash ./scripts/build/build.sh -b -p"
+  },
   "homepage": "https://github.com/cipchk/ng-zorro-vscode/blob/master/README.md",
   "repository": {
     "type": "git",
@@ -33,11 +38,6 @@
         "path": "./snippets.json"
       }
     ]
-  },
-  "scripts": {
-    "build": "bash ./scripts/build/build.sh",
-    "test": "bash ./scripts/build/build.sh -t",
-    "release": "bash ./scripts/build/build.sh -b -p"
   },
   "devDependencies": {
     "vscode-snippet-generator": "^1.2.1",
