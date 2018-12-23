@@ -626,12 +626,12 @@
   },
   "nz_grid_col": {
     "prefix": "nz-grid-col",
-    "body": "<nz-col${1: nzSpan=\"${2:0-24}\" }>\n  $0\n</nz-col>",
+    "body": "<div nz-col${1: nzSpan=\"${2:0-24}\"}>\n  $0\n</div>",
     "description": "column"
   },
   "nz_grid": {
     "prefix": "nz-grid",
-    "body": "<nz-row${1: nzGutter=\"${2|0,8,16,24,32,64|}\"}>\n  <nz-col nzSpan=\"${3:0-24}\"${4: nzOffset=\"${5:0-24}\"}>\n    $0\n  </nz-col>\n</nz-row>",
+    "body": "<div nz-row${1: nzGutter=\"${2|0,8,16,24,32,64|}\"}>\n  <div nz-col nzSpan=\"${3:0-24}\"${4: nzOffset=\"${5:0-24}\"}>\n    $0\n  </div>\n</div>",
     "description": "Grids System"
   },
   "nz_grid_nzAlign": {
@@ -716,17 +716,17 @@
   },
   "nz_grid_responsive": {
     "prefix": "nz-grid-responsive",
-    "body": "<nz-col nzXs=\"${1:1-24}\" nzSm=\"${2:1-24}\" nzMd=\"${3:1-24}\" nzLg=\"${4:1-24}\" nzXl=\"${5:1-24}\" nzXXl=\"${6:1-24}\">\n  $0\n</nz-col>",
+    "body": "<div nz-col nzXs=\"${1:1-24}\" nzSm=\"${2:1-24}\" nzMd=\"${3:1-24}\" nzLg=\"${4:1-24}\" nzXl=\"${5:1-24}\" nzXXl=\"${6:1-24}\">\n  $0\n</div>",
     "description": "Responsive grid system"
   },
   "nz_grid_row-flex": {
     "prefix": "nz-grid-row-flex",
-    "body": "<nz-row nzType=\"flex\"${1: nzJustify=\"${2|start,center,end,space-between,space-around|}\"}${3: nzAlign=\"${4|top,middle,bottom|}\"}>\n  $0\n</nz-row>",
+    "body": "<div nz-row nzType=\"flex\"${1: nzJustify=\"${2|start,center,end,space-between,space-around|}\"}${3: nzAlign=\"${4|top,middle,bottom|}\"}>\n  $0\n</div>",
     "description": "Responsive grid system flex layout"
   },
   "nz_grid_row": {
     "prefix": "nz-grid-row",
-    "body": "<nz-row${1: nzGutter=\"${2|8,16,24,32,64|}\"}>\n  $0\n</nz-row>",
+    "body": "<div nz-row${1: nzGutter=\"${2|8,16,24,32,64|}\"}>\n  $0\n</div>",
     "description": "row"
   },
   "nz_icon_custom": {

@@ -5,7 +5,7 @@ description:
 ---
 
 ```html
-<nz-row nzType="flex"${1: nzJustify="${2|start,center,end,space-between,space-around|}"}${3: nzAlign="${4|top,middle,bottom|}"}>
+<div nz-row nzType="flex"${1: nzJustify="${2|start,center,end,space-between,space-around|}"}${3: nzAlign="${4|top,middle,bottom|}"}>
   $0
-</nz-row>
+</div>
 ```

@@ -5,7 +5,7 @@ description:
 ---
 
 ```html
-<nz-col${1: nzSpan="${2:0-24}" }>
+<div nz-col${1: nzSpan="${2:0-24}"}>
   $0
-</nz-col>
+</div>
 ```
