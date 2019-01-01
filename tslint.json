@@ -16,7 +16,8 @@
     "no-empty": false,
     "curly": false,
     "no-conditional-assignment": false,
-    "no-bitwise": false
+    "no-bitwise": false,
+    "unified-signatures": false,
   },
   "rulesDirectory": []
 }

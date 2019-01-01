@@ -7,11 +7,12 @@ import {
   CompletionList,
   Position,
   ProviderResult,
-  TextDocument,
   SnippetString,
+  TextDocument,
+  Range,
 } from 'vscode';
-import { Tag, DirectiveProperty } from '../interfaces';
-import { RESOURCES } from '../resources';
+import { DirectiveProperty } from '../interfaces';
+import { query, getDirective } from '../resources';
 import { getTag, typingPreChart } from '../utils';
 
 export default class implements CompletionItemProvider {
@@ -27,21 +28,64 @@ export default class implements CompletionItemProvider {
       case '<':
         return this.genComponent();
       // Property
+      case '"':
       case ' ':
-        return this.genProperties(document, position);
+        return this.genProperties(document, position)
       default:
         return [];
     }
   }
 
   private genComponent(): CompletionItem[] {
-    return [...RESOURCES]
-      .filter(i => i.type === 'component')
-      .map(i => {
-        const item = new CompletionItem(i.selector, CompletionItemKind.Snippet);
-        item.documentation = i.description;
-        return item;
-      });
+    return query('component').map(i => {
+      const item = new CompletionItem(i.selector, CompletionItemKind.Snippet);
+      item.documentation = i.description;
+      return item;
+    });
+  }
+
+  private genDirective(): CompletionItem[] {
+    return query('directive').map(i => {
+      const item = new CompletionItem(i.selector, CompletionItemKind.Snippet);
+      item.documentation = i.description;
+      return item;
+    });
+  }
+
+  private genProperties(document: TextDocument, position: Position): CompletionItem[] {
+    const tag = getTag(document, position);
+    if (tag == null) return [];
+
+    const directive = getDirective(tag);
+    if (directive == null) {
+      // Show all directives when not fond component
+      return this.genDirective();
+    }
+
+    if (tag.isOnAttrValue) {
+      const attr = tag.attributes[tag.attrName];
+      if (attr.value.trim() === '') {
+        const property = directive.properties.find(w => w.name === attr.name);
+        if (property && property.typeDefinition.length > 0) {
+          let range = document.getWordRangeAtPosition(position, /['"]\s*['"]/);
+          if (range) {
+            range = new Range(
+              new Position(range.start.line, range.start.character + 1),
+              new Position(range.end.line, range.end.character - 1)
+            );
+          };
+          return property.typeDefinition.map(i => {
+            const item = new CompletionItem(i.value, CompletionItemKind.Value);
+            item.documentation = i.label;
+            item.range = range;
+            return item;
+          });
+        }
+      }
+      return [];
+    }
+
+    return directive.properties.map(i => this.genAttrCompletionItem(i));
   }
 
   private genAttrCompletionItem(property: DirectiveProperty, kind?: CompletionItemKind): CompletionItem {
@@ -71,28 +115,5 @@ export default class implements CompletionItemProvider {
     res.insertText = new SnippetString(snippet);
 
     return res;
-  }
-
-  private genProperties(document: TextDocument, position: Position): CompletionItem[] {
-    const tag = getTag(document, position);
-    if (tag == null) return [];
-
-    return [...this.genZorroproperties(tag)];
-  }
-
-  private genZorroproperties(tag: Tag): CompletionItem[] {
-    let name = tag.name.startsWith('nz-') ? tag.name : null;
-    if (!name) {
-      const directive = tag.attributes.find(w => w.name.startsWith('nz-'));
-      if (directive) {
-        name = directive.name;
-      }
-    }
-    if (!name) return [];
-
-    const resource = RESOURCES.find(w => w.selector === name);
-    if (!resource) return [];
-
-    return resource.properties.map(i => this.genAttrCompletionItem(i));
   }
 }

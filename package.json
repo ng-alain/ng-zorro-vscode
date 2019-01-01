@@ -45,10 +45,15 @@
     "configuration": {
       "title": "NG-ZORRO Extension Configuration",
       "properties": {
-        "ng-zorro-vscode.disableGoto": {
-          "description": "Disable Go to Definition",
+        "ng-zorro-vscode.language": {
+          "description": "Set language code, can be set 'zh-CN', 'en-US', default: 'en-US'",
+          "type": "string",
+          "default": "en-US"
+        },
+        "ng-zorro-vscode.hover": {
+          "description": "Whether to enable hover, default: 'true'",
           "type": "boolean",
-          "default": false
+          "default": true
         }
       }
     }

@@ -2,7 +2,7 @@ export default [
     {
         type: 'component',
         selector: 'st',
-        title: '表格',
+        title: 'Simple Table',
         description: 'st 并不是在创造另一个表格组件，而是在 nz-table 基础上以可配置形式渲染表格，在中后台里这种方式可以满足绝大多数场景，但又可以更易地管理表格渲染动作。',
         doc: 'https://ng-alain.com/components/table/zh',
         properties: [
