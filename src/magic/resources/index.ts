@@ -86,7 +86,6 @@ export async function INIT(notifier: Notifier) {
       if (p.default === '-') p.default = '';
 
       p.description = notNull(p.description);
-      p.genericType = notNull(p.genericType);
       p.isInputBoolean = notNull(p.isInputBoolean, true);
       p.type = notNull(p.type, 'string');
       p.typeRaw = notNull(p.typeRaw);

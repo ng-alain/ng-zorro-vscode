@@ -11,15 +11,15 @@ export interface Directive {
   /**
    * Title for component, e.g: `按钮`
    */
-  title: string;
+  title?: string;
   /**
    * Description for component, e.g: `按钮用于开始一个即时操作。`
    */
-  description: string;
+  description?: string;
   /**
    * When to user for component, e.g: `标记了一个（或封装一组）操作命令，响应用户点击行为，触发相应的业务逻辑。`
    */
-  whenToUse: string;
+  whenToUse?: string;
   /**
    * Properties for component, e.g: `[ 'nzType', 'nzSize' ]`
    */
@@ -34,31 +34,26 @@ export interface DirectiveProperty {
   /**
    * Property name, e.g: `nzType`
    */
-  name: string;
+  name?: string;
+  inputType?: InputAttrType;
   /** @inner */
-  pureName: string;
+  pureName?: string;
   /**
    * Description for property, e.g: `设置按钮类型`
    */
-  description: string;
+  description?: string;
 
-  type: 'string' | 'TemplateRef' | 'boolean' | 'number' | 'object' | 'function' | 'HTMLElement' | 'EventEmitter';
+  type?: 'string' | 'TemplateRef' | 'boolean' | 'number' | 'object' | 'Date' | 'function' | 'HTMLElement' | 'EventEmitter';
 
-  typeRaw: string;
-
-  /**
-   * Generic type, when the `type` is generic, e.g:
-   * Should be set `boolean` when the type is `EventEmitter<boolean>`
-   */
-  genericType?: string;
+  typeRaw?: string;
   /**
    * Definition list for type, e.g: `[ { value: 'primary', label: '主按钮' }, { value: 'danger', label: '危险按钮' } ]`
    */
   typeDefinition?: DirectiveTypeDefinition[];
   /** @inner */
-  typeDefinitionSnippetStr: string;
+  typeDefinitionSnippetStr?: string;
   isInputBoolean?: boolean;
-  default: string;
+  default?: string;
 }
 
 export interface DirectiveTypeDefinition {
@@ -83,7 +78,7 @@ export interface Tag {
   word?: string;
 }
 
-export enum TagAttrType {
+export enum InputAttrType {
   Input,
   Output,
   InputOutput,
@@ -98,7 +93,7 @@ export enum TagAttrValueType {
 }
 
 export interface TagAttr {
-  type?: TagAttrType;
+  type?: InputAttrType;
   name?: string;
   value?: string;
   valueType?: TagAttrValueType;

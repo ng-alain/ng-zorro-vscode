@@ -1,5 +1,5 @@
 import { Position, Range, TextDocument } from 'vscode';
-import { Tag, TagAttr, TagAttrType, TagAttrValueType } from './interfaces';
+import { Tag, TagAttr, InputAttrType, TagAttrValueType } from './interfaces';
 import { isComponent } from './resources';
 
 /**
@@ -80,17 +80,17 @@ export function pureAttr(name: string, value: string): TagAttr {
     valueType = TagAttrValueType.Number;
   }
 
-  let type: TagAttrType = TagAttrType.Input;
+  let type: InputAttrType = InputAttrType.Input;
   if (~name.indexOf('[(')) {
-    type = TagAttrType.InputOutput;
+    type = InputAttrType.InputOutput;
     name = name.substr(2, name.length - 4);
   } else if (~name.indexOf('[')) {
     name = name.substr(1, name.length - 2);
   } else if (~name.indexOf('(')) {
-    type = TagAttrType.Output;
+    type = InputAttrType.Output;
     name = name.substr(1, name.length - 2);
   } else if (~name.indexOf('#')) {
-    type = TagAttrType.Template;
+    type = InputAttrType.Template;
     name = name.substr(1);
   }
 

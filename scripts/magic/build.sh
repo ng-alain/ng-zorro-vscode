@@ -4,13 +4,20 @@ set -e
 
 cd $(dirname $0)/../..
 
-DIST="$(pwd)/dist"
+DIR="$(pwd)/build"
 
 cloneZorroSource() {
-  if [[ ! -d ng-zorro-antd ]]; then
-    git clone --depth 1 https://github.com/NG-ZORRO/ng-zorro-antd.git
+  if [[ ! -d "${DIR}/ng-zorro-antd" ]]; then
+    git clone --depth 1 https://github.com/NG-ZORRO/ng-zorro-antd.git "${DIR}/ng-zorro-antd"
+  fi
+}
+
+cloneDelonSource() {
+  if [[ ! -d "${DIR}/delon" ]]; then
+    git clone --depth 1 https://github.com/ng-alain/delon.git "${DIR}/delon"
   fi
 }
 
 cloneZorroSource
-node scripts/magic/generate.js
+cloneDelonSource
+node scripts/magic/main.js
