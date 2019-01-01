@@ -1,7 +1,7 @@
 {
   "name": "ng-zorro-vscode",
   "displayName": "ng-zorro snippets",
-  "description": "Snippets based on ng-zorro",
+  "description": "NG-ZORRO Extension",
   "version": "2.7.1",
   "icon": "ng-zorro.png",
   "publisher": "cipchk",
@@ -10,8 +10,13 @@
   "scripts": {
     "build": "bash ./scripts/build/build.sh",
     "test": "bash ./scripts/build/build.sh -t",
-    "release": "bash ./scripts/build/build.sh -b -p"
+    "release": "bash ./scripts/build/build.sh -b -p",
+    "magic:build": "bash ./scripts/magic/build.sh",
+    "magic:compile": "tsc -p ./",
+    "magic:watch": "tsc -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install"
   },
+  "main": "./out/src/magic/extension",
   "homepage": "https://github.com/cipchk/ng-zorro-vscode/blob/master/README.md",
   "repository": {
     "type": "git",
@@ -22,25 +27,45 @@
     "email": "cipchk@qq.com"
   },
   "engines": {
-    "vscode": "^1.0.0"
+    "vscode": "^1.30.x"
   },
   "galleryBanner": {
     "color": "#ffffff",
     "theme": "light"
   },
   "categories": [
+    "Programming Languages",
     "Snippets"
   ],
+  "activationEvents": [
+    "onLanguage:typescript",
+    "onLanguage:html"
+  ],
   "contributes": {
-    "snippets": [
-      {
-        "language": "html",
-        "path": "./snippets.json"
+    "configuration": {
+      "title": "NG-ZORRO Extension Configuration",
+      "properties": {
+        "ng-zorro-vscode.disableGoto": {
+          "description": "Disable Go to Definition",
+          "type": "boolean",
+          "default": false
+        }
       }
-    ]
+    }
   },
+  "dependencies": {},
   "devDependencies": {
+    "@types/node": "^10.12.2",
+    "@types/mocha": "^5.2.5",
+    "@types/chai": "^4.1.7",
+    "ts-node": "^7.0.1",
+    "mocha": "^5.2.0",
+    "chai": "^4.2.0",
+    "yaml-front-matter": "^4.0.0",
+    "markdown-it": "^8.4.2",
     "vscode-snippet-generator": "^1.2.1",
-    "vsce": "^1.53.2"
+    "vsce": "^1.54.0",
+    "typescript": "^3.2.2",
+    "vscode": "^1.1.26"
   }
 }
