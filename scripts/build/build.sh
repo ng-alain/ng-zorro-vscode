@@ -70,7 +70,13 @@ packing() {
   packingByLang "en-US"
 }
 
+buildMagic() {
+  echo "Build magic..."
+  $(npm bin)/tsc -p ./
+}
+
 buildSnippet
+buildMagic
 
 if [[ ${TEST} == true ]]; then
   # cp snippets/html-zh-CN.json ./snippets.json

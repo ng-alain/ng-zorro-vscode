@@ -2,7 +2,14 @@ export const NAME = `ng-zorro-vscode`;
 
 export type DirectiveType = 'component' | 'directive';
 
+export const TRIGGER_DIRECTIVE_WORD = '<';
+
 export interface Directive {
+  _idx?: number;
+  /**
+   * e.g: `ng-zorro-antd`, `@delon/abc`
+   */
+  lib?: string;
   type: DirectiveType;
   /**
    * Component selector, e.g: `nz-button`
@@ -28,9 +35,20 @@ export interface Directive {
    * Document for component, e.g: `https://ng.ant.design/components/button/zh`
    */
   doc?: string;
+  /**
+   * 重新定义片断，变量值：
+   * - `__`：表示名称占位符
+   * - 类型 component 默认转化 `<__$1>$0</__>`
+   * - 类型 directive 默认转化 `<div __$1>$0</div>`
+   * @example
+   * nz-input: `<input __$0>` 转化 `<input nz-input>`
+   * nz-row: `<div __$1>$0</div>` 转化 `<div nz-row$1>$0</div>`
+   */
+  snippet?: string;
 }
 
 export interface DirectiveProperty {
+  _common?: boolean;
   /**
    * Property name, e.g: `nzType`
    */
@@ -43,7 +61,7 @@ export interface DirectiveProperty {
    */
   description?: string;
 
-  type?: 'string' | 'TemplateRef' | 'boolean' | 'number' | 'object' | 'Date' | 'function' | 'HTMLElement' | 'EventEmitter';
+  type?: 'string' | 'TemplateRef' | 'boolean' | 'number' | 'Array' | 'Enum' | 'object' | 'Date' | 'function' | 'HTMLElement' | 'EventEmitter';
 
   typeRaw?: string;
   /**

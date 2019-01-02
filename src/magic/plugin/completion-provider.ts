@@ -10,9 +10,10 @@ import {
   SnippetString,
   TextDocument,
   Range,
+  MarkdownString,
 } from 'vscode';
-import { DirectiveProperty } from '../interfaces';
-import { query, getDirective } from '../resources';
+import { DirectiveProperty, Directive, TRIGGER_DIRECTIVE_WORD } from '../interfaces';
+import { getDirective, CONFIG, RESOURCES } from '../resources';
 import { getTag, typingPreChart } from '../utils';
 
 export default class implements CompletionItemProvider {
@@ -25,7 +26,7 @@ export default class implements CompletionItemProvider {
     const char = context.triggerCharacter || typingPreChart(document, position);
     switch (char) {
       // Component
-      case '<':
+      case TRIGGER_DIRECTIVE_WORD:
         return this.genComponent();
       // Property
       case '"':
@@ -37,19 +38,15 @@ export default class implements CompletionItemProvider {
   }
 
   private genComponent(): CompletionItem[] {
-    return query('component').map(i => {
-      const item = new CompletionItem(i.selector, CompletionItemKind.Snippet);
-      item.documentation = i.description;
-      return item;
-    });
+    return RESOURCES.map(i => this.renderCompletionItem(i));
   }
 
-  private genDirective(): CompletionItem[] {
-    return query('directive').map(i => {
-      const item = new CompletionItem(i.selector, CompletionItemKind.Snippet);
-      item.documentation = i.description;
-      return item;
-    });
+  private renderCompletionItem(i: Directive): CompletionItem {
+    const item = new CompletionItem(i.selector, CompletionItemKind.Snippet);
+    item.command = this.triggerHideSuggestCommand;
+    item.documentation = new MarkdownString(i.description);
+    item.insertText = new SnippetString(i.snippet);
+    return item;
   }
 
   private genProperties(document: TextDocument, position: Position): CompletionItem[] {
@@ -57,10 +54,7 @@ export default class implements CompletionItemProvider {
     if (tag == null) return [];
 
     const directive = getDirective(tag);
-    if (directive == null) {
-      // Show all directives when not fond component
-      return this.genDirective();
-    }
+    if (directive == null) return [];
 
     if (tag.isOnAttrValue) {
       const attr = tag.attributes[tag.attrName];
@@ -76,7 +70,7 @@ export default class implements CompletionItemProvider {
           };
           return property.typeDefinition.map(i => {
             const item = new CompletionItem(i.value, CompletionItemKind.Value);
-            item.documentation = i.label;
+            item.documentation = new MarkdownString(i.label);
             item.range = range;
             return item;
           });
@@ -85,22 +79,27 @@ export default class implements CompletionItemProvider {
       return [];
     }
 
-    return directive.properties.map(i => this.genAttrCompletionItem(i));
+    return directive.properties.map(i => this.renderAttrCompletionItem(i));
   }
 
-  private genAttrCompletionItem(property: DirectiveProperty, kind?: CompletionItemKind): CompletionItem {
-    const res = new CompletionItem(property.name, typeof kind === 'undefined' ? CompletionItemKind.Field : kind);
-    res.documentation = property.description;
+  private renderAttrCompletionItem(property: DirectiveProperty, kind?: CompletionItemKind): CompletionItem {
+    const item = new CompletionItem(property.name, typeof kind === 'undefined' ? CompletionItemKind.Field : kind);
+    item.documentation = new MarkdownString(property.description);
     let snippet = '';
     switch (property.type) {
       case 'string':
+      case 'Enum':
         if (property.typeDefinitionSnippetStr.length > 0) {
           snippet = `${property.name}="\${1|${property.typeDefinitionSnippetStr}|}"$0`;
         }
         break;
       case 'boolean':
-        snippet = `${property.name}="\${1|true,false|}"$0`;
+        snippet = `${property.name}="\${1|true,false${CONFIG.isAlain ? ',http.loading' : ''}|}"$0`;
         break;
+      case 'TemplateRef':
+        snippet = `[${property.name}]="\${1:${property.pureName}}Tpl"$0`;
+        break;
+      case 'Array':
       case 'function':
         snippet = `[${property.name}]="\${1:${property.pureName}}"$0`;
         break;
@@ -109,11 +108,25 @@ export default class implements CompletionItemProvider {
         break;
     }
     if (!snippet) {
-      snippet = `${property.name}="\${1:${property.default || property.pureName}}"$0`;
+      snippet = `${property.name}="\${1:${property.default.length > 0 ? property.default : property.pureName}}"$0`;
     }
 
-    res.insertText = new SnippetString(snippet);
+    item.insertText = new SnippetString(snippet);
 
-    return res;
+    return item;
+  }
+
+  private get triggerHideSuggestCommand() {
+    return {
+      command: 'hideSuggestWidget',
+      title: 'hideSuggestWidget'
+    }
+  }
+
+  private get triggerSuggestCommand() {
+    return {
+      command: 'editor.action.triggerSuggest',
+      title: 'triggerSuggest'
+    }
   }
 }

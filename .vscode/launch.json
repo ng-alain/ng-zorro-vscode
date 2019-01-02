@@ -4,7 +4,7 @@
       "type": "node",
       "request": "launch",
       "name": "Resources",
-      "program": "${workspaceFolder}/scripts/magic/main.js"
+      "program": "${workspaceFolder}/scripts/resource/main.js"
     },
     {
       "name": "Extension",

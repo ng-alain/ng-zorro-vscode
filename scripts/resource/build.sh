@@ -14,10 +14,10 @@ cloneZorroSource() {
 
 cloneDelonSource() {
   if [[ ! -d "${DIR}/delon" ]]; then
-    git clone --depth 1 https://github.com/ng-alain/delon.git "${DIR}/delon"
+    git clone --depth 1 -b dev-docs https://github.com/ng-alain/delon.git "${DIR}/delon"
   fi
 }
 
 cloneZorroSource
 cloneDelonSource
-node scripts/magic/main.js
+node scripts/resource/main.js

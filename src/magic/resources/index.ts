@@ -1,9 +1,7 @@
-import { Directive, DirectiveType, Tag, NAME } from '../interfaces';
+import { Directive, DirectiveType, Tag, NAME, TRIGGER_DIRECTIVE_WORD } from '../interfaces';
 import { i18n } from './local';
-import { default as zh_CN_Delon } from './zh-CN/delon';
-import { default as zh_CN_Zorro } from './zh-CN/ng-zorro-antd';
-import { default as en_US_Delon } from './en-US/delon';
-import { default as en_US_Zorro } from './en-US/ng-zorro-antd';
+import zh_CN from './zh-CN.json';
+import en_US from './en-US.json';
 import { workspace } from 'vscode';
 import Notifier from '../notifier';
 import { readFileSync, existsSync } from 'fs';
@@ -56,20 +54,13 @@ export async function INIT(notifier: Notifier) {
     }
   }
 
+  const data = (CONFIG.language === 'en-US' ? en_US : zh_CN) as Directive[];
   if (CONFIG.isAntd) {
-    if (CONFIG.language === 'en-US') {
-      RESOURCES.push(...en_US_Zorro as any);
-    } else {
-      RESOURCES.push(...zh_CN_Zorro as any);
-    }
+    RESOURCES.push(...data.filter(i => i.lib === 'ng-zorro-antd'));
   }
 
   if (CONFIG.isAlain) {
-    if (CONFIG.language === 'en-US') {
-      RESOURCES.push(...en_US_Delon as any);
-    } else {
-      RESOURCES.push(...zh_CN_Delon as any);
-    }
+    RESOURCES.push(...data.filter(i => i.lib !== 'ng-zorro-antd'));
   }
 
   RESOURCES.forEach(i => {
@@ -78,6 +69,15 @@ export async function INIT(notifier: Notifier) {
     i.doc = notNull(i.doc);
     i.title = notNull(i.title);
     i.type = notNull(i.type, 'component');
+    i.snippet = notNull(i.snippet, '');
+    if (i.snippet.length === 0) {
+      i.snippet = i.type === 'component' ? `<__$1>$0</__>` : `<div __$1>$0</div>`;
+    }
+    i.snippet = i.snippet.replace(/__/g, i.selector);
+    // 移除触发词
+    if (i.snippet.startsWith(TRIGGER_DIRECTIVE_WORD)) {
+      i.snippet = i.snippet.substr(1);
+    }
     i.properties = notNull(i.properties, []);
     i.properties.forEach(p => {
       p.pureName = getPure(p.name);
@@ -127,6 +127,7 @@ export function genComponentMarkdown(item: Directive | string): string {
   if (item == null) return '';
 
   const rows: string[] = [
+    `**${i18n('library')}** ${item.lib}`,
     `**${item.title}**`,
     item.description
   ];

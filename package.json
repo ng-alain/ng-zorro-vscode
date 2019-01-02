@@ -1,8 +1,8 @@
 {
   "name": "ng-zorro-vscode",
   "displayName": "ng-zorro snippets",
-  "description": "NG-ZORRO Extension",
-  "version": "2.7.1",
+  "description": "Snippets based on ng-zorro",
+  "version": "3.0.0",
   "icon": "ng-zorro.png",
   "publisher": "cipchk",
   "license": "MIT",
@@ -11,9 +11,8 @@
     "build": "bash ./scripts/build/build.sh",
     "test": "bash ./scripts/build/build.sh -t",
     "release": "bash ./scripts/build/build.sh -b -p",
-    "magic:build": "bash ./scripts/magic/build.sh",
-    "magic:compile": "tsc -p ./",
-    "magic:watch": "tsc -watch -p ./",
+    "watch": "tsc -watch -p ./",
+    "resource": "bash ./scripts/resource/build.sh",
     "postinstall": "node ./node_modules/vscode/bin/install"
   },
   "main": "./out/src/magic/extension",
@@ -42,6 +41,10 @@
     "onLanguage:html"
   ],
   "contributes": {
+    "snippets": [{
+      "language": "html",
+      "path": "./snippets.json"
+    }],
     "configuration": {
       "title": "NG-ZORRO Extension Configuration",
       "properties": {
