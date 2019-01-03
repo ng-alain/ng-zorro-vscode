@@ -35,6 +35,7 @@ export class AST {
         return this.tokens.length;
     }
 
+    /** 偏移至某个标题 */
     offsetAt(text: string, start = 0): number {
         for (let i = start; i < this.tokens.length; i++) {
             if (this.tokens[i].type === AST_KEYS.HeadingOpen && this.tokens[i + 1].content === text) {
@@ -44,6 +45,7 @@ export class AST {
         return -1;
     }
 
+    /** 偏移至某个标签 */
     offsetTagAt(tag: string, start = 0): number {
         for (let i = start; i < this.tokens.length; i++) {
             if (this.tokens[i].type.endsWith('_open') && this.tokens[i].tag === tag) {
@@ -53,6 +55,7 @@ export class AST {
         return -1;
     }
 
+    /** 偏移至某个Token类型 */
     offsetTypeAt(type: string, start = 0): number {
         for (let i = start; i < this.tokens.length; i++) {
             if (this.tokens[i].type === type) {
@@ -69,6 +72,10 @@ export class AST {
             }
         }
         return -1;
+    }
+
+    isType(type: string, index: number): boolean {
+        return this.tokens[index].type === type;
     }
 
     private finds(start: number, end: number, cb: (token: Token) => boolean): number[] {

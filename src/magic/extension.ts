@@ -21,7 +21,10 @@ export async function activate(context: ExtensionContext) {
   const tsScheme = { scheme: 'file', language: 'typescript' };
 
   const providers = [
-    languages.registerCompletionItemProvider(htmlScheme, new NAAutoCompletionItemProvider(), '<', ' ', '[', '(', '"')
+    languages.registerCompletionItemProvider(
+      htmlScheme,
+      new NAAutoCompletionItemProvider(), '<', 'n', ' ', '[', '(', '"'
+    )
   ];
 
   if (CONFIG.hover) {

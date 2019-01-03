@@ -2,8 +2,6 @@ export const NAME = `ng-zorro-vscode`;
 
 export type DirectiveType = 'component' | 'directive';
 
-export const TRIGGER_DIRECTIVE_WORD = '<';
-
 export interface Directive {
   _idx?: number;
   /**
@@ -32,6 +30,10 @@ export interface Directive {
    */
   properties?: DirectiveProperty[];
   /**
+   * 类型定义
+   */
+  types?: { [key: string]: DirectiveProperty[] };
+  /**
    * Document for component, e.g: `https://ng.ant.design/components/button/zh`
    */
   doc?: string;
@@ -54,24 +56,24 @@ export interface DirectiveProperty {
    */
   name?: string;
   inputType?: InputAttrType;
-  /** @inner */
-  pureName?: string;
   /**
    * Description for property, e.g: `设置按钮类型`
    */
   description?: string;
 
-  type?: 'string' | 'TemplateRef' | 'boolean' | 'number' | 'Array' | 'Enum' | 'object' | 'Date' | 'function' | 'HTMLElement' | 'EventEmitter';
-
+  type?: 'string' | 'TemplateRef' | 'boolean' | 'number' | 'Array' | 'Enum' | 'Date' | 'object' | 'function' | 'HTMLElement' | 'EventEmitter';
+  complexType?: string;
   typeRaw?: string;
   /**
    * Definition list for type, e.g: `[ { value: 'primary', label: '主按钮' }, { value: 'danger', label: '危险按钮' } ]`
    */
-  typeDefinition?: DirectiveTypeDefinition[];
-  /** @inner */
-  typeDefinitionSnippetStr?: string;
+  typeDefinition?: Array<string | DirectiveTypeDefinition>;
   isInputBoolean?: boolean;
   default?: string;
+  /** @inner */
+  pureName?: string;
+  /** @inner */
+  typeDefinitionSnippetStr?: string;
 }
 
 export interface DirectiveTypeDefinition {

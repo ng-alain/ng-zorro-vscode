@@ -1,8 +1,9 @@
 [
   {
     "_idx": 15,
-    "type": "directive",
+    "type": "component",
     "selector": "nz-tooltip",
+    "types": {},
     "properties": [
       {
         "name": "nzMouseEnterDelay",
@@ -38,7 +39,7 @@
         "name": "nzOverlayStyle",
         "inputType": 0,
         "description": "卡片样式",
-        "type": "string",
+        "type": "object",
         "typeRaw": "object",
         "default": "",
         "typeDefinition": [],
@@ -96,7 +97,7 @@
         "inputType": 1,
         "description": "显示隐藏的回调",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<boolean>",
+        "typeRaw": "`EventEmitter<boolean>`",
         "default": "",
         "typeDefinition": [],
         "_common": true
@@ -106,7 +107,7 @@
         "inputType": 0,
         "description": "提示文字",
         "type": "string",
-        "typeRaw": "string|`TemplateRef<void>`",
+        "typeRaw": "string丨`TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       }
@@ -121,6 +122,7 @@
     "_idx": 15,
     "type": "component",
     "selector": "nz-affix",
+    "types": {},
     "properties": [
       {
         "name": "nzOffsetBottom",
@@ -145,7 +147,7 @@
         "inputType": 0,
         "description": "设置 `nz-affix` 需要监听其滚动事件的元素，值为一个返回对应 DOM 元素的函数",
         "type": "string",
-        "typeRaw": "string, HTMLElement",
+        "typeRaw": "`string, HTMLElement`",
         "default": "`window`",
         "typeDefinition": []
       },
@@ -154,7 +156,7 @@
         "inputType": 1,
         "description": "固定状态改变时触发的回调函数",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<boolean>",
+        "typeRaw": "`EventEmitter<boolean>`",
         "default": "",
         "typeDefinition": []
       }
@@ -169,6 +171,7 @@
     "_idx": 12,
     "type": "component",
     "selector": "nz-anchor",
+    "types": {},
     "properties": [
       {
         "name": "nzAffix",
@@ -220,7 +223,7 @@
         "inputType": 0,
         "description": "指定滚动的容器",
         "type": "string",
-        "typeRaw": "string, HTMLElement",
+        "typeRaw": "`string, HTMLElement`",
         "default": "`window`",
         "typeDefinition": []
       },
@@ -229,7 +232,7 @@
         "inputType": 1,
         "description": "点击项触发",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<string>",
+        "typeRaw": "`EventEmitter<string>`",
         "default": "",
         "typeDefinition": []
       },
@@ -238,7 +241,7 @@
         "inputType": 1,
         "description": "滚动至某锚点时触发",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<NzAnchorLinkComponent>",
+        "typeRaw": "`EventEmitter<NzAnchorLinkComponent>`",
         "default": "",
         "typeDefinition": []
       }
@@ -253,6 +256,7 @@
     "_idx": 147,
     "type": "component",
     "selector": "nz-link",
+    "types": {},
     "properties": [
       {
         "name": "nzHref",
@@ -268,7 +272,7 @@
         "inputType": 0,
         "description": "文字内容",
         "type": "string",
-        "typeRaw": "string|`TemplateRef<void>`",
+        "typeRaw": "string丨`TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       }
@@ -283,13 +287,14 @@
     "_idx": 51,
     "type": "component",
     "selector": "nz-autocomplete",
+    "types": {},
     "properties": [
       {
         "name": "nzBackfill",
         "inputType": 0,
         "description": "使用键盘选择选项的时候把选中项回填到输入框中",
         "type": "boolean",
-        "typeRaw": "boolean",
+        "typeRaw": "`boolean`",
         "default": "`false`",
         "typeDefinition": []
       },
@@ -298,7 +303,7 @@
         "inputType": 0,
         "description": "自动完成的数据源",
         "type": "string",
-        "typeRaw": "AutocompleteDataSource",
+        "typeRaw": "`AutocompleteDataSource`",
         "default": "",
         "typeDefinition": []
       },
@@ -307,7 +312,7 @@
         "inputType": 0,
         "description": "是否默认高亮第一个选项。",
         "type": "boolean",
-        "typeRaw": "boolean",
+        "typeRaw": "`boolean`",
         "default": "`true`",
         "typeDefinition": []
       },
@@ -316,7 +321,7 @@
         "inputType": 0,
         "description": "自定义宽度单位 px",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "触发元素宽度",
         "typeDefinition": []
       },
@@ -333,7 +338,7 @@
         "name": "nzOverlayStyle",
         "inputType": 0,
         "description": "下拉根元素的样式",
-        "type": "string",
+        "type": "object",
         "typeRaw": "object",
         "default": "",
         "typeDefinition": []
@@ -349,13 +354,14 @@
     "_idx": 158,
     "type": "component",
     "selector": "nz-auto-option",
+    "types": {},
     "properties": [
       {
         "name": "nzValue",
         "inputType": 0,
         "description": "绑定到触发元素 ngModel 的值",
         "type": "string",
-        "typeRaw": "any",
+        "typeRaw": "`any`",
         "default": "",
         "typeDefinition": []
       },
@@ -364,7 +370,7 @@
         "inputType": 0,
         "description": "填入触发元素显示的值",
         "type": "string",
-        "typeRaw": "string",
+        "typeRaw": "`string`",
         "default": "",
         "typeDefinition": []
       },
@@ -373,7 +379,7 @@
         "inputType": 0,
         "description": "禁用选项",
         "type": "boolean",
-        "typeRaw": "boolean",
+        "typeRaw": "`boolean`",
         "default": "`false`",
         "typeDefinition": []
       }
@@ -388,6 +394,7 @@
     "_idx": 6,
     "type": "component",
     "selector": "nz-avatar",
+    "types": {},
     "properties": [
       {
         "name": "nzIcon",
@@ -453,13 +460,14 @@
     "_idx": 21,
     "type": "component",
     "selector": "nz-back-top",
+    "types": {},
     "properties": [
       {
         "name": "nzTemplate",
         "inputType": 0,
         "description": "自定义内容，见示例",
         "type": "TemplateRef",
-        "typeRaw": "TemplateRef<void>",
+        "typeRaw": "`TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -468,7 +476,7 @@
         "inputType": 0,
         "description": "滚动高度达到此参数值才出现 `nz-back-top`",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "`400`",
         "typeDefinition": []
       },
@@ -477,7 +485,7 @@
         "inputType": 0,
         "description": "设置需要监听其滚动事件的元素，值为一个返回对应 DOM 元素的函数",
         "type": "string",
-        "typeRaw": "string, Element",
+        "typeRaw": "`string, Element`",
         "default": "`window`",
         "typeDefinition": []
       },
@@ -486,7 +494,7 @@
         "inputType": 1,
         "description": "点击按钮的回调函数",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<boolean>",
+        "typeRaw": "`EventEmitter<boolean>`",
         "default": "",
         "typeDefinition": []
       }
@@ -501,6 +509,7 @@
     "_idx": 14,
     "type": "component",
     "selector": "nz-badge",
+    "types": {},
     "properties": [
       {
         "name": "nzCount",
@@ -582,6 +591,7 @@
     "_idx": 26,
     "type": "component",
     "selector": "nz-breadcrumb",
+    "types": {},
     "properties": [],
     "lib": "ng-zorro-antd",
     "title": "面包屑",
@@ -593,6 +603,7 @@
     "_idx": 12,
     "type": "directive",
     "selector": "nz-button",
+    "types": {},
     "properties": [
       {
         "name": "nzGhost",
@@ -671,13 +682,14 @@
     "_idx": 20,
     "type": "component",
     "selector": "nz-calendar",
+    "types": {},
     "properties": [
       {
         "name": "ngModel",
         "inputType": 2,
         "description": "（可双向绑定）展示日期",
         "type": "Date",
-        "typeRaw": "Date",
+        "typeRaw": "`Date`",
         "default": "当前日期",
         "typeDefinition": []
       },
@@ -686,7 +698,7 @@
         "inputType": 2,
         "description": "（可双向绑定）显示模式",
         "type": "Enum",
-        "typeRaw": "'month'/'year'",
+        "typeRaw": "`'month'/'year'`",
         "default": "`'month'`",
         "typeDefinition": [
           "month",
@@ -698,7 +710,7 @@
         "inputType": 0,
         "description": "是否全屏显示",
         "type": "boolean",
-        "typeRaw": "boolean",
+        "typeRaw": "`boolean`",
         "default": "`true`",
         "typeDefinition": []
       },
@@ -707,7 +719,7 @@
         "inputType": 0,
         "description": "是否不全屏显示",
         "type": "boolean",
-        "typeRaw": "boolean",
+        "typeRaw": "`boolean`",
         "default": "`false`",
         "typeDefinition": []
       },
@@ -716,7 +728,7 @@
         "inputType": 0,
         "description": "（可作为内容）自定义渲染日期单元格，模版内容会被追加到单元格",
         "type": "TemplateRef",
-        "typeRaw": "TemplateRef<Date>",
+        "typeRaw": "`TemplateRef<Date>`",
         "default": "",
         "typeDefinition": []
       },
@@ -725,7 +737,7 @@
         "inputType": 0,
         "description": "（可作为内容）自定义渲染日期单元格，模版内容覆盖单元格",
         "type": "TemplateRef",
-        "typeRaw": "TemplateRef<Date>",
+        "typeRaw": "`TemplateRef<Date>`",
         "default": "",
         "typeDefinition": []
       },
@@ -734,7 +746,7 @@
         "inputType": 0,
         "description": "（可作为内容）自定义渲染月单元格，模版内容会被追加到单元格",
         "type": "TemplateRef",
-        "typeRaw": "TemplateRef<Date>",
+        "typeRaw": "`TemplateRef<Date>`",
         "default": "",
         "typeDefinition": []
       },
@@ -743,7 +755,7 @@
         "inputType": 0,
         "description": "（可作为内容）自定义渲染月单元格，模版内容覆盖单元格",
         "type": "TemplateRef",
-        "typeRaw": "TemplateRef<Date>",
+        "typeRaw": "`TemplateRef<Date>`",
         "default": "",
         "typeDefinition": []
       }
@@ -758,13 +770,14 @@
     "_idx": 13,
     "type": "component",
     "selector": "nz-card",
+    "types": {},
     "properties": [
       {
         "name": "nzActions",
         "inputType": 0,
         "description": "卡片操作组，位置在卡片底部",
         "type": "Array",
-        "typeRaw": "Array<TemplateRef<void>>",
+        "typeRaw": "`Array<TemplateRef<void>>`",
         "default": "",
         "typeDefinition": []
       },
@@ -773,7 +786,7 @@
         "inputType": 0,
         "description": "内容区域自定义样式",
         "type": "object",
-        "typeRaw": "{ [key: string]: string }",
+        "typeRaw": "`{ [key: string]: string }`",
         "default": "",
         "typeDefinition": []
       },
@@ -791,7 +804,7 @@
         "inputType": 0,
         "description": "卡片封面",
         "type": "TemplateRef",
-        "typeRaw": "TemplateRef<void>",
+        "typeRaw": "`TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -853,13 +866,14 @@
     "_idx": 162,
     "type": "component",
     "selector": "nz-card-meta",
+    "types": {},
     "properties": [
       {
         "name": "nzAvatar",
         "inputType": 0,
         "description": "头像/图标",
         "type": "TemplateRef",
-        "typeRaw": "TemplateRef<void>",
+        "typeRaw": "`TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -892,6 +906,7 @@
     "_idx": 227,
     "type": "directive",
     "selector": "nz-card-grid",
+    "types": {},
     "properties": [],
     "description": "分隔卡片内容区域",
     "lib": "ng-zorro-antd",
@@ -903,6 +918,7 @@
     "_idx": 233,
     "type": "component",
     "selector": "nz-card-tab",
+    "types": {},
     "properties": [],
     "description": "分隔页签标题区域",
     "lib": "ng-zorro-antd",
@@ -914,6 +930,7 @@
     "_idx": 26,
     "type": "component",
     "selector": "nz-carousel",
+    "types": {},
     "properties": [
       {
         "name": "nzAutoPlay",
@@ -947,7 +964,7 @@
         "inputType": 0,
         "description": "Dot渲染模板",
         "type": "TemplateRef",
-        "typeRaw": "TemplateRef<{ $implicit: number }>",
+        "typeRaw": "`TemplateRef<{ $implicit: number }>`",
         "default": "",
         "typeDefinition": []
       },
@@ -977,7 +994,7 @@
         "inputType": 1,
         "description": "切换面板的回调",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<number>",
+        "typeRaw": "`EventEmitter<number>`",
         "default": "",
         "typeDefinition": []
       },
@@ -986,7 +1003,7 @@
         "inputType": 1,
         "description": "切换面板的回调",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<{ from: number; to: number }>",
+        "typeRaw": "`EventEmitter<{ from: number; to: number }>`",
         "default": "",
         "typeDefinition": []
       },
@@ -995,7 +1012,7 @@
         "inputType": 0,
         "description": "是否支持手势划动切换，仅在自行引入 hammer.js 的情形下生效",
         "type": "boolean",
-        "typeRaw": "boolean",
+        "typeRaw": "`boolean`",
         "default": "`true`",
         "typeDefinition": []
       }
@@ -1010,6 +1027,7 @@
     "_idx": 27,
     "type": "component",
     "selector": "nz-cascader",
+    "types": {},
     "properties": [
       {
         "name": "ngModel",
@@ -1099,7 +1117,7 @@
         "name": "nzMenuStyle",
         "inputType": 0,
         "description": "自定义浮层样式",
-        "type": "string",
+        "type": "object",
         "typeRaw": "object",
         "default": "",
         "typeDefinition": []
@@ -1180,8 +1198,8 @@
         "name": "nzShowSearch",
         "inputType": 0,
         "description": "是否支持搜索，默认情况下对 `label` 进行全匹配搜索，不能和 `[nzLoadData]` 同时使用",
-        "type": "string",
-        "typeRaw": "boolean` `NzShowSearchOptions",
+        "type": "boolean",
+        "typeRaw": "`boolean` `NzShowSearchOptions`",
         "default": "`false`",
         "typeDefinition": []
       },
@@ -1212,7 +1230,7 @@
         "inputType": 1,
         "description": "值发生变化时触发",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<any[]>",
+        "typeRaw": "`EventEmitter<any[]>`",
         "default": "",
         "typeDefinition": []
       },
@@ -1221,7 +1239,7 @@
         "inputType": 1,
         "description": "清空值时触发",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<void>",
+        "typeRaw": "`EventEmitter<void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -1230,7 +1248,7 @@
         "inputType": 1,
         "description": "菜单浮层的显示/隐藏",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<boolean>",
+        "typeRaw": "`EventEmitter<boolean>`",
         "default": "",
         "typeDefinition": []
       },
@@ -1239,7 +1257,7 @@
         "inputType": 1,
         "description": "选中菜单选项时触发",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<{option: any, index: number}>",
+        "typeRaw": "`EventEmitter<{option: any, index: number}>`",
         "default": "",
         "typeDefinition": []
       },
@@ -1248,7 +1266,7 @@
         "inputType": 1,
         "description": "选中菜单选项时触发",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<any[]>",
+        "typeRaw": "`EventEmitter<any[]>`",
         "default": "",
         "typeDefinition": []
       }
@@ -1263,6 +1281,7 @@
     "_idx": 21,
     "type": "directive",
     "selector": "nz-checkbox",
+    "types": {},
     "properties": [
       {
         "name": "nzAutoFocus",
@@ -1314,7 +1333,7 @@
         "inputType": 1,
         "description": "选中变化时回调",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<boolean>",
+        "typeRaw": "`EventEmitter<boolean>`",
         "default": "",
         "typeDefinition": []
       }
@@ -1330,13 +1349,14 @@
     "_idx": 128,
     "type": "component",
     "selector": "nz-checkbox-group",
+    "types": {},
     "properties": [
       {
         "name": "ngModel",
         "inputType": 2,
         "description": "指定可选项，可双向绑定",
         "type": "Array",
-        "typeRaw": "Array<{ label: string; value: string; checked?: boolean; }>",
+        "typeRaw": "`Array<{ label: string; value: string; checked?: boolean; }>`",
         "default": "`[]`",
         "typeDefinition": []
       },
@@ -1354,7 +1374,7 @@
         "inputType": 1,
         "description": "选中数据变化时的回调",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<Array<{ label: string; value: string; checked?: boolean; }>>",
+        "typeRaw": "`EventEmitter<Array<{ label: string; value: string; checked?: boolean; }>>`",
         "default": "",
         "typeDefinition": []
       }
@@ -1369,13 +1389,14 @@
     "_idx": 193,
     "type": "component",
     "selector": "nz-checkbox-wrapper",
+    "types": {},
     "properties": [
       {
         "name": "nzOnChange",
         "inputType": 1,
         "description": "选中数据变化时的回调",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<string[]>",
+        "typeRaw": "`EventEmitter<string[]>`",
         "default": "",
         "typeDefinition": []
       }
@@ -1390,6 +1411,7 @@
     "_idx": 21,
     "type": "component",
     "selector": "nz-collapse",
+    "types": {},
     "properties": [
       {
         "name": "nzAccordion",
@@ -1420,6 +1442,7 @@
     "_idx": 72,
     "type": "component",
     "selector": "nz-collapse-panel",
+    "types": {},
     "properties": [
       {
         "name": "nzDisabled",
@@ -1462,7 +1485,7 @@
         "inputType": 1,
         "description": "面板展开回调",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<boolean>",
+        "typeRaw": "`EventEmitter<boolean>`",
         "default": "",
         "typeDefinition": []
       }
@@ -1477,6 +1500,7 @@
     "_idx": 255,
     "type": "component",
     "selector": "nz-date-picker",
+    "types": {},
     "properties": [
       {
         "name": "nzAllowClear",
@@ -1542,7 +1566,7 @@
         "name": "nzLocale",
         "inputType": 0,
         "description": "国际化配置",
-        "type": "string",
+        "type": "object",
         "typeRaw": "object",
         "default": "[默认配置](https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json)",
         "typeDefinition": [],
@@ -1562,7 +1586,7 @@
         "name": "nzPopupStyle",
         "inputType": 0,
         "description": "额外的弹出日历样式",
-        "type": "string",
+        "type": "object",
         "typeRaw": "object",
         "default": "{}",
         "typeDefinition": [],
@@ -1595,7 +1619,7 @@
         "name": "nzStyle",
         "inputType": 0,
         "description": "自定义输入框样式",
-        "type": "string",
+        "type": "object",
         "typeRaw": "object",
         "default": "{}",
         "typeDefinition": [],
@@ -1606,7 +1630,7 @@
         "inputType": 1,
         "description": "弹出日历和关闭日历的回调",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<boolean>",
+        "typeRaw": "`EventEmitter<boolean>`",
         "default": "",
         "typeDefinition": [],
         "_common": true
@@ -1651,7 +1675,7 @@
         "name": "nzShowTime",
         "inputType": 0,
         "description": "增加时间选择功能",
-        "type": "string",
+        "type": "object",
         "typeRaw": "object / boolean",
         "default": "[TimePicker Options](/components/time-picker/zh#api)",
         "typeDefinition": []
@@ -1679,7 +1703,7 @@
         "inputType": 1,
         "description": "点击确定按钮的回调",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<Date>",
+        "typeRaw": "`EventEmitter<Date>`",
         "default": "",
         "typeDefinition": []
       },
@@ -1688,7 +1712,7 @@
         "inputType": 1,
         "description": "时间发生变化的回调",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<Date>",
+        "typeRaw": "`EventEmitter<Date>`",
         "default": "",
         "typeDefinition": []
       }
@@ -1703,6 +1727,7 @@
     "_idx": 404,
     "type": "component",
     "selector": "nz-year-picker",
+    "types": {},
     "properties": [
       {
         "name": "nzAllowClear",
@@ -1768,7 +1793,7 @@
         "name": "nzLocale",
         "inputType": 0,
         "description": "国际化配置",
-        "type": "string",
+        "type": "object",
         "typeRaw": "object",
         "default": "[默认配置](https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json)",
         "typeDefinition": [],
@@ -1788,7 +1813,7 @@
         "name": "nzPopupStyle",
         "inputType": 0,
         "description": "额外的弹出日历样式",
-        "type": "string",
+        "type": "object",
         "typeRaw": "object",
         "default": "{}",
         "typeDefinition": [],
@@ -1821,7 +1846,7 @@
         "name": "nzStyle",
         "inputType": 0,
         "description": "自定义输入框样式",
-        "type": "string",
+        "type": "object",
         "typeRaw": "object",
         "default": "{}",
         "typeDefinition": [],
@@ -1832,7 +1857,7 @@
         "inputType": 1,
         "description": "弹出日历和关闭日历的回调",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<boolean>",
+        "typeRaw": "`EventEmitter<boolean>`",
         "default": "",
         "typeDefinition": [],
         "_common": true
@@ -1878,7 +1903,7 @@
         "inputType": 1,
         "description": "时间发生变化的回调",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<Date>",
+        "typeRaw": "`EventEmitter<Date>`",
         "default": "",
         "typeDefinition": []
       }
@@ -1893,6 +1918,7 @@
     "_idx": 497,
     "type": "component",
     "selector": "nz-month-picker",
+    "types": {},
     "properties": [
       {
         "name": "nzAllowClear",
@@ -1958,7 +1984,7 @@
         "name": "nzLocale",
         "inputType": 0,
         "description": "国际化配置",
-        "type": "string",
+        "type": "object",
         "typeRaw": "object",
         "default": "[默认配置](https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json)",
         "typeDefinition": [],
@@ -1978,7 +2004,7 @@
         "name": "nzPopupStyle",
         "inputType": 0,
         "description": "额外的弹出日历样式",
-        "type": "string",
+        "type": "object",
         "typeRaw": "object",
         "default": "{}",
         "typeDefinition": [],
@@ -2011,7 +2037,7 @@
         "name": "nzStyle",
         "inputType": 0,
         "description": "自定义输入框样式",
-        "type": "string",
+        "type": "object",
         "typeRaw": "object",
         "default": "{}",
         "typeDefinition": [],
@@ -2022,7 +2048,7 @@
         "inputType": 1,
         "description": "弹出日历和关闭日历的回调",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<boolean>",
+        "typeRaw": "`EventEmitter<boolean>`",
         "default": "",
         "typeDefinition": [],
         "_common": true
@@ -2068,7 +2094,7 @@
         "inputType": 1,
         "description": "时间发生变化的回调",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<Date>",
+        "typeRaw": "`EventEmitter<Date>`",
         "default": "",
         "typeDefinition": []
       }
@@ -2083,6 +2109,7 @@
     "_idx": 590,
     "type": "component",
     "selector": "nz-week-picker",
+    "types": {},
     "properties": [
       {
         "name": "nzAllowClear",
@@ -2148,7 +2175,7 @@
         "name": "nzLocale",
         "inputType": 0,
         "description": "国际化配置",
-        "type": "string",
+        "type": "object",
         "typeRaw": "object",
         "default": "[默认配置](https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json)",
         "typeDefinition": [],
@@ -2168,7 +2195,7 @@
         "name": "nzPopupStyle",
         "inputType": 0,
         "description": "额外的弹出日历样式",
-        "type": "string",
+        "type": "object",
         "typeRaw": "object",
         "default": "{}",
         "typeDefinition": [],
@@ -2201,7 +2228,7 @@
         "name": "nzStyle",
         "inputType": 0,
         "description": "自定义输入框样式",
-        "type": "string",
+        "type": "object",
         "typeRaw": "object",
         "default": "{}",
         "typeDefinition": [],
@@ -2212,7 +2239,7 @@
         "inputType": 1,
         "description": "弹出日历和关闭日历的回调",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<boolean>",
+        "typeRaw": "`EventEmitter<boolean>`",
         "default": "",
         "typeDefinition": [],
         "_common": true
@@ -2249,7 +2276,7 @@
         "inputType": 1,
         "description": "时间发生变化的回调",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<Date>",
+        "typeRaw": "`EventEmitter<Date>`",
         "default": "",
         "typeDefinition": []
       }
@@ -2264,6 +2291,7 @@
     "_idx": 669,
     "type": "component",
     "selector": "nz-range-picker",
+    "types": {},
     "properties": [
       {
         "name": "nzAllowClear",
@@ -2329,7 +2357,7 @@
         "name": "nzLocale",
         "inputType": 0,
         "description": "国际化配置",
-        "type": "string",
+        "type": "object",
         "typeRaw": "object",
         "default": "[默认配置](https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json)",
         "typeDefinition": [],
@@ -2349,7 +2377,7 @@
         "name": "nzPopupStyle",
         "inputType": 0,
         "description": "额外的弹出日历样式",
-        "type": "string",
+        "type": "object",
         "typeRaw": "object",
         "default": "{}",
         "typeDefinition": [],
@@ -2382,7 +2410,7 @@
         "name": "nzStyle",
         "inputType": 0,
         "description": "自定义输入框样式",
-        "type": "string",
+        "type": "object",
         "typeRaw": "object",
         "default": "{}",
         "typeDefinition": [],
@@ -2393,7 +2421,7 @@
         "inputType": 1,
         "description": "弹出日历和关闭日历的回调",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<boolean>",
+        "typeRaw": "`EventEmitter<boolean>`",
         "default": "",
         "typeDefinition": [],
         "_common": true
@@ -2447,7 +2475,7 @@
         "name": "nzShowTime",
         "inputType": 0,
         "description": "增加时间选择功能",
-        "type": "string",
+        "type": "object",
         "typeRaw": "object / boolean",
         "default": "[TimePicker Options](/components/time-picker/zh#api)",
         "typeDefinition": []
@@ -2466,7 +2494,7 @@
         "inputType": 1,
         "description": "点击确定按钮的回调",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<Date[]>",
+        "typeRaw": "`EventEmitter<Date[]>`",
         "default": "",
         "typeDefinition": []
       },
@@ -2475,7 +2503,7 @@
         "inputType": 1,
         "description": "时间发生变化的回调",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<Date[]>",
+        "typeRaw": "`EventEmitter<Date[]>`",
         "default": "",
         "typeDefinition": []
       }
@@ -2490,6 +2518,7 @@
     "_idx": 21,
     "type": "component",
     "selector": "nz-divider",
+    "types": {},
     "properties": [
       {
         "name": "nzDashed",
@@ -2517,7 +2546,7 @@
         "inputType": 0,
         "description": "中间文字",
         "type": "string",
-        "typeRaw": "string|TemplateRef<void>",
+        "typeRaw": "`string丨TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -2544,13 +2573,14 @@
     "_idx": 21,
     "type": "component",
     "selector": "nz-drawer",
+    "types": {},
     "properties": [
       {
         "name": "nzClosable",
         "inputType": 0,
         "description": "是否显示右上角的关闭按钮",
         "type": "boolean",
-        "typeRaw": "boolean",
+        "typeRaw": "`boolean`",
         "default": "`true`",
         "typeDefinition": []
       },
@@ -2559,7 +2589,7 @@
         "inputType": 0,
         "description": "点击蒙层是否允许关闭",
         "type": "boolean",
-        "typeRaw": "boolean",
+        "typeRaw": "`boolean`",
         "default": "`true`",
         "typeDefinition": []
       },
@@ -2568,7 +2598,7 @@
         "inputType": 0,
         "description": "是否展示遮罩",
         "type": "boolean",
-        "typeRaw": "boolean",
+        "typeRaw": "`boolean`",
         "default": "`true`",
         "typeDefinition": []
       },
@@ -2576,8 +2606,8 @@
         "name": "nzMaskStyle",
         "inputType": 0,
         "description": "遮罩样式",
-        "type": "string",
-        "typeRaw": "object",
+        "type": "object",
+        "typeRaw": "`object`",
         "default": "`{}`",
         "typeDefinition": []
       },
@@ -2585,8 +2615,8 @@
         "name": "nzBodyStyle",
         "inputType": 0,
         "description": "Drawer body 样式",
-        "type": "string",
-        "typeRaw": "object",
+        "type": "object",
+        "typeRaw": "`object`",
         "default": "`{}`",
         "typeDefinition": []
       },
@@ -2595,7 +2625,7 @@
         "inputType": 0,
         "description": "标题",
         "type": "string",
-        "typeRaw": "string`  `TemplateRef<{}>",
+        "typeRaw": "`string`  `TemplateRef<{}>`",
         "default": "",
         "typeDefinition": []
       },
@@ -2604,7 +2634,7 @@
         "inputType": 0,
         "description": "Drawer 是否可见",
         "type": "boolean",
-        "typeRaw": "boolean",
+        "typeRaw": "`boolean`",
         "default": "",
         "typeDefinition": []
       },
@@ -2613,7 +2643,7 @@
         "inputType": 0,
         "description": "抽屉的方向",
         "type": "Enum",
-        "typeRaw": "'top'` `'right'` `'bottom'` `'left'",
+        "typeRaw": "`'top'` `'right'` `'bottom'` `'left'`",
         "default": "`'right'`",
         "typeDefinition": [
           "top",
@@ -2626,8 +2656,8 @@
         "name": "nzWidth",
         "inputType": 0,
         "description": "宽度, 只在方向为 `'right'`或`'left'` 时生效",
-        "type": "string",
-        "typeRaw": "number` `string",
+        "type": "number",
+        "typeRaw": "`number` `string`",
         "default": "`256`",
         "typeDefinition": []
       },
@@ -2635,8 +2665,8 @@
         "name": "nzHeight",
         "inputType": 0,
         "description": "高度, 只在方向为 `'top'`或`'bottom'` 时生效",
-        "type": "string",
-        "typeRaw": "number` `string",
+        "type": "number",
+        "typeRaw": "`number` `string`",
         "default": "`256`",
         "typeDefinition": []
       },
@@ -2645,7 +2675,7 @@
         "inputType": 0,
         "description": "x 坐标移量(px), 只在方向为 `'right'`或`'left'` 时生效",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "`0`",
         "typeDefinition": []
       },
@@ -2654,7 +2684,7 @@
         "inputType": 0,
         "description": "y 坐标移量(px), 高度, 只在方向为 `'top'`或`'bottom'` 时生效",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "`0`",
         "typeDefinition": []
       },
@@ -2663,7 +2693,7 @@
         "inputType": 0,
         "description": "对话框外层容器的类名",
         "type": "string",
-        "typeRaw": "string",
+        "typeRaw": "`string`",
         "default": "",
         "typeDefinition": []
       },
@@ -2672,7 +2702,7 @@
         "inputType": 0,
         "description": "设置 Drawer 的 `z-index`",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "`1000`",
         "typeDefinition": []
       },
@@ -2681,7 +2711,7 @@
         "inputType": 1,
         "description": "点击遮罩层或右上角叉或取消按钮的回调",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<MouseEvent>",
+        "typeRaw": "`EventEmitter<MouseEvent>`",
         "default": "",
         "typeDefinition": []
       }
@@ -2696,6 +2726,7 @@
     "_idx": 12,
     "type": "component",
     "selector": "nz-dropdown",
+    "types": {},
     "properties": [
       {
         "name": "nzDisabled",
@@ -2727,7 +2758,7 @@
         "inputType": 0,
         "description": "触发下拉的行为",
         "type": "Enum",
-        "typeRaw": "click`|`hover",
+        "typeRaw": "`click`丨`hover`",
         "default": "`hover`",
         "typeDefinition": [
           "click",
@@ -2765,7 +2796,7 @@
         "name": "nzOverlayStyle",
         "inputType": 0,
         "description": "下拉根元素的样式",
-        "type": "string",
+        "type": "object",
         "typeRaw": "object",
         "default": "",
         "typeDefinition": []
@@ -2775,7 +2806,7 @@
         "inputType": 1,
         "description": "菜单显示状态改变时调用，参数为 nzVisible",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<boolean>",
+        "typeRaw": "`EventEmitter<boolean>`",
         "default": "",
         "typeDefinition": []
       }
@@ -2790,6 +2821,7 @@
     "_idx": 160,
     "type": "directive",
     "selector": "nz-dropdown",
+    "types": {},
     "properties": [
       {
         "name": "nzDisabled",
@@ -2839,7 +2871,7 @@
         "inputType": 0,
         "description": "触发下拉的行为",
         "type": "Enum",
-        "typeRaw": "click`|`hover",
+        "typeRaw": "`click`丨`hover`",
         "default": "`hover`",
         "typeDefinition": [
           "click",
@@ -2869,7 +2901,7 @@
         "inputType": 1,
         "description": "菜单显示状态改变时调用，参数为 nzVisible",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<boolean>",
+        "typeRaw": "`EventEmitter<boolean>`",
         "default": "",
         "typeDefinition": []
       },
@@ -2878,7 +2910,7 @@
         "inputType": 1,
         "description": "点击左侧按钮的回调",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<MouseEvent>",
+        "typeRaw": "`EventEmitter<MouseEvent>`",
         "default": "",
         "typeDefinition": []
       }
@@ -2893,6 +2925,7 @@
     "_idx": 166,
     "type": "component",
     "selector": "nz-dropdown-button",
+    "types": {},
     "properties": [
       {
         "name": "nzDisabled",
@@ -2951,7 +2984,7 @@
         "inputType": 0,
         "description": "触发下拉的行为",
         "type": "Enum",
-        "typeRaw": "click`|`hover",
+        "typeRaw": "`click`丨`hover`",
         "default": "`hover`",
         "typeDefinition": [
           "click",
@@ -2981,7 +3014,7 @@
         "inputType": 1,
         "description": "菜单显示状态改变时调用，参数为 nzVisible",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<boolean>",
+        "typeRaw": "`EventEmitter<boolean>`",
         "default": "",
         "typeDefinition": []
       },
@@ -2990,7 +3023,7 @@
         "inputType": 1,
         "description": "点击左侧按钮的回调",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<MouseEvent>",
+        "typeRaw": "`EventEmitter<MouseEvent>`",
         "default": "",
         "typeDefinition": []
       }
@@ -3005,13 +3038,14 @@
     "_idx": 56,
     "type": "component",
     "selector": "nz-form",
+    "types": {},
     "properties": [
       {
         "name": "nzLayout",
         "inputType": 0,
         "description": "表单布局",
         "type": "Enum",
-        "typeRaw": "'horizontal'|'vertical'|'inline'",
+        "typeRaw": "`'horizontal'丨'vertical'丨'inline'`",
         "default": "'horizontal'",
         "typeDefinition": [
           "horizontal",
@@ -3031,6 +3065,7 @@
     "_idx": 93,
     "type": "component",
     "selector": "nz-form-item",
+    "types": {},
     "properties": [
       {
         "name": "nzFlex",
@@ -3052,6 +3087,7 @@
     "_idx": 138,
     "type": "component",
     "selector": "nz-form-label",
+    "types": {},
     "properties": [
       {
         "name": "nzRequired",
@@ -3082,6 +3118,7 @@
     "_idx": 197,
     "type": "component",
     "selector": "nz-form-control",
+    "types": {},
     "properties": [
       {
         "name": "nzValidateStatus",
@@ -3131,6 +3168,7 @@
     "_idx": 275,
     "type": "component",
     "selector": "nz-form-explain",
+    "types": {},
     "properties": [],
     "description": "用于显示提示信息，会自动根据当前的 nzValidateStatus 显示不同的颜色",
     "lib": "ng-zorro-antd",
@@ -3142,6 +3180,7 @@
     "_idx": 286,
     "type": "component",
     "selector": "nz-form-extra",
+    "types": {},
     "properties": [],
     "description": "用于显示表单额外提示信息",
     "lib": "ng-zorro-antd",
@@ -3153,6 +3192,7 @@
     "_idx": 292,
     "type": "component",
     "selector": "nz-form-split",
+    "types": {},
     "properties": [],
     "description": "用于显示分隔符 `-`",
     "lib": "ng-zorro-antd",
@@ -3164,6 +3204,7 @@
     "_idx": 298,
     "type": "component",
     "selector": "nz-form-text",
+    "types": {},
     "properties": [],
     "description": "在 `nz-form-control` 中直接显示文本",
     "lib": "ng-zorro-antd",
@@ -3175,6 +3216,7 @@
     "_idx": 55,
     "type": "directive",
     "selector": "nz-row",
+    "types": {},
     "properties": [
       {
         "name": "nzAlign",
@@ -3245,6 +3287,7 @@
     "_idx": 134,
     "type": "directive",
     "selector": "nz-col",
+    "types": {},
     "properties": [
       {
         "name": "nzOffset",
@@ -3296,7 +3339,7 @@
         "inputType": 0,
         "description": "`<576px` 响应式栅格，可为栅格数或一个包含其他属性的对象",
         "type": "number",
-        "typeRaw": "number|object",
+        "typeRaw": "number丨object",
         "default": "",
         "typeDefinition": []
       },
@@ -3305,7 +3348,7 @@
         "inputType": 0,
         "description": "`≥576px` 响应式栅格，可为栅格数或一个包含其他属性的对象",
         "type": "number",
-        "typeRaw": "number|object",
+        "typeRaw": "number丨object",
         "default": "",
         "typeDefinition": []
       },
@@ -3314,7 +3357,7 @@
         "inputType": 0,
         "description": "`≥768px` 响应式栅格，可为栅格数或一个包含其他属性的对象",
         "type": "number",
-        "typeRaw": "number|object",
+        "typeRaw": "number丨object",
         "default": "",
         "typeDefinition": []
       },
@@ -3323,7 +3366,7 @@
         "inputType": 0,
         "description": "`≥992px` 响应式栅格，可为栅格数或一个包含其他属性的对象",
         "type": "number",
-        "typeRaw": "number|object",
+        "typeRaw": "number丨object",
         "default": "",
         "typeDefinition": []
       },
@@ -3332,7 +3375,7 @@
         "inputType": 0,
         "description": "`≥1200px` 响应式栅格，可为栅格数或一个包含其他属性的对象",
         "type": "number",
-        "typeRaw": "number|object",
+        "typeRaw": "number丨object",
         "default": "",
         "typeDefinition": []
       },
@@ -3341,7 +3384,7 @@
         "inputType": 0,
         "description": "`≥1600px` 响应式栅格，可为栅格数或一个包含其他属性的对象",
         "type": "number",
-        "typeRaw": "number|object",
+        "typeRaw": "number丨object",
         "default": "",
         "typeDefinition": []
       }
@@ -3356,13 +3399,14 @@
     "_idx": 21,
     "type": "directive",
     "selector": "nz-input",
+    "types": {},
     "properties": [
       {
         "name": "nzAutosize",
         "inputType": 0,
         "description": "只可以用于 `textarea`，自适应内容高度，可设置为 `boolean` 或对象：`{ minRows: 2, maxRows: 6 }`",
         "type": "boolean",
-        "typeRaw": "boolean| `{ minRows: number, maxRows: number }`",
+        "typeRaw": "boolean丨 `{ minRows: number, maxRows: number }`",
         "default": "false",
         "typeDefinition": []
       },
@@ -3391,13 +3435,14 @@
     "_idx": 75,
     "type": "component",
     "selector": "nz-input-group",
+    "types": {},
     "properties": [
       {
         "name": "nzAddOnAfter",
         "inputType": 0,
         "description": "带标签的 input，设置后置标签",
         "type": "string",
-        "typeRaw": "string | `TemplateRef<void>`",
+        "typeRaw": "string 丨 `TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -3406,7 +3451,7 @@
         "inputType": 0,
         "description": "带标签的 input，设置前置标签",
         "type": "string",
-        "typeRaw": "string | `TemplateRef<void>`",
+        "typeRaw": "string 丨 `TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -3415,7 +3460,7 @@
         "inputType": 0,
         "description": "带有前缀图标的 input",
         "type": "string",
-        "typeRaw": "string| `TemplateRef<void>`",
+        "typeRaw": "string丨 `TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -3424,7 +3469,7 @@
         "inputType": 0,
         "description": "带有后缀图标的 input",
         "type": "string",
-        "typeRaw": "string| `TemplateRef<void>`",
+        "typeRaw": "string丨 `TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -3470,6 +3515,7 @@
     "_idx": 15,
     "type": "component",
     "selector": "nz-input-number",
+    "types": {},
     "properties": [
       {
         "name": "ngModel",
@@ -3575,7 +3621,7 @@
         "inputType": 1,
         "description": "数值改变时回调",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<number>",
+        "typeRaw": "`EventEmitter<number>`",
         "default": "",
         "typeDefinition": []
       },
@@ -3584,7 +3630,7 @@
         "inputType": 1,
         "description": "focus时回调",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<void>",
+        "typeRaw": "`EventEmitter<void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -3593,7 +3639,7 @@
         "inputType": 1,
         "description": "blur时回调",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<void>",
+        "typeRaw": "`EventEmitter<void>`",
         "default": "",
         "typeDefinition": []
       }
@@ -3608,6 +3654,7 @@
     "_idx": 138,
     "type": "component",
     "selector": "nz-sider",
+    "types": {},
     "properties": [
       {
         "name": "nzBreakpoint",
@@ -3675,7 +3722,7 @@
         "inputType": 0,
         "description": "自定义 trigger，设置为 null 时隐藏 trigger",
         "type": "string",
-        "typeRaw": "string|`TemplateRef<void>`",
+        "typeRaw": "string丨`TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -3684,7 +3731,7 @@
         "inputType": 0,
         "description": "宽度",
         "type": "number",
-        "typeRaw": "number|string",
+        "typeRaw": "number丨string",
         "default": "200",
         "typeDefinition": []
       },
@@ -3693,7 +3740,7 @@
         "inputType": 1,
         "description": "展开-收起时的回调函数",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<boolean>",
+        "typeRaw": "`EventEmitter<boolean>`",
         "default": "",
         "typeDefinition": []
       }
@@ -3708,13 +3755,14 @@
     "_idx": 12,
     "type": "component",
     "selector": "nz-list",
+    "types": {},
     "properties": [
       {
         "name": "nzDataSource",
         "inputType": 0,
         "description": "列表数据源",
         "type": "string",
-        "typeRaw": "any[]",
+        "typeRaw": "`any[]`",
         "default": "",
         "typeDefinition": []
       },
@@ -3723,7 +3771,7 @@
         "inputType": 0,
         "description": "自定义列表项",
         "type": "TemplateRef",
-        "typeRaw": "TemplateRef<void>",
+        "typeRaw": "`TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -3741,7 +3789,7 @@
         "inputType": 0,
         "description": "列表底部",
         "type": "string",
-        "typeRaw": "string｜TemplateRef<void>",
+        "typeRaw": "`string｜TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -3749,7 +3797,7 @@
         "name": "nzGrid",
         "inputType": 0,
         "description": "列表栅格配置",
-        "type": "string",
+        "type": "object",
         "typeRaw": "object",
         "default": "",
         "typeDefinition": []
@@ -3759,7 +3807,7 @@
         "inputType": 0,
         "description": "列表头部",
         "type": "string",
-        "typeRaw": "string,TemplateRef<void>",
+        "typeRaw": "`string,TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -3789,7 +3837,7 @@
         "inputType": 0,
         "description": "加载更多",
         "type": "TemplateRef",
-        "typeRaw": "TemplateRef<void>",
+        "typeRaw": "`TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -3798,7 +3846,7 @@
         "inputType": 0,
         "description": "对应的 `pagination` 配置",
         "type": "TemplateRef",
-        "typeRaw": "TemplateRef<void>",
+        "typeRaw": "`TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -3807,7 +3855,7 @@
         "inputType": 0,
         "description": "list 的尺寸",
         "type": "Enum",
-        "typeRaw": "default,small,large",
+        "typeRaw": "`default,small,large`",
         "default": "`default`",
         "typeDefinition": [
           "small",
@@ -3835,13 +3883,14 @@
     "_idx": 338,
     "type": "component",
     "selector": "nz-list-item",
+    "types": {},
     "properties": [
       {
         "name": "nzContent",
         "inputType": 0,
         "description": "内容项",
         "type": "string",
-        "typeRaw": "string｜TemplateRef<void>",
+        "typeRaw": "`string｜TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -3850,7 +3899,7 @@
         "inputType": 0,
         "description": "列表操作组，根据 `nzItemLayout` 的不同, 位置在卡片底部或者最右侧。",
         "type": "Array",
-        "typeRaw": "Array<TemplateRef<void><void>>",
+        "typeRaw": "`Array<TemplateRef<void><void>>`",
         "default": "",
         "typeDefinition": []
       },
@@ -3859,7 +3908,7 @@
         "inputType": 0,
         "description": "额外内容, 通常用在 `nzItemLayout` 为 `vertical` 的情况下, 展示右侧内容; `horizontal` 展示在列表元素最右侧",
         "type": "TemplateRef",
-        "typeRaw": "TemplateRef<void>",
+        "typeRaw": "`TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       }
@@ -3874,13 +3923,14 @@
     "_idx": 403,
     "type": "component",
     "selector": "nz-list-item-meta",
+    "types": {},
     "properties": [
       {
         "name": "nzAvatar",
         "inputType": 0,
         "description": "列表元素的图标",
         "type": "string",
-        "typeRaw": "string｜TemplateRef<void>",
+        "typeRaw": "`string｜TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -3889,7 +3939,7 @@
         "inputType": 0,
         "description": "列表元素的描述内容",
         "type": "string",
-        "typeRaw": "string｜TemplateRef<void>",
+        "typeRaw": "`string｜TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -3898,7 +3948,7 @@
         "inputType": 0,
         "description": "列表元素的标题",
         "type": "string",
-        "typeRaw": "string｜TemplateRef<void>",
+        "typeRaw": "`string｜TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       }
@@ -3913,13 +3963,14 @@
     "_idx": 13,
     "type": "component",
     "selector": "nz-mention",
+    "types": {},
     "properties": [
       {
         "name": "nzMentionTrigger",
         "inputType": 0,
         "description": "用于指定提及的触发元素 **(必须)**",
         "type": "string",
-        "typeRaw": "HTMLTextAreaElement` `HTMLInputElement",
+        "typeRaw": "`HTMLTextAreaElement` `HTMLInputElement`",
         "default": "",
         "typeDefinition": []
       },
@@ -3928,7 +3979,7 @@
         "inputType": 0,
         "description": "自定义建议渲染模板",
         "type": "TemplateRef",
-        "typeRaw": "TemplateRef<any>",
+        "typeRaw": "`TemplateRef<any>`",
         "default": "",
         "typeDefinition": []
       },
@@ -3937,7 +3988,7 @@
         "inputType": 0,
         "description": "加载中",
         "type": "boolean",
-        "typeRaw": "boolean",
+        "typeRaw": "`boolean`",
         "default": "`false`",
         "typeDefinition": []
       },
@@ -3946,7 +3997,7 @@
         "inputType": 0,
         "description": "未找到时的内容",
         "type": "string",
-        "typeRaw": "string",
+        "typeRaw": "`string`",
         "default": "`'无匹配结果，轻敲空格完成输入'`",
         "typeDefinition": []
       },
@@ -3955,7 +4006,7 @@
         "inputType": 0,
         "description": "建议框位置",
         "type": "Enum",
-        "typeRaw": "'button'` `'top'",
+        "typeRaw": "`'button'` `'top'`",
         "default": "`'bottom'`",
         "typeDefinition": [
           "button",
@@ -3967,7 +4018,7 @@
         "inputType": 0,
         "description": "触发弹出下拉框的字符",
         "type": "string",
-        "typeRaw": "'string'` `'string[]'",
+        "typeRaw": "`'string'` `'string[]'`",
         "default": "`'@'`",
         "typeDefinition": []
       },
@@ -3976,7 +4027,7 @@
         "inputType": 0,
         "description": "建议内容",
         "type": "string",
-        "typeRaw": "any[]",
+        "typeRaw": "`any[]`",
         "default": "`[]`",
         "typeDefinition": []
       },
@@ -3985,7 +4036,7 @@
         "inputType": 0,
         "description": "建议选项的取值方法",
         "type": "function",
-        "typeRaw": "(any) => string",
+        "typeRaw": "`(any) => string`",
         "default": "`(value: string) => string`",
         "typeDefinition": []
       },
@@ -3994,7 +4045,7 @@
         "inputType": 1,
         "description": "下拉框选择建议时回调",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<any>",
+        "typeRaw": "`EventEmitter<any>`",
         "default": "",
         "typeDefinition": []
       },
@@ -4003,7 +4054,7 @@
         "inputType": 1,
         "description": "输入框中 @ 变化时回调",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<MentionOnSearchTypes>",
+        "typeRaw": "`EventEmitter<MentionOnSearchTypes>`",
         "default": "",
         "typeDefinition": []
       }
@@ -4018,6 +4069,7 @@
     "_idx": 16,
     "type": "directive",
     "selector": "nz-menu",
+    "types": {},
     "properties": [
       {
         "name": "nzInlineCollapsed",
@@ -4076,7 +4128,7 @@
         "inputType": 1,
         "description": "点击 nz-menu-item 输出属性",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<NzMenuItemDirective>",
+        "typeRaw": "`EventEmitter<NzMenuItemDirective>`",
         "default": "",
         "typeDefinition": []
       }
@@ -4091,6 +4143,7 @@
     "_idx": 123,
     "type": "directive",
     "selector": "nz-menu-item",
+    "types": {},
     "properties": [
       {
         "name": "nzDisabled",
@@ -4121,6 +4174,7 @@
     "_idx": 174,
     "type": "directive",
     "selector": "nz-submenu",
+    "types": {},
     "properties": [
       {
         "name": "nzOpen",
@@ -4145,7 +4199,7 @@
         "inputType": 1,
         "description": "展开回调",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<boolean>",
+        "typeRaw": "`EventEmitter<boolean>`",
         "default": "",
         "typeDefinition": []
       }
@@ -4160,6 +4214,7 @@
     "_idx": 242,
     "type": "directive",
     "selector": "nz-menu-group",
+    "types": {},
     "properties": [],
     "description": "使用 `title` 标识符来标定标题部分",
     "lib": "ng-zorro-antd",
@@ -4171,6 +4226,7 @@
     "_idx": 248,
     "type": "directive",
     "selector": "nz-menu-divider",
+    "types": {},
     "properties": [],
     "description": "菜单项分割线，只用在弹出菜单内。",
     "lib": "ng-zorro-antd",
@@ -4182,6 +4238,7 @@
     "_idx": 22,
     "type": "component",
     "selector": "nz-pagination",
+    "types": {},
     "properties": [
       {
         "name": "nzTotal",
@@ -4250,8 +4307,8 @@
         "name": "nzPageSizeOptions",
         "inputType": 0,
         "description": "指定每页可以显示多少条",
-        "type": "string",
-        "typeRaw": "number[]",
+        "type": "number",
+        "typeRaw": "`number[]`",
         "default": "`[10, 20, 30, 40]`",
         "typeDefinition": []
       },
@@ -4260,7 +4317,7 @@
         "inputType": 0,
         "description": "用于自定义页码的结构",
         "type": "TemplateRef",
-        "typeRaw": "TemplateRef<{ $implicit: 'page' ｜ 'prev' ｜ 'next', page: number }>",
+        "typeRaw": "`TemplateRef<{ $implicit: 'page' ｜ 'prev' ｜ 'next', page: number }>`",
         "default": "",
         "typeDefinition": []
       },
@@ -4269,7 +4326,7 @@
         "inputType": 0,
         "description": "用于显示数据总量和当前数据范围，具体使用方式见代码演示部分",
         "type": "TemplateRef",
-        "typeRaw": "TemplateRef<{ $implicit: number, range: [ number, number ] }>",
+        "typeRaw": "`TemplateRef<{ $implicit: number, range: [ number, number ] }>`",
         "default": "",
         "typeDefinition": []
       },
@@ -4287,7 +4344,7 @@
         "inputType": 1,
         "description": "页码改变的回调",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<number>",
+        "typeRaw": "`EventEmitter<number>`",
         "default": "",
         "typeDefinition": []
       },
@@ -4296,7 +4353,7 @@
         "inputType": 1,
         "description": "每页条数改变的回调",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<number>",
+        "typeRaw": "`EventEmitter<number>`",
         "default": "",
         "typeDefinition": []
       }
@@ -4311,6 +4368,7 @@
     "_idx": 15,
     "type": "directive",
     "selector": "nz-popconfirm",
+    "types": {},
     "properties": [
       {
         "name": "nzMouseEnterDelay",
@@ -4346,7 +4404,7 @@
         "name": "nzOverlayStyle",
         "inputType": 0,
         "description": "卡片样式",
-        "type": "string",
+        "type": "object",
         "typeRaw": "object",
         "default": "",
         "typeDefinition": [],
@@ -4404,7 +4462,7 @@
         "inputType": 1,
         "description": "显示隐藏的回调",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<boolean>",
+        "typeRaw": "`EventEmitter<boolean>`",
         "default": "",
         "typeDefinition": [],
         "_common": true
@@ -4414,7 +4472,7 @@
         "inputType": 0,
         "description": "提示文字",
         "type": "string",
-        "typeRaw": "string|`TemplateRef<void>`",
+        "typeRaw": "string丨`TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -4450,7 +4508,7 @@
         "inputType": 0,
         "description": "确认框的描述",
         "type": "string",
-        "typeRaw": "string |`TemplateRef<void>`",
+        "typeRaw": "string 丨`TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -4468,7 +4526,7 @@
         "inputType": 1,
         "description": "点击取消的回调",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<void>",
+        "typeRaw": "`EventEmitter<void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -4477,7 +4535,7 @@
         "inputType": 1,
         "description": "点击确认的回调",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<void>",
+        "typeRaw": "`EventEmitter<void>`",
         "default": "",
         "typeDefinition": []
       }
@@ -4492,6 +4550,7 @@
     "_idx": 15,
     "type": "directive",
     "selector": "nz-popover",
+    "types": {},
     "properties": [
       {
         "name": "nzMouseEnterDelay",
@@ -4527,7 +4586,7 @@
         "name": "nzOverlayStyle",
         "inputType": 0,
         "description": "卡片样式",
-        "type": "string",
+        "type": "object",
         "typeRaw": "object",
         "default": "",
         "typeDefinition": [],
@@ -4585,7 +4644,7 @@
         "inputType": 1,
         "description": "显示隐藏的回调",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<boolean>",
+        "typeRaw": "`EventEmitter<boolean>`",
         "default": "",
         "typeDefinition": [],
         "_common": true
@@ -4595,7 +4654,7 @@
         "inputType": 0,
         "description": "提示文字",
         "type": "string",
-        "typeRaw": "string|`TemplateRef<void>`",
+        "typeRaw": "string丨`TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -4604,7 +4663,7 @@
         "inputType": 0,
         "description": "卡片标题",
         "type": "string",
-        "typeRaw": "string |`TemplateRef<void>`",
+        "typeRaw": "string 丨`TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -4613,7 +4672,7 @@
         "inputType": 0,
         "description": "用于定义Content内容",
         "type": "string",
-        "typeRaw": "string |`TemplateRef<void>`",
+        "typeRaw": "string 丨`TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       }
@@ -4628,6 +4687,7 @@
     "_idx": 24,
     "type": "component",
     "selector": "nz-progress",
+    "types": {},
     "properties": [
       {
         "name": "nzFormat",
@@ -4737,7 +4797,7 @@
         "inputType": 0,
         "description": "进度条端点形状",
         "type": "Enum",
-        "typeRaw": "round` `square",
+        "typeRaw": "`round` `square`",
         "default": "`round`",
         "typeDefinition": [
           "round",
@@ -4764,6 +4824,7 @@
     "_idx": 21,
     "type": "directive",
     "selector": "nz-radio",
+    "types": {},
     "properties": [
       {
         "name": "nzAutoFocus",
@@ -4806,7 +4867,7 @@
         "inputType": 1,
         "description": "选中变化时回调",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<boolean>",
+        "typeRaw": "`EventEmitter<boolean>`",
         "default": "",
         "typeDefinition": []
       }
@@ -4822,6 +4883,7 @@
     "_idx": 21,
     "type": "directive",
     "selector": "nz-radio-button",
+    "types": {},
     "properties": [
       {
         "name": "nzAutoFocus",
@@ -4864,7 +4926,7 @@
         "inputType": 1,
         "description": "选中变化时回调",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<boolean>",
+        "typeRaw": "`EventEmitter<boolean>`",
         "default": "",
         "typeDefinition": []
       }
@@ -4879,6 +4941,7 @@
     "_idx": 114,
     "type": "component",
     "selector": "nz-radio-group",
+    "types": {},
     "properties": [
       {
         "name": "ngModel",
@@ -4912,7 +4975,7 @@
         "inputType": 0,
         "description": "大小，只对按钮样式生效",
         "type": "Enum",
-        "typeRaw": "large` ｜ `default` ｜ `small",
+        "typeRaw": "`large` ｜ `default` ｜ `small`",
         "default": "`default`",
         "typeDefinition": [
           "small",
@@ -4925,7 +4988,7 @@
         "inputType": 1,
         "description": "选中变化时回调",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<boolean>",
+        "typeRaw": "`EventEmitter<boolean>`",
         "default": "",
         "typeDefinition": []
       },
@@ -4934,7 +4997,7 @@
         "inputType": 0,
         "description": "RadioButton 的风格样式，目前有描边和填色两种风格",
         "type": "Enum",
-        "typeRaw": "outline` | `solid",
+        "typeRaw": "`outline` 丨 `solid`",
         "default": "`outline`",
         "typeDefinition": [
           "outline",
@@ -4952,6 +5015,7 @@
     "_idx": 21,
     "type": "component",
     "selector": "nz-rate",
+    "types": {},
     "properties": [
       {
         "name": "nzAllowClear",
@@ -4985,7 +5049,7 @@
         "inputType": 0,
         "description": "自定义字符",
         "type": "TemplateRef",
-        "typeRaw": "TemplateRef<void>",
+        "typeRaw": "`TemplateRef<void>`",
         "default": "`<i nz-icon type=\"star\"></i>`",
         "typeDefinition": []
       },
@@ -5021,7 +5085,7 @@
         "inputType": 1,
         "description": "当前数改变时的回调",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<number>",
+        "typeRaw": "`EventEmitter<number>`",
         "default": "",
         "typeDefinition": []
       },
@@ -5030,7 +5094,7 @@
         "inputType": 1,
         "description": "失去焦点时的回调",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<FocusEvent>",
+        "typeRaw": "`EventEmitter<FocusEvent>`",
         "default": "",
         "typeDefinition": []
       },
@@ -5039,7 +5103,7 @@
         "inputType": 1,
         "description": "获取焦点时的回调",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<FocusEvent>",
+        "typeRaw": "`EventEmitter<FocusEvent>`",
         "default": "",
         "typeDefinition": []
       },
@@ -5048,7 +5112,7 @@
         "inputType": 1,
         "description": "鼠标经过时数值变化的回调",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<number>",
+        "typeRaw": "`EventEmitter<number>`",
         "default": "",
         "typeDefinition": []
       },
@@ -5057,7 +5121,7 @@
         "inputType": 1,
         "description": "按键回调",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<KeyboardEvent>",
+        "typeRaw": "`EventEmitter<KeyboardEvent>`",
         "default": "",
         "typeDefinition": []
       }
@@ -5072,13 +5136,14 @@
     "_idx": 22,
     "type": "component",
     "selector": "nz-select",
+    "types": {},
     "properties": [
       {
         "name": "ngModel",
         "inputType": 2,
         "description": "当前选中的 nz-option 的 nzValue 值，可双向绑定，当 `nzMode` 为 `multiple` 或 `tags` 时，ngModel 为数组",
         "type": "string",
-        "typeRaw": "any | any[]",
+        "typeRaw": "`any 丨 any[]`",
         "default": "",
         "typeDefinition": []
       },
@@ -5149,7 +5214,7 @@
         "name": "nzDropdownStyle",
         "inputType": 0,
         "description": "下拉菜单的 style 属性",
-        "type": "string",
+        "type": "object",
         "typeRaw": "object",
         "default": "",
         "typeDefinition": []
@@ -5168,7 +5233,7 @@
         "inputType": 0,
         "description": "是否根据输入项进行筛选。当其为一个函数时，会接收 `inputValue` `option` 两个参数，当 `option` 符合筛选条件时，应返回 `true`，反之则返回 `false`。",
         "type": "function",
-        "typeRaw": "(input?: string, option?: NzOptionComponent) => boolean;",
+        "typeRaw": "`(input?: string, option?: NzOptionComponent) => boolean;`",
         "default": "",
         "typeDefinition": []
       },
@@ -5186,7 +5251,7 @@
         "inputType": 0,
         "description": "设置 nz-select 的模式",
         "type": "Enum",
-        "typeRaw": "'multiple' | 'tags' | 'default'",
+        "typeRaw": "'multiple' 丨 'tags' 丨 'default'",
         "default": "'default'",
         "typeDefinition": [
           "multiple",
@@ -5239,7 +5304,7 @@
         "inputType": 1,
         "description": "选中的 nz-option 发生变化时，调用此函数",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<any[]>",
+        "typeRaw": "`EventEmitter<any[]>`",
         "default": "",
         "typeDefinition": []
       },
@@ -5248,7 +5313,7 @@
         "inputType": 1,
         "description": "下拉菜单打开状态变化回调",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<boolean>",
+        "typeRaw": "`EventEmitter<boolean>`",
         "default": "",
         "typeDefinition": []
       },
@@ -5257,7 +5322,7 @@
         "inputType": 1,
         "description": "下拉列表滚动到底部的回调",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<void>",
+        "typeRaw": "`EventEmitter<void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -5266,7 +5331,7 @@
         "inputType": 1,
         "description": "文本框值变化时回调",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<string>",
+        "typeRaw": "`EventEmitter<string>`",
         "default": "",
         "typeDefinition": []
       }
@@ -5281,6 +5346,7 @@
     "_idx": 339,
     "type": "component",
     "selector": "nz-option",
+    "types": {},
     "properties": [
       {
         "name": "nzDisabled",
@@ -5329,13 +5395,14 @@
     "_idx": 418,
     "type": "component",
     "selector": "nz-option-group",
+    "types": {},
     "properties": [
       {
         "name": "nzLabel",
         "inputType": 0,
         "description": "组名",
         "type": "string",
-        "typeRaw": "string|`TemplateRef<void>`",
+        "typeRaw": "string丨`TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       }
@@ -5350,6 +5417,7 @@
     "_idx": 21,
     "type": "component",
     "selector": "nz-skeleton",
+    "types": {},
     "properties": [
       {
         "name": "nzActive",
@@ -5407,6 +5475,7 @@
     "_idx": 12,
     "type": "component",
     "selector": "nz-slider",
+    "types": {},
     "properties": [
       {
         "name": "nzDefaultValue",
@@ -5448,7 +5517,7 @@
         "name": "nzMarks",
         "inputType": 0,
         "description": "刻度标记，key 的类型必须为 `number` 且取值在闭区间 [min, max] 内，每个标签可以单独设置样式",
-        "type": "string",
+        "type": "object",
         "typeRaw": "object",
         "default": "{ number: string/HTML } or { number: { style: object, label: string/HTML } }",
         "typeDefinition": []
@@ -5502,13 +5571,10 @@
         "name": "ngModel",
         "inputType": 2,
         "description": "设置当前取值。当 `range` 为 `false` 时，使用 `number`，否则用 `[number, number]`",
-        "type": "Enum",
-        "typeRaw": "number[] | number>",
+        "type": "number",
+        "typeRaw": "number[] 丨 number>",
         "default": "",
-        "typeDefinition": [
-          "number[]",
-          "number>"
-        ]
+        "typeDefinition": []
       },
       {
         "name": "nzVertical",
@@ -5524,7 +5590,7 @@
         "inputType": 1,
         "description": "与 `onmouseup` 触发时机一致，把当前值作为参数传入。",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<number[] | number>",
+        "typeRaw": "`EventEmitter<number[] 丨 number>`",
         "default": "",
         "typeDefinition": []
       },
@@ -5533,7 +5599,7 @@
         "inputType": 1,
         "description": "当 Slider 的值发生改变时，会触发 ngModelChange 事件，并把改变后的值作为参数传入。",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<number[] | number>>",
+        "typeRaw": "`EventEmitter<number[] 丨 number>>`",
         "default": "",
         "typeDefinition": []
       }
@@ -5548,6 +5614,7 @@
     "_idx": 12,
     "type": "component",
     "selector": "nz-spin",
+    "types": {},
     "properties": [
       {
         "name": "nzDelay",
@@ -5563,7 +5630,7 @@
         "inputType": 0,
         "description": "加载指示符",
         "type": "TemplateRef",
-        "typeRaw": "TemplateRef<void>",
+        "typeRaw": "`TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -5609,6 +5676,7 @@
     "_idx": 13,
     "type": "component",
     "selector": "nz-steps",
+    "types": {},
     "properties": [
       {
         "name": "nzCurrent",
@@ -5645,7 +5713,7 @@
         "inputType": 0,
         "description": "点状步骤条，可以设置为一个 TemplateRef",
         "type": "boolean",
-        "typeRaw": "Boolean | `TemplateRef<{ $implicit: TemplateRef<void>, status: string, index: number }>`",
+        "typeRaw": "Boolean 丨 `TemplateRef<{ $implicit: TemplateRef<void>, status: string, index: number }>`",
         "default": "false",
         "typeDefinition": []
       },
@@ -5695,13 +5763,14 @@
     "_idx": 137,
     "type": "component",
     "selector": "nz-step",
+    "types": {},
     "properties": [
       {
         "name": "nzDescription",
         "inputType": 0,
         "description": "步骤的详情描述，可选",
         "type": "string",
-        "typeRaw": "string | `TemplateRef<void>`",
+        "typeRaw": "string 丨 `TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -5710,7 +5779,7 @@
         "inputType": 0,
         "description": "步骤图标的类型，可选",
         "type": "string",
-        "typeRaw": "string | string[] | Set<string> | { [klass: string]: any; };` | `TemplateRef<void>",
+        "typeRaw": "`string 丨 string[] 丨 Set<string> 丨 { [klass: string]: any; };` 丨 `TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -5733,7 +5802,7 @@
         "inputType": 0,
         "description": "标题",
         "type": "string",
-        "typeRaw": "string | `TemplateRef<void>`",
+        "typeRaw": "string 丨 `TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       }
@@ -5748,6 +5817,7 @@
     "_idx": 21,
     "type": "component",
     "selector": "nz-switch",
+    "types": {},
     "properties": [
       {
         "name": "ngModel",
@@ -5763,7 +5833,7 @@
         "inputType": 0,
         "description": "选中时的内容",
         "type": "string",
-        "typeRaw": "string|`TemplateRef<void>`",
+        "typeRaw": "string丨`TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -5772,7 +5842,7 @@
         "inputType": 0,
         "description": "非选中时的内容",
         "type": "string",
-        "typeRaw": "string|`TemplateRef<void>`",
+        "typeRaw": "string丨`TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -5820,7 +5890,7 @@
         "inputType": 1,
         "description": "当前是否选中的回调",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<boolean>",
+        "typeRaw": "`EventEmitter<boolean>`",
         "default": "false",
         "typeDefinition": []
       }
@@ -5835,13 +5905,14 @@
     "_idx": 46,
     "type": "component",
     "selector": "nz-table",
+    "types": {},
     "properties": [
       {
         "name": "nzData",
         "inputType": 0,
         "description": "数据数组",
         "type": "string",
-        "typeRaw": "any[]",
+        "typeRaw": "`any[]`",
         "default": "",
         "typeDefinition": []
       },
@@ -5943,7 +6014,7 @@
         "name": "nzScroll",
         "inputType": 0,
         "description": "横向或纵向支持滚动，也可用于指定滚动区域的宽高度：`{ x: \"300px\", y: \"300px\" }`",
-        "type": "string",
+        "type": "object",
         "typeRaw": "object",
         "default": "",
         "typeDefinition": []
@@ -5953,7 +6024,7 @@
         "inputType": 0,
         "description": "表格标题",
         "type": "string",
-        "typeRaw": "string|`TemplateRef<void>`",
+        "typeRaw": "string丨`TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -5962,7 +6033,7 @@
         "inputType": 0,
         "description": "表格尾部",
         "type": "string",
-        "typeRaw": "string|`TemplateRef<void>`",
+        "typeRaw": "string丨`TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -5971,7 +6042,7 @@
         "inputType": 0,
         "description": "无数据时显示内容",
         "type": "string",
-        "typeRaw": "string|`TemplateRef<void>`",
+        "typeRaw": "string丨`TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -5979,7 +6050,7 @@
         "name": "nzPageSizeOptions",
         "inputType": 0,
         "description": "页数选择器可选值",
-        "type": "string",
+        "type": "number",
         "typeRaw": "number[]",
         "default": "[ 10, 20, 30, 40, 50 ]",
         "typeDefinition": []
@@ -6007,7 +6078,7 @@
         "inputType": 0,
         "description": "用于显示数据总量和当前数据范围，与 Pagination 用法相同",
         "type": "TemplateRef",
-        "typeRaw": "TemplateRef<{ $implicit: number, range: [ number, number ] }>",
+        "typeRaw": "`TemplateRef<{ $implicit: number, range: [ number, number ] }>`",
         "default": "",
         "typeDefinition": []
       },
@@ -6034,7 +6105,7 @@
         "inputType": 1,
         "description": "当前页码改版时的回调函数",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<number>",
+        "typeRaw": "`EventEmitter<number>`",
         "default": "",
         "typeDefinition": []
       },
@@ -6043,7 +6114,7 @@
         "inputType": 1,
         "description": "页数改变时的回调函数",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<number>",
+        "typeRaw": "`EventEmitter<number>`",
         "default": "",
         "typeDefinition": []
       },
@@ -6052,7 +6123,7 @@
         "inputType": 1,
         "description": "当前页面展示数据改变的回调函数",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<any[]>",
+        "typeRaw": "`EventEmitter<any[]>`",
         "default": "",
         "typeDefinition": []
       }
@@ -6067,6 +6138,7 @@
     "_idx": 405,
     "type": "component",
     "selector": "th",
+    "types": {},
     "properties": [
       {
         "name": "nzShowCheckbox",
@@ -6109,7 +6181,7 @@
         "inputType": 1,
         "description": "选中的回调",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<boolean>",
+        "typeRaw": "`EventEmitter<boolean>`",
         "default": "",
         "typeDefinition": []
       },
@@ -6127,7 +6199,7 @@
         "inputType": 0,
         "description": "下拉选择的内容 `text` 及回调函数 `onSelect`",
         "type": "Array",
-        "typeRaw": "Array<{ text: string, onSelect: any }>",
+        "typeRaw": "`Array<{ text: string, onSelect: any }>`",
         "default": "",
         "typeDefinition": []
       },
@@ -6154,7 +6226,7 @@
         "inputType": 2,
         "description": "当前排序状态，受控模式使用，可双向绑定",
         "type": "Enum",
-        "typeRaw": "'descend'|'ascend'|null",
+        "typeRaw": "'descend'丨'ascend'丨null",
         "default": "null",
         "typeDefinition": [
           "descend",
@@ -6166,7 +6238,7 @@
         "inputType": 1,
         "description": "排序状态改变回调，受控模式使用",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<'descend'|'ascend'|null>",
+        "typeRaw": "`EventEmitter<'descend'丨'ascend'丨null>`",
         "default": "",
         "typeDefinition": []
       },
@@ -6184,7 +6256,7 @@
         "inputType": 0,
         "description": "过滤器内容, 显示数据 `text`，回调函数传出 `value`，设置 `byDefault` 以默认应用过滤规则",
         "type": "Array",
-        "typeRaw": "Array<{ text: string; value: any; byDefault?: boolean }>",
+        "typeRaw": "`Array<{ text: string; value: any; byDefault?: boolean }>`",
         "default": "",
         "typeDefinition": []
       },
@@ -6202,7 +6274,7 @@
         "inputType": 1,
         "description": "过滤器内容选择的 value 数据回调",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<any[]| any>",
+        "typeRaw": "`EventEmitter<any[]丨 any>`",
         "default": "",
         "typeDefinition": []
       },
@@ -6253,6 +6325,7 @@
     "_idx": 812,
     "type": "component",
     "selector": "td",
+    "types": {},
     "properties": [
       {
         "name": "nzShowCheckbox",
@@ -6295,7 +6368,7 @@
         "inputType": 1,
         "description": "选中的回调",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<boolean>",
+        "typeRaw": "`EventEmitter<boolean>`",
         "default": "",
         "typeDefinition": []
       },
@@ -6322,7 +6395,7 @@
         "inputType": 1,
         "description": "当前展开按钮状态改变回调函数",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<boolean>",
+        "typeRaw": "`EventEmitter<boolean>`",
         "default": "",
         "typeDefinition": []
       },
@@ -6364,6 +6437,7 @@
     "_idx": 1061,
     "type": "component",
     "selector": "thead",
+    "types": {},
     "properties": [
       {
         "name": "nzSingleSort",
@@ -6379,7 +6453,7 @@
         "inputType": 1,
         "description": "排序改变时的回调函数，需要与 `th` 上的 `nzSortKey` 同时使用，非受控排序下使用",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<{ nzSortKey: string, value: 'descend'|'ascend'|null }>",
+        "typeRaw": "`EventEmitter<{ nzSortKey: string, value: 'descend'丨'ascend'丨null }>`",
         "default": "",
         "typeDefinition": []
       }
@@ -6394,6 +6468,7 @@
     "_idx": 1112,
     "type": "component",
     "selector": "tr",
+    "types": {},
     "properties": [
       {
         "name": "nzExpand",
@@ -6415,6 +6490,7 @@
     "_idx": 32,
     "type": "component",
     "selector": "nz-tabset",
+    "types": {},
     "properties": [
       {
         "name": "nzSelectedIndex",
@@ -6430,7 +6506,7 @@
         "inputType": 0,
         "description": "是否使用动画切换 Tabs，在 nzTabPosition=top丨bottom 时有效",
         "type": "boolean",
-        "typeRaw": "boolean|{inkBar:boolean, tabPane:boolean}",
+        "typeRaw": "boolean丨{inkBar:boolean, tabPane:boolean}",
         "default": "true, 当 type=\"card\" 时为 false",
         "typeDefinition": []
       },
@@ -6452,7 +6528,7 @@
         "inputType": 0,
         "description": "tab bar 上额外的元素",
         "type": "TemplateRef",
-        "typeRaw": "TemplateRef<void>",
+        "typeRaw": "`TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -6460,7 +6536,7 @@
         "name": "nzTabBarStyle",
         "inputType": 0,
         "description": "tab bar 的样式对象",
-        "type": "string",
+        "type": "object",
         "typeRaw": "object",
         "default": "",
         "typeDefinition": []
@@ -6523,7 +6599,7 @@
         "inputType": 1,
         "description": "当前激活 tab 面板的 序列号变更回调函数",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<number>",
+        "typeRaw": "`EventEmitter<number>`",
         "default": "",
         "typeDefinition": []
       },
@@ -6532,7 +6608,7 @@
         "inputType": 1,
         "description": "当前激活 tab 面板变更回调函数",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<{nzSelectedIndex: number,tab: NzTabComponent}>",
+        "typeRaw": "`EventEmitter<{nzSelectedIndex: number,tab: NzTabComponent}>`",
         "default": "",
         "typeDefinition": []
       },
@@ -6541,7 +6617,7 @@
         "inputType": 1,
         "description": "next 按钮被点击的回调",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<void>",
+        "typeRaw": "`EventEmitter<void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -6550,7 +6626,7 @@
         "inputType": 1,
         "description": "prev 按钮被点击的回调",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<void>",
+        "typeRaw": "`EventEmitter<void>`",
         "default": "",
         "typeDefinition": []
       }
@@ -6565,6 +6641,7 @@
     "_idx": 251,
     "type": "component",
     "selector": "nz-tab",
+    "types": {},
     "properties": [
       {
         "name": "nzTitle",
@@ -6598,7 +6675,7 @@
         "inputType": 1,
         "description": "title被点击的回调函数",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<void>",
+        "typeRaw": "`EventEmitter<void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -6607,7 +6684,7 @@
         "inputType": 1,
         "description": "tab被选中的回调函数",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<void>",
+        "typeRaw": "`EventEmitter<void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -6616,7 +6693,7 @@
         "inputType": 1,
         "description": "tab被取消选中的回调函数",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<void>",
+        "typeRaw": "`EventEmitter<void>`",
         "default": "",
         "typeDefinition": []
       }
@@ -6631,13 +6708,14 @@
     "_idx": 21,
     "type": "component",
     "selector": "nz-tag",
+    "types": {},
     "properties": [
       {
         "name": "nzMode",
         "inputType": 0,
         "description": "设定标签工作的模式",
         "type": "Enum",
-        "typeRaw": "'closeable'|'default'|'checkable'",
+        "typeRaw": "`'closeable'丨'default'丨'checkable'`",
         "default": "`default`",
         "typeDefinition": [
           "closeable",
@@ -6668,7 +6746,7 @@
         "inputType": 1,
         "description": "关闭动画完成后的回调，在 `nzMode=\"closable\"` 时可用",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<void>",
+        "typeRaw": "`EventEmitter<void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -6677,7 +6755,7 @@
         "inputType": 1,
         "description": "关闭时的回调，在 `nzMode=\"closable\"` 时可用",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<MouseEvent>",
+        "typeRaw": "`EventEmitter<MouseEvent>`",
         "default": "",
         "typeDefinition": []
       },
@@ -6686,7 +6764,7 @@
         "inputType": 1,
         "description": "设置标签的选中状态的回调，在 `nzMode=\"checkable\"` 时可用",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<void>",
+        "typeRaw": "`EventEmitter<void>`",
         "default": "",
         "typeDefinition": []
       }
@@ -6701,6 +6779,7 @@
     "_idx": 13,
     "type": "component",
     "selector": "nz-time-picker",
+    "types": {},
     "properties": [
       {
         "name": "ngModel",
@@ -6716,7 +6795,7 @@
         "inputType": 0,
         "description": "选择框底部显示自定义的内容",
         "type": "TemplateRef",
-        "typeRaw": "TemplateRef<void>",
+        "typeRaw": "`TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -6869,7 +6948,7 @@
         "inputType": 1,
         "description": "时间发生变化的回调",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<Date>",
+        "typeRaw": "`EventEmitter<Date>`",
         "default": "",
         "typeDefinition": []
       },
@@ -6878,7 +6957,7 @@
         "inputType": 1,
         "description": "面板打开/关闭时的回调",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<boolean>",
+        "typeRaw": "`EventEmitter<boolean>`",
         "default": "",
         "typeDefinition": []
       }
@@ -6893,12 +6972,13 @@
     "_idx": 22,
     "type": "component",
     "selector": "nz-timeline",
+    "types": {},
     "properties": [
       {
         "name": "nzPending",
         "inputType": 0,
         "description": "指定最后一个幽灵节点是否存在或内容",
-        "type": "string",
+        "type": "boolean",
         "typeRaw": "boolean｜string｜`TemplateRef<void>`",
         "default": "false",
         "typeDefinition": []
@@ -6945,6 +7025,7 @@
     "_idx": 104,
     "type": "component",
     "selector": "nz-timeline-item",
+    "types": {},
     "properties": [
       {
         "name": "nzColor",
@@ -6975,14 +7056,15 @@
     "_idx": 21,
     "type": "component",
     "selector": "nz-alert",
+    "types": {},
     "properties": [
       {
         "name": "nzBanner",
         "inputType": 0,
         "description": "是否用作顶部公告",
         "type": "boolean",
-        "typeRaw": "boolean",
-        "default": "false",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
         "typeDefinition": []
       },
       {
@@ -6990,7 +7072,7 @@
         "inputType": 0,
         "description": "默认不显示关闭按钮",
         "type": "boolean",
-        "typeRaw": "boolean",
+        "typeRaw": "`boolean`",
         "default": "",
         "typeDefinition": []
       },
@@ -6999,7 +7081,7 @@
         "inputType": 0,
         "description": "自定义关闭按钮",
         "type": "string",
-        "typeRaw": "string｜`TemplateRef<void>`",
+        "typeRaw": "`string｜TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -7008,7 +7090,7 @@
         "inputType": 0,
         "description": "警告提示的辅助性文字介绍",
         "type": "string",
-        "typeRaw": "string｜`TemplateRef<void>`",
+        "typeRaw": "`string｜TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -7017,17 +7099,17 @@
         "inputType": 0,
         "description": "警告提示内容",
         "type": "string",
-        "typeRaw": "string｜`TemplateRef<void>`",
+        "typeRaw": "`string｜TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       },
       {
         "name": "nzShowIcon",
         "inputType": 0,
-        "description": "是否显示辅助图标",
+        "description": "是否显示辅助图标，`nzBanner` 模式下默认值为 `true`",
         "type": "boolean",
-        "typeRaw": "boolean",
-        "default": "false，`nzBanner` 模式下默认值为 true",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
         "typeDefinition": []
       },
       {
@@ -7035,17 +7117,17 @@
         "inputType": 0,
         "description": "自定义图标类型，`nzShowIcon` 为 `true` 时有效",
         "type": "string",
-        "typeRaw": "string | string[] | Set<string> | { [klass: string]: any; };",
+        "typeRaw": "`string丨string[]丨Set<string>丨{ [klass: string]: any; }`",
         "default": "",
         "typeDefinition": []
       },
       {
         "name": "nzType",
         "inputType": 0,
-        "description": "指定警告提示的样式，有四种选择 `success`、`info`、`warning`、`error`",
+        "description": "指定警告提示的样式，`nzBanner` 模式下默认值为 `warning`",
         "type": "Enum",
-        "typeRaw": "string",
-        "default": "`info`，`banner` 模式下默认值为 `warning`",
+        "typeRaw": "`success丨info丨warning丨error`",
+        "default": "`info`",
         "typeDefinition": [
           "success",
           "info",
@@ -7058,7 +7140,7 @@
         "inputType": 1,
         "description": "关闭时触发的回调函数",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<void>",
+        "typeRaw": "`EventEmitter<void>`",
         "default": "",
         "typeDefinition": []
       }
@@ -7073,6 +7155,7 @@
     "_idx": 15,
     "type": "component",
     "selector": "nz-transfer",
+    "types": {},
     "properties": [
       {
         "name": "nzDataSource",
@@ -7114,7 +7197,7 @@
         "name": "nzListStyle",
         "inputType": 0,
         "description": "两个穿梭框的自定义样式，等同 `ngStyle`",
-        "type": "string",
+        "type": "object",
         "typeRaw": "object",
         "default": "",
         "typeDefinition": []
@@ -7142,7 +7225,7 @@
         "inputType": 0,
         "description": "每行数据渲染模板，见示例",
         "type": "TemplateRef",
-        "typeRaw": "TemplateRef<void>",
+        "typeRaw": "`TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -7151,7 +7234,7 @@
         "inputType": 0,
         "description": "底部渲染模板，见示例",
         "type": "TemplateRef",
-        "typeRaw": "TemplateRef<void>",
+        "typeRaw": "`TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -7196,7 +7279,7 @@
         "inputType": 0,
         "description": "穿梭时二次校验。**注意：** 穿梭组件内部始终只保留一份数据，二次校验过程中需取消穿梭项则直接删除该项；具体用法见示例。",
         "type": "function",
-        "typeRaw": "(arg: TransferCanMove) => Observable<TransferItem[]>",
+        "typeRaw": "`(arg: TransferCanMove) => Observable<TransferItem[]>`",
         "default": "",
         "typeDefinition": []
       },
@@ -7205,7 +7288,7 @@
         "inputType": 1,
         "description": "选项在两栏之间转移时的回调函数",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<TransferChange>",
+        "typeRaw": "`EventEmitter<TransferChange>`",
         "default": "",
         "typeDefinition": []
       },
@@ -7214,7 +7297,7 @@
         "inputType": 1,
         "description": "搜索框内容时改变时的回调函数",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<TransferSearchChange>",
+        "typeRaw": "`EventEmitter<TransferSearchChange>`",
         "default": "",
         "typeDefinition": []
       },
@@ -7223,7 +7306,7 @@
         "inputType": 1,
         "description": "选中项发生改变时的回调函数",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<TransferSearchChange>",
+        "typeRaw": "`EventEmitter<TransferSearchChange>`",
         "default": "",
         "typeDefinition": []
       }
@@ -7238,6 +7321,7 @@
     "_idx": 9,
     "type": "component",
     "selector": "nz-tree",
+    "types": {},
     "properties": [
       {
         "name": "ngModel",
@@ -7379,7 +7463,7 @@
         "inputType": 0,
         "description": "drop前二次校验,允许用户自行决定是否允许放置",
         "type": "function",
-        "typeRaw": "(confirm: NzFormatBeforeDropEvent) => Observable<boolean>",
+        "typeRaw": "`(confirm: NzFormatBeforeDropEvent) => Observable<boolean>`",
         "default": "",
         "typeDefinition": []
       },
@@ -7502,6 +7586,7 @@
     "_idx": 12,
     "type": "component",
     "selector": "nz-tree-select",
+    "types": {},
     "properties": [
       {
         "name": "nzAllowClear",
@@ -7647,7 +7732,7 @@
         "inputType": 0,
         "description": "如何在输入框显示所选的节点值的方法",
         "type": "function",
-        "typeRaw": "(node: NzTreeNode) => string",
+        "typeRaw": "`(node: NzTreeNode) => string`",
         "default": "`(node: NzTreeNode) => node.title`",
         "typeDefinition": []
       },
@@ -7671,6 +7756,7 @@
     "_idx": 34,
     "type": "component",
     "selector": "nz-upload",
+    "types": {},
     "properties": [
       {
         "name": "nzAccept",
@@ -7713,7 +7799,7 @@
         "inputType": 0,
         "description": "通过覆盖默认的上传行为，可以自定义自己的上传实现；注意：务必使用 `=>` 定义处理方法。",
         "type": "function",
-        "typeRaw": "(item) => Subscription",
+        "typeRaw": "`(item) => Subscription`",
         "default": "",
         "typeDefinition": []
       },
@@ -7722,7 +7808,7 @@
         "inputType": 0,
         "description": "上传所需参数或返回上传参数的方法；注意：务必使用 `=>` 定义处理方法。",
         "type": "Enum",
-        "typeRaw": "Object|((file: UploadFile) => Object)",
+        "typeRaw": "`Object|((file: UploadFile) => Object)`",
         "default": "",
         "typeDefinition": [
           "Object",
@@ -7787,10 +7873,13 @@
         "name": "nzHeaders",
         "inputType": 0,
         "description": "设置上传的请求头部，IE10 以上有效；注意：务必使用 `=>` 定义处理方法。",
-        "type": "string",
-        "typeRaw": "Object｜((file: UploadFile) => Object)",
+        "type": "Enum",
+        "typeRaw": "`Object｜((file: UploadFile) => Object)`",
         "default": "",
-        "typeDefinition": []
+        "typeDefinition": [
+          "Object",
+          "((file: UploadFile) => Object)"
+        ]
       },
       {
         "name": "nzListType",
@@ -7828,7 +7917,7 @@
         "inputType": 0,
         "description": "是否展示 uploadList, 可设为一个对象，用于单独设定 showPreviewIcon 和 showRemoveIcon",
         "type": "boolean",
-        "typeRaw": "Boolean or { showPreviewIcon?: boolean, showRemoveIcon?: boolean }",
+        "typeRaw": "`Boolean or { showPreviewIcon?: boolean, showRemoveIcon?: boolean }`",
         "default": "true",
         "typeDefinition": []
       },
@@ -7864,7 +7953,7 @@
         "inputType": 0,
         "description": "点击文件链接或预览图标时的回调；注意：务必使用 `=>` 定义处理方法。",
         "type": "function",
-        "typeRaw": "(file: UploadFile) => void",
+        "typeRaw": "`(file: UploadFile) => void`",
         "default": "",
         "typeDefinition": []
       },
@@ -7897,13 +7986,14 @@
     "_idx": 6,
     "type": "component",
     "selector": "avatar-list",
+    "types": {},
     "properties": [
       {
         "name": "size",
         "inputType": 0,
         "description": "头像大小",
         "type": "Enum",
-        "typeRaw": "large,small,mini,default",
+        "typeRaw": "`large,small,mini,default`",
         "default": "`default`",
         "typeDefinition": [
           "large",
@@ -7917,7 +8007,7 @@
         "inputType": 0,
         "description": "要显示的最大项目",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "",
         "typeDefinition": []
       },
@@ -7926,7 +8016,7 @@
         "inputType": 0,
         "description": "多余的项目风格",
         "type": "object",
-        "typeRaw": "{ [key: string]: string }",
+        "typeRaw": "`{ [key: string]: string }`",
         "default": "",
         "typeDefinition": []
       }
@@ -7941,13 +8031,14 @@
     "_idx": 71,
     "type": "component",
     "selector": "avatar-list-item",
+    "types": {},
     "properties": [
       {
         "name": "tips",
         "inputType": 0,
         "description": "头像展示文案",
         "type": "string",
-        "typeRaw": "string",
+        "typeRaw": "`string`",
         "default": "",
         "typeDefinition": []
       },
@@ -7956,7 +8047,7 @@
         "inputType": 0,
         "description": "头像图片连接",
         "type": "string",
-        "typeRaw": "string",
+        "typeRaw": "`string`",
         "default": "",
         "typeDefinition": []
       },
@@ -7965,7 +8056,7 @@
         "inputType": 0,
         "description": "文本类头像",
         "type": "string",
-        "typeRaw": "string",
+        "typeRaw": "`string`",
         "default": "",
         "typeDefinition": []
       },
@@ -7974,7 +8065,7 @@
         "inputType": 0,
         "description": "图标类型",
         "type": "string",
-        "typeRaw": "string",
+        "typeRaw": "`string`",
         "default": "",
         "typeDefinition": []
       }
@@ -7989,13 +8080,14 @@
     "_idx": 10,
     "type": "component",
     "selector": "count-down",
+    "types": {},
     "properties": [
       {
         "name": "target",
         "inputType": 0,
         "description": "目标时间，`number` 表示秒",
         "type": "number",
-        "typeRaw": "number | Date",
+        "typeRaw": "`number | Date`",
         "default": "",
         "typeDefinition": []
       },
@@ -8004,7 +8096,7 @@
         "inputType": 0,
         "description": "完整 [Config](https://github.com/cipchk/ngx-countdown#config) 参数",
         "type": "string",
-        "typeRaw": "Object",
+        "typeRaw": "`Object`",
         "default": "",
         "typeDefinition": []
       },
@@ -8013,7 +8105,7 @@
         "inputType": 1,
         "description": "开始时触发",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<void>",
+        "typeRaw": "`EventEmitter<void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -8022,7 +8114,7 @@
         "inputType": 1,
         "description": "通知时触发，需要在 `config` 中配置 notify",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<number>",
+        "typeRaw": "`EventEmitter<number>`",
         "default": "",
         "typeDefinition": []
       },
@@ -8031,7 +8123,7 @@
         "inputType": 1,
         "description": "结束时触发",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<void>",
+        "typeRaw": "`EventEmitter<void>`",
         "default": "",
         "typeDefinition": []
       }
@@ -8046,13 +8138,14 @@
     "_idx": 6,
     "type": "component",
     "selector": "range-picker",
+    "types": {},
     "properties": [
       {
         "name": "ngModel",
         "inputType": 2,
         "description": "开始日期，开始与结束同时有值才会生效",
         "type": "Date",
-        "typeRaw": "Date",
+        "typeRaw": "`Date`",
         "default": "",
         "typeDefinition": []
       },
@@ -8061,7 +8154,7 @@
         "inputType": 2,
         "description": "结束日期，开始与结束同时有值才会生效",
         "type": "Date",
-        "typeRaw": "Date",
+        "typeRaw": "`Date`",
         "default": "",
         "typeDefinition": []
       }
@@ -8076,13 +8169,14 @@
     "_idx": 10,
     "type": "directive",
     "selector": "down-file",
+    "types": {},
     "properties": [
       {
         "name": "http-data",
         "inputType": 0,
         "description": "URL请求参数",
         "type": "string",
-        "typeRaw": "any",
+        "typeRaw": "`any`",
         "default": "",
         "typeDefinition": []
       },
@@ -8091,7 +8185,7 @@
         "inputType": 0,
         "description": "请求类型",
         "type": "string",
-        "typeRaw": "string",
+        "typeRaw": "`string`",
         "default": "`get`",
         "typeDefinition": []
       },
@@ -8100,7 +8194,7 @@
         "inputType": 0,
         "description": "下载地址",
         "type": "string",
-        "typeRaw": "string",
+        "typeRaw": "`string`",
         "default": "",
         "typeDefinition": []
       },
@@ -8109,7 +8203,7 @@
         "inputType": 0,
         "description": "指定文件名，若为空从服务端返回的 `header` 中获取 `filename`、`x-filename`",
         "type": "string",
-        "typeRaw": "string",
+        "typeRaw": "`string`",
         "default": "",
         "typeDefinition": []
       },
@@ -8118,7 +8212,7 @@
         "inputType": 1,
         "description": "成功回调",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<HttpResponse<Blob>>",
+        "typeRaw": "`EventEmitter<HttpResponse<Blob>>`",
         "default": "",
         "typeDefinition": []
       },
@@ -8127,7 +8221,7 @@
         "inputType": 1,
         "description": "错误回调",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<any>",
+        "typeRaw": "`EventEmitter<any>`",
         "default": "",
         "typeDefinition": []
       }
@@ -8142,13 +8236,14 @@
     "_idx": 30,
     "type": "component",
     "selector": "se-container",
+    "types": {},
     "properties": [
       {
         "name": "gutter",
         "inputType": 0,
         "description": "间距，当 `nzLayout:horizontal` 时有效",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "`32`",
         "typeDefinition": []
       },
@@ -8157,7 +8252,7 @@
         "inputType": 0,
         "description": "指定表单元素最多分几列展示，最终一行几列由 col 配置结合[响应式规则](/theme/responsive)决定",
         "type": "Enum",
-        "typeRaw": "1,2,3,4,5,6",
+        "typeRaw": "`1,2,3,4,5,6`",
         "default": "",
         "typeDefinition": [
           "1",
@@ -8173,7 +8268,7 @@
         "inputType": 0,
         "description": "指定表单元素最多分几列展示，最终一行几列由 col 配置结合[响应式规则](/theme/responsive)决定",
         "type": "Enum",
-        "typeRaw": "1,2,3,4,5,6",
+        "typeRaw": "`1,2,3,4,5,6`",
         "default": "",
         "typeDefinition": [
           "1",
@@ -8189,7 +8284,7 @@
         "inputType": 0,
         "description": "表单元素默认标签文本宽度，单位：`px`",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "`150`",
         "typeDefinition": []
       },
@@ -8198,7 +8293,7 @@
         "inputType": 0,
         "description": "表单布局，当 `inline` 时强制大小为 `compact`",
         "type": "Enum",
-        "typeRaw": "horizontal,vertical,inline",
+        "typeRaw": "`horizontal,vertical,inline`",
         "default": "`horizontal`",
         "typeDefinition": [
           "horizontal",
@@ -8211,7 +8306,7 @@
         "inputType": 0,
         "description": "大小 `compact` 紧凑型，强制忽略 `error`、`extra` 展示",
         "type": "Enum",
-        "typeRaw": "default,compact",
+        "typeRaw": "`default,compact`",
         "default": "`default`",
         "typeDefinition": [
           "default",
@@ -8223,7 +8318,7 @@
         "inputType": 0,
         "description": "是否立即呈现错误视觉",
         "type": "boolean",
-        "typeRaw": "boolean",
+        "typeRaw": "`boolean`",
         "default": "`false`",
         "typeDefinition": []
       },
@@ -8232,7 +8327,7 @@
         "inputType": 0,
         "description": "分隔线",
         "type": "boolean",
-        "typeRaw": "boolean",
+        "typeRaw": "`boolean`",
         "default": "`false`",
         "typeDefinition": []
       },
@@ -8241,7 +8336,7 @@
         "inputType": 0,
         "description": "标题",
         "type": "string",
-        "typeRaw": "string,TemplateRef<void>",
+        "typeRaw": "`string,TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       }
@@ -8256,13 +8351,14 @@
     "_idx": 30,
     "type": "directive",
     "selector": "se-container",
+    "types": {},
     "properties": [
       {
         "name": "gutter",
         "inputType": 0,
         "description": "间距，当 `nzLayout:horizontal` 时有效",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "`32`",
         "typeDefinition": []
       },
@@ -8271,7 +8367,7 @@
         "inputType": 0,
         "description": "指定表单元素最多分几列展示，最终一行几列由 col 配置结合[响应式规则](/theme/responsive)决定",
         "type": "Enum",
-        "typeRaw": "1,2,3,4,5,6",
+        "typeRaw": "`1,2,3,4,5,6`",
         "default": "",
         "typeDefinition": [
           "1",
@@ -8287,7 +8383,7 @@
         "inputType": 0,
         "description": "指定表单元素最多分几列展示，最终一行几列由 col 配置结合[响应式规则](/theme/responsive)决定",
         "type": "Enum",
-        "typeRaw": "1,2,3,4,5,6",
+        "typeRaw": "`1,2,3,4,5,6`",
         "default": "",
         "typeDefinition": [
           "1",
@@ -8303,7 +8399,7 @@
         "inputType": 0,
         "description": "表单元素默认标签文本宽度，单位：`px`",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "`150`",
         "typeDefinition": []
       },
@@ -8312,7 +8408,7 @@
         "inputType": 0,
         "description": "表单布局，当 `inline` 时强制大小为 `compact`",
         "type": "Enum",
-        "typeRaw": "horizontal,vertical,inline",
+        "typeRaw": "`horizontal,vertical,inline`",
         "default": "`horizontal`",
         "typeDefinition": [
           "horizontal",
@@ -8325,7 +8421,7 @@
         "inputType": 0,
         "description": "大小 `compact` 紧凑型，强制忽略 `error`、`extra` 展示",
         "type": "Enum",
-        "typeRaw": "default,compact",
+        "typeRaw": "`default,compact`",
         "default": "`default`",
         "typeDefinition": [
           "default",
@@ -8337,7 +8433,7 @@
         "inputType": 0,
         "description": "是否立即呈现错误视觉",
         "type": "boolean",
-        "typeRaw": "boolean",
+        "typeRaw": "`boolean`",
         "default": "`false`",
         "typeDefinition": []
       },
@@ -8346,7 +8442,7 @@
         "inputType": 0,
         "description": "分隔线",
         "type": "boolean",
-        "typeRaw": "boolean",
+        "typeRaw": "`boolean`",
         "default": "`false`",
         "typeDefinition": []
       },
@@ -8355,7 +8451,7 @@
         "inputType": 0,
         "description": "标题",
         "type": "string",
-        "typeRaw": "string,TemplateRef<void>",
+        "typeRaw": "`string,TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       }
@@ -8370,6 +8466,7 @@
     "_idx": 179,
     "type": "component",
     "selector": "se",
+    "types": {},
     "properties": [],
     "lib": "@delon/abc",
     "title": "编辑",
@@ -8381,6 +8478,7 @@
     "_idx": 309,
     "type": "component",
     "selector": "se-title",
+    "types": {},
     "properties": [],
     "description": "用于展示标题，单独一行。",
     "lib": "@delon/abc",
@@ -8392,6 +8490,7 @@
     "_idx": 309,
     "type": "directive",
     "selector": "se-title",
+    "types": {},
     "properties": [],
     "description": "用于展示标题，单独一行。",
     "lib": "@delon/abc",
@@ -8403,13 +8502,14 @@
     "_idx": 6,
     "type": "component",
     "selector": "ellipsis",
+    "types": {},
     "properties": [
       {
         "name": "lines",
         "inputType": 0,
         "description": "在按照行数截取下最大的行数，超过则截取省略",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "`3`",
         "typeDefinition": []
       }
@@ -8424,13 +8524,14 @@
     "_idx": 6,
     "type": "component",
     "selector": "error-collect",
+    "types": {},
     "properties": [
       {
         "name": "freq",
         "inputType": 0,
         "description": "监听频率，单位：毫秒",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "`500`",
         "typeDefinition": []
       },
@@ -8439,7 +8540,7 @@
         "inputType": 0,
         "description": "顶部偏移值，单位：`px`",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "`145`",
         "typeDefinition": []
       }
@@ -8454,13 +8555,14 @@
     "_idx": 6,
     "type": "directive",
     "selector": "error-collect",
+    "types": {},
     "properties": [
       {
         "name": "freq",
         "inputType": 0,
         "description": "监听频率，单位：毫秒",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "`500`",
         "typeDefinition": []
       },
@@ -8469,7 +8571,7 @@
         "inputType": 0,
         "description": "顶部偏移值，单位：`px`",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "`145`",
         "typeDefinition": []
       }
@@ -8484,13 +8586,14 @@
     "_idx": 6,
     "type": "component",
     "selector": "exception",
+    "types": {},
     "properties": [
       {
         "name": "type",
         "inputType": 0,
         "description": "页面类型，若配置，则自带对应类型默认的 `title`，`desc`，`img`，此默认设置可以被 `title`，`desc`，`img` 覆盖",
         "type": "Enum",
-        "typeRaw": "403,404,500",
+        "typeRaw": "`403,404,500`",
         "default": "",
         "typeDefinition": [
           "403",
@@ -8503,7 +8606,7 @@
         "inputType": 0,
         "description": "标题",
         "type": "string",
-        "typeRaw": "string",
+        "typeRaw": "`string`",
         "default": "",
         "typeDefinition": []
       },
@@ -8512,7 +8615,7 @@
         "inputType": 0,
         "description": "补充描述",
         "type": "string",
-        "typeRaw": "string",
+        "typeRaw": "`string`",
         "default": "",
         "typeDefinition": []
       },
@@ -8521,7 +8624,7 @@
         "inputType": 0,
         "description": "背景图片地址",
         "type": "string",
-        "typeRaw": "string",
+        "typeRaw": "`string`",
         "default": "",
         "typeDefinition": []
       }
@@ -8536,13 +8639,14 @@
     "_idx": 12,
     "type": "component",
     "selector": "footer-toolbar",
+    "types": {},
     "properties": [
       {
         "name": "errorCollect",
         "inputType": 0,
         "description": "是否需要 `error-collect`，务必包裹在 `<form>` 元素内",
         "type": "boolean",
-        "typeRaw": "boolean",
+        "typeRaw": "`boolean`",
         "default": "`false`",
         "typeDefinition": []
       },
@@ -8551,7 +8655,7 @@
         "inputType": 0,
         "description": "额外信息，向左对齐",
         "type": "string",
-        "typeRaw": "string,TemplateRef<void>",
+        "typeRaw": "`string,TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       }
@@ -8566,13 +8670,14 @@
     "_idx": 6,
     "type": "component",
     "selector": "full-content",
+    "types": {},
     "properties": [
       {
         "name": "fullscreen",
         "inputType": 2,
         "description": "是否完整全屏（不包括顶部、侧边栏等）",
         "type": "boolean",
-        "typeRaw": "boolean",
+        "typeRaw": "`boolean`",
         "default": "",
         "typeDefinition": []
       },
@@ -8581,7 +8686,7 @@
         "inputType": 0,
         "description": "完整全屏时是否隐藏标题",
         "type": "boolean",
-        "typeRaw": "boolean",
+        "typeRaw": "`boolean`",
         "default": "`true`",
         "typeDefinition": []
       },
@@ -8590,7 +8695,7 @@
         "inputType": 0,
         "description": "工作区内边距",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "`24`",
         "typeDefinition": []
       }
@@ -8605,6 +8710,7 @@
     "_idx": 71,
     "type": "directive",
     "selector": "full-toggle",
+    "types": {},
     "properties": [],
     "description": "切换是否全屏。",
     "lib": "@delon/abc",
@@ -8616,22 +8722,54 @@
     "_idx": 6,
     "type": "component",
     "selector": "global-footer",
+    "types": {
+      "GlobalFooterLink": [
+        {
+          "name": "title",
+          "inputType": 0,
+          "description": "标题",
+          "type": "string",
+          "typeRaw": "`string`",
+          "default": "",
+          "typeDefinition": []
+        },
+        {
+          "name": "href",
+          "inputType": 0,
+          "description": "路由链接",
+          "type": "string",
+          "typeRaw": "`string`",
+          "default": "",
+          "typeDefinition": []
+        },
+        {
+          "name": "blankTarget",
+          "inputType": 0,
+          "description": "是否打开新窗口",
+          "type": "boolean",
+          "typeRaw": "`boolean`",
+          "default": "`false`",
+          "typeDefinition": []
+        }
+      ]
+    },
     "properties": [
       {
         "name": "links",
         "inputType": 0,
         "description": "链接数据",
         "type": "string",
-        "typeRaw": "GlobalFooterLink",
+        "typeRaw": "`GlobalFooterLink`",
         "default": "",
-        "typeDefinition": []
+        "typeDefinition": [],
+        "complexType": "GlobalFooterLink"
       },
       {
         "name": "copyright",
         "inputType": 0,
         "description": "版权信息",
         "type": "TemplateRef",
-        "typeRaw": "TemplateRef",
+        "typeRaw": "`TemplateRef`",
         "default": "",
         "typeDefinition": []
       }
@@ -8646,13 +8784,14 @@
     "_idx": 57,
     "type": "component",
     "selector": "global-footer-item",
+    "types": {},
     "properties": [
       {
         "name": "href",
         "inputType": 0,
         "description": "路由链接",
         "type": "string",
-        "typeRaw": "string",
+        "typeRaw": "`string`",
         "default": "",
         "typeDefinition": []
       },
@@ -8661,7 +8800,7 @@
         "inputType": 0,
         "description": "是否打开新窗口",
         "type": "boolean",
-        "typeRaw": "boolean",
+        "typeRaw": "`boolean`",
         "default": "`false`",
         "typeDefinition": []
       }
@@ -8676,13 +8815,14 @@
     "_idx": 11,
     "type": "component",
     "selector": "sg-container",
+    "types": {},
     "properties": [
       {
         "name": "gutter",
         "inputType": 0,
         "description": "间距，当 `nzLayout:horizontal` 时有效",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "`32`",
         "typeDefinition": []
       },
@@ -8691,7 +8831,7 @@
         "inputType": 0,
         "description": "指定表单元素最多分几列展示，最终一行几列由 col 配置结合[响应式规则](/theme/responsive)决定，",
         "type": "Enum",
-        "typeRaw": "1,2,3,4,5,6",
+        "typeRaw": "`1,2,3,4,5,6`",
         "default": "",
         "typeDefinition": [
           "1",
@@ -8707,7 +8847,7 @@
         "inputType": 0,
         "description": "指定表单元素最多分几列展示，最终一行几列由 col 配置结合[响应式规则](/theme/responsive)决定，",
         "type": "Enum",
-        "typeRaw": "1,2,3,4,5,6",
+        "typeRaw": "`1,2,3,4,5,6`",
         "default": "",
         "typeDefinition": [
           "1",
@@ -8729,13 +8869,14 @@
     "_idx": 11,
     "type": "directive",
     "selector": "sg-container",
+    "types": {},
     "properties": [
       {
         "name": "gutter",
         "inputType": 0,
         "description": "间距，当 `nzLayout:horizontal` 时有效",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "`32`",
         "typeDefinition": []
       },
@@ -8744,7 +8885,7 @@
         "inputType": 0,
         "description": "指定表单元素最多分几列展示，最终一行几列由 col 配置结合[响应式规则](/theme/responsive)决定，",
         "type": "Enum",
-        "typeRaw": "1,2,3,4,5,6",
+        "typeRaw": "`1,2,3,4,5,6`",
         "default": "",
         "typeDefinition": [
           "1",
@@ -8760,7 +8901,7 @@
         "inputType": 0,
         "description": "指定表单元素最多分几列展示，最终一行几列由 col 配置结合[响应式规则](/theme/responsive)决定，",
         "type": "Enum",
-        "typeRaw": "1,2,3,4,5,6",
+        "typeRaw": "`1,2,3,4,5,6`",
         "default": "",
         "typeDefinition": [
           "1",
@@ -8782,6 +8923,7 @@
     "_idx": 76,
     "type": "component",
     "selector": "sg",
+    "types": {},
     "properties": [],
     "lib": "@delon/abc",
     "title": "简易栅格",
@@ -8793,13 +8935,14 @@
     "_idx": 6,
     "type": "component",
     "selector": "notice-icon",
+    "types": {},
     "properties": [
       {
         "name": "data",
         "inputType": 0,
         "description": "数据",
         "type": "string",
-        "typeRaw": "NoticeItem[]",
+        "typeRaw": "`NoticeItem[]`",
         "default": "",
         "typeDefinition": []
       },
@@ -8808,7 +8951,7 @@
         "inputType": 0,
         "description": "图标上的消息总数",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "",
         "typeDefinition": []
       },
@@ -8817,7 +8960,7 @@
         "inputType": 0,
         "description": "弹出卡片加载状态",
         "type": "boolean",
-        "typeRaw": "boolean",
+        "typeRaw": "`boolean`",
         "default": "`false`",
         "typeDefinition": []
       },
@@ -8826,7 +8969,7 @@
         "inputType": 1,
         "description": "点击列表项的回调",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<NoticeIconSelect>",
+        "typeRaw": "`EventEmitter<NoticeIconSelect>`",
         "default": "",
         "typeDefinition": []
       },
@@ -8835,7 +8978,7 @@
         "inputType": 1,
         "description": "点击清空按钮的回调",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<string>",
+        "typeRaw": "`EventEmitter<string>`",
         "default": "",
         "typeDefinition": []
       },
@@ -8844,7 +8987,7 @@
         "inputType": 0,
         "description": "手动控制Popover显示",
         "type": "boolean",
-        "typeRaw": "boolean",
+        "typeRaw": "`boolean`",
         "default": "`false`",
         "typeDefinition": []
       },
@@ -8853,7 +8996,7 @@
         "inputType": 1,
         "description": "Popover显隐回调",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<boolean>",
+        "typeRaw": "`EventEmitter<boolean>`",
         "default": "",
         "typeDefinition": []
       }
@@ -8868,13 +9011,14 @@
     "_idx": 6,
     "type": "component",
     "selector": "page-header",
+    "types": {},
     "properties": [
       {
         "name": "title",
         "inputType": 0,
         "description": "标题名",
         "type": "string",
-        "typeRaw": "string,TemplateRef<void>",
+        "typeRaw": "`string,TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -8883,7 +9027,7 @@
         "inputType": 0,
         "description": "自动生成标题，以当前路由从主菜单中定位",
         "type": "boolean",
-        "typeRaw": "boolean",
+        "typeRaw": "`boolean`",
         "default": "`true`",
         "typeDefinition": []
       },
@@ -8892,7 +9036,7 @@
         "inputType": 0,
         "description": "是否自动将标题同步至 `TitleService`、`ReuseService` 下，仅 `title` 为 `string` 类型时有效",
         "type": "boolean",
-        "typeRaw": "boolean",
+        "typeRaw": "`boolean`",
         "default": "`true`",
         "typeDefinition": []
       },
@@ -8901,7 +9045,7 @@
         "inputType": 0,
         "description": "首页文本，若指定空表示不显示",
         "type": "string",
-        "typeRaw": "string",
+        "typeRaw": "`string`",
         "default": "`首页`",
         "typeDefinition": []
       },
@@ -8910,7 +9054,7 @@
         "inputType": 0,
         "description": "首页链接",
         "type": "string",
-        "typeRaw": "string",
+        "typeRaw": "`string`",
         "default": "`/`",
         "typeDefinition": []
       },
@@ -8919,7 +9063,7 @@
         "inputType": 0,
         "description": "自动生成导航，以当前路由从主菜单中定位",
         "type": "boolean",
-        "typeRaw": "boolean",
+        "typeRaw": "`boolean`",
         "default": "`true`",
         "typeDefinition": []
       },
@@ -8928,7 +9072,7 @@
         "inputType": 0,
         "description": "自动向上递归查找，菜单数据源包含 `/ware`，则 `/ware/1` 也视为 `/ware` 项",
         "type": "boolean",
-        "typeRaw": "boolean",
+        "typeRaw": "`boolean`",
         "default": "`false`",
         "typeDefinition": []
       },
@@ -8937,7 +9081,7 @@
         "inputType": 0,
         "description": "是否加载中",
         "type": "boolean",
-        "typeRaw": "boolean",
+        "typeRaw": "`boolean`",
         "default": "`false`",
         "typeDefinition": []
       },
@@ -8946,7 +9090,7 @@
         "inputType": 0,
         "description": "是否定宽",
         "type": "boolean",
-        "typeRaw": "boolean",
+        "typeRaw": "`boolean`",
         "default": "`false`",
         "typeDefinition": []
       },
@@ -8955,7 +9099,7 @@
         "inputType": 0,
         "description": "是否固定模式",
         "type": "boolean",
-        "typeRaw": "boolean",
+        "typeRaw": "`boolean`",
         "default": "`false`",
         "typeDefinition": []
       },
@@ -8964,7 +9108,7 @@
         "inputType": 0,
         "description": "固定偏移值",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "`64`",
         "typeDefinition": []
       },
@@ -8973,7 +9117,7 @@
         "inputType": 0,
         "description": "自定义导航区域",
         "type": "TemplateRef",
-        "typeRaw": "TemplateRef<void>",
+        "typeRaw": "`TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -8982,7 +9126,7 @@
         "inputType": 0,
         "description": "自定义LOGO区域",
         "type": "TemplateRef",
-        "typeRaw": "TemplateRef<void>",
+        "typeRaw": "`TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -8991,7 +9135,7 @@
         "inputType": 0,
         "description": "自定义操作区域",
         "type": "TemplateRef",
-        "typeRaw": "TemplateRef<void>",
+        "typeRaw": "`TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -9000,7 +9144,7 @@
         "inputType": 0,
         "description": "自定义内容区域",
         "type": "TemplateRef",
-        "typeRaw": "TemplateRef<void>",
+        "typeRaw": "`TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -9009,7 +9153,7 @@
         "inputType": 0,
         "description": "自定义额外信息区域",
         "type": "TemplateRef",
-        "typeRaw": "TemplateRef<void>",
+        "typeRaw": "`TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -9018,7 +9162,7 @@
         "inputType": 0,
         "description": "自定义标签区域",
         "type": "TemplateRef",
-        "typeRaw": "TemplateRef<void>",
+        "typeRaw": "`TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       }
@@ -9033,13 +9177,14 @@
     "_idx": 14,
     "type": "component",
     "selector": "qr",
+    "types": {},
     "properties": [
       {
         "name": "value",
         "inputType": 0,
         "description": "值，不支持中文 [#62](https://github.com/neocotic/qrious/issues/62)",
         "type": "string",
-        "typeRaw": "string",
+        "typeRaw": "`string`",
         "default": "",
         "typeDefinition": []
       },
@@ -9048,7 +9193,7 @@
         "inputType": 0,
         "description": "背景",
         "type": "string",
-        "typeRaw": "string",
+        "typeRaw": "`string`",
         "default": "`white`",
         "typeDefinition": []
       },
@@ -9057,7 +9202,7 @@
         "inputType": 0,
         "description": "背景透明级别，范围：`0-1` 之间",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "`1.0`",
         "typeDefinition": []
       },
@@ -9066,7 +9211,7 @@
         "inputType": 0,
         "description": "前景",
         "type": "string",
-        "typeRaw": "string",
+        "typeRaw": "`string`",
         "default": "`white`",
         "typeDefinition": []
       },
@@ -9075,7 +9220,7 @@
         "inputType": 0,
         "description": "前景透明级别，范围：`0-1` 之间",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "`1.0`",
         "typeDefinition": []
       },
@@ -9084,7 +9229,7 @@
         "inputType": 0,
         "description": "误差校正级别",
         "type": "Enum",
-        "typeRaw": "L,M,Q,H",
+        "typeRaw": "`L,M,Q,H`",
         "default": "`L`",
         "typeDefinition": [
           "L",
@@ -9098,7 +9243,7 @@
         "inputType": 0,
         "description": "二维码输出图片MIME类型",
         "type": "string",
-        "typeRaw": "string",
+        "typeRaw": "`string`",
         "default": "`image/png`",
         "typeDefinition": []
       },
@@ -9107,7 +9252,7 @@
         "inputType": 0,
         "description": "内边距（单位：px）",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "`10`",
         "typeDefinition": []
       },
@@ -9116,7 +9261,7 @@
         "inputType": 0,
         "description": "大小（单位：px）",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "`220`",
         "typeDefinition": []
       },
@@ -9125,7 +9270,7 @@
         "inputType": 1,
         "description": "变更时回调，返回二维码dataURL值",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<string>",
+        "typeRaw": "`EventEmitter<string>`",
         "default": "",
         "typeDefinition": []
       }
@@ -9140,13 +9285,14 @@
     "_idx": 6,
     "type": "component",
     "selector": "quick-menu",
+    "types": {},
     "properties": [
       {
         "name": "icon",
         "inputType": 0,
         "description": "图标",
         "type": "string",
-        "typeRaw": "string,TemplateRef<void>",
+        "typeRaw": "`string,TemplateRef<void>`",
         "default": "`question-circle`",
         "typeDefinition": []
       },
@@ -9155,7 +9301,7 @@
         "inputType": 0,
         "description": "距离顶部",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "`120`",
         "typeDefinition": []
       },
@@ -9164,7 +9310,7 @@
         "inputType": 0,
         "description": "打开后宽度",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "`200`",
         "typeDefinition": []
       },
@@ -9173,7 +9319,7 @@
         "inputType": 0,
         "description": "背景",
         "type": "string",
-        "typeRaw": "string",
+        "typeRaw": "`string`",
         "default": "`#fff`",
         "typeDefinition": []
       },
@@ -9182,7 +9328,7 @@
         "inputType": 0,
         "description": "边框颜色",
         "type": "string",
-        "typeRaw": "string",
+        "typeRaw": "`string`",
         "default": "`#ddd`",
         "typeDefinition": []
       }
@@ -9197,13 +9343,14 @@
     "_idx": 6,
     "type": "component",
     "selector": "result",
+    "types": {},
     "properties": [
       {
         "name": "type",
         "inputType": 0,
         "description": "类型，不同类型自带对应的图标",
         "type": "string",
-        "typeRaw": "string",
+        "typeRaw": "`string`",
         "default": "",
         "typeDefinition": []
       },
@@ -9212,7 +9359,7 @@
         "inputType": 0,
         "description": "标题",
         "type": "string",
-        "typeRaw": "string,TemplateRef<void>",
+        "typeRaw": "`string,TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -9221,7 +9368,7 @@
         "inputType": 0,
         "description": "结果描述",
         "type": "string",
-        "typeRaw": "string,TemplateRef<void>",
+        "typeRaw": "`string,TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -9230,7 +9377,7 @@
         "inputType": 0,
         "description": "补充信息，有默认的灰色背景",
         "type": "string",
-        "typeRaw": "string,TemplateRef<void>",
+        "typeRaw": "`string,TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       }
@@ -9245,13 +9392,14 @@
     "_idx": 489,
     "type": "component",
     "selector": "reuse-tab",
+    "types": {},
     "properties": [
       {
         "name": "mode",
         "inputType": 0,
         "description": "设置匹配模式",
         "type": "string",
-        "typeRaw": "ReuseTabMatchMode",
+        "typeRaw": "`ReuseTabMatchMode`",
         "default": "`0`",
         "typeDefinition": []
       },
@@ -9260,7 +9408,7 @@
         "inputType": 0,
         "description": "是否Debug模式",
         "type": "boolean",
-        "typeRaw": "boolean",
+        "typeRaw": "`boolean`",
         "default": "`false`",
         "typeDefinition": []
       },
@@ -9269,7 +9417,7 @@
         "inputType": 0,
         "description": "允许最多复用多少个页面",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "`10`",
         "typeDefinition": []
       },
@@ -9278,7 +9426,7 @@
         "inputType": 0,
         "description": "保持滚动条位置",
         "type": "boolean",
-        "typeRaw": "boolean",
+        "typeRaw": "`boolean`",
         "default": "`false`",
         "typeDefinition": []
       },
@@ -9287,7 +9435,7 @@
         "inputType": 0,
         "description": "保持滚动条容器",
         "type": "string",
-        "typeRaw": "string | Element",
+        "typeRaw": "`string | Element`",
         "default": "`window`",
         "typeDefinition": []
       },
@@ -9296,7 +9444,7 @@
         "inputType": 0,
         "description": "排除规则，限 `mode=URL`",
         "type": "string",
-        "typeRaw": "RegExp[]",
+        "typeRaw": "`RegExp[]`",
         "default": "",
         "typeDefinition": []
       },
@@ -9305,7 +9453,7 @@
         "inputType": 0,
         "description": "允许关闭",
         "type": "boolean",
-        "typeRaw": "boolean",
+        "typeRaw": "`boolean`",
         "default": "`true`",
         "typeDefinition": []
       },
@@ -9314,7 +9462,7 @@
         "inputType": 0,
         "description": "总是显示当前页",
         "type": "boolean",
-        "typeRaw": "boolean",
+        "typeRaw": "`boolean`",
         "default": "`true`",
         "typeDefinition": []
       },
@@ -9323,7 +9471,7 @@
         "inputType": 1,
         "description": "关闭回调",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter",
+        "typeRaw": "`EventEmitter`",
         "default": "",
         "typeDefinition": []
       },
@@ -9332,7 +9480,7 @@
         "inputType": 1,
         "description": "切换时回调，接收的参数至少包含：`active`、`list` 两个参数",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter",
+        "typeRaw": "`EventEmitter`",
         "default": "",
         "typeDefinition": []
       }
@@ -9347,13 +9495,14 @@
     "_idx": 53,
     "type": "component",
     "selector": "sidebar-nav",
+    "types": {},
     "properties": [
       {
         "name": "disabledAcl",
         "inputType": 0,
         "description": "`acl` 校验失败时以 `disabled` 状态显示",
         "type": "boolean",
-        "typeRaw": "boolean",
+        "typeRaw": "`boolean`",
         "default": "`false`",
         "typeDefinition": []
       },
@@ -9362,7 +9511,7 @@
         "inputType": 0,
         "description": "小于Pad宽度时路由切换后自动关闭侧边栏",
         "type": "boolean",
-        "typeRaw": "boolean",
+        "typeRaw": "`boolean`",
         "default": "`true`",
         "typeDefinition": []
       },
@@ -9371,7 +9520,7 @@
         "inputType": 1,
         "description": "点击菜单时回调（包含 `disabled`）",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<Menu>",
+        "typeRaw": "`EventEmitter<Menu>`",
         "default": "",
         "typeDefinition": []
       }
@@ -9386,13 +9535,225 @@
     "_idx": 80,
     "type": "component",
     "selector": "st",
+    "types": {
+      "STReq": [
+        {
+          "name": "params",
+          "inputType": 0,
+          "description": "额外请求参数，默认自动附加 `pi`、`ps` 至URL",
+          "type": "string",
+          "typeRaw": "`any`",
+          "default": "",
+          "typeDefinition": []
+        },
+        {
+          "name": "method",
+          "inputType": 0,
+          "description": "请求方法",
+          "type": "string",
+          "typeRaw": "`string`",
+          "default": "`GET`",
+          "typeDefinition": []
+        },
+        {
+          "name": "body",
+          "inputType": 0,
+          "description": "请求体 `body`，当 `method: POST` 时有效",
+          "type": "string",
+          "typeRaw": "`any`",
+          "default": "",
+          "typeDefinition": []
+        },
+        {
+          "name": "headers",
+          "inputType": 0,
+          "description": "请求体 `headers`",
+          "type": "string",
+          "typeRaw": "`any`",
+          "default": "",
+          "typeDefinition": []
+        },
+        {
+          "name": "reName",
+          "inputType": 0,
+          "description": "重命名请求参数 `pi`、`ps`",
+          "type": "string",
+          "typeRaw": "`STReqReNameType`",
+          "default": "`{ pi: 'pi', ps: 'ps' }`",
+          "typeDefinition": []
+        },
+        {
+          "name": "allInBody",
+          "inputType": 0,
+          "description": "是否将请求所有参数数据都放入 `body` 当中（`url` 地址本身参数除外），仅当 `method: 'POST'` 时有效",
+          "type": "boolean",
+          "typeRaw": "`boolean`",
+          "default": "`false`",
+          "typeDefinition": []
+        }
+      ],
+      "STRes": [
+        {
+          "name": "reName",
+          "inputType": 0,
+          "description": "重命名返回参数 `total`、`list`，支持 `a.b.c` 的嵌套写法",
+          "type": "object",
+          "typeRaw": "`{total:string;list:string}`",
+          "default": "",
+          "typeDefinition": []
+        },
+        {
+          "name": "process",
+          "inputType": 0,
+          "description": "数据预处理",
+          "type": "function",
+          "typeRaw": "`(data: STData[]) => STData[]`",
+          "default": "",
+          "typeDefinition": []
+        }
+      ],
+      "STPage": [
+        {
+          "name": "front",
+          "inputType": 0,
+          "description": "前端分页，当 `data` 为 `any[]` 或 `Observable<any[]>` 有效",
+          "type": "boolean",
+          "typeRaw": "`boolean`",
+          "default": "`true`",
+          "typeDefinition": []
+        },
+        {
+          "name": "zeroIndexed",
+          "inputType": 0,
+          "description": "后端分页是否采用`0`基索引，只在`data`类型为`string`时有效",
+          "type": "boolean",
+          "typeRaw": "`boolean`",
+          "default": "`false`",
+          "typeDefinition": []
+        },
+        {
+          "name": "placement",
+          "inputType": 0,
+          "description": "分页方向",
+          "type": "string",
+          "typeRaw": "`left,center,right`",
+          "default": "`right`",
+          "typeDefinition": [
+            "left",
+            "center",
+            "right"
+          ]
+        },
+        {
+          "name": "show",
+          "inputType": 0,
+          "description": "是否显示分页器",
+          "type": "boolean",
+          "typeRaw": "`boolean`",
+          "default": "",
+          "typeDefinition": []
+        },
+        {
+          "name": "showSize",
+          "inputType": 0,
+          "description": "是否显示分页器中改变页数",
+          "type": "boolean",
+          "typeRaw": "`boolean`",
+          "default": "`false`",
+          "typeDefinition": []
+        },
+        {
+          "name": "pageSizes",
+          "inputType": 0,
+          "description": "分页器中每页显示条目数下拉框值",
+          "type": "number",
+          "typeRaw": "`number[]`",
+          "default": "`[10, 20, 30, 40, 50]`",
+          "typeDefinition": []
+        },
+        {
+          "name": "showQuickJumper",
+          "inputType": 0,
+          "description": "是否显示分页器中快速跳转",
+          "type": "boolean",
+          "typeRaw": "`boolean`",
+          "default": "`false`",
+          "typeDefinition": []
+        },
+        {
+          "name": "total",
+          "inputType": 0,
+          "description": "是否显示总数据量，字符串表示自定义模板（支持三个变量名：`total` 表示数据总量、`range[0]` 和 `range[1]` 表示当前数据范围；**变量名**统一使用双花括号包裹）",
+          "type": "boolean",
+          "typeRaw": "`boolean, string`",
+          "default": "`false`",
+          "typeDefinition": []
+        },
+        {
+          "name": "toTop",
+          "inputType": 0,
+          "description": "切换分页时返回顶部",
+          "type": "boolean",
+          "typeRaw": "`boolean`",
+          "default": "`true`",
+          "typeDefinition": []
+        },
+        {
+          "name": "toTopOffset",
+          "inputType": 0,
+          "description": "返回顶部偏移值",
+          "type": "number",
+          "typeRaw": "`number`",
+          "default": "`100`",
+          "typeDefinition": []
+        }
+      ],
+      "STMultiSort": [
+        {
+          "name": "key",
+          "inputType": 0,
+          "description": "请求参数名",
+          "type": "string",
+          "typeRaw": "`string`",
+          "default": "`sort`",
+          "typeDefinition": []
+        },
+        {
+          "name": "separator",
+          "inputType": 0,
+          "description": "不同属性间分隔符",
+          "type": "string",
+          "typeRaw": "`string`",
+          "default": "",
+          "typeDefinition": []
+        },
+        {
+          "name": "nameSeparator",
+          "inputType": 0,
+          "description": "列名与状态间分隔符",
+          "type": "string",
+          "typeRaw": "`string`",
+          "default": "`.`",
+          "typeDefinition": []
+        },
+        {
+          "name": "global",
+          "inputType": 0,
+          "description": "是否全局多排序模式<br>`true` 表示所有 `st` 默认为多排序<br>`false` 表示需要为每个 `st` 添加 `multiSort` 才会视为多排序模式",
+          "type": "boolean",
+          "typeRaw": "`boolean`",
+          "default": "`true`",
+          "typeDefinition": []
+        }
+      ]
+    },
     "properties": [
       {
         "name": "columns",
         "inputType": 0,
         "description": "列描述",
         "type": "string",
-        "typeRaw": "STColumn[]",
+        "typeRaw": "`STColumn[]`",
         "default": "",
         "typeDefinition": []
       },
@@ -9401,7 +9762,7 @@
         "inputType": 0,
         "description": "数据源",
         "type": "string",
-        "typeRaw": "string, STData[], Observable<STData[]>",
+        "typeRaw": "`string, STData[], Observable<STData[]>`",
         "default": "",
         "typeDefinition": []
       },
@@ -9410,25 +9771,27 @@
         "inputType": 0,
         "description": "请求体配置",
         "type": "string",
-        "typeRaw": "STReq",
+        "typeRaw": "`STReq`",
         "default": "",
-        "typeDefinition": []
+        "typeDefinition": [],
+        "complexType": "STReq"
       },
       {
         "name": "res",
         "inputType": 0,
         "description": "返回体配置",
         "type": "string",
-        "typeRaw": "STRes",
+        "typeRaw": "`STRes`",
         "default": "",
-        "typeDefinition": []
+        "typeDefinition": [],
+        "complexType": "STRes"
       },
       {
         "name": "pi",
         "inputType": 0,
         "description": "当前页码",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "`1`",
         "typeDefinition": []
       },
@@ -9437,7 +9800,7 @@
         "inputType": 0,
         "description": "每页数量，当设置为 `0` 表示不分页，默认：`10`",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "`10`",
         "typeDefinition": []
       },
@@ -9446,16 +9809,17 @@
         "inputType": 0,
         "description": "分页器配置",
         "type": "string",
-        "typeRaw": "STPage",
+        "typeRaw": "`STPage`",
         "default": "",
-        "typeDefinition": []
+        "typeDefinition": [],
+        "complexType": "STPage"
       },
       {
         "name": "noResult",
         "inputType": 0,
         "description": "无数据时显示内容",
         "type": "string",
-        "typeRaw": "string,TemplateRef<void>",
+        "typeRaw": "`string,TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -9464,7 +9828,7 @@
         "inputType": 0,
         "description": "是否显示边框",
         "type": "boolean",
-        "typeRaw": "boolean",
+        "typeRaw": "`boolean`",
         "default": "`false`",
         "typeDefinition": []
       },
@@ -9473,7 +9837,7 @@
         "inputType": 0,
         "description": "table大小",
         "type": "Enum",
-        "typeRaw": "small,middle,default",
+        "typeRaw": "`small,middle,default`",
         "default": "`default`",
         "typeDefinition": [
           "small",
@@ -9486,7 +9850,7 @@
         "inputType": 0,
         "description": "表格行的类名",
         "type": "function",
-        "typeRaw": "(record: STData, index: number) => string",
+        "typeRaw": "`(record: STData, index: number) => string`",
         "default": "",
         "typeDefinition": []
       },
@@ -9495,7 +9859,7 @@
         "inputType": 0,
         "description": "页面是否加载中",
         "type": "boolean",
-        "typeRaw": "boolean",
+        "typeRaw": "`boolean`",
         "default": "`false`",
         "typeDefinition": []
       },
@@ -9504,7 +9868,7 @@
         "inputType": 0,
         "description": "延迟显示加载效果的时间（防止闪烁）",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "`0`",
         "typeDefinition": []
       },
@@ -9513,7 +9877,7 @@
         "inputType": 0,
         "description": "横向或纵向支持滚动，也可用于指定滚动区域的宽高度：`{ x: \"300px\", y: \"300px\" }`",
         "type": "object",
-        "typeRaw": "{ y?: string; x?: string }",
+        "typeRaw": "`{ y?: string; x?: string }`",
         "default": "",
         "typeDefinition": []
       },
@@ -9522,7 +9886,7 @@
         "inputType": 0,
         "description": "单排序规则<br>若不指定，则返回：`columnName=ascend|descend`<br>若指定，则返回：`sort=columnName.(ascend|descend)`",
         "type": "string",
-        "typeRaw": "STSingleSort",
+        "typeRaw": "`STSingleSort`",
         "default": "`null`",
         "typeDefinition": []
       },
@@ -9531,16 +9895,17 @@
         "inputType": 0,
         "description": "是否多排序，当 `sort` 多个相同值时自动合并，建议后端支持时使用",
         "type": "boolean",
-        "typeRaw": "boolean, STMultiSort",
+        "typeRaw": "`boolean, STMultiSort`",
         "default": "`false`",
-        "typeDefinition": []
+        "typeDefinition": [],
+        "complexType": "STMultiSort"
       },
       {
         "name": "rowClickTime",
         "inputType": 0,
         "description": "行单击多少时长之类为双击（单位：毫秒）",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "`200`",
         "typeDefinition": []
       },
@@ -9549,7 +9914,7 @@
         "inputType": 0,
         "description": "表格标题",
         "type": "string",
-        "typeRaw": "string,TemplateRef<void>",
+        "typeRaw": "`string,TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -9558,7 +9923,7 @@
         "inputType": 0,
         "description": "表格底部",
         "type": "string",
-        "typeRaw": "string,TemplateRef<void>",
+        "typeRaw": "`string,TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -9567,7 +9932,7 @@
         "inputType": 0,
         "description": "表格额外内容，一般用于添加合计行",
         "type": "TemplateRef",
-        "typeRaw": "TemplateRef<void>",
+        "typeRaw": "`TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -9576,7 +9941,7 @@
         "inputType": 0,
         "description": "通过点击行来展开子行",
         "type": "boolean",
-        "typeRaw": "boolean",
+        "typeRaw": "`boolean`",
         "default": "`false`",
         "typeDefinition": []
       },
@@ -9585,7 +9950,7 @@
         "inputType": 0,
         "description": "当前列是否包含展开按钮，当数据源中包括 `expand` 表示展开状态",
         "type": "TemplateRef",
-        "typeRaw": "TemplateRef<void>",
+        "typeRaw": "`TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -9594,7 +9959,7 @@
         "inputType": 1,
         "description": "变化时回调，包括：`pi`、`ps`、`checkbox`、`radio`、`sort`、`filter`、`click`、`dblClick` 变动",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<STChange>",
+        "typeRaw": "`EventEmitter<STChange>`",
         "default": "",
         "typeDefinition": []
       },
@@ -9603,7 +9968,7 @@
         "inputType": 1,
         "description": "异常时回调",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<STError>",
+        "typeRaw": "`EventEmitter<STError>`",
         "default": "",
         "typeDefinition": []
       }
@@ -9618,13 +9983,14 @@
     "_idx": 6,
     "type": "component",
     "selector": "tag-select",
+    "types": {},
     "properties": [
       {
         "name": "expandable",
         "inputType": 0,
         "description": "是否启用 `展开与收进`",
         "type": "boolean",
-        "typeRaw": "boolean",
+        "typeRaw": "`boolean`",
         "default": "`true`",
         "typeDefinition": []
       },
@@ -9633,7 +9999,7 @@
         "inputType": 1,
         "description": "展开与收进回调函数，参数：`boolean`",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<boolean>",
+        "typeRaw": "`EventEmitter<boolean>`",
         "default": "",
         "typeDefinition": []
       }
@@ -9648,13 +10014,14 @@
     "_idx": 6,
     "type": "component",
     "selector": "sv-container",
+    "types": {},
     "properties": [
       {
         "name": "size",
         "inputType": 0,
         "description": "大小",
         "type": "Enum",
-        "typeRaw": "small,arge",
+        "typeRaw": "`small,arge`",
         "default": "`large`",
         "typeDefinition": [
           "small",
@@ -9666,7 +10033,7 @@
         "inputType": 0,
         "description": "布局",
         "type": "Enum",
-        "typeRaw": "horizontal,vertical",
+        "typeRaw": "`horizontal,vertical`",
         "default": "`horizontal`",
         "typeDefinition": [
           "horizontal",
@@ -9678,7 +10045,7 @@
         "inputType": 0,
         "description": "间距",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "`32`",
         "typeDefinition": []
       },
@@ -9687,7 +10054,7 @@
         "inputType": 0,
         "description": "指定信息最多分几列展示，最终一行几列由 col 配置结合[响应式规则](/theme/responsive)决定",
         "type": "Enum",
-        "typeRaw": "1,2,3,4,5,6",
+        "typeRaw": "`1,2,3,4,5,6`",
         "default": "`3`",
         "typeDefinition": [
           "1",
@@ -9703,7 +10070,7 @@
         "inputType": 0,
         "description": "默认标签文本宽度",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "`null`",
         "typeDefinition": []
       },
@@ -9712,7 +10079,7 @@
         "inputType": 0,
         "description": "默认是否显示默认文本",
         "type": "boolean",
-        "typeRaw": "boolean",
+        "typeRaw": "`boolean`",
         "default": "`true`",
         "typeDefinition": []
       },
@@ -9721,7 +10088,7 @@
         "inputType": 0,
         "description": "标题",
         "type": "string",
-        "typeRaw": "string,TemplateRef<void>",
+        "typeRaw": "`string,TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       }
@@ -9736,13 +10103,14 @@
     "_idx": 6,
     "type": "directive",
     "selector": "sv-container",
+    "types": {},
     "properties": [
       {
         "name": "size",
         "inputType": 0,
         "description": "大小",
         "type": "Enum",
-        "typeRaw": "small,arge",
+        "typeRaw": "`small,arge`",
         "default": "`large`",
         "typeDefinition": [
           "small",
@@ -9754,7 +10122,7 @@
         "inputType": 0,
         "description": "布局",
         "type": "Enum",
-        "typeRaw": "horizontal,vertical",
+        "typeRaw": "`horizontal,vertical`",
         "default": "`horizontal`",
         "typeDefinition": [
           "horizontal",
@@ -9766,7 +10134,7 @@
         "inputType": 0,
         "description": "间距",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "`32`",
         "typeDefinition": []
       },
@@ -9775,7 +10143,7 @@
         "inputType": 0,
         "description": "指定信息最多分几列展示，最终一行几列由 col 配置结合[响应式规则](/theme/responsive)决定",
         "type": "Enum",
-        "typeRaw": "1,2,3,4,5,6",
+        "typeRaw": "`1,2,3,4,5,6`",
         "default": "`3`",
         "typeDefinition": [
           "1",
@@ -9791,7 +10159,7 @@
         "inputType": 0,
         "description": "默认标签文本宽度",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "`null`",
         "typeDefinition": []
       },
@@ -9800,7 +10168,7 @@
         "inputType": 0,
         "description": "默认是否显示默认文本",
         "type": "boolean",
-        "typeRaw": "boolean",
+        "typeRaw": "`boolean`",
         "default": "`true`",
         "typeDefinition": []
       },
@@ -9809,7 +10177,7 @@
         "inputType": 0,
         "description": "标题",
         "type": "string",
-        "typeRaw": "string,TemplateRef<void>",
+        "typeRaw": "`string,TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       }
@@ -9824,6 +10192,7 @@
     "_idx": 127,
     "type": "component",
     "selector": "sv",
+    "types": {},
     "properties": [],
     "description": "| 参数           | 类型                                  | 说明                                   |默认值       |\n| -------------- | ------------------------------------- | -------------------------------------- |\n| `[col]`        | 指定信息最多分几列展示，最终一行几列由 col 配置结合[响应式规则](/theme/responsive)决定，继承 `sv-container`         | `1,2,3,4,5,6`                               | - |\n| `[label]`      | 标签                                  | `string,TemplateRef<void>`            | - |\n| `[labelWidth]` | 标签文本宽度，继承 `sv-container`     | `number`                               | - |\n| `[default]`    | 是否显示默认文本，继承 `sv-container` | `boolean`                              | - |\n| `[type]`       | 类型                  | `primary | success | danger | warning` | - |",
     "lib": "@delon/abc",
@@ -9835,6 +10204,7 @@
     "_idx": 133,
     "type": "component",
     "selector": "sv-title",
+    "types": {},
     "properties": [],
     "description": "用于展示标题，单独一行。",
     "lib": "@delon/abc",
@@ -9846,6 +10216,7 @@
     "_idx": 133,
     "type": "directive",
     "selector": "sv-title",
+    "types": {},
     "properties": [],
     "description": "用于展示标题，单独一行。",
     "lib": "@delon/abc",
@@ -9857,6 +10228,7 @@
     "_idx": 148,
     "type": "directive",
     "selector": "xlsx",
+    "types": {},
     "properties": [],
     "description": "xlsx 指令。",
     "lib": "@delon/abc",
@@ -9868,13 +10240,14 @@
     "_idx": 6,
     "type": "component",
     "selector": "g2-bar",
+    "types": {},
     "properties": [
       {
         "name": "delay",
         "inputType": 0,
         "description": "延迟渲染，单位：毫秒",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "`0`",
         "typeDefinition": []
       },
@@ -9883,7 +10256,7 @@
         "inputType": 0,
         "description": "图表标题",
         "type": "string",
-        "typeRaw": "string,TemplateRef<void>",
+        "typeRaw": "`string,TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -9892,7 +10265,7 @@
         "inputType": 0,
         "description": "图表颜色",
         "type": "string",
-        "typeRaw": "string",
+        "typeRaw": "`string`",
         "default": "`rgba(24, 144, 255, 0.85)`",
         "typeDefinition": []
       },
@@ -9901,7 +10274,7 @@
         "inputType": 0,
         "description": "图表内部间距",
         "type": "Array",
-        "typeRaw": "Array<number | string> | string",
+        "typeRaw": "`Array<number | string> | string`",
         "default": "`[32, 0, 32, 40]`",
         "typeDefinition": []
       },
@@ -9910,7 +10283,7 @@
         "inputType": 0,
         "description": "图表高度",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "",
         "typeDefinition": []
       },
@@ -9919,7 +10292,7 @@
         "inputType": 0,
         "description": "数据",
         "type": "string",
-        "typeRaw": "G2BarData[]",
+        "typeRaw": "`G2BarData[]`",
         "default": "`[]`",
         "typeDefinition": []
       },
@@ -9928,7 +10301,7 @@
         "inputType": 0,
         "description": "在宽度不足时，自动隐藏 x 轴的 label",
         "type": "boolean",
-        "typeRaw": "boolean",
+        "typeRaw": "`boolean`",
         "default": "`true`",
         "typeDefinition": []
       }
@@ -9943,13 +10316,14 @@
     "_idx": 6,
     "type": "component",
     "selector": "g2-card",
+    "types": {},
     "properties": [
       {
         "name": "title",
         "inputType": 0,
         "description": "卡片标题",
         "type": "string",
-        "typeRaw": "string,TemplateRef<void>",
+        "typeRaw": "`string,TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -9958,7 +10332,7 @@
         "inputType": 0,
         "description": "头像",
         "type": "string",
-        "typeRaw": "string,TemplateRef<void>",
+        "typeRaw": "`string,TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -9967,7 +10341,7 @@
         "inputType": 0,
         "description": "卡片操作",
         "type": "string",
-        "typeRaw": "string,TemplateRef<void>",
+        "typeRaw": "`string,TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -9976,7 +10350,7 @@
         "inputType": 0,
         "description": "数据总量（支持HTML）",
         "type": "string",
-        "typeRaw": "string",
+        "typeRaw": "`string`",
         "default": "",
         "typeDefinition": []
       },
@@ -9985,7 +10359,7 @@
         "inputType": 0,
         "description": "卡片底部",
         "type": "string",
-        "typeRaw": "string,TemplateRef<void>",
+        "typeRaw": "`string,TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -9994,7 +10368,7 @@
         "inputType": 0,
         "description": "内容区域高度（单位：`px`）",
         "type": "string",
-        "typeRaw": "string",
+        "typeRaw": "`string`",
         "default": "",
         "typeDefinition": []
       },
@@ -10003,7 +10377,7 @@
         "inputType": 0,
         "description": "是否显示边框",
         "type": "boolean",
-        "typeRaw": "boolean",
+        "typeRaw": "`boolean`",
         "default": "`false`",
         "typeDefinition": []
       }
@@ -10018,13 +10392,14 @@
     "_idx": 34,
     "type": "component",
     "selector": "g2-custom",
+    "types": {},
     "properties": [
       {
         "name": "height",
         "inputType": 0,
         "description": "高",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "",
         "typeDefinition": []
       },
@@ -10033,7 +10408,7 @@
         "inputType": 0,
         "description": "resize 事件去抖时长",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "`200`",
         "typeDefinition": []
       },
@@ -10042,7 +10417,7 @@
         "inputType": 1,
         "description": "渲染事件",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<ElementRef>",
+        "typeRaw": "`EventEmitter<ElementRef>`",
         "default": "",
         "typeDefinition": []
       },
@@ -10051,7 +10426,7 @@
         "inputType": 1,
         "description": "resize 事件",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<ElementRef>",
+        "typeRaw": "`EventEmitter<ElementRef>`",
         "default": "",
         "typeDefinition": []
       },
@@ -10060,7 +10435,7 @@
         "inputType": 1,
         "description": "销毁事件",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<ElementRef>",
+        "typeRaw": "`EventEmitter<ElementRef>`",
         "default": "",
         "typeDefinition": []
       }
@@ -10075,13 +10450,14 @@
     "_idx": 6,
     "type": "component",
     "selector": "g2-gauge",
+    "types": {},
     "properties": [
       {
         "name": "delay",
         "inputType": 0,
         "description": "延迟渲染，单位：毫秒",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "`0`",
         "typeDefinition": []
       },
@@ -10090,7 +10466,7 @@
         "inputType": 0,
         "description": "图表标题",
         "type": "string",
-        "typeRaw": "string",
+        "typeRaw": "`string`",
         "default": "",
         "typeDefinition": []
       },
@@ -10099,7 +10475,7 @@
         "inputType": 0,
         "description": "图表高度",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "",
         "typeDefinition": []
       },
@@ -10108,7 +10484,7 @@
         "inputType": 0,
         "description": "图表颜色",
         "type": "string",
-        "typeRaw": "string",
+        "typeRaw": "`string`",
         "default": "`#2F9CFF`",
         "typeDefinition": []
       },
@@ -10117,7 +10493,7 @@
         "inputType": 0,
         "description": "图表背景色",
         "type": "string",
-        "typeRaw": "string",
+        "typeRaw": "`string`",
         "default": "`#F0F2F5`",
         "typeDefinition": []
       },
@@ -10126,7 +10502,7 @@
         "inputType": 0,
         "description": "进度比例",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "",
         "typeDefinition": []
       },
@@ -10135,7 +10511,7 @@
         "inputType": 0,
         "description": "内边距",
         "type": "Array",
-        "typeRaw": "Array<number | string>",
+        "typeRaw": "`Array<number | string>`",
         "default": "`[10, 10, 30, 10]`",
         "typeDefinition": []
       },
@@ -10144,7 +10520,7 @@
         "inputType": 0,
         "description": "坐标轴格式",
         "type": "function",
-        "typeRaw": "(text: string, item: {}, index: number) => string",
+        "typeRaw": "`(text: string, item: {}, index: number) => string`",
         "default": "",
         "typeDefinition": []
       }
@@ -10159,13 +10535,14 @@
     "_idx": 6,
     "type": "component",
     "selector": "g2-mini-area",
+    "types": {},
     "properties": [
       {
         "name": "delay",
         "inputType": 0,
         "description": "延迟渲染，单位：毫秒",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "`0`",
         "typeDefinition": []
       },
@@ -10174,7 +10551,7 @@
         "inputType": 0,
         "description": "图表颜色",
         "type": "string",
-        "typeRaw": "string",
+        "typeRaw": "`string`",
         "default": "`rgba(24, 144, 255, 0.2)`",
         "typeDefinition": []
       },
@@ -10183,7 +10560,7 @@
         "inputType": 0,
         "description": "图表边颜色",
         "type": "string",
-        "typeRaw": "string",
+        "typeRaw": "`string`",
         "default": "`#1890FF`",
         "typeDefinition": []
       },
@@ -10192,7 +10569,7 @@
         "inputType": 0,
         "description": "图表高度",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "",
         "typeDefinition": []
       },
@@ -10201,7 +10578,7 @@
         "inputType": 0,
         "description": "是否显示描边",
         "type": "boolean",
-        "typeRaw": "boolean",
+        "typeRaw": "`boolean`",
         "default": "`false`",
         "typeDefinition": []
       },
@@ -10210,7 +10587,7 @@
         "inputType": 0,
         "description": "是否显示动画",
         "type": "boolean",
-        "typeRaw": "boolean",
+        "typeRaw": "`boolean`",
         "default": "`true`",
         "typeDefinition": []
       },
@@ -10219,7 +10596,7 @@
         "inputType": 0,
         "description": "图表内部间距",
         "type": "string",
-        "typeRaw": "array",
+        "typeRaw": "`array`",
         "default": "`[8, 8, 8, 8]`",
         "typeDefinition": []
       },
@@ -10227,8 +10604,8 @@
         "name": "xAxis",
         "inputType": 0,
         "description": "[x 轴配置](https://www.yuque.com/antv/g2-docs/api-chart#frgaiw)",
-        "type": "string",
-        "typeRaw": "object",
+        "type": "object",
+        "typeRaw": "`object`",
         "default": "",
         "typeDefinition": []
       },
@@ -10236,8 +10613,8 @@
         "name": "yAxis",
         "inputType": 0,
         "description": "[y 轴配置](https://www.yuque.com/antv/g2-docs/api-chart#frgaiw)",
-        "type": "string",
-        "typeRaw": "object",
+        "type": "object",
+        "typeRaw": "`object`",
         "default": "",
         "typeDefinition": []
       },
@@ -10246,7 +10623,7 @@
         "inputType": 0,
         "description": "y 轴Tooltip后缀，一般指定单位",
         "type": "string",
-        "typeRaw": "string",
+        "typeRaw": "`string`",
         "default": "",
         "typeDefinition": []
       },
@@ -10255,7 +10632,7 @@
         "inputType": 0,
         "description": "Tooltip显示类型",
         "type": "Enum",
-        "typeRaw": "mini, default",
+        "typeRaw": "`mini, default`",
         "default": "`default`",
         "typeDefinition": [
           "mini",
@@ -10267,7 +10644,7 @@
         "inputType": 0,
         "description": "数据",
         "type": "string",
-        "typeRaw": "G2MiniAreaData[]",
+        "typeRaw": "`G2MiniAreaData[]`",
         "default": "",
         "typeDefinition": []
       }
@@ -10282,13 +10659,14 @@
     "_idx": 6,
     "type": "component",
     "selector": "g2-mini-bar",
+    "types": {},
     "properties": [
       {
         "name": "delay",
         "inputType": 0,
         "description": "延迟渲染，单位：毫秒",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "`0`",
         "typeDefinition": []
       },
@@ -10297,7 +10675,7 @@
         "inputType": 0,
         "description": "图表颜色",
         "type": "string",
-        "typeRaw": "string",
+        "typeRaw": "`string`",
         "default": "`#1890FF`",
         "typeDefinition": []
       },
@@ -10306,7 +10684,7 @@
         "inputType": 0,
         "description": "图表高度",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "",
         "typeDefinition": []
       },
@@ -10315,7 +10693,7 @@
         "inputType": 0,
         "description": "y 轴Tooltip后缀，一般指定单位",
         "type": "string",
-        "typeRaw": "string",
+        "typeRaw": "`string`",
         "default": "",
         "typeDefinition": []
       },
@@ -10324,7 +10702,7 @@
         "inputType": 0,
         "description": "Tooltip显示类型",
         "type": "Enum",
-        "typeRaw": "mini, default",
+        "typeRaw": "`mini, default`",
         "default": "`default`",
         "typeDefinition": [
           "mini",
@@ -10336,7 +10714,7 @@
         "inputType": 0,
         "description": "线条粗细",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "`5`",
         "typeDefinition": []
       },
@@ -10345,7 +10723,7 @@
         "inputType": 0,
         "description": "图表内部间距",
         "type": "string",
-        "typeRaw": "array",
+        "typeRaw": "`array`",
         "default": "`[8, 8, 8, 8]`",
         "typeDefinition": []
       },
@@ -10354,7 +10732,7 @@
         "inputType": 0,
         "description": "数据",
         "type": "string",
-        "typeRaw": "G2MiniBarData[]",
+        "typeRaw": "`G2MiniBarData[]`",
         "default": "",
         "typeDefinition": []
       }
@@ -10369,13 +10747,14 @@
     "_idx": 6,
     "type": "component",
     "selector": "g2-mini-progress",
+    "types": {},
     "properties": [
       {
         "name": "target",
         "inputType": 0,
         "description": "目标比例",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "",
         "typeDefinition": []
       },
@@ -10384,7 +10763,7 @@
         "inputType": 0,
         "description": "进度条颜色",
         "type": "string",
-        "typeRaw": "string",
+        "typeRaw": "`string`",
         "default": "",
         "typeDefinition": []
       },
@@ -10393,7 +10772,7 @@
         "inputType": 0,
         "description": "进度条高度",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "",
         "typeDefinition": []
       },
@@ -10402,7 +10781,7 @@
         "inputType": 0,
         "description": "进度比例",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "",
         "typeDefinition": []
       }
@@ -10417,13 +10796,14 @@
     "_idx": 6,
     "type": "component",
     "selector": "number-info",
+    "types": {},
     "properties": [
       {
         "name": "title",
         "inputType": 0,
         "description": "标题",
         "type": "TemplateRef",
-        "typeRaw": "TemplateRef<void>",
+        "typeRaw": "`TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -10432,7 +10812,7 @@
         "inputType": 0,
         "description": "子标题",
         "type": "TemplateRef",
-        "typeRaw": "TemplateRef<void>",
+        "typeRaw": "`TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -10441,7 +10821,7 @@
         "inputType": 0,
         "description": "总量",
         "type": "string",
-        "typeRaw": "string",
+        "typeRaw": "`string`",
         "default": "",
         "typeDefinition": []
       },
@@ -10450,7 +10830,7 @@
         "inputType": 0,
         "description": "总量后缀",
         "type": "string",
-        "typeRaw": "string",
+        "typeRaw": "`string`",
         "default": "",
         "typeDefinition": []
       },
@@ -10459,7 +10839,7 @@
         "inputType": 0,
         "description": "子总量",
         "type": "string",
-        "typeRaw": "string",
+        "typeRaw": "`string`",
         "default": "",
         "typeDefinition": []
       },
@@ -10468,7 +10848,7 @@
         "inputType": 0,
         "description": "增加状态",
         "type": "string",
-        "typeRaw": "up`\\/`down",
+        "typeRaw": "`up`\\/`down`",
         "default": "",
         "typeDefinition": []
       },
@@ -10477,7 +10857,7 @@
         "inputType": 0,
         "description": "状态样式",
         "type": "Enum",
-        "typeRaw": "light,default",
+        "typeRaw": "`light,default`",
         "default": "`light`",
         "typeDefinition": [
           "light",
@@ -10489,7 +10869,7 @@
         "inputType": 0,
         "description": "设置数字和描述直接的间距（像素）",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "8",
         "typeDefinition": []
       }
@@ -10504,13 +10884,14 @@
     "_idx": 6,
     "type": "component",
     "selector": "g2-pie",
+    "types": {},
     "properties": [
       {
         "name": "delay",
         "inputType": 0,
         "description": "延迟渲染，单位：毫秒",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "`0`",
         "typeDefinition": []
       },
@@ -10519,7 +10900,7 @@
         "inputType": 0,
         "description": "是否显示动画",
         "type": "boolean",
-        "typeRaw": "boolean",
+        "typeRaw": "`boolean`",
         "default": "`true`",
         "typeDefinition": []
       },
@@ -10528,7 +10909,7 @@
         "inputType": 0,
         "description": "图表颜色",
         "type": "string",
-        "typeRaw": "string",
+        "typeRaw": "`string`",
         "default": "`rgba(24, 144, 255, 0.85)`",
         "typeDefinition": []
       },
@@ -10537,7 +10918,7 @@
         "inputType": 0,
         "description": "图表高度",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "",
         "typeDefinition": []
       },
@@ -10546,7 +10927,7 @@
         "inputType": 0,
         "description": "是否显示 legend",
         "type": "boolean",
-        "typeRaw": "boolean",
+        "typeRaw": "`boolean`",
         "default": "`false`",
         "typeDefinition": []
       },
@@ -10554,8 +10935,8 @@
         "name": "padding",
         "inputType": 0,
         "description": "图表内部间距",
-        "type": "string",
-        "typeRaw": "number[]",
+        "type": "number",
+        "typeRaw": "`number[]`",
         "default": "`[12, 0, 12, 0]`",
         "typeDefinition": []
       },
@@ -10564,7 +10945,7 @@
         "inputType": 0,
         "description": "占比",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "",
         "typeDefinition": []
       },
@@ -10573,7 +10954,7 @@
         "inputType": 0,
         "description": "边框粗细",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "`0`",
         "typeDefinition": []
       },
@@ -10582,7 +10963,7 @@
         "inputType": 0,
         "description": "内部极坐标系的半径",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "`0.75`",
         "typeDefinition": []
       },
@@ -10591,7 +10972,7 @@
         "inputType": 0,
         "description": "是否显示 tooltip",
         "type": "boolean",
-        "typeRaw": "boolean",
+        "typeRaw": "`boolean`",
         "default": "`true`",
         "typeDefinition": []
       },
@@ -10600,7 +10981,7 @@
         "inputType": 0,
         "description": "几何标记的选中模式",
         "type": "boolean",
-        "typeRaw": "boolean",
+        "typeRaw": "`boolean`",
         "default": "`true`",
         "typeDefinition": []
       },
@@ -10609,7 +10990,7 @@
         "inputType": 0,
         "description": "图表子标题",
         "type": "string",
-        "typeRaw": "string,TemplateRef<void><void>",
+        "typeRaw": "`string,TemplateRef<void><void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -10618,7 +10999,7 @@
         "inputType": 0,
         "description": "总量",
         "type": "string",
-        "typeRaw": "string,TemplateRef<void><void>",
+        "typeRaw": "`string,TemplateRef<void><void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -10627,7 +11008,7 @@
         "inputType": 0,
         "description": "y轴格式化",
         "type": "function",
-        "typeRaw": "(y: number) => string",
+        "typeRaw": "`(y: number) => string`",
         "default": "",
         "typeDefinition": []
       },
@@ -10636,7 +11017,7 @@
         "inputType": 0,
         "description": "数据",
         "type": "string",
-        "typeRaw": "G2PieData[]",
+        "typeRaw": "`G2PieData[]`",
         "default": "",
         "typeDefinition": []
       }
@@ -10651,13 +11032,14 @@
     "_idx": 6,
     "type": "component",
     "selector": "g2-radar",
+    "types": {},
     "properties": [
       {
         "name": "delay",
         "inputType": 0,
         "description": "延迟渲染，单位：毫秒",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "`0`",
         "typeDefinition": []
       },
@@ -10666,7 +11048,7 @@
         "inputType": 0,
         "description": "图表标题",
         "type": "string",
-        "typeRaw": "string,TemplateRef<void>",
+        "typeRaw": "`string,TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -10675,7 +11057,7 @@
         "inputType": 0,
         "description": "图表高度",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "",
         "typeDefinition": []
       },
@@ -10684,7 +11066,7 @@
         "inputType": 0,
         "description": "是否显示 legend",
         "type": "boolean",
-        "typeRaw": "boolean",
+        "typeRaw": "`boolean`",
         "default": "`false`",
         "typeDefinition": []
       },
@@ -10693,7 +11075,7 @@
         "inputType": 0,
         "description": "图表内部间距",
         "type": "string",
-        "typeRaw": "array",
+        "typeRaw": "`array`",
         "default": "`[24, 30, 16, 30]`",
         "typeDefinition": []
       },
@@ -10702,7 +11084,7 @@
         "inputType": 0,
         "description": "颜色列表",
         "type": "string",
-        "typeRaw": "string[]",
+        "typeRaw": "`string[]`",
         "default": "",
         "typeDefinition": []
       },
@@ -10711,7 +11093,7 @@
         "inputType": 0,
         "description": "数据",
         "type": "string",
-        "typeRaw": "G2RadarData[]",
+        "typeRaw": "`G2RadarData[]`",
         "default": "",
         "typeDefinition": []
       }
@@ -10726,13 +11108,14 @@
     "_idx": 6,
     "type": "component",
     "selector": "g2-single-bar",
+    "types": {},
     "properties": [
       {
         "name": "delay",
         "inputType": 0,
         "description": "延迟渲染，单位：毫秒",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "`0`",
         "typeDefinition": []
       },
@@ -10741,7 +11124,7 @@
         "inputType": 0,
         "description": "图表颜色",
         "type": "string",
-        "typeRaw": "string",
+        "typeRaw": "`string`",
         "default": "`#40a9ff`",
         "typeDefinition": []
       },
@@ -10750,7 +11133,7 @@
         "inputType": 0,
         "description": "负值图表颜色",
         "type": "string",
-        "typeRaw": "string",
+        "typeRaw": "`string`",
         "default": "`#ff4d4f`",
         "typeDefinition": []
       },
@@ -10759,7 +11142,7 @@
         "inputType": 0,
         "description": "图表高度",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "`60`",
         "typeDefinition": []
       },
@@ -10768,7 +11151,7 @@
         "inputType": 0,
         "description": "柱状高度",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "`30`",
         "typeDefinition": []
       },
@@ -10777,7 +11160,7 @@
         "inputType": 0,
         "description": "最大值，若小于0表示显示负值",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "`0`",
         "typeDefinition": []
       },
@@ -10786,7 +11169,7 @@
         "inputType": 0,
         "description": "最小值",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "`100`",
         "typeDefinition": []
       },
@@ -10795,7 +11178,7 @@
         "inputType": 0,
         "description": "图表内部间距",
         "type": "string",
-        "typeRaw": "any",
+        "typeRaw": "`any`",
         "default": "`0`",
         "typeDefinition": []
       },
@@ -10804,7 +11187,7 @@
         "inputType": 0,
         "description": "值",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "`0`",
         "typeDefinition": []
       },
@@ -10813,7 +11196,7 @@
         "inputType": 0,
         "description": "显示值格式",
         "type": "function",
-        "typeRaw": "(value: number) => string",
+        "typeRaw": "`(value: number) => string`",
         "default": "",
         "typeDefinition": []
       },
@@ -10822,7 +11205,7 @@
         "inputType": 0,
         "description": "显示值样式",
         "type": "string",
-        "typeRaw": "any",
+        "typeRaw": "`any`",
         "default": "`{ fontSize: 12, color: '#595959' }`",
         "typeDefinition": []
       }
@@ -10837,13 +11220,14 @@
     "_idx": 6,
     "type": "component",
     "selector": "g2-tag-cloud",
+    "types": {},
     "properties": [
       {
         "name": "delay",
         "inputType": 0,
         "description": "延迟渲染，单位：毫秒",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "`0`",
         "typeDefinition": []
       },
@@ -10852,7 +11236,7 @@
         "inputType": 0,
         "description": "高度值",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "`100`",
         "typeDefinition": []
       },
@@ -10861,7 +11245,7 @@
         "inputType": 0,
         "description": "数据",
         "type": "string",
-        "typeRaw": "G2TagCloudData[]",
+        "typeRaw": "`G2TagCloudData[]`",
         "default": "`[]`",
         "typeDefinition": []
       }
@@ -10876,13 +11260,14 @@
     "_idx": 6,
     "type": "component",
     "selector": "g2-timeline",
+    "types": {},
     "properties": [
       {
         "name": "delay",
         "inputType": 0,
         "description": "延迟渲染，单位：毫秒",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "`0`",
         "typeDefinition": []
       },
@@ -10891,7 +11276,7 @@
         "inputType": 0,
         "description": "图表标题",
         "type": "string",
-        "typeRaw": "string,TemplateRef<void>",
+        "typeRaw": "`string,TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -10900,7 +11285,7 @@
         "inputType": 0,
         "description": "数据",
         "type": "string",
-        "typeRaw": "G2TimelineData[]",
+        "typeRaw": "`G2TimelineData[]`",
         "default": "",
         "typeDefinition": []
       },
@@ -10909,7 +11294,7 @@
         "inputType": 0,
         "description": "指标别名",
         "type": "object",
-        "typeRaw": "{ y1: string , y2: string }",
+        "typeRaw": "`{ y1: string , y2: string }`",
         "default": "",
         "typeDefinition": []
       },
@@ -10918,7 +11303,7 @@
         "inputType": 0,
         "description": "颜色",
         "type": "object",
-        "typeRaw": "{ y1: string , y2: string }",
+        "typeRaw": "`{ y1: string , y2: string }`",
         "default": "`{ y1: '#1890FF', y2: '#2FC25B' }`",
         "typeDefinition": []
       },
@@ -10927,7 +11312,7 @@
         "inputType": 0,
         "description": "高度值",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "`400`",
         "typeDefinition": []
       },
@@ -10935,8 +11320,8 @@
         "name": "padding",
         "inputType": 0,
         "description": "图表内部间距",
-        "type": "string",
-        "typeRaw": "number[]",
+        "type": "number",
+        "typeRaw": "`number[]`",
         "default": "`[60, 20, 40, 40]`",
         "typeDefinition": []
       },
@@ -10945,7 +11330,7 @@
         "inputType": 0,
         "description": "线条",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "`2`",
         "typeDefinition": []
       },
@@ -10954,7 +11339,7 @@
         "inputType": 0,
         "description": "日期格式",
         "type": "string",
-        "typeRaw": "string",
+        "typeRaw": "`string`",
         "default": "`HH:mm`",
         "typeDefinition": []
       },
@@ -10963,7 +11348,7 @@
         "inputType": 0,
         "description": "标题位置",
         "type": "Enum",
-        "typeRaw": "top,right,bottom,left",
+        "typeRaw": "`top,right,bottom,left`",
         "default": "`'top'`",
         "typeDefinition": [
           "top",
@@ -10977,7 +11362,7 @@
         "inputType": 0,
         "description": "是否需要滑动条",
         "type": "boolean",
-        "typeRaw": "boolean",
+        "typeRaw": "`boolean`",
         "default": "`true`",
         "typeDefinition": []
       }
@@ -10992,13 +11377,14 @@
     "_idx": 6,
     "type": "component",
     "selector": "trend",
+    "types": {},
     "properties": [
       {
         "name": "colorful",
         "inputType": 0,
         "description": "是否彩色标记",
         "type": "boolean",
-        "typeRaw": "boolean",
+        "typeRaw": "`boolean`",
         "default": "`true`",
         "typeDefinition": []
       },
@@ -11007,7 +11393,7 @@
         "inputType": 0,
         "description": "上升下降标识",
         "type": "Enum",
-        "typeRaw": "up,down",
+        "typeRaw": "`up,down`",
         "default": "",
         "typeDefinition": [
           "up",
@@ -11019,7 +11405,7 @@
         "inputType": 0,
         "description": "颜色反转",
         "type": "boolean",
-        "typeRaw": "boolean",
+        "typeRaw": "`boolean`",
         "default": "`false`",
         "typeDefinition": []
       }
@@ -11034,13 +11420,14 @@
     "_idx": 6,
     "type": "component",
     "selector": "g2-water-wave",
+    "types": {},
     "properties": [
       {
         "name": "title",
         "inputType": 0,
         "description": "图表标题",
         "type": "string",
-        "typeRaw": "string,TemplateRef<void>",
+        "typeRaw": "`string,TemplateRef<void>`",
         "default": "",
         "typeDefinition": []
       },
@@ -11049,7 +11436,7 @@
         "inputType": 0,
         "description": "图表高度",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "`160`",
         "typeDefinition": []
       },
@@ -11058,7 +11445,7 @@
         "inputType": 0,
         "description": "图表颜色",
         "type": "string",
-        "typeRaw": "string",
+        "typeRaw": "`string`",
         "default": "`#1890FF`",
         "typeDefinition": []
       },
@@ -11067,7 +11454,7 @@
         "inputType": 0,
         "description": "进度比例",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": "",
         "typeDefinition": []
       }
@@ -11082,13 +11469,62 @@
     "_idx": 322,
     "type": "component",
     "selector": "sf",
+    "types": {
+      "SFButton": [
+        {
+          "name": "submit",
+          "inputType": 0,
+          "description": "提交按钮文本",
+          "type": "string",
+          "typeRaw": "`string`",
+          "default": "`提交`",
+          "typeDefinition": []
+        },
+        {
+          "name": "reset",
+          "inputType": 0,
+          "description": "重置按钮文本",
+          "type": "string",
+          "typeRaw": "`string`",
+          "default": "`重置`",
+          "typeDefinition": []
+        },
+        {
+          "name": "search",
+          "inputType": 0,
+          "description": "搜索按钮文本",
+          "type": "string",
+          "typeRaw": "`string`",
+          "default": "`搜索`",
+          "typeDefinition": []
+        },
+        {
+          "name": "edit",
+          "inputType": 0,
+          "description": "编辑按钮文本",
+          "type": "string",
+          "typeRaw": "`string`",
+          "default": "`保存`",
+          "typeDefinition": []
+        },
+        {
+          "name": "render",
+          "inputType": 0,
+          "description": "按钮样式",
+          "type": "string",
+          "typeRaw": "`SFRenderButton`",
+          "default": "",
+          "typeDefinition": []
+        }
+      ]
+    },
     "properties": [
       {
         "name": "layout",
         "inputType": 0,
         "description": "表单布局，等同 `nzLayout`",
         "type": "string",
-        "typeRaw": "string",
+        "typeRaw": "`string`",
         "default": "`horizontal`",
         "typeDefinition": []
       },
@@ -11097,7 +11533,7 @@
         "inputType": 0,
         "description": "**必填项** JSON Schema",
         "type": "string",
-        "typeRaw": "SFSchema",
+        "typeRaw": "`SFSchema`",
         "default": "",
         "typeDefinition": []
       },
@@ -11106,7 +11542,7 @@
         "inputType": 0,
         "description": "UI Schema",
         "type": "string",
-        "typeRaw": "SFUISchema",
+        "typeRaw": "`SFUISchema`",
         "default": "",
         "typeDefinition": []
       },
@@ -11115,7 +11551,7 @@
         "inputType": 0,
         "description": "表单默认值",
         "type": "string",
-        "typeRaw": "any",
+        "typeRaw": "`any`",
         "default": "",
         "typeDefinition": []
       },
@@ -11124,7 +11560,7 @@
         "inputType": 0,
         "description": "表单模式，细节见常见问题",
         "type": "Enum",
-        "typeRaw": "default,search,edit",
+        "typeRaw": "`default,search,edit`",
         "default": "`default`",
         "typeDefinition": [
           "default",
@@ -11137,19 +11573,20 @@
         "inputType": 0,
         "description": "按钮",
         "type": "Enum",
-        "typeRaw": "SFButton, 'none'",
+        "typeRaw": "`SFButton, 'none'`",
         "default": "`{}`",
         "typeDefinition": [
           "SFButton",
           "none"
-        ]
+        ],
+        "complexType": "SFButton"
       },
       {
         "name": "firstVisual",
         "inputType": 0,
         "description": "是否立即呈现错误视觉",
         "type": "boolean",
-        "typeRaw": "boolean",
+        "typeRaw": "`boolean`",
         "default": "`true`",
         "typeDefinition": []
       },
@@ -11158,7 +11595,7 @@
         "inputType": 0,
         "description": "是否实时校验，`false` 提交时检验",
         "type": "boolean",
-        "typeRaw": "boolean",
+        "typeRaw": "`boolean`",
         "default": "`true`",
         "typeDefinition": []
       },
@@ -11167,7 +11604,7 @@
         "inputType": 0,
         "description": "指定表单 `autocomplete` 值",
         "type": "Enum",
-        "typeRaw": "on,off",
+        "typeRaw": "`on,off`",
         "default": "`null`",
         "typeDefinition": [
           "on",
@@ -11179,7 +11616,7 @@
         "inputType": 1,
         "description": "数据变更时回调",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<{}>",
+        "typeRaw": "`EventEmitter<{}>`",
         "default": "",
         "typeDefinition": []
       },
@@ -11188,7 +11625,7 @@
         "inputType": 1,
         "description": "提交表单时回调",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<{}>",
+        "typeRaw": "`EventEmitter<{}>`",
         "default": "",
         "typeDefinition": []
       },
@@ -11197,7 +11634,7 @@
         "inputType": 1,
         "description": "重置表单时回调",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<{}>",
+        "typeRaw": "`EventEmitter<{}>`",
         "default": "",
         "typeDefinition": []
       },
@@ -11206,7 +11643,7 @@
         "inputType": 1,
         "description": "表单校验结果回调",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<ErrorData[]>",
+        "typeRaw": "`EventEmitter<ErrorData[]>`",
         "default": "",
         "typeDefinition": []
       }
@@ -11221,13 +11658,62 @@
     "_idx": 322,
     "type": "directive",
     "selector": "sf",
+    "types": {
+      "SFButton": [
+        {
+          "name": "submit",
+          "inputType": 0,
+          "description": "提交按钮文本",
+          "type": "string",
+          "typeRaw": "`string`",
+          "default": "`提交`",
+          "typeDefinition": []
+        },
+        {
+          "name": "reset",
+          "inputType": 0,
+          "description": "重置按钮文本",
+          "type": "string",
+          "typeRaw": "`string`",
+          "default": "`重置`",
+          "typeDefinition": []
+        },
+        {
+          "name": "search",
+          "inputType": 0,
+          "description": "搜索按钮文本",
+          "type": "string",
+          "typeRaw": "`string`",
+          "default": "`搜索`",
+          "typeDefinition": []
+        },
+        {
+          "name": "edit",
+          "inputType": 0,
+          "description": "编辑按钮文本",
+          "type": "string",
+          "typeRaw": "`string`",
+          "default": "`保存`",
+          "typeDefinition": []
+        },
+        {
+          "name": "render",
+          "inputType": 0,
+          "description": "按钮样式",
+          "type": "string",
+          "typeRaw": "`SFRenderButton`",
+          "default": "",
+          "typeDefinition": []
+        }
+      ]
+    },
     "properties": [
       {
         "name": "layout",
         "inputType": 0,
         "description": "表单布局，等同 `nzLayout`",
         "type": "string",
-        "typeRaw": "string",
+        "typeRaw": "`string`",
         "default": "`horizontal`",
         "typeDefinition": []
       },
@@ -11236,7 +11722,7 @@
         "inputType": 0,
         "description": "**必填项** JSON Schema",
         "type": "string",
-        "typeRaw": "SFSchema",
+        "typeRaw": "`SFSchema`",
         "default": "",
         "typeDefinition": []
       },
@@ -11245,7 +11731,7 @@
         "inputType": 0,
         "description": "UI Schema",
         "type": "string",
-        "typeRaw": "SFUISchema",
+        "typeRaw": "`SFUISchema`",
         "default": "",
         "typeDefinition": []
       },
@@ -11254,7 +11740,7 @@
         "inputType": 0,
         "description": "表单默认值",
         "type": "string",
-        "typeRaw": "any",
+        "typeRaw": "`any`",
         "default": "",
         "typeDefinition": []
       },
@@ -11263,7 +11749,7 @@
         "inputType": 0,
         "description": "表单模式，细节见常见问题",
         "type": "Enum",
-        "typeRaw": "default,search,edit",
+        "typeRaw": "`default,search,edit`",
         "default": "`default`",
         "typeDefinition": [
           "default",
@@ -11276,19 +11762,20 @@
         "inputType": 0,
         "description": "按钮",
         "type": "Enum",
-        "typeRaw": "SFButton, 'none'",
+        "typeRaw": "`SFButton, 'none'`",
         "default": "`{}`",
         "typeDefinition": [
           "SFButton",
           "none"
-        ]
+        ],
+        "complexType": "SFButton"
       },
       {
         "name": "firstVisual",
         "inputType": 0,
         "description": "是否立即呈现错误视觉",
         "type": "boolean",
-        "typeRaw": "boolean",
+        "typeRaw": "`boolean`",
         "default": "`true`",
         "typeDefinition": []
       },
@@ -11297,7 +11784,7 @@
         "inputType": 0,
         "description": "是否实时校验，`false` 提交时检验",
         "type": "boolean",
-        "typeRaw": "boolean",
+        "typeRaw": "`boolean`",
         "default": "`true`",
         "typeDefinition": []
       },
@@ -11306,7 +11793,7 @@
         "inputType": 0,
         "description": "指定表单 `autocomplete` 值",
         "type": "Enum",
-        "typeRaw": "on,off",
+        "typeRaw": "`on,off`",
         "default": "`null`",
         "typeDefinition": [
           "on",
@@ -11318,7 +11805,7 @@
         "inputType": 1,
         "description": "数据变更时回调",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<{}>",
+        "typeRaw": "`EventEmitter<{}>`",
         "default": "",
         "typeDefinition": []
       },
@@ -11327,7 +11814,7 @@
         "inputType": 1,
         "description": "提交表单时回调",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<{}>",
+        "typeRaw": "`EventEmitter<{}>`",
         "default": "",
         "typeDefinition": []
       },
@@ -11336,7 +11823,7 @@
         "inputType": 1,
         "description": "重置表单时回调",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<{}>",
+        "typeRaw": "`EventEmitter<{}>`",
         "default": "",
         "typeDefinition": []
       },
@@ -11345,7 +11832,7 @@
         "inputType": 1,
         "description": "表单校验结果回调",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter<ErrorData[]>",
+        "typeRaw": "`EventEmitter<ErrorData[]>`",
         "default": "",
         "typeDefinition": []
       }

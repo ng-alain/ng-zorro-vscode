@@ -21,12 +21,28 @@ export default class implements HoverProvider {
       return null;
     }
 
-    // when is property
+    // when is property name
     if (tag.isOnAttrName) {
       const directive = getDirective(tag);
       if (directive == null) return null;
 
-      return fixHover(genPropertyMarkdown(directive, tag.word));
+      const property = directive.properties.find(w => w.name === tag.word);
+      return property ? fixHover(genPropertyMarkdown(property)) : null;
+    }
+
+    // when is property value
+    if (tag.isOnAttrValue) {
+      const attr = tag.attributes[tag.attrName];
+      // when is complex type
+      if (attr.value && attr.value.startsWith('{')) {
+        const directive = getDirective(tag);
+        if (directive == null) return null;
+        const property = directive.properties.find(w => w.name === attr.name);
+        if (property == null || !property.complexType || property.complexType.length === 0) return null;
+        const complexTypeProperties = directive.types[property.complexType];
+
+        return fixHover(genPropertyMarkdown(complexTypeProperties.find(w => w.name === tag.word)));
+      }
     }
   }
 }

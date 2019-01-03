@@ -1,4 +1,4 @@
-import { Directive, DirectiveType, Tag, NAME, TRIGGER_DIRECTIVE_WORD } from '../interfaces';
+import { Directive, DirectiveType, Tag, NAME, DirectiveTypeDefinition, DirectiveProperty } from '../interfaces';
 import { i18n } from './local';
 import zh_CN from './zh-CN.json';
 import en_US from './en-US.json';
@@ -74,10 +74,7 @@ export async function INIT(notifier: Notifier) {
       i.snippet = i.type === 'component' ? `<__$1>$0</__>` : `<div __$1>$0</div>`;
     }
     i.snippet = i.snippet.replace(/__/g, i.selector);
-    // 移除触发词
-    if (i.snippet.startsWith(TRIGGER_DIRECTIVE_WORD)) {
-      i.snippet = i.snippet.substr(1);
-    }
+
     i.properties = notNull(i.properties, []);
     i.properties.forEach(p => {
       p.pureName = getPure(p.name);
@@ -90,7 +87,7 @@ export async function INIT(notifier: Notifier) {
       p.type = notNull(p.type, 'string');
       p.typeRaw = notNull(p.typeRaw);
       p.typeDefinition = notNull(p.typeDefinition, []).map((item: any) => typeof item === 'string' ? { value: item } : item);
-      p.typeDefinitionSnippetStr = p.typeDefinition.map(i => i.value).join(',');
+      p.typeDefinitionSnippetStr = p.typeDefinition.map((i: DirectiveTypeDefinition) => i.value).join(',');
     });
 
     DIRECTIVE_NAMES.push(i.selector);
@@ -144,12 +141,7 @@ export function genComponentMarkdown(item: Directive | string): string {
   return rows.join('\n\n');
 }
 
-export function genPropertyMarkdown(item: Directive, name: string): string;
-export function genPropertyMarkdown(item: string, name: string): string;
-export function genPropertyMarkdown(item: Directive | string, name: string): string {
-  item = typeof item === 'string' ? first(item) : item;
-  if (item == null) return '';
-  const property = item.properties.find(w => w.name === name);
+export function genPropertyMarkdown(property: DirectiveProperty): string {
   if (property == null) return '';
 
   const rows: string[] = [];
@@ -158,7 +150,9 @@ export function genPropertyMarkdown(item: Directive | string, name: string): str
     rows.push(`**${i18n('type')}** ${property.typeRaw}`);
   }
 
-  rows.push(`**${i18n('defaultValue')}** ${property.default}`);
+  if (property.default.length > 0) {
+    rows.push(`**${i18n('defaultValue')}** ${property.default}`);
+  }
 
   rows.push(property.description);
 

@@ -12,7 +12,7 @@ import {
   Range,
   MarkdownString,
 } from 'vscode';
-import { DirectiveProperty, Directive, TRIGGER_DIRECTIVE_WORD } from '../interfaces';
+import { DirectiveProperty, Directive, DirectiveTypeDefinition } from '../interfaces';
 import { getDirective, CONFIG, RESOURCES } from '../resources';
 import { getTag, typingPreChart } from '../utils';
 
@@ -24,10 +24,12 @@ export default class implements CompletionItemProvider {
     context: CompletionContext,
   ): ProviderResult<CompletionItem[] | CompletionList> {
     const char = context.triggerCharacter || typingPreChart(document, position);
+    // 97-122
     switch (char) {
       // Component
-      case TRIGGER_DIRECTIVE_WORD:
-        return this.genComponent();
+      case '<':
+      case 'n': // ng-zorro-antd：所有组件都以 `nz-` 开头，因此使用键入 'n' 来触发
+        return this.genComponent(char);
       // Property
       case '"':
       case ' ':
@@ -37,15 +39,21 @@ export default class implements CompletionItemProvider {
     }
   }
 
-  private genComponent(): CompletionItem[] {
-    return RESOURCES.map(i => this.renderCompletionItem(i));
+  private genComponent(char: string): CompletionItem[] {
+    return RESOURCES.map(i => this.renderCompletionItem(char, i));
   }
 
-  private renderCompletionItem(i: Directive): CompletionItem {
+  private renderCompletionItem(char: string, i: Directive): CompletionItem {
     const item = new CompletionItem(i.selector, CompletionItemKind.Snippet);
     item.command = this.triggerHideSuggestCommand;
     item.documentation = new MarkdownString(i.description);
-    item.insertText = new SnippetString(i.snippet);
+    // `<` 非单词一部分故需要提前移除触发词
+    if (char === '<') {
+      item.insertText = new SnippetString(i.snippet.substr(1));
+    } else {
+      item.insertText = new SnippetString(i.snippet);
+    }
+
     return item;
   }
 
@@ -61,17 +69,27 @@ export default class implements CompletionItemProvider {
       if (attr.value.trim() === '') {
         const property = directive.properties.find(w => w.name === attr.name);
         if (property && property.typeDefinition.length > 0) {
-          let range = document.getWordRangeAtPosition(position, /['"]\s*['"]/);
+          let range = document.getWordRangeAtPosition(position, /["]\s*["]/);
           if (range) {
             range = new Range(
               new Position(range.start.line, range.start.character + 1),
               new Position(range.end.line, range.end.character - 1)
             );
           };
-          return property.typeDefinition.map(i => {
+          return property.typeDefinition.map((i: DirectiveTypeDefinition) => {
             const item = new CompletionItem(i.value, CompletionItemKind.Value);
             item.documentation = new MarkdownString(i.label);
             item.range = range;
+            return item;
+          });
+        }
+      } else if (attr.value.startsWith('{')) {
+        // 复杂类型
+        const property = directive.properties.find(w => w.name === attr.name);
+        if (property && property.complexType) {
+          return directive.types[property.complexType].map(i => {
+            const item = new CompletionItem(i.name, CompletionItemKind.Value);
+            item.documentation = new MarkdownString(i.description);
             return item;
           });
         }
@@ -120,13 +138,6 @@ export default class implements CompletionItemProvider {
     return {
       command: 'hideSuggestWidget',
       title: 'hideSuggestWidget'
-    }
-  }
-
-  private get triggerSuggestCommand() {
-    return {
-      command: 'editor.action.triggerSuggest',
-      title: 'triggerSuggest'
     }
   }
 }

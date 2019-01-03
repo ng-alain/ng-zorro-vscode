@@ -4,46 +4,14 @@ import * as MarkdownIt from 'markdown-it';
 const yamlFront = require('yaml-front-matter');
 
 import { Directive, DirectiveProperty, InputAttrType } from '../../../src/magic/interfaces';
+import { FIX } from '../_fix';
+import { COG } from '../config';
 import { AST, AST_KEYS } from './ast';
-import { OVERRIDE } from './override';
 
-const COG = {
-  /** 额外有效组件名清单 */
-  VALID_COMPONENT_NAMES: ['th', 'td', 'thead'],
-  /** 同时拥有组件与指令能力清单 */
-  COMPONET_AND_DIRECTIVE: ['se-container', 'se-title', 'error-collect', 'sg-container', 'sv-container', 'sv-title', 'sf'],
-  /** 被拆分多个表格属性的组件清单 */
-  SPLIT_PROPERTIES: ['th', 'td'],
-  /** 忽略组件 */
-  INGORE_COMPONENTS: ['nz-icon'],
-  /** 忽略属性清单 */
-  INGORE_PROPERTIES: ['ng-content'],
-  /** 忽略属性对象清单 */
-  INGORE_PROPERTI_OBJECT: ['data'],
-  /** 已知无效组件变更 */
-  INVALID_COMPONENTS: {
-    'nz-tr': 'tr',
-  },
-  /** 找回未设定的组件名，`key` 文件路径 */
-  LOSE_COMPONENT_NAMES: {
-    'tooltip': '[nz-tooltip]'
-  },
-  COMMON_PROPERTIE_COMPONENTS: ['tooltip'],
-  COMMON_PROPERTIES: {
-    'nz-tooltip': { 'zh': '共同的 API', 'en': 'Common API' },
-    'nz-popconfirm': { component: 'nz-tooltip', 'zh': '共同的 API', 'en': 'Common API' },
-    'nz-popover': { component: 'nz-tooltip', 'zh': '共同的 API', 'en': 'Common API' },
-    'nz-date-picker': { 'zh': '共同的 API', 'en': 'Common API' },
-    'nz-year-picker': { 'zh': '共同的 API', 'en': 'Common API' },
-    'nz-month-picker': { 'zh': '共同的 API', 'en': 'Common API' },
-    'nz-range-picker': { 'zh': '共同的 API', 'en': 'Common API' },
-    'nz-week-picker': { 'zh': '共同的 API', 'en': 'Common API' },
-  }
-};
 const md = new MarkdownIt();
+const processRes: Directive[] = [];
 let ast: AST;
 let Lang: string;
-const processRes: Directive[] = [];
 
 export function makeObject(lang: string, filePaths: string[]): Directive[] {
   processRes.length = 0;
@@ -51,17 +19,12 @@ export function makeObject(lang: string, filePaths: string[]): Directive[] {
   const zone = lang.split('-').shift();
   filePaths
     // 优先处理包含公共属性的组件文件
-    .map(p => ({ p, s: COG.COMMON_PROPERTIE_COMPONENTS.find(k => p.includes(k)) ? 9999 : 10 }))
+    .map(p => ({ p, s: COG.COMMON_PROPERTIE_PATH_PART.find(k => p.includes(k)) ? 9999 : 10 }))
     .sort((a, b) => b.s - a.s)
     .map(i => i.p)
     .forEach(p => {
       const content = fs.readFileSync(p).toString();
       const meta = yamlFront.loadFront(content);
-      const lostKey = Object.keys(COG.LOSE_COMPONENT_NAMES).find(k => p.includes(k));
-      if (lostKey) {
-        // 找回未设定的组件名，强制插入相应的代码
-        meta.__content = meta.__content.replace('## API', `## API\n\n### ${COG.LOSE_COMPONENT_NAMES[lostKey]}`)
-      }
       meta.md = md.parse(meta.__content, {});
       delete meta.__content;
       processRes.push(...metaToItem(zone, p, meta));
@@ -120,20 +83,18 @@ function getDirective(): Directive[] {
       if (selectorList.length === 1 && !/^\[?[a-z][-a-z0-9]+\]?$/g.test(selector) && !COG.VALID_COMPONENT_NAMES.includes(selector)) {
         return null;
       }
-      if (COG.INVALID_COMPONENTS[selector]) {
-        selector = COG.INVALID_COMPONENTS[selector];
-      }
 
       const item: Directive = {
         _idx: idx,
         type: 'component',
         selector,
-        properties: getProperties(ast.getTable(idx, COG.SPLIT_PROPERTIES.includes(selector))),
+        types: {},
       };
+      item.properties = getProperties(item, ast.getTable(idx, COG.SPLIT_PROPERTIES.includes(selector)));
       const checkType = (i: Directive) => {
         if (i.selector.startsWith('[')) {
           i.type = 'directive';
-          i.selector = cleanTag(i.selector, '[');
+          i.selector = trimTag(i.selector, '[');
         }
       }
       // fix muliter selector
@@ -159,7 +120,7 @@ function getDirective(): Directive[] {
         } else {
           const commonHeading = mergeCog[ast.zone];
           const commonIdx = ast.offsetAt(commonHeading);
-          commonProperties = getProperties(ast.getTable(commonIdx, false)).map(i => {
+          commonProperties = getProperties(item, ast.getTable(commonIdx, false)).map(i => {
             i._common = true;
             return i;
           });
@@ -181,14 +142,14 @@ function getDirective(): Directive[] {
   return list.filter(i => !!i && !COG.INGORE_COMPONENTS.includes(i.selector));
 }
 
-function getProperties(data: string[][]): DirectiveProperty[] {
+function getProperties(directive: Directive, data: string[][]): DirectiveProperty[] {
   return data
     .filter(tds => tds.length === 4)
-    .map(tds => genPropertyItem(tds.map(v => v || '')))
+    .map(tds => genPropertyItem(directive, tds.map(v => v || '')))
     .filter(w => !!w);
 }
 
-function genPropertyItem(data: string[]): DirectiveProperty {
+function genPropertyItem(directive: Directive, data: string[]): DirectiveProperty {
   if (COG.INGORE_PROPERTIES.includes(data[0])) return null;
   const nameMatch = data[0].trim().match(/((?:\[|\(|\[\()[\-a-zA-Z]+(?:\)\]|\]|\)))/g);
   if (nameMatch == null || nameMatch.length === 0) return null;
@@ -200,18 +161,18 @@ function genPropertyItem(data: string[]): DirectiveProperty {
     inputType: InputAttrType.Input,
     description: data[1].trim(),
     type: 'string',
-    typeRaw: cleanTag(data[2].trim()).replace(/丨/g, '|'),
+    typeRaw: data[2].trim(),
     default: data[3].trim(),
   };
 
   // name
   if (item.name.startsWith('[(')) {
-    item.name = cleanTag(item.name, '[(');
+    item.name = trimTag(item.name, '[(');
     item.inputType = InputAttrType.InputOutput;
   } else if (item.name.startsWith('[')) {
-    item.name = cleanTag(item.name, '[');
+    item.name = trimTag(item.name, '[');
   } else if (item.name.startsWith('(')) {
-    item.name = cleanTag(item.name, '(');
+    item.name = trimTag(item.name, '(');
     item.inputType = InputAttrType.Output;
   } else if (item.name.startsWith('#')) {
     item.name = item.name.substr(1);
@@ -219,7 +180,7 @@ function genPropertyItem(data: string[]): DirectiveProperty {
   }
 
   // type
-  parseType(item);
+  parseType(directive, item);
 
   // default
   if (['`-`', '-', '`无`', '无'].includes(item.default)) {
@@ -241,16 +202,21 @@ function genPropertyItem(data: string[]): DirectiveProperty {
   return item;
 }
 
-function parseType(item: DirectiveProperty) {
-  let types: any = item.typeRaw;
+function getValidSeparator(text: string): string {
+  return ['｜', '丨', '|'].find(s => text.indexOf(s) !== -1) || ',';
+}
+
+function parseType(directive: Directive, item: DirectiveProperty) {
+  let typeRaw: string = item.typeRaw.replace(/`/g, '');
   // fix `Enum{}`
-  if (types.startsWith('Enum') || types.startsWith('Enum ')) {
-    types = cleanTag(types.substr(types.startsWith('Enum ') ? 5 : 4), '{');
+  if (typeRaw.startsWith('Enum') || typeRaw.startsWith('Enum ')) {
+    typeRaw = trimTag(typeRaw.substr(typeRaw.startsWith('Enum ') ? 5 : 4), '{');
   }
   // split mulit type
-  types = types.split(~types.indexOf('丨') ? '丨' : ~types.indexOf('|') ? '|' : ',')
-    .map(v => cleanTag(v))
-    .map(v => cleanSemicolon(v));
+  const types = typeRaw.split(getValidSeparator(typeRaw))
+    .filter(v => !!v)
+    .map(v => v.trim())
+    .map(v => trimSemicolon(v));
 
   // get first type
   const firstType = types.length > 0 ? types[0].split(' ').shift() : '';
@@ -274,12 +240,16 @@ function parseType(item: DirectiveProperty) {
         item.type = 'boolean';
         break;
       case 'number':
+      case 'number[]':
       case 'Number':
         item.type = 'number';
         break;
       case 'date':
       case 'Date':
         item.type = 'Date';
+        break;
+      case 'object':
+        item.type = 'object';
         break;
       case 'HTMLElement':
         item.type = 'HTMLElement';
@@ -305,16 +275,43 @@ function parseType(item: DirectiveProperty) {
       .filter(value => !!value)
       .filter(value => value !== 'null');
   }
+
+  // 默认复杂类型，从类型列表中查看到第一个带有定义的复杂类型
+  for (let t of types) {
+    if (!/^[A-Z][a-zA-Z]+$/g.test(t)) continue;
+    if (directive.types[t]) {
+      item.complexType = t;
+      break;
+    }
+    const complexTypeProperties = getComplexTypeProperties(directive, t);
+    if (!complexTypeProperties || complexTypeProperties.length === 0) continue;
+    directive.types[t] = complexTypeProperties;
+    item.complexType = t;
+    break;
+  }
 }
 
-function cleanTag(text: string, tag = '`'): string {
+function getComplexTypeProperties(directive: Directive, text: string): DirectiveProperty[] {
+  const idx = ast.offsetAt(text);
+  const nextIdx = idx + 3;
+  if (idx === -1 || nextIdx > ast.length || !ast.isType('table_open', nextIdx)) return null;
+  return getProperties(directive, ast.getTable(nextIdx, false));
+}
+
+/**
+ * 清除标签，默认：'`'
+ */
+function trimTag(text: string, tag = '`'): string {
   if (text.startsWith(tag)) {
     text = text.substr(tag.length, text.length - (tag.length * 2));
   }
   return text.trim();
 }
 
-function cleanSemicolon(text: string): string {
+/**
+ * 清除单或双引号
+ */
+function trimSemicolon(text: string): string {
   if (text.startsWith(`'`) || text.startsWith(`"`)) {
     text = text.substr(1);
   }
@@ -354,7 +351,7 @@ function metaToItem(zone: string, filePath: string, meta: any): Directive[] {
     i.whenToUse = whenToUse;
     i.doc = url;
     // override snippet
-    const snippet = OVERRIDE.snippet[i.selector];
+    const snippet = FIX.snippet[i.selector];
     if (snippet) {
       if (typeof snippet === 'object') {
         i.snippet = snippet[zone];
@@ -364,8 +361,8 @@ function metaToItem(zone: string, filePath: string, meta: any): Directive[] {
     }
     // override type definition
     i.properties.forEach(p => {
-      if (OVERRIDE.typeDefinition[i.selector]) {
-        p.typeDefinition = OVERRIDE.typeDefinition[i.selector][p.name] || p.typeDefinition;
+      if (FIX.typeDefinition[i.selector]) {
+        p.typeDefinition = FIX.typeDefinition[i.selector][p.name] || p.typeDefinition;
       }
       if (p.typeDefinition.length > 0) {
         p.type = 'Enum';

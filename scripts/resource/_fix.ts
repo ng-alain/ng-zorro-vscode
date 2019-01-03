@@ -1,4 +1,4 @@
-export const OVERRIDE = {
+export const FIX = {
     typeDefinition: {
         'nz-alert': {
             'nzType': ['success', 'info', 'warning', 'error']

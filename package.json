@@ -41,10 +41,12 @@
     "onLanguage:html"
   ],
   "contributes": {
-    "snippets": [{
-      "language": "html",
-      "path": "./snippets.json"
-    }],
+    "snippets": [
+      {
+        "language": "html",
+        "path": "./snippets.json"
+      }
+    ],
     "configuration": {
       "title": "NG-ZORRO Extension Configuration",
       "properties": {
