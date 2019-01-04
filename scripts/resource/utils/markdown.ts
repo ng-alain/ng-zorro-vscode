@@ -96,7 +96,7 @@ function getDirective(): Directive[] {
           i.type = 'directive';
           i.selector = trimTag(i.selector, '[');
         }
-      }
+      };
       // fix muliter selector
       if (selectorList.length > 1) {
         const directives: Directive[] = [];
@@ -132,12 +132,12 @@ function getDirective(): Directive[] {
       // 若未找到 table，则尝试获取第一个段落
       if (descriptionStart !== -1 && descriptionStart < ast.offsetTagAt('table', idx + 1)) {
         item.description = ast.getText(descriptionStart);
-      } else if (ast.length > (idx + 3) && ast.isParagraph(idx + 3)) {
+      } else if (ast.length > idx + 3 && ast.isParagraph(idx + 3)) {
         item.description = ast.getText(idx + 3);
       }
       return item;
     })
-    .reduce((p: any, c: any) => p = p.concat(...(Array.isArray(c) ? c : [c])), []);
+    .reduce((p: any, c: any) => (p = p.concat(...(Array.isArray(c) ? c : [c]))), []);
 
   return list.filter(i => !!i && !COG.INGORE_COMPONENTS.includes(i.selector));
 }
@@ -192,10 +192,10 @@ function genPropertyItem(directive: Directive, data: string[]): DirectivePropert
 
   // ngModel
   if (
-    item.name === 'ngModel'
-    || item.description.includes('双向绑定')
-    || item.description.includes('double binding')
-    || item.description.includes('Two-way')
+    item.name === 'ngModel' ||
+    item.description.includes('双向绑定') ||
+    item.description.includes('double binding') ||
+    item.description.includes('Two-way')
   ) {
     item.inputType = InputAttrType.InputOutput;
   }
@@ -212,7 +212,8 @@ function getValidSeparator(text: string): string {
 function parseType(directive: Directive, item: DirectiveProperty) {
   let typeRaw: string = item.typeRaw.replace(/`/g, '');
   // split mulit type
-  const types = typeRaw.split(getValidSeparator(typeRaw))
+  const types = typeRaw
+    .split(getValidSeparator(typeRaw))
     .filter(v => !!v)
     .map(v => v.trim())
     .map(v => trimSemicolon(v));
@@ -271,10 +272,8 @@ function parseType(directive: Directive, item: DirectiveProperty) {
     //   && !typeRaw.includes('=>')
     // )
   ) {
-    item.typeDefinition = types
-      .filter(value => !!value)
-      // .filter(value => value !== 'null')
-      ;
+    item.typeDefinition = types.filter(value => !!value);
+    // .filter(value => value !== 'null')
   }
 
   // 默认复杂类型，从类型列表中查看到第一个带有定义的复杂类型
@@ -304,7 +303,7 @@ function getComplexTypeProperties(directive: Directive, text: string): Directive
  */
 function trimTag(text: string, tag = '`'): string {
   if (text.startsWith(tag)) {
-    text = text.substr(tag.length, text.length - (tag.length * 2));
+    text = text.substr(tag.length, text.length - tag.length * 2);
   }
   return text.trim();
 }
@@ -334,16 +333,18 @@ function metaToItem(zone: string, filePath: string, meta: any): Directive[] {
   const description = ast.getText(0);
   const whenToUse = ast.getParagraph(zone === 'en' ? 'When To Use' : '何时使用');
   const list: Directive[] = [];
-  getDirective().filter(w => !!w).forEach(i => {
-    list.push(copy(i));
-    if (i.type === 'component' && COG.COMPONET_AND_DIRECTIVE.includes(i.selector)) {
-      const directive = copy(i) as Directive;
-      directive.type = 'directive';
-      list.push(directive);
-    }
-  });
+  getDirective()
+    .filter(w => !!w)
+    .forEach(i => {
+      list.push(copy(i));
+      if (i.type === 'component' && COG.COMPONET_AND_DIRECTIVE.includes(i.selector)) {
+        const directive = copy(i) as Directive;
+        directive.type = 'directive';
+        list.push(directive);
+      }
+    });
 
-  return list.map((i) => {
+  return list.map(i => {
     i.lib = lib;
     // 对所有 @delon/* 增加前缀 `delon-` 前缀
     if (lib.startsWith('@delon')) {
@@ -363,6 +364,10 @@ function metaToItem(zone: string, filePath: string, meta: any): Directive[] {
       } else {
         i.snippet = snippet;
       }
+    }
+    // add extra properties
+    if (FIX.extraProperty[i.selector]) {
+      i.properties.push(...FIX.extraProperty[i.selector]);
     }
     // override type definition
     i.properties.forEach(p => {

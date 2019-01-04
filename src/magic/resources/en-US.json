@@ -117,162 +117,466 @@
     "doc": "https://ng.ant.design/components/tooltip/en"
   },
   {
-    "_idx": 15,
-    "type": "component",
-    "selector": "nz-affix",
+    "_idx": 58,
+    "type": "directive",
+    "selector": "nz-row",
     "types": {},
     "properties": [
       {
-        "name": "nzOffsetBottom",
+        "name": "nzAlign",
         "inputType": 0,
-        "description": "Pixels to offset from bottom when calculating position of scroll",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": ""
+        "description": "the vertical alignment of the flex layout",
+        "type": "Enum",
+        "typeRaw": "`'top'｜'middle'｜'bottom'`",
+        "default": "`'top'`",
+        "typeDefinition": [
+          "top",
+          "middle",
+          "bottom"
+        ],
+        "pureDefault": "top"
       },
       {
-        "name": "nzOffsetTop",
+        "name": "nzGutter",
         "inputType": 0,
-        "description": "Pixels to offset from top when calculating position of scroll",
-        "type": "number",
-        "typeRaw": "`number`",
+        "description": "spacing between grids, could be a number or a object like `{ xs: 8, sm: 16, md: 24, lg: 32, xl: 32, xxl: 32 }`",
+        "type": "Enum",
+        "typeRaw": "`number｜object`",
         "default": "`0`",
-        "pureDefault": "0"
+        "pureDefault": "0",
+        "typeDefinition": [
+          "0",
+          "8",
+          "16",
+          "24",
+          "32",
+          "40",
+          "48",
+          "56",
+          "64"
+        ]
       },
       {
-        "name": "nzTarget",
+        "name": "nzJustify",
         "inputType": 0,
-        "description": "specifies the scrollable area dom node",
-        "type": "string",
-        "typeRaw": "`string｜HTMLElement`",
-        "default": "`window`",
-        "pureDefault": "window"
+        "description": "horizontal arrangement of the flex layout",
+        "type": "Enum",
+        "typeRaw": "`'start'｜'end'｜'center'｜'space-around'｜'space-between'`",
+        "default": "`'start'`",
+        "typeDefinition": [
+          "start",
+          "end",
+          "center",
+          "space-around",
+          "space-between"
+        ],
+        "pureDefault": "start"
       },
       {
-        "name": "nzChange",
-        "inputType": 1,
-        "description": "Callback for when affix state is changed",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<boolean>`",
-        "default": ""
+        "name": "nzType",
+        "inputType": 0,
+        "description": "layout mode, optional `flex`, [browser support](http://caniuse.com/#search=flex)",
+        "type": "Enum",
+        "typeRaw": "`'flex'`",
+        "default": "",
+        "typeDefinition": [
+          "flex"
+        ]
       }
     ],
     "lib": "ng-zorro-antd",
-    "title": "Affix",
-    "description": "Make an element stick to viewport.",
-    "whenToUse": "When user browses a long web page, some content need to stick to the viewport. This is common for menus and actions.",
-    "doc": "https://ng.ant.design/components/affix/en"
+    "title": "Grid",
+    "description": "24 Grids System。",
+    "whenToUse": "",
+    "doc": "https://ng.ant.design/components/grid/en"
   },
   {
-    "_idx": 12,
-    "type": "component",
-    "selector": "nz-anchor",
+    "_idx": 137,
+    "type": "directive",
+    "selector": "nz-col",
     "types": {},
     "properties": [
       {
-        "name": "nzAffix",
+        "name": "nzOffset",
         "inputType": 0,
-        "description": "Fixed mode of Anchor",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`true`",
-        "pureDefault": "true"
-      },
-      {
-        "name": "nzBounds",
-        "inputType": 0,
-        "description": "Bounding distance of anchor area, unit: px",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "`5`",
-        "pureDefault": "5"
-      },
-      {
-        "name": "nzOffsetBottom",
-        "inputType": 0,
-        "description": "Pixels to offset from bottom when calculating position of scroll",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": ""
-      },
-      {
-        "name": "nzOffsetTop",
-        "inputType": 0,
-        "description": "Pixels to offset from top when calculating position of scroll",
-        "type": "number",
+        "description": "the number of cells to offset Col from the left",
+        "type": "Enum",
         "typeRaw": "`number`",
         "default": "`0`",
-        "pureDefault": "0"
+        "pureDefault": "0",
+        "typeDefinition": [
+          "0",
+          "8",
+          "16",
+          "24",
+          "32",
+          "40",
+          "48",
+          "56",
+          "64"
+        ]
       },
       {
-        "name": "nzShowInkInFixed",
+        "name": "nzOrder",
         "inputType": 0,
-        "description": "Whether show ink-balls in Fixed mode",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false"
+        "description": "raster order, used in `flex` layout mode",
+        "type": "Enum",
+        "typeRaw": "`number`",
+        "default": "`0`",
+        "pureDefault": "0",
+        "typeDefinition": [
+          "0",
+          "8",
+          "16",
+          "24",
+          "32",
+          "40",
+          "48",
+          "56",
+          "64"
+        ]
       },
       {
-        "name": "nzTarget",
+        "name": "nzPull",
         "inputType": 0,
-        "description": "Scrolling container",
-        "type": "string",
-        "typeRaw": "`string｜HTMLElement`",
-        "default": "`window`",
-        "pureDefault": "window"
+        "description": "the number of cells that raster is moved to the left",
+        "type": "Enum",
+        "typeRaw": "`number`",
+        "default": "`0`",
+        "pureDefault": "0",
+        "typeDefinition": [
+          "0",
+          "8",
+          "16",
+          "24",
+          "32",
+          "40",
+          "48",
+          "56",
+          "64"
+        ]
       },
       {
-        "name": "nzClick",
-        "inputType": 1,
-        "description": "Click of Anchor item",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<string>`",
-        "default": ""
+        "name": "nzPush",
+        "inputType": 0,
+        "description": "the number of cells that raster is moved to the right",
+        "type": "Enum",
+        "typeRaw": "`number`",
+        "default": "`0`",
+        "pureDefault": "0",
+        "typeDefinition": [
+          "0",
+          "8",
+          "16",
+          "24",
+          "32",
+          "40",
+          "48",
+          "56",
+          "64"
+        ]
       },
       {
-        "name": "nzScroll",
-        "inputType": 1,
-        "description": "The scroll function that is triggered when scrolling to an anchor.",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<NzAnchorLinkComponent>`",
-        "default": ""
+        "name": "nzSpan",
+        "inputType": 0,
+        "description": "raster number of cells to occupy, 0 corresponds to `display: none`",
+        "type": "Enum",
+        "typeRaw": "`number`",
+        "default": "",
+        "typeDefinition": [
+          "0",
+          "8",
+          "16",
+          "24",
+          "32",
+          "40",
+          "48",
+          "56",
+          "64"
+        ]
+      },
+      {
+        "name": "nzXs",
+        "inputType": 0,
+        "description": "`<576px` and also default setting, could be a `span` value or an object containing above props",
+        "type": "Enum",
+        "typeRaw": "`number｜object`",
+        "default": "",
+        "typeDefinition": [
+          "0",
+          "8",
+          "16",
+          "24",
+          "32",
+          "40",
+          "48",
+          "56",
+          "64"
+        ]
+      },
+      {
+        "name": "nzSm",
+        "inputType": 0,
+        "description": "`≥576px`, could be a `span` value or an object containing above props",
+        "type": "Enum",
+        "typeRaw": "`number｜object`",
+        "default": "",
+        "typeDefinition": [
+          "0",
+          "8",
+          "16",
+          "24",
+          "32",
+          "40",
+          "48",
+          "56",
+          "64"
+        ]
+      },
+      {
+        "name": "nzMd",
+        "inputType": 0,
+        "description": "`≥768px`, could be a `span` value or an object containing above props",
+        "type": "Enum",
+        "typeRaw": "`number｜object`",
+        "default": "",
+        "typeDefinition": [
+          "0",
+          "8",
+          "16",
+          "24",
+          "32",
+          "40",
+          "48",
+          "56",
+          "64"
+        ]
+      },
+      {
+        "name": "nzLg",
+        "inputType": 0,
+        "description": "`≥992px`, could be a `span` value or an object containing above props",
+        "type": "Enum",
+        "typeRaw": "`number｜object`",
+        "default": "",
+        "typeDefinition": [
+          "0",
+          "8",
+          "16",
+          "24",
+          "32",
+          "40",
+          "48",
+          "56",
+          "64"
+        ]
+      },
+      {
+        "name": "nzXl",
+        "inputType": 0,
+        "description": "`≥1200px`, could be a `span` value or an object containing above props",
+        "type": "Enum",
+        "typeRaw": "`number｜object`",
+        "default": "",
+        "typeDefinition": [
+          "0",
+          "8",
+          "16",
+          "24",
+          "32",
+          "40",
+          "48",
+          "56",
+          "64"
+        ]
+      },
+      {
+        "name": "nzXXl",
+        "inputType": 0,
+        "description": "`≥1600px`, could be a `span` value or an object containing above props",
+        "type": "Enum",
+        "typeRaw": "`number｜object`",
+        "default": "",
+        "typeDefinition": [
+          "0",
+          "8",
+          "16",
+          "24",
+          "32",
+          "40",
+          "48",
+          "56",
+          "64"
+        ]
       }
     ],
     "lib": "ng-zorro-antd",
-    "title": "Anchor",
-    "description": "Hyperlinks to scroll on one page.",
-    "whenToUse": "For displaying anchor hyperlinks on page and jumping between them.",
-    "doc": "https://ng.ant.design/components/anchor/en"
+    "title": "Grid",
+    "description": "24 Grids System。",
+    "whenToUse": "",
+    "doc": "https://ng.ant.design/components/grid/en"
   },
   {
-    "_idx": 147,
+    "_idx": 11,
     "type": "component",
-    "selector": "nz-link",
+    "selector": "sg-container",
     "types": {},
     "properties": [
       {
-        "name": "nzHref",
+        "name": "gutter",
         "inputType": 0,
-        "description": "target of hyperlink",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": ""
+        "description": "specify the distance between two items, unit is `px`, only `nzLayout:horizontal`",
+        "type": "Enum",
+        "typeRaw": "`number`",
+        "default": "`32`",
+        "pureDefault": "32",
+        "typeDefinition": [
+          "0",
+          "8",
+          "16",
+          "24",
+          "32",
+          "40",
+          "48",
+          "56",
+          "64"
+        ]
       },
       {
-        "name": "nzTitle",
+        "name": "sg-container",
         "inputType": 0,
-        "description": "content of  hyperlink",
-        "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
-        "default": ""
+        "description": "specify the maximum number of columns to display, the final columns number is determined by col setting combined with [Responsive Rules](/theme/responsive)",
+        "type": "Enum",
+        "typeRaw": "`'1','2','3','4','5','6'`",
+        "default": "",
+        "typeDefinition": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ]
+      },
+      {
+        "name": "col",
+        "inputType": 0,
+        "description": "specify the maximum number of columns to display, the final columns number is determined by col setting combined with [Responsive Rules](/theme/responsive)",
+        "type": "Enum",
+        "typeRaw": "`'1','2','3','4','5','6'`",
+        "default": "",
+        "typeDefinition": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ]
       }
     ],
-    "lib": "ng-zorro-antd",
-    "title": "Anchor",
-    "description": "Hyperlinks to scroll on one page.",
-    "whenToUse": "For displaying anchor hyperlinks on page and jumping between them.",
-    "doc": "https://ng.ant.design/components/anchor/en"
+    "lib": "@delon/abc",
+    "selectorLabel": "delon-sg-container",
+    "title": "Simple Grid",
+    "description": "A higher-order components of grid systems, that consists of `sg-container` (directive) and `sg` components:",
+    "whenToUse": "",
+    "doc": "https://ng-alain.com/components/grid/en"
+  },
+  {
+    "_idx": 11,
+    "type": "directive",
+    "selector": "sg-container",
+    "types": {},
+    "properties": [
+      {
+        "name": "gutter",
+        "inputType": 0,
+        "description": "specify the distance between two items, unit is `px`, only `nzLayout:horizontal`",
+        "type": "Enum",
+        "typeRaw": "`number`",
+        "default": "`32`",
+        "pureDefault": "32",
+        "typeDefinition": [
+          "0",
+          "8",
+          "16",
+          "24",
+          "32",
+          "40",
+          "48",
+          "56",
+          "64"
+        ]
+      },
+      {
+        "name": "sg-container",
+        "inputType": 0,
+        "description": "specify the maximum number of columns to display, the final columns number is determined by col setting combined with [Responsive Rules](/theme/responsive)",
+        "type": "Enum",
+        "typeRaw": "`'1','2','3','4','5','6'`",
+        "default": "",
+        "typeDefinition": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ]
+      },
+      {
+        "name": "col",
+        "inputType": 0,
+        "description": "specify the maximum number of columns to display, the final columns number is determined by col setting combined with [Responsive Rules](/theme/responsive)",
+        "type": "Enum",
+        "typeRaw": "`'1','2','3','4','5','6'`",
+        "default": "",
+        "typeDefinition": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ]
+      }
+    ],
+    "lib": "@delon/abc",
+    "selectorLabel": "delon-sg-container",
+    "title": "Simple Grid",
+    "description": "A higher-order components of grid systems, that consists of `sg-container` (directive) and `sg` components:",
+    "whenToUse": "",
+    "doc": "https://ng-alain.com/components/grid/en"
+  },
+  {
+    "_idx": 76,
+    "type": "component",
+    "selector": "sg",
+    "types": {},
+    "properties": [
+      {
+        "name": "col",
+        "inputType": 0,
+        "description": "specify the maximum number of columns to display, the final columns number is determined by col setting combined with [Responsive Rules](/theme/responsive)",
+        "type": "Enum",
+        "typeRaw": "`'1','2','3','4','5','6'`",
+        "default": "",
+        "typeDefinition": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ]
+      }
+    ],
+    "lib": "@delon/abc",
+    "selectorLabel": "delon-sg",
+    "title": "Simple Grid",
+    "description": "A higher-order components of grid systems, that consists of `sg-container` (directive) and `sg` components:",
+    "whenToUse": "",
+    "doc": "https://ng-alain.com/components/grid/en"
   },
   {
     "_idx": 51,
@@ -672,6 +976,18 @@
         "typeRaw": "`boolean`",
         "default": "`false`",
         "pureDefault": "false"
+      },
+      {
+        "name": "click",
+        "inputType": 1,
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter`"
+      },
+      {
+        "name": "disabled",
+        "inputType": 0,
+        "type": "boolean",
+        "typeRaw": "`boolean`"
       }
     ],
     "description": "To get a customized button, just set `nzType`/`nzShape`/`nzSize`/`nzLoading`/`disabled`.",
@@ -1247,6 +1563,12 @@
         "type": "EventEmitter",
         "typeRaw": "`EventEmitter<any[]>`",
         "default": ""
+      },
+      {
+        "name": "formControlName",
+        "inputType": 0,
+        "type": "string",
+        "typeRaw": "`string`"
       }
     ],
     "lib": "ng-zorro-antd",
@@ -1312,6 +1634,12 @@
         "type": "EventEmitter",
         "typeRaw": "`EventEmitter<boolean>`",
         "default": ""
+      },
+      {
+        "name": "formControlName",
+        "inputType": 0,
+        "type": "string",
+        "typeRaw": "`string`"
       }
     ],
     "lib": "ng-zorro-antd",
@@ -1675,6 +2003,12 @@
         "type": "EventEmitter",
         "typeRaw": "`EventEmitter<Date>`",
         "default": ""
+      },
+      {
+        "name": "formControlName",
+        "inputType": 0,
+        "type": "string",
+        "typeRaw": "`string`"
       }
     ],
     "lib": "ng-zorro-antd",
@@ -2039,6 +2373,12 @@
         "type": "EventEmitter",
         "typeRaw": "`EventEmitter<Date>`",
         "default": ""
+      },
+      {
+        "name": "formControlName",
+        "inputType": 0,
+        "type": "string",
+        "typeRaw": "`string`"
       }
     ],
     "lib": "ng-zorro-antd",
@@ -2213,6 +2553,12 @@
         "type": "EventEmitter",
         "typeRaw": "`EventEmitter<Date>`",
         "default": ""
+      },
+      {
+        "name": "formControlName",
+        "inputType": 0,
+        "type": "string",
+        "typeRaw": "`string`"
       }
     ],
     "lib": "ng-zorro-antd",
@@ -2428,6 +2774,12 @@
         "type": "EventEmitter",
         "typeRaw": "`EventEmitter<Date[]>`",
         "default": ""
+      },
+      {
+        "name": "formControlName",
+        "inputType": 0,
+        "type": "string",
+        "typeRaw": "`string`"
       }
     ],
     "lib": "ng-zorro-antd",
@@ -2981,6 +3333,18 @@
           "inline"
         ],
         "pureDefault": "horizontal"
+      },
+      {
+        "name": "formGroup",
+        "inputType": 0,
+        "type": "object",
+        "typeRaw": "`object`"
+      },
+      {
+        "name": "ngSubmit",
+        "inputType": 1,
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<any>`"
       }
     ],
     "lib": "ng-zorro-antd",
@@ -2988,157 +3352,12 @@
     "description": "Form is used to collect, validate, and submit the user input, usually contains various form items including checkbox, radio, input, select, and etc.",
     "whenToUse": "",
     "doc": "https://ng.ant.design/components/form/en",
-    "snippet": "<form __ (ngSubmit)=\"${1:save}()\"$2>$0</form>"
+    "snippet": "<form __$1>$0</form>"
   },
   {
     "_idx": 93,
     "type": "component",
     "selector": "nz-form-item",
-    "types": {},
-    "properties": [
-      {
-        "name": "nzFlex",
-        "inputType": 0,
-        "description": "display flex",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false"
-      }
-    ],
-    "description": "Used to separate the item in forms, contains label(optional) and control field.",
-    "lib": "ng-zorro-antd",
-    "title": "Form",
-    "whenToUse": "",
-    "doc": "https://ng.ant.design/components/form/en"
-  },
-  {
-    "_idx": 138,
-    "type": "component",
-    "selector": "nz-form-label",
-    "types": {},
-    "properties": [
-      {
-        "name": "nzRequired",
-        "inputType": 0,
-        "description": "add required style to current item",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false"
-      },
-      {
-        "name": "nzFor",
-        "inputType": 0,
-        "description": "The `for` property of `label`",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": ""
-      }
-    ],
-    "description": "The label of the form item, optional.",
-    "lib": "ng-zorro-antd",
-    "title": "Form",
-    "whenToUse": "",
-    "doc": "https://ng.ant.design/components/form/en"
-  },
-  {
-    "_idx": 197,
-    "type": "component",
-    "selector": "nz-form-control",
-    "types": {},
-    "properties": [
-      {
-        "name": "nzValidateStatus",
-        "inputType": 0,
-        "description": "Reactive Forms: Will generate status based on FormControl",
-        "type": "string",
-        "typeRaw": "`FormControl`",
-        "default": "first `FormControl` in `nz-form-control`",
-        "pureDefault": "first `FormControl` in `nz-form-control`"
-      },
-      {
-        "name": "nzValidateStatus",
-        "inputType": 0,
-        "description": "Template-driven Forms: The validation status",
-        "type": "Enum",
-        "typeRaw": "`'success'｜'warning'｜'error'｜'validating'`",
-        "default": "",
-        "typeDefinition": [
-          "success",
-          "warning",
-          "error",
-          "validating"
-        ]
-      },
-      {
-        "name": "nzHasFeedback",
-        "inputType": 0,
-        "description": "Used with `nzValidateStatus`, this option specifies the validation status icon. Recommended to be used only with `Input`.",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false"
-      }
-    ],
-    "description": "Note：Due to the lack of partial Observable in [Angular Form](https://github.com/angular/angular/issues/10887), you have to notify `nz-form-control` to update its status with `updateValueAndValidity` when you update form status using methods like `markAsDirty`.",
-    "lib": "ng-zorro-antd",
-    "title": "Form",
-    "whenToUse": "",
-    "doc": "https://ng.ant.design/components/form/en"
-  },
-  {
-    "_idx": 275,
-    "type": "component",
-    "selector": "nz-form-explain",
-    "types": {},
-    "properties": [],
-    "description": "Validation messages",
-    "lib": "ng-zorro-antd",
-    "title": "Form",
-    "whenToUse": "",
-    "doc": "https://ng.ant.design/components/form/en"
-  },
-  {
-    "_idx": 281,
-    "type": "component",
-    "selector": "nz-form-extra",
-    "types": {},
-    "properties": [],
-    "description": "The extra prompt message. It is similar to help.",
-    "lib": "ng-zorro-antd",
-    "title": "Form",
-    "whenToUse": "",
-    "doc": "https://ng.ant.design/components/form/en"
-  },
-  {
-    "_idx": 287,
-    "type": "component",
-    "selector": "nz-form-split",
-    "types": {},
-    "properties": [],
-    "description": "The split icon of `-`",
-    "lib": "ng-zorro-antd",
-    "title": "Form",
-    "whenToUse": "",
-    "doc": "https://ng.ant.design/components/form/en"
-  },
-  {
-    "_idx": 293,
-    "type": "component",
-    "selector": "nz-form-text",
-    "types": {},
-    "properties": [],
-    "description": "Text in `nz-form-control`",
-    "lib": "ng-zorro-antd",
-    "title": "Form",
-    "whenToUse": "",
-    "doc": "https://ng.ant.design/components/form/en"
-  },
-  {
-    "_idx": 58,
-    "type": "directive",
-    "selector": "nz-row",
     "types": {},
     "properties": [
       {
@@ -3201,18 +3420,27 @@
         "typeDefinition": [
           "flex"
         ]
+      },
+      {
+        "name": "nzFlex",
+        "inputType": 0,
+        "description": "display flex",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
       }
     ],
+    "description": "Used to separate the item in forms, contains label(optional) and control field.",
     "lib": "ng-zorro-antd",
-    "title": "Grid",
-    "description": "24 Grids System。",
+    "title": "Form",
     "whenToUse": "",
-    "doc": "https://ng.ant.design/components/grid/en"
+    "doc": "https://ng.ant.design/components/form/en"
   },
   {
-    "_idx": 137,
-    "type": "directive",
-    "selector": "nz-col",
+    "_idx": 138,
+    "type": "component",
+    "selector": "nz-form-label",
     "types": {},
     "properties": [
       {
@@ -3427,13 +3655,383 @@
           "56",
           "64"
         ]
+      },
+      {
+        "name": "nzRequired",
+        "inputType": 0,
+        "description": "add required style to current item",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzFor",
+        "inputType": 0,
+        "description": "The `for` property of `label`",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
+      }
+    ],
+    "description": "The label of the form item, optional.",
+    "lib": "ng-zorro-antd",
+    "title": "Form",
+    "whenToUse": "",
+    "doc": "https://ng.ant.design/components/form/en"
+  },
+  {
+    "_idx": 197,
+    "type": "component",
+    "selector": "nz-form-control",
+    "types": {},
+    "properties": [
+      {
+        "name": "nzOffset",
+        "inputType": 0,
+        "description": "the number of cells to offset Col from the left",
+        "type": "Enum",
+        "typeRaw": "`number`",
+        "default": "`0`",
+        "pureDefault": "0",
+        "typeDefinition": [
+          "0",
+          "8",
+          "16",
+          "24",
+          "32",
+          "40",
+          "48",
+          "56",
+          "64"
+        ]
+      },
+      {
+        "name": "nzOrder",
+        "inputType": 0,
+        "description": "raster order, used in `flex` layout mode",
+        "type": "Enum",
+        "typeRaw": "`number`",
+        "default": "`0`",
+        "pureDefault": "0",
+        "typeDefinition": [
+          "0",
+          "8",
+          "16",
+          "24",
+          "32",
+          "40",
+          "48",
+          "56",
+          "64"
+        ]
+      },
+      {
+        "name": "nzPull",
+        "inputType": 0,
+        "description": "the number of cells that raster is moved to the left",
+        "type": "Enum",
+        "typeRaw": "`number`",
+        "default": "`0`",
+        "pureDefault": "0",
+        "typeDefinition": [
+          "0",
+          "8",
+          "16",
+          "24",
+          "32",
+          "40",
+          "48",
+          "56",
+          "64"
+        ]
+      },
+      {
+        "name": "nzPush",
+        "inputType": 0,
+        "description": "the number of cells that raster is moved to the right",
+        "type": "Enum",
+        "typeRaw": "`number`",
+        "default": "`0`",
+        "pureDefault": "0",
+        "typeDefinition": [
+          "0",
+          "8",
+          "16",
+          "24",
+          "32",
+          "40",
+          "48",
+          "56",
+          "64"
+        ]
+      },
+      {
+        "name": "nzSpan",
+        "inputType": 0,
+        "description": "raster number of cells to occupy, 0 corresponds to `display: none`",
+        "type": "Enum",
+        "typeRaw": "`number`",
+        "default": "",
+        "typeDefinition": [
+          "0",
+          "8",
+          "16",
+          "24",
+          "32",
+          "40",
+          "48",
+          "56",
+          "64"
+        ]
+      },
+      {
+        "name": "nzXs",
+        "inputType": 0,
+        "description": "`<576px` and also default setting, could be a `span` value or an object containing above props",
+        "type": "Enum",
+        "typeRaw": "`number｜object`",
+        "default": "",
+        "typeDefinition": [
+          "0",
+          "8",
+          "16",
+          "24",
+          "32",
+          "40",
+          "48",
+          "56",
+          "64"
+        ]
+      },
+      {
+        "name": "nzSm",
+        "inputType": 0,
+        "description": "`≥576px`, could be a `span` value or an object containing above props",
+        "type": "Enum",
+        "typeRaw": "`number｜object`",
+        "default": "",
+        "typeDefinition": [
+          "0",
+          "8",
+          "16",
+          "24",
+          "32",
+          "40",
+          "48",
+          "56",
+          "64"
+        ]
+      },
+      {
+        "name": "nzMd",
+        "inputType": 0,
+        "description": "`≥768px`, could be a `span` value or an object containing above props",
+        "type": "Enum",
+        "typeRaw": "`number｜object`",
+        "default": "",
+        "typeDefinition": [
+          "0",
+          "8",
+          "16",
+          "24",
+          "32",
+          "40",
+          "48",
+          "56",
+          "64"
+        ]
+      },
+      {
+        "name": "nzLg",
+        "inputType": 0,
+        "description": "`≥992px`, could be a `span` value or an object containing above props",
+        "type": "Enum",
+        "typeRaw": "`number｜object`",
+        "default": "",
+        "typeDefinition": [
+          "0",
+          "8",
+          "16",
+          "24",
+          "32",
+          "40",
+          "48",
+          "56",
+          "64"
+        ]
+      },
+      {
+        "name": "nzXl",
+        "inputType": 0,
+        "description": "`≥1200px`, could be a `span` value or an object containing above props",
+        "type": "Enum",
+        "typeRaw": "`number｜object`",
+        "default": "",
+        "typeDefinition": [
+          "0",
+          "8",
+          "16",
+          "24",
+          "32",
+          "40",
+          "48",
+          "56",
+          "64"
+        ]
+      },
+      {
+        "name": "nzXXl",
+        "inputType": 0,
+        "description": "`≥1600px`, could be a `span` value or an object containing above props",
+        "type": "Enum",
+        "typeRaw": "`number｜object`",
+        "default": "",
+        "typeDefinition": [
+          "0",
+          "8",
+          "16",
+          "24",
+          "32",
+          "40",
+          "48",
+          "56",
+          "64"
+        ]
+      },
+      {
+        "name": "nzValidateStatus",
+        "inputType": 0,
+        "description": "Reactive Forms: Will generate status based on FormControl",
+        "type": "string",
+        "typeRaw": "`FormControl`",
+        "default": "first `FormControl` in `nz-form-control`",
+        "pureDefault": "first `FormControl` in `nz-form-control`"
+      },
+      {
+        "name": "nzValidateStatus",
+        "inputType": 0,
+        "description": "Template-driven Forms: The validation status",
+        "type": "Enum",
+        "typeRaw": "`'success'｜'warning'｜'error'｜'validating'`",
+        "default": "",
+        "typeDefinition": [
+          "success",
+          "warning",
+          "error",
+          "validating"
+        ]
+      },
+      {
+        "name": "nzHasFeedback",
+        "inputType": 0,
+        "description": "Used with `nzValidateStatus`, this option specifies the validation status icon. Recommended to be used only with `Input`.",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      }
+    ],
+    "description": "Note：Due to the lack of partial Observable in [Angular Form](https://github.com/angular/angular/issues/10887), you have to notify `nz-form-control` to update its status with `updateValueAndValidity` when you update form status using methods like `markAsDirty`.",
+    "lib": "ng-zorro-antd",
+    "title": "Form",
+    "whenToUse": "",
+    "doc": "https://ng.ant.design/components/form/en"
+  },
+  {
+    "_idx": 275,
+    "type": "component",
+    "selector": "nz-form-explain",
+    "types": {},
+    "properties": [],
+    "description": "Validation messages",
+    "lib": "ng-zorro-antd",
+    "title": "Form",
+    "whenToUse": "",
+    "doc": "https://ng.ant.design/components/form/en"
+  },
+  {
+    "_idx": 281,
+    "type": "component",
+    "selector": "nz-form-extra",
+    "types": {},
+    "properties": [],
+    "description": "The extra prompt message. It is similar to help.",
+    "lib": "ng-zorro-antd",
+    "title": "Form",
+    "whenToUse": "",
+    "doc": "https://ng.ant.design/components/form/en"
+  },
+  {
+    "_idx": 287,
+    "type": "component",
+    "selector": "nz-form-split",
+    "types": {},
+    "properties": [],
+    "description": "The split icon of `-`",
+    "lib": "ng-zorro-antd",
+    "title": "Form",
+    "whenToUse": "",
+    "doc": "https://ng.ant.design/components/form/en"
+  },
+  {
+    "_idx": 293,
+    "type": "component",
+    "selector": "nz-form-text",
+    "types": {},
+    "properties": [],
+    "description": "Text in `nz-form-control`",
+    "lib": "ng-zorro-antd",
+    "title": "Form",
+    "whenToUse": "",
+    "doc": "https://ng.ant.design/components/form/en"
+  },
+  {
+    "_idx": 15,
+    "type": "component",
+    "selector": "nz-affix",
+    "types": {},
+    "properties": [
+      {
+        "name": "nzOffsetBottom",
+        "inputType": 0,
+        "description": "Pixels to offset from bottom when calculating position of scroll",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": ""
+      },
+      {
+        "name": "nzOffsetTop",
+        "inputType": 0,
+        "description": "Pixels to offset from top when calculating position of scroll",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`0`",
+        "pureDefault": "0"
+      },
+      {
+        "name": "nzTarget",
+        "inputType": 0,
+        "description": "specifies the scrollable area dom node",
+        "type": "string",
+        "typeRaw": "`string｜HTMLElement`",
+        "default": "`window`",
+        "pureDefault": "window"
+      },
+      {
+        "name": "nzChange",
+        "inputType": 1,
+        "description": "Callback for when affix state is changed",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<boolean>`",
+        "default": ""
       }
     ],
     "lib": "ng-zorro-antd",
-    "title": "Grid",
-    "description": "24 Grids System。",
-    "whenToUse": "",
-    "doc": "https://ng.ant.design/components/grid/en"
+    "title": "Affix",
+    "description": "Make an element stick to viewport.",
+    "whenToUse": "When user browses a long web page, some content need to stick to the viewport. This is common for menus and actions.",
+    "doc": "https://ng.ant.design/components/affix/en"
   },
   {
     "_idx": 21,
@@ -3463,6 +4061,37 @@
         "typeRaw": "`boolean｜{ minRows: number, maxRows: number }`",
         "default": "`false`",
         "pureDefault": "false"
+      },
+      {
+        "name": "ngModel",
+        "inputType": 2,
+        "type": "any",
+        "typeRaw": "`any`"
+      },
+      {
+        "name": "ngModelChange",
+        "inputType": 1,
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<any>`"
+      },
+      {
+        "name": "disabled",
+        "inputType": 0,
+        "type": "boolean",
+        "typeRaw": "`boolean`"
+      },
+      {
+        "name": "nzAutocomplete",
+        "inputType": 0,
+        "type": "TemplateRef",
+        "typeRaw": "`TemplateRef`",
+        "default": "auto"
+      },
+      {
+        "name": "formControlName",
+        "inputType": 0,
+        "type": "string",
+        "typeRaw": "`string`"
       }
     ],
     "description": "All props of input supported by [w3c standards](https://www.w3schools.com/tags/tag_input.asp) and Angular can used in `nz-input`.",
@@ -3668,6 +4297,12 @@
         "type": "EventEmitter",
         "typeRaw": "`EventEmitter<void>`",
         "default": ""
+      },
+      {
+        "name": "formControlName",
+        "inputType": 0,
+        "type": "string",
+        "typeRaw": "`string`"
       }
     ],
     "lib": "ng-zorro-antd",
@@ -4740,6 +5375,12 @@
         "type": "EventEmitter",
         "typeRaw": "`EventEmitter<boolean>`",
         "default": ""
+      },
+      {
+        "name": "formControlName",
+        "inputType": 0,
+        "type": "string",
+        "typeRaw": "`string`"
       }
     ],
     "lib": "ng-zorro-antd",
@@ -4985,6 +5626,12 @@
         "type": "EventEmitter",
         "typeRaw": "`EventEmitter<KeyboardEvent>`",
         "default": ""
+      },
+      {
+        "name": "formControlName",
+        "inputType": 0,
+        "type": "string",
+        "typeRaw": "`string`"
       }
     ],
     "lib": "ng-zorro-antd",
@@ -5189,6 +5836,12 @@
         "type": "EventEmitter",
         "typeRaw": "`EventEmitter<string>`",
         "default": ""
+      },
+      {
+        "name": "formControlName",
+        "inputType": 0,
+        "type": "string",
+        "typeRaw": "`string`"
       }
     ],
     "lib": "ng-zorro-antd",
@@ -5449,6 +6102,12 @@
         "type": "EventEmitter",
         "typeRaw": "`EventEmitter<number[] ｜ number>`",
         "default": ""
+      },
+      {
+        "name": "formControlName",
+        "inputType": 0,
+        "type": "string",
+        "typeRaw": "`string`"
       }
     ],
     "lib": "ng-zorro-antd",
@@ -5741,6 +6400,12 @@
         "type": "EventEmitter",
         "typeRaw": "`EventEmitter<boolean>`",
         "default": ""
+      },
+      {
+        "name": "formControlName",
+        "inputType": 0,
+        "type": "string",
+        "typeRaw": "`string`"
       }
     ],
     "lib": "ng-zorro-antd",
@@ -6641,6 +7306,12 @@
         "type": "EventEmitter",
         "typeRaw": "`EventEmitter<boolean>`",
         "default": ""
+      },
+      {
+        "name": "formControlName",
+        "inputType": 0,
+        "type": "string",
+        "typeRaw": "`string`"
       }
     ],
     "lib": "ng-zorro-antd",
@@ -7395,6 +8066,12 @@
         "type": "EventEmitter",
         "typeRaw": "`EventEmitter<NzFormatEmitEvent>`",
         "default": ""
+      },
+      {
+        "name": "formControlName",
+        "inputType": 0,
+        "type": "string",
+        "typeRaw": "`string`"
       }
     ],
     "lib": "ng-zorro-antd",
@@ -8740,166 +9417,115 @@
     "doc": "https://ng-alain.com/components/global-footer/en"
   },
   {
-    "_idx": 11,
+    "_idx": 12,
     "type": "component",
-    "selector": "sg-container",
+    "selector": "nz-anchor",
     "types": {},
     "properties": [
       {
-        "name": "gutter",
+        "name": "nzAffix",
         "inputType": 0,
-        "description": "specify the distance between two items, unit is `px`, only `nzLayout:horizontal`",
-        "type": "Enum",
+        "description": "Fixed mode of Anchor",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`true`",
+        "pureDefault": "true"
+      },
+      {
+        "name": "nzBounds",
+        "inputType": 0,
+        "description": "Bounding distance of anchor area, unit: px",
+        "type": "number",
         "typeRaw": "`number`",
-        "default": "`32`",
-        "pureDefault": "32",
-        "typeDefinition": [
-          "0",
-          "8",
-          "16",
-          "24",
-          "32",
-          "40",
-          "48",
-          "56",
-          "64"
-        ]
+        "default": "`5`",
+        "pureDefault": "5"
       },
       {
-        "name": "sg-container",
+        "name": "nzOffsetBottom",
         "inputType": 0,
-        "description": "specify the maximum number of columns to display, the final columns number is determined by col setting combined with [Responsive Rules](/theme/responsive)",
-        "type": "Enum",
-        "typeRaw": "`'1','2','3','4','5','6'`",
-        "default": "",
-        "typeDefinition": [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6"
-        ]
+        "description": "Pixels to offset from bottom when calculating position of scroll",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": ""
       },
       {
-        "name": "col",
+        "name": "nzOffsetTop",
         "inputType": 0,
-        "description": "specify the maximum number of columns to display, the final columns number is determined by col setting combined with [Responsive Rules](/theme/responsive)",
-        "type": "Enum",
-        "typeRaw": "`'1','2','3','4','5','6'`",
-        "default": "",
-        "typeDefinition": [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6"
-        ]
+        "description": "Pixels to offset from top when calculating position of scroll",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`0`",
+        "pureDefault": "0"
+      },
+      {
+        "name": "nzShowInkInFixed",
+        "inputType": 0,
+        "description": "Whether show ink-balls in Fixed mode",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzTarget",
+        "inputType": 0,
+        "description": "Scrolling container",
+        "type": "string",
+        "typeRaw": "`string｜HTMLElement`",
+        "default": "`window`",
+        "pureDefault": "window"
+      },
+      {
+        "name": "nzClick",
+        "inputType": 1,
+        "description": "Click of Anchor item",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<string>`",
+        "default": ""
+      },
+      {
+        "name": "nzScroll",
+        "inputType": 1,
+        "description": "The scroll function that is triggered when scrolling to an anchor.",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<NzAnchorLinkComponent>`",
+        "default": ""
       }
     ],
-    "lib": "@delon/abc",
-    "selectorLabel": "delon-sg-container",
-    "title": "Simple Grid",
-    "description": "A higher-order components of grid systems, that consists of `sg-container` (directive) and `sg` components:",
-    "whenToUse": "",
-    "doc": "https://ng-alain.com/components/grid/en"
+    "lib": "ng-zorro-antd",
+    "title": "Anchor",
+    "description": "Hyperlinks to scroll on one page.",
+    "whenToUse": "For displaying anchor hyperlinks on page and jumping between them.",
+    "doc": "https://ng.ant.design/components/anchor/en"
   },
   {
-    "_idx": 11,
-    "type": "directive",
-    "selector": "sg-container",
-    "types": {},
-    "properties": [
-      {
-        "name": "gutter",
-        "inputType": 0,
-        "description": "specify the distance between two items, unit is `px`, only `nzLayout:horizontal`",
-        "type": "Enum",
-        "typeRaw": "`number`",
-        "default": "`32`",
-        "pureDefault": "32",
-        "typeDefinition": [
-          "0",
-          "8",
-          "16",
-          "24",
-          "32",
-          "40",
-          "48",
-          "56",
-          "64"
-        ]
-      },
-      {
-        "name": "sg-container",
-        "inputType": 0,
-        "description": "specify the maximum number of columns to display, the final columns number is determined by col setting combined with [Responsive Rules](/theme/responsive)",
-        "type": "Enum",
-        "typeRaw": "`'1','2','3','4','5','6'`",
-        "default": "",
-        "typeDefinition": [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6"
-        ]
-      },
-      {
-        "name": "col",
-        "inputType": 0,
-        "description": "specify the maximum number of columns to display, the final columns number is determined by col setting combined with [Responsive Rules](/theme/responsive)",
-        "type": "Enum",
-        "typeRaw": "`'1','2','3','4','5','6'`",
-        "default": "",
-        "typeDefinition": [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6"
-        ]
-      }
-    ],
-    "lib": "@delon/abc",
-    "selectorLabel": "delon-sg-container",
-    "title": "Simple Grid",
-    "description": "A higher-order components of grid systems, that consists of `sg-container` (directive) and `sg` components:",
-    "whenToUse": "",
-    "doc": "https://ng-alain.com/components/grid/en"
-  },
-  {
-    "_idx": 76,
+    "_idx": 147,
     "type": "component",
-    "selector": "sg",
+    "selector": "nz-link",
     "types": {},
     "properties": [
       {
-        "name": "col",
+        "name": "nzHref",
         "inputType": 0,
-        "description": "specify the maximum number of columns to display, the final columns number is determined by col setting combined with [Responsive Rules](/theme/responsive)",
-        "type": "Enum",
-        "typeRaw": "`'1','2','3','4','5','6'`",
-        "default": "",
-        "typeDefinition": [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6"
-        ]
+        "description": "target of hyperlink",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
+      },
+      {
+        "name": "nzTitle",
+        "inputType": 0,
+        "description": "content of  hyperlink",
+        "type": "string",
+        "typeRaw": "`string｜TemplateRef<void>`",
+        "default": ""
       }
     ],
-    "lib": "@delon/abc",
-    "selectorLabel": "delon-sg",
-    "title": "Simple Grid",
-    "description": "A higher-order components of grid systems, that consists of `sg-container` (directive) and `sg` components:",
-    "whenToUse": "",
-    "doc": "https://ng-alain.com/components/grid/en"
+    "lib": "ng-zorro-antd",
+    "title": "Anchor",
+    "description": "Hyperlinks to scroll on one page.",
+    "whenToUse": "For displaying anchor hyperlinks on page and jumping between them.",
+    "doc": "https://ng.ant.design/components/anchor/en"
   },
   {
     "_idx": 6,

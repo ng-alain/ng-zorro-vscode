@@ -1,8 +1,21 @@
-# ng-zorro-antd VSCode Snippets
+# NG-ZORRO Snippets
 
-![Plugin in action](help.gif)
+![Help](help.gif)
 
 [中文](README.zh-CN.md)
+
+## Usage
+
+Typing `<` or `n` in the `.html` file to trigger all components in the intellisense list, pressing `Tab` or `Enter` will be complete automatically; no more!
+
+In addition, some common complete code snippets are built in and prefix with `nzs-`.
+
+## Configuration
+
+| Name                       | Description             | Type           | Default |
+|----------------------------|-------------------------|----------------|---------|
+| `ng-zorro-vscode.language` | Set language code       | `zh-CN, en-US` | `en-US` |
+| `ng-zorro-vscode.hover`    | Whether to enable hover | `boolean`      | `true`  |
 
 ## Support Language Versions
 
@@ -13,15 +26,6 @@
 
 - [issues](https://github.com/cipchk/ng-zorro-vscode/issues)
 - If ng-alain users need additional installation [ng-alain-vscode](https://marketplace.visualstudio.com/items?itemName=cipchk.ng-alain-vscode)
-
-## Usage
-
-Typing the beginning of `nz-` will automatically appear in the intellisense list; no more!
-
-- `nz-` prefix is complete fragment
-- `nz` (not `-`) prefix is attribute fragment
-
-> To ensure ng-zorro-antd snippets suggestions are always on top in the suggestion list, add the following settings `"editor.snippetSuggestions": "top"`.
 
 ## Changelog
 

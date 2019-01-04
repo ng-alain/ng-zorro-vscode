@@ -59,7 +59,6 @@ packingByLang() {
     echo "Packing version: ${LANG}"
     node ./scripts/build/package.js ${LANG}
     cp snippets/html${prefix}.json ./snippets.json
-    cp ./scripts/build/help${prefix}.gif ./help.gif
     $(npm bin)/vsce package -o cipchk.ng-zorro-vscode${prefix}-${VERSION}.vsix
   )
 }

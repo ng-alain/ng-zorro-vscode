@@ -65,7 +65,19 @@ export interface DirectiveProperty {
    */
   description?: string;
 
-  type?: 'string' | 'TemplateRef' | 'boolean' | 'number' | 'Array' | 'Enum' | 'Date' | 'object' | 'function' | 'HTMLElement' | 'EventEmitter';
+  type?:
+    | 'any'
+    | 'string'
+    | 'TemplateRef'
+    | 'boolean'
+    | 'number'
+    | 'Array'
+    | 'Enum'
+    | 'Date'
+    | 'object'
+    | 'function'
+    | 'HTMLElement'
+    | 'EventEmitter';
   complexType?: string;
   typeRaw?: string;
   /**

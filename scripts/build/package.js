@@ -23,5 +23,8 @@ if (lang === DEFAULT_LANG) {
 }
 rootPackage.displayName = i18n.displayName;
 rootPackage.description = i18n.description;
+const langItem = rootPackage.contributes.configuration.properties['ng-zorro-vscode.language'];
+langItem.default = lang;
+langItem.description = langItem.description.replace(/default: '[^']+'/g, `default: '${lang}'`);
 
 fs.writeFileSync(rootPackagePath, JSON.stringify(rootPackage, null, 2));

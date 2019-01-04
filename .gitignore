@@ -7,7 +7,6 @@
 package-lock.json
 npm-debug.log
 yarn.lock
-/ng-zorro*.vsix
 /cipchk*.vsix
 /out
 /snippets

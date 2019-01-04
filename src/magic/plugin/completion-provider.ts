@@ -13,7 +13,7 @@ import {
   MarkdownString,
 } from 'vscode';
 import { DirectiveProperty, Directive, DirectiveTypeDefinition, InputAttrType } from '../interfaces';
-import { getDirective, CONFIG, RESOURCES, genComponentMarkdown } from '../resources';
+import { getDirective, CONFIG, RESOURCES, genComponentMarkdown, genPropertyMarkdown } from '../resources';
 import { getTag } from '../utils';
 
 export default class implements CompletionItemProvider {
@@ -36,7 +36,7 @@ export default class implements CompletionItemProvider {
       case ' ':
       case '(':
       case '[':
-        return this.genProperties(document, position, char)
+        return this.genProperties(document, position, char);
       default:
         return [];
     }
@@ -47,7 +47,7 @@ export default class implements CompletionItemProvider {
   }
 
   private renderCompletionItem(char: string, i: Directive): CompletionItem {
-    const item = new CompletionItem(i.selectorLabel || i.selector, CompletionItemKind.Snippet);
+    const item = new CompletionItem(i.selectorLabel || i.selector, CompletionItemKind.Property);
     item.command = this.triggerHideSuggestCommand;
     item.documentation = new MarkdownString(genComponentMarkdown(i));
     // `<` 非单词部分需要提前移除触发词
@@ -76,11 +76,11 @@ export default class implements CompletionItemProvider {
           if (range) {
             range = new Range(
               new Position(range.start.line, range.start.character + 1),
-              new Position(range.end.line, range.end.character - 1)
+              new Position(range.end.line, range.end.character - 1),
             );
-          };
+          }
           return property.typeDefinition.map((i: DirectiveTypeDefinition) => {
-            const item = new CompletionItem(i.value, CompletionItemKind.Value);
+            const item = new CompletionItem(i.value, CompletionItemKind.EnumMember);
             item.documentation = new MarkdownString(i.label);
             item.range = range;
             return item;
@@ -104,11 +104,8 @@ export default class implements CompletionItemProvider {
     if (triggerCharacter === '[') {
       let range = document.getWordRangeAtPosition(position, /\[\s*\]/);
       if (range) {
-        range = new Range(
-          new Position(range.start.line, range.start.character + 1),
-          new Position(range.end.line, range.end.character)
-        );
-      };
+        range = new Range(new Position(range.start.line, range.start.character + 1), new Position(range.end.line, range.end.character));
+      }
       return directive.properties
         .filter(w => existsAttrList.indexOf(w.name) === -1)
         .filter(w => w.inputType === InputAttrType.Input || w.inputType === InputAttrType.InputOutput)
@@ -117,24 +114,19 @@ export default class implements CompletionItemProvider {
     if (triggerCharacter === '(') {
       let range = document.getWordRangeAtPosition(position, /\(\s*\)/);
       if (range) {
-        range = new Range(
-          new Position(range.start.line, range.start.character + 1),
-          new Position(range.end.line, range.end.character)
-        );
-      };
+        range = new Range(new Position(range.start.line, range.start.character + 1), new Position(range.end.line, range.end.character));
+      }
       return directive.properties
         .filter(w => existsAttrList.indexOf(w.name) === -1)
         .filter(w => w.inputType === InputAttrType.Output || w.inputType === InputAttrType.InputOutput)
         .map(i => this.renderAttrCompletionItem(i, 'event', range));
     }
-    return directive.properties
-      .filter(w => existsAttrList.indexOf(w.name) === -1)
-      .map(i => this.renderAttrCompletionItem(i, '', null));
+    return directive.properties.filter(w => existsAttrList.indexOf(w.name) === -1).map(i => this.renderAttrCompletionItem(i, '', null));
   }
 
   private renderAttrCompletionItem(property: DirectiveProperty, ngBindingType: string, range: Range): CompletionItem {
     const item = new CompletionItem(property.name, CompletionItemKind.Field);
-    item.documentation = new MarkdownString(property.description);
+    item.documentation = new MarkdownString(genPropertyMarkdown(property));
     if (range) {
       item.range = range;
     }
@@ -167,6 +159,9 @@ export default class implements CompletionItemProvider {
   }
 
   private genDefaultPropertySnippet(property: DirectiveProperty): string {
+    if (property.inputType === InputAttrType.InputOutput) {
+      return `[(${property.name})]=${this.genDefaultPropertyValueSnippet(property)}`;
+    }
     switch (property.type) {
       case 'string':
       case 'Enum':
@@ -176,10 +171,12 @@ export default class implements CompletionItemProvider {
         break;
       case 'boolean':
         return `${property.name}=${this.genDefaultPropertyValueSnippet(property)}`;
-      case 'TemplateRef':
-        return `[${property.name}]=${this.genDefaultPropertyValueSnippet(property)}`;
+      case 'any':
+      case 'object':
+      case 'Date':
       case 'Array':
       case 'function':
+      case 'TemplateRef':
         return `[${property.name}]=${this.genDefaultPropertyValueSnippet(property)}`;
       case 'EventEmitter':
         return `(${property.name})=${this.genDefaultPropertyValueSnippet(property)}`;
@@ -188,28 +185,31 @@ export default class implements CompletionItemProvider {
 
   private genDefaultPropertyValueSnippet(property: DirectiveProperty): string {
     switch (property.type) {
-      case 'string':
-      case 'Enum':
-        if (property.typeDefinitionSnippetStr.length > 0) {
-          return `"\${1|${property.typeDefinitionSnippetStr}|}"$0`;
-        }
-        break;
       case 'boolean':
         return `"\${1|true,false${CONFIG.isAlain ? ',http.loading' : ''}|}"$0`;
       case 'TemplateRef':
-        return `"\${1:${property.pureName}}Tpl"$0`;
+        return property.default ? `"\${1:${property.default}}"$0` : `"\${1:${property.pureName}}Tpl"$0`;
       case 'Array':
       case 'function':
         return `"\${1:${property.pureName}}"$0`;
       case 'EventEmitter':
-        return `"\${1:${property.pureName}}(\${2|true,false,$event|})"$0`;
+        if (~property.typeRaw.indexOf('boolean')) {
+          return `"\${1:${property.pureName}}(\${2|$event,true,false|})"$0`;
+        }
+        return `"\${1:${property.pureName}}(\${2:\\$event})"$0`;
+      default:
+        if (property.typeDefinitionSnippetStr.length > 0) {
+          return `"\${1|${property.typeDefinitionSnippetStr}|}"$0`;
+        } else {
+          return `"\${1:${property.pureName}}"$0`;
+        }
     }
   }
 
   private get triggerHideSuggestCommand() {
     return {
       command: 'hideSuggestWidget',
-      title: 'hideSuggestWidget'
-    }
+      title: 'hideSuggestWidget',
+    };
   }
 }

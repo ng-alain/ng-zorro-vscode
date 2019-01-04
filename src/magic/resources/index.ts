@@ -41,10 +41,7 @@ export async function INIT(notifier: Notifier) {
       return null;
     }
     const packageJson = JSON.parse(readFileSync(packageJsonPath).toString());
-    const VERSIONS = [
-      ...Object.keys(packageJson.dependencies),
-      ...Object.keys(packageJson.devDependencies),
-    ];
+    const VERSIONS = [...Object.keys(packageJson.dependencies), ...Object.keys(packageJson.devDependencies)];
     if (~VERSIONS.indexOf(`ng-zorro-antd`)) {
       CONFIG.isAntd = true;
     }
@@ -85,8 +82,8 @@ export async function INIT(notifier: Notifier) {
       p.description = notNull(p.description);
       p.isInputBoolean = notNull(p.isInputBoolean, true);
       p.type = notNull(p.type, 'string');
-      p.typeRaw = notNull(p.typeRaw, '').replace(/｜/g, '|')
-      p.typeDefinition = notNull(p.typeDefinition, []).map((item: any) => typeof item === 'string' ? { value: item } : item);
+      p.typeRaw = notNull(p.typeRaw, '').replace(/｜/g, '|');
+      p.typeDefinition = notNull(p.typeDefinition, []).map((item: any) => (typeof item === 'string' ? { value: item } : item));
       p.typeDefinitionSnippetStr = p.typeDefinition.map((i: DirectiveTypeDefinition) => i.value).join(',');
     });
 
@@ -123,11 +120,7 @@ export function genComponentMarkdown(item: Directive | string): string {
   item = typeof item === 'string' ? first(item) : item;
   if (item == null) return '';
 
-  const rows: string[] = [
-    CONFIG.isAlain ? `**${i18n('library')}** ${item.lib}` : null,
-    `**${item.title}**`,
-    item.description
-  ];
+  const rows: string[] = [CONFIG.isAlain ? `**${i18n('library')}** ${item.lib}` : null, `**${item.title}**`, item.description];
 
   if (item.whenToUse) {
     rows.push(`**${i18n('whenToUse')}**`);
