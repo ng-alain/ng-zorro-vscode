@@ -15,7 +15,7 @@ cloneZorroSource() {
 
 cloneDelonSource() {
   if [[ ! -d "${DIR}/delon" ]]; then
-    git clone --depth 1 -b dev-docs https://github.com/ng-alain/delon.git "${DIR}/delon"
+    git clone --depth 1 https://github.com/ng-alain/delon.git "${DIR}/delon"
   fi
 }
 

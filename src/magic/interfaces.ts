@@ -14,6 +14,10 @@ export interface Directive {
    */
   selector: string;
   /**
+   * 选择器Label，用于 @delon 类库需要额外增加 `delon-` 前缀，实际插入始终使用 `selector`
+   */
+  selectorLabel?: string;
+  /**
    * Title for component, e.g: `按钮`
    */
   title?: string;
@@ -70,10 +74,13 @@ export interface DirectiveProperty {
   typeDefinition?: Array<string | DirectiveTypeDefinition>;
   isInputBoolean?: boolean;
   default?: string;
+  pureDefault?: string;
   /** @inner */
   pureName?: string;
   /** @inner */
   typeDefinitionSnippetStr?: string;
+  /** 额外定制 */
+  snippet?: string;
 }
 
 export interface DirectiveTypeDefinition {

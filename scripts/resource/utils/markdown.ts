@@ -186,6 +186,9 @@ function genPropertyItem(directive: Directive, data: string[]): DirectivePropert
   if (['`-`', '-', '`无`', '无'].includes(item.default)) {
     item.default = '';
   }
+  if (item.default) {
+    item.pureDefault = trimSemicolon(trimTag(item.default));
+  }
 
   // ngModel
   if (
@@ -208,10 +211,6 @@ function getValidSeparator(text: string): string {
 
 function parseType(directive: Directive, item: DirectiveProperty) {
   let typeRaw: string = item.typeRaw.replace(/`/g, '');
-  // fix `Enum{}`
-  if (typeRaw.startsWith('Enum') || typeRaw.startsWith('Enum ')) {
-    typeRaw = trimTag(typeRaw.substr(typeRaw.startsWith('Enum ') ? 5 : 4), '{');
-  }
   // split mulit type
   const types = typeRaw.split(getValidSeparator(typeRaw))
     .filter(v => !!v)
@@ -231,8 +230,6 @@ function parseType(directive: Directive, item: DirectiveProperty) {
     item.type = 'EventEmitter';
   } else if (firstType.startsWith('Array')) {
     item.type = 'Array';
-  } else if (firstType.startsWith('Enum')) {
-    item.type = 'Enum';
   } else {
     switch (firstType) {
       case 'boolean':
@@ -258,22 +255,26 @@ function parseType(directive: Directive, item: DirectiveProperty) {
   }
 
   // type definition
-  item.typeDefinition = [];
   if (
     item.type === 'Enum' ||
-    (
-      item.type === 'string'
-      && types.length > 1
-      && !types.includes('any')
-      && !types.includes('string')
-      && !types.includes('EventEmitter')
-      && !types.includes('Element')
-    )
+    (item.type === 'string' && typeRaw.includes(`'`)) ||
+    (item.type === 'string' && typeRaw.includes(`"`))
+    // (
+    //   item.type === 'string' && typeRaw.includes(`'`)
+    //   && types.length > 0
+    //   && !types.includes('any')
+    //   && !types.includes('string')
+    //   && !types.includes('Object')
+    //   && !types.includes('EventEmitter')
+    //   && !types.includes('Element')
+    //   && !types.includes('HTMLInputElement')
+    //   && !typeRaw.includes('=>')
+    // )
   ) {
-    // `'horizontal'丨'vertical'丨'inline'`
     item.typeDefinition = types
       .filter(value => !!value)
-      .filter(value => value !== 'null');
+      // .filter(value => value !== 'null')
+      ;
   }
 
   // 默认复杂类型，从类型列表中查看到第一个带有定义的复杂类型
@@ -344,6 +345,10 @@ function metaToItem(zone: string, filePath: string, meta: any): Directive[] {
 
   return list.map((i) => {
     i.lib = lib;
+    // 对所有 @delon/* 增加前缀 `delon-` 前缀
+    if (lib.startsWith('@delon')) {
+      i.selectorLabel = 'delon-' + i.selector;
+    }
     i.title = title;
     if (typeof i.description === 'undefined') {
       i.description = description;
@@ -364,7 +369,7 @@ function metaToItem(zone: string, filePath: string, meta: any): Directive[] {
       if (FIX.typeDefinition[i.selector]) {
         p.typeDefinition = FIX.typeDefinition[i.selector][p.name] || p.typeDefinition;
       }
-      if (p.typeDefinition.length > 0) {
+      if (p.typeDefinition && p.typeDefinition.length > 0) {
         p.type = 'Enum';
       }
     });

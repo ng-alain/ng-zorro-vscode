@@ -12,9 +12,9 @@ import {
   Range,
   MarkdownString,
 } from 'vscode';
-import { DirectiveProperty, Directive, DirectiveTypeDefinition } from '../interfaces';
-import { getDirective, CONFIG, RESOURCES } from '../resources';
-import { getTag, typingPreChart } from '../utils';
+import { DirectiveProperty, Directive, DirectiveTypeDefinition, InputAttrType } from '../interfaces';
+import { getDirective, CONFIG, RESOURCES, genComponentMarkdown } from '../resources';
+import { getTag } from '../utils';
 
 export default class implements CompletionItemProvider {
   provideCompletionItems(
@@ -23,17 +23,20 @@ export default class implements CompletionItemProvider {
     token: CancellationToken,
     context: CompletionContext,
   ): ProviderResult<CompletionItem[] | CompletionList> {
-    const char = context.triggerCharacter || typingPreChart(document, position);
+    let char = context.triggerCharacter;
     // 97-122
     switch (char) {
       // Component
       case '<':
       case 'n': // ng-zorro-antd：所有组件都以 `nz-` 开头，因此使用键入 'n' 来触发
+      case 'd': // delon/*：所有组件都以 `delon-` 开头，因此使用键入 'd' 来触发
         return this.genComponent(char);
       // Property
       case '"':
       case ' ':
-        return this.genProperties(document, position)
+      case '(':
+      case '[':
+        return this.genProperties(document, position, char)
       default:
         return [];
     }
@@ -44,10 +47,10 @@ export default class implements CompletionItemProvider {
   }
 
   private renderCompletionItem(char: string, i: Directive): CompletionItem {
-    const item = new CompletionItem(i.selector, CompletionItemKind.Snippet);
+    const item = new CompletionItem(i.selectorLabel || i.selector, CompletionItemKind.Snippet);
     item.command = this.triggerHideSuggestCommand;
-    item.documentation = new MarkdownString(i.description);
-    // `<` 非单词一部分故需要提前移除触发词
+    item.documentation = new MarkdownString(genComponentMarkdown(i));
+    // `<` 非单词部分需要提前移除触发词
     if (char === '<') {
       item.insertText = new SnippetString(i.snippet.substr(1));
     } else {
@@ -57,7 +60,7 @@ export default class implements CompletionItemProvider {
     return item;
   }
 
-  private genProperties(document: TextDocument, position: Position): CompletionItem[] {
+  private genProperties(document: TextDocument, position: Position, triggerCharacter: string): CompletionItem[] {
     const tag = getTag(document, position);
     if (tag == null) return [];
 
@@ -97,41 +100,110 @@ export default class implements CompletionItemProvider {
       return [];
     }
 
-    return directive.properties.map(i => this.renderAttrCompletionItem(i));
+    const existsAttrList = Object.keys(tag.attributes);
+    if (triggerCharacter === '[') {
+      let range = document.getWordRangeAtPosition(position, /\[\s*\]/);
+      if (range) {
+        range = new Range(
+          new Position(range.start.line, range.start.character + 1),
+          new Position(range.end.line, range.end.character)
+        );
+      };
+      return directive.properties
+        .filter(w => existsAttrList.indexOf(w.name) === -1)
+        .filter(w => w.inputType === InputAttrType.Input || w.inputType === InputAttrType.InputOutput)
+        .map(i => this.renderAttrCompletionItem(i, 'property', range));
+    }
+    if (triggerCharacter === '(') {
+      let range = document.getWordRangeAtPosition(position, /\(\s*\)/);
+      if (range) {
+        range = new Range(
+          new Position(range.start.line, range.start.character + 1),
+          new Position(range.end.line, range.end.character)
+        );
+      };
+      return directive.properties
+        .filter(w => existsAttrList.indexOf(w.name) === -1)
+        .filter(w => w.inputType === InputAttrType.Output || w.inputType === InputAttrType.InputOutput)
+        .map(i => this.renderAttrCompletionItem(i, 'event', range));
+    }
+    return directive.properties
+      .filter(w => existsAttrList.indexOf(w.name) === -1)
+      .map(i => this.renderAttrCompletionItem(i, '', null));
   }
 
-  private renderAttrCompletionItem(property: DirectiveProperty, kind?: CompletionItemKind): CompletionItem {
-    const item = new CompletionItem(property.name, typeof kind === 'undefined' ? CompletionItemKind.Field : kind);
+  private renderAttrCompletionItem(property: DirectiveProperty, ngBindingType: string, range: Range): CompletionItem {
+    const item = new CompletionItem(property.name, CompletionItemKind.Field);
     item.documentation = new MarkdownString(property.description);
+    if (range) {
+      item.range = range;
+    }
     let snippet = '';
-    switch (property.type) {
-      case 'string':
-      case 'Enum':
-        if (property.typeDefinitionSnippetStr.length > 0) {
-          snippet = `${property.name}="\${1|${property.typeDefinitionSnippetStr}|}"$0`;
-        }
-        break;
-      case 'boolean':
-        snippet = `${property.name}="\${1|true,false${CONFIG.isAlain ? ',http.loading' : ''}|}"$0`;
-        break;
-      case 'TemplateRef':
-        snippet = `[${property.name}]="\${1:${property.pureName}}Tpl"$0`;
-        break;
-      case 'Array':
-      case 'function':
-        snippet = `[${property.name}]="\${1:${property.pureName}}"$0`;
-        break;
-      case 'EventEmitter':
-        snippet = `${property.name}="\${1:${property.pureName}}(\${2|true,false,$event|})"$0`;
-        break;
+    if (property.snippet) {
+      snippet = property.snippet;
+    } else {
+      switch (ngBindingType) {
+        // 属性绑定
+        case 'property':
+          snippet = `${property.name}]=${this.genDefaultPropertyValueSnippet(property)}`;
+          break;
+        // 事件绑定
+        case 'event':
+          snippet = `${property.name})=${this.genDefaultPropertyValueSnippet(property)}`;
+          break;
+        // 默认绑定
+        default:
+          snippet = this.genDefaultPropertySnippet(property);
+          break;
+      }
     }
     if (!snippet) {
-      snippet = `${property.name}="\${1:${property.default.length > 0 ? property.default : property.pureName}}"$0`;
+      snippet = `${property.name}="\${1:${property.pureDefault ? property.pureDefault : property.pureName}}"$0`;
     }
 
     item.insertText = new SnippetString(snippet);
 
     return item;
+  }
+
+  private genDefaultPropertySnippet(property: DirectiveProperty): string {
+    switch (property.type) {
+      case 'string':
+      case 'Enum':
+        if (property.typeDefinitionSnippetStr.length > 0) {
+          return `${property.name}=${this.genDefaultPropertyValueSnippet(property)}`;
+        }
+        break;
+      case 'boolean':
+        return `${property.name}=${this.genDefaultPropertyValueSnippet(property)}`;
+      case 'TemplateRef':
+        return `[${property.name}]=${this.genDefaultPropertyValueSnippet(property)}`;
+      case 'Array':
+      case 'function':
+        return `[${property.name}]=${this.genDefaultPropertyValueSnippet(property)}`;
+      case 'EventEmitter':
+        return `(${property.name})=${this.genDefaultPropertyValueSnippet(property)}`;
+    }
+  }
+
+  private genDefaultPropertyValueSnippet(property: DirectiveProperty): string {
+    switch (property.type) {
+      case 'string':
+      case 'Enum':
+        if (property.typeDefinitionSnippetStr.length > 0) {
+          return `"\${1|${property.typeDefinitionSnippetStr}|}"$0`;
+        }
+        break;
+      case 'boolean':
+        return `"\${1|true,false${CONFIG.isAlain ? ',http.loading' : ''}|}"$0`;
+      case 'TemplateRef':
+        return `"\${1:${property.pureName}}Tpl"$0`;
+      case 'Array':
+      case 'function':
+        return `"\${1:${property.pureName}}"$0`;
+      case 'EventEmitter':
+        return `"\${1:${property.pureName}}(\${2|true,false,$event|})"$0`;
+    }
   }
 
   private get triggerHideSuggestCommand() {

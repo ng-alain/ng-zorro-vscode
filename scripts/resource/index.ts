@@ -10,7 +10,7 @@ const LANGS = ['en-US', 'zh-CN'];
 
 const langFiles = getFiles(LANGS, buildPath);
 Object.keys(langFiles).forEach(l => {
-  const files = langFiles[l]; // .filter(w => w.includes('table')).slice(1);
+  const files = langFiles[l]; // .filter(w => w.includes('delon')); // .slice(1);
   const res = makeObject(l, files);
   fs.writeFileSync(
     path.join(srcPath, l + '.json'),

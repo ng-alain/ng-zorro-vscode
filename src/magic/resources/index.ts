@@ -85,7 +85,7 @@ export async function INIT(notifier: Notifier) {
       p.description = notNull(p.description);
       p.isInputBoolean = notNull(p.isInputBoolean, true);
       p.type = notNull(p.type, 'string');
-      p.typeRaw = notNull(p.typeRaw);
+      p.typeRaw = notNull(p.typeRaw, '').replace(/｜/g, '|')
       p.typeDefinition = notNull(p.typeDefinition, []).map((item: any) => typeof item === 'string' ? { value: item } : item);
       p.typeDefinitionSnippetStr = p.typeDefinition.map((i: DirectiveTypeDefinition) => i.value).join(',');
     });
@@ -124,7 +124,7 @@ export function genComponentMarkdown(item: Directive | string): string {
   if (item == null) return '';
 
   const rows: string[] = [
-    `**${i18n('library')}** ${item.lib}`,
+    CONFIG.isAlain ? `**${i18n('library')}** ${item.lib}` : null,
     `**${item.title}**`,
     item.description
   ];
@@ -138,7 +138,7 @@ export function genComponentMarkdown(item: Directive | string): string {
     rows.push(`[${i18n('document')}](${item.doc})`);
   }
 
-  return rows.join('\n\n');
+  return rows.filter(w => !!w).join('\n\n');
 }
 
 export function genPropertyMarkdown(property: DirectiveProperty): string {

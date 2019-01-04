@@ -23,7 +23,7 @@ export async function activate(context: ExtensionContext) {
   const providers = [
     languages.registerCompletionItemProvider(
       htmlScheme,
-      new NAAutoCompletionItemProvider(), '<', 'n', ' ', '[', '(', '"'
+      new NAAutoCompletionItemProvider(), '<', 'n', 'd', ' ', '[', '(', '"'
     )
   ];
 
