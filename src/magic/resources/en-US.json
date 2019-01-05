@@ -5189,6 +5189,123 @@
     "doc": "https://ng.ant.design/components/popconfirm/en"
   },
   {
+    "_idx": 15,
+    "type": "directive",
+    "selector": "nz-popover",
+    "types": {},
+    "properties": [
+      {
+        "name": "nzMouseEnterDelay",
+        "inputType": 0,
+        "description": "Delay in seconds, before tooltip is shown on mouse enter",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`0.15`",
+        "pureDefault": "0.15",
+        "_common": true
+      },
+      {
+        "name": "nzMouseLeaveDelay",
+        "inputType": 0,
+        "description": "Delay in seconds, before tooltip is hidden on mouse leave",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`0.1`",
+        "pureDefault": "0.1",
+        "_common": true
+      },
+      {
+        "name": "nzOverlayClassName",
+        "inputType": 0,
+        "description": "Class name of the tooltip card",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": "",
+        "_common": true
+      },
+      {
+        "name": "nzOverlayStyle",
+        "inputType": 0,
+        "description": "Style of the tooltip card",
+        "type": "object",
+        "typeRaw": "`object`",
+        "default": "",
+        "_common": true
+      },
+      {
+        "name": "nzPlacement",
+        "inputType": 0,
+        "description": "The position of the tooltip relative to the target",
+        "type": "Enum",
+        "typeRaw": "`'top'｜'left'｜'right'｜'bottom'｜'topLeft'｜'topRight'｜'bottomLeft'｜'bottomRight'｜'leftTop'｜'leftBottom'｜'rightTop'｜'rightBottom'`",
+        "default": "`'top'`",
+        "typeDefinition": [
+          "top",
+          "left",
+          "right",
+          "bottom",
+          "topLeft",
+          "topRight",
+          "bottomLeft",
+          "bottomRight",
+          "leftTop",
+          "leftBottom",
+          "rightTop",
+          "rightBottom"
+        ],
+        "pureDefault": "top",
+        "_common": true
+      },
+      {
+        "name": "nzTrigger",
+        "inputType": 0,
+        "description": "Tooltip trigger mode",
+        "type": "Enum",
+        "typeRaw": "`'click'｜'focus'｜'hover'`",
+        "default": "`'hover'`",
+        "typeDefinition": [
+          "click",
+          "focus",
+          "hover"
+        ],
+        "pureDefault": "hover",
+        "_common": true
+      },
+      {
+        "name": "nzVisible",
+        "inputType": 0,
+        "description": "Whether the floating tooltip card is visible or not",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false",
+        "_common": true
+      },
+      {
+        "name": "nzVisibleChange",
+        "inputType": 1,
+        "description": "Callback executed when visibility of the tooltip card is changed",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<boolean>`",
+        "default": "",
+        "_common": true
+      },
+      {
+        "name": "nzTitle",
+        "inputType": 0,
+        "description": "The text shown in the tooltip",
+        "type": "string",
+        "typeRaw": "`string｜TemplateRef<void>`",
+        "default": ""
+      }
+    ],
+    "lib": "ng-zorro-antd",
+    "title": "Popover",
+    "description": "The floating card popped by clicking or hovering.",
+    "whenToUse": "A simple popup menu to provide extra information or operations.",
+    "doc": "https://ng.ant.design/components/popover/en"
+  },
+  {
     "_idx": 24,
     "type": "component",
     "selector": "nz-progress",

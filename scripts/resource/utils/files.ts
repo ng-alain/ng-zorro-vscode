@@ -1,5 +1,4 @@
 import * as path from 'path';
-import * as fs from 'fs';
 const klawSync = require('klaw-sync');
 
 const FILE_NAMES = ['index.md', 'index.en-US.md', 'index.zh-CN.md'];

@@ -29,7 +29,30 @@ export function makeObject(lang: string, filePaths: string[]): Directive[] {
       delete meta.__content;
       processRes.push(...metaToItem(zone, p, meta));
     });
+  verify(filePaths);
   return processRes;
+}
+
+function verify(filePaths: string[]) {
+  // 获取所有组件KEY，以目录名为准，非完整组件名，但可以区分
+  const notExistsList = filePaths
+    .map(p => {
+      if (~p.indexOf('ng-zorro-antd')) {
+        const key = p
+          .split('ng-zorro-antd')[1]
+          .split(path.sep)
+          .filter(w => !!w)[1];
+        if (processRes.some(w => w.selector.indexOf(key) !== -1)) {
+          return null;
+        }
+        return key;
+      } else {
+      }
+      return null;
+    })
+    .filter(w => w != null)
+    .join(',');
+  console.error(`${Lang}-不存在以下组件：`, notExistsList);
 }
 
 function getLibary(filePath: string) {

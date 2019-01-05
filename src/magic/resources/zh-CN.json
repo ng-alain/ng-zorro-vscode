@@ -1,9 +1,11 @@
-[{
+[
+  {
     "_idx": 15,
     "type": "component",
     "selector": "nz-tooltip",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzMouseEnterDelay",
         "inputType": 0,
         "description": "鼠标移入后延时多少才显示 Tooltip，单位：秒",
@@ -119,7 +121,8 @@
     "type": "directive",
     "selector": "nz-row",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzAlign",
         "inputType": 0,
         "description": "flex 布局下的垂直对齐方式",
@@ -192,7 +195,8 @@
     "type": "directive",
     "selector": "nz-col",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzOffset",
         "inputType": 0,
         "description": "栅格左侧的间隔格数，间隔内不可以有栅格",
@@ -417,7 +421,8 @@
     "type": "component",
     "selector": "sg-container",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "gutter",
         "inputType": 0,
         "description": "间距，当 `nzLayout:horizontal` 时有效",
@@ -482,7 +487,8 @@
     "type": "directive",
     "selector": "sg-container",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "gutter",
         "inputType": 0,
         "description": "间距，当 `nzLayout:horizontal` 时有效",
@@ -547,22 +553,24 @@
     "type": "component",
     "selector": "sg",
     "types": {},
-    "properties": [{
-      "name": "col",
-      "inputType": 0,
-      "description": "指定表单元素最多分几列展示，最终一行几列由 col 配置结合[响应式规则](/theme/responsive)决定，",
-      "type": "Enum",
-      "typeRaw": "`'1','2','3','4','5','6'`",
-      "default": "",
-      "typeDefinition": [
-        "1",
-        "2",
-        "3",
-        "4",
-        "5",
-        "6"
-      ]
-    }],
+    "properties": [
+      {
+        "name": "col",
+        "inputType": 0,
+        "description": "指定表单元素最多分几列展示，最终一行几列由 col 配置结合[响应式规则](/theme/responsive)决定，",
+        "type": "Enum",
+        "typeRaw": "`'1','2','3','4','5','6'`",
+        "default": "",
+        "typeDefinition": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ]
+      }
+    ],
     "lib": "@delon/abc",
     "selectorLabel": "delon-sg",
     "title": "简易栅格",
@@ -575,7 +583,8 @@
     "type": "component",
     "selector": "nz-autocomplete",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzBackfill",
         "inputType": 0,
         "description": "使用键盘选择选项的时候把选中项回填到输入框中",
@@ -638,7 +647,8 @@
     "type": "component",
     "selector": "nz-auto-option",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzValue",
         "inputType": 0,
         "description": "绑定到触发元素 ngModel 的值",
@@ -675,7 +685,8 @@
     "type": "component",
     "selector": "nz-avatar",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzIcon",
         "inputType": 0,
         "description": "设置头像的图标类型，参考 `Icon`",
@@ -739,7 +750,8 @@
     "type": "component",
     "selector": "nz-back-top",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzTemplate",
         "inputType": 0,
         "description": "自定义内容，见示例",
@@ -785,7 +797,8 @@
     "type": "component",
     "selector": "nz-badge",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzCount",
         "inputType": 0,
         "description": "展示的数字，大于 nzOverflowCount 时显示为 `${nzOverflowCount}+`，为 0 时隐藏",
@@ -864,7 +877,8 @@
     "type": "component",
     "selector": "nz-breadcrumb",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzSeparator",
         "inputType": 0,
         "description": "分隔符自定义",
@@ -894,7 +908,8 @@
     "type": "directive",
     "selector": "nz-button",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzGhost",
         "inputType": 0,
         "description": "幽灵属性，使按钮背景透明",
@@ -987,7 +1002,8 @@
     "type": "component",
     "selector": "nz-calendar",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "ngModel",
         "inputType": 2,
         "description": "（可双向绑定）展示日期",
@@ -1071,7 +1087,8 @@
     "type": "component",
     "selector": "nz-card",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzActions",
         "inputType": 0,
         "description": "卡片操作组，位置在卡片底部",
@@ -1161,7 +1178,8 @@
     "type": "component",
     "selector": "nz-card-meta",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzAvatar",
         "inputType": 0,
         "description": "头像/图标",
@@ -1221,7 +1239,8 @@
     "type": "component",
     "selector": "nz-carousel",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzAutoPlay",
         "inputType": 0,
         "description": "是否自动切换",
@@ -1315,7 +1334,8 @@
     "type": "component",
     "selector": "nz-cascader",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "ngModel",
         "inputType": 2,
         "description": "指定选中项",
@@ -1562,7 +1582,8 @@
     "type": "directive",
     "selector": "nz-checkbox",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzAutoFocus",
         "inputType": 0,
         "description": "自动获取焦点",
@@ -1633,7 +1654,8 @@
     "type": "component",
     "selector": "nz-checkbox-group",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "ngModel",
         "inputType": 2,
         "description": "指定可选项，可双向绑定",
@@ -1671,14 +1693,16 @@
     "type": "component",
     "selector": "nz-checkbox-wrapper",
     "types": {},
-    "properties": [{
-      "name": "nzOnChange",
-      "inputType": 1,
-      "description": "选中数据变化时的回调",
-      "type": "EventEmitter",
-      "typeRaw": "`EventEmitter<string[]>`",
-      "default": ""
-    }],
+    "properties": [
+      {
+        "name": "nzOnChange",
+        "inputType": 1,
+        "description": "选中数据变化时的回调",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<string[]>`",
+        "default": ""
+      }
+    ],
     "lib": "ng-zorro-antd",
     "title": "多选框",
     "description": "多选框。",
@@ -1690,7 +1714,8 @@
     "type": "component",
     "selector": "nz-collapse",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzAccordion",
         "inputType": 0,
         "description": "是否每次只打开一个tab",
@@ -1720,7 +1745,8 @@
     "type": "component",
     "selector": "nz-collapse-panel",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzDisabled",
         "inputType": 0,
         "description": "禁用后的面板展开与否将无法通过用户交互改变",
@@ -1774,7 +1800,8 @@
     "type": "component",
     "selector": "nz-date-picker",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzAllowClear",
         "inputType": 0,
         "description": "是否显示清除按钮",
@@ -1995,7 +2022,8 @@
     "type": "component",
     "selector": "nz-year-picker",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzAllowClear",
         "inputType": 0,
         "description": "是否显示清除按钮",
@@ -2176,7 +2204,8 @@
     "type": "component",
     "selector": "nz-month-picker",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzAllowClear",
         "inputType": 0,
         "description": "是否显示清除按钮",
@@ -2363,7 +2392,8 @@
     "type": "component",
     "selector": "nz-week-picker",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzAllowClear",
         "inputType": 0,
         "description": "是否显示清除按钮",
@@ -2542,7 +2572,8 @@
     "type": "component",
     "selector": "nz-range-picker",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzAllowClear",
         "inputType": 0,
         "description": "是否显示清除按钮",
@@ -2762,7 +2793,8 @@
     "type": "component",
     "selector": "nz-divider",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzDashed",
         "inputType": 0,
         "description": "是否虚线",
@@ -2816,7 +2848,8 @@
     "type": "component",
     "selector": "nz-drawer",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzClosable",
         "inputType": 0,
         "description": "是否显示右上角的关闭按钮",
@@ -2965,7 +2998,8 @@
     "type": "component",
     "selector": "nz-dropdown",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzDisabled",
         "inputType": 0,
         "description": "菜单是否禁用",
@@ -3056,7 +3090,8 @@
     "type": "directive",
     "selector": "nz-dropdown",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzDisabled",
         "inputType": 0,
         "description": "菜单是否禁用",
@@ -3169,7 +3204,8 @@
     "type": "component",
     "selector": "nz-dropdown-button",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzDisabled",
         "inputType": 0,
         "description": "菜单是否禁用",
@@ -3282,7 +3318,8 @@
     "type": "component",
     "selector": "nz-form",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzLayout",
         "inputType": 0,
         "description": "表单布局",
@@ -3321,7 +3358,8 @@
     "type": "component",
     "selector": "nz-form-item",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzAlign",
         "inputType": 0,
         "description": "flex 布局下的垂直对齐方式",
@@ -3403,7 +3441,8 @@
     "type": "component",
     "selector": "nz-form-label",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzOffset",
         "inputType": 0,
         "description": "栅格左侧的间隔格数，间隔内不可以有栅格",
@@ -3645,7 +3684,8 @@
     "type": "component",
     "selector": "nz-form-control",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzOffset",
         "inputType": 0,
         "description": "栅格左侧的间隔格数，间隔内不可以有栅格",
@@ -3950,7 +3990,8 @@
     "type": "component",
     "selector": "nz-affix",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzOffsetBottom",
         "inputType": 0,
         "description": "距离窗口底部达到指定偏移量后触发",
@@ -3996,7 +4037,8 @@
     "type": "directive",
     "selector": "nz-input",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzSize",
         "inputType": 0,
         "description": "控件大小。注：标准表单内的输入框大小限制为 `large`",
@@ -4063,7 +4105,8 @@
     "type": "component",
     "selector": "nz-input-group",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzAddOnAfter",
         "inputType": 0,
         "description": "带标签的 input，设置后置标签",
@@ -4139,7 +4182,8 @@
     "type": "component",
     "selector": "nz-input-number",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "ngModel",
         "inputType": 2,
         "description": "当前值，可双向绑定",
@@ -4280,7 +4324,8 @@
     "type": "component",
     "selector": "nz-sider",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzBreakpoint",
         "inputType": 0,
         "description": "触发响应式布局的断点",
@@ -4377,7 +4422,8 @@
     "type": "component",
     "selector": "nz-list",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzDataSource",
         "inputType": 0,
         "description": "列表数据源",
@@ -4499,7 +4545,8 @@
     "type": "component",
     "selector": "nz-list-item",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzContent",
         "inputType": 0,
         "description": "内容项",
@@ -4535,7 +4582,8 @@
     "type": "component",
     "selector": "nz-list-item-meta",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzAvatar",
         "inputType": 0,
         "description": "列表元素的图标",
@@ -4571,7 +4619,8 @@
     "type": "component",
     "selector": "nz-mention",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzMentionTrigger",
         "inputType": 0,
         "description": "用于指定提及的触发元素 **(必须)**",
@@ -4672,7 +4721,8 @@
     "type": "directive",
     "selector": "nz-menu",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzInlineCollapsed",
         "inputType": 0,
         "description": "inline 时菜单是否收起状态",
@@ -4745,7 +4795,8 @@
     "type": "directive",
     "selector": "nz-menu-item",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzDisabled",
         "inputType": 0,
         "description": "是否禁用",
@@ -4775,7 +4826,8 @@
     "type": "directive",
     "selector": "nz-submenu",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzOpen",
         "inputType": 2,
         "description": "是否展开，可双向绑定",
@@ -4837,7 +4889,8 @@
     "type": "component",
     "selector": "nz-pagination",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzTotal",
         "inputType": 0,
         "description": "数据总数",
@@ -4963,7 +5016,8 @@
     "type": "directive",
     "selector": "nz-popconfirm",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzMouseEnterDelay",
         "inputType": 0,
         "description": "鼠标移入后延时多少才显示 Tooltip，单位：秒",
@@ -5146,7 +5200,8 @@
     "type": "directive",
     "selector": "nz-popover",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzMouseEnterDelay",
         "inputType": 0,
         "description": "鼠标移入后延时多少才显示 Tooltip，单位：秒",
@@ -5278,7 +5333,8 @@
     "type": "component",
     "selector": "nz-progress",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzFormat",
         "inputType": 0,
         "description": "内容的模板函数",
@@ -5416,7 +5472,8 @@
     "type": "directive",
     "selector": "nz-radio",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzAutoFocus",
         "inputType": 0,
         "description": "自动获取焦点",
@@ -5478,7 +5535,8 @@
     "type": "directive",
     "selector": "nz-radio-button",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzAutoFocus",
         "inputType": 0,
         "description": "自动获取焦点",
@@ -5533,7 +5591,8 @@
     "type": "component",
     "selector": "nz-radio-group",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "ngModel",
         "inputType": 2,
         "description": "指定选中的 `nz-radio` 的 value 值",
@@ -5605,7 +5664,8 @@
     "type": "component",
     "selector": "nz-rate",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzAllowClear",
         "inputType": 0,
         "description": "是否允许再次点击后清除",
@@ -5726,7 +5786,8 @@
     "type": "component",
     "selector": "nz-select",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "ngModel",
         "inputType": 2,
         "description": "当前选中的 nz-option 的 nzValue 值，可双向绑定，当 `nzMode` 为 `multiple` 或 `tags` 时，ngModel 为数组",
@@ -5933,7 +5994,8 @@
     "type": "component",
     "selector": "nz-option",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzDisabled",
         "inputType": 0,
         "description": "是否禁用",
@@ -5979,14 +6041,16 @@
     "type": "component",
     "selector": "nz-option-group",
     "types": {},
-    "properties": [{
-      "name": "nzLabel",
-      "inputType": 0,
-      "description": "组名",
-      "type": "string",
-      "typeRaw": "`string｜TemplateRef<void>`",
-      "default": ""
-    }],
+    "properties": [
+      {
+        "name": "nzLabel",
+        "inputType": 0,
+        "description": "组名",
+        "type": "string",
+        "typeRaw": "`string｜TemplateRef<void>`",
+        "default": ""
+      }
+    ],
     "lib": "ng-zorro-antd",
     "title": "选择器",
     "description": "下拉选择器。",
@@ -5998,7 +6062,8 @@
     "type": "component",
     "selector": "nz-skeleton",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzActive",
         "inputType": 0,
         "description": "是否展示动画效果",
@@ -6054,7 +6119,8 @@
     "type": "component",
     "selector": "nz-slider",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzDefaultValue",
         "inputType": 0,
         "description": "设置初始取值。当 `range` 为 `false` 时，使用 `number`，否则用 `[number, number]`",
@@ -6194,7 +6260,8 @@
     "type": "component",
     "selector": "nz-spin",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzDelay",
         "inputType": 0,
         "description": "延迟显示加载效果的时间（防止闪烁），单位：毫秒",
@@ -6253,7 +6320,8 @@
     "type": "component",
     "selector": "nz-steps",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzCurrent",
         "inputType": 0,
         "description": "指定当前步骤，从 0 开始记数。在子 `nz-step` 元素中，可以通过 `nzStatus` 属性覆盖状态",
@@ -6346,7 +6414,8 @@
     "type": "component",
     "selector": "nz-step",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzDescription",
         "inputType": 0,
         "description": "步骤的详情描述，可选",
@@ -6397,7 +6466,8 @@
     "type": "component",
     "selector": "nz-switch",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "ngModel",
         "inputType": 2,
         "description": "指定当前是否选中，可双向绑定",
@@ -6489,7 +6559,8 @@
     "type": "component",
     "selector": "nz-table",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzData",
         "inputType": 0,
         "description": "数据数组",
@@ -6708,7 +6779,8 @@
     "type": "component",
     "selector": "th",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzShowCheckbox",
         "inputType": 0,
         "description": "是否添加checkbox",
@@ -6879,7 +6951,8 @@
     "type": "component",
     "selector": "td",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzShowCheckbox",
         "inputType": 0,
         "description": "是否添加checkbox",
@@ -6979,7 +7052,8 @@
     "type": "component",
     "selector": "thead",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzSingleSort",
         "inputType": 0,
         "description": "是否单列排序模式，非受控排序下使用",
@@ -7008,14 +7082,16 @@
     "type": "component",
     "selector": "tr",
     "types": {},
-    "properties": [{
-      "name": "nzExpand",
-      "inputType": 0,
-      "description": "当前列是否展开，与 `td` 上的 `nzExpand` 属性配合使用",
-      "type": "boolean",
-      "typeRaw": "`boolean`",
-      "default": ""
-    }],
+    "properties": [
+      {
+        "name": "nzExpand",
+        "inputType": 0,
+        "description": "当前列是否展开，与 `td` 上的 `nzExpand` 属性配合使用",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": ""
+      }
+    ],
     "lib": "ng-zorro-antd",
     "title": "表格",
     "description": "展示行列数据。",
@@ -7027,7 +7103,8 @@
     "type": "component",
     "selector": "nz-tabset",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzSelectedIndex",
         "inputType": 2,
         "description": "当前激活 tab 面板的 序列号，可双向绑定",
@@ -7172,7 +7249,8 @@
     "type": "component",
     "selector": "nz-tab",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzTitle",
         "inputType": 0,
         "description": "选项卡头显示文字",
@@ -7233,7 +7311,8 @@
     "type": "component",
     "selector": "nz-tag",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzMode",
         "inputType": 0,
         "description": "设定标签工作的模式",
@@ -7300,7 +7379,8 @@
     "type": "component",
     "selector": "nz-time-picker",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "ngModel",
         "inputType": 2,
         "description": "当前时间",
@@ -7491,7 +7571,8 @@
     "type": "component",
     "selector": "nz-timeline",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzPending",
         "inputType": 0,
         "description": "指定最后一个幽灵节点是否存在或内容",
@@ -7543,7 +7624,8 @@
     "type": "component",
     "selector": "nz-timeline-item",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzColor",
         "inputType": 0,
         "description": "指定圆圈颜色 `blue, red, green`，或自定义的色值(CSS 颜色)",
@@ -7572,7 +7654,8 @@
     "type": "component",
     "selector": "nz-alert",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzBanner",
         "inputType": 0,
         "description": "是否用作顶部公告",
@@ -7665,7 +7748,8 @@
     "type": "component",
     "selector": "nz-transfer",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzDataSource",
         "inputType": 0,
         "description": "数据源，其中若数据属性 `direction: 'right'` 将会被渲染到右边一栏中",
@@ -7822,7 +7906,8 @@
     "type": "component",
     "selector": "nz-tree",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "ngModel",
         "inputType": 2,
         "description": "元数据(建议使用nzData)",
@@ -8073,7 +8158,8 @@
     "type": "component",
     "selector": "nz-tree-select",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzAllowClear",
         "inputType": 0,
         "description": "显示清除按钮",
@@ -8245,7 +8331,8 @@
     "type": "component",
     "selector": "nz-upload",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzAccept",
         "inputType": 0,
         "description": "接受上传的文件类型, 详见 [input accept Attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-accept)",
@@ -8457,7 +8544,8 @@
     "type": "component",
     "selector": "avatar-list",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "size",
         "inputType": 0,
         "description": "头像大小",
@@ -8501,7 +8589,8 @@
     "type": "component",
     "selector": "avatar-list-item",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "tips",
         "inputType": 0,
         "description": "头像展示文案",
@@ -8546,7 +8635,8 @@
     "type": "component",
     "selector": "count-down",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "target",
         "inputType": 0,
         "description": "目标时间，`number` 表示秒",
@@ -8599,7 +8689,8 @@
     "type": "component",
     "selector": "range-picker",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "ngModel",
         "inputType": 2,
         "description": "开始日期，开始与结束同时有值才会生效",
@@ -8801,7 +8892,8 @@
     "type": "directive",
     "selector": "down-file",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "http-data",
         "inputType": 0,
         "description": "URL请求参数",
@@ -8871,7 +8963,8 @@
     "type": "component",
     "selector": "se-container",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "gutter",
         "inputType": 0,
         "description": "间距，当 `nzLayout:horizontal` 时有效",
@@ -8998,7 +9091,8 @@
     "type": "directive",
     "selector": "se-container",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "gutter",
         "inputType": 0,
         "description": "间距，当 `nzLayout:horizontal` 时有效",
@@ -9125,7 +9219,8 @@
     "type": "component",
     "selector": "se",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "col",
         "inputType": 0,
         "description": "指定表单元素最多分几列展示，最终一行几列由 col 配置结合[响应式规则](/theme/responsive)决定",
@@ -9252,15 +9347,17 @@
     "type": "component",
     "selector": "ellipsis",
     "types": {},
-    "properties": [{
-      "name": "lines",
-      "inputType": 0,
-      "description": "在按照行数截取下最大的行数，超过则截取省略",
-      "type": "number",
-      "typeRaw": "`number`",
-      "default": "`3`",
-      "pureDefault": "3"
-    }],
+    "properties": [
+      {
+        "name": "lines",
+        "inputType": 0,
+        "description": "在按照行数截取下最大的行数，超过则截取省略",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`3`",
+        "pureDefault": "3"
+      }
+    ],
     "lib": "@delon/abc",
     "selectorLabel": "delon-ellipsis",
     "title": "文本自动省略号",
@@ -9273,7 +9370,8 @@
     "type": "component",
     "selector": "error-collect",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "freq",
         "inputType": 0,
         "description": "监听频率，单位：毫秒",
@@ -9304,7 +9402,8 @@
     "type": "directive",
     "selector": "error-collect",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "freq",
         "inputType": 0,
         "description": "监听频率，单位：毫秒",
@@ -9335,7 +9434,8 @@
     "type": "component",
     "selector": "exception",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "type",
         "inputType": 0,
         "description": "页面类型，若配置，则自带对应类型默认的 `title`，`desc`，`img`，此默认设置可以被 `title`，`desc`，`img` 覆盖",
@@ -9385,7 +9485,8 @@
     "type": "component",
     "selector": "footer-toolbar",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "errorCollect",
         "inputType": 0,
         "description": "是否需要 `error-collect`，务必包裹在 `<form>` 元素内",
@@ -9415,7 +9516,8 @@
     "type": "component",
     "selector": "full-content",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "fullscreen",
         "inputType": 2,
         "description": "是否完整全屏（不包括顶部、侧边栏等）",
@@ -9467,7 +9569,8 @@
     "type": "component",
     "selector": "global-footer",
     "types": {
-      "GlobalFooterLink": [{
+      "GlobalFooterLink": [
+        {
           "name": "title",
           "inputType": 0,
           "description": "标题",
@@ -9494,7 +9597,8 @@
         }
       ]
     },
-    "properties": [{
+    "properties": [
+      {
         "name": "links",
         "inputType": 0,
         "description": "链接数据",
@@ -9524,7 +9628,8 @@
     "type": "component",
     "selector": "global-footer-item",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "href",
         "inputType": 0,
         "description": "路由链接",
@@ -9554,7 +9659,8 @@
     "type": "component",
     "selector": "nz-anchor",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzAffix",
         "inputType": 0,
         "description": "固定模式",
@@ -9634,7 +9740,8 @@
     "type": "component",
     "selector": "nz-link",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "nzHref",
         "inputType": 0,
         "description": "锚点链接",
@@ -9662,7 +9769,8 @@
     "type": "component",
     "selector": "notice-icon",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "data",
         "inputType": 0,
         "description": "数据",
@@ -9733,7 +9841,8 @@
     "type": "component",
     "selector": "page-header",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "title",
         "inputType": 0,
         "description": "标题名",
@@ -9892,7 +10001,8 @@
     "type": "component",
     "selector": "qr",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "value",
         "inputType": 0,
         "description": "值，不支持中文 [#62](https://github.com/neocotic/qrious/issues/62)",
@@ -9999,7 +10109,8 @@
     "type": "component",
     "selector": "quick-menu",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "icon",
         "inputType": 0,
         "description": "图标",
@@ -10057,7 +10168,8 @@
     "type": "component",
     "selector": "result",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "type",
         "inputType": 0,
         "description": "类型，不同类型自带对应的图标",
@@ -10102,7 +10214,8 @@
     "type": "component",
     "selector": "reuse-tab",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "mode",
         "inputType": 0,
         "description": "设置匹配模式",
@@ -10202,7 +10315,8 @@
     "type": "component",
     "selector": "sidebar-nav",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "disabledAcl",
         "inputType": 0,
         "description": "`acl` 校验失败时以 `disabled` 状态显示",
@@ -10241,7 +10355,8 @@
     "type": "component",
     "selector": "st",
     "types": {
-      "STReq": [{
+      "STReq": [
+        {
           "name": "params",
           "inputType": 0,
           "description": "额外请求参数，默认自动附加 `pi`、`ps` 至URL",
@@ -10301,7 +10416,8 @@
           "pureDefault": "false"
         }
       ],
-      "STRes": [{
+      "STRes": [
+        {
           "name": "reName",
           "inputType": 0,
           "description": "重命名返回参数 `total`、`list`，支持 `a.b.c` 的嵌套写法",
@@ -10318,7 +10434,8 @@
           "default": ""
         }
       ],
-      "STPage": [{
+      "STPage": [
+        {
           "name": "front",
           "inputType": 0,
           "description": "前端分页，当 `data` 为 `any[]` 或 `Observable<any[]>` 有效",
@@ -10413,7 +10530,8 @@
           "pureDefault": "100"
         }
       ],
-      "STMultiSort": [{
+      "STMultiSort": [
+        {
           "name": "key",
           "inputType": 0,
           "description": "请求参数名",
@@ -10450,7 +10568,8 @@
         }
       ]
     },
-    "properties": [{
+    "properties": [
+      {
         "name": "columns",
         "inputType": 0,
         "description": "列描述",
@@ -10674,7 +10793,8 @@
     "type": "component",
     "selector": "tag-select",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "expandable",
         "inputType": 0,
         "description": "是否启用 `展开与收进`",
@@ -10704,7 +10824,8 @@
     "type": "component",
     "selector": "sv-container",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "size",
         "inputType": 0,
         "description": "大小",
@@ -10795,7 +10916,8 @@
     "type": "directive",
     "selector": "sv-container",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "size",
         "inputType": 0,
         "description": "大小",
@@ -10886,7 +11008,8 @@
     "type": "component",
     "selector": "sv",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "col",
         "inputType": 0,
         "description": "指定信息最多分几列展示，最终一行几列由 col 配置结合[响应式规则](/theme/responsive)决定，继承 `sv-container`",
@@ -10992,7 +11115,8 @@
     "type": "component",
     "selector": "g2-bar",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "delay",
         "inputType": 0,
         "description": "延迟渲染，单位：毫秒",
@@ -11066,7 +11190,8 @@
     "type": "component",
     "selector": "g2-card",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "title",
         "inputType": 0,
         "description": "卡片标题",
@@ -11136,7 +11261,8 @@
     "type": "component",
     "selector": "g2-custom",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "height",
         "inputType": 0,
         "description": "高",
@@ -11190,7 +11316,8 @@
     "type": "component",
     "selector": "g2-gauge",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "delay",
         "inputType": 0,
         "description": "延迟渲染，单位：毫秒",
@@ -11271,7 +11398,8 @@
     "type": "component",
     "selector": "g2-mini-area",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "delay",
         "inputType": 0,
         "description": "延迟渲染，单位：毫秒",
@@ -11391,7 +11519,8 @@
     "type": "component",
     "selector": "g2-mini-bar",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "delay",
         "inputType": 0,
         "description": "延迟渲染，单位：毫秒",
@@ -11477,7 +11606,8 @@
     "type": "component",
     "selector": "g2-mini-progress",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "target",
         "inputType": 0,
         "description": "目标比例",
@@ -11522,7 +11652,8 @@
     "type": "component",
     "selector": "number-info",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "title",
         "inputType": 0,
         "description": "标题",
@@ -11609,7 +11740,8 @@
     "type": "component",
     "selector": "g2-pie",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "delay",
         "inputType": 0,
         "description": "延迟渲染，单位：毫秒",
@@ -11751,7 +11883,8 @@
     "type": "component",
     "selector": "g2-radar",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "delay",
         "inputType": 0,
         "description": "延迟渲染，单位：毫秒",
@@ -11823,7 +11956,8 @@
     "type": "component",
     "selector": "g2-single-bar",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "delay",
         "inputType": 0,
         "description": "延迟渲染，单位：毫秒",
@@ -11934,7 +12068,8 @@
     "type": "component",
     "selector": "g2-tag-cloud",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "delay",
         "inputType": 0,
         "description": "延迟渲染，单位：毫秒",
@@ -11974,7 +12109,8 @@
     "type": "component",
     "selector": "g2-timeline",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "delay",
         "inputType": 0,
         "description": "延迟渲染，单位：毫秒",
@@ -12089,7 +12225,8 @@
     "type": "component",
     "selector": "trend",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "colorful",
         "inputType": 0,
         "description": "是否彩色标记",
@@ -12132,7 +12269,8 @@
     "type": "component",
     "selector": "g2-water-wave",
     "types": {},
-    "properties": [{
+    "properties": [
+      {
         "name": "title",
         "inputType": 0,
         "description": "图表标题",
@@ -12179,7 +12317,8 @@
     "type": "component",
     "selector": "sf",
     "types": {
-      "SFButton": [{
+      "SFButton": [
+        {
           "name": "submit",
           "inputType": 0,
           "description": "提交按钮文本",
@@ -12225,7 +12364,8 @@
         }
       ]
     },
-    "properties": [{
+    "properties": [
+      {
         "name": "layout",
         "inputType": 0,
         "description": "表单布局，等同 `nzLayout`",
@@ -12367,7 +12507,8 @@
     "type": "directive",
     "selector": "sf",
     "types": {
-      "SFButton": [{
+      "SFButton": [
+        {
           "name": "submit",
           "inputType": 0,
           "description": "提交按钮文本",
@@ -12413,7 +12554,8 @@
         }
       ]
     },
-    "properties": [{
+    "properties": [
+      {
         "name": "layout",
         "inputType": 0,
         "description": "表单布局，等同 `nzLayout`",
