@@ -476,7 +476,6 @@
       }
     ],
     "lib": "@delon/abc",
-    "selectorLabel": "delon-sg-container",
     "title": "Simple Grid",
     "description": "A higher-order components of grid systems, that consists of `sg-container` (directive) and `sg` components:",
     "whenToUse": "",
@@ -542,7 +541,6 @@
       }
     ],
     "lib": "@delon/abc",
-    "selectorLabel": "delon-sg-container",
     "title": "Simple Grid",
     "description": "A higher-order components of grid systems, that consists of `sg-container` (directive) and `sg` components:",
     "whenToUse": "",
@@ -572,7 +570,6 @@
       }
     ],
     "lib": "@delon/abc",
-    "selectorLabel": "delon-sg",
     "title": "Simple Grid",
     "description": "A higher-order components of grid systems, that consists of `sg-container` (directive) and `sg` components:",
     "whenToUse": "",
@@ -8449,7 +8446,6 @@
       }
     ],
     "lib": "@delon/abc",
-    "selectorLabel": "delon-avatar-list",
     "title": "AvatarList",
     "description": "A list of user's avatar for project or group member list frequently. If a large or small avatar-list is desired, set the `size` property to either `large` or `small` and `mini` respectively. Omit the `size` property for a avatar-list with the default size.",
     "whenToUse": "",
@@ -8495,7 +8491,6 @@
       }
     ],
     "lib": "@delon/abc",
-    "selectorLabel": "delon-avatar-list-item",
     "title": "AvatarList",
     "description": "A list of user's avatar for project or group member list frequently. If a large or small avatar-list is desired, set the `size` property to either `large` or `small` and `mini` respectively. Omit the `size` property for a avatar-list with the default size.",
     "whenToUse": "",
@@ -8549,7 +8544,6 @@
       }
     ],
     "lib": "@delon/abc",
-    "selectorLabel": "delon-count-down",
     "title": "倒计时",
     "description": "倒计时组件，依赖 [ngx-countdown](https://github.com/cipchk/ngx-countdown)。",
     "whenToUse": "",
@@ -8760,7 +8754,6 @@
       }
     ],
     "lib": "@delon/abc",
-    "selectorLabel": "delon-range-picker",
     "title": "Data Range",
     "description": "Based on the `nz-range-picker` further optimization, better service to start and end dates.",
     "whenToUse": "",
@@ -8831,7 +8824,6 @@
       }
     ],
     "lib": "@delon/abc",
-    "selectorLabel": "delon-down-file",
     "title": "Download file",
     "description": "A file download based on `blob`.",
     "whenToUse": "",
@@ -8959,7 +8951,6 @@
       }
     ],
     "lib": "@delon/abc",
-    "selectorLabel": "delon-se-container",
     "title": "Edit",
     "description": "A higher-order components of the form HTML template. And optimized some details:",
     "whenToUse": "",
@@ -9087,7 +9078,6 @@
       }
     ],
     "lib": "@delon/abc",
-    "selectorLabel": "delon-se-container",
     "title": "Edit",
     "description": "A higher-order components of the form HTML template. And optimized some details:",
     "whenToUse": "",
@@ -9189,7 +9179,6 @@
       }
     ],
     "lib": "@delon/abc",
-    "selectorLabel": "delon-se",
     "title": "Edit",
     "description": "A higher-order components of the form HTML template. And optimized some details:",
     "whenToUse": "",
@@ -9203,7 +9192,6 @@
     "properties": [],
     "description": "Display title.",
     "lib": "@delon/abc",
-    "selectorLabel": "delon-se-title",
     "title": "Edit",
     "whenToUse": "",
     "doc": "https://ng-alain.com/components/edit/en"
@@ -9216,7 +9204,6 @@
     "properties": [],
     "description": "Display title.",
     "lib": "@delon/abc",
-    "selectorLabel": "delon-se-title",
     "title": "Edit",
     "whenToUse": "",
     "doc": "https://ng-alain.com/components/edit/en"
@@ -9238,7 +9225,6 @@
       }
     ],
     "lib": "@delon/abc",
-    "selectorLabel": "delon-ellipsis",
     "title": "文本自动省略号",
     "description": "一个简单的文本自动省略号。",
     "whenToUse": "",
@@ -9270,7 +9256,6 @@
       }
     ],
     "lib": "@delon/abc",
-    "selectorLabel": "delon-error-collect",
     "title": "Error Collect",
     "description": "A simple form exception messages collector that jump to element location via click icon; it must be a standard `form`.",
     "whenToUse": "",
@@ -9302,7 +9287,6 @@
       }
     ],
     "lib": "@delon/abc",
-    "selectorLabel": "delon-error-collect",
     "title": "Error Collect",
     "description": "A simple form exception messages collector that jump to element location via click icon; it must be a standard `form`.",
     "whenToUse": "",
@@ -9353,7 +9337,6 @@
       }
     ],
     "lib": "@delon/abc",
-    "selectorLabel": "delon-exception",
     "title": "Exception",
     "description": "Exceptions page is used to provide feedback on specific abnormal state. Usually, it contains an explanation of the error status, and provides users with suggestions or operations, to prevent users from feeling lost and confused.",
     "whenToUse": "",
@@ -9384,7 +9367,6 @@
       }
     ],
     "lib": "@delon/abc",
-    "selectorLabel": "delon-footer-toolbar",
     "title": "FooterToolbar",
     "description": "A toolbar fixed at the bottom.",
     "whenToUse": "",
@@ -9424,7 +9406,6 @@
       }
     ],
     "lib": "@delon/abc",
-    "selectorLabel": "delon-full-content",
     "title": "Full Screen Workspace",
     "description": "Often used for tables with scroll bars, a simple [demo](https://ng-alain.github.io/ng-alain/#/delon/simple-table)。",
     "whenToUse": "",
@@ -9438,7 +9419,6 @@
     "properties": [],
     "description": "Switch whether it is full screen.",
     "lib": "@delon/abc",
-    "selectorLabel": "delon-full-toggle",
     "title": "Full Screen Workspace",
     "whenToUse": "",
     "doc": "https://ng-alain.com/components/full-content/en"
@@ -9496,7 +9476,6 @@
       }
     ],
     "lib": "@delon/abc",
-    "selectorLabel": "delon-global-footer",
     "title": "全局页脚",
     "description": "页脚属于全局导航的一部分，作为对顶部导航的补充，通过传递数据控制展示内容。",
     "whenToUse": "",
@@ -9527,7 +9506,6 @@
       }
     ],
     "lib": "@delon/abc",
-    "selectorLabel": "delon-global-footer-item",
     "title": "全局页脚",
     "description": "页脚属于全局导航的一部分，作为对顶部导航的补充，通过传递数据控制展示内容。",
     "whenToUse": "",
@@ -9710,7 +9688,6 @@
       }
     ],
     "lib": "@delon/abc",
-    "selectorLabel": "delon-notice-icon",
     "title": "通知菜单",
     "description": "用在导航工具栏上，作为整个产品统一的通知中心。",
     "whenToUse": "",
@@ -9870,7 +9847,6 @@
       }
     ],
     "lib": "@delon/abc",
-    "selectorLabel": "delon-page-header",
     "title": "页头",
     "description": "页头用来声明页面的主题，包含了用户所关注的最重要的信息，使用户可以快速理解当前页面是什么以及它的功能。",
     "whenToUse": "",
@@ -9978,7 +9954,6 @@
       }
     ],
     "lib": "@delon/abc",
-    "selectorLabel": "delon-qr",
     "title": "QR",
     "description": "Generate a QR code based on [qrious](https://neocotic.com/qrious).",
     "whenToUse": "",
@@ -10037,7 +10012,6 @@
       }
     ],
     "lib": "@delon/abc",
-    "selectorLabel": "delon-quick-menu",
     "title": "快速菜单",
     "description": "快速菜单，用于右侧隐式辅助列表。",
     "whenToUse": "",
@@ -10083,7 +10057,6 @@
       }
     ],
     "lib": "@delon/abc",
-    "selectorLabel": "delon-result",
     "title": "处理结果",
     "description": "结果页用于对用户进行的一系列任务处理结果进行反馈。",
     "whenToUse": "",
@@ -10184,7 +10157,6 @@
       }
     ],
     "lib": "@delon/abc",
-    "selectorLabel": "delon-reuse-tab",
     "title": "Reuse Route Tab",
     "description": "Reuse route tab are extremely common for admin interfaces, and the problem of component data is not lost when switching routes.",
     "whenToUse": "",
@@ -10224,7 +10196,6 @@
       }
     ],
     "lib": "@delon/abc",
-    "selectorLabel": "delon-sidebar-nav",
     "title": "主菜单",
     "description": "ng-alain 左边主菜单，依赖于 `@delon/theme`。",
     "whenToUse": "",
@@ -10683,7 +10654,6 @@
       }
     ],
     "lib": "@delon/abc",
-    "selectorLabel": "delon-st",
     "title": "Table",
     "description": "`st` is not creating another table component, but use **configurable** rendering table on base of `nz-table`. this method can satisfy most scenes in admin interfaces, but it's easier to rendering table.",
     "whenToUse": "",
@@ -10714,7 +10684,6 @@
       }
     ],
     "lib": "@delon/abc",
-    "selectorLabel": "delon-tag-select",
     "title": "标签选择器",
     "description": "增加标签的展开与收进功能。",
     "whenToUse": "",
@@ -10806,7 +10775,6 @@
       }
     ],
     "lib": "@delon/abc",
-    "selectorLabel": "delon-sv-container",
     "title": "View",
     "description": "Viewing grid system is a higher-order components based on the original [Grid System] (https://ng.ant.design/components/grid/zh) that server for view pages.",
     "whenToUse": "",
@@ -10898,7 +10866,6 @@
       }
     ],
     "lib": "@delon/abc",
-    "selectorLabel": "delon-sv-container",
     "title": "View",
     "description": "Viewing grid system is a higher-order components based on the original [Grid System] (https://ng.ant.design/components/grid/zh) that server for view pages.",
     "whenToUse": "",
@@ -10958,7 +10925,6 @@
       }
     ],
     "lib": "@delon/abc",
-    "selectorLabel": "delon-sv",
     "title": "View",
     "description": "Viewing grid system is a higher-order components based on the original [Grid System] (https://ng.ant.design/components/grid/zh) that server for view pages.",
     "whenToUse": "",
@@ -10972,7 +10938,6 @@
     "properties": [],
     "description": "Display title.",
     "lib": "@delon/abc",
-    "selectorLabel": "delon-sv-title",
     "title": "View",
     "whenToUse": "",
     "doc": "https://ng-alain.com/components/view/en"
@@ -10985,7 +10950,6 @@
     "properties": [],
     "description": "Display title.",
     "lib": "@delon/abc",
-    "selectorLabel": "delon-sv-title",
     "title": "View",
     "whenToUse": "",
     "doc": "https://ng-alain.com/components/view/en"
@@ -10998,7 +10962,6 @@
     "properties": [],
     "description": "xlsx directive.",
     "lib": "@delon/abc",
-    "selectorLabel": "delon-xlsx",
     "title": "Excel",
     "whenToUse": "",
     "doc": "https://ng-alain.com/components/xlsx/en"
@@ -11072,7 +11035,6 @@
       }
     ],
     "lib": "@delon/chart",
-    "selectorLabel": "delon-g2-bar",
     "title": "柱状图",
     "description": "使用垂直的柱子显示类别之间的数值比较。其中一个轴表示需要对比的分类维度，另一个轴代表相应的数值。",
     "whenToUse": "",
@@ -11143,7 +11105,6 @@
       }
     ],
     "lib": "@delon/chart",
-    "selectorLabel": "delon-g2-card",
     "title": "图表卡片",
     "description": "图表卡片，用于展示图表的卡片容器，可以方便的配合其它图表套件展示丰富信息。",
     "whenToUse": "",
@@ -11198,7 +11159,6 @@
       }
     ],
     "lib": "@delon/chart",
-    "selectorLabel": "delon-g2-custom",
     "title": "Custom Chart",
     "description": "Use `g2-custom` component to package your G2 chart.",
     "whenToUse": "",
@@ -11280,7 +11240,6 @@
       }
     ],
     "lib": "@delon/chart",
-    "selectorLabel": "delon-g2-gauge",
     "title": "仪表盘",
     "description": "一种进度展示方式，可以更直观的展示当前的进展情况，通常也可表示占比。",
     "whenToUse": "",
@@ -11401,7 +11360,6 @@
       }
     ],
     "lib": "@delon/chart",
-    "selectorLabel": "delon-g2-mini-area",
     "title": "迷你区域图",
     "description": "面积图又叫区域图。 它是在折线图的基础之上形成的, 它将折线图中折线与自变量坐标轴之间的区域使用颜色或者纹理填充，这样一个填充区域我们叫做面积，颜色的填充可以更好的突出趋势信息。",
     "whenToUse": "",
@@ -11488,7 +11446,6 @@
       }
     ],
     "lib": "@delon/chart",
-    "selectorLabel": "delon-g2-mini-bar",
     "title": "迷你柱状图",
     "description": "迷你柱状图更适合展示简单的区间数据，简洁的表现方式可以很好的减少大数据量的视觉展现压力。",
     "whenToUse": "",
@@ -11534,7 +11491,6 @@
       }
     ],
     "lib": "@delon/chart",
-    "selectorLabel": "delon-g2-mini-progress",
     "title": "迷你进度条",
     "description": "用于显示跟速度相关图形再适合不过。",
     "whenToUse": "",
@@ -11622,7 +11578,6 @@
       }
     ],
     "lib": "@delon/chart",
-    "selectorLabel": "delon-number-info",
     "title": "NumberInfo",
     "description": "Often used in data cards for highlighting the business data.",
     "whenToUse": "",
@@ -11765,7 +11720,6 @@
       }
     ],
     "lib": "@delon/chart",
-    "selectorLabel": "delon-g2-pie",
     "title": "饼状图",
     "description": "用于显示跟速度相关图形再适合不过。",
     "whenToUse": "",
@@ -11838,7 +11792,6 @@
       }
     ],
     "lib": "@delon/chart",
-    "selectorLabel": "delon-g2-radar",
     "title": "雷达图",
     "description": "雷达图是以相同点开始的轴上表示的三个或更多个定量变量的二维图形的形式显示多变量数据的图形方法。轴的相对位置和角度通常是不知情的。",
     "whenToUse": "",
@@ -11950,7 +11903,6 @@
       }
     ],
     "lib": "@delon/chart",
-    "selectorLabel": "delon-g2-single-bar",
     "title": "单一柱状图",
     "description": "单一柱状图更适合在列表中展示简单的区间数据，简洁的表现方式可以很好的减少大数据量的视觉展现压力。",
     "whenToUse": "",
@@ -11991,7 +11943,6 @@
       }
     ],
     "lib": "@delon/chart",
-    "selectorLabel": "delon-g2-tag-cloud",
     "title": "标签云",
     "description": "标签云是一套相关的标签以及与此相应的权重展示方式，一般典型的标签云有 30 至 150 个标签，而权重影响使用的字体大小或其他视觉效果。",
     "whenToUse": "",
@@ -12107,7 +12058,6 @@
       }
     ],
     "lib": "@delon/chart",
-    "selectorLabel": "delon-g2-timeline",
     "title": "折线图",
     "description": "使用 `timeline` 组件可以实现带有时间轴的柱状图展现，而其中的 `x` 属性，则是时间值的指向，默认最多支持同时展现两个指标，分别是 `y1` 和 `y2`。",
     "whenToUse": "",
@@ -12151,7 +12101,6 @@
       }
     ],
     "lib": "@delon/chart",
-    "selectorLabel": "delon-trend",
     "title": "趋势标记",
     "description": "趋势符号，标记上升和下降趋势。通常用绿色代表“好”，红色代表“不好”，股票涨跌场景除外。",
     "whenToUse": "",
@@ -12199,7 +12148,6 @@
       }
     ],
     "lib": "@delon/chart",
-    "selectorLabel": "delon-g2-water-wave",
     "title": "水波图",
     "description": "水波图是一种比例的展示方式，可以更直观的展示关键值的占比。",
     "whenToUse": "",
@@ -12375,7 +12323,6 @@
       }
     ],
     "lib": "@delon/form",
-    "selectorLabel": "delon-sf",
     "title": "Getting Started",
     "description": "@delon/form is a dynamic build form based on the [JSON Schema](http://json-schema.org/) standard.",
     "whenToUse": "",
@@ -12551,7 +12498,6 @@
       }
     ],
     "lib": "@delon/form",
-    "selectorLabel": "delon-sf",
     "title": "Getting Started",
     "description": "@delon/form is a dynamic build form based on the [JSON Schema](http://json-schema.org/) standard.",
     "whenToUse": "",

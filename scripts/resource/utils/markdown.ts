@@ -369,10 +369,6 @@ function metaToItem(zone: string, filePath: string, meta: any): Directive[] {
 
   return list.map(i => {
     i.lib = lib;
-    // 对所有 @delon/* 增加前缀 `delon-` 前缀
-    if (lib.startsWith('@delon')) {
-      i.selectorLabel = 'delon-' + i.selector;
-    }
     i.title = title;
     if (typeof i.description === 'undefined') {
       i.description = description;

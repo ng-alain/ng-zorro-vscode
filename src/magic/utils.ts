@@ -39,13 +39,13 @@ export function getTag(doc: TextDocument, pos: Position, includeAttr = true): Ta
         isOnTagName,
         isOnAttrName,
         isOnAttrValue,
-        attrName
+        attrName,
       };
     }
     return raw;
   });
 
-  if (includeAttr) {
+  if (tag && includeAttr) {
     tag.attributes = getAttrs(attrstr);
   }
 
@@ -65,9 +65,9 @@ export function getAttrs(text: string): { [key: string]: TagAttr } {
 
 export function getAttrName(str: string) {
   if (/\s([\w-:.]+)=%*$/.test(str)) {
-    return RegExp.$1
+    return RegExp.$1;
   }
-  return ''
+  return '';
 }
 
 export function pureAttr(name: string, value: string): TagAttr {

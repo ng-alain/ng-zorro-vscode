@@ -13,7 +13,7 @@ import {
   MarkdownString,
 } from 'vscode';
 import { DirectiveProperty, Directive, DirectiveTypeDefinition, InputAttrType } from '../interfaces';
-import { getDirective, CONFIG, RESOURCES, genComponentMarkdown, genPropertyMarkdown } from '../resources';
+import { getDirective, CONFIG, RESOURCES } from '../resources';
 import { getTag } from '../utils';
 
 export default class implements CompletionItemProvider {
@@ -24,12 +24,9 @@ export default class implements CompletionItemProvider {
     context: CompletionContext,
   ): ProviderResult<CompletionItem[] | CompletionList> {
     let char = context.triggerCharacter;
-    // 97-122
     switch (char) {
       // Component
       case '<':
-      case 'n': // ng-zorro-antd：所有组件都以 `nz-` 开头，因此使用键入 'n' 来触发
-      case 'd': // delon/*：所有组件都以 `delon-` 开头，因此使用键入 'd' 来触发
         return this.genComponent(char);
       // Property
       case '"':
@@ -43,29 +40,35 @@ export default class implements CompletionItemProvider {
   }
 
   private genComponent(char: string): CompletionItem[] {
-    return RESOURCES.map(i => this.renderCompletionItem(char, i));
+    return RESOURCES.map(i => this.renderCompletionItem(char, i, false));
   }
 
-  private renderCompletionItem(char: string, i: Directive): CompletionItem {
-    const item = new CompletionItem(i.selectorLabel || i.selector, CompletionItemKind.Property);
+  private genDirective(): CompletionItem[] {
+    return RESOURCES.filter(w => w.type === 'directive').map(i => this.renderCompletionItem('', i, true));
+  }
+
+  private renderCompletionItem(char: string, i: Directive, isClean: boolean): CompletionItem {
+    const item = new CompletionItem(i.selector, CompletionItemKind.Property);
     item.command = this.triggerHideSuggestCommand;
-    item.documentation = new MarkdownString(genComponentMarkdown(i));
+    item.documentation = i._doc;
+    if (isClean) {
+      return item;
+    }
     // `<` 非单词部分需要提前移除触发词
     if (char === '<') {
       item.insertText = new SnippetString(i.snippet.substr(1));
     } else {
       item.insertText = new SnippetString(i.snippet);
     }
-
     return item;
   }
 
   private genProperties(document: TextDocument, position: Position, triggerCharacter: string): CompletionItem[] {
     const tag = getTag(document, position);
-    if (tag == null) return [];
+    if (tag == null) return this.genDirective();
 
     const directive = getDirective(tag);
-    if (directive == null) return [];
+    if (directive == null) return this.genDirective();
 
     if (tag.isOnAttrValue) {
       const attr = tag.attributes[tag.attrName];
@@ -92,7 +95,7 @@ export default class implements CompletionItemProvider {
         if (property && property.complexType) {
           return directive.types[property.complexType].map(i => {
             const item = new CompletionItem(i.name, CompletionItemKind.Value);
-            item.documentation = new MarkdownString(i.description);
+            item.documentation = i._doc;
             return item;
           });
         }
@@ -126,7 +129,7 @@ export default class implements CompletionItemProvider {
 
   private renderAttrCompletionItem(property: DirectiveProperty, ngBindingType: string, range: Range): CompletionItem {
     const item = new CompletionItem(property.name, CompletionItemKind.Field);
-    item.documentation = new MarkdownString(genPropertyMarkdown(property));
+    item.documentation = property._doc;
     if (range) {
       item.range = range;
     }

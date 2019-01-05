@@ -6,7 +6,7 @@
 
 ## Usage
 
-Typing `<` or `n` in the `.html` file to trigger all components in the intellisense list, pressing `Tab` or `Enter` will be complete automatically; no more!
+Typing `<` in the `.html` file to trigger all components in the intellisense list, pressing `Tab` or `Enter` will be complete automatically; no more!
 
 In addition, some common complete code snippets are built in and prefix with `nzs-`.
 
@@ -16,6 +16,8 @@ In addition, some common complete code snippets are built in and prefix with `nz
 |----------------------------|-------------------------|----------------|---------|
 | `ng-zorro-vscode.language` | Set language code       | `zh-CN, en-US` | `en-US` |
 | `ng-zorro-vscode.hover`    | Whether to enable hover | `boolean`      | `true`  |
+
+> **NOTICE:** Changed configuration must **restart Visual Studio Code**.
 
 ## Support Language Versions
 

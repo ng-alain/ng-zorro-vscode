@@ -2,7 +2,7 @@ import { Directive, DirectiveType, Tag, NAME, DirectiveTypeDefinition, Directive
 import { i18n } from './local';
 import zh_CN from './zh-CN.json';
 import en_US from './en-US.json';
-import { workspace } from 'vscode';
+import { workspace, MarkdownString } from 'vscode';
 import Notifier from '../notifier';
 import { readFileSync, existsSync } from 'fs';
 import { join } from 'path';
@@ -30,14 +30,70 @@ function getPure(value: string): string {
   });
 }
 
+function genComponentMarkdown(item: Directive): string {
+  if (item == null) return '';
+
+  const rows: string[] = [CONFIG.isAlain ? `**${i18n('library')}** ${item.lib}` : null, `**${item.title}**`, item.description];
+
+  if (item.whenToUse) {
+    rows.push(`**${i18n('whenToUse')}**`);
+    rows.push(item.whenToUse);
+  }
+
+  if (item.doc) {
+    rows.push(`[${i18n('document')}](${item.doc})`);
+  }
+
+  return rows.filter(w => !!w).join('\n\n');
+}
+
+function genPropertyMarkdown(property: DirectiveProperty): string {
+  if (property == null) return '';
+
+  const rows: string[] = [];
+
+  if (property.typeDefinition && property.typeDefinition.length > 0) {
+    rows.push(
+      `**${i18n('optionalValue')}** ${property.typeDefinition.map((i: DirectiveTypeDefinition) => '`' + i.label + '`').join(', ')}`,
+    );
+  } else if (property.typeRaw.length > 0) {
+    rows.push(`**${i18n('type')}** ${property.typeRaw}`);
+  }
+
+  if (property.default.length > 0) {
+    rows.push(`**${i18n('defaultValue')}** ${property.default}`);
+  }
+
+  rows.push(property.description);
+
+  return rows.join('\n\n');
+}
+
+function fixProperty(p: DirectiveProperty) {
+  p.pureName = getPure(p.name);
+
+  p.default = notNull(p.default, '-');
+  if (p.default === '-') p.default = '';
+
+  p.description = notNull(p.description);
+  p.isInputBoolean = notNull(p.isInputBoolean, true);
+  p.type = notNull(p.type, 'string');
+  p.typeRaw = notNull(p.typeRaw, '').replace(/｜/g, '|');
+  p.typeDefinition = notNull(p.typeDefinition, []).map((item: any) => (typeof item === 'string' ? { value: item, label: item } : item));
+  p.typeDefinitionSnippetStr = p.typeDefinition.map((i: DirectiveTypeDefinition) => i.value).join(',');
+  p._doc = new MarkdownString(genPropertyMarkdown(p));
+}
+
 export async function INIT(notifier: Notifier) {
   const cog = workspace.getConfiguration(NAME);
   CONFIG.language = cog.language;
   CONFIG.hover = cog.hover;
   if (workspace.workspaceFolders != null && workspace.workspaceFolders.length > 0) {
+    CONFIG.isAntd = false;
+    CONFIG.isAlain = false;
     const packageJsonPath = join(workspace.workspaceFolders[0].uri.fsPath, 'package.json');
     if (!existsSync(packageJsonPath)) {
-      notifier.notify('alert', `${NAME}: 未找到 package.json 文件`);
+      notifier.notify(`Not found package.json`);
       return null;
     }
     const packageJson = JSON.parse(readFileSync(packageJsonPath).toString());
@@ -73,19 +129,14 @@ export async function INIT(notifier: Notifier) {
     i.snippet = i.snippet.replace(/__/g, i.selector);
 
     i.properties = notNull(i.properties, []);
-    i.properties.forEach(p => {
-      p.pureName = getPure(p.name);
+    i.properties.forEach(p => fixProperty(p));
+    if (i.types) {
+      Object.keys(i.types).forEach(key => {
+        i.types[key].forEach(p => fixProperty(p));
+      });
+    }
 
-      p.default = notNull(p.default, '-');
-      if (p.default === '-') p.default = '';
-
-      p.description = notNull(p.description);
-      p.isInputBoolean = notNull(p.isInputBoolean, true);
-      p.type = notNull(p.type, 'string');
-      p.typeRaw = notNull(p.typeRaw, '').replace(/｜/g, '|');
-      p.typeDefinition = notNull(p.typeDefinition, []).map((item: any) => (typeof item === 'string' ? { value: item } : item));
-      p.typeDefinitionSnippetStr = p.typeDefinition.map((i: DirectiveTypeDefinition) => i.value).join(',');
-    });
+    i._doc = new MarkdownString(genComponentMarkdown(i));
 
     DIRECTIVE_NAMES.push(i.selector);
   });
@@ -112,42 +163,4 @@ export function query(type: DirectiveType) {
 
 export function first(selector: string) {
   return RESOURCES.find(w => w.selector === selector);
-}
-
-export function genComponentMarkdown(item: Directive): string;
-export function genComponentMarkdown(item: string): string;
-export function genComponentMarkdown(item: Directive | string): string {
-  item = typeof item === 'string' ? first(item) : item;
-  if (item == null) return '';
-
-  const rows: string[] = [CONFIG.isAlain ? `**${i18n('library')}** ${item.lib}` : null, `**${item.title}**`, item.description];
-
-  if (item.whenToUse) {
-    rows.push(`**${i18n('whenToUse')}**`);
-    rows.push(item.whenToUse);
-  }
-
-  if (item.doc) {
-    rows.push(`[${i18n('document')}](${item.doc})`);
-  }
-
-  return rows.filter(w => !!w).join('\n\n');
-}
-
-export function genPropertyMarkdown(property: DirectiveProperty): string {
-  if (property == null) return '';
-
-  const rows: string[] = [];
-
-  if (property.typeRaw.length > 0) {
-    rows.push(`**${i18n('type')}** ${property.typeRaw}`);
-  }
-
-  if (property.default.length > 0) {
-    rows.push(`**${i18n('defaultValue')}** ${property.default}`);
-  }
-
-  rows.push(property.description);
-
-  return rows.join('\n\n');
 }

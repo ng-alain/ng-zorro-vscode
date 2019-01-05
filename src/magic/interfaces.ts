@@ -1,3 +1,5 @@
+import { MarkdownString } from 'vscode';
+
 export const NAME = `ng-zorro-vscode`;
 
 export type DirectiveType = 'component' | 'directive';
@@ -13,10 +15,6 @@ export interface Directive {
    * Component selector, e.g: `nz-button`
    */
   selector: string;
-  /**
-   * 选择器Label，用于 @delon 类库需要额外增加 `delon-` 前缀，实际插入始终使用 `selector`
-   */
-  selectorLabel?: string;
   /**
    * Title for component, e.g: `按钮`
    */
@@ -51,6 +49,8 @@ export interface Directive {
    * nz-row: `<div __$1>$0</div>` 转化 `<div nz-row$1>$0</div>`
    */
   snippet?: string;
+  /** 解析后的文档数据 */
+  _doc?: MarkdownString;
 }
 
 export interface DirectiveProperty {
@@ -93,10 +93,14 @@ export interface DirectiveProperty {
   typeDefinitionSnippetStr?: string;
   /** 额外定制 */
   snippet?: string;
+  /** 解析后的文档数据 */
+  _doc?: MarkdownString;
 }
 
 export interface DirectiveTypeDefinition {
+  /** 值 */
   value?: string;
+  /** 标签 */
   label?: string;
 }
 
