@@ -10,7 +10,7 @@
   "scripts": {
     "build": "bash ./scripts/build/build.sh",
     "test": "bash ./scripts/build/build.sh -t",
-    "release": "bash ./scripts/build/build.sh -b -p",
+    "release": "npm run resource && bash ./scripts/build/build.sh -b -p",
     "watch": "tsc -watch -p ./",
     "resource": "bash ./scripts/resource/build.sh",
     "postinstall": "node ./node_modules/vscode/bin/install"

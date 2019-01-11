@@ -2,13 +2,12 @@ import { ExtensionContext, languages } from 'vscode';
 import NAAutoCompletionItemProvider from './plugin/completion-provider';
 import NAHoverProvider from './plugin/hover-provider';
 import { INIT, CONFIG } from './resources';
-import Notifier from './notifier';
+import { Notifier } from './notifier';
 
 const notifier = new Notifier();
 
 export async function activate(context: ExtensionContext) {
   await INIT(notifier);
-  console.log(CONFIG);
 
   if (!CONFIG.isAntd && !CONFIG.isAntd) {
     notifier.notify('Not found ng-zorro-antd lib.');

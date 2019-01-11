@@ -165,6 +165,17 @@ export default class implements CompletionItemProvider {
     if (property.inputType === InputAttrType.InputOutput) {
       return `[(${property.name})]=${this.genDefaultPropertyValueSnippet(property)}`;
     }
+    // 对于指定强制性类型，不再给予任何建议，始终认为属于需要绑定变量名
+    if (property.forceInputType != null) {
+      switch (property.forceInputType) {
+        case InputAttrType.InputOutput:
+          return `[(${property.name})]="\${1:${property.pureName}}"$0`;
+        case InputAttrType.Input:
+          return `[${property.name}]="\${1:${property.pureName}}"$0`;
+        case InputAttrType.Output:
+          return `(${property.name})="\${1:${property.pureName}}(\${2:\\$event})"$0`;
+      }
+    }
     switch (property.type) {
       case 'string':
       case 'Enum':

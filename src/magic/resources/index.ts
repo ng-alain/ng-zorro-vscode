@@ -3,7 +3,7 @@ import { i18n } from './local';
 import zh_CN from './zh-CN.json';
 import en_US from './en-US.json';
 import { workspace, MarkdownString } from 'vscode';
-import Notifier from '../notifier';
+import { Notifier } from '../notifier';
 import { readFileSync, existsSync } from 'fs';
 import { join } from 'path';
 

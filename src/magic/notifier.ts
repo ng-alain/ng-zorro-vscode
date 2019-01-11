@@ -1,8 +1,8 @@
 import * as vscode from 'vscode';
 import { NAME } from './interfaces';
 
-class Notifier {
-  public statusBarItem: vscode.StatusBarItem;
+export class Notifier {
+  private statusBarItem: vscode.StatusBarItem;
   private timeoutId: NodeJS.Timer;
 
   constructor(alignment?: vscode.StatusBarAlignment, priority?: number) {
@@ -10,24 +10,16 @@ class Notifier {
     this.statusBarItem.show();
   }
 
-  public notify(text: string, autoHide: boolean = true, icon: string = ''): void {
+  notify(text: string, autoHide = true, icon = 'alert'): void {
     if (this.timeoutId) {
       clearTimeout(this.timeoutId);
     }
-    if (!icon) {
-      icon = 'alert';
-    }
 
-    this.statusBarItem.text = `$(${icon}) ${text}`;
-    this.statusBarItem.tooltip = null;
+    this.statusBarItem.text = `$(${icon})`;
+    this.statusBarItem.tooltip = `${NAME}: ${text}`;
 
     if (autoHide) {
-      this.timeoutId = setTimeout(() => {
-        this.statusBarItem.text = `$(${icon})`;
-        this.statusBarItem.tooltip = `${NAME}: ${text}`;
-      }, 5000);
+      this.timeoutId = setTimeout(() => this.statusBarItem.hide(), 1000 * 60);
     }
   }
 }
-
-export default Notifier;

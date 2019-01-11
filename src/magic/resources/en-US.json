@@ -1,122 +1,5 @@
 [
   {
-    "_idx": 21,
-    "type": "component",
-    "selector": "nz-tooltip",
-    "types": {},
-    "properties": [
-      {
-        "name": "nzMouseEnterDelay",
-        "inputType": 0,
-        "description": "Delay in seconds, before tooltip is shown on mouse enter",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "`0.15`",
-        "pureDefault": "0.15",
-        "_common": true
-      },
-      {
-        "name": "nzMouseLeaveDelay",
-        "inputType": 0,
-        "description": "Delay in seconds, before tooltip is hidden on mouse leave",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "`0.1`",
-        "pureDefault": "0.1",
-        "_common": true
-      },
-      {
-        "name": "nzOverlayClassName",
-        "inputType": 0,
-        "description": "Class name of the tooltip card",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": "",
-        "_common": true
-      },
-      {
-        "name": "nzOverlayStyle",
-        "inputType": 0,
-        "description": "Style of the tooltip card",
-        "type": "object",
-        "typeRaw": "`object`",
-        "default": "",
-        "_common": true
-      },
-      {
-        "name": "nzPlacement",
-        "inputType": 0,
-        "description": "The position of the tooltip relative to the target",
-        "type": "Enum",
-        "typeRaw": "`'top'｜'left'｜'right'｜'bottom'｜'topLeft'｜'topRight'｜'bottomLeft'｜'bottomRight'｜'leftTop'｜'leftBottom'｜'rightTop'｜'rightBottom'`",
-        "default": "`'top'`",
-        "typeDefinition": [
-          "top",
-          "left",
-          "right",
-          "bottom",
-          "topLeft",
-          "topRight",
-          "bottomLeft",
-          "bottomRight",
-          "leftTop",
-          "leftBottom",
-          "rightTop",
-          "rightBottom"
-        ],
-        "pureDefault": "top",
-        "_common": true
-      },
-      {
-        "name": "nzTrigger",
-        "inputType": 0,
-        "description": "Tooltip trigger mode",
-        "type": "Enum",
-        "typeRaw": "`'click'｜'focus'｜'hover'`",
-        "default": "`'hover'`",
-        "typeDefinition": [
-          "click",
-          "focus",
-          "hover"
-        ],
-        "pureDefault": "hover",
-        "_common": true
-      },
-      {
-        "name": "nzVisible",
-        "inputType": 0,
-        "description": "Whether the floating tooltip card is visible or not",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false",
-        "_common": true
-      },
-      {
-        "name": "nzVisibleChange",
-        "inputType": 1,
-        "description": "Callback executed when visibility of the tooltip card is changed",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<boolean>`",
-        "default": "",
-        "_common": true
-      },
-      {
-        "name": "nzTitle",
-        "inputType": 0,
-        "description": "The text shown in the tooltip",
-        "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
-        "default": ""
-      }
-    ],
-    "lib": "ng-zorro-antd",
-    "title": "Tooltip",
-    "description": "A simple text popup tip.",
-    "whenToUse": "- The tip is shown on mouse enter, and is hidden on mouse leave. The Tooltip doesn't support complex text or operations.\n- To provide an explanation of a `button/text/operation`. It's often used instead of the html `title` attribute.",
-    "doc": "https://ng.ant.design/components/tooltip/en"
-  },
-  {
     "_idx": 58,
     "type": "directive",
     "selector": "nz-row",
@@ -417,6 +300,124 @@
     "doc": "https://ng.ant.design/components/grid/en"
   },
   {
+    "_idx": 21,
+    "type": "component",
+    "selector": "nz-tooltip",
+    "types": {},
+    "properties": [
+      {
+        "name": "nzMouseEnterDelay",
+        "inputType": 0,
+        "description": "Delay in seconds, before tooltip is shown on mouse enter",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`0.15`",
+        "pureDefault": "0.15",
+        "_common": true
+      },
+      {
+        "name": "nzMouseLeaveDelay",
+        "inputType": 0,
+        "description": "Delay in seconds, before tooltip is hidden on mouse leave",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`0.1`",
+        "pureDefault": "0.1",
+        "_common": true
+      },
+      {
+        "name": "nzOverlayClassName",
+        "inputType": 0,
+        "description": "Class name of the tooltip card",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": "",
+        "_common": true
+      },
+      {
+        "name": "nzOverlayStyle",
+        "inputType": 0,
+        "description": "Style of the tooltip card",
+        "type": "object",
+        "typeRaw": "`object`",
+        "default": "",
+        "_common": true,
+        "forceInputType": 0
+      },
+      {
+        "name": "nzPlacement",
+        "inputType": 0,
+        "description": "The position of the tooltip relative to the target",
+        "type": "Enum",
+        "typeRaw": "`'top'｜'left'｜'right'｜'bottom'｜'topLeft'｜'topRight'｜'bottomLeft'｜'bottomRight'｜'leftTop'｜'leftBottom'｜'rightTop'｜'rightBottom'`",
+        "default": "`'top'`",
+        "typeDefinition": [
+          "top",
+          "left",
+          "right",
+          "bottom",
+          "topLeft",
+          "topRight",
+          "bottomLeft",
+          "bottomRight",
+          "leftTop",
+          "leftBottom",
+          "rightTop",
+          "rightBottom"
+        ],
+        "pureDefault": "top",
+        "_common": true
+      },
+      {
+        "name": "nzTrigger",
+        "inputType": 0,
+        "description": "Tooltip trigger mode",
+        "type": "Enum",
+        "typeRaw": "`'click'｜'focus'｜'hover'`",
+        "default": "`'hover'`",
+        "typeDefinition": [
+          "click",
+          "focus",
+          "hover"
+        ],
+        "pureDefault": "hover",
+        "_common": true
+      },
+      {
+        "name": "nzVisible",
+        "inputType": 0,
+        "description": "Whether the floating tooltip card is visible or not",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false",
+        "_common": true
+      },
+      {
+        "name": "nzVisibleChange",
+        "inputType": 1,
+        "description": "Callback executed when visibility of the tooltip card is changed",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<boolean>`",
+        "default": "",
+        "_common": true
+      },
+      {
+        "name": "nzTitle",
+        "inputType": 0,
+        "description": "The text shown in the tooltip",
+        "type": "string",
+        "typeRaw": "`string｜TemplateRef<void>`",
+        "default": ""
+      }
+    ],
+    "lib": "ng-zorro-antd",
+    "title": "Tooltip",
+    "description": "A simple text popup tip.",
+    "whenToUse": "- The tip is shown on mouse enter, and is hidden on mouse leave. The Tooltip doesn't support complex text or operations.\n- To provide an explanation of a `button/text/operation`. It's often used instead of the html `title` attribute.",
+    "doc": "https://ng.ant.design/components/tooltip/en"
+  },
+  {
     "_idx": 11,
     "type": "component",
     "selector": "sg-container",
@@ -576,106 +577,87 @@
     "doc": "https://ng-alain.com/components/grid/en"
   },
   {
-    "_idx": 51,
+    "_idx": 22,
     "type": "component",
-    "selector": "nz-autocomplete",
+    "selector": "nz-timeline",
     "types": {},
     "properties": [
       {
-        "name": "nzBackfill",
+        "name": "nzPending",
         "inputType": 0,
-        "description": "backfill selected item the input when using keyboard",
+        "description": "Set the last ghost node's existence or its content",
+        "type": "string",
+        "typeRaw": "`string｜boolean｜TemplateRef<void>`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzPendingDot",
+        "inputType": 0,
+        "description": "Set the dot of the last ghost node when pending is true",
+        "type": "string",
+        "typeRaw": "`string｜TemplateRef<void>`",
+        "default": "`<i nz-icon type=\"loading\"></i>`",
+        "pureDefault": "<i nz-icon type=\"loading\"></i>"
+      },
+      {
+        "name": "nzReverse",
+        "inputType": 0,
+        "description": "Reverse nodes or not",
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
         "pureDefault": "false"
       },
       {
-        "name": "nzDataSource",
+        "name": "nzMode",
         "inputType": 0,
-        "description": "Data source for autocomplete",
-        "type": "string",
-        "typeRaw": "`AutocompleteDataSource`",
-        "default": ""
-      },
-      {
-        "name": "nzDefaultActiveFirstOption",
-        "inputType": 0,
-        "description": "Whether active first option by default",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`true`",
-        "pureDefault": "true"
-      },
-      {
-        "name": "nzWidth",
-        "inputType": 0,
-        "description": "Custom width, unit px",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "trigger element width",
-        "pureDefault": "trigger element width"
-      },
-      {
-        "name": "nzOverlayClassName",
-        "inputType": 0,
-        "description": "Class name of the dropdown root element",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": ""
-      },
-      {
-        "name": "nzOverlayStyle",
-        "inputType": 0,
-        "description": "Style of the dropdown root element",
-        "type": "object",
-        "typeRaw": "`object`",
-        "default": ""
+        "description": "By sending `alternate` the timeline will distribute the nodes to the left and right",
+        "type": "Enum",
+        "typeRaw": "`'left'｜'alternate'｜'right'`",
+        "default": "",
+        "typeDefinition": [
+          "left",
+          "alternate",
+          "right"
+        ]
       }
     ],
+    "description": "Timeline",
     "lib": "ng-zorro-antd",
-    "title": "Autocomplete",
-    "description": "Autocomplete function of input field.",
-    "whenToUse": "When there is a need for autocomplete functionality.",
-    "doc": "https://ng.ant.design/components/auto-complete/en"
+    "title": "Timeline",
+    "whenToUse": "- When a series of information needs to be ordered by time (ascend or descend).\n- When you need a timeline to make a visual connection.",
+    "doc": "https://ng.ant.design/components/timeline/en"
   },
   {
-    "_idx": 158,
+    "_idx": 104,
     "type": "component",
-    "selector": "nz-auto-option",
+    "selector": "nz-timeline-item",
     "types": {},
     "properties": [
       {
-        "name": "nzValue",
+        "name": "nzColor",
         "inputType": 0,
-        "description": "bind ngModel of the trigger element",
-        "type": "string",
-        "typeRaw": "`any`",
-        "default": ""
-      },
-      {
-        "name": "nzLabel",
-        "inputType": 0,
-        "description": "display value of the trigger element",
+        "description": "Set the circle's color to `blue`, `red`, `green` or other custom colors (css color)",
         "type": "string",
         "typeRaw": "`string`",
-        "default": ""
+        "default": "`blue`",
+        "pureDefault": "blue"
       },
       {
-        "name": "nzDisabled",
+        "name": "nzDot",
         "inputType": 0,
-        "description": "disabled option",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false"
+        "description": "Customize timeline dot",
+        "type": "string",
+        "typeRaw": "`string｜TemplateRef<void>`",
+        "default": ""
       }
     ],
+    "description": "Node of timeline",
     "lib": "ng-zorro-antd",
-    "title": "Autocomplete",
-    "description": "Autocomplete function of input field.",
-    "whenToUse": "When there is a need for autocomplete functionality.",
-    "doc": "https://ng.ant.design/components/auto-complete/en"
+    "title": "Timeline",
+    "whenToUse": "- When a series of information needs to be ordered by time (ascend or descend).\n- When you need a timeline to make a visual connection.",
+    "doc": "https://ng.ant.design/components/timeline/en"
   },
   {
     "_idx": 6,
@@ -922,7 +904,8 @@
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
-        "pureDefault": "false"
+        "pureDefault": "false",
+        "forceInputType": 0
       },
       {
         "name": "nzShape",
@@ -984,7 +967,8 @@
         "name": "disabled",
         "inputType": 0,
         "type": "boolean",
-        "typeRaw": "`boolean`"
+        "typeRaw": "`boolean`",
+        "forceInputType": 0
       }
     ],
     "description": "To get a customized button, just set `nzType`/`nzShape`/`nzSize`/`nzLoading`/`disabled`.",
@@ -1004,7 +988,7 @@
         "name": "ngModel",
         "inputType": 2,
         "description": "(Two-way bindable) The current selected date",
-        "type": "Date",
+        "type": "object",
         "typeRaw": "`Date`",
         "default": "current date",
         "pureDefault": "current date"
@@ -1029,7 +1013,8 @@
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`true`",
-        "pureDefault": "true"
+        "pureDefault": "true",
+        "forceInputType": 0
       },
       {
         "name": "nzCard",
@@ -1142,7 +1127,8 @@
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
-        "pureDefault": "false"
+        "pureDefault": "false",
+        "forceInputType": 0
       },
       {
         "name": "nzTitle",
@@ -1336,7 +1322,7 @@
         "name": "ngModel",
         "inputType": 2,
         "description": "selected value",
-        "type": "string",
+        "type": "object",
         "typeRaw": "`any[]`",
         "default": ""
       },
@@ -1390,7 +1376,8 @@
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
-        "pureDefault": "false"
+        "pureDefault": "false",
+        "forceInputType": 0
       },
       {
         "name": "nzExpandTrigger",
@@ -1458,7 +1445,7 @@
         "name": "nzOptions",
         "inputType": 0,
         "description": "data options of cascade",
-        "type": "string",
+        "type": "object",
         "typeRaw": "`object[]`",
         "default": ""
       },
@@ -1596,7 +1583,8 @@
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
-        "pureDefault": "false"
+        "pureDefault": "false",
+        "forceInputType": 0
       },
       {
         "name": "ngModel",
@@ -1614,7 +1602,8 @@
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
-        "pureDefault": "false"
+        "pureDefault": "false",
+        "forceInputType": 0
       },
       {
         "name": "nzValue",
@@ -1668,7 +1657,8 @@
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
-        "pureDefault": "false"
+        "pureDefault": "false",
+        "forceInputType": 0
       },
       {
         "name": "ngModelChange",
@@ -1750,7 +1740,8 @@
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
-        "pureDefault": "false"
+        "pureDefault": "false",
+        "forceInputType": 0
       },
       {
         "name": "nzHeader",
@@ -1845,7 +1836,8 @@
         "typeRaw": "`boolean`",
         "default": "`false`",
         "pureDefault": "false",
-        "_common": true
+        "_common": true,
+        "forceInputType": 0
       },
       {
         "name": "nzDisabledDate",
@@ -1930,7 +1922,7 @@
         "name": "ngModel",
         "inputType": 2,
         "description": "Date",
-        "type": "Date",
+        "type": "object",
         "typeRaw": "`Date`",
         "default": ""
       },
@@ -2067,7 +2059,8 @@
         "typeRaw": "`boolean`",
         "default": "`false`",
         "pureDefault": "false",
-        "_common": true
+        "_common": true,
+        "forceInputType": 0
       },
       {
         "name": "nzDisabledDate",
@@ -2152,7 +2145,7 @@
         "name": "ngModel",
         "inputType": 2,
         "description": "Date",
-        "type": "Date",
+        "type": "object",
         "typeRaw": "`Date`",
         "default": ""
       },
@@ -2249,7 +2242,8 @@
         "typeRaw": "`boolean`",
         "default": "`false`",
         "pureDefault": "false",
-        "_common": true
+        "_common": true,
+        "forceInputType": 0
       },
       {
         "name": "nzDisabledDate",
@@ -2334,7 +2328,7 @@
         "name": "ngModel",
         "inputType": 2,
         "description": "Date",
-        "type": "Date",
+        "type": "object",
         "typeRaw": "`Date`",
         "default": ""
       },
@@ -2437,7 +2431,8 @@
         "typeRaw": "`boolean`",
         "default": "`false`",
         "pureDefault": "false",
-        "_common": true
+        "_common": true,
+        "forceInputType": 0
       },
       {
         "name": "nzDisabledDate",
@@ -2522,7 +2517,7 @@
         "name": "ngModel",
         "inputType": 2,
         "description": "Date",
-        "type": "Date",
+        "type": "object",
         "typeRaw": "`Date`",
         "default": ""
       },
@@ -2617,7 +2612,8 @@
         "typeRaw": "`boolean`",
         "default": "`false`",
         "pureDefault": "false",
-        "_common": true
+        "_common": true,
+        "forceInputType": 0
       },
       {
         "name": "nzDisabledDate",
@@ -2702,7 +2698,7 @@
         "name": "ngModel",
         "inputType": 2,
         "description": "Date",
-        "type": "string",
+        "type": "Array",
         "typeRaw": "`Date[]`",
         "default": ""
       },
@@ -2752,7 +2748,7 @@
         "name": "nzPlaceHolder",
         "inputType": 0,
         "description": "placeholder of date input",
-        "type": "string",
+        "type": "Array",
         "typeRaw": "`string[]`",
         "default": ""
       },
@@ -3003,7 +2999,8 @@
         "description": "whether the dropdown menu is disabled",
         "type": "boolean",
         "typeRaw": "`boolean`",
-        "default": ""
+        "default": "",
+        "forceInputType": 0
       },
       {
         "name": "nzPlacement",
@@ -3066,7 +3063,8 @@
         "description": "Style of the dropdown root element",
         "type": "object",
         "typeRaw": "`object`",
-        "default": ""
+        "default": "",
+        "forceInputType": 0
       },
       {
         "name": "nzVisibleChange",
@@ -3095,7 +3093,8 @@
         "description": "whether the dropdown menu is disabled",
         "type": "boolean",
         "typeRaw": "`boolean`",
-        "default": ""
+        "default": "",
+        "forceInputType": 0
       },
       {
         "name": "nzPlacement",
@@ -3209,7 +3208,8 @@
         "description": "whether the dropdown menu is disabled",
         "type": "boolean",
         "typeRaw": "`boolean`",
-        "default": ""
+        "default": "",
+        "forceInputType": 0
       },
       {
         "name": "nzPlacement",
@@ -3310,6 +3310,43 @@
     "description": "A dropdown list.",
     "whenToUse": "If there are too many operations to display, you can wrap them in a `Dropdown`. By clicking/hovering on the trigger, a dropdown menu should appear, which allows you to choose one option and execute relevant actions.",
     "doc": "https://ng.ant.design/components/dropdown/en"
+  },
+  {
+    "_idx": 12,
+    "type": "component",
+    "selector": "nz-empty",
+    "types": {},
+    "properties": [
+      {
+        "name": "nzNotFoundImage",
+        "inputType": 0,
+        "description": "Customize image. Will tread as image url when string provided",
+        "type": "string",
+        "typeRaw": "`string` ｜ `TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "nzNotFoundContent",
+        "inputType": 0,
+        "description": "Custom description",
+        "type": "string",
+        "typeRaw": "`string` ｜ `TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "nzNotFoundFooter",
+        "inputType": 0,
+        "description": "Custom Footer",
+        "type": "string",
+        "typeRaw": "`string` ｜ `TemplateRef<void>`",
+        "default": ""
+      }
+    ],
+    "lib": "ng-zorro-antd",
+    "title": "Empty",
+    "description": "Empty state placeholder.",
+    "whenToUse": "When there is no data provided, display for friendly tips.",
+    "doc": "https://ng.ant.design/components/empty/en"
   },
   {
     "_idx": 56,
@@ -3900,7 +3937,7 @@
         "name": "nzValidateStatus",
         "inputType": 0,
         "description": "Reactive Forms: Will generate status based on FormControl",
-        "type": "string",
+        "type": "object",
         "typeRaw": "`FormControl`",
         "default": "first `FormControl` in `nz-form-control`",
         "pureDefault": "first `FormControl` in `nz-form-control`"
@@ -4075,7 +4112,8 @@
         "name": "disabled",
         "inputType": 0,
         "type": "boolean",
-        "typeRaw": "`boolean`"
+        "typeRaw": "`boolean`",
+        "forceInputType": 0
       },
       {
         "name": "nzAutocomplete",
@@ -4196,7 +4234,8 @@
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
-        "pureDefault": "false"
+        "pureDefault": "false",
+        "forceInputType": 0
       },
       {
         "name": "nzMax",
@@ -4416,7 +4455,7 @@
         "name": "nzDataSource",
         "inputType": 0,
         "description": "Data source for list",
-        "type": "string",
+        "type": "object",
         "typeRaw": "`any[]`",
         "default": ""
       },
@@ -4481,7 +4520,8 @@
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
-        "pureDefault": "false"
+        "pureDefault": "false",
+        "forceInputType": 0
       },
       {
         "name": "nzLoadMore",
@@ -4489,6 +4529,14 @@
         "description": "Shows a load more content",
         "type": "TemplateRef",
         "typeRaw": "`TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "nzNoResult",
+        "inputType": 0,
+        "description": "Specify content to show when list is empty",
+        "type": "string",
+        "typeRaw": "`string` ｜ `TemplateRef<void>`",
         "default": ""
       },
       {
@@ -4530,7 +4578,7 @@
     "doc": "https://ng.ant.design/components/list/en"
   },
   {
-    "_idx": 338,
+    "_idx": 352,
     "type": "component",
     "selector": "nz-list-item",
     "types": {},
@@ -4567,7 +4615,7 @@
     "doc": "https://ng.ant.design/components/list/en"
   },
   {
-    "_idx": 403,
+    "_idx": 417,
     "type": "component",
     "selector": "nz-list-item-meta",
     "types": {},
@@ -4613,7 +4661,7 @@
         "name": "nzMentionTrigger",
         "inputType": 0,
         "description": "Trigger element **(required)**",
-        "type": "string",
+        "type": "object",
         "typeRaw": "`HTMLTextAreaElement｜HTMLInputElement`",
         "default": ""
       },
@@ -4632,7 +4680,8 @@
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
-        "pureDefault": "false"
+        "pureDefault": "false",
+        "forceInputType": 0
       },
       {
         "name": "nzNotFoundContent",
@@ -4669,7 +4718,7 @@
         "name": "nzSuggestions",
         "inputType": 0,
         "description": "Suggestion content",
-        "type": "string",
+        "type": "object",
         "typeRaw": "`any[]`",
         "default": "`[]`",
         "pureDefault": "[]"
@@ -4792,7 +4841,8 @@
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
-        "pureDefault": "false"
+        "pureDefault": "false",
+        "forceInputType": 0
       },
       {
         "name": "nzSelected",
@@ -4832,7 +4882,8 @@
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
-        "pureDefault": "false"
+        "pureDefault": "false",
+        "forceInputType": 0
       },
       {
         "name": "nzOpenChange",
@@ -4948,7 +4999,7 @@
         "name": "nzPageSizeOptions",
         "inputType": 0,
         "description": "specify the sizeChanger options",
-        "type": "number",
+        "type": "Array",
         "typeRaw": "`number[]`",
         "default": "`[10, 20, 30, 40]`",
         "pureDefault": "[10, 20, 30, 40]"
@@ -5043,7 +5094,8 @@
         "type": "object",
         "typeRaw": "`object`",
         "default": "",
-        "_common": true
+        "_common": true,
+        "forceInputType": 0
       },
       {
         "name": "nzPlacement",
@@ -5227,7 +5279,8 @@
         "type": "object",
         "typeRaw": "`object`",
         "default": "",
-        "_common": true
+        "_common": true,
+        "forceInputType": 0
       },
       {
         "name": "nzPlacement",
@@ -5463,7 +5516,8 @@
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
-        "pureDefault": "false"
+        "pureDefault": "false",
+        "forceInputType": 0
       },
       {
         "name": "ngModel",
@@ -5526,7 +5580,8 @@
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
-        "pureDefault": "false"
+        "pureDefault": "false",
+        "forceInputType": 0
       },
       {
         "name": "ngModel",
@@ -5589,7 +5644,8 @@
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
-        "pureDefault": "false"
+        "pureDefault": "false",
+        "forceInputType": 0
       },
       {
         "name": "nzSize",
@@ -5691,7 +5747,8 @@
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
-        "pureDefault": "false"
+        "pureDefault": "false",
+        "forceInputType": 0
       },
       {
         "name": "ngModel",
@@ -5764,7 +5821,7 @@
         "name": "ngModel",
         "inputType": 2,
         "description": "Current selected nz-option value, double binding.",
-        "type": "string",
+        "type": "object",
         "typeRaw": "`any｜any[]`",
         "default": ""
       },
@@ -5811,7 +5868,8 @@
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
-        "pureDefault": "false"
+        "pureDefault": "false",
+        "forceInputType": 0
       },
       {
         "name": "nzDropdownClassName",
@@ -5977,7 +6035,8 @@
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
-        "pureDefault": "false"
+        "pureDefault": "false",
+        "forceInputType": 0
       },
       {
         "name": "nzLabel",
@@ -5991,7 +6050,7 @@
         "name": "nzValue",
         "inputType": 0,
         "description": "The value passed to ngModel of nz-select",
-        "type": "string",
+        "type": "object",
         "typeRaw": "`any `",
         "default": ""
       },
@@ -6062,7 +6121,8 @@
         "description": "Display the skeleton when `true`",
         "type": "boolean",
         "typeRaw": "`boolean`",
-        "default": ""
+        "default": "",
+        "forceInputType": 0
       },
       {
         "name": "nzParagraph",
@@ -6111,7 +6171,8 @@
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
-        "pureDefault": "false"
+        "pureDefault": "false",
+        "forceInputType": 0
       },
       {
         "name": "nzDots",
@@ -6273,7 +6334,8 @@
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`true`",
-        "pureDefault": "true"
+        "pureDefault": "true",
+        "forceInputType": 0
       },
       {
         "name": "nzTip",
@@ -6474,7 +6536,8 @@
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
-        "pureDefault": "false"
+        "pureDefault": "false",
+        "forceInputType": 0
       },
       {
         "name": "nzSize",
@@ -6496,7 +6559,8 @@
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
-        "pureDefault": "false"
+        "pureDefault": "false",
+        "forceInputType": 0
       },
       {
         "name": "nzControl",
@@ -6538,7 +6602,7 @@
         "name": "nzData",
         "inputType": 0,
         "description": "Data record array to be displayed",
-        "type": "string",
+        "type": "object",
         "typeRaw": "`any[]`",
         "default": ""
       },
@@ -6597,7 +6661,7 @@
         "name": "nzWidthConfig",
         "inputType": 0,
         "description": "Set col width can not used with `nzWidth` of `th`",
-        "type": "string",
+        "type": "Array",
         "typeRaw": "`string[]`",
         "default": ""
       },
@@ -6622,7 +6686,8 @@
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
-        "pureDefault": "false"
+        "pureDefault": "false",
+        "forceInputType": 0
       },
       {
         "name": "nzLoadingDelay",
@@ -6669,7 +6734,7 @@
         "name": "nzPageSizeOptions",
         "inputType": 0,
         "description": "Specify the sizeChanger options",
-        "type": "number",
+        "type": "Array",
         "typeRaw": "`number[]`",
         "default": "`[10, 20, 30, 40]`",
         "pureDefault": "[10, 20, 30, 40]"
@@ -6768,7 +6833,8 @@
         "description": "Whether disable checkbox",
         "type": "boolean",
         "typeRaw": "`boolean`",
-        "default": ""
+        "default": "",
+        "forceInputType": 0
       },
       {
         "name": "nzIndeterminate",
@@ -6776,7 +6842,8 @@
         "description": "Indeterminate status",
         "type": "boolean",
         "typeRaw": "`boolean`",
-        "default": ""
+        "default": "",
+        "forceInputType": 0
       },
       {
         "name": "nzChecked",
@@ -6902,7 +6969,8 @@
         "description": "Whether disable checkbox",
         "type": "boolean",
         "typeRaw": "`boolean`",
-        "default": ""
+        "default": "",
+        "forceInputType": 0
       },
       {
         "name": "nzIndeterminate",
@@ -6910,7 +6978,8 @@
         "description": "Indeterminate status",
         "type": "boolean",
         "typeRaw": "`boolean`",
-        "default": ""
+        "default": "",
+        "forceInputType": 0
       },
       {
         "name": "nzChecked",
@@ -7209,7 +7278,8 @@
         "description": "tab disable",
         "type": "boolean",
         "typeRaw": "`boolean`",
-        "default": ""
+        "default": "",
+        "forceInputType": 0
       },
       {
         "name": "nzClick",
@@ -7252,7 +7322,7 @@
         "name": "ngModel",
         "inputType": 2,
         "description": "to set time",
-        "type": "Date",
+        "type": "object",
         "typeRaw": "`Date`",
         "default": ""
       },
@@ -7295,7 +7365,7 @@
         "name": "nzDefaultOpenValue",
         "inputType": 0,
         "description": "default open panel value",
-        "type": "Date",
+        "type": "object",
         "typeRaw": "`Date`",
         "default": "`new Date()`",
         "pureDefault": "new Date()"
@@ -7307,7 +7377,8 @@
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
-        "pureDefault": "false"
+        "pureDefault": "false",
+        "forceInputType": 0
       },
       {
         "name": "nzDisabledHours",
@@ -7435,89 +7506,6 @@
     "doc": "https://ng.ant.design/components/time-picker/en"
   },
   {
-    "_idx": 22,
-    "type": "component",
-    "selector": "nz-timeline",
-    "types": {},
-    "properties": [
-      {
-        "name": "nzPending",
-        "inputType": 0,
-        "description": "Set the last ghost node's existence or its content",
-        "type": "string",
-        "typeRaw": "`string｜boolean｜TemplateRef<void>`",
-        "default": "`false`",
-        "pureDefault": "false"
-      },
-      {
-        "name": "nzPendingDot",
-        "inputType": 0,
-        "description": "Set the dot of the last ghost node when pending is true",
-        "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
-        "default": "`<i nz-icon type=\"loading\"></i>`",
-        "pureDefault": "<i nz-icon type=\"loading\"></i>"
-      },
-      {
-        "name": "nzReverse",
-        "inputType": 0,
-        "description": "Reverse nodes or not",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false"
-      },
-      {
-        "name": "nzMode",
-        "inputType": 0,
-        "description": "By sending `alternate` the timeline will distribute the nodes to the left and right",
-        "type": "Enum",
-        "typeRaw": "`'left'｜'alternate'｜'right'`",
-        "default": "",
-        "typeDefinition": [
-          "left",
-          "alternate",
-          "right"
-        ]
-      }
-    ],
-    "description": "Timeline",
-    "lib": "ng-zorro-antd",
-    "title": "Timeline",
-    "whenToUse": "- When a series of information needs to be ordered by time (ascend or descend).\n- When you need a timeline to make a visual connection.",
-    "doc": "https://ng.ant.design/components/timeline/en"
-  },
-  {
-    "_idx": 104,
-    "type": "component",
-    "selector": "nz-timeline-item",
-    "types": {},
-    "properties": [
-      {
-        "name": "nzColor",
-        "inputType": 0,
-        "description": "Set the circle's color to `blue`, `red`, `green` or other custom colors (css color)",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": "`blue`",
-        "pureDefault": "blue"
-      },
-      {
-        "name": "nzDot",
-        "inputType": 0,
-        "description": "Customize timeline dot",
-        "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
-        "default": ""
-      }
-    ],
-    "description": "Node of timeline",
-    "lib": "ng-zorro-antd",
-    "title": "Timeline",
-    "whenToUse": "- When a series of information needs to be ordered by time (ascend or descend).\n- When you need a timeline to make a visual connection.",
-    "doc": "https://ng.ant.design/components/timeline/en"
-  },
-  {
     "_idx": 21,
     "type": "component",
     "selector": "nz-alert",
@@ -7612,6 +7600,117 @@
     "doc": "https://ng.ant.design/components/alert/en"
   },
   {
+    "_idx": 12,
+    "type": "component",
+    "selector": "nz-anchor",
+    "types": {},
+    "properties": [
+      {
+        "name": "nzAffix",
+        "inputType": 0,
+        "description": "Fixed mode of Anchor",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`true`",
+        "pureDefault": "true"
+      },
+      {
+        "name": "nzBounds",
+        "inputType": 0,
+        "description": "Bounding distance of anchor area, unit: px",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`5`",
+        "pureDefault": "5"
+      },
+      {
+        "name": "nzOffsetBottom",
+        "inputType": 0,
+        "description": "Pixels to offset from bottom when calculating position of scroll",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": ""
+      },
+      {
+        "name": "nzOffsetTop",
+        "inputType": 0,
+        "description": "Pixels to offset from top when calculating position of scroll",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`0`",
+        "pureDefault": "0"
+      },
+      {
+        "name": "nzShowInkInFixed",
+        "inputType": 0,
+        "description": "Whether show ink-balls in Fixed mode",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzTarget",
+        "inputType": 0,
+        "description": "Scrolling container",
+        "type": "string",
+        "typeRaw": "`string｜HTMLElement`",
+        "default": "`window`",
+        "pureDefault": "window"
+      },
+      {
+        "name": "nzClick",
+        "inputType": 1,
+        "description": "Click of Anchor item",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<string>`",
+        "default": ""
+      },
+      {
+        "name": "nzScroll",
+        "inputType": 1,
+        "description": "The scroll function that is triggered when scrolling to an anchor.",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<NzAnchorLinkComponent>`",
+        "default": ""
+      }
+    ],
+    "lib": "ng-zorro-antd",
+    "title": "Anchor",
+    "description": "Hyperlinks to scroll on one page.",
+    "whenToUse": "For displaying anchor hyperlinks on page and jumping between them.",
+    "doc": "https://ng.ant.design/components/anchor/en"
+  },
+  {
+    "_idx": 147,
+    "type": "component",
+    "selector": "nz-link",
+    "types": {},
+    "properties": [
+      {
+        "name": "nzHref",
+        "inputType": 0,
+        "description": "target of hyperlink",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
+      },
+      {
+        "name": "nzTitle",
+        "inputType": 0,
+        "description": "content of  hyperlink",
+        "type": "string",
+        "typeRaw": "`string｜TemplateRef<void>`",
+        "default": ""
+      }
+    ],
+    "lib": "ng-zorro-antd",
+    "title": "Anchor",
+    "description": "Hyperlinks to scroll on one page.",
+    "whenToUse": "For displaying anchor hyperlinks on page and jumping between them.",
+    "doc": "https://ng.ant.design/components/anchor/en"
+  },
+  {
     "_idx": 15,
     "type": "component",
     "selector": "nz-transfer",
@@ -7621,7 +7720,7 @@
         "name": "nzDataSource",
         "inputType": 0,
         "description": "Used for setting the source data. Except the elements whose keys are `direction: 'right'` prop.",
-        "type": "string",
+        "type": "Array",
         "typeRaw": "`TransferItem[]`",
         "default": "`[]`",
         "pureDefault": "[]"
@@ -7633,13 +7732,14 @@
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
-        "pureDefault": "false"
+        "pureDefault": "false",
+        "forceInputType": 0
       },
       {
         "name": "nzTitles",
         "inputType": 0,
         "description": "A set of titles that are sorted from left to right.",
-        "type": "string",
+        "type": "Array",
         "typeRaw": "`string[]`",
         "default": "`['', '']`",
         "pureDefault": "['', '']"
@@ -7648,7 +7748,7 @@
         "name": "nzOperations",
         "inputType": 0,
         "description": "A set of operations that are sorted from bottom to top.",
-        "type": "string",
+        "type": "Array",
         "typeRaw": "`string[]`",
         "default": "`['', '']`",
         "pureDefault": "['', '']"
@@ -7779,7 +7879,7 @@
         "name": "ngModel",
         "inputType": 2,
         "description": "Tree data(nzData instead)",
-        "type": "string",
+        "type": "Array",
         "typeRaw": "`NzTreeNode[]`",
         "default": "`[]`",
         "pureDefault": "[]"
@@ -7788,7 +7888,7 @@
         "name": "nzData",
         "inputType": 0,
         "description": "Tree data (Reference NzTreeNode)",
-        "type": "string",
+        "type": "Array",
         "typeRaw": "`NzTreeNodeOptions[]｜NzTreeNode[]`",
         "default": "`[]`",
         "pureDefault": "[]"
@@ -7878,7 +7978,7 @@
         "name": "nzExpandedKeys",
         "inputType": 0,
         "description": "Specify the keys of the default expanded treeNodes, two-way binding",
-        "type": "string",
+        "type": "Array",
         "typeRaw": "`string[]`",
         "default": "`[]`",
         "pureDefault": "[]"
@@ -7887,7 +7987,7 @@
         "name": "nzCheckedKeys",
         "inputType": 0,
         "description": "Specifies the keys of the default checked treeNodes, two-way binding",
-        "type": "string",
+        "type": "Array",
         "typeRaw": "`string[]`",
         "default": "`[]`",
         "pureDefault": "[]"
@@ -7896,7 +7996,7 @@
         "name": "nzSelectedKeys",
         "inputType": 0,
         "description": "Specifies the keys of the default selected treeNodes, two-way binding",
-        "type": "string",
+        "type": "Array",
         "typeRaw": "`string[]`",
         "default": "`[]`",
         "pureDefault": "[]"
@@ -8051,7 +8151,8 @@
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
-        "pureDefault": "false"
+        "pureDefault": "false",
+        "forceInputType": 0
       },
       {
         "name": "nzShowSearch",
@@ -8061,6 +8162,14 @@
         "typeRaw": "`boolean`",
         "default": "`false`",
         "pureDefault": "false"
+      },
+      {
+        "name": "nzNotFoundContent",
+        "inputType": 0,
+        "description": "Specify content to show when no result matches.",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
       },
       {
         "name": "nzDropdownMatchSelectWidth",
@@ -8142,7 +8251,7 @@
         "name": "nzNodes",
         "inputType": 0,
         "description": "Data of the treeNodes",
-        "type": "string",
+        "type": "Array",
         "typeRaw": "`NzTreeNode[]`",
         "default": "`[]`",
         "pureDefault": "[]"
@@ -8160,7 +8269,7 @@
         "name": "nzDefaultExpandedKeys",
         "inputType": 0,
         "description": "Default expanded treeNodes",
-        "type": "string",
+        "type": "Array",
         "typeRaw": "`string[]`",
         "default": ""
       },
@@ -8245,7 +8354,7 @@
         "name": "nzData",
         "inputType": 0,
         "description": "Uploading params or function which can return uploading params. NOTICE: Muse be use `=>` to define the method.",
-        "type": "string",
+        "type": "object",
         "typeRaw": "`Object｜((file: UploadFile) => Object)`",
         "default": ""
       },
@@ -8256,13 +8365,14 @@
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
-        "pureDefault": "false"
+        "pureDefault": "false",
+        "forceInputType": 0
       },
       {
         "name": "nzFileList",
         "inputType": 0,
         "description": "List of files, two-way data-binding",
-        "type": "string",
+        "type": "Array",
         "typeRaw": "`UploadFile[]`",
         "default": ""
       },
@@ -8296,7 +8406,7 @@
         "name": "nzFilter",
         "inputType": 0,
         "description": "Custom filter when choosed file",
-        "type": "string",
+        "type": "Array",
         "typeRaw": "`UploadFilter[]`",
         "default": ""
       },
@@ -8304,7 +8414,7 @@
         "name": "nzHeaders",
         "inputType": 0,
         "description": "Set request headers, valid above IE10. NOTICE: Muse be use `=>` to define the method.",
-        "type": "string",
+        "type": "object",
         "typeRaw": "`Object｜((file: UploadFile) => Object)`",
         "default": ""
       },
@@ -8345,7 +8455,7 @@
         "inputType": 0,
         "description": "Whether to show default upload list, could be an object to specify `showPreviewIcon` and `showRemoveIcon` individually",
         "type": "boolean",
-        "typeRaw": "`boolean or { showPreviewIcon?: boolean, showRemoveIcon?: boolean }`",
+        "typeRaw": "`boolean｜{ showPreviewIcon?: boolean, showRemoveIcon?: boolean }`",
         "default": "`true`",
         "pureDefault": "true"
       },
@@ -8559,7 +8669,7 @@
         "name": "ngModel",
         "inputType": 2,
         "description": "Start date, start and end values at the same time",
-        "type": "Date",
+        "type": "object",
         "typeRaw": "`Date`",
         "default": ""
       },
@@ -8567,7 +8677,7 @@
         "name": "ngModelEnd",
         "inputType": 2,
         "description": "End date, start and end values at the same time",
-        "type": "Date",
+        "type": "object",
         "typeRaw": "`Date`",
         "default": ""
       },
@@ -8613,7 +8723,8 @@
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
-        "pureDefault": "false"
+        "pureDefault": "false",
+        "forceInputType": 0
       },
       {
         "name": "nzDisabledDate",
@@ -8724,7 +8835,7 @@
         "name": "nzPlaceHolder",
         "inputType": 0,
         "description": "placeholder of date input",
-        "type": "string",
+        "type": "Array",
         "typeRaw": "`string[]`",
         "default": ""
       },
@@ -8769,7 +8880,7 @@
         "name": "http-data",
         "inputType": 0,
         "description": "Parameter of request",
-        "type": "string",
+        "type": "object",
         "typeRaw": "`any`",
         "default": ""
       },
@@ -8777,17 +8888,9 @@
         "name": "http-method",
         "inputType": 0,
         "description": "Method of request",
-        "type": "Enum",
+        "type": "object",
         "typeRaw": "`'POST','GET','HEAD','PUT','PATCH','DELETE'`",
         "default": "`'GET'`",
-        "typeDefinition": [
-          "POST",
-          "GET",
-          "HEAD",
-          "PUT",
-          "PATCH",
-          "DELETE"
-        ],
         "pureDefault": "GET"
       },
       {
@@ -9461,7 +9564,7 @@
         "name": "links",
         "inputType": 0,
         "description": "链接数据",
-        "type": "string",
+        "type": "object",
         "typeRaw": "`GlobalFooterLink`",
         "default": "",
         "complexType": "GlobalFooterLink"
@@ -9512,115 +9615,108 @@
     "doc": "https://ng-alain.com/components/global-footer/en"
   },
   {
-    "_idx": 12,
+    "_idx": 51,
     "type": "component",
-    "selector": "nz-anchor",
+    "selector": "nz-autocomplete",
     "types": {},
     "properties": [
       {
-        "name": "nzAffix",
+        "name": "nzBackfill",
         "inputType": 0,
-        "description": "Fixed mode of Anchor",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`true`",
-        "pureDefault": "true"
-      },
-      {
-        "name": "nzBounds",
-        "inputType": 0,
-        "description": "Bounding distance of anchor area, unit: px",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "`5`",
-        "pureDefault": "5"
-      },
-      {
-        "name": "nzOffsetBottom",
-        "inputType": 0,
-        "description": "Pixels to offset from bottom when calculating position of scroll",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": ""
-      },
-      {
-        "name": "nzOffsetTop",
-        "inputType": 0,
-        "description": "Pixels to offset from top when calculating position of scroll",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "`0`",
-        "pureDefault": "0"
-      },
-      {
-        "name": "nzShowInkInFixed",
-        "inputType": 0,
-        "description": "Whether show ink-balls in Fixed mode",
+        "description": "backfill selected item the input when using keyboard",
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
         "pureDefault": "false"
       },
       {
-        "name": "nzTarget",
+        "name": "nzDataSource",
         "inputType": 0,
-        "description": "Scrolling container",
-        "type": "string",
-        "typeRaw": "`string｜HTMLElement`",
-        "default": "`window`",
-        "pureDefault": "window"
-      },
-      {
-        "name": "nzClick",
-        "inputType": 1,
-        "description": "Click of Anchor item",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<string>`",
+        "description": "Data source for autocomplete",
+        "type": "object",
+        "typeRaw": "`AutocompleteDataSource`",
         "default": ""
       },
       {
-        "name": "nzScroll",
-        "inputType": 1,
-        "description": "The scroll function that is triggered when scrolling to an anchor.",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<NzAnchorLinkComponent>`",
-        "default": ""
-      }
-    ],
-    "lib": "ng-zorro-antd",
-    "title": "Anchor",
-    "description": "Hyperlinks to scroll on one page.",
-    "whenToUse": "For displaying anchor hyperlinks on page and jumping between them.",
-    "doc": "https://ng.ant.design/components/anchor/en"
-  },
-  {
-    "_idx": 147,
-    "type": "component",
-    "selector": "nz-link",
-    "types": {},
-    "properties": [
-      {
-        "name": "nzHref",
+        "name": "nzDefaultActiveFirstOption",
         "inputType": 0,
-        "description": "target of hyperlink",
+        "description": "Whether active first option by default",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`true`",
+        "pureDefault": "true"
+      },
+      {
+        "name": "nzWidth",
+        "inputType": 0,
+        "description": "Custom width, unit px",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "trigger element width",
+        "pureDefault": "trigger element width"
+      },
+      {
+        "name": "nzOverlayClassName",
+        "inputType": 0,
+        "description": "Class name of the dropdown root element",
         "type": "string",
         "typeRaw": "`string`",
         "default": ""
       },
       {
-        "name": "nzTitle",
+        "name": "nzOverlayStyle",
         "inputType": 0,
-        "description": "content of  hyperlink",
-        "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
-        "default": ""
+        "description": "Style of the dropdown root element",
+        "type": "object",
+        "typeRaw": "`object`",
+        "default": "",
+        "forceInputType": 0
       }
     ],
     "lib": "ng-zorro-antd",
-    "title": "Anchor",
-    "description": "Hyperlinks to scroll on one page.",
-    "whenToUse": "For displaying anchor hyperlinks on page and jumping between them.",
-    "doc": "https://ng.ant.design/components/anchor/en"
+    "title": "Autocomplete",
+    "description": "Autocomplete function of input field.",
+    "whenToUse": "When there is a need for autocomplete functionality.",
+    "doc": "https://ng.ant.design/components/auto-complete/en"
+  },
+  {
+    "_idx": 158,
+    "type": "component",
+    "selector": "nz-auto-option",
+    "types": {},
+    "properties": [
+      {
+        "name": "nzValue",
+        "inputType": 0,
+        "description": "bind ngModel of the trigger element",
+        "type": "object",
+        "typeRaw": "`any`",
+        "default": ""
+      },
+      {
+        "name": "nzLabel",
+        "inputType": 0,
+        "description": "display value of the trigger element",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
+      },
+      {
+        "name": "nzDisabled",
+        "inputType": 0,
+        "description": "disabled option",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false",
+        "forceInputType": 0
+      }
+    ],
+    "lib": "ng-zorro-antd",
+    "title": "Autocomplete",
+    "description": "Autocomplete function of input field.",
+    "whenToUse": "When there is a need for autocomplete functionality.",
+    "doc": "https://ng.ant.design/components/auto-complete/en"
   },
   {
     "_idx": 6,
@@ -9632,7 +9728,7 @@
         "name": "data",
         "inputType": 0,
         "description": "数据",
-        "type": "string",
+        "type": "Array",
         "typeRaw": "`NoticeItem[]`",
         "default": ""
       },
@@ -9906,15 +10002,9 @@
         "name": "level",
         "inputType": 0,
         "description": "Error correction level of the QR code",
-        "type": "Enum",
+        "type": "object",
         "typeRaw": "`'L','M','Q','H'`",
         "default": "`'L'`",
-        "typeDefinition": [
-          "L",
-          "M",
-          "Q",
-          "H"
-        ],
         "pureDefault": "L"
       },
       {
@@ -10072,7 +10162,7 @@
         "name": "mode",
         "inputType": 0,
         "description": "Matching Mode",
-        "type": "string",
+        "type": "object",
         "typeRaw": "`ReuseTabMatchMode`",
         "default": "`0`",
         "pureDefault": "0"
@@ -10117,7 +10207,7 @@
         "name": "excludes",
         "inputType": 0,
         "description": "Exclusion rules, limited by `mode=URL`",
-        "type": "string",
+        "type": "Array",
         "typeRaw": "`RegExp[]`",
         "default": ""
       },
@@ -10138,6 +10228,14 @@
         "typeRaw": "`boolean`",
         "default": "`true`",
         "pureDefault": "true"
+      },
+      {
+        "name": "customContextMenu",
+        "inputType": 0,
+        "description": "Custom context click menu",
+        "type": "Array",
+        "typeRaw": "`ReuseCustomContextMenu[]`",
+        "default": ""
       },
       {
         "name": "close",
@@ -10187,6 +10285,15 @@
         "pureDefault": "true"
       },
       {
+        "name": "recursivePath",
+        "inputType": 0,
+        "description": "自动向上递归查找，菜单数据源包含 `/ware`，则 `/ware/1` 也视为 `/ware` 项",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`true`",
+        "pureDefault": "true"
+      },
+      {
         "name": "select",
         "inputType": 1,
         "description": "点击菜单时回调（包含 `disabled`）",
@@ -10211,7 +10318,7 @@
           "name": "params",
           "inputType": 0,
           "description": "Request parameters, default to auto append `pi`, `ps` to URL",
-          "type": "string",
+          "type": "object",
           "typeRaw": "`any`",
           "default": ""
         },
@@ -10219,24 +10326,16 @@
           "name": "method",
           "inputType": 0,
           "description": "Request method",
-          "type": "string",
+          "type": "object",
           "typeRaw": "`'POST','GET','HEAD','PUT','PATCH','DELETE'`",
           "default": "`'GET'`",
-          "typeDefinition": [
-            "POST",
-            "GET",
-            "HEAD",
-            "PUT",
-            "PATCH",
-            "DELETE"
-          ],
           "pureDefault": "GET"
         },
         {
           "name": "body",
           "inputType": 0,
           "description": "Request body (only method is POST)",
-          "type": "string",
+          "type": "object",
           "typeRaw": "`any`",
           "default": ""
         },
@@ -10244,7 +10343,7 @@
           "name": "headers",
           "inputType": 0,
           "description": "Request header",
-          "type": "string",
+          "type": "object",
           "typeRaw": "`any`",
           "default": ""
         },
@@ -10252,7 +10351,7 @@
           "name": "reName",
           "inputType": 0,
           "description": "Map name `pi`、`ps`",
-          "type": "string",
+          "type": "object",
           "typeRaw": "`STReqReNameType`",
           "default": "`{ pi: 'pi', ps: 'ps' }`",
           "pureDefault": "{ pi: 'pi', ps: 'ps' }"
@@ -10308,7 +10407,7 @@
           "name": "placement",
           "inputType": 0,
           "description": "Pager direction",
-          "type": "string",
+          "type": "Enum",
           "typeRaw": "`'left','center','right'`",
           "default": "`'right'`",
           "typeDefinition": [
@@ -10339,7 +10438,7 @@
           "name": "pageSizes",
           "inputType": 0,
           "description": "Specify the sizeChanger options",
-          "type": "number",
+          "type": "Array",
           "typeRaw": "`number[]`",
           "default": "`[10, 20, 30, 40, 50]`",
           "pureDefault": "[10, 20, 30, 40, 50]"
@@ -10444,7 +10543,7 @@
         "name": "columns",
         "inputType": 0,
         "description": "Columns description",
-        "type": "string",
+        "type": "Array",
         "typeRaw": "`STColumn[]`",
         "default": ""
       },
@@ -10460,7 +10559,7 @@
         "name": "req",
         "inputType": 0,
         "description": "Http request configuration",
-        "type": "string",
+        "type": "object",
         "typeRaw": "`STReq`",
         "default": "",
         "complexType": "STReq"
@@ -10469,7 +10568,7 @@
         "name": "res",
         "inputType": 0,
         "description": "Http response configuration",
-        "type": "string",
+        "type": "object",
         "typeRaw": "`STRes`",
         "default": "",
         "complexType": "STRes"
@@ -10493,10 +10592,19 @@
         "pureDefault": "10"
       },
       {
+        "name": "total",
+        "inputType": 0,
+        "description": "Total data count, should set when nzServerRender is true, default is `0`",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`0`",
+        "pureDefault": "0"
+      },
+      {
         "name": "page",
         "inputType": 0,
         "description": "Pager configuration",
-        "type": "string",
+        "type": "object",
         "typeRaw": "`STPage`",
         "default": "",
         "complexType": "STPage"
@@ -10570,7 +10678,7 @@
         "name": "singleSort",
         "inputType": 0,
         "description": "Single sort config<br>If not specified, return: `columnName=ascend|descend`<br>If specified, return: `sort=columnName.(ascend|descend)`",
-        "type": "string",
+        "type": "object",
         "typeRaw": "`STSingleSort`",
         "default": "`null`",
         "complexType": "STSingleSort",
@@ -10617,6 +10725,14 @@
         "description": "Table extra body renderer, generally used to add total rows",
         "type": "TemplateRef",
         "typeRaw": "`TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "widthConfig",
+        "inputType": 0,
+        "description": "Set col width can not used with width of STColumn",
+        "type": "Array",
+        "typeRaw": "`string[]`",
         "default": ""
       },
       {
@@ -11019,7 +11135,7 @@
         "name": "data",
         "inputType": 0,
         "description": "数据",
-        "type": "string",
+        "type": "Array",
         "typeRaw": "`G2BarData[]`",
         "default": "`[]`",
         "pureDefault": "[]"
@@ -11354,7 +11470,7 @@
         "name": "data",
         "inputType": 0,
         "description": "数据",
-        "type": "string",
+        "type": "Array",
         "typeRaw": "`G2MiniAreaData[]`",
         "default": ""
       }
@@ -11440,7 +11556,7 @@
         "name": "data",
         "inputType": 0,
         "description": "数据",
-        "type": "string",
+        "type": "Array",
         "typeRaw": "`G2MiniBarData[]`",
         "default": ""
       }
@@ -11637,7 +11753,7 @@
         "name": "padding",
         "inputType": 0,
         "description": "图表内部间距",
-        "type": "number",
+        "type": "Array",
         "typeRaw": "`number[]`",
         "default": "`[12, 0, 12, 0]`",
         "pureDefault": "[12, 0, 12, 0]"
@@ -11714,7 +11830,7 @@
         "name": "data",
         "inputType": 0,
         "description": "数据",
-        "type": "string",
+        "type": "Array",
         "typeRaw": "`G2PieData[]`",
         "default": ""
       }
@@ -11778,7 +11894,7 @@
         "name": "colors",
         "inputType": 0,
         "description": "颜色列表",
-        "type": "string",
+        "type": "Array",
         "typeRaw": "`string[]`",
         "default": ""
       },
@@ -11786,7 +11902,7 @@
         "name": "data",
         "inputType": 0,
         "description": "数据",
-        "type": "string",
+        "type": "Array",
         "typeRaw": "`G2RadarData[]`",
         "default": ""
       }
@@ -11870,7 +11986,7 @@
         "name": "padding",
         "inputType": 0,
         "description": "图表内部间距",
-        "type": "string",
+        "type": "object",
         "typeRaw": "`any`",
         "default": "`0`",
         "pureDefault": "0"
@@ -11896,7 +12012,7 @@
         "name": "textStyle",
         "inputType": 0,
         "description": "显示值样式",
-        "type": "string",
+        "type": "object",
         "typeRaw": "`any`",
         "default": "`{ fontSize: 12, color: '#595959' }`",
         "pureDefault": "{ fontSize: 12, color: '#595959' }"
@@ -11936,7 +12052,7 @@
         "name": "data",
         "inputType": 0,
         "description": "数据",
-        "type": "string",
+        "type": "Array",
         "typeRaw": "`G2TagCloudData[]`",
         "default": "`[]`",
         "pureDefault": "[]"
@@ -11975,7 +12091,7 @@
         "name": "data",
         "inputType": 0,
         "description": "数据",
-        "type": "string",
+        "type": "Array",
         "typeRaw": "`G2TimelineData[]`",
         "default": ""
       },
@@ -12009,7 +12125,7 @@
         "name": "padding",
         "inputType": 0,
         "description": "图表内部间距",
-        "type": "number",
+        "type": "Array",
         "typeRaw": "`number[]`",
         "default": "`[60, 20, 40, 40]`",
         "pureDefault": "[60, 20, 40, 40]"
@@ -12199,7 +12315,7 @@
           "name": "render",
           "inputType": 0,
           "description": "Button layout",
-          "type": "string",
+          "type": "object",
           "typeRaw": "`SFRenderButton`",
           "default": ""
         }
@@ -12219,7 +12335,7 @@
         "name": "schema",
         "inputType": 0,
         "description": "**Required** JSON Schema",
-        "type": "string",
+        "type": "object",
         "typeRaw": "`SFSchema`",
         "default": ""
       },
@@ -12227,7 +12343,7 @@
         "name": "ui",
         "inputType": 0,
         "description": "UI Schema",
-        "type": "string",
+        "type": "object",
         "typeRaw": "`SFUISchema`",
         "default": ""
       },
@@ -12235,7 +12351,7 @@
         "name": "formData",
         "inputType": 0,
         "description": "Default form values",
-        "type": "string",
+        "type": "object",
         "typeRaw": "`any`",
         "default": ""
       },
@@ -12252,13 +12368,9 @@
         "name": "button",
         "inputType": 0,
         "description": "Submit button of the form",
-        "type": "Enum",
+        "type": "object",
         "typeRaw": "`SFButton, 'none'`",
         "default": "`{}`",
-        "typeDefinition": [
-          "SFButton",
-          "none"
-        ],
         "complexType": "SFButton",
         "pureDefault": "{}"
       },
@@ -12374,7 +12486,7 @@
           "name": "render",
           "inputType": 0,
           "description": "Button layout",
-          "type": "string",
+          "type": "object",
           "typeRaw": "`SFRenderButton`",
           "default": ""
         }
@@ -12394,7 +12506,7 @@
         "name": "schema",
         "inputType": 0,
         "description": "**Required** JSON Schema",
-        "type": "string",
+        "type": "object",
         "typeRaw": "`SFSchema`",
         "default": ""
       },
@@ -12402,7 +12514,7 @@
         "name": "ui",
         "inputType": 0,
         "description": "UI Schema",
-        "type": "string",
+        "type": "object",
         "typeRaw": "`SFUISchema`",
         "default": ""
       },
@@ -12410,7 +12522,7 @@
         "name": "formData",
         "inputType": 0,
         "description": "Default form values",
-        "type": "string",
+        "type": "object",
         "typeRaw": "`any`",
         "default": ""
       },
@@ -12427,13 +12539,9 @@
         "name": "button",
         "inputType": 0,
         "description": "Submit button of the form",
-        "type": "Enum",
+        "type": "object",
         "typeRaw": "`SFButton, 'none'`",
         "default": "`{}`",
-        "typeDefinition": [
-          "SFButton",
-          "none"
-        ],
         "complexType": "SFButton",
         "pureDefault": "{}"
       },

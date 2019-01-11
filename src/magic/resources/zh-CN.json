@@ -1,122 +1,5 @@
 [
   {
-    "_idx": 15,
-    "type": "component",
-    "selector": "nz-tooltip",
-    "types": {},
-    "properties": [
-      {
-        "name": "nzMouseEnterDelay",
-        "inputType": 0,
-        "description": "鼠标移入后延时多少才显示 Tooltip，单位：秒",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "`0.15`",
-        "pureDefault": "0.15",
-        "_common": true
-      },
-      {
-        "name": "nzMouseLeaveDelay",
-        "inputType": 0,
-        "description": "鼠标移出后延时多少才隐藏 Tooltip，单位：秒",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "`0.1`",
-        "pureDefault": "0.1",
-        "_common": true
-      },
-      {
-        "name": "nzOverlayClassName",
-        "inputType": 0,
-        "description": "卡片类名",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": "",
-        "_common": true
-      },
-      {
-        "name": "nzOverlayStyle",
-        "inputType": 0,
-        "description": "卡片样式",
-        "type": "object",
-        "typeRaw": "`object`",
-        "default": "",
-        "_common": true
-      },
-      {
-        "name": "nzPlacement",
-        "inputType": 0,
-        "description": "气泡框位置",
-        "type": "Enum",
-        "typeRaw": "`'top'｜'left'｜'right'｜'bottom'｜'topLeft'｜'topRight'｜'bottomLeft'｜'bottomRight'｜'leftTop'｜'leftBottom'｜'rightTop'｜'rightBottom'`",
-        "default": "`'top'`",
-        "typeDefinition": [
-          "top",
-          "left",
-          "right",
-          "bottom",
-          "topLeft",
-          "topRight",
-          "bottomLeft",
-          "bottomRight",
-          "leftTop",
-          "leftBottom",
-          "rightTop",
-          "rightBottom"
-        ],
-        "pureDefault": "top",
-        "_common": true
-      },
-      {
-        "name": "nzTrigger",
-        "inputType": 0,
-        "description": "触发行为，可选 `hover/focus/click`",
-        "type": "Enum",
-        "typeRaw": "`'click'｜'focus'｜'hover'`",
-        "default": "`'hover'`",
-        "typeDefinition": [
-          "click",
-          "focus",
-          "hover"
-        ],
-        "pureDefault": "hover",
-        "_common": true
-      },
-      {
-        "name": "nzVisible",
-        "inputType": 0,
-        "description": "用于手动控制浮层显隐",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false",
-        "_common": true
-      },
-      {
-        "name": "nzVisibleChange",
-        "inputType": 1,
-        "description": "显示隐藏的回调",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<boolean>`",
-        "default": "",
-        "_common": true
-      },
-      {
-        "name": "nzTitle",
-        "inputType": 0,
-        "description": "提示文字",
-        "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
-        "default": ""
-      }
-    ],
-    "lib": "ng-zorro-antd",
-    "title": "文字提示",
-    "description": "简单的文字提示气泡框。",
-    "whenToUse": "鼠标移入则显示提示，移出消失，气泡浮层不承载复杂文本和操作。",
-    "doc": "https://ng.ant.design/components/tooltip/zh"
-  },
-  {
     "_idx": 55,
     "type": "directive",
     "selector": "nz-row",
@@ -417,6 +300,124 @@
     "doc": "https://ng.ant.design/components/grid/zh"
   },
   {
+    "_idx": 15,
+    "type": "component",
+    "selector": "nz-tooltip",
+    "types": {},
+    "properties": [
+      {
+        "name": "nzMouseEnterDelay",
+        "inputType": 0,
+        "description": "鼠标移入后延时多少才显示 Tooltip，单位：秒",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`0.15`",
+        "pureDefault": "0.15",
+        "_common": true
+      },
+      {
+        "name": "nzMouseLeaveDelay",
+        "inputType": 0,
+        "description": "鼠标移出后延时多少才隐藏 Tooltip，单位：秒",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`0.1`",
+        "pureDefault": "0.1",
+        "_common": true
+      },
+      {
+        "name": "nzOverlayClassName",
+        "inputType": 0,
+        "description": "卡片类名",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": "",
+        "_common": true
+      },
+      {
+        "name": "nzOverlayStyle",
+        "inputType": 0,
+        "description": "卡片样式",
+        "type": "object",
+        "typeRaw": "`object`",
+        "default": "",
+        "_common": true,
+        "forceInputType": 0
+      },
+      {
+        "name": "nzPlacement",
+        "inputType": 0,
+        "description": "气泡框位置",
+        "type": "Enum",
+        "typeRaw": "`'top'｜'left'｜'right'｜'bottom'｜'topLeft'｜'topRight'｜'bottomLeft'｜'bottomRight'｜'leftTop'｜'leftBottom'｜'rightTop'｜'rightBottom'`",
+        "default": "`'top'`",
+        "typeDefinition": [
+          "top",
+          "left",
+          "right",
+          "bottom",
+          "topLeft",
+          "topRight",
+          "bottomLeft",
+          "bottomRight",
+          "leftTop",
+          "leftBottom",
+          "rightTop",
+          "rightBottom"
+        ],
+        "pureDefault": "top",
+        "_common": true
+      },
+      {
+        "name": "nzTrigger",
+        "inputType": 0,
+        "description": "触发行为，可选 `hover/focus/click`",
+        "type": "Enum",
+        "typeRaw": "`'click'｜'focus'｜'hover'`",
+        "default": "`'hover'`",
+        "typeDefinition": [
+          "click",
+          "focus",
+          "hover"
+        ],
+        "pureDefault": "hover",
+        "_common": true
+      },
+      {
+        "name": "nzVisible",
+        "inputType": 0,
+        "description": "用于手动控制浮层显隐",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false",
+        "_common": true
+      },
+      {
+        "name": "nzVisibleChange",
+        "inputType": 1,
+        "description": "显示隐藏的回调",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<boolean>`",
+        "default": "",
+        "_common": true
+      },
+      {
+        "name": "nzTitle",
+        "inputType": 0,
+        "description": "提示文字",
+        "type": "string",
+        "typeRaw": "`string｜TemplateRef<void>`",
+        "default": ""
+      }
+    ],
+    "lib": "ng-zorro-antd",
+    "title": "文字提示",
+    "description": "简单的文字提示气泡框。",
+    "whenToUse": "鼠标移入则显示提示，移出消失，气泡浮层不承载复杂文本和操作。",
+    "doc": "https://ng.ant.design/components/tooltip/zh"
+  },
+  {
     "_idx": 11,
     "type": "component",
     "selector": "sg-container",
@@ -576,106 +577,87 @@
     "doc": "https://ng-alain.com/components/grid/zh"
   },
   {
-    "_idx": 51,
+    "_idx": 22,
     "type": "component",
-    "selector": "nz-autocomplete",
+    "selector": "nz-timeline",
     "types": {},
     "properties": [
       {
-        "name": "nzBackfill",
+        "name": "nzPending",
         "inputType": 0,
-        "description": "使用键盘选择选项的时候把选中项回填到输入框中",
+        "description": "指定最后一个幽灵节点是否存在或内容",
+        "type": "string",
+        "typeRaw": "`string｜boolean｜TemplateRef<void>`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzPendingDot",
+        "inputType": 0,
+        "description": "当最后一个幽灵节点存在時，指定其时间图点",
+        "type": "string",
+        "typeRaw": "`string｜TemplateRef<void>`",
+        "default": "`<i nz-icon type=\"loading\"></i>`",
+        "pureDefault": "<i nz-icon type=\"loading\"></i>"
+      },
+      {
+        "name": "nzReverse",
+        "inputType": 0,
+        "description": "节点排序",
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
         "pureDefault": "false"
       },
       {
-        "name": "nzDataSource",
+        "name": "nzMode",
         "inputType": 0,
-        "description": "自动完成的数据源",
-        "type": "string",
-        "typeRaw": "`AutocompleteDataSource`",
-        "default": ""
-      },
-      {
-        "name": "nzDefaultActiveFirstOption",
-        "inputType": 0,
-        "description": "是否默认高亮第一个选项。",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`true`",
-        "pureDefault": "true"
-      },
-      {
-        "name": "nzWidth",
-        "inputType": 0,
-        "description": "自定义宽度单位 px",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "触发元素宽度",
-        "pureDefault": "触发元素宽度"
-      },
-      {
-        "name": "nzOverlayClassName",
-        "inputType": 0,
-        "description": "下拉根元素的类名称",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": ""
-      },
-      {
-        "name": "nzOverlayStyle",
-        "inputType": 0,
-        "description": "下拉根元素的样式",
-        "type": "object",
-        "typeRaw": "`object`",
-        "default": ""
+        "description": "可以改变时间轴和内容的相对位置",
+        "type": "Enum",
+        "typeRaw": "`'left'｜'alternate'｜'right'`",
+        "default": "",
+        "typeDefinition": [
+          "left",
+          "alternate",
+          "right"
+        ]
       }
     ],
+    "description": "时间轴。",
     "lib": "ng-zorro-antd",
-    "title": "自动完成",
-    "description": "输入框自动完成功能。",
-    "whenToUse": "需要自动完成时。",
-    "doc": "https://ng.ant.design/components/auto-complete/zh"
+    "title": "时间轴",
+    "whenToUse": "- 当有一系列信息需按时间排列时，可正序和倒序。\n- 需要有一条时间轴进行视觉上的串联时。",
+    "doc": "https://ng.ant.design/components/timeline/zh"
   },
   {
-    "_idx": 158,
+    "_idx": 104,
     "type": "component",
-    "selector": "nz-auto-option",
+    "selector": "nz-timeline-item",
     "types": {},
     "properties": [
       {
-        "name": "nzValue",
+        "name": "nzColor",
         "inputType": 0,
-        "description": "绑定到触发元素 ngModel 的值",
-        "type": "string",
-        "typeRaw": "`any`",
-        "default": ""
-      },
-      {
-        "name": "nzLabel",
-        "inputType": 0,
-        "description": "填入触发元素显示的值",
+        "description": "指定圆圈颜色 `blue, red, green`，或自定义的色值(CSS 颜色)",
         "type": "string",
         "typeRaw": "`string`",
-        "default": ""
+        "default": "blue",
+        "pureDefault": "blue"
       },
       {
-        "name": "nzDisabled",
+        "name": "nzDot",
         "inputType": 0,
-        "description": "禁用选项",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false"
+        "description": "自定义时间轴点",
+        "type": "string",
+        "typeRaw": "`string｜TemplateRef<void>`",
+        "default": ""
       }
     ],
+    "description": "时间轴的每一个节点。",
     "lib": "ng-zorro-antd",
-    "title": "自动完成",
-    "description": "输入框自动完成功能。",
-    "whenToUse": "需要自动完成时。",
-    "doc": "https://ng.ant.design/components/auto-complete/zh"
+    "title": "时间轴",
+    "whenToUse": "- 当有一系列信息需按时间排列时，可正序和倒序。\n- 需要有一条时间轴进行视觉上的串联时。",
+    "doc": "https://ng.ant.design/components/timeline/zh"
   },
   {
     "_idx": 6,
@@ -922,7 +904,8 @@
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
-        "pureDefault": "false"
+        "pureDefault": "false",
+        "forceInputType": 0
       },
       {
         "name": "nzShape",
@@ -984,7 +967,8 @@
         "name": "disabled",
         "inputType": 0,
         "type": "boolean",
-        "typeRaw": "`boolean`"
+        "typeRaw": "`boolean`",
+        "forceInputType": 0
       }
     ],
     "description": "通过设置 Button 的属性来产生不同的按钮样式，推荐顺序为：`nzType` -> `nzShape` -> `nzSize` -> `nzLoading` -> `disabled`",
@@ -1004,7 +988,7 @@
         "name": "ngModel",
         "inputType": 2,
         "description": "（可双向绑定）展示日期",
-        "type": "Date",
+        "type": "object",
         "typeRaw": "`Date`",
         "default": "当前日期",
         "pureDefault": "当前日期"
@@ -1029,7 +1013,8 @@
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`true`",
-        "pureDefault": "true"
+        "pureDefault": "true",
+        "forceInputType": 0
       },
       {
         "name": "nzCard",
@@ -1142,7 +1127,8 @@
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
-        "pureDefault": "false"
+        "pureDefault": "false",
+        "forceInputType": 0
       },
       {
         "name": "nzTitle",
@@ -1336,7 +1322,7 @@
         "name": "ngModel",
         "inputType": 2,
         "description": "指定选中项",
-        "type": "string",
+        "type": "object",
         "typeRaw": "`any[]`",
         "default": ""
       },
@@ -1390,7 +1376,8 @@
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
-        "pureDefault": "false"
+        "pureDefault": "false",
+        "forceInputType": 0
       },
       {
         "name": "nzExpandTrigger",
@@ -1458,7 +1445,7 @@
         "name": "nzOptions",
         "inputType": 0,
         "description": "可选项数据源",
-        "type": "string",
+        "type": "object",
         "typeRaw": "`object[]`",
         "default": ""
       },
@@ -1596,7 +1583,8 @@
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
-        "pureDefault": "false"
+        "pureDefault": "false",
+        "forceInputType": 0
       },
       {
         "name": "ngModel",
@@ -1614,7 +1602,8 @@
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
-        "pureDefault": "false"
+        "pureDefault": "false",
+        "forceInputType": 0
       },
       {
         "name": "nzValue",
@@ -1668,7 +1657,8 @@
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
-        "pureDefault": "false"
+        "pureDefault": "false",
+        "forceInputType": 0
       },
       {
         "name": "ngModelChange",
@@ -1750,7 +1740,8 @@
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
-        "pureDefault": "false"
+        "pureDefault": "false",
+        "forceInputType": 0
       },
       {
         "name": "nzHeader",
@@ -1845,7 +1836,8 @@
         "typeRaw": "`boolean`",
         "default": "`false`",
         "pureDefault": "false",
-        "_common": true
+        "_common": true,
+        "forceInputType": 0
       },
       {
         "name": "nzDisabledDate",
@@ -1930,7 +1922,7 @@
         "name": "ngModel",
         "inputType": 2,
         "description": "日期",
-        "type": "Date",
+        "type": "object",
         "typeRaw": "`Date`",
         "default": ""
       },
@@ -2067,7 +2059,8 @@
         "typeRaw": "`boolean`",
         "default": "`false`",
         "pureDefault": "false",
-        "_common": true
+        "_common": true,
+        "forceInputType": 0
       },
       {
         "name": "nzDisabledDate",
@@ -2152,7 +2145,7 @@
         "name": "ngModel",
         "inputType": 2,
         "description": "日期",
-        "type": "Date",
+        "type": "object",
         "typeRaw": "`Date`",
         "default": ""
       },
@@ -2249,7 +2242,8 @@
         "typeRaw": "`boolean`",
         "default": "`false`",
         "pureDefault": "false",
-        "_common": true
+        "_common": true,
+        "forceInputType": 0
       },
       {
         "name": "nzDisabledDate",
@@ -2334,7 +2328,7 @@
         "name": "ngModel",
         "inputType": 2,
         "description": "日期",
-        "type": "Date",
+        "type": "object",
         "typeRaw": "`Date`",
         "default": ""
       },
@@ -2437,7 +2431,8 @@
         "typeRaw": "`boolean`",
         "default": "`false`",
         "pureDefault": "false",
-        "_common": true
+        "_common": true,
+        "forceInputType": 0
       },
       {
         "name": "nzDisabledDate",
@@ -2522,7 +2517,7 @@
         "name": "ngModel",
         "inputType": 2,
         "description": "日期",
-        "type": "Date",
+        "type": "object",
         "typeRaw": "`Date`",
         "default": ""
       },
@@ -2617,7 +2612,8 @@
         "typeRaw": "`boolean`",
         "default": "`false`",
         "pureDefault": "false",
-        "_common": true
+        "_common": true,
+        "forceInputType": 0
       },
       {
         "name": "nzDisabledDate",
@@ -2702,7 +2698,7 @@
         "name": "ngModel",
         "inputType": 2,
         "description": "日期",
-        "type": "string",
+        "type": "Array",
         "typeRaw": "`Date[]`",
         "default": ""
       },
@@ -2752,7 +2748,7 @@
         "name": "nzPlaceHolder",
         "inputType": 0,
         "description": "输入框提示文字",
-        "type": "string",
+        "type": "Array",
         "typeRaw": "`string[]`",
         "default": ""
       },
@@ -3002,7 +2998,8 @@
         "description": "菜单是否禁用",
         "type": "boolean",
         "typeRaw": "`boolean`",
-        "default": ""
+        "default": "",
+        "forceInputType": 0
       },
       {
         "name": "nzPlacement",
@@ -3065,7 +3062,8 @@
         "description": "下拉根元素的样式",
         "type": "object",
         "typeRaw": "`object`",
-        "default": ""
+        "default": "",
+        "forceInputType": 0
       },
       {
         "name": "nzVisibleChange",
@@ -3094,7 +3092,8 @@
         "description": "菜单是否禁用",
         "type": "boolean",
         "typeRaw": "`boolean`",
-        "default": ""
+        "default": "",
+        "forceInputType": 0
       },
       {
         "name": "nzPlacement",
@@ -3208,7 +3207,8 @@
         "description": "菜单是否禁用",
         "type": "boolean",
         "typeRaw": "`boolean`",
-        "default": ""
+        "default": "",
+        "forceInputType": 0
       },
       {
         "name": "nzPlacement",
@@ -3309,6 +3309,43 @@
     "description": "向下弹出的列表。",
     "whenToUse": "当页面上的操作命令过多时，用此组件可以收纳操作元素。点击或移入触点，会出现一个下拉菜单。可在列表中进行选择，并执行相应的命令。",
     "doc": "https://ng.ant.design/components/dropdown/zh"
+  },
+  {
+    "_idx": 12,
+    "type": "component",
+    "selector": "nz-empty",
+    "types": {},
+    "properties": [
+      {
+        "name": "nzNotFoundImage",
+        "inputType": 0,
+        "description": "设置显示图片，为 `string` 时表示自定义图片地址",
+        "type": "string",
+        "typeRaw": "`string` ｜ `TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "nzNotFoundContent",
+        "inputType": 0,
+        "description": "自定义描述内容",
+        "type": "string",
+        "typeRaw": "`string` ｜ `TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "nzNotFoundFooter",
+        "inputType": 0,
+        "description": "设置自定义 footer",
+        "type": "string",
+        "typeRaw": "`string` ｜ `TemplateRef<void>`",
+        "default": ""
+      }
+    ],
+    "lib": "ng-zorro-antd",
+    "title": "空状态",
+    "description": "空状态时的展示占位图。",
+    "whenToUse": "当目前没有数据时，用于显式的用户提示。",
+    "doc": "https://ng.ant.design/components/empty/zh"
   },
   {
     "_idx": 56,
@@ -3899,7 +3936,7 @@
         "name": "nzValidateStatus",
         "inputType": 0,
         "description": "Reactive Forms：会根据 FormControl 的状态自动生成校验状态",
-        "type": "string",
+        "type": "object",
         "typeRaw": "`FormControl`",
         "default": "`nz-form-control` 中包裹的第一个 `FormControl`",
         "pureDefault": "nz-form-control` 中包裹的第一个 `FormControl"
@@ -4074,7 +4111,8 @@
         "name": "disabled",
         "inputType": 0,
         "type": "boolean",
-        "typeRaw": "`boolean`"
+        "typeRaw": "`boolean`",
+        "forceInputType": 0
       },
       {
         "name": "nzAutocomplete",
@@ -4204,7 +4242,8 @@
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
-        "pureDefault": "false"
+        "pureDefault": "false",
+        "forceInputType": 0
       },
       {
         "name": "nzMax",
@@ -4424,7 +4463,7 @@
         "name": "nzDataSource",
         "inputType": 0,
         "description": "列表数据源",
-        "type": "string",
+        "type": "object",
         "typeRaw": "`any[]`",
         "default": ""
       },
@@ -4489,7 +4528,8 @@
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
-        "pureDefault": "false"
+        "pureDefault": "false",
+        "forceInputType": 0
       },
       {
         "name": "nzLoadMore",
@@ -4497,6 +4537,14 @@
         "description": "加载更多",
         "type": "TemplateRef",
         "typeRaw": "`TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "nzNoResult",
+        "inputType": 0,
+        "description": "当列表为空时加载的内容",
+        "type": "string",
+        "typeRaw": "`string` ｜ `TemplateRef<void>`",
         "default": ""
       },
       {
@@ -4538,7 +4586,7 @@
     "doc": "https://ng.ant.design/components/list/zh"
   },
   {
-    "_idx": 338,
+    "_idx": 352,
     "type": "component",
     "selector": "nz-list-item",
     "types": {},
@@ -4575,7 +4623,7 @@
     "doc": "https://ng.ant.design/components/list/zh"
   },
   {
-    "_idx": 403,
+    "_idx": 417,
     "type": "component",
     "selector": "nz-list-item-meta",
     "types": {},
@@ -4621,7 +4669,7 @@
         "name": "nzMentionTrigger",
         "inputType": 0,
         "description": "用于指定提及的触发元素 **(必须)**",
-        "type": "string",
+        "type": "object",
         "typeRaw": "`HTMLTextAreaElement｜HTMLInputElement`",
         "default": ""
       },
@@ -4640,7 +4688,8 @@
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
-        "pureDefault": "false"
+        "pureDefault": "false",
+        "forceInputType": 0
       },
       {
         "name": "nzNotFoundContent",
@@ -4677,7 +4726,7 @@
         "name": "nzSuggestions",
         "inputType": 0,
         "description": "建议内容",
-        "type": "string",
+        "type": "object",
         "typeRaw": "`any[]`",
         "default": "`[]`",
         "pureDefault": "[]"
@@ -4800,7 +4849,8 @@
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
-        "pureDefault": "false"
+        "pureDefault": "false",
+        "forceInputType": 0
       },
       {
         "name": "nzSelected",
@@ -4840,7 +4890,8 @@
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
-        "pureDefault": "false"
+        "pureDefault": "false",
+        "forceInputType": 0
       },
       {
         "name": "nzOpenChange",
@@ -4955,7 +5006,7 @@
         "name": "nzPageSizeOptions",
         "inputType": 0,
         "description": "指定每页可以显示多少条",
-        "type": "number",
+        "type": "Array",
         "typeRaw": "`number[]`",
         "default": "`[10, 20, 30, 40]`",
         "pureDefault": "[10, 20, 30, 40]"
@@ -5050,7 +5101,8 @@
         "type": "object",
         "typeRaw": "`object`",
         "default": "",
-        "_common": true
+        "_common": true,
+        "forceInputType": 0
       },
       {
         "name": "nzPlacement",
@@ -5234,7 +5286,8 @@
         "type": "object",
         "typeRaw": "`object`",
         "default": "",
-        "_common": true
+        "_common": true,
+        "forceInputType": 0
       },
       {
         "name": "nzPlacement",
@@ -5486,7 +5539,8 @@
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
-        "pureDefault": "false"
+        "pureDefault": "false",
+        "forceInputType": 0
       },
       {
         "name": "ngModel",
@@ -5549,7 +5603,8 @@
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
-        "pureDefault": "false"
+        "pureDefault": "false",
+        "forceInputType": 0
       },
       {
         "name": "ngModel",
@@ -5612,7 +5667,8 @@
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
-        "pureDefault": "false"
+        "pureDefault": "false",
+        "forceInputType": 0
       },
       {
         "name": "nzSize",
@@ -5714,7 +5770,8 @@
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
-        "pureDefault": "false"
+        "pureDefault": "false",
+        "forceInputType": 0
       },
       {
         "name": "ngModel",
@@ -5788,7 +5845,7 @@
         "name": "ngModel",
         "inputType": 2,
         "description": "当前选中的 nz-option 的 nzValue 值，可双向绑定，当 `nzMode` 为 `multiple` 或 `tags` 时，ngModel 为数组",
-        "type": "string",
+        "type": "object",
         "typeRaw": "`any｜any[]`",
         "default": ""
       },
@@ -5835,7 +5892,8 @@
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
-        "pureDefault": "false"
+        "pureDefault": "false",
+        "forceInputType": 0
       },
       {
         "name": "nzDropdownClassName",
@@ -5999,7 +6057,8 @@
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
-        "pureDefault": "false"
+        "pureDefault": "false",
+        "forceInputType": 0
       },
       {
         "name": "nzLabel",
@@ -6013,7 +6072,7 @@
         "name": "nzValue",
         "inputType": 0,
         "description": "nz-select 中 ngModel 的值",
-        "type": "string",
+        "type": "object",
         "typeRaw": "`any `",
         "default": ""
       },
@@ -6084,7 +6143,8 @@
         "description": "为 `true` 时，显示占位图。反之则直接展示子组件",
         "type": "boolean",
         "typeRaw": "`boolean`",
-        "default": ""
+        "default": "",
+        "forceInputType": 0
       },
       {
         "name": "nzParagraph",
@@ -6133,7 +6193,8 @@
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
-        "pureDefault": "false"
+        "pureDefault": "false",
+        "forceInputType": 0
       },
       {
         "name": "nzDots",
@@ -6295,7 +6356,8 @@
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`true`",
-        "pureDefault": "true"
+        "pureDefault": "true",
+        "forceInputType": 0
       },
       {
         "name": "nzTip",
@@ -6496,7 +6558,8 @@
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
-        "pureDefault": "false"
+        "pureDefault": "false",
+        "forceInputType": 0
       },
       {
         "name": "nzSize",
@@ -6518,7 +6581,8 @@
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
-        "pureDefault": "false"
+        "pureDefault": "false",
+        "forceInputType": 0
       },
       {
         "name": "nzControl",
@@ -6561,7 +6625,7 @@
         "name": "nzData",
         "inputType": 0,
         "description": "数据数组",
-        "type": "string",
+        "type": "object",
         "typeRaw": "`any[]`",
         "default": ""
       },
@@ -6620,7 +6684,7 @@
         "name": "nzWidthConfig",
         "inputType": 0,
         "description": "表头分组时指定每列宽度，与 `th` 的 `nzWidth` 不可混用",
-        "type": "string",
+        "type": "Array",
         "typeRaw": "`string[]`",
         "default": ""
       },
@@ -6645,7 +6709,8 @@
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
-        "pureDefault": "false"
+        "pureDefault": "false",
+        "forceInputType": 0
       },
       {
         "name": "nzLoadingDelay",
@@ -6692,7 +6757,7 @@
         "name": "nzPageSizeOptions",
         "inputType": 0,
         "description": "页数选择器可选值",
-        "type": "number",
+        "type": "Array",
         "typeRaw": "`number[]`",
         "default": "`[ 10, 20, 30, 40, 50 ]`",
         "pureDefault": "[ 10, 20, 30, 40, 50 ]"
@@ -6791,7 +6856,8 @@
         "description": "checkbox 是否禁用",
         "type": "boolean",
         "typeRaw": "`boolean`",
-        "default": ""
+        "default": "",
+        "forceInputType": 0
       },
       {
         "name": "nzIndeterminate",
@@ -6799,7 +6865,8 @@
         "description": "checkbox indeterminate 状态",
         "type": "boolean",
         "typeRaw": "`boolean`",
-        "default": ""
+        "default": "",
+        "forceInputType": 0
       },
       {
         "name": "nzChecked",
@@ -6963,7 +7030,8 @@
         "description": "checkbox 是否禁用",
         "type": "boolean",
         "typeRaw": "`boolean`",
-        "default": ""
+        "default": "",
+        "forceInputType": 0
       },
       {
         "name": "nzIndeterminate",
@@ -6971,7 +7039,8 @@
         "description": "checkbox indeterminate 状态",
         "type": "boolean",
         "typeRaw": "`boolean`",
-        "default": ""
+        "default": "",
+        "forceInputType": 0
       },
       {
         "name": "nzChecked",
@@ -7270,7 +7339,8 @@
         "description": "是否禁用",
         "type": "boolean",
         "typeRaw": "`boolean`",
-        "default": ""
+        "default": "",
+        "forceInputType": 0
       },
       {
         "name": "nzClick",
@@ -7381,7 +7451,7 @@
         "name": "ngModel",
         "inputType": 2,
         "description": "当前时间",
-        "type": "Date",
+        "type": "object",
         "typeRaw": "`Date`",
         "default": ""
       },
@@ -7424,7 +7494,7 @@
         "name": "nzDefaultOpenValue",
         "inputType": 0,
         "description": "设置面板打开时默认选中的值",
-        "type": "Date",
+        "type": "object",
         "typeRaw": "`Date`",
         "default": "`new Date()`",
         "pureDefault": "new Date()"
@@ -7436,7 +7506,8 @@
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
-        "pureDefault": "false"
+        "pureDefault": "false",
+        "forceInputType": 0
       },
       {
         "name": "nzDisabledHours",
@@ -7564,89 +7635,6 @@
     "doc": "https://ng.ant.design/components/time-picker/zh"
   },
   {
-    "_idx": 22,
-    "type": "component",
-    "selector": "nz-timeline",
-    "types": {},
-    "properties": [
-      {
-        "name": "nzPending",
-        "inputType": 0,
-        "description": "指定最后一个幽灵节点是否存在或内容",
-        "type": "string",
-        "typeRaw": "`string｜boolean｜TemplateRef<void>`",
-        "default": "`false`",
-        "pureDefault": "false"
-      },
-      {
-        "name": "nzPendingDot",
-        "inputType": 0,
-        "description": "当最后一个幽灵节点存在時，指定其时间图点",
-        "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
-        "default": "`<i nz-icon type=\"loading\"></i>`",
-        "pureDefault": "<i nz-icon type=\"loading\"></i>"
-      },
-      {
-        "name": "nzReverse",
-        "inputType": 0,
-        "description": "节点排序",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false"
-      },
-      {
-        "name": "nzMode",
-        "inputType": 0,
-        "description": "可以改变时间轴和内容的相对位置",
-        "type": "Enum",
-        "typeRaw": "`'left'｜'alternate'｜'right'`",
-        "default": "",
-        "typeDefinition": [
-          "left",
-          "alternate",
-          "right"
-        ]
-      }
-    ],
-    "description": "时间轴。",
-    "lib": "ng-zorro-antd",
-    "title": "时间轴",
-    "whenToUse": "- 当有一系列信息需按时间排列时，可正序和倒序。\n- 需要有一条时间轴进行视觉上的串联时。",
-    "doc": "https://ng.ant.design/components/timeline/zh"
-  },
-  {
-    "_idx": 104,
-    "type": "component",
-    "selector": "nz-timeline-item",
-    "types": {},
-    "properties": [
-      {
-        "name": "nzColor",
-        "inputType": 0,
-        "description": "指定圆圈颜色 `blue, red, green`，或自定义的色值(CSS 颜色)",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": "blue",
-        "pureDefault": "blue"
-      },
-      {
-        "name": "nzDot",
-        "inputType": 0,
-        "description": "自定义时间轴点",
-        "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
-        "default": ""
-      }
-    ],
-    "description": "时间轴的每一个节点。",
-    "lib": "ng-zorro-antd",
-    "title": "时间轴",
-    "whenToUse": "- 当有一系列信息需按时间排列时，可正序和倒序。\n- 需要有一条时间轴进行视觉上的串联时。",
-    "doc": "https://ng.ant.design/components/timeline/zh"
-  },
-  {
     "_idx": 21,
     "type": "component",
     "selector": "nz-alert",
@@ -7741,6 +7729,116 @@
     "doc": "https://ng.ant.design/components/alert/zh"
   },
   {
+    "_idx": 12,
+    "type": "component",
+    "selector": "nz-anchor",
+    "types": {},
+    "properties": [
+      {
+        "name": "nzAffix",
+        "inputType": 0,
+        "description": "固定模式",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`true`",
+        "pureDefault": "true"
+      },
+      {
+        "name": "nzBounds",
+        "inputType": 0,
+        "description": "锚点区域边界，单位：px",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`5`",
+        "pureDefault": "5"
+      },
+      {
+        "name": "nzOffsetBottom",
+        "inputType": 0,
+        "description": "距离窗口底部达到指定偏移量后触发",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": ""
+      },
+      {
+        "name": "nzOffsetTop",
+        "inputType": 0,
+        "description": "距离窗口顶部达到指定偏移量后触发",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": ""
+      },
+      {
+        "name": "nzShowInkInFixed",
+        "inputType": 0,
+        "description": "固定模式是否显示小圆点",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzTarget",
+        "inputType": 0,
+        "description": "指定滚动的容器",
+        "type": "string",
+        "typeRaw": "`string｜HTMLElement`",
+        "default": "`window`",
+        "pureDefault": "window"
+      },
+      {
+        "name": "nzClick",
+        "inputType": 1,
+        "description": "点击项触发",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<string>`",
+        "default": ""
+      },
+      {
+        "name": "nzScroll",
+        "inputType": 1,
+        "description": "滚动至某锚点时触发",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<NzAnchorLinkComponent>`",
+        "default": ""
+      }
+    ],
+    "lib": "ng-zorro-antd",
+    "title": "锚点",
+    "description": "用于跳转到页面指定位置。",
+    "whenToUse": "需要展现当前页面上可供跳转的锚点链接，以及快速在锚点之间跳转。",
+    "doc": "https://ng.ant.design/components/anchor/zh"
+  },
+  {
+    "_idx": 147,
+    "type": "component",
+    "selector": "nz-link",
+    "types": {},
+    "properties": [
+      {
+        "name": "nzHref",
+        "inputType": 0,
+        "description": "锚点链接",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
+      },
+      {
+        "name": "nzTitle",
+        "inputType": 0,
+        "description": "文字内容",
+        "type": "string",
+        "typeRaw": "`string｜TemplateRef<void>`",
+        "default": ""
+      }
+    ],
+    "lib": "ng-zorro-antd",
+    "title": "锚点",
+    "description": "用于跳转到页面指定位置。",
+    "whenToUse": "需要展现当前页面上可供跳转的锚点链接，以及快速在锚点之间跳转。",
+    "doc": "https://ng.ant.design/components/anchor/zh"
+  },
+  {
     "_idx": 15,
     "type": "component",
     "selector": "nz-transfer",
@@ -7750,7 +7848,7 @@
         "name": "nzDataSource",
         "inputType": 0,
         "description": "数据源，其中若数据属性 `direction: 'right'` 将会被渲染到右边一栏中",
-        "type": "string",
+        "type": "Array",
         "typeRaw": "`TransferItem[]`",
         "default": "`[]`",
         "pureDefault": "[]"
@@ -7762,13 +7860,14 @@
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
-        "pureDefault": "false"
+        "pureDefault": "false",
+        "forceInputType": 0
       },
       {
         "name": "nzTitles",
         "inputType": 0,
         "description": "标题集合，顺序从左至右",
-        "type": "string",
+        "type": "Array",
         "typeRaw": "`string[]`",
         "default": "`['', '']`",
         "pureDefault": "['', '']"
@@ -7777,7 +7876,7 @@
         "name": "nzOperations",
         "inputType": 0,
         "description": "操作文案集合，顺序从下至上",
-        "type": "string",
+        "type": "Array",
         "typeRaw": "`string[]`",
         "default": "`['', '']`",
         "pureDefault": "['', '']"
@@ -7908,7 +8007,7 @@
         "name": "ngModel",
         "inputType": 2,
         "description": "元数据(建议使用nzData)",
-        "type": "string",
+        "type": "Array",
         "typeRaw": "`NzTreeNode[]`",
         "default": "`[]`",
         "pureDefault": "[]"
@@ -7917,7 +8016,7 @@
         "name": "nzData",
         "inputType": 0,
         "description": "元数据",
-        "type": "string",
+        "type": "Array",
         "typeRaw": "`NzTreeNodeOptions[]｜NzTreeNode[]`",
         "default": "`[]`",
         "pureDefault": "[]"
@@ -8007,7 +8106,7 @@
         "name": "nzExpandedKeys",
         "inputType": 2,
         "description": "展开指定的树节点,双向绑定",
-        "type": "string",
+        "type": "Array",
         "typeRaw": "`string[]`",
         "default": "`[]`",
         "pureDefault": "[]"
@@ -8016,7 +8115,7 @@
         "name": "nzCheckedKeys",
         "inputType": 2,
         "description": "指定选中复选框的树节点,双向绑定",
-        "type": "string",
+        "type": "Array",
         "typeRaw": "`string[]`",
         "default": "`[]`",
         "pureDefault": "[]"
@@ -8025,7 +8124,7 @@
         "name": "nzSelectedKeys",
         "inputType": 2,
         "description": "指定选中的树节点,双向绑定",
-        "type": "string",
+        "type": "Array",
         "typeRaw": "`string[]`",
         "default": "`[]`",
         "pureDefault": "[]"
@@ -8180,7 +8279,8 @@
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
-        "pureDefault": "false"
+        "pureDefault": "false",
+        "forceInputType": 0
       },
       {
         "name": "nzShowSearch",
@@ -8190,6 +8290,14 @@
         "typeRaw": "`boolean`",
         "default": "`false`",
         "pureDefault": "false"
+      },
+      {
+        "name": "nzNotFoundContent",
+        "inputType": 0,
+        "description": "当下拉列表为空时显示的内容",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
       },
       {
         "name": "nzDropdownMatchSelectWidth",
@@ -8271,7 +8379,7 @@
         "name": "nzNodes",
         "inputType": 0,
         "description": "treeNodes 数据",
-        "type": "string",
+        "type": "Array",
         "typeRaw": "`NzTreeNode[]`",
         "default": "`[]`",
         "pureDefault": "[]"
@@ -8289,7 +8397,7 @@
         "name": "nzDefaultExpandedKeys",
         "inputType": 0,
         "description": "默认展开指定的树节点",
-        "type": "string",
+        "type": "Array",
         "typeRaw": "`string[]`",
         "default": ""
       },
@@ -8374,7 +8482,7 @@
         "name": "nzData",
         "inputType": 0,
         "description": "上传所需参数或返回上传参数的方法；注意：务必使用 `=>` 定义处理方法。",
-        "type": "string",
+        "type": "object",
         "typeRaw": "`Object｜((file: UploadFile) => Object)`",
         "default": ""
       },
@@ -8385,13 +8493,14 @@
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
-        "pureDefault": "false"
+        "pureDefault": "false",
+        "forceInputType": 0
       },
       {
         "name": "nzFileList",
         "inputType": 2,
         "description": "文件列表，双向绑定",
-        "type": "string",
+        "type": "Array",
         "typeRaw": "`UploadFile[]`",
         "default": ""
       },
@@ -8425,7 +8534,7 @@
         "name": "nzFilter",
         "inputType": 0,
         "description": "自定义过滤器",
-        "type": "string",
+        "type": "Array",
         "typeRaw": "`UploadFilter[]`",
         "default": ""
       },
@@ -8433,7 +8542,7 @@
         "name": "nzHeaders",
         "inputType": 0,
         "description": "设置上传的请求头部，IE10 以上有效；注意：务必使用 `=>` 定义处理方法。",
-        "type": "string",
+        "type": "object",
         "typeRaw": "`Object｜((file: UploadFile) => Object)`",
         "default": ""
       },
@@ -8474,7 +8583,7 @@
         "inputType": 0,
         "description": "是否展示 uploadList, 可设为一个对象，用于单独设定 showPreviewIcon 和 showRemoveIcon",
         "type": "boolean",
-        "typeRaw": "`boolean or { showPreviewIcon?: boolean, showRemoveIcon?: boolean }`",
+        "typeRaw": "`boolean｜{ showPreviewIcon?: boolean, showRemoveIcon?: boolean }`",
         "default": "`true`",
         "pureDefault": "true"
       },
@@ -8688,7 +8797,7 @@
         "name": "ngModel",
         "inputType": 2,
         "description": "开始日期，开始与结束同时有值才会生效",
-        "type": "Date",
+        "type": "object",
         "typeRaw": "`Date`",
         "default": ""
       },
@@ -8696,7 +8805,7 @@
         "name": "ngModelEnd",
         "inputType": 2,
         "description": "结束日期，开始与结束同时有值才会生效",
-        "type": "Date",
+        "type": "object",
         "typeRaw": "`Date`",
         "default": ""
       },
@@ -8742,7 +8851,8 @@
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
-        "pureDefault": "false"
+        "pureDefault": "false",
+        "forceInputType": 0
       },
       {
         "name": "nzDisabledDate",
@@ -8853,7 +8963,7 @@
         "name": "nzPlaceHolder",
         "inputType": 0,
         "description": "输入框提示文字",
-        "type": "string",
+        "type": "Array",
         "typeRaw": "`string[]`",
         "default": ""
       },
@@ -8890,7 +9000,7 @@
         "name": "http-data",
         "inputType": 0,
         "description": "URL请求参数",
-        "type": "string",
+        "type": "object",
         "typeRaw": "`any`",
         "default": ""
       },
@@ -8898,17 +9008,9 @@
         "name": "http-method",
         "inputType": 0,
         "description": "请求类型",
-        "type": "Enum",
+        "type": "object",
         "typeRaw": "`'POST','GET','HEAD','PUT','PATCH','DELETE'`",
         "default": "`'GET'`",
-        "typeDefinition": [
-          "POST",
-          "GET",
-          "HEAD",
-          "PUT",
-          "PATCH",
-          "DELETE"
-        ],
         "pureDefault": "GET"
       },
       {
@@ -9582,7 +9684,7 @@
         "name": "links",
         "inputType": 0,
         "description": "链接数据",
-        "type": "string",
+        "type": "object",
         "typeRaw": "`GlobalFooterLink`",
         "default": "",
         "complexType": "GlobalFooterLink"
@@ -9633,114 +9735,108 @@
     "doc": "https://ng-alain.com/components/global-footer/zh"
   },
   {
-    "_idx": 12,
+    "_idx": 51,
     "type": "component",
-    "selector": "nz-anchor",
+    "selector": "nz-autocomplete",
     "types": {},
     "properties": [
       {
-        "name": "nzAffix",
+        "name": "nzBackfill",
         "inputType": 0,
-        "description": "固定模式",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`true`",
-        "pureDefault": "true"
-      },
-      {
-        "name": "nzBounds",
-        "inputType": 0,
-        "description": "锚点区域边界，单位：px",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "`5`",
-        "pureDefault": "5"
-      },
-      {
-        "name": "nzOffsetBottom",
-        "inputType": 0,
-        "description": "距离窗口底部达到指定偏移量后触发",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": ""
-      },
-      {
-        "name": "nzOffsetTop",
-        "inputType": 0,
-        "description": "距离窗口顶部达到指定偏移量后触发",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": ""
-      },
-      {
-        "name": "nzShowInkInFixed",
-        "inputType": 0,
-        "description": "固定模式是否显示小圆点",
+        "description": "使用键盘选择选项的时候把选中项回填到输入框中",
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
         "pureDefault": "false"
       },
       {
-        "name": "nzTarget",
+        "name": "nzDataSource",
         "inputType": 0,
-        "description": "指定滚动的容器",
-        "type": "string",
-        "typeRaw": "`string｜HTMLElement`",
-        "default": "`window`",
-        "pureDefault": "window"
-      },
-      {
-        "name": "nzClick",
-        "inputType": 1,
-        "description": "点击项触发",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<string>`",
+        "description": "自动完成的数据源",
+        "type": "object",
+        "typeRaw": "`AutocompleteDataSource`",
         "default": ""
       },
       {
-        "name": "nzScroll",
-        "inputType": 1,
-        "description": "滚动至某锚点时触发",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<NzAnchorLinkComponent>`",
-        "default": ""
-      }
-    ],
-    "lib": "ng-zorro-antd",
-    "title": "锚点",
-    "description": "用于跳转到页面指定位置。",
-    "whenToUse": "需要展现当前页面上可供跳转的锚点链接，以及快速在锚点之间跳转。",
-    "doc": "https://ng.ant.design/components/anchor/zh"
-  },
-  {
-    "_idx": 147,
-    "type": "component",
-    "selector": "nz-link",
-    "types": {},
-    "properties": [
-      {
-        "name": "nzHref",
+        "name": "nzDefaultActiveFirstOption",
         "inputType": 0,
-        "description": "锚点链接",
+        "description": "是否默认高亮第一个选项。",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`true`",
+        "pureDefault": "true"
+      },
+      {
+        "name": "nzWidth",
+        "inputType": 0,
+        "description": "自定义宽度单位 px",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "触发元素宽度",
+        "pureDefault": "触发元素宽度"
+      },
+      {
+        "name": "nzOverlayClassName",
+        "inputType": 0,
+        "description": "下拉根元素的类名称",
         "type": "string",
         "typeRaw": "`string`",
         "default": ""
       },
       {
-        "name": "nzTitle",
+        "name": "nzOverlayStyle",
         "inputType": 0,
-        "description": "文字内容",
-        "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
-        "default": ""
+        "description": "下拉根元素的样式",
+        "type": "object",
+        "typeRaw": "`object`",
+        "default": "",
+        "forceInputType": 0
       }
     ],
     "lib": "ng-zorro-antd",
-    "title": "锚点",
-    "description": "用于跳转到页面指定位置。",
-    "whenToUse": "需要展现当前页面上可供跳转的锚点链接，以及快速在锚点之间跳转。",
-    "doc": "https://ng.ant.design/components/anchor/zh"
+    "title": "自动完成",
+    "description": "输入框自动完成功能。",
+    "whenToUse": "需要自动完成时。",
+    "doc": "https://ng.ant.design/components/auto-complete/zh"
+  },
+  {
+    "_idx": 158,
+    "type": "component",
+    "selector": "nz-auto-option",
+    "types": {},
+    "properties": [
+      {
+        "name": "nzValue",
+        "inputType": 0,
+        "description": "绑定到触发元素 ngModel 的值",
+        "type": "object",
+        "typeRaw": "`any`",
+        "default": ""
+      },
+      {
+        "name": "nzLabel",
+        "inputType": 0,
+        "description": "填入触发元素显示的值",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
+      },
+      {
+        "name": "nzDisabled",
+        "inputType": 0,
+        "description": "禁用选项",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false",
+        "forceInputType": 0
+      }
+    ],
+    "lib": "ng-zorro-antd",
+    "title": "自动完成",
+    "description": "输入框自动完成功能。",
+    "whenToUse": "需要自动完成时。",
+    "doc": "https://ng.ant.design/components/auto-complete/zh"
   },
   {
     "_idx": 6,
@@ -9752,7 +9848,7 @@
         "name": "data",
         "inputType": 0,
         "description": "数据",
-        "type": "string",
+        "type": "Array",
         "typeRaw": "`NoticeItem[]`",
         "default": ""
       },
@@ -10026,15 +10122,9 @@
         "name": "level",
         "inputType": 0,
         "description": "误差校正级别",
-        "type": "Enum",
+        "type": "object",
         "typeRaw": "`'L','M','Q','H'`",
         "default": "`'L'`",
-        "typeDefinition": [
-          "L",
-          "M",
-          "Q",
-          "H"
-        ],
         "pureDefault": "L"
       },
       {
@@ -10192,7 +10282,7 @@
         "name": "mode",
         "inputType": 0,
         "description": "设置匹配模式",
-        "type": "string",
+        "type": "object",
         "typeRaw": "`ReuseTabMatchMode`",
         "default": "`0`",
         "pureDefault": "0"
@@ -10237,7 +10327,7 @@
         "name": "excludes",
         "inputType": 0,
         "description": "排除规则，限 `mode=URL`",
-        "type": "string",
+        "type": "Array",
         "typeRaw": "`RegExp[]`",
         "default": ""
       },
@@ -10258,6 +10348,14 @@
         "typeRaw": "`boolean`",
         "default": "`true`",
         "pureDefault": "true"
+      },
+      {
+        "name": "customContextMenu",
+        "inputType": 0,
+        "description": "自定义右键菜单",
+        "type": "Array",
+        "typeRaw": "`ReuseCustomContextMenu[]`",
+        "default": ""
       },
       {
         "name": "close",
@@ -10307,6 +10405,15 @@
         "pureDefault": "true"
       },
       {
+        "name": "recursivePath",
+        "inputType": 0,
+        "description": "自动向上递归查找，菜单数据源包含 `/ware`，则 `/ware/1` 也视为 `/ware` 项",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`true`",
+        "pureDefault": "true"
+      },
+      {
         "name": "select",
         "inputType": 1,
         "description": "点击菜单时回调（包含 `disabled`）",
@@ -10331,7 +10438,7 @@
           "name": "params",
           "inputType": 0,
           "description": "额外请求参数，默认自动附加 `pi`、`ps` 至URL",
-          "type": "string",
+          "type": "object",
           "typeRaw": "`any`",
           "default": ""
         },
@@ -10339,24 +10446,16 @@
           "name": "method",
           "inputType": 0,
           "description": "请求方法",
-          "type": "string",
+          "type": "object",
           "typeRaw": "`'POST','GET','HEAD','PUT','PATCH','DELETE'`",
           "default": "`'GET'`",
-          "typeDefinition": [
-            "POST",
-            "GET",
-            "HEAD",
-            "PUT",
-            "PATCH",
-            "DELETE"
-          ],
           "pureDefault": "GET"
         },
         {
           "name": "body",
           "inputType": 0,
           "description": "请求体 `body`，当 `method: POST` 时有效",
-          "type": "string",
+          "type": "object",
           "typeRaw": "`any`",
           "default": ""
         },
@@ -10364,7 +10463,7 @@
           "name": "headers",
           "inputType": 0,
           "description": "请求体 `headers`",
-          "type": "string",
+          "type": "object",
           "typeRaw": "`any`",
           "default": ""
         },
@@ -10372,7 +10471,7 @@
           "name": "reName",
           "inputType": 0,
           "description": "重命名请求参数 `pi`、`ps`",
-          "type": "string",
+          "type": "object",
           "typeRaw": "`STReqReNameType`",
           "default": "`{ pi: 'pi', ps: 'ps' }`",
           "pureDefault": "{ pi: 'pi', ps: 'ps' }"
@@ -10428,7 +10527,7 @@
           "name": "placement",
           "inputType": 0,
           "description": "分页方向",
-          "type": "string",
+          "type": "Enum",
           "typeRaw": "`'left','center','right'`",
           "default": "`'right'`",
           "typeDefinition": [
@@ -10459,7 +10558,7 @@
           "name": "pageSizes",
           "inputType": 0,
           "description": "分页器中每页显示条目数下拉框值",
-          "type": "number",
+          "type": "Array",
           "typeRaw": "`number[]`",
           "default": "`[10, 20, 30, 40, 50]`",
           "pureDefault": "[10, 20, 30, 40, 50]"
@@ -10544,7 +10643,7 @@
         "name": "columns",
         "inputType": 0,
         "description": "列描述",
-        "type": "string",
+        "type": "Array",
         "typeRaw": "`STColumn[]`",
         "default": ""
       },
@@ -10560,7 +10659,7 @@
         "name": "req",
         "inputType": 0,
         "description": "请求体配置",
-        "type": "string",
+        "type": "object",
         "typeRaw": "`STReq`",
         "default": "",
         "complexType": "STReq"
@@ -10569,7 +10668,7 @@
         "name": "res",
         "inputType": 0,
         "description": "返回体配置",
-        "type": "string",
+        "type": "object",
         "typeRaw": "`STRes`",
         "default": "",
         "complexType": "STRes"
@@ -10593,10 +10692,19 @@
         "pureDefault": "10"
       },
       {
+        "name": "total",
+        "inputType": 0,
+        "description": "当前总数据，在服务器渲染时需要传入，默认：`0`",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`0`",
+        "pureDefault": "0"
+      },
+      {
         "name": "page",
         "inputType": 0,
         "description": "分页器配置",
-        "type": "string",
+        "type": "object",
         "typeRaw": "`STPage`",
         "default": "",
         "complexType": "STPage"
@@ -10670,7 +10778,7 @@
         "name": "singleSort",
         "inputType": 0,
         "description": "单排序规则<br>若不指定，则返回：`columnName=ascend|descend`<br>若指定，则返回：`sort=columnName.(ascend|descend)`",
-        "type": "string",
+        "type": "object",
         "typeRaw": "`STSingleSort`",
         "default": "`null`",
         "pureDefault": "null"
@@ -10716,6 +10824,14 @@
         "description": "表格额外内容，一般用于添加合计行",
         "type": "TemplateRef",
         "typeRaw": "`TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "widthConfig",
+        "inputType": 0,
+        "description": "表头分组时指定每列宽度，与 STColumn 的 width 不可混用",
+        "type": "Array",
+        "typeRaw": "`string[]`",
         "default": ""
       },
       {
@@ -11126,7 +11242,7 @@
         "name": "data",
         "inputType": 0,
         "description": "数据",
-        "type": "string",
+        "type": "Array",
         "typeRaw": "`G2BarData[]`",
         "default": "`[]`",
         "pureDefault": "[]"
@@ -11461,7 +11577,7 @@
         "name": "data",
         "inputType": 0,
         "description": "数据",
-        "type": "string",
+        "type": "Array",
         "typeRaw": "`G2MiniAreaData[]`",
         "default": ""
       }
@@ -11547,7 +11663,7 @@
         "name": "data",
         "inputType": 0,
         "description": "数据",
-        "type": "string",
+        "type": "Array",
         "typeRaw": "`G2MiniBarData[]`",
         "default": ""
       }
@@ -11744,7 +11860,7 @@
         "name": "padding",
         "inputType": 0,
         "description": "图表内部间距",
-        "type": "number",
+        "type": "Array",
         "typeRaw": "`number[]`",
         "default": "`[12, 0, 12, 0]`",
         "pureDefault": "[12, 0, 12, 0]"
@@ -11821,7 +11937,7 @@
         "name": "data",
         "inputType": 0,
         "description": "数据",
-        "type": "string",
+        "type": "Array",
         "typeRaw": "`G2PieData[]`",
         "default": ""
       }
@@ -11885,7 +12001,7 @@
         "name": "colors",
         "inputType": 0,
         "description": "颜色列表",
-        "type": "string",
+        "type": "Array",
         "typeRaw": "`string[]`",
         "default": ""
       },
@@ -11893,7 +12009,7 @@
         "name": "data",
         "inputType": 0,
         "description": "数据",
-        "type": "string",
+        "type": "Array",
         "typeRaw": "`G2RadarData[]`",
         "default": ""
       }
@@ -11977,7 +12093,7 @@
         "name": "padding",
         "inputType": 0,
         "description": "图表内部间距",
-        "type": "string",
+        "type": "object",
         "typeRaw": "`any`",
         "default": "`0`",
         "pureDefault": "0"
@@ -12003,7 +12119,7 @@
         "name": "textStyle",
         "inputType": 0,
         "description": "显示值样式",
-        "type": "string",
+        "type": "object",
         "typeRaw": "`any`",
         "default": "`{ fontSize: 12, color: '#595959' }`",
         "pureDefault": "{ fontSize: 12, color: '#595959' }"
@@ -12043,7 +12159,7 @@
         "name": "data",
         "inputType": 0,
         "description": "数据",
-        "type": "string",
+        "type": "Array",
         "typeRaw": "`G2TagCloudData[]`",
         "default": "`[]`",
         "pureDefault": "[]"
@@ -12082,7 +12198,7 @@
         "name": "data",
         "inputType": 0,
         "description": "数据",
-        "type": "string",
+        "type": "Array",
         "typeRaw": "`G2TimelineData[]`",
         "default": ""
       },
@@ -12116,7 +12232,7 @@
         "name": "padding",
         "inputType": 0,
         "description": "图表内部间距",
-        "type": "number",
+        "type": "Array",
         "typeRaw": "`number[]`",
         "default": "`[60, 20, 40, 40]`",
         "pureDefault": "[60, 20, 40, 40]"
@@ -12306,7 +12422,7 @@
           "name": "render",
           "inputType": 0,
           "description": "按钮样式",
-          "type": "string",
+          "type": "object",
           "typeRaw": "`SFRenderButton`",
           "default": ""
         }
@@ -12331,7 +12447,7 @@
         "name": "schema",
         "inputType": 0,
         "description": "**必填项** JSON Schema",
-        "type": "string",
+        "type": "object",
         "typeRaw": "`SFSchema`",
         "default": ""
       },
@@ -12339,7 +12455,7 @@
         "name": "ui",
         "inputType": 0,
         "description": "UI Schema",
-        "type": "string",
+        "type": "object",
         "typeRaw": "`SFUISchema`",
         "default": ""
       },
@@ -12347,7 +12463,7 @@
         "name": "formData",
         "inputType": 0,
         "description": "表单默认值",
-        "type": "string",
+        "type": "object",
         "typeRaw": "`any`",
         "default": ""
       },
@@ -12369,13 +12485,9 @@
         "name": "button",
         "inputType": 0,
         "description": "按钮",
-        "type": "Enum",
+        "type": "object",
         "typeRaw": "`SFButton|'none'`",
         "default": "`{}`",
-        "typeDefinition": [
-          "SFButton",
-          "none"
-        ],
         "complexType": "SFButton",
         "pureDefault": "{}"
       },
@@ -12495,7 +12607,7 @@
           "name": "render",
           "inputType": 0,
           "description": "按钮样式",
-          "type": "string",
+          "type": "object",
           "typeRaw": "`SFRenderButton`",
           "default": ""
         }
@@ -12520,7 +12632,7 @@
         "name": "schema",
         "inputType": 0,
         "description": "**必填项** JSON Schema",
-        "type": "string",
+        "type": "object",
         "typeRaw": "`SFSchema`",
         "default": ""
       },
@@ -12528,7 +12640,7 @@
         "name": "ui",
         "inputType": 0,
         "description": "UI Schema",
-        "type": "string",
+        "type": "object",
         "typeRaw": "`SFUISchema`",
         "default": ""
       },
@@ -12536,7 +12648,7 @@
         "name": "formData",
         "inputType": 0,
         "description": "表单默认值",
-        "type": "string",
+        "type": "object",
         "typeRaw": "`any`",
         "default": ""
       },
@@ -12558,13 +12670,9 @@
         "name": "button",
         "inputType": 0,
         "description": "按钮",
-        "type": "Enum",
+        "type": "object",
         "typeRaw": "`SFButton|'none'`",
         "default": "`{}`",
-        "typeDefinition": [
-          "SFButton",
-          "none"
-        ],
         "complexType": "SFButton",
         "pureDefault": "{}"
       },

@@ -4,11 +4,17 @@
 
 [中文](README.zh-CN.md)
 
+## Features
+
+- Automatically completion component names, properties, complex parameters, and optional values
+- Automatically filter current component input & output properties
+- Mouse hover display component, propertie, and complex parameter documentation
+
 ## Usage
 
-Typing `<` in the `.html` file to trigger all components in the intellisense list, pressing `Tab` or `Enter` will be complete automatically; no more!
+Typing `<` in the `.html` file to trigger all components in the intellisense list, pressing `Tab` or `Enter` will be completion automatically; no more!
 
-In addition, some common complete code snippets are built in and prefix with `nzs-`.
+In addition, some common completion code snippets are built in and prefix with `nzs-`.
 
 ## Configuration
 

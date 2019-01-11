@@ -248,14 +248,20 @@ function parseType(directive: Directive, item: DirectiveProperty) {
     item.type = 'TemplateRef';
   } else if (firstType.startsWith('(') || firstType.startsWith('function')) {
     item.type = 'function';
-  } else if (firstType.startsWith('{')) {
+  } else if (firstType.startsWith('{') || firstType.startsWith('any') || firstType.startsWith('object')) {
     item.type = 'object';
   } else if (firstType.startsWith('EventEmitter')) {
     item.type = 'EventEmitter';
-  } else if (firstType.startsWith('Array')) {
+  } else if (firstType.startsWith('Array') || firstType.endsWith('[]')) {
     item.type = 'Array';
+  } else if (/^[A-Z]+/.test(firstType)) {
+    item.type = 'object';
   } else {
     switch (firstType) {
+      case 'string':
+      case 'String':
+        item.type = 'string';
+        break;
       case 'boolean':
       case 'Boolean':
         item.type = 'boolean';
@@ -269,6 +275,7 @@ function parseType(directive: Directive, item: DirectiveProperty) {
       case 'Date':
         item.type = 'Date';
         break;
+      case 'any':
       case 'object':
         item.type = 'object';
         break;
@@ -295,6 +302,7 @@ function parseType(directive: Directive, item: DirectiveProperty) {
     //   && !typeRaw.includes('=>')
     // )
   ) {
+    item.type = 'Enum';
     item.typeDefinition = types.filter(value => !!value);
     // .filter(value => value !== 'null')
   }
@@ -388,13 +396,23 @@ function metaToItem(zone: string, filePath: string, meta: any): Directive[] {
     if (FIX.extraProperty[i.selector]) {
       i.properties.push(...FIX.extraProperty[i.selector]);
     }
-    // override type definition
     i.properties.forEach(p => {
+      // override type definition
       if (FIX.typeDefinition[i.selector]) {
         p.typeDefinition = FIX.typeDefinition[i.selector][p.name] || p.typeDefinition;
       }
       if (p.typeDefinition && p.typeDefinition.length > 0) {
         p.type = 'Enum';
+      }
+      // override force input type
+      if (FIX.forceInputType.twoBinding.includes(p.name)) {
+        p.forceInputType = InputAttrType.InputOutput;
+      }
+      if (FIX.forceInputType.input.includes(p.name)) {
+        p.forceInputType = InputAttrType.Input;
+      }
+      if (FIX.forceInputType.output.includes(p.name)) {
+        p.forceInputType = InputAttrType.Output;
       }
     });
 

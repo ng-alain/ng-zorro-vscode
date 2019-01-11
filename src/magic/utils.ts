@@ -2,9 +2,6 @@ import { Position, Range, TextDocument } from 'vscode';
 import { Tag, TagAttr, InputAttrType, TagAttrValueType } from './interfaces';
 import { isComponent } from './resources';
 
-/**
- * License https://github.com/wx-minapp/minapp-vscode
- */
 export function getTag(doc: TextDocument, pos: Position, includeAttr = true): Tag {
   const line = doc.lineAt(pos.line).text;
   const replacer = (char: string) => (raw: string) => char.repeat(raw.length);

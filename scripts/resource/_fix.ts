@@ -62,6 +62,11 @@ const CP = {
 };
 
 export const FIX = {
+  forceInputType: {
+    twoBinding: [],
+    input: ['disabled', 'nzDisabled', 'nzLoading', 'nzSpinning', 'nzOverlayStyle', 'nzIndeterminate', 'nzFullscreen'],
+    output: [],
+  },
   /** 额外属性 */
   extraProperty: {
     'nz-form': [CP.formGroup, CP.ngSubmit],

@@ -60,6 +60,7 @@ export interface DirectiveProperty {
    */
   name?: string;
   inputType?: InputAttrType;
+  forceInputType?: InputAttrType;
   /**
    * Description for property, e.g: `设置按钮类型`
    */
