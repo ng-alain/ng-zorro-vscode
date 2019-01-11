@@ -1,12 +1,22 @@
 {
   "version": "0.2.0",
   "configurations": [{
-      "name": "Launch Extension",
+      "type": "node",
+      "request": "launch",
+      "name": "Resources",
+      "program": "${workspaceFolder}/scripts/resource/main.js"
+    },
+    {
+      "name": "Extension",
       "type": "extensionHost",
       "request": "launch",
       "runtimeExecutable": "${execPath}",
-      "preLaunchTask": "run",
-      "args": ["--extensionDevelopmentPath=${workspaceRoot}"]
+      "args": [
+        "--extensionDevelopmentPath=${workspaceFolder}"
+      ],
+      "outFiles": [
+        "${workspaceFolder}/out/**/*.js"
+      ]
     }
   ]
 }

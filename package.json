@@ -1,8 +1,8 @@
 {
   "name": "ng-zorro-vscode",
-  "displayName": "ng-zorro snippets",
-  "description": "Snippets based on ng-zorro",
-  "version": "2.7.1",
+  "displayName": "NG-ZORRO Snippets",
+  "description": "Snippets based on NG-ZORRO",
+  "version": "7.0.0-rc.0",
   "icon": "ng-zorro.png",
   "publisher": "cipchk",
   "license": "MIT",
@@ -10,8 +10,12 @@
   "scripts": {
     "build": "bash ./scripts/build/build.sh",
     "test": "bash ./scripts/build/build.sh -t",
-    "release": "bash ./scripts/build/build.sh -b -p"
+    "release": "npm run resource && bash ./scripts/build/build.sh -b -p",
+    "watch": "tsc -watch -p ./",
+    "resource": "bash ./scripts/resource/build.sh",
+    "postinstall": "node ./node_modules/vscode/bin/install"
   },
+  "main": "./out/src/magic/extension",
   "homepage": "https://github.com/cipchk/ng-zorro-vscode/blob/master/README.md",
   "repository": {
     "type": "git",
@@ -22,14 +26,19 @@
     "email": "cipchk@qq.com"
   },
   "engines": {
-    "vscode": "^1.0.0"
+    "vscode": "^1.30.x"
   },
   "galleryBanner": {
     "color": "#ffffff",
     "theme": "light"
   },
   "categories": [
+    "Programming Languages",
     "Snippets"
+  ],
+  "activationEvents": [
+    "onLanguage:typescript",
+    "onLanguage:html"
   ],
   "contributes": {
     "snippets": [
@@ -37,10 +46,38 @@
         "language": "html",
         "path": "./snippets.json"
       }
-    ]
+    ],
+    "configuration": {
+      "title": "NG-ZORRO Extension Configuration",
+      "properties": {
+        "ng-zorro-vscode.language": {
+          "description": "Set language code, can be set 'zh-CN', 'en-US', default: 'en-US'",
+          "type": "string",
+          "default": "en-US"
+        },
+        "ng-zorro-vscode.hover": {
+          "description": "Whether to enable hover, default: 'true'",
+          "type": "boolean",
+          "default": true
+        }
+      }
+    }
   },
+  "dependencies": {},
   "devDependencies": {
+    "@types/node": "^10.12.2",
+    "@types/mocha": "^5.2.5",
+    "@types/chai": "^4.1.7",
+    "@types/markdown-it": "^0.0.7",
+    "ts-node": "^7.0.1",
+    "mocha": "^5.2.0",
+    "chai": "^4.2.0",
+    "yaml-front-matter": "^4.0.0",
+    "markdown-it": "^8.4.2",
     "vscode-snippet-generator": "^1.2.1",
-    "vsce": "^1.53.2"
+    "vsce": "^1.54.0",
+    "typescript": "^3.2.2",
+    "vscode": "^1.1.26",
+    "klaw-sync": "^6.0.0"
   }
 }

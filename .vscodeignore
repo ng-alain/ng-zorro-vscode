@@ -3,6 +3,7 @@ node_modules/**
 src/**
 snippets/**
 scripts/**
+build/**
 
 .editorconfig
 .gitignore
@@ -12,3 +13,4 @@ snippet-config.json
 tsconfig.json
 tslint.json
 yarn.lock
+TODO.md

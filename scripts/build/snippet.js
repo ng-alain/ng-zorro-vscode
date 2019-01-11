@@ -9,15 +9,7 @@ vscodeGen.generator({
   i18nTpl: '',
   sourceRoot: path.join(root, 'src/snippets'),
   outFile: path.join(root, `snippets/html-${i18n}.json`),
-  prefix: 'nz',
+  prefix: 'nzs',
   separator: '-',
   ingoreDefaultMd: true,
-}, {
-  itemFinished: (item) => {
-    // remove nz-attr-
-    if (item.prefix.startsWith('nz-attr-nz')) {
-      item.prefix = item.prefix.substr('nz-attr-'.length);
-    }
-    return item;
-  }
 });

@@ -1,8 +1,27 @@
-# ng-zorro 的 vscode 代码片断
+# NG-ZORRO Snippets
 
-![Plugin in action](help.gif)
+![Help](help.gif)
 
-当前版本只支持 `0.7.x`，低版本请自行下载 [cipchk.ng-zorro-vscode-1.1.4](https://github.com/cipchk/ng-zorro-vscode/raw/dev/cipchk.ng-zorro-vscode-1.1.4.vsix)本地安装。
+## 特征
+
+- 自动补全组件名、属性、复杂参数、可选值
+- 自动筛选当前组件属性
+- 鼠标悬停显示组件、属性、复杂参数文档
+
+## 如何使用
+
+在 `.html` 文件里输入 `<` 触发所有组件在智能提醒列表中，按 `Tab` 或 `回车` 自动完成；仅此而已！
+
+除此之外，还内置一些常见的完整代码片断，并且以 `nzs-` 开头。
+
+## 配置项
+
+| 名称                       | 描述         | 类型           | 默认值  |
+|----------------------------|------------|----------------|---------|
+| `ng-zorro-vscode.language` | 语言         | `zh-CN, en-US` | `en-US` |
+| `ng-zorro-vscode.hover`    | 是否开启悬停 | `boolean`      | `true`  |
+
+> **注意:** 修改配置必须**重启Visual Studio Code**。
 
 ## 支持语言版本
 
@@ -13,15 +32,6 @@
 
 - [issues](https://github.com/cipchk/ng-zorro-vscode/issues)
 - 若你是 ng-alain 用户请额外安装 [ng-alain-vscode](https://marketplace.visualstudio.com/items?itemName=cipchk.ng-alain-vscode)，提供更丰富只针对 ng-alain 的代码片断。
-
-## 如何使用?
-
-你可以任意 `.html` 文件，输入 `nz-` 开头会自动出现在智能提醒列表当中；仅此而已！
-
-- `nz-` 前缀表示一个完整片断
-- `nz` 不带 `-` 前缀表示一个属性片断
-
-> 建议开启 `"editor.snippetSuggestions": "top"` 配置，可确保代码片断优先级高于内置。
 
 ## 更新日志
 
