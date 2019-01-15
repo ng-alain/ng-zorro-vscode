@@ -6,7 +6,7 @@ export const COG = {
   /** 被拆分多个表格属性的组件清单 */
   SPLIT_PROPERTIES: ['th', 'td'],
   /** 忽略组件 */
-  INGORE_COMPONENTS: ['nz-icon'],
+  INGORE_COMPONENTS: [],
   /** 忽略属性清单 */
   INGORE_PROPERTIES: ['ng-content'],
   /** 忽略属性对象清单 */

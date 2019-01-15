@@ -4068,6 +4068,66 @@
     "doc": "https://ng.ant.design/components/affix/en"
   },
   {
+    "_idx": 20,
+    "type": "directive",
+    "selector": "nz-icon",
+    "types": {},
+    "properties": [
+      {
+        "name": "type",
+        "inputType": 0,
+        "description": "Type of the ant design icon",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
+      },
+      {
+        "name": "theme",
+        "inputType": 0,
+        "description": "Type of the ant design icon",
+        "type": "Enum",
+        "typeRaw": "`'fill'｜'outline'｜'twotone'`",
+        "default": "`'outline'`",
+        "typeDefinition": [
+          "fill",
+          "outline",
+          "twotone"
+        ],
+        "pureDefault": "outline"
+      },
+      {
+        "name": "spin",
+        "inputType": 0,
+        "description": "Rotate icon with animation",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "twoToneColor",
+        "inputType": 0,
+        "description": "Only support the two-tone icon. Specific the primary color.",
+        "type": "string",
+        "typeRaw": "`string (hex color)`",
+        "default": ""
+      },
+      {
+        "name": "iconfont",
+        "inputType": 0,
+        "description": "Type of the icon from iconfont",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
+      }
+    ],
+    "lib": "ng-zorro-antd",
+    "title": "Icon",
+    "description": "Semantic vector graphics.",
+    "whenToUse": "",
+    "doc": "https://ng.ant.design/components/icon/en"
+  },
+  {
     "_idx": 21,
     "type": "directive",
     "selector": "nz-input",
@@ -12610,5 +12670,17 @@
     "description": "@delon/form is a dynamic build form based on the [JSON Schema](http://json-schema.org/) standard.",
     "whenToUse": "",
     "doc": "https://ng-alain.com/form/getting-started/en"
+  },
+  {
+    "_idx": 31,
+    "type": "component",
+    "selector": "nz-breadcrumb-item",
+    "types": {},
+    "properties": [],
+    "lib": "ng-zorro-antd",
+    "title": "Breadcrumb",
+    "description": "A breadcrumb displays the current location within a hierarchy. It allows going back to states higher up in the hierarchy.",
+    "whenToUse": "- When the system has more than two layers in a hierarchy.\n- When you need to inform the user of where they are.\n- When the user may need to navigate back to a higher level.\n- When the application has multi-layer architecture.",
+    "doc": "https://ng.ant.design/components/breadcrumb/en"
   }
 ]

@@ -9,7 +9,7 @@ import { COG } from '../config';
 import { AST, AST_KEYS } from './ast';
 
 const md = new MarkdownIt();
-const processRes: Directive[] = [];
+let processRes: Directive[] = [];
 let ast: AST;
 let Lang: string;
 
@@ -29,7 +29,17 @@ export function makeObject(lang: string, filePaths: string[]): Directive[] {
       delete meta.__content;
       processRes.push(...metaToItem(zone, p, meta));
     });
+
+  // Merge extra comoponents
+  const extraComponents = FIX.extraComponents.map(ei => {
+    const orgComponent = processRes.find(w => w.selector === ei.from);
+    return { ...orgComponent, type: 'component', selector: ei.to, types: {}, properties: [], ...ei.data } as any;
+  });
+
+  processRes = processRes.concat(...extraComponents);
+
   verify(filePaths);
+
   return processRes;
 }
 
@@ -363,7 +373,7 @@ function metaToItem(zone: string, filePath: string, meta: any): Directive[] {
   const title = getTitle(meta);
   const description = ast.getText(0);
   const whenToUse = ast.getParagraph(zone === 'en' ? 'When To Use' : '何时使用');
-  const list: Directive[] = [];
+  let list: Directive[] = [];
   getDirective()
     .filter(w => !!w)
     .forEach(i => {

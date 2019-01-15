@@ -4067,6 +4067,66 @@
     "doc": "https://ng.ant.design/components/affix/zh"
   },
   {
+    "_idx": 20,
+    "type": "directive",
+    "selector": "nz-icon",
+    "types": {},
+    "properties": [
+      {
+        "name": "type",
+        "inputType": 0,
+        "description": "图标类型，遵循图标的命名规范",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
+      },
+      {
+        "name": "theme",
+        "inputType": 0,
+        "description": "图标主题风格。可选实心、描线、双色等主题风格，适用于官方图标",
+        "type": "Enum",
+        "typeRaw": "`'fill'｜'outline'｜'twotone'`",
+        "default": "`'outline'`",
+        "typeDefinition": [
+          "fill",
+          "outline",
+          "twotone"
+        ],
+        "pureDefault": "outline"
+      },
+      {
+        "name": "spin",
+        "inputType": 0,
+        "description": "是否有旋转动画",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "twoToneColor",
+        "inputType": 0,
+        "description": "仅适用双色图标，设置双色图标的主要颜色，仅对当前 icon 生效",
+        "type": "string",
+        "typeRaw": "`string (十六进制颜色)`",
+        "default": ""
+      },
+      {
+        "name": "iconfont",
+        "inputType": 0,
+        "description": "指定来自 IconFont 的图标类型",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
+      }
+    ],
+    "lib": "ng-zorro-antd",
+    "title": "图标",
+    "description": "语义化的矢量图形。",
+    "whenToUse": "",
+    "doc": "https://ng.ant.design/components/icon/zh"
+  },
+  {
     "_idx": 21,
     "type": "directive",
     "selector": "nz-input",
@@ -12745,5 +12805,17 @@
     "description": "@delon/form 是一个基于 [JSON Schema](http://json-schema.org/) 标准的动态构建表单。",
     "whenToUse": "",
     "doc": "https://ng-alain.com/form/getting-started/zh"
+  },
+  {
+    "_idx": 26,
+    "type": "component",
+    "selector": "nz-breadcrumb-item",
+    "types": {},
+    "properties": [],
+    "lib": "ng-zorro-antd",
+    "title": "面包屑",
+    "description": "显示当前页面在系统层级结构中的位置，并能向上返回。",
+    "whenToUse": "- 当系统拥有超过两级以上的层级结构时；\n- 当需要告知用户『你在哪里』时；\n- 当需要向上导航的功能时。",
+    "doc": "https://ng.ant.design/components/breadcrumb/zh"
   }
 ]

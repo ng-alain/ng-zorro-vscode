@@ -1,3 +1,7 @@
+# 7.0.2
+
+- 修复丢失的 `nz-icon`、`nz-breadcrumb-item`
+
 # 7.0.1
 
 - 更新 Logo

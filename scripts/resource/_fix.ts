@@ -84,6 +84,14 @@ export const FIX = {
       },
     ],
   },
+  /** 额外组件 */
+  extraComponents: [
+    {
+      from: 'nz-breadcrumb',
+      to: 'nz-breadcrumb-item',
+      data: {},
+    },
+  ],
   typeDefinition: {
     'nz-row': {
       nzGutter: BASE_GUTTER,
