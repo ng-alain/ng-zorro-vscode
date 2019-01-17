@@ -1,4 +1,4 @@
-import { Directive, DirectiveType, Tag, NAME, DirectiveTypeDefinition, DirectiveProperty } from '../interfaces';
+import { Directive, DirectiveType, Tag, NAME, DirectiveTypeDefinition, DirectiveProperty, InputAttrType } from '../interfaces';
 import { i18n } from './local';
 import zh_CN from './zh-CN.json';
 import en_US from './en-US.json';
@@ -52,7 +52,7 @@ function genPropertyMarkdown(property: DirectiveProperty): string {
 
   const rows: string[] = [];
 
-  if (property.typeDefinition && property.typeDefinition.length > 0) {
+  if (property.typeDefinition && Array.isArray(property.typeDefinition)) {
     rows.push(
       `**${i18n('optionalValue')}** ${property.typeDefinition.map((i: DirectiveTypeDefinition) => '`' + i.label + '`').join(', ')}`,
     );
@@ -79,8 +79,16 @@ function fixProperty(p: DirectiveProperty) {
   p.isInputBoolean = notNull(p.isInputBoolean, true);
   p.type = notNull(p.type, 'string');
   p.typeRaw = notNull(p.typeRaw, '').replace(/｜/g, '|');
-  p.typeDefinition = notNull(p.typeDefinition, []).map((item: any) => (typeof item === 'string' ? { value: item, label: item } : item));
-  p.typeDefinitionSnippetStr = p.typeDefinition.map((i: DirectiveTypeDefinition) => i.value).join(',');
+  p.typeDefinition = notNull(p.typeDefinition, []);
+  if (Array.isArray(p.typeDefinition)) {
+    p.typeDefinition = p.typeDefinition.map((item: any) => (typeof item === 'string' ? { value: item, label: item } : item));
+    p.typeDefinitionSnippetStr = p.typeDefinition.map((i: DirectiveTypeDefinition) => i.value).join(',');
+  } else {
+    if (typeof p.typeDefinition === 'object') {
+      p.inputType = InputAttrType.Complex;
+    }
+    p.typeDefinitionSnippetStr = '';
+  }
   p._doc = new MarkdownString(genPropertyMarkdown(p));
 }
 

@@ -1,3 +1,5 @@
+import { manifest } from './_icon';
+
 const BASE_GUTTER = ['0', '8', '16', '24', '32', '40', '48', '56', '64'];
 const DATA_ENTRY = [
   'nz-cascader',
@@ -109,6 +111,17 @@ export const FIX = {
       nzXl: BASE_GUTTER,
       nzXXl: BASE_GUTTER,
     },
+    'nz-icon': {
+      type: {
+        type: 'complex',
+        conditionField: 'theme',
+        list: [
+          { conditionValue: 'outline', values: manifest.outline.map(item => ({ value: item, label: item })) },
+          { conditionValue: 'fill', values: manifest.fill.map(item => ({ value: item, label: item })) },
+          { conditionValue: 'twotone', values: manifest.twotone.map(item => ({ value: item, label: item })) },
+        ],
+      },
+    },
     'se-container': {
       gutter: BASE_GUTTER,
     },
@@ -119,6 +132,8 @@ export const FIX = {
   snippet: {
     'nz-form': '<form __$1>$0</form>',
     'nz-input': '<input __$1>',
+    'nz-tooltip': '<span __$1>$2</span>',
+    'nz-icon': '<i __$1></i>',
     'nz-button': {
       zh: '<button __$1>${2|保存,提交,取消,新建,删除,搜索|}</button>',
       en: '<button __$1>${2|Save,Submit,Cancel,Create,Delete,Search|}</button>',

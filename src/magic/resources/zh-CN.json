@@ -415,7 +415,8 @@
     "title": "文字提示",
     "description": "简单的文字提示气泡框。",
     "whenToUse": "鼠标移入则显示提示，移出消失，气泡浮层不承载复杂文本和操作。",
-    "doc": "https://ng.ant.design/components/tooltip/zh"
+    "doc": "https://ng.ant.design/components/tooltip/zh",
+    "snippet": "<span __$1>$2</span>"
   },
   {
     "_idx": 11,
@@ -4078,7 +4079,2908 @@
         "description": "图标类型，遵循图标的命名规范",
         "type": "string",
         "typeRaw": "`string`",
-        "default": ""
+        "default": "",
+        "typeDefinition": {
+          "type": "complex",
+          "conditionField": "theme",
+          "list": [
+            {
+              "conditionValue": "outline",
+              "values": [
+                {
+                  "value": "account-book",
+                  "label": "account-book"
+                },
+                {
+                  "value": "alert",
+                  "label": "alert"
+                },
+                {
+                  "value": "alipay-circle",
+                  "label": "alipay-circle"
+                },
+                {
+                  "value": "aliwangwang",
+                  "label": "aliwangwang"
+                },
+                {
+                  "value": "android",
+                  "label": "android"
+                },
+                {
+                  "value": "api",
+                  "label": "api"
+                },
+                {
+                  "value": "appstore",
+                  "label": "appstore"
+                },
+                {
+                  "value": "apple",
+                  "label": "apple"
+                },
+                {
+                  "value": "audio",
+                  "label": "audio"
+                },
+                {
+                  "value": "bank",
+                  "label": "bank"
+                },
+                {
+                  "value": "bell",
+                  "label": "bell"
+                },
+                {
+                  "value": "book",
+                  "label": "book"
+                },
+                {
+                  "value": "behance-square",
+                  "label": "behance-square"
+                },
+                {
+                  "value": "box-plot",
+                  "label": "box-plot"
+                },
+                {
+                  "value": "build",
+                  "label": "build"
+                },
+                {
+                  "value": "backward",
+                  "label": "backward"
+                },
+                {
+                  "value": "calculator",
+                  "label": "calculator"
+                },
+                {
+                  "value": "calendar",
+                  "label": "calendar"
+                },
+                {
+                  "value": "camera",
+                  "label": "camera"
+                },
+                {
+                  "value": "car",
+                  "label": "car"
+                },
+                {
+                  "value": "caret-down",
+                  "label": "caret-down"
+                },
+                {
+                  "value": "bulb",
+                  "label": "bulb"
+                },
+                {
+                  "value": "caret-right",
+                  "label": "caret-right"
+                },
+                {
+                  "value": "caret-up",
+                  "label": "caret-up"
+                },
+                {
+                  "value": "caret-left",
+                  "label": "caret-left"
+                },
+                {
+                  "value": "carry-out",
+                  "label": "carry-out"
+                },
+                {
+                  "value": "check-circle",
+                  "label": "check-circle"
+                },
+                {
+                  "value": "chrome",
+                  "label": "chrome"
+                },
+                {
+                  "value": "check-square",
+                  "label": "check-square"
+                },
+                {
+                  "value": "clock-circle",
+                  "label": "clock-circle"
+                },
+                {
+                  "value": "close-circle",
+                  "label": "close-circle"
+                },
+                {
+                  "value": "close-square",
+                  "label": "close-square"
+                },
+                {
+                  "value": "cloud",
+                  "label": "cloud"
+                },
+                {
+                  "value": "code",
+                  "label": "code"
+                },
+                {
+                  "value": "codepen-circle",
+                  "label": "codepen-circle"
+                },
+                {
+                  "value": "contacts",
+                  "label": "contacts"
+                },
+                {
+                  "value": "compass",
+                  "label": "compass"
+                },
+                {
+                  "value": "container",
+                  "label": "container"
+                },
+                {
+                  "value": "control",
+                  "label": "control"
+                },
+                {
+                  "value": "copy",
+                  "label": "copy"
+                },
+                {
+                  "value": "credit-card",
+                  "label": "credit-card"
+                },
+                {
+                  "value": "crown",
+                  "label": "crown"
+                },
+                {
+                  "value": "customer-service",
+                  "label": "customer-service"
+                },
+                {
+                  "value": "dashboard",
+                  "label": "dashboard"
+                },
+                {
+                  "value": "delete",
+                  "label": "delete"
+                },
+                {
+                  "value": "diff",
+                  "label": "diff"
+                },
+                {
+                  "value": "database",
+                  "label": "database"
+                },
+                {
+                  "value": "dislike",
+                  "label": "dislike"
+                },
+                {
+                  "value": "down-circle",
+                  "label": "down-circle"
+                },
+                {
+                  "value": "dribbble-square",
+                  "label": "dribbble-square"
+                },
+                {
+                  "value": "edit",
+                  "label": "edit"
+                },
+                {
+                  "value": "environment",
+                  "label": "environment"
+                },
+                {
+                  "value": "exclamation-circle",
+                  "label": "exclamation-circle"
+                },
+                {
+                  "value": "experiment",
+                  "label": "experiment"
+                },
+                {
+                  "value": "eye-invisible",
+                  "label": "eye-invisible"
+                },
+                {
+                  "value": "down-square",
+                  "label": "down-square"
+                },
+                {
+                  "value": "facebook",
+                  "label": "facebook"
+                },
+                {
+                  "value": "eye",
+                  "label": "eye"
+                },
+                {
+                  "value": "fast-backward",
+                  "label": "fast-backward"
+                },
+                {
+                  "value": "fast-forward",
+                  "label": "fast-forward"
+                },
+                {
+                  "value": "file-add",
+                  "label": "file-add"
+                },
+                {
+                  "value": "file-excel",
+                  "label": "file-excel"
+                },
+                {
+                  "value": "file-exclamation",
+                  "label": "file-exclamation"
+                },
+                {
+                  "value": "file-image",
+                  "label": "file-image"
+                },
+                {
+                  "value": "file-markdown",
+                  "label": "file-markdown"
+                },
+                {
+                  "value": "file-pdf",
+                  "label": "file-pdf"
+                },
+                {
+                  "value": "file-ppt",
+                  "label": "file-ppt"
+                },
+                {
+                  "value": "file-text",
+                  "label": "file-text"
+                },
+                {
+                  "value": "file-unknown",
+                  "label": "file-unknown"
+                },
+                {
+                  "value": "file-word",
+                  "label": "file-word"
+                },
+                {
+                  "value": "file-zip",
+                  "label": "file-zip"
+                },
+                {
+                  "value": "filter",
+                  "label": "filter"
+                },
+                {
+                  "value": "flag",
+                  "label": "flag"
+                },
+                {
+                  "value": "file",
+                  "label": "file"
+                },
+                {
+                  "value": "folder-add",
+                  "label": "folder-add"
+                },
+                {
+                  "value": "folder-open",
+                  "label": "folder-open"
+                },
+                {
+                  "value": "folder",
+                  "label": "folder"
+                },
+                {
+                  "value": "fire",
+                  "label": "fire"
+                },
+                {
+                  "value": "forward",
+                  "label": "forward"
+                },
+                {
+                  "value": "frown",
+                  "label": "frown"
+                },
+                {
+                  "value": "funnel-plot",
+                  "label": "funnel-plot"
+                },
+                {
+                  "value": "gift",
+                  "label": "gift"
+                },
+                {
+                  "value": "github",
+                  "label": "github"
+                },
+                {
+                  "value": "fund",
+                  "label": "fund"
+                },
+                {
+                  "value": "gitlab",
+                  "label": "gitlab"
+                },
+                {
+                  "value": "hdd",
+                  "label": "hdd"
+                },
+                {
+                  "value": "heart",
+                  "label": "heart"
+                },
+                {
+                  "value": "highlight",
+                  "label": "highlight"
+                },
+                {
+                  "value": "home",
+                  "label": "home"
+                },
+                {
+                  "value": "hourglass",
+                  "label": "hourglass"
+                },
+                {
+                  "value": "html5",
+                  "label": "html5"
+                },
+                {
+                  "value": "info-circle",
+                  "label": "info-circle"
+                },
+                {
+                  "value": "instagram",
+                  "label": "instagram"
+                },
+                {
+                  "value": "insurance",
+                  "label": "insurance"
+                },
+                {
+                  "value": "left-circle",
+                  "label": "left-circle"
+                },
+                {
+                  "value": "layout",
+                  "label": "layout"
+                },
+                {
+                  "value": "interation",
+                  "label": "interation"
+                },
+                {
+                  "value": "left-square",
+                  "label": "left-square"
+                },
+                {
+                  "value": "idcard",
+                  "label": "idcard"
+                },
+                {
+                  "value": "linkedin",
+                  "label": "linkedin"
+                },
+                {
+                  "value": "lock",
+                  "label": "lock"
+                },
+                {
+                  "value": "like",
+                  "label": "like"
+                },
+                {
+                  "value": "medicine-box",
+                  "label": "medicine-box"
+                },
+                {
+                  "value": "meh",
+                  "label": "meh"
+                },
+                {
+                  "value": "message",
+                  "label": "message"
+                },
+                {
+                  "value": "minus-circle",
+                  "label": "minus-circle"
+                },
+                {
+                  "value": "minus-square",
+                  "label": "minus-square"
+                },
+                {
+                  "value": "mobile",
+                  "label": "mobile"
+                },
+                {
+                  "value": "notification",
+                  "label": "notification"
+                },
+                {
+                  "value": "money-collect",
+                  "label": "money-collect"
+                },
+                {
+                  "value": "pause-circle",
+                  "label": "pause-circle"
+                },
+                {
+                  "value": "pay-circle",
+                  "label": "pay-circle"
+                },
+                {
+                  "value": "phone",
+                  "label": "phone"
+                },
+                {
+                  "value": "picture",
+                  "label": "picture"
+                },
+                {
+                  "value": "pie-chart",
+                  "label": "pie-chart"
+                },
+                {
+                  "value": "play-circle",
+                  "label": "play-circle"
+                },
+                {
+                  "value": "play-square",
+                  "label": "play-square"
+                },
+                {
+                  "value": "plus-circle",
+                  "label": "plus-circle"
+                },
+                {
+                  "value": "plus-square",
+                  "label": "plus-square"
+                },
+                {
+                  "value": "mail",
+                  "label": "mail"
+                },
+                {
+                  "value": "printer",
+                  "label": "printer"
+                },
+                {
+                  "value": "profile",
+                  "label": "profile"
+                },
+                {
+                  "value": "pushpin",
+                  "label": "pushpin"
+                },
+                {
+                  "value": "project",
+                  "label": "project"
+                },
+                {
+                  "value": "question-circle",
+                  "label": "question-circle"
+                },
+                {
+                  "value": "read",
+                  "label": "read"
+                },
+                {
+                  "value": "red-envelope",
+                  "label": "red-envelope"
+                },
+                {
+                  "value": "reconciliation",
+                  "label": "reconciliation"
+                },
+                {
+                  "value": "property-safety",
+                  "label": "property-safety"
+                },
+                {
+                  "value": "rest",
+                  "label": "rest"
+                },
+                {
+                  "value": "right-circle",
+                  "label": "right-circle"
+                },
+                {
+                  "value": "safety-certificate",
+                  "label": "safety-certificate"
+                },
+                {
+                  "value": "rocket",
+                  "label": "rocket"
+                },
+                {
+                  "value": "save",
+                  "label": "save"
+                },
+                {
+                  "value": "schedule",
+                  "label": "schedule"
+                },
+                {
+                  "value": "security-scan",
+                  "label": "security-scan"
+                },
+                {
+                  "value": "right-square",
+                  "label": "right-square"
+                },
+                {
+                  "value": "shop",
+                  "label": "shop"
+                },
+                {
+                  "value": "shopping",
+                  "label": "shopping"
+                },
+                {
+                  "value": "setting",
+                  "label": "setting"
+                },
+                {
+                  "value": "skin",
+                  "label": "skin"
+                },
+                {
+                  "value": "slack-square",
+                  "label": "slack-square"
+                },
+                {
+                  "value": "sliders",
+                  "label": "sliders"
+                },
+                {
+                  "value": "smile",
+                  "label": "smile"
+                },
+                {
+                  "value": "skype",
+                  "label": "skype"
+                },
+                {
+                  "value": "step-backward",
+                  "label": "step-backward"
+                },
+                {
+                  "value": "step-forward",
+                  "label": "step-forward"
+                },
+                {
+                  "value": "sound",
+                  "label": "sound"
+                },
+                {
+                  "value": "stop",
+                  "label": "stop"
+                },
+                {
+                  "value": "switcher",
+                  "label": "switcher"
+                },
+                {
+                  "value": "tablet",
+                  "label": "tablet"
+                },
+                {
+                  "value": "snippets",
+                  "label": "snippets"
+                },
+                {
+                  "value": "tags",
+                  "label": "tags"
+                },
+                {
+                  "value": "tag",
+                  "label": "tag"
+                },
+                {
+                  "value": "taobao-circle",
+                  "label": "taobao-circle"
+                },
+                {
+                  "value": "thunderbolt",
+                  "label": "thunderbolt"
+                },
+                {
+                  "value": "tool",
+                  "label": "tool"
+                },
+                {
+                  "value": "star",
+                  "label": "star"
+                },
+                {
+                  "value": "trophy",
+                  "label": "trophy"
+                },
+                {
+                  "value": "unlock",
+                  "label": "unlock"
+                },
+                {
+                  "value": "up-square",
+                  "label": "up-square"
+                },
+                {
+                  "value": "usb",
+                  "label": "usb"
+                },
+                {
+                  "value": "up-circle",
+                  "label": "up-circle"
+                },
+                {
+                  "value": "wallet",
+                  "label": "wallet"
+                },
+                {
+                  "value": "warning",
+                  "label": "warning"
+                },
+                {
+                  "value": "wechat",
+                  "label": "wechat"
+                },
+                {
+                  "value": "video-camera",
+                  "label": "video-camera"
+                },
+                {
+                  "value": "windows",
+                  "label": "windows"
+                },
+                {
+                  "value": "yahoo",
+                  "label": "yahoo"
+                },
+                {
+                  "value": "weibo-square",
+                  "label": "weibo-square"
+                },
+                {
+                  "value": "weibo-circle",
+                  "label": "weibo-circle"
+                },
+                {
+                  "value": "youtube",
+                  "label": "youtube"
+                },
+                {
+                  "value": "yuque",
+                  "label": "yuque"
+                },
+                {
+                  "value": "alibaba",
+                  "label": "alibaba"
+                },
+                {
+                  "value": "align-center",
+                  "label": "align-center"
+                },
+                {
+                  "value": "alipay",
+                  "label": "alipay"
+                },
+                {
+                  "value": "align-right",
+                  "label": "align-right"
+                },
+                {
+                  "value": "align-left",
+                  "label": "align-left"
+                },
+                {
+                  "value": "aliyun",
+                  "label": "aliyun"
+                },
+                {
+                  "value": "amazon",
+                  "label": "amazon"
+                },
+                {
+                  "value": "ant-cloud",
+                  "label": "ant-cloud"
+                },
+                {
+                  "value": "ant-design",
+                  "label": "ant-design"
+                },
+                {
+                  "value": "apartment",
+                  "label": "apartment"
+                },
+                {
+                  "value": "area-chart",
+                  "label": "area-chart"
+                },
+                {
+                  "value": "arrow-down",
+                  "label": "arrow-down"
+                },
+                {
+                  "value": "arrow-up",
+                  "label": "arrow-up"
+                },
+                {
+                  "value": "arrow-right",
+                  "label": "arrow-right"
+                },
+                {
+                  "value": "arrow-left",
+                  "label": "arrow-left"
+                },
+                {
+                  "value": "arrows-alt",
+                  "label": "arrows-alt"
+                },
+                {
+                  "value": "audit",
+                  "label": "audit"
+                },
+                {
+                  "value": "bars",
+                  "label": "bars"
+                },
+                {
+                  "value": "barcode",
+                  "label": "barcode"
+                },
+                {
+                  "value": "behance",
+                  "label": "behance"
+                },
+                {
+                  "value": "bg-colors",
+                  "label": "bg-colors"
+                },
+                {
+                  "value": "block",
+                  "label": "block"
+                },
+                {
+                  "value": "bold",
+                  "label": "bold"
+                },
+                {
+                  "value": "border-bottom",
+                  "label": "border-bottom"
+                },
+                {
+                  "value": "border-horizontal",
+                  "label": "border-horizontal"
+                },
+                {
+                  "value": "border-inner",
+                  "label": "border-inner"
+                },
+                {
+                  "value": "border-left",
+                  "label": "border-left"
+                },
+                {
+                  "value": "border-outer",
+                  "label": "border-outer"
+                },
+                {
+                  "value": "border-top",
+                  "label": "border-top"
+                },
+                {
+                  "value": "border-verticle",
+                  "label": "border-verticle"
+                },
+                {
+                  "value": "border",
+                  "label": "border"
+                },
+                {
+                  "value": "border-right",
+                  "label": "border-right"
+                },
+                {
+                  "value": "branches",
+                  "label": "branches"
+                },
+                {
+                  "value": "check",
+                  "label": "check"
+                },
+                {
+                  "value": "ci",
+                  "label": "ci"
+                },
+                {
+                  "value": "cloud-download",
+                  "label": "cloud-download"
+                },
+                {
+                  "value": "cloud-server",
+                  "label": "cloud-server"
+                },
+                {
+                  "value": "cloud-sync",
+                  "label": "cloud-sync"
+                },
+                {
+                  "value": "cloud-upload",
+                  "label": "cloud-upload"
+                },
+                {
+                  "value": "close",
+                  "label": "close"
+                },
+                {
+                  "value": "cluster",
+                  "label": "cluster"
+                },
+                {
+                  "value": "codepen",
+                  "label": "codepen"
+                },
+                {
+                  "value": "coffee",
+                  "label": "coffee"
+                },
+                {
+                  "value": "colum-height",
+                  "label": "colum-height"
+                },
+                {
+                  "value": "column-width",
+                  "label": "column-width"
+                },
+                {
+                  "value": "code-sandbox",
+                  "label": "code-sandbox"
+                },
+                {
+                  "value": "bar-chart",
+                  "label": "bar-chart"
+                },
+                {
+                  "value": "copyright",
+                  "label": "copyright"
+                },
+                {
+                  "value": "dash",
+                  "label": "dash"
+                },
+                {
+                  "value": "deployment-unit",
+                  "label": "deployment-unit"
+                },
+                {
+                  "value": "desktop",
+                  "label": "desktop"
+                },
+                {
+                  "value": "disconnect",
+                  "label": "disconnect"
+                },
+                {
+                  "value": "dingding",
+                  "label": "dingding"
+                },
+                {
+                  "value": "dollar",
+                  "label": "dollar"
+                },
+                {
+                  "value": "dot-chart",
+                  "label": "dot-chart"
+                },
+                {
+                  "value": "double-left",
+                  "label": "double-left"
+                },
+                {
+                  "value": "double-right",
+                  "label": "double-right"
+                },
+                {
+                  "value": "download",
+                  "label": "download"
+                },
+                {
+                  "value": "drag",
+                  "label": "drag"
+                },
+                {
+                  "value": "down",
+                  "label": "down"
+                },
+                {
+                  "value": "dribbble",
+                  "label": "dribbble"
+                },
+                {
+                  "value": "dropbox",
+                  "label": "dropbox"
+                },
+                {
+                  "value": "ellipsis",
+                  "label": "ellipsis"
+                },
+                {
+                  "value": "enter",
+                  "label": "enter"
+                },
+                {
+                  "value": "exception",
+                  "label": "exception"
+                },
+                {
+                  "value": "euro",
+                  "label": "euro"
+                },
+                {
+                  "value": "exclamation",
+                  "label": "exclamation"
+                },
+                {
+                  "value": "export",
+                  "label": "export"
+                },
+                {
+                  "value": "fall",
+                  "label": "fall"
+                },
+                {
+                  "value": "file-done",
+                  "label": "file-done"
+                },
+                {
+                  "value": "file-jpg",
+                  "label": "file-jpg"
+                },
+                {
+                  "value": "file-search",
+                  "label": "file-search"
+                },
+                {
+                  "value": "file-protect",
+                  "label": "file-protect"
+                },
+                {
+                  "value": "file-sync",
+                  "label": "file-sync"
+                },
+                {
+                  "value": "font-colors",
+                  "label": "font-colors"
+                },
+                {
+                  "value": "font-size",
+                  "label": "font-size"
+                },
+                {
+                  "value": "fork",
+                  "label": "fork"
+                },
+                {
+                  "value": "form",
+                  "label": "form"
+                },
+                {
+                  "value": "fullscreen-exit",
+                  "label": "fullscreen-exit"
+                },
+                {
+                  "value": "fullscreen",
+                  "label": "fullscreen"
+                },
+                {
+                  "value": "gateway",
+                  "label": "gateway"
+                },
+                {
+                  "value": "global",
+                  "label": "global"
+                },
+                {
+                  "value": "gold",
+                  "label": "gold"
+                },
+                {
+                  "value": "google-plus",
+                  "label": "google-plus"
+                },
+                {
+                  "value": "google",
+                  "label": "google"
+                },
+                {
+                  "value": "heat-map",
+                  "label": "heat-map"
+                },
+                {
+                  "value": "ie",
+                  "label": "ie"
+                },
+                {
+                  "value": "import",
+                  "label": "import"
+                },
+                {
+                  "value": "inbox",
+                  "label": "inbox"
+                },
+                {
+                  "value": "info",
+                  "label": "info"
+                },
+                {
+                  "value": "issues-close",
+                  "label": "issues-close"
+                },
+                {
+                  "value": "italic",
+                  "label": "italic"
+                },
+                {
+                  "value": "laptop",
+                  "label": "laptop"
+                },
+                {
+                  "value": "key",
+                  "label": "key"
+                },
+                {
+                  "value": "left",
+                  "label": "left"
+                },
+                {
+                  "value": "line-chart",
+                  "label": "line-chart"
+                },
+                {
+                  "value": "line-height",
+                  "label": "line-height"
+                },
+                {
+                  "value": "line",
+                  "label": "line"
+                },
+                {
+                  "value": "link",
+                  "label": "link"
+                },
+                {
+                  "value": "loading-3-quarters",
+                  "label": "loading-3-quarters"
+                },
+                {
+                  "value": "loading",
+                  "label": "loading"
+                },
+                {
+                  "value": "login",
+                  "label": "login"
+                },
+                {
+                  "value": "logout",
+                  "label": "logout"
+                },
+                {
+                  "value": "man",
+                  "label": "man"
+                },
+                {
+                  "value": "medium-workmark",
+                  "label": "medium-workmark"
+                },
+                {
+                  "value": "menu-fold",
+                  "label": "menu-fold"
+                },
+                {
+                  "value": "medium",
+                  "label": "medium"
+                },
+                {
+                  "value": "menu-unfold",
+                  "label": "menu-unfold"
+                },
+                {
+                  "value": "menu",
+                  "label": "menu"
+                },
+                {
+                  "value": "minus",
+                  "label": "minus"
+                },
+                {
+                  "value": "monitor",
+                  "label": "monitor"
+                },
+                {
+                  "value": "mr",
+                  "label": "mr"
+                },
+                {
+                  "value": "ordered-list",
+                  "label": "ordered-list"
+                },
+                {
+                  "value": "number",
+                  "label": "number"
+                },
+                {
+                  "value": "paper-clip",
+                  "label": "paper-clip"
+                },
+                {
+                  "value": "pause",
+                  "label": "pause"
+                },
+                {
+                  "value": "percentage",
+                  "label": "percentage"
+                },
+                {
+                  "value": "pic-center",
+                  "label": "pic-center"
+                },
+                {
+                  "value": "pic-left",
+                  "label": "pic-left"
+                },
+                {
+                  "value": "pic-right",
+                  "label": "pic-right"
+                },
+                {
+                  "value": "plus",
+                  "label": "plus"
+                },
+                {
+                  "value": "poweroff",
+                  "label": "poweroff"
+                },
+                {
+                  "value": "pound",
+                  "label": "pound"
+                },
+                {
+                  "value": "qrcode",
+                  "label": "qrcode"
+                },
+                {
+                  "value": "qq",
+                  "label": "qq"
+                },
+                {
+                  "value": "question",
+                  "label": "question"
+                },
+                {
+                  "value": "radar-chart",
+                  "label": "radar-chart"
+                },
+                {
+                  "value": "radius-bottomleft",
+                  "label": "radius-bottomleft"
+                },
+                {
+                  "value": "radius-setting",
+                  "label": "radius-setting"
+                },
+                {
+                  "value": "radius-bottomright",
+                  "label": "radius-bottomright"
+                },
+                {
+                  "value": "radius-upleft",
+                  "label": "radius-upleft"
+                },
+                {
+                  "value": "radius-upright",
+                  "label": "radius-upright"
+                },
+                {
+                  "value": "reddit",
+                  "label": "reddit"
+                },
+                {
+                  "value": "reload",
+                  "label": "reload"
+                },
+                {
+                  "value": "reload-time",
+                  "label": "reload-time"
+                },
+                {
+                  "value": "redo",
+                  "label": "redo"
+                },
+                {
+                  "value": "retweet",
+                  "label": "retweet"
+                },
+                {
+                  "value": "right",
+                  "label": "right"
+                },
+                {
+                  "value": "rise",
+                  "label": "rise"
+                },
+                {
+                  "value": "rollback",
+                  "label": "rollback"
+                },
+                {
+                  "value": "safety",
+                  "label": "safety"
+                },
+                {
+                  "value": "scan",
+                  "label": "scan"
+                },
+                {
+                  "value": "scissor",
+                  "label": "scissor"
+                },
+                {
+                  "value": "robot",
+                  "label": "robot"
+                },
+                {
+                  "value": "search",
+                  "label": "search"
+                },
+                {
+                  "value": "select",
+                  "label": "select"
+                },
+                {
+                  "value": "share-alt",
+                  "label": "share-alt"
+                },
+                {
+                  "value": "shake",
+                  "label": "shake"
+                },
+                {
+                  "value": "shopping-cart",
+                  "label": "shopping-cart"
+                },
+                {
+                  "value": "shrink",
+                  "label": "shrink"
+                },
+                {
+                  "value": "sketch",
+                  "label": "sketch"
+                },
+                {
+                  "value": "slack",
+                  "label": "slack"
+                },
+                {
+                  "value": "small-dash",
+                  "label": "small-dash"
+                },
+                {
+                  "value": "solution",
+                  "label": "solution"
+                },
+                {
+                  "value": "sort-ascending",
+                  "label": "sort-ascending"
+                },
+                {
+                  "value": "sort-descending",
+                  "label": "sort-descending"
+                },
+                {
+                  "value": "stock",
+                  "label": "stock"
+                },
+                {
+                  "value": "strikethrough",
+                  "label": "strikethrough"
+                },
+                {
+                  "value": "swap-left",
+                  "label": "swap-left"
+                },
+                {
+                  "value": "swap",
+                  "label": "swap"
+                },
+                {
+                  "value": "swap-right",
+                  "label": "swap-right"
+                },
+                {
+                  "value": "sync",
+                  "label": "sync"
+                },
+                {
+                  "value": "table",
+                  "label": "table"
+                },
+                {
+                  "value": "team",
+                  "label": "team"
+                },
+                {
+                  "value": "to-top",
+                  "label": "to-top"
+                },
+                {
+                  "value": "taobao",
+                  "label": "taobao"
+                },
+                {
+                  "value": "trademark",
+                  "label": "trademark"
+                },
+                {
+                  "value": "twitter",
+                  "label": "twitter"
+                },
+                {
+                  "value": "underline",
+                  "label": "underline"
+                },
+                {
+                  "value": "undo",
+                  "label": "undo"
+                },
+                {
+                  "value": "unordered-list",
+                  "label": "unordered-list"
+                },
+                {
+                  "value": "upload",
+                  "label": "upload"
+                },
+                {
+                  "value": "user-delete",
+                  "label": "user-delete"
+                },
+                {
+                  "value": "user-add",
+                  "label": "user-add"
+                },
+                {
+                  "value": "up",
+                  "label": "up"
+                },
+                {
+                  "value": "user",
+                  "label": "user"
+                },
+                {
+                  "value": "usergroup-add",
+                  "label": "usergroup-add"
+                },
+                {
+                  "value": "transaction",
+                  "label": "transaction"
+                },
+                {
+                  "value": "usergroup-delete",
+                  "label": "usergroup-delete"
+                },
+                {
+                  "value": "vertical-align-bottom",
+                  "label": "vertical-align-bottom"
+                },
+                {
+                  "value": "vertical-align-middle",
+                  "label": "vertical-align-middle"
+                },
+                {
+                  "value": "vertical-left",
+                  "label": "vertical-left"
+                },
+                {
+                  "value": "vertical-right",
+                  "label": "vertical-right"
+                },
+                {
+                  "value": "vertical-align-top",
+                  "label": "vertical-align-top"
+                },
+                {
+                  "value": "weibo",
+                  "label": "weibo"
+                },
+                {
+                  "value": "wifi",
+                  "label": "wifi"
+                },
+                {
+                  "value": "woman",
+                  "label": "woman"
+                },
+                {
+                  "value": "zhihu",
+                  "label": "zhihu"
+                },
+                {
+                  "value": "zoom-in",
+                  "label": "zoom-in"
+                },
+                {
+                  "value": "zoom-out",
+                  "label": "zoom-out"
+                }
+              ]
+            },
+            {
+              "conditionValue": "fill",
+              "values": [
+                {
+                  "value": "account-book",
+                  "label": "account-book"
+                },
+                {
+                  "value": "alert",
+                  "label": "alert"
+                },
+                {
+                  "value": "alipay-circle",
+                  "label": "alipay-circle"
+                },
+                {
+                  "value": "alipay-square",
+                  "label": "alipay-square"
+                },
+                {
+                  "value": "amazon-circle",
+                  "label": "amazon-circle"
+                },
+                {
+                  "value": "aliwangwang",
+                  "label": "aliwangwang"
+                },
+                {
+                  "value": "android",
+                  "label": "android"
+                },
+                {
+                  "value": "amazon-square",
+                  "label": "amazon-square"
+                },
+                {
+                  "value": "api",
+                  "label": "api"
+                },
+                {
+                  "value": "appstore",
+                  "label": "appstore"
+                },
+                {
+                  "value": "apple",
+                  "label": "apple"
+                },
+                {
+                  "value": "audio",
+                  "label": "audio"
+                },
+                {
+                  "value": "bank",
+                  "label": "bank"
+                },
+                {
+                  "value": "bell",
+                  "label": "bell"
+                },
+                {
+                  "value": "book",
+                  "label": "book"
+                },
+                {
+                  "value": "behance-square",
+                  "label": "behance-square"
+                },
+                {
+                  "value": "behance-circle",
+                  "label": "behance-circle"
+                },
+                {
+                  "value": "box-plot",
+                  "label": "box-plot"
+                },
+                {
+                  "value": "build",
+                  "label": "build"
+                },
+                {
+                  "value": "backward",
+                  "label": "backward"
+                },
+                {
+                  "value": "calculator",
+                  "label": "calculator"
+                },
+                {
+                  "value": "calendar",
+                  "label": "calendar"
+                },
+                {
+                  "value": "camera",
+                  "label": "camera"
+                },
+                {
+                  "value": "car",
+                  "label": "car"
+                },
+                {
+                  "value": "caret-down",
+                  "label": "caret-down"
+                },
+                {
+                  "value": "bulb",
+                  "label": "bulb"
+                },
+                {
+                  "value": "caret-right",
+                  "label": "caret-right"
+                },
+                {
+                  "value": "caret-up",
+                  "label": "caret-up"
+                },
+                {
+                  "value": "caret-left",
+                  "label": "caret-left"
+                },
+                {
+                  "value": "carry-out",
+                  "label": "carry-out"
+                },
+                {
+                  "value": "check-circle",
+                  "label": "check-circle"
+                },
+                {
+                  "value": "chrome",
+                  "label": "chrome"
+                },
+                {
+                  "value": "check-square",
+                  "label": "check-square"
+                },
+                {
+                  "value": "ci-circle",
+                  "label": "ci-circle"
+                },
+                {
+                  "value": "clock-circle",
+                  "label": "clock-circle"
+                },
+                {
+                  "value": "close-circle",
+                  "label": "close-circle"
+                },
+                {
+                  "value": "close-square",
+                  "label": "close-square"
+                },
+                {
+                  "value": "cloud",
+                  "label": "cloud"
+                },
+                {
+                  "value": "code-sandbox-circle",
+                  "label": "code-sandbox-circle"
+                },
+                {
+                  "value": "code-sandbox-square",
+                  "label": "code-sandbox-square"
+                },
+                {
+                  "value": "code",
+                  "label": "code"
+                },
+                {
+                  "value": "codepen-circle",
+                  "label": "codepen-circle"
+                },
+                {
+                  "value": "codepen-square",
+                  "label": "codepen-square"
+                },
+                {
+                  "value": "contacts",
+                  "label": "contacts"
+                },
+                {
+                  "value": "compass",
+                  "label": "compass"
+                },
+                {
+                  "value": "container",
+                  "label": "container"
+                },
+                {
+                  "value": "control",
+                  "label": "control"
+                },
+                {
+                  "value": "copy",
+                  "label": "copy"
+                },
+                {
+                  "value": "copyright-circle",
+                  "label": "copyright-circle"
+                },
+                {
+                  "value": "credit-card",
+                  "label": "credit-card"
+                },
+                {
+                  "value": "crown",
+                  "label": "crown"
+                },
+                {
+                  "value": "customer-service",
+                  "label": "customer-service"
+                },
+                {
+                  "value": "dashboard",
+                  "label": "dashboard"
+                },
+                {
+                  "value": "delete",
+                  "label": "delete"
+                },
+                {
+                  "value": "diff",
+                  "label": "diff"
+                },
+                {
+                  "value": "dingtalk-circle",
+                  "label": "dingtalk-circle"
+                },
+                {
+                  "value": "dingtalk-square",
+                  "label": "dingtalk-square"
+                },
+                {
+                  "value": "database",
+                  "label": "database"
+                },
+                {
+                  "value": "dislike",
+                  "label": "dislike"
+                },
+                {
+                  "value": "dollar-circle",
+                  "label": "dollar-circle"
+                },
+                {
+                  "value": "down-circle",
+                  "label": "down-circle"
+                },
+                {
+                  "value": "dribbble-circle",
+                  "label": "dribbble-circle"
+                },
+                {
+                  "value": "dribbble-square",
+                  "label": "dribbble-square"
+                },
+                {
+                  "value": "dropbox-circle",
+                  "label": "dropbox-circle"
+                },
+                {
+                  "value": "dropbox-square",
+                  "label": "dropbox-square"
+                },
+                {
+                  "value": "edit",
+                  "label": "edit"
+                },
+                {
+                  "value": "environment",
+                  "label": "environment"
+                },
+                {
+                  "value": "euro-circle",
+                  "label": "euro-circle"
+                },
+                {
+                  "value": "exclamation-circle",
+                  "label": "exclamation-circle"
+                },
+                {
+                  "value": "experiment",
+                  "label": "experiment"
+                },
+                {
+                  "value": "eye-invisible",
+                  "label": "eye-invisible"
+                },
+                {
+                  "value": "down-square",
+                  "label": "down-square"
+                },
+                {
+                  "value": "facebook",
+                  "label": "facebook"
+                },
+                {
+                  "value": "eye",
+                  "label": "eye"
+                },
+                {
+                  "value": "fast-backward",
+                  "label": "fast-backward"
+                },
+                {
+                  "value": "fast-forward",
+                  "label": "fast-forward"
+                },
+                {
+                  "value": "file-add",
+                  "label": "file-add"
+                },
+                {
+                  "value": "file-excel",
+                  "label": "file-excel"
+                },
+                {
+                  "value": "file-exclamation",
+                  "label": "file-exclamation"
+                },
+                {
+                  "value": "file-image",
+                  "label": "file-image"
+                },
+                {
+                  "value": "file-markdown",
+                  "label": "file-markdown"
+                },
+                {
+                  "value": "file-pdf",
+                  "label": "file-pdf"
+                },
+                {
+                  "value": "file-ppt",
+                  "label": "file-ppt"
+                },
+                {
+                  "value": "file-text",
+                  "label": "file-text"
+                },
+                {
+                  "value": "file-unknown",
+                  "label": "file-unknown"
+                },
+                {
+                  "value": "file-word",
+                  "label": "file-word"
+                },
+                {
+                  "value": "file-zip",
+                  "label": "file-zip"
+                },
+                {
+                  "value": "filter",
+                  "label": "filter"
+                },
+                {
+                  "value": "flag",
+                  "label": "flag"
+                },
+                {
+                  "value": "file",
+                  "label": "file"
+                },
+                {
+                  "value": "folder-add",
+                  "label": "folder-add"
+                },
+                {
+                  "value": "folder-open",
+                  "label": "folder-open"
+                },
+                {
+                  "value": "folder",
+                  "label": "folder"
+                },
+                {
+                  "value": "fire",
+                  "label": "fire"
+                },
+                {
+                  "value": "forward",
+                  "label": "forward"
+                },
+                {
+                  "value": "frown",
+                  "label": "frown"
+                },
+                {
+                  "value": "funnel-plot",
+                  "label": "funnel-plot"
+                },
+                {
+                  "value": "gift",
+                  "label": "gift"
+                },
+                {
+                  "value": "github",
+                  "label": "github"
+                },
+                {
+                  "value": "fund",
+                  "label": "fund"
+                },
+                {
+                  "value": "gitlab",
+                  "label": "gitlab"
+                },
+                {
+                  "value": "golden",
+                  "label": "golden"
+                },
+                {
+                  "value": "google-circle",
+                  "label": "google-circle"
+                },
+                {
+                  "value": "google-plus-circle",
+                  "label": "google-plus-circle"
+                },
+                {
+                  "value": "google-plus-square",
+                  "label": "google-plus-square"
+                },
+                {
+                  "value": "google-square",
+                  "label": "google-square"
+                },
+                {
+                  "value": "hdd",
+                  "label": "hdd"
+                },
+                {
+                  "value": "heart",
+                  "label": "heart"
+                },
+                {
+                  "value": "highlight",
+                  "label": "highlight"
+                },
+                {
+                  "value": "home",
+                  "label": "home"
+                },
+                {
+                  "value": "hourglass",
+                  "label": "hourglass"
+                },
+                {
+                  "value": "html5",
+                  "label": "html5"
+                },
+                {
+                  "value": "ie-circle",
+                  "label": "ie-circle"
+                },
+                {
+                  "value": "ie-square",
+                  "label": "ie-square"
+                },
+                {
+                  "value": "info-circle",
+                  "label": "info-circle"
+                },
+                {
+                  "value": "instagram",
+                  "label": "instagram"
+                },
+                {
+                  "value": "insurance",
+                  "label": "insurance"
+                },
+                {
+                  "value": "left-circle",
+                  "label": "left-circle"
+                },
+                {
+                  "value": "layout",
+                  "label": "layout"
+                },
+                {
+                  "value": "interation",
+                  "label": "interation"
+                },
+                {
+                  "value": "left-square",
+                  "label": "left-square"
+                },
+                {
+                  "value": "idcard",
+                  "label": "idcard"
+                },
+                {
+                  "value": "linkedin",
+                  "label": "linkedin"
+                },
+                {
+                  "value": "lock",
+                  "label": "lock"
+                },
+                {
+                  "value": "like",
+                  "label": "like"
+                },
+                {
+                  "value": "medicine-box",
+                  "label": "medicine-box"
+                },
+                {
+                  "value": "medium-circle",
+                  "label": "medium-circle"
+                },
+                {
+                  "value": "medium-square",
+                  "label": "medium-square"
+                },
+                {
+                  "value": "meh",
+                  "label": "meh"
+                },
+                {
+                  "value": "message",
+                  "label": "message"
+                },
+                {
+                  "value": "minus-circle",
+                  "label": "minus-circle"
+                },
+                {
+                  "value": "minus-square",
+                  "label": "minus-square"
+                },
+                {
+                  "value": "mobile",
+                  "label": "mobile"
+                },
+                {
+                  "value": "notification",
+                  "label": "notification"
+                },
+                {
+                  "value": "money-collect",
+                  "label": "money-collect"
+                },
+                {
+                  "value": "pause-circle",
+                  "label": "pause-circle"
+                },
+                {
+                  "value": "pay-circle",
+                  "label": "pay-circle"
+                },
+                {
+                  "value": "phone",
+                  "label": "phone"
+                },
+                {
+                  "value": "picture",
+                  "label": "picture"
+                },
+                {
+                  "value": "pie-chart",
+                  "label": "pie-chart"
+                },
+                {
+                  "value": "play-circle",
+                  "label": "play-circle"
+                },
+                {
+                  "value": "play-square",
+                  "label": "play-square"
+                },
+                {
+                  "value": "plus-circle",
+                  "label": "plus-circle"
+                },
+                {
+                  "value": "pound-circle",
+                  "label": "pound-circle"
+                },
+                {
+                  "value": "plus-square",
+                  "label": "plus-square"
+                },
+                {
+                  "value": "mail",
+                  "label": "mail"
+                },
+                {
+                  "value": "printer",
+                  "label": "printer"
+                },
+                {
+                  "value": "profile",
+                  "label": "profile"
+                },
+                {
+                  "value": "pushpin",
+                  "label": "pushpin"
+                },
+                {
+                  "value": "qq-circle",
+                  "label": "qq-circle"
+                },
+                {
+                  "value": "project",
+                  "label": "project"
+                },
+                {
+                  "value": "question-circle",
+                  "label": "question-circle"
+                },
+                {
+                  "value": "qq-square",
+                  "label": "qq-square"
+                },
+                {
+                  "value": "read",
+                  "label": "read"
+                },
+                {
+                  "value": "red-envelope",
+                  "label": "red-envelope"
+                },
+                {
+                  "value": "reconciliation",
+                  "label": "reconciliation"
+                },
+                {
+                  "value": "property-safety",
+                  "label": "property-safety"
+                },
+                {
+                  "value": "reddit-circle",
+                  "label": "reddit-circle"
+                },
+                {
+                  "value": "reddit-square",
+                  "label": "reddit-square"
+                },
+                {
+                  "value": "rest",
+                  "label": "rest"
+                },
+                {
+                  "value": "right-circle",
+                  "label": "right-circle"
+                },
+                {
+                  "value": "safety-certificate",
+                  "label": "safety-certificate"
+                },
+                {
+                  "value": "rocket",
+                  "label": "rocket"
+                },
+                {
+                  "value": "save",
+                  "label": "save"
+                },
+                {
+                  "value": "schedule",
+                  "label": "schedule"
+                },
+                {
+                  "value": "security-scan",
+                  "label": "security-scan"
+                },
+                {
+                  "value": "right-square",
+                  "label": "right-square"
+                },
+                {
+                  "value": "shop",
+                  "label": "shop"
+                },
+                {
+                  "value": "shopping",
+                  "label": "shopping"
+                },
+                {
+                  "value": "setting",
+                  "label": "setting"
+                },
+                {
+                  "value": "sketch-circle",
+                  "label": "sketch-circle"
+                },
+                {
+                  "value": "sketch-square",
+                  "label": "sketch-square"
+                },
+                {
+                  "value": "slack-circle",
+                  "label": "slack-circle"
+                },
+                {
+                  "value": "skin",
+                  "label": "skin"
+                },
+                {
+                  "value": "slack-square",
+                  "label": "slack-square"
+                },
+                {
+                  "value": "sliders",
+                  "label": "sliders"
+                },
+                {
+                  "value": "smile",
+                  "label": "smile"
+                },
+                {
+                  "value": "skype",
+                  "label": "skype"
+                },
+                {
+                  "value": "step-backward",
+                  "label": "step-backward"
+                },
+                {
+                  "value": "step-forward",
+                  "label": "step-forward"
+                },
+                {
+                  "value": "sound",
+                  "label": "sound"
+                },
+                {
+                  "value": "stop",
+                  "label": "stop"
+                },
+                {
+                  "value": "switcher",
+                  "label": "switcher"
+                },
+                {
+                  "value": "tablet",
+                  "label": "tablet"
+                },
+                {
+                  "value": "snippets",
+                  "label": "snippets"
+                },
+                {
+                  "value": "tags",
+                  "label": "tags"
+                },
+                {
+                  "value": "tag",
+                  "label": "tag"
+                },
+                {
+                  "value": "taobao-square",
+                  "label": "taobao-square"
+                },
+                {
+                  "value": "taobao-circle",
+                  "label": "taobao-circle"
+                },
+                {
+                  "value": "thunderbolt",
+                  "label": "thunderbolt"
+                },
+                {
+                  "value": "tool",
+                  "label": "tool"
+                },
+                {
+                  "value": "star",
+                  "label": "star"
+                },
+                {
+                  "value": "trademark-circle",
+                  "label": "trademark-circle"
+                },
+                {
+                  "value": "twitter-circle",
+                  "label": "twitter-circle"
+                },
+                {
+                  "value": "trophy",
+                  "label": "trophy"
+                },
+                {
+                  "value": "twitter-square",
+                  "label": "twitter-square"
+                },
+                {
+                  "value": "unlock",
+                  "label": "unlock"
+                },
+                {
+                  "value": "up-square",
+                  "label": "up-square"
+                },
+                {
+                  "value": "usb",
+                  "label": "usb"
+                },
+                {
+                  "value": "up-circle",
+                  "label": "up-circle"
+                },
+                {
+                  "value": "wallet",
+                  "label": "wallet"
+                },
+                {
+                  "value": "warning",
+                  "label": "warning"
+                },
+                {
+                  "value": "wechat",
+                  "label": "wechat"
+                },
+                {
+                  "value": "video-camera",
+                  "label": "video-camera"
+                },
+                {
+                  "value": "windows",
+                  "label": "windows"
+                },
+                {
+                  "value": "yahoo",
+                  "label": "yahoo"
+                },
+                {
+                  "value": "weibo-square",
+                  "label": "weibo-square"
+                },
+                {
+                  "value": "weibo-circle",
+                  "label": "weibo-circle"
+                },
+                {
+                  "value": "youtube",
+                  "label": "youtube"
+                },
+                {
+                  "value": "yuque",
+                  "label": "yuque"
+                },
+                {
+                  "value": "zhihu-circle",
+                  "label": "zhihu-circle"
+                },
+                {
+                  "value": "zhihu-square",
+                  "label": "zhihu-square"
+                }
+              ]
+            },
+            {
+              "conditionValue": "twotone",
+              "values": [
+                {
+                  "value": "account-book",
+                  "label": "account-book"
+                },
+                {
+                  "value": "alert",
+                  "label": "alert"
+                },
+                {
+                  "value": "api",
+                  "label": "api"
+                },
+                {
+                  "value": "appstore",
+                  "label": "appstore"
+                },
+                {
+                  "value": "audio",
+                  "label": "audio"
+                },
+                {
+                  "value": "bank",
+                  "label": "bank"
+                },
+                {
+                  "value": "bell",
+                  "label": "bell"
+                },
+                {
+                  "value": "book",
+                  "label": "book"
+                },
+                {
+                  "value": "box-plot",
+                  "label": "box-plot"
+                },
+                {
+                  "value": "build",
+                  "label": "build"
+                },
+                {
+                  "value": "calculator",
+                  "label": "calculator"
+                },
+                {
+                  "value": "camera",
+                  "label": "camera"
+                },
+                {
+                  "value": "car",
+                  "label": "car"
+                },
+                {
+                  "value": "bulb",
+                  "label": "bulb"
+                },
+                {
+                  "value": "carry-out",
+                  "label": "carry-out"
+                },
+                {
+                  "value": "check-circle",
+                  "label": "check-circle"
+                },
+                {
+                  "value": "check-square",
+                  "label": "check-square"
+                },
+                {
+                  "value": "clock-circle",
+                  "label": "clock-circle"
+                },
+                {
+                  "value": "close-circle",
+                  "label": "close-circle"
+                },
+                {
+                  "value": "close-square",
+                  "label": "close-square"
+                },
+                {
+                  "value": "cloud",
+                  "label": "cloud"
+                },
+                {
+                  "value": "code",
+                  "label": "code"
+                },
+                {
+                  "value": "contacts",
+                  "label": "contacts"
+                },
+                {
+                  "value": "compass",
+                  "label": "compass"
+                },
+                {
+                  "value": "container",
+                  "label": "container"
+                },
+                {
+                  "value": "control",
+                  "label": "control"
+                },
+                {
+                  "value": "copy",
+                  "label": "copy"
+                },
+                {
+                  "value": "credit-card",
+                  "label": "credit-card"
+                },
+                {
+                  "value": "crown",
+                  "label": "crown"
+                },
+                {
+                  "value": "customer-service",
+                  "label": "customer-service"
+                },
+                {
+                  "value": "dashboard",
+                  "label": "dashboard"
+                },
+                {
+                  "value": "delete",
+                  "label": "delete"
+                },
+                {
+                  "value": "diff",
+                  "label": "diff"
+                },
+                {
+                  "value": "database",
+                  "label": "database"
+                },
+                {
+                  "value": "dislike",
+                  "label": "dislike"
+                },
+                {
+                  "value": "down-circle",
+                  "label": "down-circle"
+                },
+                {
+                  "value": "edit",
+                  "label": "edit"
+                },
+                {
+                  "value": "environment",
+                  "label": "environment"
+                },
+                {
+                  "value": "exclamation-circle",
+                  "label": "exclamation-circle"
+                },
+                {
+                  "value": "experiment",
+                  "label": "experiment"
+                },
+                {
+                  "value": "eye-invisible",
+                  "label": "eye-invisible"
+                },
+                {
+                  "value": "down-square",
+                  "label": "down-square"
+                },
+                {
+                  "value": "eye",
+                  "label": "eye"
+                },
+                {
+                  "value": "file-add",
+                  "label": "file-add"
+                },
+                {
+                  "value": "file-excel",
+                  "label": "file-excel"
+                },
+                {
+                  "value": "file-exclamation",
+                  "label": "file-exclamation"
+                },
+                {
+                  "value": "file-image",
+                  "label": "file-image"
+                },
+                {
+                  "value": "file-markdown",
+                  "label": "file-markdown"
+                },
+                {
+                  "value": "file-pdf",
+                  "label": "file-pdf"
+                },
+                {
+                  "value": "file-ppt",
+                  "label": "file-ppt"
+                },
+                {
+                  "value": "file-text",
+                  "label": "file-text"
+                },
+                {
+                  "value": "file-unknown",
+                  "label": "file-unknown"
+                },
+                {
+                  "value": "file-word",
+                  "label": "file-word"
+                },
+                {
+                  "value": "file-zip",
+                  "label": "file-zip"
+                },
+                {
+                  "value": "filter",
+                  "label": "filter"
+                },
+                {
+                  "value": "flag",
+                  "label": "flag"
+                },
+                {
+                  "value": "file",
+                  "label": "file"
+                },
+                {
+                  "value": "folder-add",
+                  "label": "folder-add"
+                },
+                {
+                  "value": "folder-open",
+                  "label": "folder-open"
+                },
+                {
+                  "value": "folder",
+                  "label": "folder"
+                },
+                {
+                  "value": "fire",
+                  "label": "fire"
+                },
+                {
+                  "value": "frown",
+                  "label": "frown"
+                },
+                {
+                  "value": "funnel-plot",
+                  "label": "funnel-plot"
+                },
+                {
+                  "value": "gift",
+                  "label": "gift"
+                },
+                {
+                  "value": "fund",
+                  "label": "fund"
+                },
+                {
+                  "value": "hdd",
+                  "label": "hdd"
+                },
+                {
+                  "value": "heart",
+                  "label": "heart"
+                },
+                {
+                  "value": "highlight",
+                  "label": "highlight"
+                },
+                {
+                  "value": "home",
+                  "label": "home"
+                },
+                {
+                  "value": "hourglass",
+                  "label": "hourglass"
+                },
+                {
+                  "value": "html5",
+                  "label": "html5"
+                },
+                {
+                  "value": "info-circle",
+                  "label": "info-circle"
+                },
+                {
+                  "value": "insurance",
+                  "label": "insurance"
+                },
+                {
+                  "value": "left-circle",
+                  "label": "left-circle"
+                },
+                {
+                  "value": "layout",
+                  "label": "layout"
+                },
+                {
+                  "value": "interation",
+                  "label": "interation"
+                },
+                {
+                  "value": "left-square",
+                  "label": "left-square"
+                },
+                {
+                  "value": "idcard",
+                  "label": "idcard"
+                },
+                {
+                  "value": "lock",
+                  "label": "lock"
+                },
+                {
+                  "value": "like",
+                  "label": "like"
+                },
+                {
+                  "value": "medicine-box",
+                  "label": "medicine-box"
+                },
+                {
+                  "value": "meh",
+                  "label": "meh"
+                },
+                {
+                  "value": "message",
+                  "label": "message"
+                },
+                {
+                  "value": "minus-circle",
+                  "label": "minus-circle"
+                },
+                {
+                  "value": "minus-square",
+                  "label": "minus-square"
+                },
+                {
+                  "value": "mobile",
+                  "label": "mobile"
+                },
+                {
+                  "value": "notification",
+                  "label": "notification"
+                },
+                {
+                  "value": "money-collect",
+                  "label": "money-collect"
+                },
+                {
+                  "value": "pause-circle",
+                  "label": "pause-circle"
+                },
+                {
+                  "value": "phone",
+                  "label": "phone"
+                },
+                {
+                  "value": "picture",
+                  "label": "picture"
+                },
+                {
+                  "value": "pie-chart",
+                  "label": "pie-chart"
+                },
+                {
+                  "value": "play-circle",
+                  "label": "play-circle"
+                },
+                {
+                  "value": "play-square",
+                  "label": "play-square"
+                },
+                {
+                  "value": "plus-circle",
+                  "label": "plus-circle"
+                },
+                {
+                  "value": "pound-circle",
+                  "label": "pound-circle"
+                },
+                {
+                  "value": "plus-square",
+                  "label": "plus-square"
+                },
+                {
+                  "value": "mail",
+                  "label": "mail"
+                },
+                {
+                  "value": "printer",
+                  "label": "printer"
+                },
+                {
+                  "value": "profile",
+                  "label": "profile"
+                },
+                {
+                  "value": "pushpin",
+                  "label": "pushpin"
+                },
+                {
+                  "value": "project",
+                  "label": "project"
+                },
+                {
+                  "value": "question-circle",
+                  "label": "question-circle"
+                },
+                {
+                  "value": "red-envelope",
+                  "label": "red-envelope"
+                },
+                {
+                  "value": "reconciliation",
+                  "label": "reconciliation"
+                },
+                {
+                  "value": "property-safety",
+                  "label": "property-safety"
+                },
+                {
+                  "value": "rest",
+                  "label": "rest"
+                },
+                {
+                  "value": "right-circle",
+                  "label": "right-circle"
+                },
+                {
+                  "value": "safety-certificate",
+                  "label": "safety-certificate"
+                },
+                {
+                  "value": "rocket",
+                  "label": "rocket"
+                },
+                {
+                  "value": "save",
+                  "label": "save"
+                },
+                {
+                  "value": "schedule",
+                  "label": "schedule"
+                },
+                {
+                  "value": "security-scan",
+                  "label": "security-scan"
+                },
+                {
+                  "value": "right-square",
+                  "label": "right-square"
+                },
+                {
+                  "value": "shop",
+                  "label": "shop"
+                },
+                {
+                  "value": "shopping",
+                  "label": "shopping"
+                },
+                {
+                  "value": "setting",
+                  "label": "setting"
+                },
+                {
+                  "value": "skin",
+                  "label": "skin"
+                },
+                {
+                  "value": "sliders",
+                  "label": "sliders"
+                },
+                {
+                  "value": "smile",
+                  "label": "smile"
+                },
+                {
+                  "value": "sound",
+                  "label": "sound"
+                },
+                {
+                  "value": "stop",
+                  "label": "stop"
+                },
+                {
+                  "value": "switcher",
+                  "label": "switcher"
+                },
+                {
+                  "value": "tablet",
+                  "label": "tablet"
+                },
+                {
+                  "value": "snippets",
+                  "label": "snippets"
+                },
+                {
+                  "value": "tags",
+                  "label": "tags"
+                },
+                {
+                  "value": "tag",
+                  "label": "tag"
+                },
+                {
+                  "value": "thunderbolt",
+                  "label": "thunderbolt"
+                },
+                {
+                  "value": "tool",
+                  "label": "tool"
+                },
+                {
+                  "value": "star",
+                  "label": "star"
+                },
+                {
+                  "value": "trademark-circle",
+                  "label": "trademark-circle"
+                },
+                {
+                  "value": "trophy",
+                  "label": "trophy"
+                },
+                {
+                  "value": "unlock",
+                  "label": "unlock"
+                },
+                {
+                  "value": "up-square",
+                  "label": "up-square"
+                },
+                {
+                  "value": "usb",
+                  "label": "usb"
+                },
+                {
+                  "value": "up-circle",
+                  "label": "up-circle"
+                },
+                {
+                  "value": "wallet",
+                  "label": "wallet"
+                },
+                {
+                  "value": "warning",
+                  "label": "warning"
+                },
+                {
+                  "value": "video-camera",
+                  "label": "video-camera"
+                },
+                {
+                  "value": "ci",
+                  "label": "ci"
+                },
+                {
+                  "value": "copyright",
+                  "label": "copyright"
+                },
+                {
+                  "value": "dollar",
+                  "label": "dollar"
+                },
+                {
+                  "value": "euro",
+                  "label": "euro"
+                },
+                {
+                  "value": "gold",
+                  "label": "gold"
+                },
+                {
+                  "value": "canlendar",
+                  "label": "canlendar"
+                }
+              ]
+            }
+          ]
+        }
       },
       {
         "name": "theme",
@@ -4124,7 +7026,8 @@
     "title": "图标",
     "description": "语义化的矢量图形。",
     "whenToUse": "",
-    "doc": "https://ng.ant.design/components/icon/zh"
+    "doc": "https://ng.ant.design/components/icon/zh",
+    "snippet": "<i __$1></i>"
   },
   {
     "_idx": 21,

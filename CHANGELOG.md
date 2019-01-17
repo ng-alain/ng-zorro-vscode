@@ -1,3 +1,8 @@
+# 7.1.0
+
+- 新增 `nz-icon` 支持 `type`，自动根据 `theme` 来决定 `type` 值
+- 优化 `nz-tooltip`、`nz-icon` 容器片断
+
 # 7.0.2
 
 - 修复丢失的 `nz-icon`、`nz-breadcrumb-item`

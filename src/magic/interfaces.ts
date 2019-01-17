@@ -105,6 +105,17 @@ export interface DirectiveTypeDefinition {
   label?: string;
 }
 
+export interface DirectiveTypeDefinitionComplex {
+  type?: 'complex';
+  conditionField?: string;
+  list?: DirectiveTypeDefinitionComplexList[];
+}
+
+export interface DirectiveTypeDefinitionComplexList {
+  conditionValue?: any;
+  values?: DirectiveTypeDefinition[];
+}
+
 export interface Tag {
   /** Tag名称 */
   name?: string;
@@ -127,6 +138,7 @@ export enum InputAttrType {
   Output,
   InputOutput,
   Template,
+  Complex,
 }
 
 export enum TagAttrValueType {

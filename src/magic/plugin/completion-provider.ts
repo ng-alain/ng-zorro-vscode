@@ -12,7 +12,7 @@ import {
   Range,
   MarkdownString,
 } from 'vscode';
-import { DirectiveProperty, Directive, DirectiveTypeDefinition, InputAttrType } from '../interfaces';
+import { DirectiveProperty, Directive, DirectiveTypeDefinition, InputAttrType, DirectiveTypeDefinitionComplex, Tag } from '../interfaces';
 import { getDirective, CONFIG, RESOURCES } from '../resources';
 import { getTag } from '../utils';
 
@@ -74,7 +74,7 @@ export default class implements CompletionItemProvider {
       const attr = tag.attributes[tag.attrName];
       if (attr.value.trim() === '') {
         const property = directive.properties.find(w => w.name === attr.name);
-        if (property && property.typeDefinition.length > 0) {
+        if (property && property.typeDefinition) {
           let range = document.getWordRangeAtPosition(position, /["]\s*["]/);
           if (range) {
             range = new Range(
@@ -82,7 +82,11 @@ export default class implements CompletionItemProvider {
               new Position(range.end.line, range.end.character - 1),
             );
           }
-          return property.typeDefinition.map((i: DirectiveTypeDefinition) => {
+          let definitionList = property.typeDefinition;
+          if (property.inputType === InputAttrType.Complex) {
+            definitionList = this.getComplexDefinition(tag, definitionList as DirectiveTypeDefinitionComplex);
+          }
+          return definitionList.map((i: DirectiveTypeDefinition) => {
             const item = new CompletionItem(i.value, CompletionItemKind.EnumMember);
             item.documentation = new MarkdownString(i.label);
             item.range = range;
@@ -112,7 +116,7 @@ export default class implements CompletionItemProvider {
       return directive.properties
         .filter(w => existsAttrList.indexOf(w.name) === -1)
         .filter(w => w.inputType === InputAttrType.Input || w.inputType === InputAttrType.InputOutput)
-        .map(i => this.renderAttrCompletionItem(i, 'property', range));
+        .map(i => this.renderAttrCompletionItem(tag, i, 'property', range));
     }
     if (triggerCharacter === '(') {
       let range = document.getWordRangeAtPosition(position, /\(\s*\)/);
@@ -122,16 +126,26 @@ export default class implements CompletionItemProvider {
       return directive.properties
         .filter(w => existsAttrList.indexOf(w.name) === -1)
         .filter(w => w.inputType === InputAttrType.Output || w.inputType === InputAttrType.InputOutput)
-        .map(i => this.renderAttrCompletionItem(i, 'event', range));
+        .map(i => this.renderAttrCompletionItem(tag, i, 'event', range));
     }
-    return directive.properties.filter(w => existsAttrList.indexOf(w.name) === -1).map(i => this.renderAttrCompletionItem(i, '', null));
+    return directive.properties
+      .filter(w => existsAttrList.indexOf(w.name) === -1)
+      .map(i => this.renderAttrCompletionItem(tag, i, '', null));
   }
 
-  private renderAttrCompletionItem(property: DirectiveProperty, ngBindingType: string, range: Range): CompletionItem {
+  private renderAttrCompletionItem(tag: Tag, property: DirectiveProperty, ngBindingType: string, range: Range): CompletionItem {
     const item = new CompletionItem(property.name, CompletionItemKind.Field);
     item.documentation = property._doc;
     if (range) {
       item.range = range;
+    }
+    // 优化复杂类型
+    if (property.inputType === InputAttrType.Complex) {
+      const complexDefinitionList = this.getComplexDefinition(tag, property.typeDefinition as DirectiveTypeDefinitionComplex)
+        .map(i => i.value)
+        .join(',');
+      item.insertText = new SnippetString(`${property.name}="\${1|${complexDefinitionList}|}"$0`);
+      return item;
     }
     let snippet = '';
     if (property.snippet) {
@@ -218,6 +232,20 @@ export default class implements CompletionItemProvider {
           return `"\${1:${property.pureName}}"$0`;
         }
     }
+  }
+
+  private getComplexDefinition(tag: Tag, definitionComplex: DirectiveTypeDefinitionComplex): DirectiveTypeDefinition[] {
+    const expectAttr = tag.attributes[definitionComplex.conditionField];
+    const expectValue = expectAttr ? expectAttr.value : '';
+    let expectIndex = definitionComplex.list.findIndex(w => w.conditionValue == expectValue);
+    return definitionComplex.list[expectIndex < 0 ? 0 : expectIndex].values;
+  }
+
+  private get triggerShowSuggestCommand() {
+    return {
+      command: 'editor.action.triggerSuggest',
+      title: 'showSuggestWidget',
+    };
   }
 
   private get triggerHideSuggestCommand() {
