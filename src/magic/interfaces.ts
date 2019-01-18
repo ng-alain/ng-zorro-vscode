@@ -39,6 +39,7 @@ export interface Directive {
    * Document for component, e.g: `https://ng.ant.design/components/button/zh`
    */
   doc?: string;
+  github?: string;
   /**
    * 重新定义片断，变量值：
    * - `__`：表示名称占位符

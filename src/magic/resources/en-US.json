@@ -71,7 +71,8 @@
     "title": "Grid",
     "description": "24 Grids System。",
     "whenToUse": "",
-    "doc": "https://ng.ant.design/components/grid/en"
+    "doc": "https://ng.ant.design/components/grid/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/grid"
   },
   {
     "_idx": 137,
@@ -297,7 +298,8 @@
     "title": "Grid",
     "description": "24 Grids System。",
     "whenToUse": "",
-    "doc": "https://ng.ant.design/components/grid/en"
+    "doc": "https://ng.ant.design/components/grid/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/grid"
   },
   {
     "_idx": 21,
@@ -416,6 +418,7 @@
     "description": "A simple text popup tip.",
     "whenToUse": "- The tip is shown on mouse enter, and is hidden on mouse leave. The Tooltip doesn't support complex text or operations.\n- To provide an explanation of a `button/text/operation`. It's often used instead of the html `title` attribute.",
     "doc": "https://ng.ant.design/components/tooltip/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tooltip",
     "snippet": "<span __$1>$2</span>"
   },
   {
@@ -481,7 +484,8 @@
     "title": "Simple Grid",
     "description": "A higher-order components of grid systems, that consists of `sg-container` (directive) and `sg` components:",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/grid/en"
+    "doc": "https://ng-alain.com/components/grid/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/grid"
   },
   {
     "_idx": 11,
@@ -546,7 +550,8 @@
     "title": "Simple Grid",
     "description": "A higher-order components of grid systems, that consists of `sg-container` (directive) and `sg` components:",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/grid/en"
+    "doc": "https://ng-alain.com/components/grid/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/grid"
   },
   {
     "_idx": 76,
@@ -575,7 +580,8 @@
     "title": "Simple Grid",
     "description": "A higher-order components of grid systems, that consists of `sg-container` (directive) and `sg` components:",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/grid/en"
+    "doc": "https://ng-alain.com/components/grid/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/grid"
   },
   {
     "_idx": 22,
@@ -628,7 +634,8 @@
     "lib": "ng-zorro-antd",
     "title": "Timeline",
     "whenToUse": "- When a series of information needs to be ordered by time (ascend or descend).\n- When you need a timeline to make a visual connection.",
-    "doc": "https://ng.ant.design/components/timeline/en"
+    "doc": "https://ng.ant.design/components/timeline/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/timeline"
   },
   {
     "_idx": 104,
@@ -658,7 +665,8 @@
     "lib": "ng-zorro-antd",
     "title": "Timeline",
     "whenToUse": "- When a series of information needs to be ordered by time (ascend or descend).\n- When you need a timeline to make a visual connection.",
-    "doc": "https://ng.ant.design/components/timeline/en"
+    "doc": "https://ng.ant.design/components/timeline/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/timeline"
   },
   {
     "_idx": 6,
@@ -723,7 +731,8 @@
     "title": "Avatar",
     "description": "Avatars can be used to represent people or objects. It supports images, `Icon`s, or letters.",
     "whenToUse": "",
-    "doc": "https://ng.ant.design/components/avatar/en"
+    "doc": "https://ng.ant.design/components/avatar/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/avatar"
   },
   {
     "_idx": 21,
@@ -770,7 +779,8 @@
     "lib": "ng-zorro-antd",
     "title": "BackTop",
     "whenToUse": "- When the page content is very long.\n- When you need to go back to the top very frequently in order to view the contents.",
-    "doc": "https://ng.ant.design/components/back-top/en"
+    "doc": "https://ng.ant.design/components/back-top/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/back-top"
   },
   {
     "_idx": 14,
@@ -850,7 +860,8 @@
     "title": "Badge",
     "description": "Small numerical value or status descriptor for UI elements.",
     "whenToUse": "Badge normally appears in proximity to notifications or user avatars with eye-catching appeal, typically displaying unread messages count.",
-    "doc": "https://ng.ant.design/components/badge/en"
+    "doc": "https://ng.ant.design/components/badge/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/badge"
   },
   {
     "_idx": 31,
@@ -881,7 +892,8 @@
     "title": "Breadcrumb",
     "description": "A breadcrumb displays the current location within a hierarchy. It allows going back to states higher up in the hierarchy.",
     "whenToUse": "- When the system has more than two layers in a hierarchy.\n- When you need to inform the user of where they are.\n- When the user may need to navigate back to a higher level.\n- When the application has multi-layer architecture.",
-    "doc": "https://ng.ant.design/components/breadcrumb/en"
+    "doc": "https://ng.ant.design/components/breadcrumb/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/breadcrumb"
   },
   {
     "_idx": 12,
@@ -977,6 +989,7 @@
     "title": "Button",
     "whenToUse": "A button means an operation (or a series of operations). Clicking a button will trigger corresponding business logic.",
     "doc": "https://ng.ant.design/components/button/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/button",
     "snippet": "<button __$1>${2|Save,Submit,Cancel,Create,Delete,Search|}</button>"
   },
   {
@@ -1063,7 +1076,8 @@
     "title": "Calendar",
     "description": "Container for displaying data in calendar form.",
     "whenToUse": "When data is in the form of dates, such as schedules, timetables, prices calendar, lunar calendar. This component also supports Year/Month switch.",
-    "doc": "https://ng.ant.design/components/calendar/en"
+    "doc": "https://ng.ant.design/components/calendar/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/calendar"
   },
   {
     "_idx": 13,
@@ -1155,7 +1169,8 @@
     "title": "Card",
     "description": "Simple rectangular container.",
     "whenToUse": "A card can be used to display content related to a single subject. The content can consist of multiple elements of varying types and sizes.",
-    "doc": "https://ng.ant.design/components/card/en"
+    "doc": "https://ng.ant.design/components/card/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/card"
   },
   {
     "_idx": 162,
@@ -1192,7 +1207,8 @@
     "title": "Card",
     "description": "Simple rectangular container.",
     "whenToUse": "A card can be used to display content related to a single subject. The content can consist of multiple elements of varying types and sizes.",
-    "doc": "https://ng.ant.design/components/card/en"
+    "doc": "https://ng.ant.design/components/card/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/card"
   },
   {
     "_idx": 227,
@@ -1204,7 +1220,8 @@
     "lib": "ng-zorro-antd",
     "title": "Card",
     "whenToUse": "A card can be used to display content related to a single subject. The content can consist of multiple elements of varying types and sizes.",
-    "doc": "https://ng.ant.design/components/card/en"
+    "doc": "https://ng.ant.design/components/card/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/card"
   },
   {
     "_idx": 233,
@@ -1216,7 +1233,8 @@
     "lib": "ng-zorro-antd",
     "title": "Card",
     "whenToUse": "A card can be used to display content related to a single subject. The content can consist of multiple elements of varying types and sizes.",
-    "doc": "https://ng.ant.design/components/card/en"
+    "doc": "https://ng.ant.design/components/card/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/card"
   },
   {
     "_idx": 26,
@@ -1311,7 +1329,8 @@
     "title": "Carousel",
     "description": "A carousel component. Scales with its container.",
     "whenToUse": "- When there is a group of content on the same level.\n- When there is insufficient content space, it can be used to save space in the form of a revolving door.\n- Commonly used for a group of pictures/cards.",
-    "doc": "https://ng.ant.design/components/carousel/en"
+    "doc": "https://ng.ant.design/components/carousel/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/carousel"
   },
   {
     "_idx": 27,
@@ -1560,7 +1579,8 @@
     "title": "Cascader",
     "description": "Cascade selection box.",
     "whenToUse": "- When you need to select from a set of associated data set. Such as province/city/district, company level, things classification.\n- When selecting from a large data set, with multi-stage classification separated for easy selection.\n- Chooses cascade items in one float layer for better user experience.",
-    "doc": "https://ng.ant.design/components/cascader/en"
+    "doc": "https://ng.ant.design/components/cascader/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/cascader"
   },
   {
     "_idx": 21,
@@ -1634,6 +1654,7 @@
     "description": "Checkbox.",
     "whenToUse": "- Used for selecting multiple values from several options.\n- If you use only one checkbox, it is the same as using Switch to toggle between two states. The difference is that Switch will trigger the state change directly, but Checkbox just marks the state as changed and this needs to be submitted.",
     "doc": "https://ng.ant.design/components/checkbox/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/checkbox",
     "snippet": "<label __$1>$2</label>"
   },
   {
@@ -1674,7 +1695,8 @@
     "title": "Checkbox",
     "description": "Checkbox.",
     "whenToUse": "- Used for selecting multiple values from several options.\n- If you use only one checkbox, it is the same as using Switch to toggle between two states. The difference is that Switch will trigger the state change directly, but Checkbox just marks the state as changed and this needs to be submitted.",
-    "doc": "https://ng.ant.design/components/checkbox/en"
+    "doc": "https://ng.ant.design/components/checkbox/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/checkbox"
   },
   {
     "_idx": 193,
@@ -1695,7 +1717,8 @@
     "title": "Checkbox",
     "description": "Checkbox.",
     "whenToUse": "- Used for selecting multiple values from several options.\n- If you use only one checkbox, it is the same as using Switch to toggle between two states. The difference is that Switch will trigger the state change directly, but Checkbox just marks the state as changed and this needs to be submitted.",
-    "doc": "https://ng.ant.design/components/checkbox/en"
+    "doc": "https://ng.ant.design/components/checkbox/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/checkbox"
   },
   {
     "_idx": 21,
@@ -1726,7 +1749,8 @@
     "title": "Collapse",
     "description": "A content area which can be collapsed and expanded.",
     "whenToUse": "- Can be used to group or hide complex regions to keep the page clean.\n- `Accordion` is a special kind of `Collapse`, which allows only one panel to be expanded at a time.",
-    "doc": "https://ng.ant.design/components/collapse/en"
+    "doc": "https://ng.ant.design/components/collapse/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/collapse"
   },
   {
     "_idx": 72,
@@ -1782,7 +1806,8 @@
     "title": "Collapse",
     "description": "A content area which can be collapsed and expanded.",
     "whenToUse": "- Can be used to group or hide complex regions to keep the page clean.\n- `Accordion` is a special kind of `Collapse`, which allows only one panel to be expanded at a time.",
-    "doc": "https://ng.ant.design/components/collapse/en"
+    "doc": "https://ng.ant.design/components/collapse/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/collapse"
   },
   {
     "_idx": 255,
@@ -2005,7 +2030,8 @@
     "title": "DatePicker",
     "description": "To select or input a date.",
     "whenToUse": "By clicking the input box, you can select a date from a popup calendar.",
-    "doc": "https://ng.ant.design/components/date-picker/en"
+    "doc": "https://ng.ant.design/components/date-picker/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/date-picker"
   },
   {
     "_idx": 404,
@@ -2188,7 +2214,8 @@
     "title": "DatePicker",
     "description": "To select or input a date.",
     "whenToUse": "By clicking the input box, you can select a date from a popup calendar.",
-    "doc": "https://ng.ant.design/components/date-picker/en"
+    "doc": "https://ng.ant.design/components/date-picker/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/date-picker"
   },
   {
     "_idx": 497,
@@ -2377,7 +2404,8 @@
     "title": "DatePicker",
     "description": "To select or input a date.",
     "whenToUse": "By clicking the input box, you can select a date from a popup calendar.",
-    "doc": "https://ng.ant.design/components/date-picker/en"
+    "doc": "https://ng.ant.design/components/date-picker/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/date-picker"
   },
   {
     "_idx": 590,
@@ -2558,7 +2586,8 @@
     "title": "DatePicker",
     "description": "To select or input a date.",
     "whenToUse": "By clicking the input box, you can select a date from a popup calendar.",
-    "doc": "https://ng.ant.design/components/date-picker/en"
+    "doc": "https://ng.ant.design/components/date-picker/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/date-picker"
   },
   {
     "_idx": 669,
@@ -2780,7 +2809,8 @@
     "title": "DatePicker",
     "description": "To select or input a date.",
     "whenToUse": "By clicking the input box, you can select a date from a popup calendar.",
-    "doc": "https://ng.ant.design/components/date-picker/en"
+    "doc": "https://ng.ant.design/components/date-picker/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/date-picker"
   },
   {
     "_idx": 24,
@@ -2835,7 +2865,8 @@
     "title": "Divider",
     "description": "A divider line separates different content.",
     "whenToUse": "- Divide sections of article.\n- Divide inline text and links such as the operation column of table.",
-    "doc": "https://ng.ant.design/components/divider/en"
+    "doc": "https://ng.ant.design/components/divider/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/divider"
   },
   {
     "_idx": 26,
@@ -2986,7 +3017,8 @@
     "title": "Drawer",
     "description": "A Drawer is a panel that is typically overlaid on top of a page and slides in from the side. It contains a set of information or actions. Since that user can interact with the Drawer without leaving the current page, tasks can be achieved more efficient within the same context.",
     "whenToUse": "- Use a Form to create or edit a set of information.\n- Processing subtasks. When subtasks are too heavy for Popover and we still want to keep the subtasks in the context of the main task, Drawer comes very handy.\n- When a same Form is needed in multiple places.",
-    "doc": "https://ng.ant.design/components/drawer/en"
+    "doc": "https://ng.ant.design/components/drawer/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/drawer"
   },
   {
     "_idx": 12,
@@ -3080,7 +3112,8 @@
     "lib": "ng-zorro-antd",
     "title": "Dropdown",
     "whenToUse": "If there are too many operations to display, you can wrap them in a `Dropdown`. By clicking/hovering on the trigger, a dropdown menu should appear, which allows you to choose one option and execute relevant actions.",
-    "doc": "https://ng.ant.design/components/dropdown/en"
+    "doc": "https://ng.ant.design/components/dropdown/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/dropdown"
   },
   {
     "_idx": 160,
@@ -3195,7 +3228,8 @@
     "lib": "ng-zorro-antd",
     "title": "Dropdown",
     "whenToUse": "If there are too many operations to display, you can wrap them in a `Dropdown`. By clicking/hovering on the trigger, a dropdown menu should appear, which allows you to choose one option and execute relevant actions.",
-    "doc": "https://ng.ant.design/components/dropdown/en"
+    "doc": "https://ng.ant.design/components/dropdown/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/dropdown"
   },
   {
     "_idx": 166,
@@ -3310,7 +3344,8 @@
     "title": "Dropdown",
     "description": "A dropdown list.",
     "whenToUse": "If there are too many operations to display, you can wrap them in a `Dropdown`. By clicking/hovering on the trigger, a dropdown menu should appear, which allows you to choose one option and execute relevant actions.",
-    "doc": "https://ng.ant.design/components/dropdown/en"
+    "doc": "https://ng.ant.design/components/dropdown/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/dropdown"
   },
   {
     "_idx": 12,
@@ -3347,7 +3382,8 @@
     "title": "Empty",
     "description": "Empty state placeholder.",
     "whenToUse": "When there is no data provided, display for friendly tips.",
-    "doc": "https://ng.ant.design/components/empty/en"
+    "doc": "https://ng.ant.design/components/empty/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/empty"
   },
   {
     "_idx": 56,
@@ -3387,6 +3423,7 @@
     "description": "Form is used to collect, validate, and submit the user input, usually contains various form items including checkbox, radio, input, select, and etc.",
     "whenToUse": "",
     "doc": "https://ng.ant.design/components/form/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/form",
     "snippet": "<form __$1>$0</form>"
   },
   {
@@ -3470,7 +3507,8 @@
     "lib": "ng-zorro-antd",
     "title": "Form",
     "whenToUse": "",
-    "doc": "https://ng.ant.design/components/form/en"
+    "doc": "https://ng.ant.design/components/form/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/form"
   },
   {
     "_idx": 138,
@@ -3713,7 +3751,8 @@
     "lib": "ng-zorro-antd",
     "title": "Form",
     "whenToUse": "",
-    "doc": "https://ng.ant.design/components/form/en"
+    "doc": "https://ng.ant.design/components/form/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/form"
   },
   {
     "_idx": 197,
@@ -3971,7 +4010,8 @@
     "lib": "ng-zorro-antd",
     "title": "Form",
     "whenToUse": "",
-    "doc": "https://ng.ant.design/components/form/en"
+    "doc": "https://ng.ant.design/components/form/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/form"
   },
   {
     "_idx": 275,
@@ -3983,7 +4023,8 @@
     "lib": "ng-zorro-antd",
     "title": "Form",
     "whenToUse": "",
-    "doc": "https://ng.ant.design/components/form/en"
+    "doc": "https://ng.ant.design/components/form/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/form"
   },
   {
     "_idx": 281,
@@ -3995,7 +4036,8 @@
     "lib": "ng-zorro-antd",
     "title": "Form",
     "whenToUse": "",
-    "doc": "https://ng.ant.design/components/form/en"
+    "doc": "https://ng.ant.design/components/form/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/form"
   },
   {
     "_idx": 287,
@@ -4007,7 +4049,8 @@
     "lib": "ng-zorro-antd",
     "title": "Form",
     "whenToUse": "",
-    "doc": "https://ng.ant.design/components/form/en"
+    "doc": "https://ng.ant.design/components/form/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/form"
   },
   {
     "_idx": 293,
@@ -4019,7 +4062,8 @@
     "lib": "ng-zorro-antd",
     "title": "Form",
     "whenToUse": "",
-    "doc": "https://ng.ant.design/components/form/en"
+    "doc": "https://ng.ant.design/components/form/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/form"
   },
   {
     "_idx": 15,
@@ -4066,7 +4110,8 @@
     "title": "Affix",
     "description": "Make an element stick to viewport.",
     "whenToUse": "When user browses a long web page, some content need to stick to the viewport. This is common for menus and actions.",
-    "doc": "https://ng.ant.design/components/affix/en"
+    "doc": "https://ng.ant.design/components/affix/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/affix"
   },
   {
     "_idx": 20,
@@ -7028,6 +7073,7 @@
     "description": "Semantic vector graphics.",
     "whenToUse": "",
     "doc": "https://ng.ant.design/components/icon/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/icon",
     "snippet": "<i __$1></i>"
   },
   {
@@ -7097,6 +7143,7 @@
     "title": "Input",
     "whenToUse": "- A user input in a form field is needed.\n- A search input is required.",
     "doc": "https://ng.ant.design/components/input/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/input",
     "snippet": "<input __$1>"
   },
   {
@@ -7165,7 +7212,8 @@
     "title": "Input",
     "description": "A basic widget for getting the user input is a text field.\nKeyboard and mouse can be used for providing or changing data.",
     "whenToUse": "- A user input in a form field is needed.\n- A search input is required.",
-    "doc": "https://ng.ant.design/components/input/en"
+    "doc": "https://ng.ant.design/components/input/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/input"
   },
   {
     "_idx": 12,
@@ -7308,7 +7356,8 @@
     "title": "InputNumber",
     "description": "Enter a number within certain range with the mouse or keyboard.",
     "whenToUse": "When a numeric value needs to be provided.",
-    "doc": "https://ng.ant.design/components/input-number/en"
+    "doc": "https://ng.ant.design/components/input-number/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/input-number"
   },
   {
     "_idx": 138,
@@ -7406,7 +7455,8 @@
     "lib": "ng-zorro-antd",
     "title": "Layout",
     "whenToUse": "",
-    "doc": "https://ng.ant.design/components/layout/en"
+    "doc": "https://ng.ant.design/components/layout/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/layout"
   },
   {
     "_idx": 12,
@@ -7538,7 +7588,8 @@
     "title": "List",
     "description": "Simple List.",
     "whenToUse": "A list can be used to display content related to a single subject. The content can consist of multiple elements of varying type and size.",
-    "doc": "https://ng.ant.design/components/list/en"
+    "doc": "https://ng.ant.design/components/list/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/list"
   },
   {
     "_idx": 352,
@@ -7575,7 +7626,8 @@
     "title": "List",
     "description": "Simple List.",
     "whenToUse": "A list can be used to display content related to a single subject. The content can consist of multiple elements of varying type and size.",
-    "doc": "https://ng.ant.design/components/list/en"
+    "doc": "https://ng.ant.design/components/list/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/list"
   },
   {
     "_idx": 417,
@@ -7612,7 +7664,8 @@
     "title": "List",
     "description": "Simple List.",
     "whenToUse": "A list can be used to display content related to a single subject. The content can consist of multiple elements of varying type and size.",
-    "doc": "https://ng.ant.design/components/list/en"
+    "doc": "https://ng.ant.design/components/list/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/list"
   },
   {
     "_idx": 13,
@@ -7715,7 +7768,8 @@
     "title": "Mention",
     "description": "Mention component.",
     "whenToUse": "When need to mention someone or something.",
-    "doc": "https://ng.ant.design/components/mention/en"
+    "doc": "https://ng.ant.design/components/mention/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/mention"
   },
   {
     "_idx": 16,
@@ -7789,7 +7843,8 @@
     "title": "Menu",
     "description": "Menu list of Navigation.",
     "whenToUse": "Navigation menu is important for a website, it helps users jump from one site section to another quickly. Mostly, it includes top navigation and side navigation. Top navigation provides all the category and functions of the website. Side navigation provides the Multi-level structure of the website.",
-    "doc": "https://ng.ant.design/components/menu/en"
+    "doc": "https://ng.ant.design/components/menu/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/menu"
   },
   {
     "_idx": 123,
@@ -7821,7 +7876,8 @@
     "title": "Menu",
     "description": "Menu list of Navigation.",
     "whenToUse": "Navigation menu is important for a website, it helps users jump from one site section to another quickly. Mostly, it includes top navigation and side navigation. Top navigation provides all the category and functions of the website. Side navigation provides the Multi-level structure of the website.",
-    "doc": "https://ng.ant.design/components/menu/en"
+    "doc": "https://ng.ant.design/components/menu/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/menu"
   },
   {
     "_idx": 174,
@@ -7861,7 +7917,8 @@
     "lib": "ng-zorro-antd",
     "title": "Menu",
     "whenToUse": "Navigation menu is important for a website, it helps users jump from one site section to another quickly. Mostly, it includes top navigation and side navigation. Top navigation provides all the category and functions of the website. Side navigation provides the Multi-level structure of the website.",
-    "doc": "https://ng.ant.design/components/menu/en"
+    "doc": "https://ng.ant.design/components/menu/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/menu"
   },
   {
     "_idx": 242,
@@ -7873,7 +7930,8 @@
     "lib": "ng-zorro-antd",
     "title": "Menu",
     "whenToUse": "Navigation menu is important for a website, it helps users jump from one site section to another quickly. Mostly, it includes top navigation and side navigation. Top navigation provides all the category and functions of the website. Side navigation provides the Multi-level structure of the website.",
-    "doc": "https://ng.ant.design/components/menu/en"
+    "doc": "https://ng.ant.design/components/menu/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/menu"
   },
   {
     "_idx": 248,
@@ -7885,7 +7943,8 @@
     "lib": "ng-zorro-antd",
     "title": "Menu",
     "whenToUse": "Navigation menu is important for a website, it helps users jump from one site section to another quickly. Mostly, it includes top navigation and side navigation. Top navigation provides all the category and functions of the website. Side navigation provides the Multi-level structure of the website.",
-    "doc": "https://ng.ant.design/components/menu/en"
+    "doc": "https://ng.ant.design/components/menu/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/menu"
   },
   {
     "_idx": 22,
@@ -8013,7 +8072,8 @@
     "title": "Pagination",
     "description": "A long list can be divided into several pages by `Pagination`, and only one page will be loaded at a time.",
     "whenToUse": "- When it will take a long time to load/render all items.\n- If you want to browse the data by navigating through pages.",
-    "doc": "https://ng.ant.design/components/pagination/en"
+    "doc": "https://ng.ant.design/components/pagination/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/pagination"
   },
   {
     "_idx": 15,
@@ -8198,7 +8258,8 @@
     "title": "Popconfirm",
     "description": "A simple and compact confirmation dialog of an action.",
     "whenToUse": "A simple and compact dialog used for asking for user confirmation.",
-    "doc": "https://ng.ant.design/components/popconfirm/en"
+    "doc": "https://ng.ant.design/components/popconfirm/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/popconfirm"
   },
   {
     "_idx": 15,
@@ -8316,7 +8377,8 @@
     "title": "Popover",
     "description": "The floating card popped by clicking or hovering.",
     "whenToUse": "A simple popup menu to provide extra information or operations.",
-    "doc": "https://ng.ant.design/components/popover/en"
+    "doc": "https://ng.ant.design/components/popover/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/popover"
   },
   {
     "_idx": 24,
@@ -8455,7 +8517,8 @@
     "title": "Progress",
     "description": "Display the current progress of an operation flow.",
     "whenToUse": "If it will take a long time to complete an operation, you can use `Progress` to show the current progress and status.",
-    "doc": "https://ng.ant.design/components/progress/en"
+    "doc": "https://ng.ant.design/components/progress/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/progress"
   },
   {
     "_idx": 21,
@@ -8519,6 +8582,7 @@
     "description": "Radio.",
     "whenToUse": "- Used to select a single state in multiple options.\n- The difference between Select is that Radio is visible to user and can facilitate the comparison of choice. So, when you want to use Radio, option should not be too much.",
     "doc": "https://ng.ant.design/components/radio/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/radio",
     "snippet": "<label __$1>$2</label>"
   },
   {
@@ -8576,7 +8640,8 @@
     "title": "Radio",
     "description": "Radio.",
     "whenToUse": "- Used to select a single state in multiple options.\n- The difference between Select is that Radio is visible to user and can facilitate the comparison of choice. So, when you want to use Radio, option should not be too much.",
-    "doc": "https://ng.ant.design/components/radio/en"
+    "doc": "https://ng.ant.design/components/radio/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/radio"
   },
   {
     "_idx": 114,
@@ -8650,7 +8715,8 @@
     "lib": "ng-zorro-antd",
     "title": "Radio",
     "whenToUse": "- Used to select a single state in multiple options.\n- The difference between Select is that Radio is visible to user and can facilitate the comparison of choice. So, when you want to use Radio, option should not be too much.",
-    "doc": "https://ng.ant.design/components/radio/en"
+    "doc": "https://ng.ant.design/components/radio/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/radio"
   },
   {
     "_idx": 21,
@@ -8772,7 +8838,8 @@
     "title": "Rate",
     "description": "Rate component.",
     "whenToUse": "- Show evaluation.\n- A quick rating operation on something.",
-    "doc": "https://ng.ant.design/components/rate/en"
+    "doc": "https://ng.ant.design/components/rate/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/rate"
   },
   {
     "_idx": 22,
@@ -8983,7 +9050,8 @@
     "title": "Select",
     "description": "Select component to select value from options.",
     "whenToUse": "- A dropdown menu for displaying choices - an elegant alternative to the native `<select>` element.\n- Utilizing [Radio](/components/radio/en) is recommended when there are fewer total options (less than 5).",
-    "doc": "https://ng.ant.design/components/select/en"
+    "doc": "https://ng.ant.design/components/select/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/select"
   },
   {
     "_idx": 339,
@@ -9031,7 +9099,8 @@
     "title": "Select",
     "description": "Select component to select value from options.",
     "whenToUse": "- A dropdown menu for displaying choices - an elegant alternative to the native `<select>` element.\n- Utilizing [Radio](/components/radio/en) is recommended when there are fewer total options (less than 5).",
-    "doc": "https://ng.ant.design/components/select/en"
+    "doc": "https://ng.ant.design/components/select/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/select"
   },
   {
     "_idx": 418,
@@ -9052,7 +9121,8 @@
     "title": "Select",
     "description": "Select component to select value from options.",
     "whenToUse": "- A dropdown menu for displaying choices - an elegant alternative to the native `<select>` element.\n- Utilizing [Radio](/components/radio/en) is recommended when there are fewer total options (less than 5).",
-    "doc": "https://ng.ant.design/components/select/en"
+    "doc": "https://ng.ant.design/components/select/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/select"
   },
   {
     "_idx": 21,
@@ -9110,7 +9180,8 @@
     "title": "Skeleton",
     "description": "Provide a placeholder at the place which need waiting for loading.",
     "whenToUse": "- When resource need long time loading, like low network speed.\n- The component contains much information, such as List or Card.",
-    "doc": "https://ng.ant.design/components/skeleton/en"
+    "doc": "https://ng.ant.design/components/skeleton/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/skeleton"
   },
   {
     "_idx": 12,
@@ -9252,7 +9323,8 @@
     "title": "Slider",
     "description": "A Slider component for displaying current value and intervals in range.",
     "whenToUse": "To input a value in a range.",
-    "doc": "https://ng.ant.design/components/slider/en"
+    "doc": "https://ng.ant.design/components/slider/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/slider"
   },
   {
     "_idx": 12,
@@ -9313,7 +9385,8 @@
     "title": "Spin",
     "description": "A spinner for displaying loading state of a page or a section.",
     "whenToUse": "When part of the page is waiting for asynchronous data or during a rendering process, an appropriate loading animation can effectively alleviate users' inquietude.",
-    "doc": "https://ng.ant.design/components/spin/en"
+    "doc": "https://ng.ant.design/components/spin/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/spin"
   },
   {
     "_idx": 13,
@@ -9407,7 +9480,8 @@
     "lib": "ng-zorro-antd",
     "title": "Steps",
     "whenToUse": "When the task is complicated or has a certain sequence in the series of subtasks, we can decompose it into several steps to make things easier.",
-    "doc": "https://ng.ant.design/components/steps/en"
+    "doc": "https://ng.ant.design/components/steps/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/steps"
   },
   {
     "_idx": 137,
@@ -9459,7 +9533,8 @@
     "lib": "ng-zorro-antd",
     "title": "Steps",
     "whenToUse": "When the task is complicated or has a certain sequence in the series of subtasks, we can decompose it into several steps to make things easier.",
-    "doc": "https://ng.ant.design/components/steps/en"
+    "doc": "https://ng.ant.design/components/steps/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/steps"
   },
   {
     "_idx": 21,
@@ -9553,7 +9628,8 @@
     "title": "Switch",
     "description": "Switching Selector.",
     "whenToUse": "- If you need to represent the switching between two states or on-off state.\n- The difference between `Switch` and `Checkbox` is that `Switch` will trigger a state change directly when you toggle it, while `Checkbox` is generally used for state marking, which should work in conjunction with submit operation.",
-    "doc": "https://ng.ant.design/components/switch/en"
+    "doc": "https://ng.ant.design/components/switch/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/switch"
   },
   {
     "_idx": 46,
@@ -9774,7 +9850,8 @@
     "title": "Table",
     "description": "A table displays rows of data.",
     "whenToUse": "- To display a collection of structured data.\n- To sort, search, paginate, filter data.",
-    "doc": "https://ng.ant.design/components/table/en"
+    "doc": "https://ng.ant.design/components/table/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/table"
   },
   {
     "_idx": 405,
@@ -9910,7 +9987,8 @@
     "lib": "ng-zorro-antd",
     "title": "Table",
     "whenToUse": "- To display a collection of structured data.\n- To sort, search, paginate, filter data.",
-    "doc": "https://ng.ant.design/components/table/en"
+    "doc": "https://ng.ant.design/components/table/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/table"
   },
   {
     "_idx": 733,
@@ -10013,7 +10091,8 @@
     "lib": "ng-zorro-antd",
     "title": "Table",
     "whenToUse": "- To display a collection of structured data.\n- To sort, search, paginate, filter data.",
-    "doc": "https://ng.ant.design/components/table/en"
+    "doc": "https://ng.ant.design/components/table/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/table"
   },
   {
     "_idx": 982,
@@ -10043,7 +10122,8 @@
     "title": "Table",
     "description": "A table displays rows of data.",
     "whenToUse": "- To display a collection of structured data.\n- To sort, search, paginate, filter data.",
-    "doc": "https://ng.ant.design/components/table/en"
+    "doc": "https://ng.ant.design/components/table/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/table"
   },
   {
     "_idx": 1033,
@@ -10064,7 +10144,8 @@
     "title": "Table",
     "description": "A table displays rows of data.",
     "whenToUse": "- To display a collection of structured data.\n- To sort, search, paginate, filter data.",
-    "doc": "https://ng.ant.design/components/table/en"
+    "doc": "https://ng.ant.design/components/table/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/table"
   },
   {
     "_idx": 29,
@@ -10210,7 +10291,8 @@
     "title": "Tabs",
     "description": "Tabs make it easy to switch between different views.",
     "whenToUse": "Ant Design has 3 types of Tabs for different situations.",
-    "doc": "https://ng.ant.design/components/tabs/en"
+    "doc": "https://ng.ant.design/components/tabs/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tabs"
   },
   {
     "_idx": 248,
@@ -10273,7 +10355,8 @@
     "title": "Tabs",
     "description": "Tabs make it easy to switch between different views.",
     "whenToUse": "Ant Design has 3 types of Tabs for different situations.",
-    "doc": "https://ng.ant.design/components/tabs/en"
+    "doc": "https://ng.ant.design/components/tabs/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tabs"
   },
   {
     "_idx": 13,
@@ -10466,7 +10549,8 @@
     "title": "TimePicker",
     "description": "To select/input a time.",
     "whenToUse": "By clicking the input box, you can select a time from a popup panel.",
-    "doc": "https://ng.ant.design/components/time-picker/en"
+    "doc": "https://ng.ant.design/components/time-picker/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/time-picker"
   },
   {
     "_idx": 21,
@@ -10560,7 +10644,8 @@
     "title": "Alert",
     "description": "Alert component for feedback.",
     "whenToUse": "- When you need to show alert messages to users.\n- When you need a persistent static container which is closable by user actions.",
-    "doc": "https://ng.ant.design/components/alert/en"
+    "doc": "https://ng.ant.design/components/alert/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/alert"
   },
   {
     "_idx": 12,
@@ -10642,7 +10727,8 @@
     "title": "Anchor",
     "description": "Hyperlinks to scroll on one page.",
     "whenToUse": "For displaying anchor hyperlinks on page and jumping between them.",
-    "doc": "https://ng.ant.design/components/anchor/en"
+    "doc": "https://ng.ant.design/components/anchor/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/anchor"
   },
   {
     "_idx": 147,
@@ -10671,7 +10757,8 @@
     "title": "Anchor",
     "description": "Hyperlinks to scroll on one page.",
     "whenToUse": "For displaying anchor hyperlinks on page and jumping between them.",
-    "doc": "https://ng.ant.design/components/anchor/en"
+    "doc": "https://ng.ant.design/components/anchor/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/anchor"
   },
   {
     "_idx": 15,
@@ -10830,7 +10917,8 @@
     "title": "Transfer",
     "description": "Double column transfer choice box.",
     "whenToUse": "Transfer the elements between two columns in an intuitive and efficient way.",
-    "doc": "https://ng.ant.design/components/transfer/en"
+    "doc": "https://ng.ant.design/components/transfer/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/transfer"
   },
   {
     "_idx": 9,
@@ -11082,7 +11170,8 @@
     "title": "Tree",
     "description": "When To Use",
     "whenToUse": "Almost anything can be represented in a tree structure. Examples include directories, organization hierarchies, biological classifications, countries, etc. The `Tree` component is a way of representing the hierarchical relationship between these things. You can also  expand, collapse, and select a treeNode within a `Tree`.",
-    "doc": "https://ng.ant.design/components/tree/en"
+    "doc": "https://ng.ant.design/components/tree/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tree"
   },
   {
     "_idx": 12,
@@ -11264,7 +11353,8 @@
     "title": "TreeSelect",
     "description": "Tree selection control.",
     "whenToUse": "`TreeSelect` is similar to `Select`, but the values are provided in a tree like structure.\nAny data whose entries are defined in a hierarchical manner is fit to use this control. Examples of such case may include a corporate hierarchy, a directory structure, and so on.",
-    "doc": "https://ng.ant.design/components/tree-select/en"
+    "doc": "https://ng.ant.design/components/tree-select/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tree-select"
   },
   {
     "_idx": 34,
@@ -11478,7 +11568,8 @@
     "title": "Upload",
     "description": "Upload file by selecting or dragging.",
     "whenToUse": "Uploading is the process of publishing information (web pages, text, pictures, video, etc.) to a remote server via a web page or upload tool.",
-    "doc": "https://ng.ant.design/components/upload/en"
+    "doc": "https://ng.ant.design/components/upload/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/upload"
   },
   {
     "_idx": 6,
@@ -11522,7 +11613,8 @@
     "title": "AvatarList",
     "description": "A list of user's avatar for project or group member list frequently. If a large or small avatar-list is desired, set the `size` property to either `large` or `small` and `mini` respectively. Omit the `size` property for a avatar-list with the default size.",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/avatar-list/en"
+    "doc": "https://ng-alain.com/components/avatar-list/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/avatar-list"
   },
   {
     "_idx": 71,
@@ -11567,7 +11659,8 @@
     "title": "AvatarList",
     "description": "A list of user's avatar for project or group member list frequently. If a large or small avatar-list is desired, set the `size` property to either `large` or `small` and `mini` respectively. Omit the `size` property for a avatar-list with the default size.",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/avatar-list/en"
+    "doc": "https://ng-alain.com/components/avatar-list/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/avatar-list"
   },
   {
     "_idx": 10,
@@ -11620,7 +11713,8 @@
     "title": "倒计时",
     "description": "倒计时组件，依赖 [ngx-countdown](https://github.com/cipchk/ngx-countdown)。",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/count-down/en"
+    "doc": "https://ng-alain.com/components/count-down/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/count-down"
   },
   {
     "_idx": 6,
@@ -11831,7 +11925,8 @@
     "title": "Data Range",
     "description": "Based on the `nz-range-picker` further optimization, better service to start and end dates.",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/date-picker/en"
+    "doc": "https://ng-alain.com/components/date-picker/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/date-picker"
   },
   {
     "_idx": 10,
@@ -11893,7 +11988,8 @@
     "title": "Download file",
     "description": "A file download based on `blob`.",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/down-file/en"
+    "doc": "https://ng-alain.com/components/down-file/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/down-file"
   },
   {
     "_idx": 30,
@@ -12020,7 +12116,8 @@
     "title": "Edit",
     "description": "A higher-order components of the form HTML template. And optimized some details:",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/edit/en"
+    "doc": "https://ng-alain.com/components/edit/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/edit"
   },
   {
     "_idx": 30,
@@ -12147,7 +12244,8 @@
     "title": "Edit",
     "description": "A higher-order components of the form HTML template. And optimized some details:",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/edit/en"
+    "doc": "https://ng-alain.com/components/edit/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/edit"
   },
   {
     "_idx": 179,
@@ -12248,7 +12346,8 @@
     "title": "Edit",
     "description": "A higher-order components of the form HTML template. And optimized some details:",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/edit/en"
+    "doc": "https://ng-alain.com/components/edit/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/edit"
   },
   {
     "_idx": 342,
@@ -12260,7 +12359,8 @@
     "lib": "@delon/abc",
     "title": "Edit",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/edit/en"
+    "doc": "https://ng-alain.com/components/edit/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/edit"
   },
   {
     "_idx": 342,
@@ -12272,7 +12372,8 @@
     "lib": "@delon/abc",
     "title": "Edit",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/edit/en"
+    "doc": "https://ng-alain.com/components/edit/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/edit"
   },
   {
     "_idx": 6,
@@ -12294,7 +12395,8 @@
     "title": "文本自动省略号",
     "description": "一个简单的文本自动省略号。",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/ellipsis/en"
+    "doc": "https://ng-alain.com/components/ellipsis/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/ellipsis"
   },
   {
     "_idx": 6,
@@ -12325,7 +12427,8 @@
     "title": "Error Collect",
     "description": "A simple form exception messages collector that jump to element location via click icon; it must be a standard `form`.",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/error-collect/en"
+    "doc": "https://ng-alain.com/components/error-collect/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/error-collect"
   },
   {
     "_idx": 6,
@@ -12356,7 +12459,8 @@
     "title": "Error Collect",
     "description": "A simple form exception messages collector that jump to element location via click icon; it must be a standard `form`.",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/error-collect/en"
+    "doc": "https://ng-alain.com/components/error-collect/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/error-collect"
   },
   {
     "_idx": 6,
@@ -12406,7 +12510,8 @@
     "title": "Exception",
     "description": "Exceptions page is used to provide feedback on specific abnormal state. Usually, it contains an explanation of the error status, and provides users with suggestions or operations, to prevent users from feeling lost and confused.",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/exception/en"
+    "doc": "https://ng-alain.com/components/exception/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/exception"
   },
   {
     "_idx": 12,
@@ -12436,7 +12541,8 @@
     "title": "FooterToolbar",
     "description": "A toolbar fixed at the bottom.",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/footer-toolbar/en"
+    "doc": "https://ng-alain.com/components/footer-toolbar/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/footer-toolbar"
   },
   {
     "_idx": 6,
@@ -12475,7 +12581,8 @@
     "title": "Full Screen Workspace",
     "description": "Often used for tables with scroll bars, a simple [demo](https://ng-alain.github.io/ng-alain/#/delon/simple-table)。",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/full-content/en"
+    "doc": "https://ng-alain.com/components/full-content/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/full-content"
   },
   {
     "_idx": 71,
@@ -12487,7 +12594,8 @@
     "lib": "@delon/abc",
     "title": "Full Screen Workspace",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/full-content/en"
+    "doc": "https://ng-alain.com/components/full-content/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/full-content"
   },
   {
     "_idx": 6,
@@ -12545,7 +12653,8 @@
     "title": "全局页脚",
     "description": "页脚属于全局导航的一部分，作为对顶部导航的补充，通过传递数据控制展示内容。",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/global-footer/en"
+    "doc": "https://ng-alain.com/components/global-footer/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/global-footer"
   },
   {
     "_idx": 57,
@@ -12575,7 +12684,8 @@
     "title": "全局页脚",
     "description": "页脚属于全局导航的一部分，作为对顶部导航的补充，通过传递数据控制展示内容。",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/global-footer/en"
+    "doc": "https://ng-alain.com/components/global-footer/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/global-footer"
   },
   {
     "_idx": 51,
@@ -12640,7 +12750,8 @@
     "title": "Autocomplete",
     "description": "Autocomplete function of input field.",
     "whenToUse": "When there is a need for autocomplete functionality.",
-    "doc": "https://ng.ant.design/components/auto-complete/en"
+    "doc": "https://ng.ant.design/components/auto-complete/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/auto-complete"
   },
   {
     "_idx": 158,
@@ -12679,7 +12790,8 @@
     "title": "Autocomplete",
     "description": "Autocomplete function of input field.",
     "whenToUse": "When there is a need for autocomplete functionality.",
-    "doc": "https://ng.ant.design/components/auto-complete/en"
+    "doc": "https://ng.ant.design/components/auto-complete/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/auto-complete"
   },
   {
     "_idx": 6,
@@ -12750,7 +12862,8 @@
     "title": "通知菜单",
     "description": "用在导航工具栏上，作为整个产品统一的通知中心。",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/notice-icon/en"
+    "doc": "https://ng-alain.com/components/notice-icon/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/notice-icon"
   },
   {
     "_idx": 6,
@@ -12909,7 +13022,8 @@
     "title": "页头",
     "description": "页头用来声明页面的主题，包含了用户所关注的最重要的信息，使用户可以快速理解当前页面是什么以及它的功能。",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/page-header/en"
+    "doc": "https://ng-alain.com/components/page-header/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/page-header"
   },
   {
     "_idx": 14,
@@ -13010,7 +13124,8 @@
     "title": "QR",
     "description": "Generate a QR code based on [qrious](https://neocotic.com/qrious).",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/qr/en"
+    "doc": "https://ng-alain.com/components/qr/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/qr"
   },
   {
     "_idx": 6,
@@ -13068,7 +13183,8 @@
     "title": "快速菜单",
     "description": "快速菜单，用于右侧隐式辅助列表。",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/quick-menu/en"
+    "doc": "https://ng-alain.com/components/quick-menu/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/quick-menu"
   },
   {
     "_idx": 6,
@@ -13113,7 +13229,8 @@
     "title": "处理结果",
     "description": "结果页用于对用户进行的一系列任务处理结果进行反馈。",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/result/en"
+    "doc": "https://ng-alain.com/components/result/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/result"
   },
   {
     "_idx": 487,
@@ -13221,7 +13338,8 @@
     "title": "Reuse Route Tab",
     "description": "Reuse route tab are extremely common for admin interfaces, and the problem of component data is not lost when switching routes.",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/reuse-tab/en"
+    "doc": "https://ng-alain.com/components/reuse-tab/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/reuse-tab"
   },
   {
     "_idx": 53,
@@ -13269,7 +13387,8 @@
     "title": "主菜单",
     "description": "ng-alain 左边主菜单，依赖于 `@delon/theme`。",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/sidebar-nav/en"
+    "doc": "https://ng-alain.com/components/sidebar-nav/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sidebar-nav"
   },
   {
     "_idx": 80,
@@ -13736,7 +13855,8 @@
     "title": "Table",
     "description": "`st` is not creating another table component, but use **configurable** rendering table on base of `nz-table`. this method can satisfy most scenes in admin interfaces, but it's easier to rendering table.",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/table/en"
+    "doc": "https://ng-alain.com/components/table/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/table"
   },
   {
     "_idx": 6,
@@ -13766,7 +13886,8 @@
     "title": "标签选择器",
     "description": "增加标签的展开与收进功能。",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/tag-select/en"
+    "doc": "https://ng-alain.com/components/tag-select/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/tag-select"
   },
   {
     "_idx": 6,
@@ -13857,7 +13978,8 @@
     "title": "View",
     "description": "Viewing grid system is a higher-order components based on the original [Grid System] (https://ng.ant.design/components/grid/zh) that server for view pages.",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/view/en"
+    "doc": "https://ng-alain.com/components/view/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/view"
   },
   {
     "_idx": 6,
@@ -13948,7 +14070,8 @@
     "title": "View",
     "description": "Viewing grid system is a higher-order components based on the original [Grid System] (https://ng.ant.design/components/grid/zh) that server for view pages.",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/view/en"
+    "doc": "https://ng-alain.com/components/view/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/view"
   },
   {
     "_idx": 127,
@@ -14007,7 +14130,8 @@
     "title": "View",
     "description": "Viewing grid system is a higher-order components based on the original [Grid System] (https://ng.ant.design/components/grid/zh) that server for view pages.",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/view/en"
+    "doc": "https://ng-alain.com/components/view/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/view"
   },
   {
     "_idx": 220,
@@ -14019,7 +14143,8 @@
     "lib": "@delon/abc",
     "title": "View",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/view/en"
+    "doc": "https://ng-alain.com/components/view/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/view"
   },
   {
     "_idx": 220,
@@ -14031,7 +14156,8 @@
     "lib": "@delon/abc",
     "title": "View",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/view/en"
+    "doc": "https://ng-alain.com/components/view/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/view"
   },
   {
     "_idx": 148,
@@ -14043,7 +14169,8 @@
     "lib": "@delon/abc",
     "title": "Excel",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/xlsx/en"
+    "doc": "https://ng-alain.com/components/xlsx/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/xlsx"
   },
   {
     "_idx": 6,
@@ -14117,7 +14244,8 @@
     "title": "柱状图",
     "description": "使用垂直的柱子显示类别之间的数值比较。其中一个轴表示需要对比的分类维度，另一个轴代表相应的数值。",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/chart/bar/en"
+    "doc": "https://ng-alain.com/chart/bar/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/bar"
   },
   {
     "_idx": 6,
@@ -14187,7 +14315,8 @@
     "title": "图表卡片",
     "description": "图表卡片，用于展示图表的卡片容器，可以方便的配合其它图表套件展示丰富信息。",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/chart/card/en"
+    "doc": "https://ng-alain.com/chart/card/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/card"
   },
   {
     "_idx": 34,
@@ -14241,7 +14370,8 @@
     "title": "Custom Chart",
     "description": "Use `g2-custom` component to package your G2 chart.",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/chart/custom/en"
+    "doc": "https://ng-alain.com/chart/custom/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/custom"
   },
   {
     "_idx": 6,
@@ -14322,7 +14452,8 @@
     "title": "仪表盘",
     "description": "一种进度展示方式，可以更直观的展示当前的进展情况，通常也可表示占比。",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/chart/gauge/en"
+    "doc": "https://ng-alain.com/chart/gauge/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/gauge"
   },
   {
     "_idx": 6,
@@ -14442,7 +14573,8 @@
     "title": "迷你区域图",
     "description": "面积图又叫区域图。 它是在折线图的基础之上形成的, 它将折线图中折线与自变量坐标轴之间的区域使用颜色或者纹理填充，这样一个填充区域我们叫做面积，颜色的填充可以更好的突出趋势信息。",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/chart/mini-area/en"
+    "doc": "https://ng-alain.com/chart/mini-area/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/mini-area"
   },
   {
     "_idx": 6,
@@ -14528,7 +14660,8 @@
     "title": "迷你柱状图",
     "description": "迷你柱状图更适合展示简单的区间数据，简洁的表现方式可以很好的减少大数据量的视觉展现压力。",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/chart/mini-bar/en"
+    "doc": "https://ng-alain.com/chart/mini-bar/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/mini-bar"
   },
   {
     "_idx": 6,
@@ -14573,7 +14706,8 @@
     "title": "迷你进度条",
     "description": "用于显示跟速度相关图形再适合不过。",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/chart/mini-progress/en"
+    "doc": "https://ng-alain.com/chart/mini-progress/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/mini-progress"
   },
   {
     "_idx": 6,
@@ -14660,7 +14794,8 @@
     "title": "NumberInfo",
     "description": "Often used in data cards for highlighting the business data.",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/chart/number-info/en"
+    "doc": "https://ng-alain.com/chart/number-info/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/number-info"
   },
   {
     "_idx": 6,
@@ -14802,7 +14937,8 @@
     "title": "饼状图",
     "description": "用于显示跟速度相关图形再适合不过。",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/chart/pie/en"
+    "doc": "https://ng-alain.com/chart/pie/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/pie"
   },
   {
     "_idx": 6,
@@ -14874,7 +15010,8 @@
     "title": "雷达图",
     "description": "雷达图是以相同点开始的轴上表示的三个或更多个定量变量的二维图形的形式显示多变量数据的图形方法。轴的相对位置和角度通常是不知情的。",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/chart/radar/en"
+    "doc": "https://ng-alain.com/chart/radar/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/radar"
   },
   {
     "_idx": 6,
@@ -14985,7 +15122,8 @@
     "title": "单一柱状图",
     "description": "单一柱状图更适合在列表中展示简单的区间数据，简洁的表现方式可以很好的减少大数据量的视觉展现压力。",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/chart/single-bar/en"
+    "doc": "https://ng-alain.com/chart/single-bar/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/single-bar"
   },
   {
     "_idx": 6,
@@ -15025,7 +15163,8 @@
     "title": "标签云",
     "description": "标签云是一套相关的标签以及与此相应的权重展示方式，一般典型的标签云有 30 至 150 个标签，而权重影响使用的字体大小或其他视觉效果。",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/chart/tag-cloud/en"
+    "doc": "https://ng-alain.com/chart/tag-cloud/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/tag-cloud"
   },
   {
     "_idx": 6,
@@ -15140,7 +15279,8 @@
     "title": "折线图",
     "description": "使用 `timeline` 组件可以实现带有时间轴的柱状图展现，而其中的 `x` 属性，则是时间值的指向，默认最多支持同时展现两个指标，分别是 `y1` 和 `y2`。",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/chart/timeline/en"
+    "doc": "https://ng-alain.com/chart/timeline/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/timeline"
   },
   {
     "_idx": 6,
@@ -15183,7 +15323,8 @@
     "title": "趋势标记",
     "description": "趋势符号，标记上升和下降趋势。通常用绿色代表“好”，红色代表“不好”，股票涨跌场景除外。",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/chart/trend/en"
+    "doc": "https://ng-alain.com/chart/trend/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/trend"
   },
   {
     "_idx": 6,
@@ -15230,7 +15371,8 @@
     "title": "水波图",
     "description": "水波图是一种比例的展示方式，可以更直观的展示关键值的占比。",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/chart/water-wave/en"
+    "doc": "https://ng-alain.com/chart/water-wave/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/water-wave"
   },
   {
     "_idx": 319,
@@ -15401,7 +15543,8 @@
     "title": "Getting Started",
     "description": "@delon/form is a dynamic build form based on the [JSON Schema](http://json-schema.org/) standard.",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/form/getting-started/en"
+    "doc": "https://ng-alain.com/form/getting-started/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/form/src"
   },
   {
     "_idx": 319,
@@ -15572,7 +15715,8 @@
     "title": "Getting Started",
     "description": "@delon/form is a dynamic build form based on the [JSON Schema](http://json-schema.org/) standard.",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/form/getting-started/en"
+    "doc": "https://ng-alain.com/form/getting-started/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/form/src"
   },
   {
     "_idx": 31,
@@ -15584,6 +15728,7 @@
     "title": "Breadcrumb",
     "description": "A breadcrumb displays the current location within a hierarchy. It allows going back to states higher up in the hierarchy.",
     "whenToUse": "- When the system has more than two layers in a hierarchy.\n- When you need to inform the user of where they are.\n- When the user may need to navigate back to a higher level.\n- When the application has multi-layer architecture.",
-    "doc": "https://ng.ant.design/components/breadcrumb/en"
+    "doc": "https://ng.ant.design/components/breadcrumb/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/breadcrumb"
   }
 ]

@@ -79,7 +79,7 @@ function getLibary(filePath: string) {
   return '';
 }
 
-function getUrl(zone: string, filePath: string) {
+function getDocUrl(zone: string, filePath: string) {
   const parts = path.dirname(filePath).split(path.sep);
   let last = parts.pop();
   if (last === 'doc') last = parts.pop();
@@ -91,6 +91,22 @@ function getUrl(zone: string, filePath: string) {
     return `https://ng-alain.com/chart/${last}/${zone}`;
   } else if (parts.includes('form')) {
     return `https://ng-alain.com/form/getting-started/${zone}`;
+  }
+  return '';
+}
+
+function getGithubUrl(zone: string, filePath: string) {
+  const parts = path.dirname(filePath).split(path.sep);
+  let last = parts.pop();
+  if (last === 'doc') last = parts.pop();
+  if (parts.includes('ng-zorro-antd')) {
+    return `https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/${last}`;
+  } else if (parts.includes('abc')) {
+    return `https://github.com/ng-alain/delon/tree/master/packages/abc/${last}`;
+  } else if (parts.includes('chart')) {
+    return `https://github.com/ng-alain/delon/tree/master/packages/chart/${last}`;
+  } else if (parts.includes('form')) {
+    return `https://github.com/ng-alain/delon/tree/master/packages/form/src`;
   }
   return '';
 }
@@ -368,7 +384,8 @@ function copy(obj: any): any {
 
 function metaToItem(zone: string, filePath: string, meta: any): Directive[] {
   ast = new AST(meta.md, filePath, zone);
-  const url = getUrl(zone, filePath);
+  const docUrl = getDocUrl(zone, filePath);
+  const githubUrl = getGithubUrl(zone, filePath);
   const lib = getLibary(filePath);
   const title = getTitle(meta);
   const description = ast.getText(0);
@@ -392,7 +409,8 @@ function metaToItem(zone: string, filePath: string, meta: any): Directive[] {
       i.description = description;
     }
     i.whenToUse = whenToUse;
-    i.doc = url;
+    i.doc = docUrl;
+    i.github = githubUrl;
     // override snippet
     const snippet = FIX.snippet[i.selector];
     if (snippet) {

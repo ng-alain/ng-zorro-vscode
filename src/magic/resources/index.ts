@@ -41,7 +41,7 @@ function genComponentMarkdown(item: Directive): string {
   }
 
   if (item.doc) {
-    rows.push(`[${i18n('document')}](${item.doc})`);
+    rows.push(`[${i18n('document')}](${item.doc})${item.github ? ` － [${i18n('github')}](${item.github})` : ''}`);
   }
 
   return rows.filter(w => !!w).join('\n\n');
@@ -52,7 +52,7 @@ function genPropertyMarkdown(property: DirectiveProperty): string {
 
   const rows: string[] = [];
 
-  if (property.typeDefinition && Array.isArray(property.typeDefinition)) {
+  if (property.typeDefinition && Array.isArray(property.typeDefinition) && property.typeDefinition.length > 0) {
     rows.push(
       `**${i18n('optionalValue')}** ${property.typeDefinition.map((i: DirectiveTypeDefinition) => '`' + i.label + '`').join(', ')}`,
     );
