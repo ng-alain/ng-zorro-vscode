@@ -61,8 +61,8 @@ export function getAttrs(text: string): { [key: string]: TagAttr } {
 }
 
 export function getAttrName(str: string) {
-  if (/\s([\w-:.]+)=%*$/.test(str)) {
-    return RegExp.$1;
+  if (/\s([\[\]\(\)\-\w]+)=%*$/.test(str)) {
+    return pureAttrName(RegExp.$1 || '').name;
   }
   return '';
 }
@@ -77,7 +77,11 @@ export function pureAttr(name: string, value: string): TagAttr {
     valueType = TagAttrValueType.Number;
   }
 
-  let type: InputAttrType = InputAttrType.Input;
+  return { ...pureAttrName(name), value, valueType };
+}
+
+export function pureAttrName(name: string): { type: InputAttrType; name: string } {
+  let type: InputAttrType;
   if (~name.indexOf('[(')) {
     type = InputAttrType.InputOutput;
     name = name.substr(2, name.length - 4);
@@ -90,8 +94,7 @@ export function pureAttr(name: string, value: string): TagAttr {
     type = InputAttrType.Template;
     name = name.substr(1);
   }
-
-  return { type, name, value, valueType };
+  return { type, name };
 }
 
 /**
