@@ -30,6 +30,11 @@ function getPure(value: string): string {
   });
 }
 
+function getFullDoc(doc: string): string {
+  if (doc.startsWith('http')) return doc;
+  return (CONFIG.language === 'zh-CN' ? 'https://ng-zorro.gitee.io' : 'https://ng.ant.design') + doc;
+}
+
 function genComponentMarkdown(item: Directive): string {
   if (item == null) return '';
 
@@ -41,7 +46,7 @@ function genComponentMarkdown(item: Directive): string {
   }
 
   if (item.doc) {
-    rows.push(`[${i18n('document')}](${item.doc})${item.github ? ` － [${i18n('github')}](${item.github})` : ''}`);
+    rows.push(`[${i18n('document')}](${getFullDoc(item.doc)})${item.github ? ` － [${i18n('github')}](${item.github})` : ''}`);
   }
 
   return rows.filter(w => !!w).join('\n\n');

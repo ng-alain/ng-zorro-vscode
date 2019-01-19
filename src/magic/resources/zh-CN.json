@@ -71,7 +71,7 @@
     "title": "栅格",
     "description": "24 栅格系统。",
     "whenToUse": "",
-    "doc": "https://ng.ant.design/components/grid/zh",
+    "doc": "/components/grid/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/grid"
   },
   {
@@ -298,7 +298,7 @@
     "title": "栅格",
     "description": "24 栅格系统。",
     "whenToUse": "",
-    "doc": "https://ng.ant.design/components/grid/zh",
+    "doc": "/components/grid/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/grid"
   },
   {
@@ -417,7 +417,7 @@
     "title": "文字提示",
     "description": "简单的文字提示气泡框。",
     "whenToUse": "鼠标移入则显示提示，移出消失，气泡浮层不承载复杂文本和操作。",
-    "doc": "https://ng.ant.design/components/tooltip/zh",
+    "doc": "/components/tooltip/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tooltip",
     "snippet": "<span __$1>$2</span>"
   },
@@ -634,7 +634,7 @@
     "lib": "ng-zorro-antd",
     "title": "时间轴",
     "whenToUse": "- 当有一系列信息需按时间排列时，可正序和倒序。\n- 需要有一条时间轴进行视觉上的串联时。",
-    "doc": "https://ng.ant.design/components/timeline/zh",
+    "doc": "/components/timeline/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/timeline"
   },
   {
@@ -665,7 +665,7 @@
     "lib": "ng-zorro-antd",
     "title": "时间轴",
     "whenToUse": "- 当有一系列信息需按时间排列时，可正序和倒序。\n- 需要有一条时间轴进行视觉上的串联时。",
-    "doc": "https://ng.ant.design/components/timeline/zh",
+    "doc": "/components/timeline/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/timeline"
   },
   {
@@ -731,7 +731,7 @@
     "title": "头像",
     "description": "用来代表用户或事物，支持图片、图标或字符展示。",
     "whenToUse": "",
-    "doc": "https://ng.ant.design/components/avatar/zh",
+    "doc": "/components/avatar/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/avatar"
   },
   {
@@ -779,7 +779,7 @@
     "lib": "ng-zorro-antd",
     "title": "回到顶部",
     "whenToUse": "- 当页面内容区域比较长时；\n- 当用户需要频繁返回顶部查看相关内容时。",
-    "doc": "https://ng.ant.design/components/back-top/zh",
+    "doc": "/components/back-top/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/back-top"
   },
   {
@@ -860,7 +860,7 @@
     "title": "徽标数",
     "description": "图标右上角的圆形徽标数字。",
     "whenToUse": "一般出现在通知图标或头像的右上角，用于显示需要处理的消息条数，通过醒目视觉形式吸引用户处理。",
-    "doc": "https://ng.ant.design/components/badge/zh",
+    "doc": "/components/badge/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/badge"
   },
   {
@@ -892,7 +892,7 @@
     "title": "面包屑",
     "description": "显示当前页面在系统层级结构中的位置，并能向上返回。",
     "whenToUse": "- 当系统拥有超过两级以上的层级结构时；\n- 当需要告知用户『你在哪里』时；\n- 当需要向上导航的功能时。",
-    "doc": "https://ng.ant.design/components/breadcrumb/zh",
+    "doc": "/components/breadcrumb/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/breadcrumb"
   },
   {
@@ -988,7 +988,7 @@
     "lib": "ng-zorro-antd",
     "title": "按钮",
     "whenToUse": "标记了一个（或封装一组）操作命令，响应用户点击行为，触发相应的业务逻辑。",
-    "doc": "https://ng.ant.design/components/button/zh",
+    "doc": "/components/button/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/button",
     "snippet": "<button __$1>${2|保存,提交,取消,新建,删除,搜索|}</button>"
   },
@@ -1076,7 +1076,7 @@
     "title": "日历",
     "description": "按照日历形式展示数据的容器。",
     "whenToUse": "当数据是日期或按照日期划分时，例如日程、课表、价格日历等，农历等。目前支持年/月切换。",
-    "doc": "https://ng.ant.design/components/calendar/zh",
+    "doc": "/components/calendar/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/calendar"
   },
   {
@@ -1169,7 +1169,7 @@
     "title": "卡片",
     "description": "通用卡片容器。",
     "whenToUse": "最基础的卡片容器，可承载文字、列表、图片、段落，常用于后台概览页面。",
-    "doc": "https://ng.ant.design/components/card/zh",
+    "doc": "/components/card/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/card"
   },
   {
@@ -1207,7 +1207,7 @@
     "title": "卡片",
     "description": "通用卡片容器。",
     "whenToUse": "最基础的卡片容器，可承载文字、列表、图片、段落，常用于后台概览页面。",
-    "doc": "https://ng.ant.design/components/card/zh",
+    "doc": "/components/card/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/card"
   },
   {
@@ -1220,7 +1220,7 @@
     "lib": "ng-zorro-antd",
     "title": "卡片",
     "whenToUse": "最基础的卡片容器，可承载文字、列表、图片、段落，常用于后台概览页面。",
-    "doc": "https://ng.ant.design/components/card/zh",
+    "doc": "/components/card/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/card"
   },
   {
@@ -1233,7 +1233,7 @@
     "lib": "ng-zorro-antd",
     "title": "卡片",
     "whenToUse": "最基础的卡片容器，可承载文字、列表、图片、段落，常用于后台概览页面。",
-    "doc": "https://ng.ant.design/components/card/zh",
+    "doc": "/components/card/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/card"
   },
   {
@@ -1329,7 +1329,7 @@
     "title": "走马灯",
     "description": "旋转木马，一组轮播的区域。",
     "whenToUse": "- 当有一组平级的内容。\n- 当内容空间不足时，可以用走马灯的形式进行收纳，进行轮播展现。\n- 常用于一组图片或卡片轮播。",
-    "doc": "https://ng.ant.design/components/carousel/zh",
+    "doc": "/components/carousel/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/carousel"
   },
   {
@@ -1579,7 +1579,7 @@
     "title": "级联选择",
     "description": "级联选择框。",
     "whenToUse": "- 需要从一组相关联的数据集合进行选择，例如省市区，公司层级，事物分类等。\n- 从一个较大的数据集合中进行选择时，用多级分类进行分隔，方便选择。\n- 比起 Select 组件，可以在同一个浮层中完成选择，有较好的体验。",
-    "doc": "https://ng.ant.design/components/cascader/zh",
+    "doc": "/components/cascader/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/cascader"
   },
   {
@@ -1653,7 +1653,7 @@
     "title": "多选框",
     "description": "多选框。",
     "whenToUse": "- 在一组可选项中进行多项选择时；\n- 单独使用可以表示两种状态之间的切换，和 `switch` 类似。区别在于切换 `switch` 会直接触发状态改变，而 `checkbox` 一般用于状态标记，需要和提交操作配合。",
-    "doc": "https://ng.ant.design/components/checkbox/zh",
+    "doc": "/components/checkbox/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/checkbox",
     "snippet": "<label __$1>$2</label>"
   },
@@ -1695,7 +1695,7 @@
     "title": "多选框",
     "description": "多选框。",
     "whenToUse": "- 在一组可选项中进行多项选择时；\n- 单独使用可以表示两种状态之间的切换，和 `switch` 类似。区别在于切换 `switch` 会直接触发状态改变，而 `checkbox` 一般用于状态标记，需要和提交操作配合。",
-    "doc": "https://ng.ant.design/components/checkbox/zh",
+    "doc": "/components/checkbox/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/checkbox"
   },
   {
@@ -1717,7 +1717,7 @@
     "title": "多选框",
     "description": "多选框。",
     "whenToUse": "- 在一组可选项中进行多项选择时；\n- 单独使用可以表示两种状态之间的切换，和 `switch` 类似。区别在于切换 `switch` 会直接触发状态改变，而 `checkbox` 一般用于状态标记，需要和提交操作配合。",
-    "doc": "https://ng.ant.design/components/checkbox/zh",
+    "doc": "/components/checkbox/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/checkbox"
   },
   {
@@ -1749,7 +1749,7 @@
     "title": "折叠面板",
     "description": "可以折叠/展开的内容区域。",
     "whenToUse": "- 对复杂区域进行分组和隐藏，保持页面的整洁。\n- `手风琴` 是一种特殊的折叠面板，只允许单个内容区域展开。",
-    "doc": "https://ng.ant.design/components/collapse/zh",
+    "doc": "/components/collapse/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/collapse"
   },
   {
@@ -1806,7 +1806,7 @@
     "title": "折叠面板",
     "description": "可以折叠/展开的内容区域。",
     "whenToUse": "- 对复杂区域进行分组和隐藏，保持页面的整洁。\n- `手风琴` 是一种特殊的折叠面板，只允许单个内容区域展开。",
-    "doc": "https://ng.ant.design/components/collapse/zh",
+    "doc": "/components/collapse/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/collapse"
   },
   {
@@ -2030,7 +2030,7 @@
     "title": "日期选择框",
     "description": "输入或选择日期的控件。",
     "whenToUse": "当用户需要输入一个日期，可以点击标准输入框，弹出日期面板进行选择。",
-    "doc": "https://ng.ant.design/components/date-picker/zh",
+    "doc": "/components/date-picker/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/date-picker"
   },
   {
@@ -2214,7 +2214,7 @@
     "title": "日期选择框",
     "description": "输入或选择日期的控件。",
     "whenToUse": "当用户需要输入一个日期，可以点击标准输入框，弹出日期面板进行选择。",
-    "doc": "https://ng.ant.design/components/date-picker/zh",
+    "doc": "/components/date-picker/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/date-picker"
   },
   {
@@ -2404,7 +2404,7 @@
     "title": "日期选择框",
     "description": "输入或选择日期的控件。",
     "whenToUse": "当用户需要输入一个日期，可以点击标准输入框，弹出日期面板进行选择。",
-    "doc": "https://ng.ant.design/components/date-picker/zh",
+    "doc": "/components/date-picker/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/date-picker"
   },
   {
@@ -2586,7 +2586,7 @@
     "title": "日期选择框",
     "description": "输入或选择日期的控件。",
     "whenToUse": "当用户需要输入一个日期，可以点击标准输入框，弹出日期面板进行选择。",
-    "doc": "https://ng.ant.design/components/date-picker/zh",
+    "doc": "/components/date-picker/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/date-picker"
   },
   {
@@ -2809,7 +2809,7 @@
     "title": "日期选择框",
     "description": "输入或选择日期的控件。",
     "whenToUse": "当用户需要输入一个日期，可以点击标准输入框，弹出日期面板进行选择。",
-    "doc": "https://ng.ant.design/components/date-picker/zh",
+    "doc": "/components/date-picker/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/date-picker"
   },
   {
@@ -2865,7 +2865,7 @@
     "title": "分割线",
     "description": "区隔内容的分割线。",
     "whenToUse": "- 对不同章节的文本段落进行分割。\n- 对行内文字/链接进行分割，例如表格的操作列。",
-    "doc": "https://ng.ant.design/components/divider/zh",
+    "doc": "/components/divider/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/divider"
   },
   {
@@ -3016,7 +3016,7 @@
     "title": "抽屉",
     "description": "抽屉从父窗体边缘滑入，覆盖住部分父窗体内容。用户在抽屉内操作时不必离开当前任务，操作完成后，可以平滑地回到到原任务。",
     "whenToUse": "- 当需要一个附加的面板来控制父窗体内容，这个面板在需要时呼出。比如，控制界面展示样式，往界面中添加内容。\n- 当需要在当前任务流中插入临时任务，创建或预览附加内容。比如展示协议条款，创建子对象。",
-    "doc": "https://ng.ant.design/components/drawer/zh",
+    "doc": "/components/drawer/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/drawer"
   },
   {
@@ -3111,7 +3111,7 @@
     "lib": "ng-zorro-antd",
     "title": "下拉菜单",
     "whenToUse": "当页面上的操作命令过多时，用此组件可以收纳操作元素。点击或移入触点，会出现一个下拉菜单。可在列表中进行选择，并执行相应的命令。",
-    "doc": "https://ng.ant.design/components/dropdown/zh",
+    "doc": "/components/dropdown/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/dropdown"
   },
   {
@@ -3227,7 +3227,7 @@
     "lib": "ng-zorro-antd",
     "title": "下拉菜单",
     "whenToUse": "当页面上的操作命令过多时，用此组件可以收纳操作元素。点击或移入触点，会出现一个下拉菜单。可在列表中进行选择，并执行相应的命令。",
-    "doc": "https://ng.ant.design/components/dropdown/zh",
+    "doc": "/components/dropdown/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/dropdown"
   },
   {
@@ -3343,7 +3343,7 @@
     "title": "下拉菜单",
     "description": "向下弹出的列表。",
     "whenToUse": "当页面上的操作命令过多时，用此组件可以收纳操作元素。点击或移入触点，会出现一个下拉菜单。可在列表中进行选择，并执行相应的命令。",
-    "doc": "https://ng.ant.design/components/dropdown/zh",
+    "doc": "/components/dropdown/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/dropdown"
   },
   {
@@ -3381,7 +3381,7 @@
     "title": "空状态",
     "description": "空状态时的展示占位图。",
     "whenToUse": "当目前没有数据时，用于显式的用户提示。",
-    "doc": "https://ng.ant.design/components/empty/zh",
+    "doc": "/components/empty/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/empty"
   },
   {
@@ -3421,7 +3421,7 @@
     "title": "表单",
     "description": "具有数据收集、校验和提交功能的表单，包含复选框、单选框、输入框、下拉选择框等元素。",
     "whenToUse": "",
-    "doc": "https://ng.ant.design/components/form/zh",
+    "doc": "/components/form/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/form",
     "snippet": "<form __$1>$0</form>"
   },
@@ -3506,7 +3506,7 @@
     "lib": "ng-zorro-antd",
     "title": "表单",
     "whenToUse": "",
-    "doc": "https://ng.ant.design/components/form/zh",
+    "doc": "/components/form/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/form"
   },
   {
@@ -3750,7 +3750,7 @@
     "lib": "ng-zorro-antd",
     "title": "表单",
     "whenToUse": "",
-    "doc": "https://ng.ant.design/components/form/zh",
+    "doc": "/components/form/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/form"
   },
   {
@@ -4009,7 +4009,7 @@
     "lib": "ng-zorro-antd",
     "title": "表单",
     "whenToUse": "",
-    "doc": "https://ng.ant.design/components/form/zh",
+    "doc": "/components/form/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/form"
   },
   {
@@ -4022,7 +4022,7 @@
     "lib": "ng-zorro-antd",
     "title": "表单",
     "whenToUse": "",
-    "doc": "https://ng.ant.design/components/form/zh",
+    "doc": "/components/form/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/form"
   },
   {
@@ -4035,7 +4035,7 @@
     "lib": "ng-zorro-antd",
     "title": "表单",
     "whenToUse": "",
-    "doc": "https://ng.ant.design/components/form/zh",
+    "doc": "/components/form/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/form"
   },
   {
@@ -4048,7 +4048,7 @@
     "lib": "ng-zorro-antd",
     "title": "表单",
     "whenToUse": "",
-    "doc": "https://ng.ant.design/components/form/zh",
+    "doc": "/components/form/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/form"
   },
   {
@@ -4061,7 +4061,7 @@
     "lib": "ng-zorro-antd",
     "title": "表单",
     "whenToUse": "",
-    "doc": "https://ng.ant.design/components/form/zh",
+    "doc": "/components/form/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/form"
   },
   {
@@ -4109,7 +4109,7 @@
     "title": "固钉",
     "description": "将页面元素钉在可视范围。",
     "whenToUse": "当内容区域比较长，需要滚动页面时，这部分内容对应的操作或者导航需要在滚动范围内始终展现。常用于侧边菜单和按钮组合。",
-    "doc": "https://ng.ant.design/components/affix/zh",
+    "doc": "/components/affix/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/affix"
   },
   {
@@ -7071,7 +7071,7 @@
     "title": "图标",
     "description": "语义化的矢量图形。",
     "whenToUse": "",
-    "doc": "https://ng.ant.design/components/icon/zh",
+    "doc": "/components/icon/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/icon",
     "snippet": "<i __$1></i>"
   },
@@ -7141,7 +7141,7 @@
     "lib": "ng-zorro-antd",
     "title": "输入框",
     "whenToUse": "- 需要用户输入表单域内容时。\n- 提供组合型输入框，带搜索的输入框，还可以进行大小选择。",
-    "doc": "https://ng.ant.design/components/input/zh",
+    "doc": "/components/input/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/input",
     "snippet": "<input __$1>"
   },
@@ -7220,7 +7220,7 @@
     "title": "输入框",
     "description": "通过鼠标或键盘输入内容，是最基础的表单域的包装。",
     "whenToUse": "- 需要用户输入表单域内容时。\n- 提供组合型输入框，带搜索的输入框，还可以进行大小选择。",
-    "doc": "https://ng.ant.design/components/input/zh",
+    "doc": "/components/input/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/input"
   },
   {
@@ -7364,7 +7364,7 @@
     "title": "数字输入框",
     "description": "通过鼠标或键盘，输入范围内的数值。",
     "whenToUse": "当需要获取标准数值时。",
-    "doc": "https://ng.ant.design/components/input-number/zh",
+    "doc": "/components/input-number/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/input-number"
   },
   {
@@ -7463,7 +7463,7 @@
     "lib": "ng-zorro-antd",
     "title": "布局",
     "whenToUse": "",
-    "doc": "https://ng.ant.design/components/layout/zh",
+    "doc": "/components/layout/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/layout"
   },
   {
@@ -7596,7 +7596,7 @@
     "title": "列表",
     "description": "通用列表。",
     "whenToUse": "最基础的列表展示，可承载文字、列表、图片、段落，常用于后台数据展示页面。",
-    "doc": "https://ng.ant.design/components/list/zh",
+    "doc": "/components/list/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/list"
   },
   {
@@ -7634,7 +7634,7 @@
     "title": "列表",
     "description": "通用列表。",
     "whenToUse": "最基础的列表展示，可承载文字、列表、图片、段落，常用于后台数据展示页面。",
-    "doc": "https://ng.ant.design/components/list/zh",
+    "doc": "/components/list/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/list"
   },
   {
@@ -7672,7 +7672,7 @@
     "title": "列表",
     "description": "通用列表。",
     "whenToUse": "最基础的列表展示，可承载文字、列表、图片、段落，常用于后台数据展示页面。",
-    "doc": "https://ng.ant.design/components/list/zh",
+    "doc": "/components/list/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/list"
   },
   {
@@ -7776,7 +7776,7 @@
     "title": "提及",
     "description": "提及组件。",
     "whenToUse": "用于在输入中提及某人或某事，常用于发布、聊天或评论功能。",
-    "doc": "https://ng.ant.design/components/mention/zh",
+    "doc": "/components/mention/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/mention"
   },
   {
@@ -7851,7 +7851,7 @@
     "title": "导航菜单",
     "description": "为页面和功能提供导航的菜单列表。",
     "whenToUse": "导航菜单是一个网站的灵魂，用户依赖导航在各个页面中进行跳转。一般分为顶部导航和侧边导航，顶部导航提供全局性的类目和功能，侧边导航提供多级结构来收纳和排列网站架构。",
-    "doc": "https://ng.ant.design/components/menu/zh",
+    "doc": "/components/menu/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/menu"
   },
   {
@@ -7884,7 +7884,7 @@
     "title": "导航菜单",
     "description": "为页面和功能提供导航的菜单列表。",
     "whenToUse": "导航菜单是一个网站的灵魂，用户依赖导航在各个页面中进行跳转。一般分为顶部导航和侧边导航，顶部导航提供全局性的类目和功能，侧边导航提供多级结构来收纳和排列网站架构。",
-    "doc": "https://ng.ant.design/components/menu/zh",
+    "doc": "/components/menu/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/menu"
   },
   {
@@ -7925,7 +7925,7 @@
     "lib": "ng-zorro-antd",
     "title": "导航菜单",
     "whenToUse": "导航菜单是一个网站的灵魂，用户依赖导航在各个页面中进行跳转。一般分为顶部导航和侧边导航，顶部导航提供全局性的类目和功能，侧边导航提供多级结构来收纳和排列网站架构。",
-    "doc": "https://ng.ant.design/components/menu/zh",
+    "doc": "/components/menu/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/menu"
   },
   {
@@ -7938,7 +7938,7 @@
     "lib": "ng-zorro-antd",
     "title": "导航菜单",
     "whenToUse": "导航菜单是一个网站的灵魂，用户依赖导航在各个页面中进行跳转。一般分为顶部导航和侧边导航，顶部导航提供全局性的类目和功能，侧边导航提供多级结构来收纳和排列网站架构。",
-    "doc": "https://ng.ant.design/components/menu/zh",
+    "doc": "/components/menu/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/menu"
   },
   {
@@ -7951,7 +7951,7 @@
     "lib": "ng-zorro-antd",
     "title": "导航菜单",
     "whenToUse": "导航菜单是一个网站的灵魂，用户依赖导航在各个页面中进行跳转。一般分为顶部导航和侧边导航，顶部导航提供全局性的类目和功能，侧边导航提供多级结构来收纳和排列网站架构。",
-    "doc": "https://ng.ant.design/components/menu/zh",
+    "doc": "/components/menu/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/menu"
   },
   {
@@ -8079,7 +8079,7 @@
     "title": "分页",
     "description": "采用分页的形式分隔长列表，每次只加载一个页面。",
     "whenToUse": "- 当加载/渲染所有数据将花费很多时间时；\n- 可切换页码浏览数据。",
-    "doc": "https://ng.ant.design/components/pagination/zh",
+    "doc": "/components/pagination/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/pagination"
   },
   {
@@ -8265,7 +8265,7 @@
     "title": "气泡确认框",
     "description": "点击元素，弹出气泡式的确认框。",
     "whenToUse": "目标元素的操作需要用户进一步的确认时，在目标元素附近弹出浮层提示，询问用户。",
-    "doc": "https://ng.ant.design/components/popconfirm/zh",
+    "doc": "/components/popconfirm/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/popconfirm"
   },
   {
@@ -8400,7 +8400,7 @@
     "title": "气泡卡片",
     "description": "点击/鼠标移入元素，弹出气泡式的卡片浮层。",
     "whenToUse": "当目标元素有进一步的描述和相关操作时，可以收纳到卡片中，根据用户的操作行为进行展现。",
-    "doc": "https://ng.ant.design/components/popover/zh",
+    "doc": "/components/popover/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/popover"
   },
   {
@@ -8540,7 +8540,7 @@
     "title": "进度条",
     "description": "展示操作的当前进度。",
     "whenToUse": "在操作需要较长时间才能完成时，为用户显示该操作的当前进度和状态。",
-    "doc": "https://ng.ant.design/components/progress/zh",
+    "doc": "/components/progress/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/progress"
   },
   {
@@ -8604,7 +8604,7 @@
     "title": "单选框",
     "description": "单选框。",
     "whenToUse": "- 用于在多个备选项中选中单个状态。\n- 和 Select 的区别是，Radio 所有选项默认可见，方便用户在比较中选择，因此选项不宜过多。",
-    "doc": "https://ng.ant.design/components/radio/zh",
+    "doc": "/components/radio/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/radio",
     "snippet": "<label __$1>$2</label>"
   },
@@ -8663,7 +8663,7 @@
     "title": "单选框",
     "description": "单选框。",
     "whenToUse": "- 用于在多个备选项中选中单个状态。\n- 和 Select 的区别是，Radio 所有选项默认可见，方便用户在比较中选择，因此选项不宜过多。",
-    "doc": "https://ng.ant.design/components/radio/zh",
+    "doc": "/components/radio/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/radio"
   },
   {
@@ -8738,7 +8738,7 @@
     "lib": "ng-zorro-antd",
     "title": "单选框",
     "whenToUse": "- 用于在多个备选项中选中单个状态。\n- 和 Select 的区别是，Radio 所有选项默认可见，方便用户在比较中选择，因此选项不宜过多。",
-    "doc": "https://ng.ant.design/components/radio/zh",
+    "doc": "/components/radio/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/radio"
   },
   {
@@ -8862,7 +8862,7 @@
     "title": "评分",
     "description": "评分组件。",
     "whenToUse": "- 对评价进行展示。\n- 对事物进行快速的评级操作。",
-    "doc": "https://ng.ant.design/components/rate/zh",
+    "doc": "/components/rate/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/rate"
   },
   {
@@ -9072,7 +9072,7 @@
     "title": "选择器",
     "description": "下拉选择器。",
     "whenToUse": "- 弹出一个下拉菜单给用户选择操作，用于代替原生的选择器，或者需要一个更优雅的多选器时。\n- 当选项少时（少于 5 项），建议直接将选项平铺，使用 [Radio](/components/radio/zh) 是更好的选择。",
-    "doc": "https://ng.ant.design/components/select/zh",
+    "doc": "/components/select/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/select"
   },
   {
@@ -9121,7 +9121,7 @@
     "title": "选择器",
     "description": "下拉选择器。",
     "whenToUse": "- 弹出一个下拉菜单给用户选择操作，用于代替原生的选择器，或者需要一个更优雅的多选器时。\n- 当选项少时（少于 5 项），建议直接将选项平铺，使用 [Radio](/components/radio/zh) 是更好的选择。",
-    "doc": "https://ng.ant.design/components/select/zh",
+    "doc": "/components/select/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/select"
   },
   {
@@ -9143,7 +9143,7 @@
     "title": "选择器",
     "description": "下拉选择器。",
     "whenToUse": "- 弹出一个下拉菜单给用户选择操作，用于代替原生的选择器，或者需要一个更优雅的多选器时。\n- 当选项少时（少于 5 项），建议直接将选项平铺，使用 [Radio](/components/radio/zh) 是更好的选择。",
-    "doc": "https://ng.ant.design/components/select/zh",
+    "doc": "/components/select/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/select"
   },
   {
@@ -9202,7 +9202,7 @@
     "title": "加载占位图",
     "description": "在需要等待加载内容的位置提供一个占位图。",
     "whenToUse": "- 网络较慢，需要长时间等待加载处理的情况下。\n- 图文信息内容较多的列表/卡片中。",
-    "doc": "https://ng.ant.design/components/skeleton/zh",
+    "doc": "/components/skeleton/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/skeleton"
   },
   {
@@ -9345,7 +9345,7 @@
     "title": "滑动输入条",
     "description": "滑动型输入器，展示当前值和可选范围。",
     "whenToUse": "当用户需要在数值区间/自定义区间内进行选择时，可为连续或离散值。",
-    "doc": "https://ng.ant.design/components/slider/zh",
+    "doc": "/components/slider/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/slider"
   },
   {
@@ -9407,7 +9407,7 @@
     "title": "加载中",
     "description": "用于页面和区块的加载中状态。",
     "whenToUse": "页面局部处于等待异步数据或正在渲染过程时，合适的加载动效会有效缓解用户的焦虑。",
-    "doc": "https://ng.ant.design/components/spin/zh",
+    "doc": "/components/spin/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/spin"
   },
   {
@@ -9502,7 +9502,7 @@
     "lib": "ng-zorro-antd",
     "title": "步骤条",
     "whenToUse": "当任务复杂或者存在先后关系时，将其分解成一系列步骤，从而简化任务。",
-    "doc": "https://ng.ant.design/components/steps/zh",
+    "doc": "/components/steps/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/steps"
   },
   {
@@ -9555,7 +9555,7 @@
     "lib": "ng-zorro-antd",
     "title": "步骤条",
     "whenToUse": "当任务复杂或者存在先后关系时，将其分解成一系列步骤，从而简化任务。",
-    "doc": "https://ng.ant.design/components/steps/zh",
+    "doc": "/components/steps/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/steps"
   },
   {
@@ -9651,7 +9651,7 @@
     "title": "开关",
     "description": "开关选择器。",
     "whenToUse": "- 需要表示开关状态/两种状态之间的切换时；\n- 和 `checkbox`的区别是，切换 `switch` 会直接触发状态改变，而 `checkbox` 一般用于状态标记，需要和提交操作配合。",
-    "doc": "https://ng.ant.design/components/switch/zh",
+    "doc": "/components/switch/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/switch"
   },
   {
@@ -9873,7 +9873,7 @@
     "title": "表格",
     "description": "展示行列数据。",
     "whenToUse": "- 当有大量结构化的数据需要展现时；\n- 当需要对数据进行排序、搜索、分页、自定义操作等复杂行为时。",
-    "doc": "https://ng.ant.design/components/table/zh",
+    "doc": "/components/table/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/table"
   },
   {
@@ -10048,7 +10048,7 @@
     "lib": "ng-zorro-antd",
     "title": "表格",
     "whenToUse": "- 当有大量结构化的数据需要展现时；\n- 当需要对数据进行排序、搜索、分页、自定义操作等复杂行为时。",
-    "doc": "https://ng.ant.design/components/table/zh",
+    "doc": "/components/table/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/table"
   },
   {
@@ -10152,7 +10152,7 @@
     "lib": "ng-zorro-antd",
     "title": "表格",
     "whenToUse": "- 当有大量结构化的数据需要展现时；\n- 当需要对数据进行排序、搜索、分页、自定义操作等复杂行为时。",
-    "doc": "https://ng.ant.design/components/table/zh",
+    "doc": "/components/table/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/table"
   },
   {
@@ -10183,7 +10183,7 @@
     "title": "表格",
     "description": "展示行列数据。",
     "whenToUse": "- 当有大量结构化的数据需要展现时；\n- 当需要对数据进行排序、搜索、分页、自定义操作等复杂行为时。",
-    "doc": "https://ng.ant.design/components/table/zh",
+    "doc": "/components/table/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/table"
   },
   {
@@ -10205,7 +10205,7 @@
     "title": "表格",
     "description": "展示行列数据。",
     "whenToUse": "- 当有大量结构化的数据需要展现时；\n- 当需要对数据进行排序、搜索、分页、自定义操作等复杂行为时。",
-    "doc": "https://ng.ant.design/components/table/zh",
+    "doc": "/components/table/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/table"
   },
   {
@@ -10352,7 +10352,7 @@
     "title": "标签页",
     "description": "选项卡切换组件。",
     "whenToUse": "提供平级的区域将大块内容进行收纳和展现，保持界面整洁。",
-    "doc": "https://ng.ant.design/components/tabs/zh",
+    "doc": "/components/tabs/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tabs"
   },
   {
@@ -10416,7 +10416,7 @@
     "title": "标签页",
     "description": "选项卡切换组件。",
     "whenToUse": "提供平级的区域将大块内容进行收纳和展现，保持界面整洁。",
-    "doc": "https://ng.ant.design/components/tabs/zh",
+    "doc": "/components/tabs/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tabs"
   },
   {
@@ -10485,7 +10485,7 @@
     "title": "标签",
     "description": "进行标记和分类的小标签。",
     "whenToUse": "- 用于标记事物的属性和维度。\n- 进行分类。",
-    "doc": "https://ng.ant.design/components/tag/zh",
+    "doc": "/components/tag/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tag"
   },
   {
@@ -10679,7 +10679,7 @@
     "title": "时间选择框",
     "description": "输入或选择时间的控件。",
     "whenToUse": "当用户需要输入一个时间，可以点击标准输入框，弹出时间面板进行选择。",
-    "doc": "https://ng.ant.design/components/time-picker/zh",
+    "doc": "/components/time-picker/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/time-picker"
   },
   {
@@ -10774,7 +10774,7 @@
     "title": "警告提示",
     "description": "警告提示，展现需要关注的信息。",
     "whenToUse": "- 当某个页面需要向用户显示警告的信息时。\n- 非浮层的静态展现形式，始终展现，不会自动消失，用户可以点击关闭。",
-    "doc": "https://ng.ant.design/components/alert/zh",
+    "doc": "/components/alert/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/alert"
   },
   {
@@ -10856,7 +10856,7 @@
     "title": "锚点",
     "description": "用于跳转到页面指定位置。",
     "whenToUse": "需要展现当前页面上可供跳转的锚点链接，以及快速在锚点之间跳转。",
-    "doc": "https://ng.ant.design/components/anchor/zh",
+    "doc": "/components/anchor/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/anchor"
   },
   {
@@ -10886,7 +10886,7 @@
     "title": "锚点",
     "description": "用于跳转到页面指定位置。",
     "whenToUse": "需要展现当前页面上可供跳转的锚点链接，以及快速在锚点之间跳转。",
-    "doc": "https://ng.ant.design/components/anchor/zh",
+    "doc": "/components/anchor/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/anchor"
   },
   {
@@ -11046,7 +11046,7 @@
     "title": "穿梭框",
     "description": "双栏穿梭选择框。",
     "whenToUse": "用直观的方式在两栏中移动元素，完成选择行为。",
-    "doc": "https://ng.ant.design/components/transfer/zh",
+    "doc": "/components/transfer/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/transfer"
   },
   {
@@ -11299,7 +11299,7 @@
     "title": "树形控件",
     "description": "何时使用",
     "whenToUse": "文件夹、组织架构、生物分类、国家地区等等，世间万物的大多数结构都是树形结构。使用`树控件`可以完整展现其中的层级关系，并具有展开收起选择等交互功能。",
-    "doc": "https://ng.ant.design/components/tree/zh",
+    "doc": "/components/tree/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tree"
   },
   {
@@ -11482,7 +11482,7 @@
     "title": "树选择",
     "description": "树型选择控件。",
     "whenToUse": "类似 Select 的选择控件，可选择的数据结构是一个树形结构时，可以使用 TreeSelect，例如公司层级、学科系统、分类目录等等。",
-    "doc": "https://ng.ant.design/components/tree-select/zh",
+    "doc": "/components/tree-select/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tree-select"
   },
   {
@@ -11697,7 +11697,7 @@
     "title": "上传",
     "description": "文件选择上传和拖拽上传控件。",
     "whenToUse": "上传是将信息（网页、文字、图片、视频等）通过网页或者上传工具发布到远程服务器上的过程。",
-    "doc": "https://ng.ant.design/components/upload/zh",
+    "doc": "/components/upload/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/upload"
   },
   {
@@ -12871,7 +12871,7 @@
     "title": "自动完成",
     "description": "输入框自动完成功能。",
     "whenToUse": "需要自动完成时。",
-    "doc": "https://ng.ant.design/components/auto-complete/zh",
+    "doc": "/components/auto-complete/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/auto-complete"
   },
   {
@@ -12911,7 +12911,7 @@
     "title": "自动完成",
     "description": "输入框自动完成功能。",
     "whenToUse": "需要自动完成时。",
-    "doc": "https://ng.ant.design/components/auto-complete/zh",
+    "doc": "/components/auto-complete/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/auto-complete"
   },
   {
@@ -15864,7 +15864,7 @@
     "title": "面包屑",
     "description": "显示当前页面在系统层级结构中的位置，并能向上返回。",
     "whenToUse": "- 当系统拥有超过两级以上的层级结构时；\n- 当需要告知用户『你在哪里』时；\n- 当需要向上导航的功能时。",
-    "doc": "https://ng.ant.design/components/breadcrumb/zh",
+    "doc": "/components/breadcrumb/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/breadcrumb"
   }
 ]

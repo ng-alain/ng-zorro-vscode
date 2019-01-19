@@ -84,7 +84,7 @@ function getDocUrl(zone: string, filePath: string) {
   let last = parts.pop();
   if (last === 'doc') last = parts.pop();
   if (parts.includes('ng-zorro-antd')) {
-    return `https://ng.ant.design/components/${last}/${zone}`;
+    return `/components/${last}/${zone}`;
   } else if (parts.includes('abc')) {
     return `https://ng-alain.com/components/${last}/${zone}`;
   } else if (parts.includes('chart')) {
