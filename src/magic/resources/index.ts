@@ -30,9 +30,12 @@ function getPure(value: string): string {
   });
 }
 
-function getFullDoc(doc: string): string {
-  if (doc.startsWith('http')) return doc;
-  return (CONFIG.language === 'zh-CN' ? 'https://ng-zorro.gitee.io' : 'https://ng.ant.design') + doc;
+function getFullDoc(item: Directive): string {
+  if (item.doc.startsWith('http')) return item.doc;
+  if (item.lib === 'ng-zorro-antd') {
+    return (CONFIG.language === 'zh-CN' ? 'https://ng-zorro.gitee.io' : 'https://ng.ant.design') + item.doc;
+  }
+  return (CONFIG.language === 'zh-CN' ? 'https://ng-alain.com' : 'https://netlify.ng-alain.com') + item.doc;
 }
 
 function genComponentMarkdown(item: Directive): string {
@@ -46,7 +49,7 @@ function genComponentMarkdown(item: Directive): string {
   }
 
   if (item.doc) {
-    rows.push(`[${i18n('document')}](${getFullDoc(item.doc)})${item.github ? ` － [${i18n('github')}](${item.github})` : ''}`);
+    rows.push(`[${i18n('document')}](${getFullDoc(item)})${item.github ? ` － [${i18n('github')}](${item.github})` : ''}`);
   }
 
   return rows.filter(w => !!w).join('\n\n');

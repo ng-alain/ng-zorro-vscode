@@ -484,7 +484,7 @@
     "title": "简易栅格",
     "description": "简化栅格系统运用的高阶组件，它由 `sg-container` 容器（指令）和 `sg` 组件组合代替一个响应式布局：",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/grid/zh",
+    "doc": "/components/grid/zh",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/grid"
   },
   {
@@ -550,7 +550,7 @@
     "title": "简易栅格",
     "description": "简化栅格系统运用的高阶组件，它由 `sg-container` 容器（指令）和 `sg` 组件组合代替一个响应式布局：",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/grid/zh",
+    "doc": "/components/grid/zh",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/grid"
   },
   {
@@ -580,7 +580,7 @@
     "title": "简易栅格",
     "description": "简化栅格系统运用的高阶组件，它由 `sg-container` 容器（指令）和 `sg` 组件组合代替一个响应式布局：",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/grid/zh",
+    "doc": "/components/grid/zh",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/grid"
   },
   {
@@ -11742,7 +11742,7 @@
     "title": "用户头像列表",
     "description": "一组用户头像，常用在项目/团队成员列表。可通过设置 `size` 属性来指定头像大小。",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/avatar-list/zh",
+    "doc": "/components/avatar-list/zh",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/avatar-list"
   },
   {
@@ -11788,7 +11788,7 @@
     "title": "用户头像列表",
     "description": "一组用户头像，常用在项目/团队成员列表。可通过设置 `size` 属性来指定头像大小。",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/avatar-list/zh",
+    "doc": "/components/avatar-list/zh",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/avatar-list"
   },
   {
@@ -11842,7 +11842,7 @@
     "title": "倒计时",
     "description": "倒计时组件，依赖 [ngx-countdown](https://github.com/cipchk/ngx-countdown)。",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/count-down/zh",
+    "doc": "/components/count-down/zh",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/count-down"
   },
   {
@@ -12046,7 +12046,7 @@
     "title": "日期范围",
     "description": "基于 `nz-range-picker` 进一步优化，更好的服务于开始与结束日期。",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/date-picker/zh",
+    "doc": "/components/date-picker/zh",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/date-picker"
   },
   {
@@ -12109,7 +12109,7 @@
     "title": "下载文件",
     "description": "一个基于 `blob` 的文件下载。",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/down-file/zh",
+    "doc": "/components/down-file/zh",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/down-file"
   },
   {
@@ -12237,7 +12237,7 @@
     "title": "编辑",
     "description": "简化表单HTML模板的高阶组件，并进一步优化了一些细节：",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/edit/zh",
+    "doc": "/components/edit/zh",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/edit"
   },
   {
@@ -12365,7 +12365,7 @@
     "title": "编辑",
     "description": "简化表单HTML模板的高阶组件，并进一步优化了一些细节：",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/edit/zh",
+    "doc": "/components/edit/zh",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/edit"
   },
   {
@@ -12467,7 +12467,7 @@
     "title": "编辑",
     "description": "简化表单HTML模板的高阶组件，并进一步优化了一些细节：",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/edit/zh",
+    "doc": "/components/edit/zh",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/edit"
   },
   {
@@ -12480,7 +12480,7 @@
     "lib": "@delon/abc",
     "title": "编辑",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/edit/zh",
+    "doc": "/components/edit/zh",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/edit"
   },
   {
@@ -12493,7 +12493,7 @@
     "lib": "@delon/abc",
     "title": "编辑",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/edit/zh",
+    "doc": "/components/edit/zh",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/edit"
   },
   {
@@ -12516,7 +12516,7 @@
     "title": "文本自动省略号",
     "description": "一个简单的文本自动省略号。",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/ellipsis/zh",
+    "doc": "/components/ellipsis/zh",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/ellipsis"
   },
   {
@@ -12548,7 +12548,7 @@
     "title": "表单异常消息采集器",
     "description": "一个简单的表单异常消息采集器，点击图标跳转相应的位置；必须是一个标准 `form` 表单。",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/error-collect/zh",
+    "doc": "/components/error-collect/zh",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/error-collect"
   },
   {
@@ -12580,7 +12580,7 @@
     "title": "表单异常消息采集器",
     "description": "一个简单的表单异常消息采集器，点击图标跳转相应的位置；必须是一个标准 `form` 表单。",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/error-collect/zh",
+    "doc": "/components/error-collect/zh",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/error-collect"
   },
   {
@@ -12631,7 +12631,7 @@
     "title": "异常",
     "description": "异常页用于对页面特定的异常状态进行反馈。通常，它包含对错误状态的阐述，并向用户提供建议或操作，避免用户感到迷失和困惑。",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/exception/zh",
+    "doc": "/components/exception/zh",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/exception"
   },
   {
@@ -12662,7 +12662,7 @@
     "title": "底部工具栏",
     "description": "固定在底部的工具栏。",
     "whenToUse": "固定在内容区域的底部，不随滚动条移动，常用于长页面的数据搜集和提交工作。",
-    "doc": "https://ng-alain.com/components/footer-toolbar/zh",
+    "doc": "/components/footer-toolbar/zh",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/footer-toolbar"
   },
   {
@@ -12702,7 +12702,7 @@
     "title": "全屏工作区",
     "description": "全屏工作区，常用于带有滚动条表格，一个在线[示例](https://ng-alain.github.io/ng-alain/#/delon/simple-table)。",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/full-content/zh",
+    "doc": "/components/full-content/zh",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/full-content"
   },
   {
@@ -12715,7 +12715,7 @@
     "lib": "@delon/abc",
     "title": "全屏工作区",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/full-content/zh",
+    "doc": "/components/full-content/zh",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/full-content"
   },
   {
@@ -12774,7 +12774,7 @@
     "title": "全局页脚",
     "description": "页脚属于全局导航的一部分，作为对顶部导航的补充，通过传递数据控制展示内容。",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/global-footer/zh",
+    "doc": "/components/global-footer/zh",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/global-footer"
   },
   {
@@ -12805,7 +12805,7 @@
     "title": "全局页脚",
     "description": "页脚属于全局导航的一部分，作为对顶部导航的补充，通过传递数据控制展示内容。",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/global-footer/zh",
+    "doc": "/components/global-footer/zh",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/global-footer"
   },
   {
@@ -12983,7 +12983,7 @@
     "title": "通知菜单",
     "description": "用在导航工具栏上，作为整个产品统一的通知中心。",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/notice-icon/zh",
+    "doc": "/components/notice-icon/zh",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/notice-icon"
   },
   {
@@ -13143,7 +13143,7 @@
     "title": "页头",
     "description": "页头用来声明页面的主题，包含了用户所关注的最重要的信息，使用户可以快速理解当前页面是什么以及它的功能。",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/page-header/zh",
+    "doc": "/components/page-header/zh",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/page-header"
   },
   {
@@ -13245,7 +13245,7 @@
     "title": "二维码",
     "description": "基于 [qrious](https://neocotic.com/qrious) 生成二维码。",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/qr/zh",
+    "doc": "/components/qr/zh",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/qr"
   },
   {
@@ -13304,7 +13304,7 @@
     "title": "快速菜单",
     "description": "快速菜单，用于右侧隐式辅助列表。",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/quick-menu/zh",
+    "doc": "/components/quick-menu/zh",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/quick-menu"
   },
   {
@@ -13350,7 +13350,7 @@
     "title": "处理结果",
     "description": "结果页用于对用户进行的一系列任务处理结果进行反馈。",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/result/zh",
+    "doc": "/components/result/zh",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/result"
   },
   {
@@ -13459,7 +13459,7 @@
     "title": "路由复用标签",
     "description": "复用标签在中台系统非常常见，本质是解决不同路由页切换时组件数据不丢失问题。",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/reuse-tab/zh",
+    "doc": "/components/reuse-tab/zh",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/reuse-tab"
   },
   {
@@ -13508,7 +13508,7 @@
     "title": "主菜单",
     "description": "ng-alain 左边主菜单，依赖于 `@delon/theme`。",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/sidebar-nav/zh",
+    "doc": "/components/sidebar-nav/zh",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sidebar-nav"
   },
   {
@@ -13955,7 +13955,7 @@
     "title": "表格",
     "description": "`st` 并不是在创造另一个表格组件，而是在 `nz-table` 基础上以**可配置**形式渲染表格，在中后台里这种方式可以满足绝大多数场景，但又可以更易地管理表格渲染动作。",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/table/zh",
+    "doc": "/components/table/zh",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/table"
   },
   {
@@ -13986,7 +13986,7 @@
     "title": "标签选择器",
     "description": "增加标签的展开与收进功能。",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/tag-select/zh",
+    "doc": "/components/tag-select/zh",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/tag-select"
   },
   {
@@ -14078,7 +14078,7 @@
     "title": "查看",
     "description": "查看栅格系统是在原 [Grid 栅格](https://ng.ant.design/components/grid/zh) 基础上构建更高阶的组件，用于简化查看页布局。",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/view/zh",
+    "doc": "/components/view/zh",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/view"
   },
   {
@@ -14170,7 +14170,7 @@
     "title": "查看",
     "description": "查看栅格系统是在原 [Grid 栅格](https://ng.ant.design/components/grid/zh) 基础上构建更高阶的组件，用于简化查看页布局。",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/view/zh",
+    "doc": "/components/view/zh",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/view"
   },
   {
@@ -14238,7 +14238,7 @@
     "title": "查看",
     "description": "查看栅格系统是在原 [Grid 栅格](https://ng.ant.design/components/grid/zh) 基础上构建更高阶的组件，用于简化查看页布局。",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/view/zh",
+    "doc": "/components/view/zh",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/view"
   },
   {
@@ -14251,7 +14251,7 @@
     "lib": "@delon/abc",
     "title": "查看",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/view/zh",
+    "doc": "/components/view/zh",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/view"
   },
   {
@@ -14264,7 +14264,7 @@
     "lib": "@delon/abc",
     "title": "查看",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/view/zh",
+    "doc": "/components/view/zh",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/view"
   },
   {
@@ -14277,7 +14277,7 @@
     "lib": "@delon/abc",
     "title": "Excel 操作",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/components/xlsx/zh",
+    "doc": "/components/xlsx/zh",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/xlsx"
   },
   {
@@ -14352,7 +14352,7 @@
     "title": "柱状图",
     "description": "使用垂直的柱子显示类别之间的数值比较。其中一个轴表示需要对比的分类维度，另一个轴代表相应的数值。",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/chart/bar/zh",
+    "doc": "/chart/bar/zh",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/bar"
   },
   {
@@ -14423,7 +14423,7 @@
     "title": "图表卡片",
     "description": "图表卡片，用于展示图表的卡片容器，可以方便的配合其它图表套件展示丰富信息。",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/chart/card/zh",
+    "doc": "/chart/card/zh",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/card"
   },
   {
@@ -14478,7 +14478,7 @@
     "title": "自定义图表",
     "description": "使用 `g2-custom` 组件可以更快速的封装自己的图表组件。",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/chart/custom/zh",
+    "doc": "/chart/custom/zh",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/custom"
   },
   {
@@ -14560,7 +14560,7 @@
     "title": "仪表盘",
     "description": "一种进度展示方式，可以更直观的展示当前的进展情况，通常也可表示占比。",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/chart/gauge/zh",
+    "doc": "/chart/gauge/zh",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/gauge"
   },
   {
@@ -14681,7 +14681,7 @@
     "title": "迷你区域图",
     "description": "面积图又叫区域图。 它是在折线图的基础之上形成的, 它将折线图中折线与自变量坐标轴之间的区域使用颜色或者纹理填充，这样一个填充区域我们叫做面积，颜色的填充可以更好的突出趋势信息。",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/chart/mini-area/zh",
+    "doc": "/chart/mini-area/zh",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/mini-area"
   },
   {
@@ -14768,7 +14768,7 @@
     "title": "迷你柱状图",
     "description": "迷你柱状图更适合展示简单的区间数据，简洁的表现方式可以很好的减少大数据量的视觉展现压力。",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/chart/mini-bar/zh",
+    "doc": "/chart/mini-bar/zh",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/mini-bar"
   },
   {
@@ -14814,7 +14814,7 @@
     "title": "迷你进度条",
     "description": "用于显示跟速度相关图形再适合不过。",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/chart/mini-progress/zh",
+    "doc": "/chart/mini-progress/zh",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/mini-progress"
   },
   {
@@ -14902,7 +14902,7 @@
     "title": "数据文本",
     "description": "常用在数据卡片中，用于突出展示某个业务数据。",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/chart/number-info/zh",
+    "doc": "/chart/number-info/zh",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/number-info"
   },
   {
@@ -15045,7 +15045,7 @@
     "title": "饼状图",
     "description": "用于显示跟速度相关图形再适合不过。",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/chart/pie/zh",
+    "doc": "/chart/pie/zh",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/pie"
   },
   {
@@ -15118,7 +15118,7 @@
     "title": "雷达图",
     "description": "雷达图是以相同点开始的轴上表示的三个或更多个定量变量的二维图形的形式显示多变量数据的图形方法。轴的相对位置和角度通常是不知情的。",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/chart/radar/zh",
+    "doc": "/chart/radar/zh",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/radar"
   },
   {
@@ -15230,7 +15230,7 @@
     "title": "单一柱状图",
     "description": "单一柱状图更适合在列表中展示简单的区间数据，简洁的表现方式可以很好的减少大数据量的视觉展现压力。",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/chart/single-bar/zh",
+    "doc": "/chart/single-bar/zh",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/single-bar"
   },
   {
@@ -15271,7 +15271,7 @@
     "title": "标签云",
     "description": "标签云是一套相关的标签以及与此相应的权重展示方式，一般典型的标签云有 30 至 150 个标签，而权重影响使用的字体大小或其他视觉效果。",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/chart/tag-cloud/zh",
+    "doc": "/chart/tag-cloud/zh",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/tag-cloud"
   },
   {
@@ -15387,7 +15387,7 @@
     "title": "折线图",
     "description": "使用 `timeline` 组件可以实现带有时间轴的柱状图展现，而其中的 `x` 属性，则是时间值的指向，默认最多支持同时展现两个指标，分别是 `y1` 和 `y2`。",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/chart/timeline/zh",
+    "doc": "/chart/timeline/zh",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/timeline"
   },
   {
@@ -15431,7 +15431,7 @@
     "title": "趋势标记",
     "description": "趋势符号，标记上升和下降趋势。通常用绿色代表“好”，红色代表“不好”，股票涨跌场景除外。",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/chart/trend/zh",
+    "doc": "/chart/trend/zh",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/trend"
   },
   {
@@ -15479,7 +15479,7 @@
     "title": "水波图",
     "description": "水波图是一种比例的展示方式，可以更直观的展示关键值的占比。",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/chart/water-wave/zh",
+    "doc": "/chart/water-wave/zh",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/water-wave"
   },
   {
@@ -15665,7 +15665,7 @@
     "title": "开始使用",
     "description": "@delon/form 是一个基于 [JSON Schema](http://json-schema.org/) 标准的动态构建表单。",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/form/getting-started/zh",
+    "doc": "/form/getting-started/zh",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/form/src"
   },
   {
@@ -15851,7 +15851,7 @@
     "title": "开始使用",
     "description": "@delon/form 是一个基于 [JSON Schema](http://json-schema.org/) 标准的动态构建表单。",
     "whenToUse": "",
-    "doc": "https://ng-alain.com/form/getting-started/zh",
+    "doc": "/form/getting-started/zh",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/form/src"
   },
   {

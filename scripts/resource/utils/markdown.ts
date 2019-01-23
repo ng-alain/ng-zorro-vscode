@@ -86,11 +86,11 @@ function getDocUrl(zone: string, filePath: string) {
   if (parts.includes('ng-zorro-antd')) {
     return `/components/${last}/${zone}`;
   } else if (parts.includes('abc')) {
-    return `https://ng-alain.com/components/${last}/${zone}`;
+    return `/components/${last}/${zone}`;
   } else if (parts.includes('chart')) {
-    return `https://ng-alain.com/chart/${last}/${zone}`;
+    return `/chart/${last}/${zone}`;
   } else if (parts.includes('form')) {
-    return `https://ng-alain.com/form/getting-started/${zone}`;
+    return `/form/getting-started/${zone}`;
   }
   return '';
 }
