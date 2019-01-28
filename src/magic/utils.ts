@@ -2,32 +2,57 @@ import { Position, Range, TextDocument } from 'vscode';
 import { Tag, TagAttr, InputAttrType, TagAttrValueType } from './interfaces';
 import { isComponent } from './resources';
 
+function getOffsetText(document: TextDocument, position: Position): { start: number; end: number; cursor: number; text: string } {
+  const text = document.getText();
+  const offset = document.offsetAt(position);
+  const maxEnd = text.length;
+  let start = offset - 1;
+  let end = offset;
+  let enterCount = 0;
+  while (start >= 0 && text[start] !== '<') {
+    if (text[start] === '\n') ++enterCount;
+    start--;
+  }
+  while (end <= maxEnd && text[end] !== '>') {
+    end++;
+  }
+
+  const cursor = offset - start - enterCount;
+
+  return {
+    start,
+    end,
+    cursor,
+    text: text.slice(start, end).replace(/\n/g, ''),
+  };
+}
+
 export function getTag(doc: TextDocument, pos: Position, includeAttr = true): Tag {
-  const line = doc.lineAt(pos.line).text;
+  const offsetText = getOffsetText(doc, pos); // doc.lineAt(pos.line).text;
   const replacer = (char: string) => (raw: string) => char.repeat(raw.length);
-  const pureLine = line.replace(/\{\{[^\}]*?\}\}/g, replacer('^'));
+  const pureLine = offsetText.text.replace(/\{\{[^\}]*?\}\}/g, replacer('^'));
   const attrFlagLine = pureLine.replace(/("[^"]*"|'[^']*')/g, replacer('%'));
   let tag: Tag;
   let attrstr = '';
 
   pureLine.replace(/<([\-\w]+)(\s+[^>]*)?/g, (raw: string, name: string, attr: string, index: number) => {
-    attrstr = line.substr(index + raw.indexOf(attr));
+    attrstr = offsetText.text.substr(index + raw.indexOf(attr));
 
-    if (!tag && index <= pos.character && index + raw.length >= pos.character) {
+    if (!tag && index <= offsetText.cursor && index + raw.length >= offsetText.cursor) {
       let range = doc.getWordRangeAtPosition(pos, /\b[\w-:.]+\b/);
       let posWord = '';
       let attrName = '';
       if (range) {
         posWord = doc.getText(range);
       }
-      let isOnTagName = pos.character <= index + name.length + 1;
+      let isOnTagName = offsetText.cursor <= index + name.length + 1;
       // fix directive
       if (!isOnTagName && isComponent(posWord)) {
         isOnTagName = true;
       }
-      let isOnAttrValue = attrFlagLine[pos.character] === '%';
+      let isOnAttrValue = attrFlagLine[offsetText.cursor] === '%';
       if (isOnAttrValue) {
-        attrName = getAttrName(attrFlagLine.substring(0, pos.character));
+        attrName = getAttrName(attrFlagLine.substring(0, offsetText.cursor));
       }
       let isOnAttrName = !isOnTagName && !isOnAttrValue && !!posWord;
       tag = {
