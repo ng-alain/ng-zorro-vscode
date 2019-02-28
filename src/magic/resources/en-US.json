@@ -584,89 +584,366 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/grid"
   },
   {
-    "_idx": 22,
+    "_idx": 15,
     "type": "component",
-    "selector": "nz-timeline",
+    "selector": "nz-affix",
     "types": {},
     "properties": [
       {
-        "name": "nzPending",
+        "name": "nzOffsetBottom",
         "inputType": 0,
-        "description": "Set the last ghost node's existence or its content",
-        "type": "string",
-        "typeRaw": "`string｜boolean｜TemplateRef<void>`",
-        "default": "`false`",
-        "pureDefault": "false"
+        "description": "Pixels to offset from bottom when calculating position of scroll",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": ""
       },
       {
-        "name": "nzPendingDot",
+        "name": "nzOffsetTop",
         "inputType": 0,
-        "description": "Set the dot of the last ghost node when pending is true",
-        "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
-        "default": "`<i nz-icon type=\"loading\"></i>`",
-        "pureDefault": "<i nz-icon type=\"loading\"></i>"
+        "description": "Pixels to offset from top when calculating position of scroll",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`0`",
+        "pureDefault": "0"
       },
       {
-        "name": "nzReverse",
+        "name": "nzTarget",
         "inputType": 0,
-        "description": "Reverse nodes or not",
+        "description": "specifies the scrollable area dom node",
+        "type": "string",
+        "typeRaw": "`string｜HTMLElement`",
+        "default": "`window`",
+        "pureDefault": "window"
+      },
+      {
+        "name": "nzChange",
+        "inputType": 1,
+        "description": "Callback for when affix state is changed",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<boolean>`",
+        "default": ""
+      }
+    ],
+    "lib": "ng-zorro-antd",
+    "title": "Affix",
+    "description": "Make an element stick to viewport.",
+    "whenToUse": "When user browses a long web page, some content need to stick to the viewport. This is common for menus and actions.",
+    "doc": "/components/affix/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/affix"
+  },
+  {
+    "_idx": 21,
+    "type": "component",
+    "selector": "nz-alert",
+    "types": {},
+    "properties": [
+      {
+        "name": "nzBanner",
+        "inputType": 0,
+        "description": "Whether to show as banner",
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
         "pureDefault": "false"
       },
       {
-        "name": "nzMode",
+        "name": "nzClosable",
         "inputType": 0,
-        "description": "By sending `alternate` the timeline will distribute the nodes to the left and right",
+        "description": "Whether Alert can be closed",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": ""
+      },
+      {
+        "name": "nzCloseText",
+        "inputType": 0,
+        "description": "Close text to show",
+        "type": "string",
+        "typeRaw": "`string｜TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "nzDescription",
+        "inputType": 0,
+        "description": "Additional content of Alert",
+        "type": "string",
+        "typeRaw": "`string｜TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "nzMessage",
+        "inputType": 0,
+        "description": "Content of Alert",
+        "type": "string",
+        "typeRaw": "`string｜TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "nzShowIcon",
+        "inputType": 0,
+        "description": "Whether to show icon, in `nzBanner` mode default is `true`",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzIconType",
+        "inputType": 0,
+        "description": "Icon type, effective when `nzShowIcon` is `true`",
+        "type": "string",
+        "typeRaw": "`string｜string[]｜Set<string>｜{ [klass: string]: any; }`",
+        "default": ""
+      },
+      {
+        "name": "nzType",
+        "inputType": 0,
+        "description": "Type of Alert styles, in `nzBanner` mode default is `'warning'`",
         "type": "Enum",
-        "typeRaw": "`'left'｜'alternate'｜'right'`",
-        "default": "",
+        "typeRaw": "`'success'｜'info'｜'warning'｜'error'`",
+        "default": "`'info'`",
         "typeDefinition": [
-          "left",
-          "alternate",
-          "right"
-        ]
+          "success",
+          "info",
+          "warning",
+          "error"
+        ],
+        "pureDefault": "info"
+      },
+      {
+        "name": "nzOnClose",
+        "inputType": 1,
+        "description": "Callback when Alert is closed",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<void>`",
+        "default": ""
       }
     ],
-    "description": "Timeline",
     "lib": "ng-zorro-antd",
-    "title": "Timeline",
-    "whenToUse": "- When a series of information needs to be ordered by time (ascend or descend).\n- When you need a timeline to make a visual connection.",
-    "doc": "/components/timeline/en",
-    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/timeline"
+    "title": "Alert",
+    "description": "Alert component for feedback.",
+    "whenToUse": "- When you need to show alert messages to users.\n- When you need a persistent static container which is closable by user actions.",
+    "doc": "/components/alert/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/alert"
   },
   {
-    "_idx": 104,
+    "_idx": 12,
     "type": "component",
-    "selector": "nz-timeline-item",
+    "selector": "nz-anchor",
     "types": {},
     "properties": [
       {
-        "name": "nzColor",
+        "name": "nzAffix",
         "inputType": 0,
-        "description": "Set the circle's color to `blue`, `red`, `green` or other custom colors (css color)",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": "`blue`",
-        "pureDefault": "blue"
+        "description": "Fixed mode of Anchor",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`true`",
+        "pureDefault": "true"
       },
       {
-        "name": "nzDot",
+        "name": "nzBounds",
         "inputType": 0,
-        "description": "Customize timeline dot",
+        "description": "Bounding distance of anchor area, unit: px",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`5`",
+        "pureDefault": "5"
+      },
+      {
+        "name": "nzOffsetBottom",
+        "inputType": 0,
+        "description": "Pixels to offset from bottom when calculating position of scroll",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": ""
+      },
+      {
+        "name": "nzOffsetTop",
+        "inputType": 0,
+        "description": "Pixels to offset from top when calculating position of scroll",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`0`",
+        "pureDefault": "0"
+      },
+      {
+        "name": "nzShowInkInFixed",
+        "inputType": 0,
+        "description": "Whether show ink-balls in Fixed mode",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzTarget",
+        "inputType": 0,
+        "description": "Scrolling container",
+        "type": "string",
+        "typeRaw": "`string｜HTMLElement`",
+        "default": "`window`",
+        "pureDefault": "window"
+      },
+      {
+        "name": "nzClick",
+        "inputType": 1,
+        "description": "Click of Anchor item",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<string>`",
+        "default": ""
+      },
+      {
+        "name": "nzScroll",
+        "inputType": 1,
+        "description": "The scroll function that is triggered when scrolling to an anchor.",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<NzAnchorLinkComponent>`",
+        "default": ""
+      }
+    ],
+    "lib": "ng-zorro-antd",
+    "title": "Anchor",
+    "description": "Hyperlinks to scroll on one page.",
+    "whenToUse": "For displaying anchor hyperlinks on page and jumping between them.",
+    "doc": "/components/anchor/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/anchor"
+  },
+  {
+    "_idx": 147,
+    "type": "component",
+    "selector": "nz-link",
+    "types": {},
+    "properties": [
+      {
+        "name": "nzHref",
+        "inputType": 0,
+        "description": "target of hyperlink",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
+      },
+      {
+        "name": "nzTitle",
+        "inputType": 0,
+        "description": "content of  hyperlink",
         "type": "string",
         "typeRaw": "`string｜TemplateRef<void>`",
         "default": ""
       }
     ],
-    "description": "Node of timeline",
     "lib": "ng-zorro-antd",
-    "title": "Timeline",
-    "whenToUse": "- When a series of information needs to be ordered by time (ascend or descend).\n- When you need a timeline to make a visual connection.",
-    "doc": "/components/timeline/en",
-    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/timeline"
+    "title": "Anchor",
+    "description": "Hyperlinks to scroll on one page.",
+    "whenToUse": "For displaying anchor hyperlinks on page and jumping between them.",
+    "doc": "/components/anchor/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/anchor"
+  },
+  {
+    "_idx": 51,
+    "type": "component",
+    "selector": "nz-autocomplete",
+    "types": {},
+    "properties": [
+      {
+        "name": "nzBackfill",
+        "inputType": 0,
+        "description": "backfill selected item the input when using keyboard",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzDataSource",
+        "inputType": 0,
+        "description": "Data source for autocomplete",
+        "type": "object",
+        "typeRaw": "`AutocompleteDataSource`",
+        "default": ""
+      },
+      {
+        "name": "nzDefaultActiveFirstOption",
+        "inputType": 0,
+        "description": "Whether active first option by default",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`true`",
+        "pureDefault": "true"
+      },
+      {
+        "name": "nzWidth",
+        "inputType": 0,
+        "description": "Custom width, unit px",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "trigger element width",
+        "pureDefault": "trigger element width"
+      },
+      {
+        "name": "nzOverlayClassName",
+        "inputType": 0,
+        "description": "Class name of the dropdown root element",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
+      },
+      {
+        "name": "nzOverlayStyle",
+        "inputType": 0,
+        "description": "Style of the dropdown root element",
+        "type": "object",
+        "typeRaw": "`object`",
+        "default": "",
+        "forceInputType": 0
+      }
+    ],
+    "lib": "ng-zorro-antd",
+    "title": "Autocomplete",
+    "description": "Autocomplete function of input field.",
+    "whenToUse": "When there is a need for autocomplete functionality.",
+    "doc": "/components/auto-complete/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/auto-complete"
+  },
+  {
+    "_idx": 158,
+    "type": "component",
+    "selector": "nz-auto-option",
+    "types": {},
+    "properties": [
+      {
+        "name": "nzValue",
+        "inputType": 0,
+        "description": "bind ngModel of the trigger element",
+        "type": "object",
+        "typeRaw": "`any`",
+        "default": ""
+      },
+      {
+        "name": "nzLabel",
+        "inputType": 0,
+        "description": "display value of the trigger element",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
+      },
+      {
+        "name": "nzDisabled",
+        "inputType": 0,
+        "description": "disabled option",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false",
+        "forceInputType": 0
+      }
+    ],
+    "lib": "ng-zorro-antd",
+    "title": "Autocomplete",
+    "description": "Autocomplete function of input field.",
+    "whenToUse": "When there is a need for autocomplete functionality.",
+    "doc": "/components/auto-complete/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/auto-complete"
   },
   {
     "_idx": 6,
@@ -793,7 +1070,7 @@
         "inputType": 0,
         "description": "Number to show in badge",
         "type": "number",
-        "typeRaw": "`number`",
+        "typeRaw": "`number｜TemplateRef<void>`",
         "default": ""
       },
       {
@@ -923,12 +1200,13 @@
       {
         "name": "nzShape",
         "inputType": 0,
-        "description": "can be set to `circle` or omitted",
+        "description": "can be set to `circle` `round` or omitted",
         "type": "Enum",
-        "typeRaw": "`'circle'`",
+        "typeRaw": "`'circle'｜'round'`",
         "default": "",
         "typeDefinition": [
-          "circle"
+          "circle",
+          "round"
         ]
       },
       {
@@ -948,13 +1226,12 @@
       {
         "name": "nzType",
         "inputType": 0,
-        "description": "can be set to `primary` `ghost` `dashed` `danger` or omitted (meaning `default`)",
+        "description": "can be set to `primary` `dashed` `danger` or omitted (meaning `default`)",
         "type": "Enum",
-        "typeRaw": "`'primary'｜'ghost'｜'dashed'｜'danger'｜'default'`",
+        "typeRaw": "`'primary'｜'dashed'｜'danger'｜'default'`",
         "default": "`'default'`",
         "typeDefinition": [
           "primary",
-          "ghost",
           "dashed",
           "danger",
           "default"
@@ -1069,6 +1346,14 @@
         "description": "(Contentable) Customize the display of the month cell, the template content will override the cell",
         "type": "TemplateRef",
         "typeRaw": "`TemplateRef<Date>`",
+        "default": ""
+      },
+      {
+        "name": "nzPanelChange",
+        "inputType": 1,
+        "description": "Callback for when panel changes",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<{ date: Date, mode: 'month'｜'year' }>`",
         "default": ""
       }
     ],
@@ -1433,7 +1718,7 @@
         "inputType": 0,
         "description": "Specify content to show when no result matches.",
         "type": "string",
-        "typeRaw": "`string`",
+        "typeRaw": "`string｜TemplateRef<void>`",
         "default": ""
       },
       {
@@ -1800,6 +2085,14 @@
         "type": "EventEmitter",
         "typeRaw": "`EventEmitter<boolean>`",
         "default": ""
+      },
+      {
+        "name": "nzExpandedIcon",
+        "inputType": 0,
+        "description": "Customize an icon for toggle",
+        "type": "string",
+        "typeRaw": "`string｜TemplateRef<void>`",
+        "default": ""
       }
     ],
     "lib": "ng-zorro-antd",
@@ -1868,7 +2161,7 @@
       {
         "name": "nzDisabledDate",
         "inputType": 0,
-        "description": "specify the date that cannot be selected (Not support by year-picker)",
+        "description": "specify the date that cannot be selected",
         "type": "function",
         "typeRaw": "`(current: Date) => boolean`",
         "default": "",
@@ -1963,11 +2256,11 @@
       {
         "name": "nzFormat",
         "inputType": 0,
-        "description": "to set the date format, refer to [DatePipe](https://angular.io/api/common/DatePipe)",
+        "description": "to set the date format, see `nzFormat special instructions`",
         "type": "string",
         "typeRaw": "`string`",
-        "default": "`\"yyyy-MM-dd\"`",
-        "pureDefault": "yyyy-MM-dd"
+        "default": "`\"yyyy-MM-DD\"`",
+        "pureDefault": "yyyy-MM-DD"
       },
       {
         "name": "nzRenderExtraFooter",
@@ -2092,7 +2385,7 @@
       {
         "name": "nzDisabledDate",
         "inputType": 0,
-        "description": "specify the date that cannot be selected (Not support by year-picker)",
+        "description": "specify the date that cannot be selected",
         "type": "function",
         "typeRaw": "`(current: Date) => boolean`",
         "default": "",
@@ -2179,7 +2472,7 @@
       {
         "name": "nzFormat",
         "inputType": 0,
-        "description": "to set the date format, refer to [DatePipe](https://angular.io/api/common/DatePipe)",
+        "description": "to set the date format, see `nzFormat special instructions`",
         "type": "string",
         "typeRaw": "`string`",
         "default": "`\"yyyy\"`",
@@ -2276,7 +2569,7 @@
       {
         "name": "nzDisabledDate",
         "inputType": 0,
-        "description": "specify the date that cannot be selected (Not support by year-picker)",
+        "description": "specify the date that cannot be selected",
         "type": "function",
         "typeRaw": "`(current: Date) => boolean`",
         "default": "",
@@ -2363,7 +2656,7 @@
       {
         "name": "nzFormat",
         "inputType": 0,
-        "description": "to set the date format, refer to [DatePipe](https://angular.io/api/common/DatePipe)",
+        "description": "to set the date format, see `nzFormat special instructions`",
         "type": "string",
         "typeRaw": "`string`",
         "default": "`\"yyyy-MM\"`",
@@ -2466,7 +2759,7 @@
       {
         "name": "nzDisabledDate",
         "inputType": 0,
-        "description": "specify the date that cannot be selected (Not support by year-picker)",
+        "description": "specify the date that cannot be selected",
         "type": "function",
         "typeRaw": "`(current: Date) => boolean`",
         "default": "",
@@ -2553,7 +2846,7 @@
       {
         "name": "nzFormat",
         "inputType": 0,
-        "description": "to set the date format, refer to [DatePipe](https://angular.io/api/common/DatePipe)",
+        "description": "to set the date format, see `nzFormat special instructions`",
         "type": "string",
         "typeRaw": "`string`",
         "default": "`\"yyyy-ww\"`",
@@ -2648,7 +2941,7 @@
       {
         "name": "nzDisabledDate",
         "inputType": 0,
-        "description": "specify the date that cannot be selected (Not support by year-picker)",
+        "description": "specify the date that cannot be selected",
         "type": "function",
         "typeRaw": "`(current: Date) => boolean`",
         "default": "",
@@ -2743,7 +3036,7 @@
       {
         "name": "nzFormat",
         "inputType": 0,
-        "description": "to set the date format",
+        "description": "to set the date format, see `nzFormat special instructions`",
         "type": "string",
         "typeRaw": "`string`",
         "default": "`\"yyyy-MM-dd\"`",
@@ -4066,2970 +4359,21 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/form"
   },
   {
-    "_idx": 15,
-    "type": "component",
-    "selector": "nz-affix",
-    "types": {},
-    "properties": [
-      {
-        "name": "nzOffsetBottom",
-        "inputType": 0,
-        "description": "Pixels to offset from bottom when calculating position of scroll",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": ""
-      },
-      {
-        "name": "nzOffsetTop",
-        "inputType": 0,
-        "description": "Pixels to offset from top when calculating position of scroll",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "`0`",
-        "pureDefault": "0"
-      },
-      {
-        "name": "nzTarget",
-        "inputType": 0,
-        "description": "specifies the scrollable area dom node",
-        "type": "string",
-        "typeRaw": "`string｜HTMLElement`",
-        "default": "`window`",
-        "pureDefault": "window"
-      },
-      {
-        "name": "nzChange",
-        "inputType": 1,
-        "description": "Callback for when affix state is changed",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<boolean>`",
-        "default": ""
-      }
-    ],
-    "lib": "ng-zorro-antd",
-    "title": "Affix",
-    "description": "Make an element stick to viewport.",
-    "whenToUse": "When user browses a long web page, some content need to stick to the viewport. This is common for menus and actions.",
-    "doc": "/components/affix/en",
-    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/affix"
-  },
-  {
     "_idx": 20,
     "type": "directive",
     "selector": "nz-icon",
     "types": {},
     "properties": [
       {
-        "name": "type",
+        "name": "nzType",
         "inputType": 0,
         "description": "Type of the ant design icon",
         "type": "string",
         "typeRaw": "`string`",
-        "default": "",
-        "typeDefinition": {
-          "type": "complex",
-          "conditionField": "theme",
-          "list": [
-            {
-              "conditionValue": "outline",
-              "values": [
-                {
-                  "value": "account-book",
-                  "label": "account-book"
-                },
-                {
-                  "value": "alert",
-                  "label": "alert"
-                },
-                {
-                  "value": "alipay-circle",
-                  "label": "alipay-circle"
-                },
-                {
-                  "value": "aliwangwang",
-                  "label": "aliwangwang"
-                },
-                {
-                  "value": "android",
-                  "label": "android"
-                },
-                {
-                  "value": "api",
-                  "label": "api"
-                },
-                {
-                  "value": "appstore",
-                  "label": "appstore"
-                },
-                {
-                  "value": "apple",
-                  "label": "apple"
-                },
-                {
-                  "value": "audio",
-                  "label": "audio"
-                },
-                {
-                  "value": "bank",
-                  "label": "bank"
-                },
-                {
-                  "value": "bell",
-                  "label": "bell"
-                },
-                {
-                  "value": "book",
-                  "label": "book"
-                },
-                {
-                  "value": "behance-square",
-                  "label": "behance-square"
-                },
-                {
-                  "value": "box-plot",
-                  "label": "box-plot"
-                },
-                {
-                  "value": "build",
-                  "label": "build"
-                },
-                {
-                  "value": "backward",
-                  "label": "backward"
-                },
-                {
-                  "value": "calculator",
-                  "label": "calculator"
-                },
-                {
-                  "value": "calendar",
-                  "label": "calendar"
-                },
-                {
-                  "value": "camera",
-                  "label": "camera"
-                },
-                {
-                  "value": "car",
-                  "label": "car"
-                },
-                {
-                  "value": "caret-down",
-                  "label": "caret-down"
-                },
-                {
-                  "value": "bulb",
-                  "label": "bulb"
-                },
-                {
-                  "value": "caret-right",
-                  "label": "caret-right"
-                },
-                {
-                  "value": "caret-up",
-                  "label": "caret-up"
-                },
-                {
-                  "value": "caret-left",
-                  "label": "caret-left"
-                },
-                {
-                  "value": "carry-out",
-                  "label": "carry-out"
-                },
-                {
-                  "value": "check-circle",
-                  "label": "check-circle"
-                },
-                {
-                  "value": "chrome",
-                  "label": "chrome"
-                },
-                {
-                  "value": "check-square",
-                  "label": "check-square"
-                },
-                {
-                  "value": "clock-circle",
-                  "label": "clock-circle"
-                },
-                {
-                  "value": "close-circle",
-                  "label": "close-circle"
-                },
-                {
-                  "value": "close-square",
-                  "label": "close-square"
-                },
-                {
-                  "value": "cloud",
-                  "label": "cloud"
-                },
-                {
-                  "value": "code",
-                  "label": "code"
-                },
-                {
-                  "value": "codepen-circle",
-                  "label": "codepen-circle"
-                },
-                {
-                  "value": "contacts",
-                  "label": "contacts"
-                },
-                {
-                  "value": "compass",
-                  "label": "compass"
-                },
-                {
-                  "value": "container",
-                  "label": "container"
-                },
-                {
-                  "value": "control",
-                  "label": "control"
-                },
-                {
-                  "value": "copy",
-                  "label": "copy"
-                },
-                {
-                  "value": "credit-card",
-                  "label": "credit-card"
-                },
-                {
-                  "value": "crown",
-                  "label": "crown"
-                },
-                {
-                  "value": "customer-service",
-                  "label": "customer-service"
-                },
-                {
-                  "value": "dashboard",
-                  "label": "dashboard"
-                },
-                {
-                  "value": "delete",
-                  "label": "delete"
-                },
-                {
-                  "value": "diff",
-                  "label": "diff"
-                },
-                {
-                  "value": "database",
-                  "label": "database"
-                },
-                {
-                  "value": "dislike",
-                  "label": "dislike"
-                },
-                {
-                  "value": "down-circle",
-                  "label": "down-circle"
-                },
-                {
-                  "value": "dribbble-square",
-                  "label": "dribbble-square"
-                },
-                {
-                  "value": "edit",
-                  "label": "edit"
-                },
-                {
-                  "value": "environment",
-                  "label": "environment"
-                },
-                {
-                  "value": "exclamation-circle",
-                  "label": "exclamation-circle"
-                },
-                {
-                  "value": "experiment",
-                  "label": "experiment"
-                },
-                {
-                  "value": "eye-invisible",
-                  "label": "eye-invisible"
-                },
-                {
-                  "value": "down-square",
-                  "label": "down-square"
-                },
-                {
-                  "value": "facebook",
-                  "label": "facebook"
-                },
-                {
-                  "value": "eye",
-                  "label": "eye"
-                },
-                {
-                  "value": "fast-backward",
-                  "label": "fast-backward"
-                },
-                {
-                  "value": "fast-forward",
-                  "label": "fast-forward"
-                },
-                {
-                  "value": "file-add",
-                  "label": "file-add"
-                },
-                {
-                  "value": "file-excel",
-                  "label": "file-excel"
-                },
-                {
-                  "value": "file-exclamation",
-                  "label": "file-exclamation"
-                },
-                {
-                  "value": "file-image",
-                  "label": "file-image"
-                },
-                {
-                  "value": "file-markdown",
-                  "label": "file-markdown"
-                },
-                {
-                  "value": "file-pdf",
-                  "label": "file-pdf"
-                },
-                {
-                  "value": "file-ppt",
-                  "label": "file-ppt"
-                },
-                {
-                  "value": "file-text",
-                  "label": "file-text"
-                },
-                {
-                  "value": "file-unknown",
-                  "label": "file-unknown"
-                },
-                {
-                  "value": "file-word",
-                  "label": "file-word"
-                },
-                {
-                  "value": "file-zip",
-                  "label": "file-zip"
-                },
-                {
-                  "value": "filter",
-                  "label": "filter"
-                },
-                {
-                  "value": "flag",
-                  "label": "flag"
-                },
-                {
-                  "value": "file",
-                  "label": "file"
-                },
-                {
-                  "value": "folder-add",
-                  "label": "folder-add"
-                },
-                {
-                  "value": "folder-open",
-                  "label": "folder-open"
-                },
-                {
-                  "value": "folder",
-                  "label": "folder"
-                },
-                {
-                  "value": "fire",
-                  "label": "fire"
-                },
-                {
-                  "value": "forward",
-                  "label": "forward"
-                },
-                {
-                  "value": "frown",
-                  "label": "frown"
-                },
-                {
-                  "value": "funnel-plot",
-                  "label": "funnel-plot"
-                },
-                {
-                  "value": "gift",
-                  "label": "gift"
-                },
-                {
-                  "value": "github",
-                  "label": "github"
-                },
-                {
-                  "value": "fund",
-                  "label": "fund"
-                },
-                {
-                  "value": "gitlab",
-                  "label": "gitlab"
-                },
-                {
-                  "value": "hdd",
-                  "label": "hdd"
-                },
-                {
-                  "value": "heart",
-                  "label": "heart"
-                },
-                {
-                  "value": "highlight",
-                  "label": "highlight"
-                },
-                {
-                  "value": "home",
-                  "label": "home"
-                },
-                {
-                  "value": "hourglass",
-                  "label": "hourglass"
-                },
-                {
-                  "value": "html5",
-                  "label": "html5"
-                },
-                {
-                  "value": "info-circle",
-                  "label": "info-circle"
-                },
-                {
-                  "value": "instagram",
-                  "label": "instagram"
-                },
-                {
-                  "value": "insurance",
-                  "label": "insurance"
-                },
-                {
-                  "value": "left-circle",
-                  "label": "left-circle"
-                },
-                {
-                  "value": "layout",
-                  "label": "layout"
-                },
-                {
-                  "value": "interation",
-                  "label": "interation"
-                },
-                {
-                  "value": "left-square",
-                  "label": "left-square"
-                },
-                {
-                  "value": "idcard",
-                  "label": "idcard"
-                },
-                {
-                  "value": "linkedin",
-                  "label": "linkedin"
-                },
-                {
-                  "value": "lock",
-                  "label": "lock"
-                },
-                {
-                  "value": "like",
-                  "label": "like"
-                },
-                {
-                  "value": "medicine-box",
-                  "label": "medicine-box"
-                },
-                {
-                  "value": "meh",
-                  "label": "meh"
-                },
-                {
-                  "value": "message",
-                  "label": "message"
-                },
-                {
-                  "value": "minus-circle",
-                  "label": "minus-circle"
-                },
-                {
-                  "value": "minus-square",
-                  "label": "minus-square"
-                },
-                {
-                  "value": "mobile",
-                  "label": "mobile"
-                },
-                {
-                  "value": "notification",
-                  "label": "notification"
-                },
-                {
-                  "value": "money-collect",
-                  "label": "money-collect"
-                },
-                {
-                  "value": "pause-circle",
-                  "label": "pause-circle"
-                },
-                {
-                  "value": "pay-circle",
-                  "label": "pay-circle"
-                },
-                {
-                  "value": "phone",
-                  "label": "phone"
-                },
-                {
-                  "value": "picture",
-                  "label": "picture"
-                },
-                {
-                  "value": "pie-chart",
-                  "label": "pie-chart"
-                },
-                {
-                  "value": "play-circle",
-                  "label": "play-circle"
-                },
-                {
-                  "value": "play-square",
-                  "label": "play-square"
-                },
-                {
-                  "value": "plus-circle",
-                  "label": "plus-circle"
-                },
-                {
-                  "value": "plus-square",
-                  "label": "plus-square"
-                },
-                {
-                  "value": "mail",
-                  "label": "mail"
-                },
-                {
-                  "value": "printer",
-                  "label": "printer"
-                },
-                {
-                  "value": "profile",
-                  "label": "profile"
-                },
-                {
-                  "value": "pushpin",
-                  "label": "pushpin"
-                },
-                {
-                  "value": "project",
-                  "label": "project"
-                },
-                {
-                  "value": "question-circle",
-                  "label": "question-circle"
-                },
-                {
-                  "value": "read",
-                  "label": "read"
-                },
-                {
-                  "value": "red-envelope",
-                  "label": "red-envelope"
-                },
-                {
-                  "value": "reconciliation",
-                  "label": "reconciliation"
-                },
-                {
-                  "value": "property-safety",
-                  "label": "property-safety"
-                },
-                {
-                  "value": "rest",
-                  "label": "rest"
-                },
-                {
-                  "value": "right-circle",
-                  "label": "right-circle"
-                },
-                {
-                  "value": "safety-certificate",
-                  "label": "safety-certificate"
-                },
-                {
-                  "value": "rocket",
-                  "label": "rocket"
-                },
-                {
-                  "value": "save",
-                  "label": "save"
-                },
-                {
-                  "value": "schedule",
-                  "label": "schedule"
-                },
-                {
-                  "value": "security-scan",
-                  "label": "security-scan"
-                },
-                {
-                  "value": "right-square",
-                  "label": "right-square"
-                },
-                {
-                  "value": "shop",
-                  "label": "shop"
-                },
-                {
-                  "value": "shopping",
-                  "label": "shopping"
-                },
-                {
-                  "value": "setting",
-                  "label": "setting"
-                },
-                {
-                  "value": "skin",
-                  "label": "skin"
-                },
-                {
-                  "value": "slack-square",
-                  "label": "slack-square"
-                },
-                {
-                  "value": "sliders",
-                  "label": "sliders"
-                },
-                {
-                  "value": "smile",
-                  "label": "smile"
-                },
-                {
-                  "value": "skype",
-                  "label": "skype"
-                },
-                {
-                  "value": "step-backward",
-                  "label": "step-backward"
-                },
-                {
-                  "value": "step-forward",
-                  "label": "step-forward"
-                },
-                {
-                  "value": "sound",
-                  "label": "sound"
-                },
-                {
-                  "value": "stop",
-                  "label": "stop"
-                },
-                {
-                  "value": "switcher",
-                  "label": "switcher"
-                },
-                {
-                  "value": "tablet",
-                  "label": "tablet"
-                },
-                {
-                  "value": "snippets",
-                  "label": "snippets"
-                },
-                {
-                  "value": "tags",
-                  "label": "tags"
-                },
-                {
-                  "value": "tag",
-                  "label": "tag"
-                },
-                {
-                  "value": "taobao-circle",
-                  "label": "taobao-circle"
-                },
-                {
-                  "value": "thunderbolt",
-                  "label": "thunderbolt"
-                },
-                {
-                  "value": "tool",
-                  "label": "tool"
-                },
-                {
-                  "value": "star",
-                  "label": "star"
-                },
-                {
-                  "value": "trophy",
-                  "label": "trophy"
-                },
-                {
-                  "value": "unlock",
-                  "label": "unlock"
-                },
-                {
-                  "value": "up-square",
-                  "label": "up-square"
-                },
-                {
-                  "value": "usb",
-                  "label": "usb"
-                },
-                {
-                  "value": "up-circle",
-                  "label": "up-circle"
-                },
-                {
-                  "value": "wallet",
-                  "label": "wallet"
-                },
-                {
-                  "value": "warning",
-                  "label": "warning"
-                },
-                {
-                  "value": "wechat",
-                  "label": "wechat"
-                },
-                {
-                  "value": "video-camera",
-                  "label": "video-camera"
-                },
-                {
-                  "value": "windows",
-                  "label": "windows"
-                },
-                {
-                  "value": "yahoo",
-                  "label": "yahoo"
-                },
-                {
-                  "value": "weibo-square",
-                  "label": "weibo-square"
-                },
-                {
-                  "value": "weibo-circle",
-                  "label": "weibo-circle"
-                },
-                {
-                  "value": "youtube",
-                  "label": "youtube"
-                },
-                {
-                  "value": "yuque",
-                  "label": "yuque"
-                },
-                {
-                  "value": "alibaba",
-                  "label": "alibaba"
-                },
-                {
-                  "value": "align-center",
-                  "label": "align-center"
-                },
-                {
-                  "value": "alipay",
-                  "label": "alipay"
-                },
-                {
-                  "value": "align-right",
-                  "label": "align-right"
-                },
-                {
-                  "value": "align-left",
-                  "label": "align-left"
-                },
-                {
-                  "value": "aliyun",
-                  "label": "aliyun"
-                },
-                {
-                  "value": "amazon",
-                  "label": "amazon"
-                },
-                {
-                  "value": "ant-cloud",
-                  "label": "ant-cloud"
-                },
-                {
-                  "value": "ant-design",
-                  "label": "ant-design"
-                },
-                {
-                  "value": "apartment",
-                  "label": "apartment"
-                },
-                {
-                  "value": "area-chart",
-                  "label": "area-chart"
-                },
-                {
-                  "value": "arrow-down",
-                  "label": "arrow-down"
-                },
-                {
-                  "value": "arrow-up",
-                  "label": "arrow-up"
-                },
-                {
-                  "value": "arrow-right",
-                  "label": "arrow-right"
-                },
-                {
-                  "value": "arrow-left",
-                  "label": "arrow-left"
-                },
-                {
-                  "value": "arrows-alt",
-                  "label": "arrows-alt"
-                },
-                {
-                  "value": "audit",
-                  "label": "audit"
-                },
-                {
-                  "value": "bars",
-                  "label": "bars"
-                },
-                {
-                  "value": "barcode",
-                  "label": "barcode"
-                },
-                {
-                  "value": "behance",
-                  "label": "behance"
-                },
-                {
-                  "value": "bg-colors",
-                  "label": "bg-colors"
-                },
-                {
-                  "value": "block",
-                  "label": "block"
-                },
-                {
-                  "value": "bold",
-                  "label": "bold"
-                },
-                {
-                  "value": "border-bottom",
-                  "label": "border-bottom"
-                },
-                {
-                  "value": "border-horizontal",
-                  "label": "border-horizontal"
-                },
-                {
-                  "value": "border-inner",
-                  "label": "border-inner"
-                },
-                {
-                  "value": "border-left",
-                  "label": "border-left"
-                },
-                {
-                  "value": "border-outer",
-                  "label": "border-outer"
-                },
-                {
-                  "value": "border-top",
-                  "label": "border-top"
-                },
-                {
-                  "value": "border-verticle",
-                  "label": "border-verticle"
-                },
-                {
-                  "value": "border",
-                  "label": "border"
-                },
-                {
-                  "value": "border-right",
-                  "label": "border-right"
-                },
-                {
-                  "value": "branches",
-                  "label": "branches"
-                },
-                {
-                  "value": "check",
-                  "label": "check"
-                },
-                {
-                  "value": "ci",
-                  "label": "ci"
-                },
-                {
-                  "value": "cloud-download",
-                  "label": "cloud-download"
-                },
-                {
-                  "value": "cloud-server",
-                  "label": "cloud-server"
-                },
-                {
-                  "value": "cloud-sync",
-                  "label": "cloud-sync"
-                },
-                {
-                  "value": "cloud-upload",
-                  "label": "cloud-upload"
-                },
-                {
-                  "value": "close",
-                  "label": "close"
-                },
-                {
-                  "value": "cluster",
-                  "label": "cluster"
-                },
-                {
-                  "value": "codepen",
-                  "label": "codepen"
-                },
-                {
-                  "value": "coffee",
-                  "label": "coffee"
-                },
-                {
-                  "value": "colum-height",
-                  "label": "colum-height"
-                },
-                {
-                  "value": "column-width",
-                  "label": "column-width"
-                },
-                {
-                  "value": "code-sandbox",
-                  "label": "code-sandbox"
-                },
-                {
-                  "value": "bar-chart",
-                  "label": "bar-chart"
-                },
-                {
-                  "value": "copyright",
-                  "label": "copyright"
-                },
-                {
-                  "value": "dash",
-                  "label": "dash"
-                },
-                {
-                  "value": "deployment-unit",
-                  "label": "deployment-unit"
-                },
-                {
-                  "value": "desktop",
-                  "label": "desktop"
-                },
-                {
-                  "value": "disconnect",
-                  "label": "disconnect"
-                },
-                {
-                  "value": "dingding",
-                  "label": "dingding"
-                },
-                {
-                  "value": "dollar",
-                  "label": "dollar"
-                },
-                {
-                  "value": "dot-chart",
-                  "label": "dot-chart"
-                },
-                {
-                  "value": "double-left",
-                  "label": "double-left"
-                },
-                {
-                  "value": "double-right",
-                  "label": "double-right"
-                },
-                {
-                  "value": "download",
-                  "label": "download"
-                },
-                {
-                  "value": "drag",
-                  "label": "drag"
-                },
-                {
-                  "value": "down",
-                  "label": "down"
-                },
-                {
-                  "value": "dribbble",
-                  "label": "dribbble"
-                },
-                {
-                  "value": "dropbox",
-                  "label": "dropbox"
-                },
-                {
-                  "value": "ellipsis",
-                  "label": "ellipsis"
-                },
-                {
-                  "value": "enter",
-                  "label": "enter"
-                },
-                {
-                  "value": "exception",
-                  "label": "exception"
-                },
-                {
-                  "value": "euro",
-                  "label": "euro"
-                },
-                {
-                  "value": "exclamation",
-                  "label": "exclamation"
-                },
-                {
-                  "value": "export",
-                  "label": "export"
-                },
-                {
-                  "value": "fall",
-                  "label": "fall"
-                },
-                {
-                  "value": "file-done",
-                  "label": "file-done"
-                },
-                {
-                  "value": "file-jpg",
-                  "label": "file-jpg"
-                },
-                {
-                  "value": "file-search",
-                  "label": "file-search"
-                },
-                {
-                  "value": "file-protect",
-                  "label": "file-protect"
-                },
-                {
-                  "value": "file-sync",
-                  "label": "file-sync"
-                },
-                {
-                  "value": "font-colors",
-                  "label": "font-colors"
-                },
-                {
-                  "value": "font-size",
-                  "label": "font-size"
-                },
-                {
-                  "value": "fork",
-                  "label": "fork"
-                },
-                {
-                  "value": "form",
-                  "label": "form"
-                },
-                {
-                  "value": "fullscreen-exit",
-                  "label": "fullscreen-exit"
-                },
-                {
-                  "value": "fullscreen",
-                  "label": "fullscreen"
-                },
-                {
-                  "value": "gateway",
-                  "label": "gateway"
-                },
-                {
-                  "value": "global",
-                  "label": "global"
-                },
-                {
-                  "value": "gold",
-                  "label": "gold"
-                },
-                {
-                  "value": "google-plus",
-                  "label": "google-plus"
-                },
-                {
-                  "value": "google",
-                  "label": "google"
-                },
-                {
-                  "value": "heat-map",
-                  "label": "heat-map"
-                },
-                {
-                  "value": "ie",
-                  "label": "ie"
-                },
-                {
-                  "value": "import",
-                  "label": "import"
-                },
-                {
-                  "value": "inbox",
-                  "label": "inbox"
-                },
-                {
-                  "value": "info",
-                  "label": "info"
-                },
-                {
-                  "value": "issues-close",
-                  "label": "issues-close"
-                },
-                {
-                  "value": "italic",
-                  "label": "italic"
-                },
-                {
-                  "value": "laptop",
-                  "label": "laptop"
-                },
-                {
-                  "value": "key",
-                  "label": "key"
-                },
-                {
-                  "value": "left",
-                  "label": "left"
-                },
-                {
-                  "value": "line-chart",
-                  "label": "line-chart"
-                },
-                {
-                  "value": "line-height",
-                  "label": "line-height"
-                },
-                {
-                  "value": "line",
-                  "label": "line"
-                },
-                {
-                  "value": "link",
-                  "label": "link"
-                },
-                {
-                  "value": "loading-3-quarters",
-                  "label": "loading-3-quarters"
-                },
-                {
-                  "value": "loading",
-                  "label": "loading"
-                },
-                {
-                  "value": "login",
-                  "label": "login"
-                },
-                {
-                  "value": "logout",
-                  "label": "logout"
-                },
-                {
-                  "value": "man",
-                  "label": "man"
-                },
-                {
-                  "value": "medium-workmark",
-                  "label": "medium-workmark"
-                },
-                {
-                  "value": "menu-fold",
-                  "label": "menu-fold"
-                },
-                {
-                  "value": "medium",
-                  "label": "medium"
-                },
-                {
-                  "value": "menu-unfold",
-                  "label": "menu-unfold"
-                },
-                {
-                  "value": "menu",
-                  "label": "menu"
-                },
-                {
-                  "value": "minus",
-                  "label": "minus"
-                },
-                {
-                  "value": "monitor",
-                  "label": "monitor"
-                },
-                {
-                  "value": "mr",
-                  "label": "mr"
-                },
-                {
-                  "value": "ordered-list",
-                  "label": "ordered-list"
-                },
-                {
-                  "value": "number",
-                  "label": "number"
-                },
-                {
-                  "value": "paper-clip",
-                  "label": "paper-clip"
-                },
-                {
-                  "value": "pause",
-                  "label": "pause"
-                },
-                {
-                  "value": "percentage",
-                  "label": "percentage"
-                },
-                {
-                  "value": "pic-center",
-                  "label": "pic-center"
-                },
-                {
-                  "value": "pic-left",
-                  "label": "pic-left"
-                },
-                {
-                  "value": "pic-right",
-                  "label": "pic-right"
-                },
-                {
-                  "value": "plus",
-                  "label": "plus"
-                },
-                {
-                  "value": "poweroff",
-                  "label": "poweroff"
-                },
-                {
-                  "value": "pound",
-                  "label": "pound"
-                },
-                {
-                  "value": "qrcode",
-                  "label": "qrcode"
-                },
-                {
-                  "value": "qq",
-                  "label": "qq"
-                },
-                {
-                  "value": "question",
-                  "label": "question"
-                },
-                {
-                  "value": "radar-chart",
-                  "label": "radar-chart"
-                },
-                {
-                  "value": "radius-bottomleft",
-                  "label": "radius-bottomleft"
-                },
-                {
-                  "value": "radius-setting",
-                  "label": "radius-setting"
-                },
-                {
-                  "value": "radius-bottomright",
-                  "label": "radius-bottomright"
-                },
-                {
-                  "value": "radius-upleft",
-                  "label": "radius-upleft"
-                },
-                {
-                  "value": "radius-upright",
-                  "label": "radius-upright"
-                },
-                {
-                  "value": "reddit",
-                  "label": "reddit"
-                },
-                {
-                  "value": "reload",
-                  "label": "reload"
-                },
-                {
-                  "value": "reload-time",
-                  "label": "reload-time"
-                },
-                {
-                  "value": "redo",
-                  "label": "redo"
-                },
-                {
-                  "value": "retweet",
-                  "label": "retweet"
-                },
-                {
-                  "value": "right",
-                  "label": "right"
-                },
-                {
-                  "value": "rise",
-                  "label": "rise"
-                },
-                {
-                  "value": "rollback",
-                  "label": "rollback"
-                },
-                {
-                  "value": "safety",
-                  "label": "safety"
-                },
-                {
-                  "value": "scan",
-                  "label": "scan"
-                },
-                {
-                  "value": "scissor",
-                  "label": "scissor"
-                },
-                {
-                  "value": "robot",
-                  "label": "robot"
-                },
-                {
-                  "value": "search",
-                  "label": "search"
-                },
-                {
-                  "value": "select",
-                  "label": "select"
-                },
-                {
-                  "value": "share-alt",
-                  "label": "share-alt"
-                },
-                {
-                  "value": "shake",
-                  "label": "shake"
-                },
-                {
-                  "value": "shopping-cart",
-                  "label": "shopping-cart"
-                },
-                {
-                  "value": "shrink",
-                  "label": "shrink"
-                },
-                {
-                  "value": "sketch",
-                  "label": "sketch"
-                },
-                {
-                  "value": "slack",
-                  "label": "slack"
-                },
-                {
-                  "value": "small-dash",
-                  "label": "small-dash"
-                },
-                {
-                  "value": "solution",
-                  "label": "solution"
-                },
-                {
-                  "value": "sort-ascending",
-                  "label": "sort-ascending"
-                },
-                {
-                  "value": "sort-descending",
-                  "label": "sort-descending"
-                },
-                {
-                  "value": "stock",
-                  "label": "stock"
-                },
-                {
-                  "value": "strikethrough",
-                  "label": "strikethrough"
-                },
-                {
-                  "value": "swap-left",
-                  "label": "swap-left"
-                },
-                {
-                  "value": "swap",
-                  "label": "swap"
-                },
-                {
-                  "value": "swap-right",
-                  "label": "swap-right"
-                },
-                {
-                  "value": "sync",
-                  "label": "sync"
-                },
-                {
-                  "value": "table",
-                  "label": "table"
-                },
-                {
-                  "value": "team",
-                  "label": "team"
-                },
-                {
-                  "value": "to-top",
-                  "label": "to-top"
-                },
-                {
-                  "value": "taobao",
-                  "label": "taobao"
-                },
-                {
-                  "value": "trademark",
-                  "label": "trademark"
-                },
-                {
-                  "value": "twitter",
-                  "label": "twitter"
-                },
-                {
-                  "value": "underline",
-                  "label": "underline"
-                },
-                {
-                  "value": "undo",
-                  "label": "undo"
-                },
-                {
-                  "value": "unordered-list",
-                  "label": "unordered-list"
-                },
-                {
-                  "value": "upload",
-                  "label": "upload"
-                },
-                {
-                  "value": "user-delete",
-                  "label": "user-delete"
-                },
-                {
-                  "value": "user-add",
-                  "label": "user-add"
-                },
-                {
-                  "value": "up",
-                  "label": "up"
-                },
-                {
-                  "value": "user",
-                  "label": "user"
-                },
-                {
-                  "value": "usergroup-add",
-                  "label": "usergroup-add"
-                },
-                {
-                  "value": "transaction",
-                  "label": "transaction"
-                },
-                {
-                  "value": "usergroup-delete",
-                  "label": "usergroup-delete"
-                },
-                {
-                  "value": "vertical-align-bottom",
-                  "label": "vertical-align-bottom"
-                },
-                {
-                  "value": "vertical-align-middle",
-                  "label": "vertical-align-middle"
-                },
-                {
-                  "value": "vertical-left",
-                  "label": "vertical-left"
-                },
-                {
-                  "value": "vertical-right",
-                  "label": "vertical-right"
-                },
-                {
-                  "value": "vertical-align-top",
-                  "label": "vertical-align-top"
-                },
-                {
-                  "value": "weibo",
-                  "label": "weibo"
-                },
-                {
-                  "value": "wifi",
-                  "label": "wifi"
-                },
-                {
-                  "value": "woman",
-                  "label": "woman"
-                },
-                {
-                  "value": "zhihu",
-                  "label": "zhihu"
-                },
-                {
-                  "value": "zoom-in",
-                  "label": "zoom-in"
-                },
-                {
-                  "value": "zoom-out",
-                  "label": "zoom-out"
-                }
-              ]
-            },
-            {
-              "conditionValue": "fill",
-              "values": [
-                {
-                  "value": "account-book",
-                  "label": "account-book"
-                },
-                {
-                  "value": "alert",
-                  "label": "alert"
-                },
-                {
-                  "value": "alipay-circle",
-                  "label": "alipay-circle"
-                },
-                {
-                  "value": "alipay-square",
-                  "label": "alipay-square"
-                },
-                {
-                  "value": "amazon-circle",
-                  "label": "amazon-circle"
-                },
-                {
-                  "value": "aliwangwang",
-                  "label": "aliwangwang"
-                },
-                {
-                  "value": "android",
-                  "label": "android"
-                },
-                {
-                  "value": "amazon-square",
-                  "label": "amazon-square"
-                },
-                {
-                  "value": "api",
-                  "label": "api"
-                },
-                {
-                  "value": "appstore",
-                  "label": "appstore"
-                },
-                {
-                  "value": "apple",
-                  "label": "apple"
-                },
-                {
-                  "value": "audio",
-                  "label": "audio"
-                },
-                {
-                  "value": "bank",
-                  "label": "bank"
-                },
-                {
-                  "value": "bell",
-                  "label": "bell"
-                },
-                {
-                  "value": "book",
-                  "label": "book"
-                },
-                {
-                  "value": "behance-square",
-                  "label": "behance-square"
-                },
-                {
-                  "value": "behance-circle",
-                  "label": "behance-circle"
-                },
-                {
-                  "value": "box-plot",
-                  "label": "box-plot"
-                },
-                {
-                  "value": "build",
-                  "label": "build"
-                },
-                {
-                  "value": "backward",
-                  "label": "backward"
-                },
-                {
-                  "value": "calculator",
-                  "label": "calculator"
-                },
-                {
-                  "value": "calendar",
-                  "label": "calendar"
-                },
-                {
-                  "value": "camera",
-                  "label": "camera"
-                },
-                {
-                  "value": "car",
-                  "label": "car"
-                },
-                {
-                  "value": "caret-down",
-                  "label": "caret-down"
-                },
-                {
-                  "value": "bulb",
-                  "label": "bulb"
-                },
-                {
-                  "value": "caret-right",
-                  "label": "caret-right"
-                },
-                {
-                  "value": "caret-up",
-                  "label": "caret-up"
-                },
-                {
-                  "value": "caret-left",
-                  "label": "caret-left"
-                },
-                {
-                  "value": "carry-out",
-                  "label": "carry-out"
-                },
-                {
-                  "value": "check-circle",
-                  "label": "check-circle"
-                },
-                {
-                  "value": "chrome",
-                  "label": "chrome"
-                },
-                {
-                  "value": "check-square",
-                  "label": "check-square"
-                },
-                {
-                  "value": "ci-circle",
-                  "label": "ci-circle"
-                },
-                {
-                  "value": "clock-circle",
-                  "label": "clock-circle"
-                },
-                {
-                  "value": "close-circle",
-                  "label": "close-circle"
-                },
-                {
-                  "value": "close-square",
-                  "label": "close-square"
-                },
-                {
-                  "value": "cloud",
-                  "label": "cloud"
-                },
-                {
-                  "value": "code-sandbox-circle",
-                  "label": "code-sandbox-circle"
-                },
-                {
-                  "value": "code-sandbox-square",
-                  "label": "code-sandbox-square"
-                },
-                {
-                  "value": "code",
-                  "label": "code"
-                },
-                {
-                  "value": "codepen-circle",
-                  "label": "codepen-circle"
-                },
-                {
-                  "value": "codepen-square",
-                  "label": "codepen-square"
-                },
-                {
-                  "value": "contacts",
-                  "label": "contacts"
-                },
-                {
-                  "value": "compass",
-                  "label": "compass"
-                },
-                {
-                  "value": "container",
-                  "label": "container"
-                },
-                {
-                  "value": "control",
-                  "label": "control"
-                },
-                {
-                  "value": "copy",
-                  "label": "copy"
-                },
-                {
-                  "value": "copyright-circle",
-                  "label": "copyright-circle"
-                },
-                {
-                  "value": "credit-card",
-                  "label": "credit-card"
-                },
-                {
-                  "value": "crown",
-                  "label": "crown"
-                },
-                {
-                  "value": "customer-service",
-                  "label": "customer-service"
-                },
-                {
-                  "value": "dashboard",
-                  "label": "dashboard"
-                },
-                {
-                  "value": "delete",
-                  "label": "delete"
-                },
-                {
-                  "value": "diff",
-                  "label": "diff"
-                },
-                {
-                  "value": "dingtalk-circle",
-                  "label": "dingtalk-circle"
-                },
-                {
-                  "value": "dingtalk-square",
-                  "label": "dingtalk-square"
-                },
-                {
-                  "value": "database",
-                  "label": "database"
-                },
-                {
-                  "value": "dislike",
-                  "label": "dislike"
-                },
-                {
-                  "value": "dollar-circle",
-                  "label": "dollar-circle"
-                },
-                {
-                  "value": "down-circle",
-                  "label": "down-circle"
-                },
-                {
-                  "value": "dribbble-circle",
-                  "label": "dribbble-circle"
-                },
-                {
-                  "value": "dribbble-square",
-                  "label": "dribbble-square"
-                },
-                {
-                  "value": "dropbox-circle",
-                  "label": "dropbox-circle"
-                },
-                {
-                  "value": "dropbox-square",
-                  "label": "dropbox-square"
-                },
-                {
-                  "value": "edit",
-                  "label": "edit"
-                },
-                {
-                  "value": "environment",
-                  "label": "environment"
-                },
-                {
-                  "value": "euro-circle",
-                  "label": "euro-circle"
-                },
-                {
-                  "value": "exclamation-circle",
-                  "label": "exclamation-circle"
-                },
-                {
-                  "value": "experiment",
-                  "label": "experiment"
-                },
-                {
-                  "value": "eye-invisible",
-                  "label": "eye-invisible"
-                },
-                {
-                  "value": "down-square",
-                  "label": "down-square"
-                },
-                {
-                  "value": "facebook",
-                  "label": "facebook"
-                },
-                {
-                  "value": "eye",
-                  "label": "eye"
-                },
-                {
-                  "value": "fast-backward",
-                  "label": "fast-backward"
-                },
-                {
-                  "value": "fast-forward",
-                  "label": "fast-forward"
-                },
-                {
-                  "value": "file-add",
-                  "label": "file-add"
-                },
-                {
-                  "value": "file-excel",
-                  "label": "file-excel"
-                },
-                {
-                  "value": "file-exclamation",
-                  "label": "file-exclamation"
-                },
-                {
-                  "value": "file-image",
-                  "label": "file-image"
-                },
-                {
-                  "value": "file-markdown",
-                  "label": "file-markdown"
-                },
-                {
-                  "value": "file-pdf",
-                  "label": "file-pdf"
-                },
-                {
-                  "value": "file-ppt",
-                  "label": "file-ppt"
-                },
-                {
-                  "value": "file-text",
-                  "label": "file-text"
-                },
-                {
-                  "value": "file-unknown",
-                  "label": "file-unknown"
-                },
-                {
-                  "value": "file-word",
-                  "label": "file-word"
-                },
-                {
-                  "value": "file-zip",
-                  "label": "file-zip"
-                },
-                {
-                  "value": "filter",
-                  "label": "filter"
-                },
-                {
-                  "value": "flag",
-                  "label": "flag"
-                },
-                {
-                  "value": "file",
-                  "label": "file"
-                },
-                {
-                  "value": "folder-add",
-                  "label": "folder-add"
-                },
-                {
-                  "value": "folder-open",
-                  "label": "folder-open"
-                },
-                {
-                  "value": "folder",
-                  "label": "folder"
-                },
-                {
-                  "value": "fire",
-                  "label": "fire"
-                },
-                {
-                  "value": "forward",
-                  "label": "forward"
-                },
-                {
-                  "value": "frown",
-                  "label": "frown"
-                },
-                {
-                  "value": "funnel-plot",
-                  "label": "funnel-plot"
-                },
-                {
-                  "value": "gift",
-                  "label": "gift"
-                },
-                {
-                  "value": "github",
-                  "label": "github"
-                },
-                {
-                  "value": "fund",
-                  "label": "fund"
-                },
-                {
-                  "value": "gitlab",
-                  "label": "gitlab"
-                },
-                {
-                  "value": "golden",
-                  "label": "golden"
-                },
-                {
-                  "value": "google-circle",
-                  "label": "google-circle"
-                },
-                {
-                  "value": "google-plus-circle",
-                  "label": "google-plus-circle"
-                },
-                {
-                  "value": "google-plus-square",
-                  "label": "google-plus-square"
-                },
-                {
-                  "value": "google-square",
-                  "label": "google-square"
-                },
-                {
-                  "value": "hdd",
-                  "label": "hdd"
-                },
-                {
-                  "value": "heart",
-                  "label": "heart"
-                },
-                {
-                  "value": "highlight",
-                  "label": "highlight"
-                },
-                {
-                  "value": "home",
-                  "label": "home"
-                },
-                {
-                  "value": "hourglass",
-                  "label": "hourglass"
-                },
-                {
-                  "value": "html5",
-                  "label": "html5"
-                },
-                {
-                  "value": "ie-circle",
-                  "label": "ie-circle"
-                },
-                {
-                  "value": "ie-square",
-                  "label": "ie-square"
-                },
-                {
-                  "value": "info-circle",
-                  "label": "info-circle"
-                },
-                {
-                  "value": "instagram",
-                  "label": "instagram"
-                },
-                {
-                  "value": "insurance",
-                  "label": "insurance"
-                },
-                {
-                  "value": "left-circle",
-                  "label": "left-circle"
-                },
-                {
-                  "value": "layout",
-                  "label": "layout"
-                },
-                {
-                  "value": "interation",
-                  "label": "interation"
-                },
-                {
-                  "value": "left-square",
-                  "label": "left-square"
-                },
-                {
-                  "value": "idcard",
-                  "label": "idcard"
-                },
-                {
-                  "value": "linkedin",
-                  "label": "linkedin"
-                },
-                {
-                  "value": "lock",
-                  "label": "lock"
-                },
-                {
-                  "value": "like",
-                  "label": "like"
-                },
-                {
-                  "value": "medicine-box",
-                  "label": "medicine-box"
-                },
-                {
-                  "value": "medium-circle",
-                  "label": "medium-circle"
-                },
-                {
-                  "value": "medium-square",
-                  "label": "medium-square"
-                },
-                {
-                  "value": "meh",
-                  "label": "meh"
-                },
-                {
-                  "value": "message",
-                  "label": "message"
-                },
-                {
-                  "value": "minus-circle",
-                  "label": "minus-circle"
-                },
-                {
-                  "value": "minus-square",
-                  "label": "minus-square"
-                },
-                {
-                  "value": "mobile",
-                  "label": "mobile"
-                },
-                {
-                  "value": "notification",
-                  "label": "notification"
-                },
-                {
-                  "value": "money-collect",
-                  "label": "money-collect"
-                },
-                {
-                  "value": "pause-circle",
-                  "label": "pause-circle"
-                },
-                {
-                  "value": "pay-circle",
-                  "label": "pay-circle"
-                },
-                {
-                  "value": "phone",
-                  "label": "phone"
-                },
-                {
-                  "value": "picture",
-                  "label": "picture"
-                },
-                {
-                  "value": "pie-chart",
-                  "label": "pie-chart"
-                },
-                {
-                  "value": "play-circle",
-                  "label": "play-circle"
-                },
-                {
-                  "value": "play-square",
-                  "label": "play-square"
-                },
-                {
-                  "value": "plus-circle",
-                  "label": "plus-circle"
-                },
-                {
-                  "value": "pound-circle",
-                  "label": "pound-circle"
-                },
-                {
-                  "value": "plus-square",
-                  "label": "plus-square"
-                },
-                {
-                  "value": "mail",
-                  "label": "mail"
-                },
-                {
-                  "value": "printer",
-                  "label": "printer"
-                },
-                {
-                  "value": "profile",
-                  "label": "profile"
-                },
-                {
-                  "value": "pushpin",
-                  "label": "pushpin"
-                },
-                {
-                  "value": "qq-circle",
-                  "label": "qq-circle"
-                },
-                {
-                  "value": "project",
-                  "label": "project"
-                },
-                {
-                  "value": "question-circle",
-                  "label": "question-circle"
-                },
-                {
-                  "value": "qq-square",
-                  "label": "qq-square"
-                },
-                {
-                  "value": "read",
-                  "label": "read"
-                },
-                {
-                  "value": "red-envelope",
-                  "label": "red-envelope"
-                },
-                {
-                  "value": "reconciliation",
-                  "label": "reconciliation"
-                },
-                {
-                  "value": "property-safety",
-                  "label": "property-safety"
-                },
-                {
-                  "value": "reddit-circle",
-                  "label": "reddit-circle"
-                },
-                {
-                  "value": "reddit-square",
-                  "label": "reddit-square"
-                },
-                {
-                  "value": "rest",
-                  "label": "rest"
-                },
-                {
-                  "value": "right-circle",
-                  "label": "right-circle"
-                },
-                {
-                  "value": "safety-certificate",
-                  "label": "safety-certificate"
-                },
-                {
-                  "value": "rocket",
-                  "label": "rocket"
-                },
-                {
-                  "value": "save",
-                  "label": "save"
-                },
-                {
-                  "value": "schedule",
-                  "label": "schedule"
-                },
-                {
-                  "value": "security-scan",
-                  "label": "security-scan"
-                },
-                {
-                  "value": "right-square",
-                  "label": "right-square"
-                },
-                {
-                  "value": "shop",
-                  "label": "shop"
-                },
-                {
-                  "value": "shopping",
-                  "label": "shopping"
-                },
-                {
-                  "value": "setting",
-                  "label": "setting"
-                },
-                {
-                  "value": "sketch-circle",
-                  "label": "sketch-circle"
-                },
-                {
-                  "value": "sketch-square",
-                  "label": "sketch-square"
-                },
-                {
-                  "value": "slack-circle",
-                  "label": "slack-circle"
-                },
-                {
-                  "value": "skin",
-                  "label": "skin"
-                },
-                {
-                  "value": "slack-square",
-                  "label": "slack-square"
-                },
-                {
-                  "value": "sliders",
-                  "label": "sliders"
-                },
-                {
-                  "value": "smile",
-                  "label": "smile"
-                },
-                {
-                  "value": "skype",
-                  "label": "skype"
-                },
-                {
-                  "value": "step-backward",
-                  "label": "step-backward"
-                },
-                {
-                  "value": "step-forward",
-                  "label": "step-forward"
-                },
-                {
-                  "value": "sound",
-                  "label": "sound"
-                },
-                {
-                  "value": "stop",
-                  "label": "stop"
-                },
-                {
-                  "value": "switcher",
-                  "label": "switcher"
-                },
-                {
-                  "value": "tablet",
-                  "label": "tablet"
-                },
-                {
-                  "value": "snippets",
-                  "label": "snippets"
-                },
-                {
-                  "value": "tags",
-                  "label": "tags"
-                },
-                {
-                  "value": "tag",
-                  "label": "tag"
-                },
-                {
-                  "value": "taobao-square",
-                  "label": "taobao-square"
-                },
-                {
-                  "value": "taobao-circle",
-                  "label": "taobao-circle"
-                },
-                {
-                  "value": "thunderbolt",
-                  "label": "thunderbolt"
-                },
-                {
-                  "value": "tool",
-                  "label": "tool"
-                },
-                {
-                  "value": "star",
-                  "label": "star"
-                },
-                {
-                  "value": "trademark-circle",
-                  "label": "trademark-circle"
-                },
-                {
-                  "value": "twitter-circle",
-                  "label": "twitter-circle"
-                },
-                {
-                  "value": "trophy",
-                  "label": "trophy"
-                },
-                {
-                  "value": "twitter-square",
-                  "label": "twitter-square"
-                },
-                {
-                  "value": "unlock",
-                  "label": "unlock"
-                },
-                {
-                  "value": "up-square",
-                  "label": "up-square"
-                },
-                {
-                  "value": "usb",
-                  "label": "usb"
-                },
-                {
-                  "value": "up-circle",
-                  "label": "up-circle"
-                },
-                {
-                  "value": "wallet",
-                  "label": "wallet"
-                },
-                {
-                  "value": "warning",
-                  "label": "warning"
-                },
-                {
-                  "value": "wechat",
-                  "label": "wechat"
-                },
-                {
-                  "value": "video-camera",
-                  "label": "video-camera"
-                },
-                {
-                  "value": "windows",
-                  "label": "windows"
-                },
-                {
-                  "value": "yahoo",
-                  "label": "yahoo"
-                },
-                {
-                  "value": "weibo-square",
-                  "label": "weibo-square"
-                },
-                {
-                  "value": "weibo-circle",
-                  "label": "weibo-circle"
-                },
-                {
-                  "value": "youtube",
-                  "label": "youtube"
-                },
-                {
-                  "value": "yuque",
-                  "label": "yuque"
-                },
-                {
-                  "value": "zhihu-circle",
-                  "label": "zhihu-circle"
-                },
-                {
-                  "value": "zhihu-square",
-                  "label": "zhihu-square"
-                }
-              ]
-            },
-            {
-              "conditionValue": "twotone",
-              "values": [
-                {
-                  "value": "account-book",
-                  "label": "account-book"
-                },
-                {
-                  "value": "alert",
-                  "label": "alert"
-                },
-                {
-                  "value": "api",
-                  "label": "api"
-                },
-                {
-                  "value": "appstore",
-                  "label": "appstore"
-                },
-                {
-                  "value": "audio",
-                  "label": "audio"
-                },
-                {
-                  "value": "bank",
-                  "label": "bank"
-                },
-                {
-                  "value": "bell",
-                  "label": "bell"
-                },
-                {
-                  "value": "book",
-                  "label": "book"
-                },
-                {
-                  "value": "box-plot",
-                  "label": "box-plot"
-                },
-                {
-                  "value": "build",
-                  "label": "build"
-                },
-                {
-                  "value": "calculator",
-                  "label": "calculator"
-                },
-                {
-                  "value": "camera",
-                  "label": "camera"
-                },
-                {
-                  "value": "car",
-                  "label": "car"
-                },
-                {
-                  "value": "bulb",
-                  "label": "bulb"
-                },
-                {
-                  "value": "carry-out",
-                  "label": "carry-out"
-                },
-                {
-                  "value": "check-circle",
-                  "label": "check-circle"
-                },
-                {
-                  "value": "check-square",
-                  "label": "check-square"
-                },
-                {
-                  "value": "clock-circle",
-                  "label": "clock-circle"
-                },
-                {
-                  "value": "close-circle",
-                  "label": "close-circle"
-                },
-                {
-                  "value": "close-square",
-                  "label": "close-square"
-                },
-                {
-                  "value": "cloud",
-                  "label": "cloud"
-                },
-                {
-                  "value": "code",
-                  "label": "code"
-                },
-                {
-                  "value": "contacts",
-                  "label": "contacts"
-                },
-                {
-                  "value": "compass",
-                  "label": "compass"
-                },
-                {
-                  "value": "container",
-                  "label": "container"
-                },
-                {
-                  "value": "control",
-                  "label": "control"
-                },
-                {
-                  "value": "copy",
-                  "label": "copy"
-                },
-                {
-                  "value": "credit-card",
-                  "label": "credit-card"
-                },
-                {
-                  "value": "crown",
-                  "label": "crown"
-                },
-                {
-                  "value": "customer-service",
-                  "label": "customer-service"
-                },
-                {
-                  "value": "dashboard",
-                  "label": "dashboard"
-                },
-                {
-                  "value": "delete",
-                  "label": "delete"
-                },
-                {
-                  "value": "diff",
-                  "label": "diff"
-                },
-                {
-                  "value": "database",
-                  "label": "database"
-                },
-                {
-                  "value": "dislike",
-                  "label": "dislike"
-                },
-                {
-                  "value": "down-circle",
-                  "label": "down-circle"
-                },
-                {
-                  "value": "edit",
-                  "label": "edit"
-                },
-                {
-                  "value": "environment",
-                  "label": "environment"
-                },
-                {
-                  "value": "exclamation-circle",
-                  "label": "exclamation-circle"
-                },
-                {
-                  "value": "experiment",
-                  "label": "experiment"
-                },
-                {
-                  "value": "eye-invisible",
-                  "label": "eye-invisible"
-                },
-                {
-                  "value": "down-square",
-                  "label": "down-square"
-                },
-                {
-                  "value": "eye",
-                  "label": "eye"
-                },
-                {
-                  "value": "file-add",
-                  "label": "file-add"
-                },
-                {
-                  "value": "file-excel",
-                  "label": "file-excel"
-                },
-                {
-                  "value": "file-exclamation",
-                  "label": "file-exclamation"
-                },
-                {
-                  "value": "file-image",
-                  "label": "file-image"
-                },
-                {
-                  "value": "file-markdown",
-                  "label": "file-markdown"
-                },
-                {
-                  "value": "file-pdf",
-                  "label": "file-pdf"
-                },
-                {
-                  "value": "file-ppt",
-                  "label": "file-ppt"
-                },
-                {
-                  "value": "file-text",
-                  "label": "file-text"
-                },
-                {
-                  "value": "file-unknown",
-                  "label": "file-unknown"
-                },
-                {
-                  "value": "file-word",
-                  "label": "file-word"
-                },
-                {
-                  "value": "file-zip",
-                  "label": "file-zip"
-                },
-                {
-                  "value": "filter",
-                  "label": "filter"
-                },
-                {
-                  "value": "flag",
-                  "label": "flag"
-                },
-                {
-                  "value": "file",
-                  "label": "file"
-                },
-                {
-                  "value": "folder-add",
-                  "label": "folder-add"
-                },
-                {
-                  "value": "folder-open",
-                  "label": "folder-open"
-                },
-                {
-                  "value": "folder",
-                  "label": "folder"
-                },
-                {
-                  "value": "fire",
-                  "label": "fire"
-                },
-                {
-                  "value": "frown",
-                  "label": "frown"
-                },
-                {
-                  "value": "funnel-plot",
-                  "label": "funnel-plot"
-                },
-                {
-                  "value": "gift",
-                  "label": "gift"
-                },
-                {
-                  "value": "fund",
-                  "label": "fund"
-                },
-                {
-                  "value": "hdd",
-                  "label": "hdd"
-                },
-                {
-                  "value": "heart",
-                  "label": "heart"
-                },
-                {
-                  "value": "highlight",
-                  "label": "highlight"
-                },
-                {
-                  "value": "home",
-                  "label": "home"
-                },
-                {
-                  "value": "hourglass",
-                  "label": "hourglass"
-                },
-                {
-                  "value": "html5",
-                  "label": "html5"
-                },
-                {
-                  "value": "info-circle",
-                  "label": "info-circle"
-                },
-                {
-                  "value": "insurance",
-                  "label": "insurance"
-                },
-                {
-                  "value": "left-circle",
-                  "label": "left-circle"
-                },
-                {
-                  "value": "layout",
-                  "label": "layout"
-                },
-                {
-                  "value": "interation",
-                  "label": "interation"
-                },
-                {
-                  "value": "left-square",
-                  "label": "left-square"
-                },
-                {
-                  "value": "idcard",
-                  "label": "idcard"
-                },
-                {
-                  "value": "lock",
-                  "label": "lock"
-                },
-                {
-                  "value": "like",
-                  "label": "like"
-                },
-                {
-                  "value": "medicine-box",
-                  "label": "medicine-box"
-                },
-                {
-                  "value": "meh",
-                  "label": "meh"
-                },
-                {
-                  "value": "message",
-                  "label": "message"
-                },
-                {
-                  "value": "minus-circle",
-                  "label": "minus-circle"
-                },
-                {
-                  "value": "minus-square",
-                  "label": "minus-square"
-                },
-                {
-                  "value": "mobile",
-                  "label": "mobile"
-                },
-                {
-                  "value": "notification",
-                  "label": "notification"
-                },
-                {
-                  "value": "money-collect",
-                  "label": "money-collect"
-                },
-                {
-                  "value": "pause-circle",
-                  "label": "pause-circle"
-                },
-                {
-                  "value": "phone",
-                  "label": "phone"
-                },
-                {
-                  "value": "picture",
-                  "label": "picture"
-                },
-                {
-                  "value": "pie-chart",
-                  "label": "pie-chart"
-                },
-                {
-                  "value": "play-circle",
-                  "label": "play-circle"
-                },
-                {
-                  "value": "play-square",
-                  "label": "play-square"
-                },
-                {
-                  "value": "plus-circle",
-                  "label": "plus-circle"
-                },
-                {
-                  "value": "pound-circle",
-                  "label": "pound-circle"
-                },
-                {
-                  "value": "plus-square",
-                  "label": "plus-square"
-                },
-                {
-                  "value": "mail",
-                  "label": "mail"
-                },
-                {
-                  "value": "printer",
-                  "label": "printer"
-                },
-                {
-                  "value": "profile",
-                  "label": "profile"
-                },
-                {
-                  "value": "pushpin",
-                  "label": "pushpin"
-                },
-                {
-                  "value": "project",
-                  "label": "project"
-                },
-                {
-                  "value": "question-circle",
-                  "label": "question-circle"
-                },
-                {
-                  "value": "red-envelope",
-                  "label": "red-envelope"
-                },
-                {
-                  "value": "reconciliation",
-                  "label": "reconciliation"
-                },
-                {
-                  "value": "property-safety",
-                  "label": "property-safety"
-                },
-                {
-                  "value": "rest",
-                  "label": "rest"
-                },
-                {
-                  "value": "right-circle",
-                  "label": "right-circle"
-                },
-                {
-                  "value": "safety-certificate",
-                  "label": "safety-certificate"
-                },
-                {
-                  "value": "rocket",
-                  "label": "rocket"
-                },
-                {
-                  "value": "save",
-                  "label": "save"
-                },
-                {
-                  "value": "schedule",
-                  "label": "schedule"
-                },
-                {
-                  "value": "security-scan",
-                  "label": "security-scan"
-                },
-                {
-                  "value": "right-square",
-                  "label": "right-square"
-                },
-                {
-                  "value": "shop",
-                  "label": "shop"
-                },
-                {
-                  "value": "shopping",
-                  "label": "shopping"
-                },
-                {
-                  "value": "setting",
-                  "label": "setting"
-                },
-                {
-                  "value": "skin",
-                  "label": "skin"
-                },
-                {
-                  "value": "sliders",
-                  "label": "sliders"
-                },
-                {
-                  "value": "smile",
-                  "label": "smile"
-                },
-                {
-                  "value": "sound",
-                  "label": "sound"
-                },
-                {
-                  "value": "stop",
-                  "label": "stop"
-                },
-                {
-                  "value": "switcher",
-                  "label": "switcher"
-                },
-                {
-                  "value": "tablet",
-                  "label": "tablet"
-                },
-                {
-                  "value": "snippets",
-                  "label": "snippets"
-                },
-                {
-                  "value": "tags",
-                  "label": "tags"
-                },
-                {
-                  "value": "tag",
-                  "label": "tag"
-                },
-                {
-                  "value": "thunderbolt",
-                  "label": "thunderbolt"
-                },
-                {
-                  "value": "tool",
-                  "label": "tool"
-                },
-                {
-                  "value": "star",
-                  "label": "star"
-                },
-                {
-                  "value": "trademark-circle",
-                  "label": "trademark-circle"
-                },
-                {
-                  "value": "trophy",
-                  "label": "trophy"
-                },
-                {
-                  "value": "unlock",
-                  "label": "unlock"
-                },
-                {
-                  "value": "up-square",
-                  "label": "up-square"
-                },
-                {
-                  "value": "usb",
-                  "label": "usb"
-                },
-                {
-                  "value": "up-circle",
-                  "label": "up-circle"
-                },
-                {
-                  "value": "wallet",
-                  "label": "wallet"
-                },
-                {
-                  "value": "warning",
-                  "label": "warning"
-                },
-                {
-                  "value": "video-camera",
-                  "label": "video-camera"
-                },
-                {
-                  "value": "ci",
-                  "label": "ci"
-                },
-                {
-                  "value": "copyright",
-                  "label": "copyright"
-                },
-                {
-                  "value": "dollar",
-                  "label": "dollar"
-                },
-                {
-                  "value": "euro",
-                  "label": "euro"
-                },
-                {
-                  "value": "gold",
-                  "label": "gold"
-                },
-                {
-                  "value": "canlendar",
-                  "label": "canlendar"
-                }
-              ]
-            }
-          ]
-        }
+        "default": ""
       },
       {
-        "name": "theme",
+        "name": "nzTheme",
         "inputType": 0,
         "description": "Type of the ant design icon",
         "type": "Enum",
@@ -7043,7 +4387,7 @@
         "pureDefault": "outline"
       },
       {
-        "name": "spin",
+        "name": "nzSpin",
         "inputType": 0,
         "description": "Rotate icon with animation",
         "type": "boolean",
@@ -7052,7 +4396,7 @@
         "pureDefault": "false"
       },
       {
-        "name": "twoToneColor",
+        "name": "nzTwotoneColor",
         "inputType": 0,
         "description": "Only support the two-tone icon. Specific the primary color.",
         "type": "string",
@@ -7060,11 +4404,19 @@
         "default": ""
       },
       {
-        "name": "iconfont",
+        "name": "nzIconfont",
         "inputType": 0,
         "description": "Type of the icon from iconfont",
         "type": "string",
         "typeRaw": "`string`",
+        "default": ""
+      },
+      {
+        "name": "nzRotate",
+        "inputType": 0,
+        "description": "Rotate degrees (since 7.0.0)",
+        "type": "number",
+        "typeRaw": "`number`",
         "default": ""
       }
     ],
@@ -7216,7 +4568,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/input"
   },
   {
-    "_idx": 12,
+    "_idx": 17,
     "type": "component",
     "selector": "nz-input-number",
     "types": {},
@@ -7434,6 +4786,14 @@
         "default": ""
       },
       {
+        "name": "nzZeroTrigger",
+        "inputType": 0,
+        "description": "specify the customized trigger when nzCollapsedWidth setting to `0`",
+        "type": "TemplateRef",
+        "typeRaw": "`TemplateRef<void>`",
+        "default": ""
+      },
+      {
         "name": "nzWidth",
         "inputType": 0,
         "description": "width of the sidebar",
@@ -7441,6 +4801,19 @@
         "typeRaw": "`number｜string`",
         "default": "`200`",
         "pureDefault": "200"
+      },
+      {
+        "name": "nzTheme",
+        "inputType": 0,
+        "description": "color theme of the sidebar",
+        "type": "Enum",
+        "typeRaw": "`'light'｜'dark'`",
+        "default": "`dark`",
+        "typeDefinition": [
+          "light",
+          "dark"
+        ],
+        "pureDefault": "dark"
       },
       {
         "name": "nzCollapsedChange",
@@ -8011,11 +5384,11 @@
         "description": "specify the size of `nz-pagination`, can be set to `small`",
         "type": "Enum",
         "typeRaw": "`'small'`",
-        "default": "`\"\"`",
+        "default": "`'default'`",
         "typeDefinition": [
           "small"
         ],
-        "pureDefault": ""
+        "pureDefault": "default"
       },
       {
         "name": "nzPageSizeOptions",
@@ -8189,7 +5562,7 @@
       {
         "name": "nzCancelText",
         "inputType": 0,
-        "description": "text of the Cancel button",
+        "description": "Text of the Cancel button",
         "type": "string",
         "typeRaw": "`string`",
         "default": "`'Cancel'`",
@@ -8198,7 +5571,7 @@
       {
         "name": "nzOkText",
         "inputType": 0,
-        "description": "text of the Confirm button",
+        "description": "Text of the Confirm button",
         "type": "string",
         "typeRaw": "`string`",
         "default": "`'Confirm'`",
@@ -8223,7 +5596,7 @@
       {
         "name": "nzTitle",
         "inputType": 0,
-        "description": "title of the confirmation box",
+        "description": "Title of the confirmation box",
         "type": "string",
         "typeRaw": "`string｜TemplateRef<void>`",
         "default": ""
@@ -8238,9 +5611,17 @@
         "pureDefault": "false"
       },
       {
+        "name": "nzIcon",
+        "inputType": 0,
+        "description": "Customize icon of confirmation",
+        "type": "string",
+        "typeRaw": "`string｜TemplateRef<void>`",
+        "default": ""
+      },
+      {
         "name": "nzOnCancel",
         "inputType": 1,
-        "description": "callback of cancel",
+        "description": "Callback of cancel",
         "type": "EventEmitter",
         "typeRaw": "`EventEmitter<void>`",
         "default": ""
@@ -8248,7 +5629,7 @@
       {
         "name": "nzOnConfirm",
         "inputType": 1,
-        "description": "callback of confirmation",
+        "description": "Callback of confirmation",
         "type": "EventEmitter",
         "typeRaw": "`EventEmitter<void>`",
         "default": ""
@@ -8780,6 +6161,15 @@
         "forceInputType": 0
       },
       {
+        "name": "nzTooltips",
+        "inputType": 0,
+        "description": "Customize tooltip by each character",
+        "type": "Array",
+        "typeRaw": "`string[]`",
+        "default": "`[]`",
+        "pureDefault": "[]"
+      },
+      {
         "name": "ngModel",
         "inputType": 2,
         "description": "current value , double binding",
@@ -8863,6 +6253,15 @@
         "typeRaw": "`(o1: any, o2: any) => boolean`",
         "default": "`(o1: any, o2: any) => o1===o2`",
         "pureDefault": "(o1: any, o2: any) => o1===o2"
+      },
+      {
+        "name": "nzAutoClearSearchValue",
+        "inputType": 0,
+        "description": "Whether the current search will be cleared on selecting an item. Only applies when `mode` is set to `multiple` or `tags`.",
+        "type": "boolean",
+        "typeRaw": "boolean",
+        "default": "`true`",
+        "pureDefault": "true"
       },
       {
         "name": "nzAllowClear",
@@ -8984,6 +6383,15 @@
         "default": ""
       },
       {
+        "name": "nzShowArrow",
+        "inputType": 0,
+        "description": "Whether to show the drop-down arrow",
+        "type": "boolean",
+        "typeRaw": "boolean",
+        "default": "`true`",
+        "pureDefault": "true"
+      },
+      {
         "name": "nzShowSearch",
         "inputType": 0,
         "description": "Whether show search input in single mode.",
@@ -9005,6 +6413,73 @@
           "default"
         ],
         "pureDefault": "default"
+      },
+      {
+        "name": "nzSuffixIcon",
+        "inputType": 0,
+        "description": "The custom suffix icon",
+        "type": "TemplateRef",
+        "typeRaw": "`TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "nzRemoveIcon",
+        "inputType": 0,
+        "description": "The custom remove icon",
+        "type": "TemplateRef",
+        "typeRaw": "`TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "nzClearIcon",
+        "inputType": 0,
+        "description": "The custom clear icon",
+        "type": "TemplateRef",
+        "typeRaw": "`TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "nzMenuItemSelectedIcon",
+        "inputType": 0,
+        "description": "The custom menuItemSelected icon",
+        "type": "TemplateRef",
+        "typeRaw": "`TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "nzTokenSeparators",
+        "inputType": 0,
+        "description": "Separator used to tokenize on tag/multiple mode",
+        "type": "Array",
+        "typeRaw": "`string[]`",
+        "default": "`[]`",
+        "pureDefault": "[]"
+      },
+      {
+        "name": "nzLoading",
+        "inputType": 0,
+        "description": "indicate loading state",
+        "type": "boolean",
+        "typeRaw": "boolean",
+        "default": "false",
+        "pureDefault": "false",
+        "forceInputType": 0
+      },
+      {
+        "name": "nzMaxTagCount",
+        "inputType": 0,
+        "description": "Max tag count to show",
+        "type": "number",
+        "typeRaw": "number",
+        "default": ""
+      },
+      {
+        "name": "nzMaxTagPlaceholder",
+        "inputType": 0,
+        "description": "Placeholder for not showing tags",
+        "type": "TemplateRef",
+        "typeRaw": "TemplateRef<{ $implicit: any[] }>",
+        "default": ""
       },
       {
         "name": "ngModelChange",
@@ -9040,6 +6515,22 @@
         "default": ""
       },
       {
+        "name": "nzFocus",
+        "inputType": 1,
+        "description": "focus callback",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<void>`",
+        "default": ""
+      },
+      {
+        "name": "nzBlur",
+        "inputType": 1,
+        "description": "blur callback",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<void>`",
+        "default": ""
+      },
+      {
         "name": "formControlName",
         "inputType": 0,
         "type": "string",
@@ -9054,7 +6545,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/select"
   },
   {
-    "_idx": 339,
+    "_idx": 507,
     "type": "component",
     "selector": "nz-option",
     "types": {},
@@ -9103,7 +6594,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/select"
   },
   {
-    "_idx": 418,
+    "_idx": 586,
     "type": "component",
     "selector": "nz-option-group",
     "types": {},
@@ -9189,15 +6680,6 @@
     "selector": "nz-slider",
     "types": {},
     "properties": [
-      {
-        "name": "nzDefaultValue",
-        "inputType": 0,
-        "description": "The default value of slider. When `range` is `false`, use `number`, otherwise, use `[number, number]`",
-        "type": "number",
-        "typeRaw": "`number｜number[]`",
-        "default": "`0｜[0, 0]`",
-        "pureDefault": "0｜[0, 0]"
-      },
       {
         "name": "nzDisabled",
         "inputType": 0,
@@ -9297,6 +6779,20 @@
         "pureDefault": "false"
       },
       {
+        "name": "nzTooltipVisible",
+        "inputType": 0,
+        "description": "When set to `always` tooltips are always displayed. When set to `never` they are never displayed",
+        "type": "Enum",
+        "typeRaw": "`'default'｜'always'｜'never'`",
+        "default": "`default`",
+        "typeDefinition": [
+          "default",
+          "always",
+          "never"
+        ],
+        "pureDefault": "default"
+      },
+      {
         "name": "nzOnAfterChange",
         "inputType": 1,
         "description": "Fire when `onmouseup` is fired.",
@@ -9373,6 +6869,15 @@
         "forceInputType": 0
       },
       {
+        "name": "nzSimple",
+        "inputType": 0,
+        "description": "whether Spin has no children",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
         "name": "nzTip",
         "inputType": 0,
         "description": "customize description content when Spin has children",
@@ -9387,6 +6892,131 @@
     "whenToUse": "When part of the page is waiting for asynchronous data or during a rendering process, an appropriate loading animation can effectively alleviate users' inquietude.",
     "doc": "/components/spin/en",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/spin"
+  },
+  {
+    "_idx": 21,
+    "type": "component",
+    "selector": "nz-statistic",
+    "types": {},
+    "properties": [
+      {
+        "name": "nzPrefix",
+        "inputType": 0,
+        "description": "Prefix of Value",
+        "type": "string",
+        "typeRaw": "`string｜TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "nzSuffix",
+        "inputType": 0,
+        "description": "Suffix of Value",
+        "type": "string",
+        "typeRaw": "`string｜TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "nzTitle",
+        "inputType": 0,
+        "description": "Title",
+        "type": "string",
+        "typeRaw": "`string｜TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "nzValue",
+        "inputType": 0,
+        "description": "Value",
+        "type": "string",
+        "typeRaw": "`string｜number`",
+        "default": ""
+      },
+      {
+        "name": "nzValueStyle",
+        "inputType": 0,
+        "description": "Value CSS style",
+        "type": "object",
+        "typeRaw": "`Object`",
+        "default": ""
+      },
+      {
+        "name": "nzValueTemplate",
+        "inputType": 0,
+        "description": "Custom template to render a number",
+        "type": "TemplateRef",
+        "typeRaw": "`TemplateRef<{ $implicit: string｜number }>`",
+        "default": ""
+      }
+    ],
+    "lib": "ng-zorro-antd",
+    "title": "Statistic",
+    "description": "Display statistic number.",
+    "whenToUse": "- When want to highlight some data.\n- When want to display statistic data with description.",
+    "doc": "/components/statistic/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/statistic"
+  },
+  {
+    "_idx": 128,
+    "type": "component",
+    "selector": "nz-countdown",
+    "types": {},
+    "properties": [
+      {
+        "name": "nzFormat",
+        "inputType": 0,
+        "description": "Format string",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": "`\"HH:mm:ss\"`",
+        "pureDefault": "HH:mm:ss"
+      },
+      {
+        "name": "nzPrefix",
+        "inputType": 0,
+        "description": "Prefix of Value",
+        "type": "string",
+        "typeRaw": "`string｜TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "nzSuffix",
+        "inputType": 0,
+        "description": "Suffix of Value",
+        "type": "string",
+        "typeRaw": "`string｜TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "nzTitle",
+        "inputType": 0,
+        "description": "Title",
+        "type": "string",
+        "typeRaw": "`string｜TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "nzValue",
+        "inputType": 0,
+        "description": "Target time in timestamp form",
+        "type": "string",
+        "typeRaw": "`string｜number`",
+        "default": ""
+      },
+      {
+        "name": "nzValueTemplate",
+        "inputType": 0,
+        "description": "Custom template to render a time",
+        "type": "TemplateRef",
+        "typeRaw": "`TemplateRef<{ $implicit: number }>`",
+        "default": ""
+      }
+    ],
+    "lib": "ng-zorro-antd",
+    "title": "Statistic",
+    "description": "Display statistic number.",
+    "whenToUse": "- When want to highlight some data.\n- When want to display statistic data with description.",
+    "doc": "/components/statistic/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/statistic"
   },
   {
     "_idx": 13,
@@ -9502,7 +7132,7 @@
         "inputType": 0,
         "description": "icon of the step, optional property",
         "type": "string",
-        "typeRaw": "`string｜string[]｜Set<string>｜{ [klass: string]: any; };` ｜ `TemplateRef<void>`",
+        "typeRaw": "`string｜string[]｜Set<string>｜{ [klass: string]: any; }` ｜ `TemplateRef<void>`",
         "default": ""
       },
       {
@@ -9688,6 +7318,20 @@
         "pureDefault": "true"
       },
       {
+        "name": "nzPaginationPosition",
+        "inputType": 0,
+        "description": "Specify the position of Pagination",
+        "type": "Enum",
+        "typeRaw": "`'top'｜'bottom'｜'both'`",
+        "default": "`bottom`",
+        "typeDefinition": [
+          "top",
+          "bottom",
+          "both"
+        ],
+        "pureDefault": "bottom"
+      },
+      {
         "name": "nzBordered",
         "inputType": 0,
         "description": "Whether to show all table borders",
@@ -9799,9 +7443,17 @@
       {
         "name": "nzShowTotal",
         "inputType": 0,
-        "description": "To display the total number and range, same as Pagination",
+        "description": "To display Pagination total number and range, same as Pagination",
         "type": "TemplateRef",
         "typeRaw": "`TemplateRef<{ $implicit: number, range: [ number, number ] }>`",
+        "default": ""
+      },
+      {
+        "name": "nzItemRender",
+        "inputType": 0,
+        "description": "to customize Pagination item, same as Pagination",
+        "type": "TemplateRef",
+        "typeRaw": "`TemplateRef<{ $implicit: 'page'｜'prev'｜'next', page: number }>`",
         "default": ""
       },
       {
@@ -9820,6 +7472,51 @@
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": ""
+      },
+      {
+        "name": "nzTemplateMode",
+        "inputType": 0,
+        "description": "template mode，no need to pass data to `nzData`",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzVirtualScroll",
+        "inputType": 0,
+        "description": "Enable virtual scroll mode，work with `[nzScroll]`",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzVirtualItemSize",
+        "inputType": 0,
+        "description": "The size of the items in the list, same as [cdk itemSize](https://material.angular.io/cdk/scrolling/api)",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`0`",
+        "pureDefault": "0"
+      },
+      {
+        "name": "nzVirtualMaxBufferPx",
+        "inputType": 0,
+        "description": "The number of pixels worth of buffer to render for when rendering new items, same as [cdk maxBufferPx](https://material.angular.io/cdk/scrolling/api)",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`200`",
+        "pureDefault": "200"
+      },
+      {
+        "name": "nzVirtualMinBufferPx",
+        "inputType": 0,
+        "description": "The minimum amount of buffer rendered beyond the viewport (in pixels),same as [cdk minBufferPx](https://material.angular.io/cdk/scrolling/api)",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`100`",
+        "pureDefault": "100"
       },
       {
         "name": "nzPageIndexChange",
@@ -9854,7 +7551,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/table"
   },
   {
-    "_idx": 405,
+    "_idx": 503,
     "type": "component",
     "selector": "th",
     "types": {},
@@ -9975,6 +7672,19 @@
         "default": ""
       },
       {
+        "name": "nzAlign",
+        "inputType": 0,
+        "description": "Specify how content is aligned",
+        "type": "Enum",
+        "typeRaw": "`'left'｜'right'｜'center'`",
+        "default": "",
+        "typeDefinition": [
+          "left",
+          "right",
+          "center"
+        ]
+      },
+      {
         "name": "nzExpand",
         "inputType": 0,
         "description": "Whether current column include expand icon",
@@ -9991,7 +7701,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/table"
   },
   {
-    "_idx": 733,
+    "_idx": 845,
     "type": "component",
     "selector": "td",
     "types": {},
@@ -10079,6 +7789,19 @@
         "default": ""
       },
       {
+        "name": "nzAlign",
+        "inputType": 0,
+        "description": "Specify how content is aligned",
+        "type": "Enum",
+        "typeRaw": "`'left'｜'right'｜'center'`",
+        "default": "",
+        "typeDefinition": [
+          "left",
+          "right",
+          "center"
+        ]
+      },
+      {
         "name": "nzIndentSize",
         "inputType": 0,
         "description": "Indent size in pixels of tree data",
@@ -10095,7 +7818,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/table"
   },
   {
-    "_idx": 982,
+    "_idx": 1108,
     "type": "component",
     "selector": "thead",
     "types": {},
@@ -10126,7 +7849,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/table"
   },
   {
-    "_idx": 1033,
+    "_idx": 1159,
     "type": "component",
     "selector": "tr",
     "types": {},
@@ -10143,6 +7866,19 @@
     "lib": "ng-zorro-antd",
     "title": "Table",
     "description": "A table displays rows of data.",
+    "whenToUse": "- To display a collection of structured data.\n- To sort, search, paginate, filter data.",
+    "doc": "/components/table/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/table"
+  },
+  {
+    "_idx": 1196,
+    "type": "directive",
+    "selector": "nz-virtual-scroll",
+    "types": {},
+    "properties": [],
+    "description": "virtual scroll directive work with `ng-template`, type: `TemplateRef<{ $implicit: any, index: number }>`.",
+    "lib": "ng-zorro-antd",
+    "title": "Table",
     "whenToUse": "- To display a collection of structured data.\n- To sort, search, paginate, filter data.",
     "doc": "/components/table/en",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/table"
@@ -10359,6 +8095,19 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tabs"
   },
   {
+    "_idx": 355,
+    "type": "directive",
+    "selector": "nz-tab",
+    "types": {},
+    "properties": [],
+    "description": "Tab contents can be lazy loaded by declaring the body in a `ng-template` with the `[nz-tab]` attribute.",
+    "lib": "ng-zorro-antd",
+    "title": "Tabs",
+    "whenToUse": "Ant Design has 3 types of Tabs for different situations.",
+    "doc": "/components/tabs/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tabs"
+  },
+  {
     "_idx": 13,
     "type": "component",
     "selector": "nz-time-picker",
@@ -10553,212 +8302,89 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/time-picker"
   },
   {
-    "_idx": 21,
+    "_idx": 22,
     "type": "component",
-    "selector": "nz-alert",
+    "selector": "nz-timeline",
     "types": {},
     "properties": [
       {
-        "name": "nzBanner",
+        "name": "nzPending",
         "inputType": 0,
-        "description": "Whether to show as banner",
+        "description": "Set the last ghost node's existence or its content",
+        "type": "string",
+        "typeRaw": "`string｜boolean｜TemplateRef<void>`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzPendingDot",
+        "inputType": 0,
+        "description": "Set the dot of the last ghost node when pending is true",
+        "type": "string",
+        "typeRaw": "`string｜TemplateRef<void>`",
+        "default": "`<i nz-icon type=\"loading\"></i>`",
+        "pureDefault": "<i nz-icon type=\"loading\"></i>"
+      },
+      {
+        "name": "nzReverse",
+        "inputType": 0,
+        "description": "Reverse nodes or not",
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
         "pureDefault": "false"
       },
       {
-        "name": "nzClosable",
+        "name": "nzMode",
         "inputType": 0,
-        "description": "Whether Alert can be closed",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": ""
-      },
-      {
-        "name": "nzCloseText",
-        "inputType": 0,
-        "description": "Close text to show",
-        "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
-        "default": ""
-      },
-      {
-        "name": "nzDescription",
-        "inputType": 0,
-        "description": "Additional content of Alert",
-        "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
-        "default": ""
-      },
-      {
-        "name": "nzMessage",
-        "inputType": 0,
-        "description": "Content of Alert",
-        "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
-        "default": ""
-      },
-      {
-        "name": "nzShowIcon",
-        "inputType": 0,
-        "description": "Whether to show icon, in `nzBanner` mode default is `true`",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false"
-      },
-      {
-        "name": "nzIconType",
-        "inputType": 0,
-        "description": "Icon type, effective when `nzShowIcon` is `true`",
-        "type": "string",
-        "typeRaw": "`string｜string[]｜Set<string>｜{ [klass: string]: any; }`",
-        "default": ""
-      },
-      {
-        "name": "nzType",
-        "inputType": 0,
-        "description": "Type of Alert styles, in `nzBanner` mode default is `'warning'`",
+        "description": "By sending `alternate` the timeline will distribute the nodes to the left and right",
         "type": "Enum",
-        "typeRaw": "`'success'｜'info'｜'warning'｜'error'`",
-        "default": "`'info'`",
+        "typeRaw": "`'left'｜'alternate'｜'right'`",
+        "default": "",
         "typeDefinition": [
-          "success",
-          "info",
-          "warning",
-          "error"
-        ],
-        "pureDefault": "info"
-      },
-      {
-        "name": "nzOnClose",
-        "inputType": 1,
-        "description": "Callback when Alert is closed",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<void>`",
-        "default": ""
+          "left",
+          "alternate",
+          "right"
+        ]
       }
     ],
+    "description": "Timeline",
     "lib": "ng-zorro-antd",
-    "title": "Alert",
-    "description": "Alert component for feedback.",
-    "whenToUse": "- When you need to show alert messages to users.\n- When you need a persistent static container which is closable by user actions.",
-    "doc": "/components/alert/en",
-    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/alert"
+    "title": "Timeline",
+    "whenToUse": "- When a series of information needs to be ordered by time (ascend or descend).\n- When you need a timeline to make a visual connection.",
+    "doc": "/components/timeline/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/timeline"
   },
   {
-    "_idx": 12,
+    "_idx": 104,
     "type": "component",
-    "selector": "nz-anchor",
+    "selector": "nz-timeline-item",
     "types": {},
     "properties": [
       {
-        "name": "nzAffix",
+        "name": "nzColor",
         "inputType": 0,
-        "description": "Fixed mode of Anchor",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`true`",
-        "pureDefault": "true"
-      },
-      {
-        "name": "nzBounds",
-        "inputType": 0,
-        "description": "Bounding distance of anchor area, unit: px",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "`5`",
-        "pureDefault": "5"
-      },
-      {
-        "name": "nzOffsetBottom",
-        "inputType": 0,
-        "description": "Pixels to offset from bottom when calculating position of scroll",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": ""
-      },
-      {
-        "name": "nzOffsetTop",
-        "inputType": 0,
-        "description": "Pixels to offset from top when calculating position of scroll",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "`0`",
-        "pureDefault": "0"
-      },
-      {
-        "name": "nzShowInkInFixed",
-        "inputType": 0,
-        "description": "Whether show ink-balls in Fixed mode",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false"
-      },
-      {
-        "name": "nzTarget",
-        "inputType": 0,
-        "description": "Scrolling container",
-        "type": "string",
-        "typeRaw": "`string｜HTMLElement`",
-        "default": "`window`",
-        "pureDefault": "window"
-      },
-      {
-        "name": "nzClick",
-        "inputType": 1,
-        "description": "Click of Anchor item",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<string>`",
-        "default": ""
-      },
-      {
-        "name": "nzScroll",
-        "inputType": 1,
-        "description": "The scroll function that is triggered when scrolling to an anchor.",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<NzAnchorLinkComponent>`",
-        "default": ""
-      }
-    ],
-    "lib": "ng-zorro-antd",
-    "title": "Anchor",
-    "description": "Hyperlinks to scroll on one page.",
-    "whenToUse": "For displaying anchor hyperlinks on page and jumping between them.",
-    "doc": "/components/anchor/en",
-    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/anchor"
-  },
-  {
-    "_idx": 147,
-    "type": "component",
-    "selector": "nz-link",
-    "types": {},
-    "properties": [
-      {
-        "name": "nzHref",
-        "inputType": 0,
-        "description": "target of hyperlink",
+        "description": "Set the circle's color to `blue`, `red`, `green` or other custom colors (css color)",
         "type": "string",
         "typeRaw": "`string`",
-        "default": ""
+        "default": "`blue`",
+        "pureDefault": "blue"
       },
       {
-        "name": "nzTitle",
+        "name": "nzDot",
         "inputType": 0,
-        "description": "content of  hyperlink",
+        "description": "Customize timeline dot",
         "type": "string",
         "typeRaw": "`string｜TemplateRef<void>`",
         "default": ""
       }
     ],
+    "description": "Node of timeline",
     "lib": "ng-zorro-antd",
-    "title": "Anchor",
-    "description": "Hyperlinks to scroll on one page.",
-    "whenToUse": "For displaying anchor hyperlinks on page and jumping between them.",
-    "doc": "/components/anchor/en",
-    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/anchor"
+    "title": "Timeline",
+    "whenToUse": "- When a series of information needs to be ordered by time (ascend or descend).\n- When you need a timeline to make a visual connection.",
+    "doc": "/components/timeline/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/timeline"
   },
   {
     "_idx": 15,
@@ -10927,15 +8553,6 @@
     "types": {},
     "properties": [
       {
-        "name": "ngModel",
-        "inputType": 2,
-        "description": "Tree data(nzData instead)",
-        "type": "Array",
-        "typeRaw": "`NzTreeNode[]`",
-        "default": "`[]`",
-        "pureDefault": "[]"
-      },
-      {
         "name": "nzData",
         "inputType": 0,
         "description": "Tree data (Reference NzTreeNode)",
@@ -11008,6 +8625,15 @@
         "pureDefault": "false"
       },
       {
+        "name": "nzHideUnMatched",
+        "inputType": 0,
+        "description": "Hide unmatched nodes while searching",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
         "name": "nzCheckStrictly",
         "inputType": 0,
         "description": "Check treeNode precisely; parent treeNode and children treeNodes are not associated",
@@ -11028,7 +8654,7 @@
       {
         "name": "nzExpandedKeys",
         "inputType": 0,
-        "description": "Specify the keys of the default expanded treeNodes, two-way binding",
+        "description": "Specify the keys of the default expanded treeNodes",
         "type": "Array",
         "typeRaw": "`string[]`",
         "default": "`[]`",
@@ -11037,7 +8663,7 @@
       {
         "name": "nzCheckedKeys",
         "inputType": 0,
-        "description": "Specifies the keys of the default checked treeNodes, two-way binding",
+        "description": "Specifies the keys of the default checked treeNodes",
         "type": "Array",
         "typeRaw": "`string[]`",
         "default": "`[]`",
@@ -11046,7 +8672,7 @@
       {
         "name": "nzSelectedKeys",
         "inputType": 0,
-        "description": "Specifies the keys of the default selected treeNodes, two-way binding",
+        "description": "Specifies the keys of the default selected treeNodes",
         "type": "Array",
         "typeRaw": "`string[]`",
         "default": "`[]`",
@@ -11304,7 +8930,7 @@
         "inputType": 0,
         "description": "Data of the treeNodes",
         "type": "Array",
-        "typeRaw": "`NzTreeNode[]`",
+        "typeRaw": "`NzTreeNodeOptions[]`",
         "default": "`[]`",
         "pureDefault": "[]"
       },
@@ -11333,6 +8959,22 @@
         "typeRaw": "`(node: NzTreeNode) => string`",
         "default": "`(node: NzTreeNode) => node.title`",
         "pureDefault": "(node: NzTreeNode) => node.title"
+      },
+      {
+        "name": "nzMaxTagCount",
+        "inputType": 0,
+        "description": "Max tag count to show",
+        "type": "number",
+        "typeRaw": "number",
+        "default": ""
+      },
+      {
+        "name": "nzMaxTagPlaceholder",
+        "inputType": 0,
+        "description": "Placeholder for not showing tags",
+        "type": "TemplateRef",
+        "typeRaw": "TemplateRef<{ $implicit: NzTreeNode[] }>",
+        "default": ""
       },
       {
         "name": "nzExpandChange",
@@ -11720,7 +9362,37 @@
     "_idx": 6,
     "type": "component",
     "selector": "range-picker",
-    "types": {},
+    "types": {
+      "DateRangePickerShortcut": [
+        {
+          "name": "enabled",
+          "inputType": 0,
+          "description": "Whether to enable",
+          "type": "boolean",
+          "typeRaw": "`boolean`",
+          "default": "`false`",
+          "pureDefault": "false"
+        },
+        {
+          "name": "closed",
+          "inputType": 0,
+          "description": "Whether to close the panel after clicking",
+          "type": "boolean",
+          "typeRaw": "`boolean`",
+          "default": "`true`",
+          "pureDefault": "true"
+        },
+        {
+          "name": "enabled",
+          "inputType": 0,
+          "description": "Shortcut list",
+          "type": "Array",
+          "typeRaw": "`DateRangePickerShortcutItem[]`",
+          "default": "`今天,昨天,近3天,近7天,本周,本月,全年`",
+          "pureDefault": "今天,昨天,近3天,近7天,本周,本月,全年"
+        }
+      ]
+    },
     "properties": [
       {
         "name": "ngModel",
@@ -11737,6 +9409,16 @@
         "type": "object",
         "typeRaw": "`Date`",
         "default": ""
+      },
+      {
+        "name": "shortcut",
+        "inputType": 0,
+        "description": "Set shortcuts",
+        "type": "boolean",
+        "typeRaw": "`boolean | DateRangePickerShortcut`",
+        "default": "`false`",
+        "complexType": "DateRangePickerShortcut",
+        "pureDefault": "false"
       },
       {
         "name": "nzAllowClear",
@@ -12256,7 +9938,7 @@
       {
         "name": "col",
         "inputType": 0,
-        "description": "specify the maximum number of columns to display, the final columns number is determined by col setting combined with [Responsive Rules](/theme/responsive)",
+        "description": "specify the maximum number of columns to display, the final columns number is determined by col setting combined with [Responsive Rules](/theme/responsive) (Inherited from `se-container`)",
         "type": "Enum",
         "typeRaw": "`'1','2','3','4','5','6'`",
         "default": "",
@@ -12275,6 +9957,14 @@
         "description": "Label",
         "type": "string",
         "typeRaw": "`string,TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "labelWidth",
+        "inputType": 0,
+        "description": "label text of width, unit is `px` (Inherited from `se-container`)",
+        "type": "number",
+        "typeRaw": "`number`",
         "default": ""
       },
       {
@@ -12318,14 +10008,6 @@
         "default": ""
       },
       {
-        "name": "line",
-        "inputType": 0,
-        "description": "whether separation line style",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": ""
-      },
-      {
         "name": "controlClass",
         "inputType": 0,
         "description": "Control area classes",
@@ -12340,6 +10022,14 @@
         "type": "string",
         "typeRaw": "`string`",
         "default": ""
+      },
+      {
+        "name": "line",
+        "inputType": 0,
+        "description": "whether separation line style (Inherited from `se-container`)",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": ""
       }
     ],
     "lib": "@delon/abc",
@@ -12350,7 +10040,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/edit"
   },
   {
-    "_idx": 342,
+    "_idx": 356,
     "type": "component",
     "selector": "se-title",
     "types": {},
@@ -12363,7 +10053,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/edit"
   },
   {
-    "_idx": 342,
+    "_idx": 356,
     "type": "directive",
     "selector": "se-title",
     "types": {},
@@ -12374,29 +10064,6 @@
     "whenToUse": "",
     "doc": "/components/edit/en",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/edit"
-  },
-  {
-    "_idx": 6,
-    "type": "component",
-    "selector": "ellipsis",
-    "types": {},
-    "properties": [
-      {
-        "name": "lines",
-        "inputType": 0,
-        "description": "在按照行数截取下最大的行数，超过则截取省略",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "`3`",
-        "pureDefault": "3"
-      }
-    ],
-    "lib": "@delon/abc",
-    "title": "文本自动省略号",
-    "description": "一个简单的文本自动省略号。",
-    "whenToUse": "",
-    "doc": "/components/ellipsis/en",
-    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/ellipsis"
   },
   {
     "_idx": 6,
@@ -12686,112 +10353,6 @@
     "whenToUse": "",
     "doc": "/components/global-footer/en",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/global-footer"
-  },
-  {
-    "_idx": 51,
-    "type": "component",
-    "selector": "nz-autocomplete",
-    "types": {},
-    "properties": [
-      {
-        "name": "nzBackfill",
-        "inputType": 0,
-        "description": "backfill selected item the input when using keyboard",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false"
-      },
-      {
-        "name": "nzDataSource",
-        "inputType": 0,
-        "description": "Data source for autocomplete",
-        "type": "object",
-        "typeRaw": "`AutocompleteDataSource`",
-        "default": ""
-      },
-      {
-        "name": "nzDefaultActiveFirstOption",
-        "inputType": 0,
-        "description": "Whether active first option by default",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`true`",
-        "pureDefault": "true"
-      },
-      {
-        "name": "nzWidth",
-        "inputType": 0,
-        "description": "Custom width, unit px",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "trigger element width",
-        "pureDefault": "trigger element width"
-      },
-      {
-        "name": "nzOverlayClassName",
-        "inputType": 0,
-        "description": "Class name of the dropdown root element",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": ""
-      },
-      {
-        "name": "nzOverlayStyle",
-        "inputType": 0,
-        "description": "Style of the dropdown root element",
-        "type": "object",
-        "typeRaw": "`object`",
-        "default": "",
-        "forceInputType": 0
-      }
-    ],
-    "lib": "ng-zorro-antd",
-    "title": "Autocomplete",
-    "description": "Autocomplete function of input field.",
-    "whenToUse": "When there is a need for autocomplete functionality.",
-    "doc": "/components/auto-complete/en",
-    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/auto-complete"
-  },
-  {
-    "_idx": 158,
-    "type": "component",
-    "selector": "nz-auto-option",
-    "types": {},
-    "properties": [
-      {
-        "name": "nzValue",
-        "inputType": 0,
-        "description": "bind ngModel of the trigger element",
-        "type": "object",
-        "typeRaw": "`any`",
-        "default": ""
-      },
-      {
-        "name": "nzLabel",
-        "inputType": 0,
-        "description": "display value of the trigger element",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": ""
-      },
-      {
-        "name": "nzDisabled",
-        "inputType": 0,
-        "description": "disabled option",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false",
-        "forceInputType": 0
-      }
-    ],
-    "lib": "ng-zorro-antd",
-    "title": "Autocomplete",
-    "description": "Autocomplete function of input field.",
-    "whenToUse": "When there is a need for autocomplete functionality.",
-    "doc": "/components/auto-complete/en",
-    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/auto-complete"
   },
   {
     "_idx": 6,
@@ -13350,7 +10911,7 @@
       {
         "name": "disabledAcl",
         "inputType": 0,
-        "description": "`acl` 校验失败时以 `disabled` 状态显示",
+        "description": "Displayed `disabled` state when `acl` check fails.",
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
@@ -13359,7 +10920,7 @@
       {
         "name": "autoCloseUnderPad",
         "inputType": 0,
-        "description": "小于Pad宽度时路由切换后自动关闭侧边栏",
+        "description": "When the route width is less than the Pad width, the sidebar is automatically closed.",
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`true`",
@@ -13368,24 +10929,33 @@
       {
         "name": "recursivePath",
         "inputType": 0,
-        "description": "自动向上递归查找，菜单数据源包含 `/ware`，则 `/ware/1` 也视为 `/ware` 项",
+        "description": "Automatic up recursive lookup, menu data source contains `/ware`, then `/ware/1` is also treated as `/ware`",
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`true`",
         "pureDefault": "true"
       },
       {
+        "name": "openStrictly",
+        "inputType": 0,
+        "description": "Precise check open status, does not auto closed other open item",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
         "name": "select",
         "inputType": 1,
-        "description": "点击菜单时回调（包含 `disabled`）",
+        "description": "Callback when clicking menu (including `disabled`)",
         "type": "EventEmitter",
         "typeRaw": "`EventEmitter<Menu>`",
         "default": ""
       }
     ],
     "lib": "@delon/abc",
-    "title": "主菜单",
-    "description": "ng-alain 左边主菜单，依赖于 `@delon/theme`。",
+    "title": "Sidebar",
+    "description": "NG-ALAIN The left main menu depends on `@delon/theme`.",
     "whenToUse": "",
     "doc": "/components/sidebar-nav/en",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sidebar-nav"
@@ -13396,6 +10966,15 @@
     "selector": "st",
     "types": {
       "STReq": [
+        {
+          "name": "type",
+          "inputType": 0,
+          "description": "Pagination type, `page` used `pi`, `ps`; `skip` used `skip`, `limit`",
+          "type": "string",
+          "typeRaw": "`page,skip`",
+          "default": "`page`",
+          "pureDefault": "page"
+        },
         {
           "name": "params",
           "inputType": 0,
@@ -13435,8 +11014,8 @@
           "description": "Map name `pi`、`ps`",
           "type": "object",
           "typeRaw": "`STReqReNameType`",
-          "default": "`{ pi: 'pi', ps: 'ps' }`",
-          "pureDefault": "{ pi: 'pi', ps: 'ps' }"
+          "default": "`{ pi: 'pi', ps: 'ps', skip: 'skip', limit: 'limit' }`",
+          "pureDefault": "{ pi: 'pi', ps: 'ps', skip: 'skip', limit: 'limit' }"
         },
         {
           "name": "allInBody",
@@ -13446,6 +11025,14 @@
           "typeRaw": "`boolean`",
           "default": "`false`",
           "pureDefault": "false"
+        },
+        {
+          "name": "process",
+          "inputType": 0,
+          "description": "Pre-request data processing",
+          "type": "function",
+          "typeRaw": "`(requestOptions: STRequestOptions) => STRequestOptions`",
+          "default": ""
         }
       ],
       "STRes": [
@@ -13802,11 +11389,19 @@
         "default": ""
       },
       {
+        "name": "bodyHeader",
+        "inputType": 0,
+        "description": "Table extra body renderer in header, generally used to add total rows",
+        "type": "TemplateRef",
+        "typeRaw": "`TemplateRef<STStatisticalResults>`",
+        "default": ""
+      },
+      {
         "name": "body",
         "inputType": 0,
         "description": "Table extra body renderer, generally used to add total rows",
         "type": "TemplateRef",
-        "typeRaw": "`TemplateRef<void>`",
+        "typeRaw": "`TemplateRef<STStatisticalResults>`",
         "default": ""
       },
       {
@@ -14096,14 +11691,6 @@
         "default": ""
       },
       {
-        "name": "labelWidth",
-        "inputType": 0,
-        "description": "label text of width, inherit `sv-container`",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": ""
-      },
-      {
         "name": "default",
         "inputType": 0,
         "description": "whether default text, inherit `sv-container`",
@@ -14134,7 +11721,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/view"
   },
   {
-    "_idx": 220,
+    "_idx": 206,
     "type": "component",
     "selector": "sv-title",
     "types": {},
@@ -14147,7 +11734,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/view"
   },
   {
-    "_idx": 220,
+    "_idx": 206,
     "type": "directive",
     "selector": "sv-title",
     "types": {},
@@ -14494,7 +12081,8 @@
         "description": "图表高度",
         "type": "number",
         "typeRaw": "`number`",
-        "default": ""
+        "default": "`56`",
+        "pureDefault": "56"
       },
       {
         "name": "line",
@@ -15375,7 +12963,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/water-wave"
   },
   {
-    "_idx": 319,
+    "_idx": 333,
     "type": "component",
     "selector": "sf",
     "types": {
@@ -15547,7 +13135,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/form/src"
   },
   {
-    "_idx": 319,
+    "_idx": 333,
     "type": "directive",
     "selector": "sf",
     "types": {
