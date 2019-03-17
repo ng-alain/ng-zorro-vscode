@@ -2,7 +2,7 @@
   "name": "ng-zorro-vscode",
   "displayName": "NG-ZORRO Snippets",
   "description": "Snippets based on NG-ZORRO",
-  "version": "7.2.2",
+  "version": "7.2.3",
   "icon": "ng-zorro.png",
   "publisher": "cipchk",
   "license": "MIT",

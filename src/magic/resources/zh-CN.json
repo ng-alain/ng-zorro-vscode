@@ -7542,7 +7542,7 @@
       {
         "name": "nzPageIndexChange",
         "inputType": 1,
-        "description": "当前页码改版时的回调函数",
+        "description": "当前页码改变时的回调函数",
         "type": "EventEmitter",
         "typeRaw": "`EventEmitter<number>`",
         "default": ""
