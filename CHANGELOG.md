@@ -1,3 +1,7 @@
+# 7.2.4
+
+- 同步 ng-zorro-antd 7.1.0
+
 # 7.2.3
 
 - 同步 ng-zorro-antd 7.0.2
