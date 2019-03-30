@@ -2069,6 +2069,22 @@
         "default": ""
       },
       {
+        "name": "nzExpandedIcon",
+        "inputType": 0,
+        "description": "自定义切换图标",
+        "type": "string",
+        "typeRaw": "`string｜TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "nzExtra",
+        "inputType": 0,
+        "description": "自定义渲染每个面板右上角的内容",
+        "type": "string",
+        "typeRaw": "`string｜TemplateRef<void>`",
+        "default": ""
+      },
+      {
         "name": "nzShowArrow",
         "inputType": 0,
         "description": "是否展示箭头",
@@ -2091,14 +2107,6 @@
         "description": "面板展开回调",
         "type": "EventEmitter",
         "typeRaw": "`EventEmitter<boolean>`",
-        "default": ""
-      },
-      {
-        "name": "nzExpandedIcon",
-        "inputType": 0,
-        "description": "自定义切换图标",
-        "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
         "default": ""
       }
     ],
@@ -5293,6 +5301,14 @@
         "forceInputType": 0
       },
       {
+        "name": "nzMenuClassName",
+        "inputType": 0,
+        "description": "自定义子菜单容器类名",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
+      },
+      {
         "name": "nzOpenChange",
         "inputType": 1,
         "description": "展开回调",
@@ -5309,7 +5325,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/menu"
   },
   {
-    "_idx": 242,
+    "_idx": 256,
     "type": "directive",
     "selector": "nz-menu-group",
     "types": {},
@@ -5322,7 +5338,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/menu"
   },
   {
-    "_idx": 248,
+    "_idx": 262,
     "type": "directive",
     "selector": "nz-menu-divider",
     "types": {},
@@ -5333,6 +5349,52 @@
     "whenToUse": "导航菜单是一个网站的灵魂，用户依赖导航在各个页面中进行跳转。一般分为顶部导航和侧边导航，顶部导航提供全局性的类目和功能，侧边导航提供多级结构来收纳和排列网站架构。",
     "doc": "/components/menu/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/menu"
+  },
+  {
+    "_idx": 13,
+    "type": "component",
+    "selector": "nz-page-header",
+    "types": {},
+    "properties": [
+      {
+        "name": "nzTitle",
+        "inputType": 0,
+        "description": "title 文字",
+        "type": "string",
+        "typeRaw": "`string｜TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "nzSubTitle",
+        "inputType": 0,
+        "description": "subTitle 文字",
+        "type": "string",
+        "typeRaw": "`string｜TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "nzBackIcon",
+        "inputType": 0,
+        "description": "自定义 back icon",
+        "type": "string",
+        "typeRaw": "`string｜TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "nzBack",
+        "inputType": 0,
+        "description": "返回按钮的点击事件",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<void>`",
+        "default": ""
+      }
+    ],
+    "lib": "ng-zorro-antd",
+    "title": "页头",
+    "description": "页头用来声明页面的主题，包含了用户所关注的最重要的信息。",
+    "whenToUse": "当需要用户快速理解当前页面是什么以及它的功能时使用。",
+    "doc": "/components/page-header/zh",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/page-header"
   },
   {
     "_idx": 22,
@@ -10715,7 +10777,7 @@
       {
         "name": "value",
         "inputType": 0,
-        "description": "值，不支持中文 [#62](https://github.com/neocotic/qrious/issues/62)",
+        "description": "值",
         "type": "string",
         "typeRaw": "`string`",
         "default": ""
@@ -11798,6 +11860,14 @@
         "default": ""
       },
       {
+        "name": "unit",
+        "inputType": 0,
+        "description": "单位",
+        "type": "string",
+        "typeRaw": "`string,TemplateRef<void>`",
+        "default": ""
+      },
+      {
         "name": "default",
         "inputType": 0,
         "description": "是否显示默认文本，继承 `sv-container`",
@@ -11828,7 +11898,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/view"
   },
   {
-    "_idx": 206,
+    "_idx": 220,
     "type": "component",
     "selector": "sv-title",
     "types": {},
@@ -11841,7 +11911,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/view"
   },
   {
-    "_idx": 206,
+    "_idx": 220,
     "type": "directive",
     "selector": "sv-title",
     "types": {},

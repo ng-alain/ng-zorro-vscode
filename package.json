@@ -2,7 +2,7 @@
   "name": "ng-zorro-vscode",
   "displayName": "NG-ZORRO Snippets",
   "description": "Snippets based on NG-ZORRO",
-  "version": "7.2.4",
+  "version": "7.2.5",
   "icon": "ng-zorro.png",
   "publisher": "cipchk",
   "license": "MIT",
@@ -75,7 +75,7 @@
     "yaml-front-matter": "^4.0.0",
     "markdown-it": "^8.4.2",
     "vscode-snippet-generator": "^1.2.1",
-    "vsce": "^1.54.0",
+    "vsce": "^1.59.0",
     "typescript": "^3.2.2",
     "vscode": "^1.1.26",
     "klaw-sync": "^6.0.0"

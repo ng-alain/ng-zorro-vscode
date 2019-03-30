@@ -2062,6 +2062,22 @@
         "default": ""
       },
       {
+        "name": "nzExpandedIcon",
+        "inputType": 0,
+        "description": "Customize an icon for toggle",
+        "type": "string",
+        "typeRaw": "`string｜TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "nzExtra",
+        "inputType": 0,
+        "description": "Extra element in the corner",
+        "type": "string",
+        "typeRaw": "`string｜TemplateRef<void>`",
+        "default": ""
+      },
+      {
         "name": "nzShowArrow",
         "inputType": 0,
         "description": "Display arrow or not",
@@ -2084,14 +2100,6 @@
         "description": "Callback function of the active status",
         "type": "EventEmitter",
         "typeRaw": "`EventEmitter<boolean>`",
-        "default": ""
-      },
-      {
-        "name": "nzExpandedIcon",
-        "inputType": 0,
-        "description": "Customize an icon for toggle",
-        "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
         "default": ""
       }
     ],
@@ -5278,6 +5286,14 @@
         "forceInputType": 0
       },
       {
+        "name": "nzMenuClassName",
+        "inputType": 0,
+        "description": "Custom the submenu container's class name",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
+      },
+      {
         "name": "nzOpenChange",
         "inputType": 1,
         "description": "nzOpen callback",
@@ -5294,7 +5310,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/menu"
   },
   {
-    "_idx": 242,
+    "_idx": 256,
     "type": "directive",
     "selector": "nz-menu-group",
     "types": {},
@@ -5307,7 +5323,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/menu"
   },
   {
-    "_idx": 248,
+    "_idx": 262,
     "type": "directive",
     "selector": "nz-menu-divider",
     "types": {},
@@ -5318,6 +5334,52 @@
     "whenToUse": "Navigation menu is important for a website, it helps users jump from one site section to another quickly. Mostly, it includes top navigation and side navigation. Top navigation provides all the category and functions of the website. Side navigation provides the Multi-level structure of the website.",
     "doc": "/components/menu/en",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/menu"
+  },
+  {
+    "_idx": 13,
+    "type": "component",
+    "selector": "nz-page-header",
+    "types": {},
+    "properties": [
+      {
+        "name": "nzTitle",
+        "inputType": 0,
+        "description": "title string",
+        "type": "string",
+        "typeRaw": "`string｜TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "nzSubTitle",
+        "inputType": 0,
+        "description": "subTitle string",
+        "type": "string",
+        "typeRaw": "`string｜TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "nzBackIcon",
+        "inputType": 0,
+        "description": "custom back icon",
+        "type": "string",
+        "typeRaw": "`string｜TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "nzBack",
+        "inputType": 0,
+        "description": "back icon click event",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<void>`",
+        "default": ""
+      }
+    ],
+    "lib": "ng-zorro-antd",
+    "title": "PageHeader",
+    "description": "The header is used to declare the theme of the page, which contains the most important information that the user is concerned about.",
+    "whenToUse": "Use when you need the user to quickly understand what the current page is and what its features are.",
+    "doc": "/components/page-header/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/page-header"
   },
   {
     "_idx": 22,
@@ -11691,6 +11753,14 @@
         "default": ""
       },
       {
+        "name": "unit",
+        "inputType": 0,
+        "description": "unit of view",
+        "type": "string",
+        "typeRaw": "`string,TemplateRef<void>`",
+        "default": ""
+      },
+      {
         "name": "default",
         "inputType": 0,
         "description": "whether default text, inherit `sv-container`",
@@ -11721,7 +11791,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/view"
   },
   {
-    "_idx": 206,
+    "_idx": 220,
     "type": "component",
     "selector": "sv-title",
     "types": {},
@@ -11734,7 +11804,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/view"
   },
   {
-    "_idx": 206,
+    "_idx": 220,
     "type": "directive",
     "selector": "sv-title",
     "types": {},
