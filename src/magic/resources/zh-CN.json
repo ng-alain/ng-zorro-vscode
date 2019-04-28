@@ -1,6 +1,6 @@
 [
   {
-    "_idx": 55,
+    "_idx": 62,
     "type": "directive",
     "selector": "nz-row",
     "types": {},
@@ -75,7 +75,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/grid"
   },
   {
-    "_idx": 134,
+    "_idx": 141,
     "type": "directive",
     "selector": "nz-col",
     "types": {},
@@ -302,8 +302,8 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/grid"
   },
   {
-    "_idx": 15,
-    "type": "component",
+    "_idx": 22,
+    "type": "directive",
     "selector": "nz-tooltip",
     "types": {},
     "properties": [
@@ -584,7 +584,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/grid"
   },
   {
-    "_idx": 15,
+    "_idx": 22,
     "type": "component",
     "selector": "nz-affix",
     "types": {},
@@ -632,7 +632,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/affix"
   },
   {
-    "_idx": 21,
+    "_idx": 28,
     "type": "component",
     "selector": "nz-alert",
     "types": {},
@@ -727,7 +727,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/alert"
   },
   {
-    "_idx": 12,
+    "_idx": 19,
     "type": "component",
     "selector": "nz-anchor",
     "types": {},
@@ -809,7 +809,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/anchor"
   },
   {
-    "_idx": 147,
+    "_idx": 154,
     "type": "component",
     "selector": "nz-link",
     "types": {},
@@ -839,7 +839,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/anchor"
   },
   {
-    "_idx": 51,
+    "_idx": 58,
     "type": "component",
     "selector": "nz-autocomplete",
     "types": {},
@@ -905,7 +905,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/auto-complete"
   },
   {
-    "_idx": 158,
+    "_idx": 165,
     "type": "component",
     "selector": "nz-auto-option",
     "types": {},
@@ -945,7 +945,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/auto-complete"
   },
   {
-    "_idx": 6,
+    "_idx": 13,
     "type": "component",
     "selector": "nz-avatar",
     "types": {},
@@ -1011,7 +1011,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/avatar"
   },
   {
-    "_idx": 21,
+    "_idx": 28,
     "type": "component",
     "selector": "nz-back-top",
     "types": {},
@@ -1059,11 +1059,19 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/back-top"
   },
   {
-    "_idx": 14,
+    "_idx": 21,
     "type": "component",
     "selector": "nz-badge",
     "types": {},
     "properties": [
+      {
+        "name": "nzColor",
+        "inputType": 0,
+        "description": "自定义小圆点的颜色",
+        "type": "string",
+        "typeRaw": "string",
+        "default": ""
+      },
       {
         "name": "nzCount",
         "inputType": 0,
@@ -1140,7 +1148,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/badge"
   },
   {
-    "_idx": 26,
+    "_idx": 33,
     "type": "component",
     "selector": "nz-breadcrumb",
     "types": {},
@@ -1172,7 +1180,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/breadcrumb"
   },
   {
-    "_idx": 12,
+    "_idx": 19,
     "type": "directive",
     "selector": "nz-button",
     "types": {},
@@ -1269,7 +1277,7 @@
     "snippet": "<button __$1>${2|保存,提交,取消,新建,删除,搜索|}</button>"
   },
   {
-    "_idx": 20,
+    "_idx": 27,
     "type": "component",
     "selector": "nz-calendar",
     "types": {},
@@ -1372,7 +1380,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/calendar"
   },
   {
-    "_idx": 13,
+    "_idx": 20,
     "type": "component",
     "selector": "nz-card",
     "types": {},
@@ -1465,7 +1473,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/card"
   },
   {
-    "_idx": 162,
+    "_idx": 169,
     "type": "component",
     "selector": "nz-card-meta",
     "types": {},
@@ -1503,7 +1511,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/card"
   },
   {
-    "_idx": 227,
+    "_idx": 234,
     "type": "directive",
     "selector": "nz-card-grid",
     "types": {},
@@ -1516,7 +1524,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/card"
   },
   {
-    "_idx": 233,
+    "_idx": 240,
     "type": "component",
     "selector": "nz-card-tab",
     "types": {},
@@ -1529,7 +1537,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/card"
   },
   {
-    "_idx": 26,
+    "_idx": 33,
     "type": "component",
     "selector": "nz-carousel",
     "types": {},
@@ -1610,7 +1618,7 @@
       {
         "name": "nzEnableSwipe",
         "inputType": 0,
-        "description": "是否支持手势划动切换，仅在自行引入 hammer.js 的情形下生效",
+        "description": "是否支持手势划动切换",
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`true`",
@@ -1625,7 +1633,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/carousel"
   },
   {
-    "_idx": 27,
+    "_idx": 34,
     "type": "component",
     "selector": "nz-cascader",
     "types": {},
@@ -1875,7 +1883,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/cascader"
   },
   {
-    "_idx": 21,
+    "_idx": 28,
     "type": "directive",
     "selector": "nz-checkbox",
     "types": {},
@@ -1950,7 +1958,7 @@
     "snippet": "<label __$1>$2</label>"
   },
   {
-    "_idx": 128,
+    "_idx": 135,
     "type": "component",
     "selector": "nz-checkbox-group",
     "types": {},
@@ -1991,7 +1999,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/checkbox"
   },
   {
-    "_idx": 193,
+    "_idx": 200,
     "type": "component",
     "selector": "nz-checkbox-wrapper",
     "types": {},
@@ -2013,7 +2021,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/checkbox"
   },
   {
-    "_idx": 21,
+    "_idx": 28,
     "type": "component",
     "selector": "nz-collapse",
     "types": {},
@@ -2045,7 +2053,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/collapse"
   },
   {
-    "_idx": 72,
+    "_idx": 79,
     "type": "component",
     "selector": "nz-collapse-panel",
     "types": {},
@@ -2118,7 +2126,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/collapse"
   },
   {
-    "_idx": 252,
+    "_idx": 259,
     "type": "component",
     "selector": "nz-date-picker",
     "types": {},
@@ -2342,7 +2350,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/date-picker"
   },
   {
-    "_idx": 401,
+    "_idx": 408,
     "type": "component",
     "selector": "nz-year-picker",
     "types": {},
@@ -2526,7 +2534,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/date-picker"
   },
   {
-    "_idx": 494,
+    "_idx": 501,
     "type": "component",
     "selector": "nz-month-picker",
     "types": {},
@@ -2716,7 +2724,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/date-picker"
   },
   {
-    "_idx": 587,
+    "_idx": 594,
     "type": "component",
     "selector": "nz-week-picker",
     "types": {},
@@ -2898,7 +2906,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/date-picker"
   },
   {
-    "_idx": 666,
+    "_idx": 673,
     "type": "component",
     "selector": "nz-range-picker",
     "types": {},
@@ -3062,7 +3070,7 @@
         "inputType": 0,
         "description": "预设时间范围快捷选择",
         "type": "object",
-        "typeRaw": "`{ [ key: string ]: Date[] }`",
+        "typeRaw": "`{ [ key: string ]: Date[] } ｜ { [ key: string ]: () => Date[] }`",
         "default": ""
       },
       {
@@ -3107,6 +3115,14 @@
         "default": ""
       },
       {
+        "name": "nzOnCalendarChange",
+        "inputType": 1,
+        "description": "待选日期发生变化的回调",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<Date[]>`",
+        "default": ""
+      },
+      {
         "name": "formControlName",
         "inputType": 0,
         "type": "string",
@@ -3121,7 +3137,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/date-picker"
   },
   {
-    "_idx": 21,
+    "_idx": 28,
     "type": "component",
     "selector": "nz-divider",
     "types": {},
@@ -3177,7 +3193,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/divider"
   },
   {
-    "_idx": 21,
+    "_idx": 28,
     "type": "component",
     "selector": "nz-drawer",
     "types": {},
@@ -3328,7 +3344,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/drawer"
   },
   {
-    "_idx": 12,
+    "_idx": 19,
     "type": "component",
     "selector": "nz-dropdown",
     "types": {},
@@ -3423,7 +3439,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/dropdown"
   },
   {
-    "_idx": 160,
+    "_idx": 167,
     "type": "directive",
     "selector": "nz-dropdown",
     "types": {},
@@ -3539,7 +3555,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/dropdown"
   },
   {
-    "_idx": 166,
+    "_idx": 173,
     "type": "component",
     "selector": "nz-dropdown-button",
     "types": {},
@@ -3655,7 +3671,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/dropdown"
   },
   {
-    "_idx": 12,
+    "_idx": 19,
     "type": "component",
     "selector": "nz-empty",
     "types": {},
@@ -3693,7 +3709,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/empty"
   },
   {
-    "_idx": 56,
+    "_idx": 63,
     "type": "component",
     "selector": "nz-form",
     "types": {},
@@ -3711,6 +3727,15 @@
           "inline"
         ],
         "pureDefault": "horizontal"
+      },
+      {
+        "name": "nzNoColon",
+        "inputType": 0,
+        "description": "配置 `nz-form-label` 的 `[nzNoColon]` 的默认值",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
       },
       {
         "name": "formGroup",
@@ -3734,7 +3759,7 @@
     "snippet": "<form __$1>$0</form>"
   },
   {
-    "_idx": 93,
+    "_idx": 114,
     "type": "component",
     "selector": "nz-form-item",
     "types": {},
@@ -3818,7 +3843,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/form"
   },
   {
-    "_idx": 138,
+    "_idx": 159,
     "type": "component",
     "selector": "nz-form-label",
     "types": {},
@@ -4046,12 +4071,30 @@
         "pureDefault": "false"
       },
       {
+        "name": "nzNoColon",
+        "inputType": 0,
+        "description": "是否不显示 label 后面的冒号",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
         "name": "nzFor",
         "inputType": 0,
         "description": "label 标签的 for 属性",
         "type": "string",
         "typeRaw": "`string`",
         "default": ""
+      },
+      {
+        "name": "nzColon",
+        "inputType": 0,
+        "description": "配合 label 属性使用，表示是否显示 label 后面的冒号",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`true`",
+        "pureDefault": "true"
       }
     ],
     "description": "用于标示当前表单项的内容，可选。",
@@ -4062,7 +4105,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/form"
   },
   {
-    "_idx": 197,
+    "_idx": 246,
     "type": "component",
     "selector": "nz-form-control",
     "types": {},
@@ -4321,7 +4364,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/form"
   },
   {
-    "_idx": 275,
+    "_idx": 327,
     "type": "component",
     "selector": "nz-form-explain",
     "types": {},
@@ -4334,7 +4377,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/form"
   },
   {
-    "_idx": 286,
+    "_idx": 338,
     "type": "component",
     "selector": "nz-form-extra",
     "types": {},
@@ -4347,7 +4390,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/form"
   },
   {
-    "_idx": 292,
+    "_idx": 344,
     "type": "component",
     "selector": "nz-form-split",
     "types": {},
@@ -4360,7 +4403,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/form"
   },
   {
-    "_idx": 298,
+    "_idx": 350,
     "type": "component",
     "selector": "nz-form-text",
     "types": {},
@@ -4373,7 +4416,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/form"
   },
   {
-    "_idx": 20,
+    "_idx": 27,
     "type": "directive",
     "selector": "nz-icon",
     "types": {},
@@ -4443,7 +4486,7 @@
     "snippet": "<i __$1></i>"
   },
   {
-    "_idx": 21,
+    "_idx": 28,
     "type": "directive",
     "selector": "nz-input",
     "types": {},
@@ -4513,7 +4556,7 @@
     "snippet": "<input __$1>"
   },
   {
-    "_idx": 75,
+    "_idx": 82,
     "type": "component",
     "selector": "nz-input-group",
     "types": {},
@@ -4591,7 +4634,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/input"
   },
   {
-    "_idx": 20,
+    "_idx": 27,
     "type": "component",
     "selector": "nz-input-number",
     "types": {},
@@ -4735,7 +4778,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/input-number"
   },
   {
-    "_idx": 138,
+    "_idx": 145,
     "type": "component",
     "selector": "nz-sider",
     "types": {},
@@ -4855,7 +4898,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/layout"
   },
   {
-    "_idx": 12,
+    "_idx": 19,
     "type": "component",
     "selector": "nz-list",
     "types": {},
@@ -4988,7 +5031,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/list"
   },
   {
-    "_idx": 352,
+    "_idx": 359,
     "type": "component",
     "selector": "nz-list-item",
     "types": {},
@@ -5026,7 +5069,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/list"
   },
   {
-    "_idx": 417,
+    "_idx": 424,
     "type": "component",
     "selector": "nz-list-item-meta",
     "types": {},
@@ -5064,7 +5107,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/list"
   },
   {
-    "_idx": 13,
+    "_idx": 20,
     "type": "component",
     "selector": "nz-mention",
     "types": {},
@@ -5168,7 +5211,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/mention"
   },
   {
-    "_idx": 16,
+    "_idx": 23,
     "type": "directive",
     "selector": "nz-menu",
     "types": {},
@@ -5243,7 +5286,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/menu"
   },
   {
-    "_idx": 123,
+    "_idx": 130,
     "type": "directive",
     "selector": "nz-menu-item",
     "types": {},
@@ -5276,7 +5319,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/menu"
   },
   {
-    "_idx": 174,
+    "_idx": 181,
     "type": "directive",
     "selector": "nz-submenu",
     "types": {},
@@ -5325,7 +5368,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/menu"
   },
   {
-    "_idx": 256,
+    "_idx": 263,
     "type": "directive",
     "selector": "nz-menu-group",
     "types": {},
@@ -5338,7 +5381,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/menu"
   },
   {
-    "_idx": 262,
+    "_idx": 269,
     "type": "directive",
     "selector": "nz-menu-divider",
     "types": {},
@@ -5351,7 +5394,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/menu"
   },
   {
-    "_idx": 13,
+    "_idx": 20,
     "type": "component",
     "selector": "nz-page-header",
     "types": {},
@@ -5397,7 +5440,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/page-header"
   },
   {
-    "_idx": 22,
+    "_idx": 29,
     "type": "component",
     "selector": "nz-pagination",
     "types": {},
@@ -5525,7 +5568,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/pagination"
   },
   {
-    "_idx": 15,
+    "_idx": 22,
     "type": "directive",
     "selector": "nz-popconfirm",
     "types": {},
@@ -5719,7 +5762,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/popconfirm"
   },
   {
-    "_idx": 15,
+    "_idx": 22,
     "type": "directive",
     "selector": "nz-popover",
     "types": {},
@@ -5854,7 +5897,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/popover"
   },
   {
-    "_idx": 24,
+    "_idx": 31,
     "type": "component",
     "selector": "nz-progress",
     "types": {},
@@ -5994,7 +6037,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/progress"
   },
   {
-    "_idx": 21,
+    "_idx": 28,
     "type": "directive",
     "selector": "nz-radio",
     "types": {},
@@ -6059,7 +6102,7 @@
     "snippet": "<label __$1>$2</label>"
   },
   {
-    "_idx": 21,
+    "_idx": 28,
     "type": "directive",
     "selector": "nz-radio-button",
     "types": {},
@@ -6117,7 +6160,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/radio"
   },
   {
-    "_idx": 114,
+    "_idx": 121,
     "type": "component",
     "selector": "nz-radio-group",
     "types": {},
@@ -6192,7 +6235,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/radio"
   },
   {
-    "_idx": 21,
+    "_idx": 28,
     "type": "component",
     "selector": "nz-rate",
     "types": {},
@@ -6325,7 +6368,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/rate"
   },
   {
-    "_idx": 22,
+    "_idx": 29,
     "type": "component",
     "selector": "nz-select",
     "types": {},
@@ -6636,7 +6679,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/select"
   },
   {
-    "_idx": 507,
+    "_idx": 514,
     "type": "component",
     "selector": "nz-option",
     "types": {},
@@ -6685,7 +6728,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/select"
   },
   {
-    "_idx": 586,
+    "_idx": 593,
     "type": "component",
     "selector": "nz-option-group",
     "types": {},
@@ -6707,7 +6750,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/select"
   },
   {
-    "_idx": 21,
+    "_idx": 28,
     "type": "component",
     "selector": "nz-skeleton",
     "types": {},
@@ -6766,7 +6809,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/skeleton"
   },
   {
-    "_idx": 12,
+    "_idx": 19,
     "type": "component",
     "selector": "nz-slider",
     "types": {},
@@ -6914,7 +6957,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/slider"
   },
   {
-    "_idx": 12,
+    "_idx": 19,
     "type": "component",
     "selector": "nz-spin",
     "types": {},
@@ -6985,7 +7028,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/spin"
   },
   {
-    "_idx": 21,
+    "_idx": 28,
     "type": "component",
     "selector": "nz-statistic",
     "types": {},
@@ -7047,7 +7090,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/statistic"
   },
   {
-    "_idx": 128,
+    "_idx": 135,
     "type": "component",
     "selector": "nz-countdown",
     "types": {},
@@ -7110,7 +7153,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/statistic"
   },
   {
-    "_idx": 13,
+    "_idx": 20,
     "type": "component",
     "selector": "nz-steps",
     "types": {},
@@ -7205,7 +7248,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/steps"
   },
   {
-    "_idx": 137,
+    "_idx": 144,
     "type": "component",
     "selector": "nz-step",
     "types": {},
@@ -7258,7 +7301,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/steps"
   },
   {
-    "_idx": 21,
+    "_idx": 28,
     "type": "component",
     "selector": "nz-switch",
     "types": {},
@@ -7354,7 +7397,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/switch"
   },
   {
-    "_idx": 46,
+    "_idx": 53,
     "type": "component",
     "selector": "nz-table",
     "types": {},
@@ -7463,6 +7506,14 @@
         "default": "`false`",
         "pureDefault": "false",
         "forceInputType": 0
+      },
+      {
+        "name": "nzLoadingIndicator",
+        "inputType": 0,
+        "description": "加载指示符",
+        "type": "TemplateRef",
+        "typeRaw": "`TemplateRef<void>`",
+        "default": ""
       },
       {
         "name": "nzLoadingDelay",
@@ -7634,7 +7685,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/table"
   },
   {
-    "_idx": 489,
+    "_idx": 510,
     "type": "component",
     "selector": "th",
     "types": {},
@@ -7822,7 +7873,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/table"
   },
   {
-    "_idx": 910,
+    "_idx": 931,
     "type": "component",
     "selector": "td",
     "types": {},
@@ -7939,7 +7990,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/table"
   },
   {
-    "_idx": 1173,
+    "_idx": 1194,
     "type": "component",
     "selector": "thead",
     "types": {},
@@ -7970,7 +8021,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/table"
   },
   {
-    "_idx": 1224,
+    "_idx": 1245,
     "type": "component",
     "selector": "tr",
     "types": {},
@@ -7992,7 +8043,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/table"
   },
   {
-    "_idx": 1261,
+    "_idx": 1282,
     "type": "directive",
     "selector": "nz-virtual-scroll",
     "types": {},
@@ -8005,7 +8056,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/table"
   },
   {
-    "_idx": 32,
+    "_idx": 39,
     "type": "component",
     "selector": "nz-tabset",
     "types": {},
@@ -8152,7 +8203,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tabs"
   },
   {
-    "_idx": 251,
+    "_idx": 258,
     "type": "component",
     "selector": "nz-tab",
     "types": {},
@@ -8216,7 +8267,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tabs"
   },
   {
-    "_idx": 358,
+    "_idx": 365,
     "type": "directive",
     "selector": "nz-tab",
     "types": {},
@@ -8229,7 +8280,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tabs"
   },
   {
-    "_idx": 21,
+    "_idx": 28,
     "type": "component",
     "selector": "nz-tag",
     "types": {},
@@ -8298,7 +8349,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tag"
   },
   {
-    "_idx": 13,
+    "_idx": 20,
     "type": "component",
     "selector": "nz-time-picker",
     "types": {},
@@ -8492,7 +8543,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/time-picker"
   },
   {
-    "_idx": 22,
+    "_idx": 29,
     "type": "component",
     "selector": "nz-timeline",
     "types": {},
@@ -8546,7 +8597,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/timeline"
   },
   {
-    "_idx": 104,
+    "_idx": 111,
     "type": "component",
     "selector": "nz-timeline-item",
     "types": {},
@@ -8577,7 +8628,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/timeline"
   },
   {
-    "_idx": 15,
+    "_idx": 22,
     "type": "component",
     "selector": "nz-transfer",
     "types": {},
@@ -8737,7 +8788,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/transfer"
   },
   {
-    "_idx": 9,
+    "_idx": 16,
     "type": "component",
     "selector": "nz-tree",
     "types": {},
@@ -8750,6 +8801,15 @@
         "typeRaw": "`NzTreeNodeOptions[]｜NzTreeNode[]`",
         "default": "`[]`",
         "pureDefault": "[]"
+      },
+      {
+        "name": "nzBlockNode",
+        "inputType": 0,
+        "description": "是否节点占据一行",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
       },
       {
         "name": "nzCheckable",
@@ -8777,6 +8837,14 @@
         "typeRaw": "`boolean`",
         "default": "`false`",
         "pureDefault": "false"
+      },
+      {
+        "name": "nzExpandedIcon",
+        "inputType": 0,
+        "description": "自定义展开图标",
+        "type": "TemplateRef",
+        "typeRaw": "`TemplateRef<{ $implicit: NzTreeNode }>`",
+        "default": ""
       },
       {
         "name": "nzShowIcon",
@@ -8990,7 +9058,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tree"
   },
   {
-    "_idx": 12,
+    "_idx": 19,
     "type": "component",
     "selector": "nz-tree-select",
     "types": {},
@@ -9189,7 +9257,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tree-select"
   },
   {
-    "_idx": 34,
+    "_idx": 41,
     "type": "component",
     "selector": "nz-upload",
     "types": {},
@@ -11061,6 +11129,30 @@
         "default": ""
       },
       {
+        "name": "tabBarExtraContent",
+        "inputType": 0,
+        "description": "tab bar 上额外的元素",
+        "type": "TemplateRef",
+        "typeRaw": "`TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "tabBarStyle",
+        "inputType": 0,
+        "description": "tab bar 的样式对象",
+        "type": "object",
+        "typeRaw": "`object`",
+        "default": ""
+      },
+      {
+        "name": "tabBarGutter",
+        "inputType": 0,
+        "description": "tabs 之间的间隙",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": ""
+      },
+      {
         "name": "close",
         "inputType": 1,
         "description": "关闭回调",
@@ -11274,7 +11366,8 @@
           "description": "是否显示分页器",
           "type": "boolean",
           "typeRaw": "`boolean`",
-          "default": ""
+          "default": "`true`",
+          "pureDefault": "true"
         },
         {
           "name": "showSize",
@@ -11329,6 +11422,26 @@
           "typeRaw": "`number`",
           "default": "`100`",
           "pureDefault": "100"
+        }
+      ],
+      "STWidthMode": [
+        {
+          "name": "type",
+          "inputType": 0,
+          "description": "类型",
+          "type": "string",
+          "typeRaw": "`strict,default`",
+          "default": "`default`",
+          "pureDefault": "default"
+        },
+        {
+          "name": "strictBehavior",
+          "inputType": 0,
+          "description": "`strict` 的行为类型",
+          "type": "string",
+          "typeRaw": "`wrap,truncate`",
+          "default": "`truncate`",
+          "pureDefault": "truncate"
         }
       ],
       "STMultiSort": [
@@ -11472,6 +11585,15 @@
         "pureDefault": "default"
       },
       {
+        "name": "widthMode",
+        "inputType": 0,
+        "description": "设置表格宽度模式",
+        "type": "object",
+        "typeRaw": "`STWidthMode`",
+        "default": "",
+        "complexType": "STWidthMode"
+      },
+      {
         "name": "rowClassName",
         "inputType": 0,
         "description": "表格行的类名",
@@ -11482,11 +11604,11 @@
       {
         "name": "loading",
         "inputType": 0,
-        "description": "页面是否加载中",
+        "description": "页面是否加载中，当指定 `null` 由 st 受控",
         "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false"
+        "typeRaw": "`boolean | null`",
+        "default": "`null`",
+        "pureDefault": "null"
       },
       {
         "name": "loadingDelay",
@@ -13286,6 +13408,15 @@
         "pureDefault": "null"
       },
       {
+        "name": "loading",
+        "inputType": 0,
+        "description": "是否加载状态，当 `true` 重置按钮禁止状态，提交按钮加载状态",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
         "name": "formChange",
         "inputType": 1,
         "description": "数据变更时回调",
@@ -13472,6 +13603,15 @@
         "pureDefault": "null"
       },
       {
+        "name": "loading",
+        "inputType": 0,
+        "description": "是否加载状态，当 `true` 重置按钮禁止状态，提交按钮加载状态",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
         "name": "formChange",
         "inputType": 1,
         "description": "数据变更时回调",
@@ -13512,7 +13652,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/form/src"
   },
   {
-    "_idx": 26,
+    "_idx": 33,
     "type": "component",
     "selector": "nz-breadcrumb-item",
     "types": {},
