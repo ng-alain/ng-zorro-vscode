@@ -146,12 +146,12 @@
   },
   "nzs_input_addon-icon": {
     "prefix": "nzs-input-addon-icon",
-    "body": "<nz-input-group${1: nzCompact}${2: nzAddonBeforeIcon=\"anticon anticon-setting\"}${3: nzAddonAfterIcon=\"anticon anticon-setting\"}>\n  <input nz-input [(ngModel)]=\"${4:name}\" id=\"${4}\" name=\"${4}\"${5: placeholder=\"${5}\"}>\n</nz-input-group>\n$0",
+    "body": "<nz-input-group${1: nzCompact}${2: nzAddOnBeforeIcon=\"anticon anticon-setting\"}${3: nzAddOnAfterIcon=\"anticon anticon-setting\"}>\n  <input nz-input [(ngModel)]=\"${4:name}\" id=\"${4}\" name=\"${4}\"${5: placeholder=\"${5}\"}>\n</nz-input-group>\n$0",
     "description": "addon icon"
   },
   "nzs_input_addon-text": {
     "prefix": "nzs-input-addon-text",
-    "body": "<nz-input-group${1: nzCompact}${2: nzAddonBefore=\"http://\"}${3: nzAddonAfter=\"RMB\"}>\n  <input nz-input [(ngModel)]=\"${4:name}\" id=\"${4}\" name=\"${4}\"${5: placeholder=\"${5}\"}>\n</nz-input-group>\n$0",
+    "body": "<nz-input-group${1: nzCompact}${2: nzAddOnBefore=\"http://\"}${3: nzAddOnAfter=\"RMB\"}>\n  <input nz-input [(ngModel)]=\"${4:name}\" id=\"${4}\" name=\"${4}\"${5: placeholder=\"${5}\"}>\n</nz-input-group>\n$0",
     "description": "addon text"
   },
   "nzs_input": {

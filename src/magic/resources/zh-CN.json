@@ -5958,12 +5958,13 @@
         "inputType": 0,
         "description": "状态",
         "type": "Enum",
-        "typeRaw": "`'success'｜'exception'｜'active'`",
+        "typeRaw": "`'success'｜'exception'｜'active'｜'normal'`",
         "default": "",
         "typeDefinition": [
           "success",
           "exception",
-          "active"
+          "active",
+          "normal"
         ]
       },
       {

@@ -12,11 +12,7 @@
         "type": "Enum",
         "typeRaw": "`'top'｜'middle'｜'bottom'`",
         "default": "`'top'`",
-        "typeDefinition": [
-          "top",
-          "middle",
-          "bottom"
-        ],
+        "typeDefinition": ["top", "middle", "bottom"],
         "pureDefault": "top"
       },
       {
@@ -27,17 +23,7 @@
         "typeRaw": "`number｜object`",
         "default": "`0`",
         "pureDefault": "0",
-        "typeDefinition": [
-          "0",
-          "8",
-          "16",
-          "24",
-          "32",
-          "40",
-          "48",
-          "56",
-          "64"
-        ]
+        "typeDefinition": ["0", "8", "16", "24", "32", "40", "48", "56", "64"]
       },
       {
         "name": "nzJustify",
@@ -46,13 +32,7 @@
         "type": "Enum",
         "typeRaw": "`'start'｜'end'｜'center'｜'space-around'｜'space-between'`",
         "default": "`'start'`",
-        "typeDefinition": [
-          "start",
-          "end",
-          "center",
-          "space-around",
-          "space-between"
-        ],
+        "typeDefinition": ["start", "end", "center", "space-around", "space-between"],
         "pureDefault": "start"
       },
       {
@@ -62,9 +42,7 @@
         "type": "Enum",
         "typeRaw": "`'flex'`",
         "default": "",
-        "typeDefinition": [
-          "flex"
-        ]
+        "typeDefinition": ["flex"]
       }
     ],
     "lib": "ng-zorro-antd",
@@ -88,17 +66,7 @@
         "typeRaw": "`number`",
         "default": "`0`",
         "pureDefault": "0",
-        "typeDefinition": [
-          "0",
-          "8",
-          "16",
-          "24",
-          "32",
-          "40",
-          "48",
-          "56",
-          "64"
-        ]
+        "typeDefinition": ["0", "8", "16", "24", "32", "40", "48", "56", "64"]
       },
       {
         "name": "nzOrder",
@@ -108,17 +76,7 @@
         "typeRaw": "`number`",
         "default": "`0`",
         "pureDefault": "0",
-        "typeDefinition": [
-          "0",
-          "8",
-          "16",
-          "24",
-          "32",
-          "40",
-          "48",
-          "56",
-          "64"
-        ]
+        "typeDefinition": ["0", "8", "16", "24", "32", "40", "48", "56", "64"]
       },
       {
         "name": "nzPull",
@@ -128,17 +86,7 @@
         "typeRaw": "`number`",
         "default": "`0`",
         "pureDefault": "0",
-        "typeDefinition": [
-          "0",
-          "8",
-          "16",
-          "24",
-          "32",
-          "40",
-          "48",
-          "56",
-          "64"
-        ]
+        "typeDefinition": ["0", "8", "16", "24", "32", "40", "48", "56", "64"]
       },
       {
         "name": "nzPush",
@@ -148,17 +96,7 @@
         "typeRaw": "`number`",
         "default": "`0`",
         "pureDefault": "0",
-        "typeDefinition": [
-          "0",
-          "8",
-          "16",
-          "24",
-          "32",
-          "40",
-          "48",
-          "56",
-          "64"
-        ]
+        "typeDefinition": ["0", "8", "16", "24", "32", "40", "48", "56", "64"]
       },
       {
         "name": "nzSpan",
@@ -167,17 +105,7 @@
         "type": "Enum",
         "typeRaw": "`number`",
         "default": "",
-        "typeDefinition": [
-          "0",
-          "8",
-          "16",
-          "24",
-          "32",
-          "40",
-          "48",
-          "56",
-          "64"
-        ]
+        "typeDefinition": ["0", "8", "16", "24", "32", "40", "48", "56", "64"]
       },
       {
         "name": "nzXs",
@@ -186,17 +114,7 @@
         "type": "Enum",
         "typeRaw": "`number｜object`",
         "default": "",
-        "typeDefinition": [
-          "0",
-          "8",
-          "16",
-          "24",
-          "32",
-          "40",
-          "48",
-          "56",
-          "64"
-        ]
+        "typeDefinition": ["0", "8", "16", "24", "32", "40", "48", "56", "64"]
       },
       {
         "name": "nzSm",
@@ -205,17 +123,7 @@
         "type": "Enum",
         "typeRaw": "`number｜object`",
         "default": "",
-        "typeDefinition": [
-          "0",
-          "8",
-          "16",
-          "24",
-          "32",
-          "40",
-          "48",
-          "56",
-          "64"
-        ]
+        "typeDefinition": ["0", "8", "16", "24", "32", "40", "48", "56", "64"]
       },
       {
         "name": "nzMd",
@@ -224,17 +132,7 @@
         "type": "Enum",
         "typeRaw": "`number｜object`",
         "default": "",
-        "typeDefinition": [
-          "0",
-          "8",
-          "16",
-          "24",
-          "32",
-          "40",
-          "48",
-          "56",
-          "64"
-        ]
+        "typeDefinition": ["0", "8", "16", "24", "32", "40", "48", "56", "64"]
       },
       {
         "name": "nzLg",
@@ -243,17 +141,7 @@
         "type": "Enum",
         "typeRaw": "`number｜object`",
         "default": "",
-        "typeDefinition": [
-          "0",
-          "8",
-          "16",
-          "24",
-          "32",
-          "40",
-          "48",
-          "56",
-          "64"
-        ]
+        "typeDefinition": ["0", "8", "16", "24", "32", "40", "48", "56", "64"]
       },
       {
         "name": "nzXl",
@@ -262,17 +150,7 @@
         "type": "Enum",
         "typeRaw": "`number｜object`",
         "default": "",
-        "typeDefinition": [
-          "0",
-          "8",
-          "16",
-          "24",
-          "32",
-          "40",
-          "48",
-          "56",
-          "64"
-        ]
+        "typeDefinition": ["0", "8", "16", "24", "32", "40", "48", "56", "64"]
       },
       {
         "name": "nzXXl",
@@ -281,17 +159,7 @@
         "type": "Enum",
         "typeRaw": "`number｜object`",
         "default": "",
-        "typeDefinition": [
-          "0",
-          "8",
-          "16",
-          "24",
-          "32",
-          "40",
-          "48",
-          "56",
-          "64"
-        ]
+        "typeDefinition": ["0", "8", "16", "24", "32", "40", "48", "56", "64"]
       }
     ],
     "lib": "ng-zorro-antd",
@@ -377,11 +245,7 @@
         "type": "Enum",
         "typeRaw": "`'click'｜'focus'｜'hover'`",
         "default": "`'hover'`",
-        "typeDefinition": [
-          "click",
-          "focus",
-          "hover"
-        ],
+        "typeDefinition": ["click", "focus", "hover"],
         "pureDefault": "hover",
         "_common": true
       },
@@ -435,17 +299,7 @@
         "typeRaw": "`number`",
         "default": "`32`",
         "pureDefault": "32",
-        "typeDefinition": [
-          "0",
-          "8",
-          "16",
-          "24",
-          "32",
-          "40",
-          "48",
-          "56",
-          "64"
-        ]
+        "typeDefinition": ["0", "8", "16", "24", "32", "40", "48", "56", "64"]
       },
       {
         "name": "sg-container",
@@ -454,14 +308,7 @@
         "type": "Enum",
         "typeRaw": "`'1','2','3','4','5','6'`",
         "default": "",
-        "typeDefinition": [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6"
-        ]
+        "typeDefinition": ["1", "2", "3", "4", "5", "6"]
       },
       {
         "name": "col",
@@ -470,14 +317,7 @@
         "type": "Enum",
         "typeRaw": "`'1','2','3','4','5','6'`",
         "default": "",
-        "typeDefinition": [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6"
-        ]
+        "typeDefinition": ["1", "2", "3", "4", "5", "6"]
       }
     ],
     "lib": "@delon/abc",
@@ -501,17 +341,7 @@
         "typeRaw": "`number`",
         "default": "`32`",
         "pureDefault": "32",
-        "typeDefinition": [
-          "0",
-          "8",
-          "16",
-          "24",
-          "32",
-          "40",
-          "48",
-          "56",
-          "64"
-        ]
+        "typeDefinition": ["0", "8", "16", "24", "32", "40", "48", "56", "64"]
       },
       {
         "name": "sg-container",
@@ -520,14 +350,7 @@
         "type": "Enum",
         "typeRaw": "`'1','2','3','4','5','6'`",
         "default": "",
-        "typeDefinition": [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6"
-        ]
+        "typeDefinition": ["1", "2", "3", "4", "5", "6"]
       },
       {
         "name": "col",
@@ -536,14 +359,7 @@
         "type": "Enum",
         "typeRaw": "`'1','2','3','4','5','6'`",
         "default": "",
-        "typeDefinition": [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6"
-        ]
+        "typeDefinition": ["1", "2", "3", "4", "5", "6"]
       }
     ],
     "lib": "@delon/abc",
@@ -566,14 +382,7 @@
         "type": "Enum",
         "typeRaw": "`'1','2','3','4','5','6'`",
         "default": "",
-        "typeDefinition": [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6"
-        ]
+        "typeDefinition": ["1", "2", "3", "4", "5", "6"]
       }
     ],
     "lib": "@delon/abc",
@@ -702,12 +511,7 @@
         "type": "Enum",
         "typeRaw": "`'success'｜'info'｜'warning'｜'error'`",
         "default": "`'info'`",
-        "typeDefinition": [
-          "success",
-          "info",
-          "warning",
-          "error"
-        ],
+        "typeDefinition": ["success", "info", "warning", "error"],
         "pureDefault": "info"
       },
       {
@@ -966,10 +770,7 @@
         "type": "Enum",
         "typeRaw": "`'circle'｜'square'`",
         "default": "`'circle'`",
-        "typeDefinition": [
-          "circle",
-          "square"
-        ],
+        "typeDefinition": ["circle", "square"],
         "pureDefault": "circle"
       },
       {
@@ -979,12 +780,7 @@
         "type": "Enum",
         "typeRaw": "`'large'｜'small'｜'default'｜number`",
         "default": "`'default'`",
-        "typeDefinition": [
-          "large",
-          "small",
-          "default",
-          "number"
-        ],
+        "typeDefinition": ["large", "small", "default", "number"],
         "pureDefault": "default"
       },
       {
@@ -1124,13 +920,7 @@
         "type": "Enum",
         "typeRaw": "`'success'｜'processing'｜'default'｜'error'｜'warning'`",
         "default": "",
-        "typeDefinition": [
-          "success",
-          "processing",
-          "default",
-          "error",
-          "warning"
-        ]
+        "typeDefinition": ["success", "processing", "default", "error", "warning"]
       },
       {
         "name": "nzText",
@@ -1212,10 +1002,7 @@
         "type": "Enum",
         "typeRaw": "`'circle'｜'round'`",
         "default": "",
-        "typeDefinition": [
-          "circle",
-          "round"
-        ]
+        "typeDefinition": ["circle", "round"]
       },
       {
         "name": "nzSize",
@@ -1224,11 +1011,7 @@
         "type": "Enum",
         "typeRaw": "`'large'｜'small'｜'default'`",
         "default": "`'default'`",
-        "typeDefinition": [
-          "large",
-          "small",
-          "default"
-        ],
+        "typeDefinition": ["large", "small", "default"],
         "pureDefault": "default"
       },
       {
@@ -1238,12 +1021,7 @@
         "type": "Enum",
         "typeRaw": "`'primary'｜'dashed'｜'danger'｜'default'`",
         "default": "`'default'`",
-        "typeDefinition": [
-          "primary",
-          "dashed",
-          "danger",
-          "default"
-        ],
+        "typeDefinition": ["primary", "dashed", "danger", "default"],
         "pureDefault": "default"
       },
       {
@@ -1299,10 +1077,7 @@
         "type": "Enum",
         "typeRaw": "`'month'｜'year'`",
         "default": "`'month'`",
-        "typeDefinition": [
-          "month",
-          "year"
-        ],
+        "typeDefinition": ["month", "year"],
         "pureDefault": "month"
       },
       {
@@ -1453,9 +1228,7 @@
         "type": "Enum",
         "typeRaw": "`'inner'`",
         "default": "",
-        "typeDefinition": [
-          "inner"
-        ]
+        "typeDefinition": ["inner"]
       }
     ],
     "lib": "ng-zorro-antd",
@@ -1577,10 +1350,7 @@
         "type": "Enum",
         "typeRaw": "`'scrollx'｜'fade'`",
         "default": "`'scrollx'`",
-        "typeDefinition": [
-          "scrollx",
-          "fade"
-        ],
+        "typeDefinition": ["scrollx", "fade"],
         "pureDefault": "scrollx"
       },
       {
@@ -1699,10 +1469,7 @@
         "type": "Enum",
         "typeRaw": "`'click'｜'hover'`",
         "default": "`'click'`",
-        "typeDefinition": [
-          "click",
-          "hover"
-        ],
+        "typeDefinition": ["click", "hover"],
         "pureDefault": "click"
       },
       {
@@ -1805,11 +1572,7 @@
         "type": "Enum",
         "typeRaw": "`'large'｜'small'｜'default'`",
         "default": "`'default'`",
-        "typeDefinition": [
-          "large",
-          "small",
-          "default"
-        ],
+        "typeDefinition": ["large", "small", "default"],
         "pureDefault": "default"
       },
       {
@@ -2228,10 +1991,7 @@
         "type": "Enum",
         "typeRaw": "`'large'｜'small'`",
         "default": "",
-        "typeDefinition": [
-          "large",
-          "small"
-        ],
+        "typeDefinition": ["large", "small"],
         "_common": true
       },
       {
@@ -2452,10 +2212,7 @@
         "type": "Enum",
         "typeRaw": "`'large'｜'small'`",
         "default": "",
-        "typeDefinition": [
-          "large",
-          "small"
-        ],
+        "typeDefinition": ["large", "small"],
         "_common": true
       },
       {
@@ -2636,10 +2393,7 @@
         "type": "Enum",
         "typeRaw": "`'large'｜'small'`",
         "default": "",
-        "typeDefinition": [
-          "large",
-          "small"
-        ],
+        "typeDefinition": ["large", "small"],
         "_common": true
       },
       {
@@ -2826,10 +2580,7 @@
         "type": "Enum",
         "typeRaw": "`'large'｜'small'`",
         "default": "",
-        "typeDefinition": [
-          "large",
-          "small"
-        ],
+        "typeDefinition": ["large", "small"],
         "_common": true
       },
       {
@@ -3008,10 +2759,7 @@
         "type": "Enum",
         "typeRaw": "`'large'｜'small'`",
         "default": "",
-        "typeDefinition": [
-          "large",
-          "small"
-        ],
+        "typeDefinition": ["large", "small"],
         "_common": true
       },
       {
@@ -3151,10 +2899,7 @@
         "type": "Enum",
         "typeRaw": "`'horizontal'｜'vertical'`",
         "default": "`'horizontal'`",
-        "typeDefinition": [
-          "horizontal",
-          "vertical"
-        ],
+        "typeDefinition": ["horizontal", "vertical"],
         "pureDefault": "horizontal"
       },
       {
@@ -3172,10 +2917,7 @@
         "type": "Enum",
         "typeRaw": "`'left'｜'right'`",
         "default": "",
-        "typeDefinition": [
-          "left",
-          "right"
-        ]
+        "typeDefinition": ["left", "right"]
       }
     ],
     "lib": "ng-zorro-antd",
@@ -3260,12 +3002,7 @@
         "type": "Enum",
         "typeRaw": "`'top'｜'right'｜'bottom'｜'left'`",
         "default": "`'right'`",
-        "typeDefinition": [
-          "top",
-          "right",
-          "bottom",
-          "left"
-        ],
+        "typeDefinition": ["top", "right", "bottom", "left"],
         "pureDefault": "right"
       },
       {
@@ -3359,14 +3096,7 @@
         "type": "Enum",
         "typeRaw": "`'bottomLeft'｜'bottomCenter'｜'bottomRight'｜'topLeft'｜'topCenter'｜'topRight'`",
         "default": "`'bottomLeft'`",
-        "typeDefinition": [
-          "bottomLeft",
-          "bottomCenter",
-          "bottomRight",
-          "topLeft",
-          "topCenter",
-          "topRight"
-        ],
+        "typeDefinition": ["bottomLeft", "bottomCenter", "bottomRight", "topLeft", "topCenter", "topRight"],
         "pureDefault": "bottomLeft"
       },
       {
@@ -3376,10 +3106,7 @@
         "type": "Enum",
         "typeRaw": "`'click'｜'hover'`",
         "default": "`'hover'`",
-        "typeDefinition": [
-          "click",
-          "hover"
-        ],
+        "typeDefinition": ["click", "hover"],
         "pureDefault": "hover"
       },
       {
@@ -3454,14 +3181,7 @@
         "type": "Enum",
         "typeRaw": "`'bottomLeft'｜'bottomCenter'｜'bottomRight'｜'topLeft'｜'topCenter'｜'topRight'`",
         "default": "`'bottomLeft'`",
-        "typeDefinition": [
-          "bottomLeft",
-          "bottomCenter",
-          "bottomRight",
-          "topLeft",
-          "topCenter",
-          "topRight"
-        ],
+        "typeDefinition": ["bottomLeft", "bottomCenter", "bottomRight", "topLeft", "topCenter", "topRight"],
         "pureDefault": "bottomLeft"
       },
       {
@@ -3471,11 +3191,7 @@
         "type": "Enum",
         "typeRaw": "`'large'｜'small'｜'default'`",
         "default": "`'default'`",
-        "typeDefinition": [
-          "large",
-          "small",
-          "default"
-        ],
+        "typeDefinition": ["large", "small", "default"],
         "pureDefault": "default"
       },
       {
@@ -3485,13 +3201,7 @@
         "type": "Enum",
         "typeRaw": "`'primary'｜'ghost'｜'dashed'｜'danger'｜'default'`",
         "default": "`'default'`",
-        "typeDefinition": [
-          "primary",
-          "ghost",
-          "dashed",
-          "danger",
-          "default"
-        ],
+        "typeDefinition": ["primary", "ghost", "dashed", "danger", "default"],
         "pureDefault": "default"
       },
       {
@@ -3501,10 +3211,7 @@
         "type": "Enum",
         "typeRaw": "`'click'｜'hover'`",
         "default": "`'hover'`",
-        "typeDefinition": [
-          "click",
-          "hover"
-        ],
+        "typeDefinition": ["click", "hover"],
         "pureDefault": "hover"
       },
       {
@@ -3570,14 +3277,7 @@
         "type": "Enum",
         "typeRaw": "`'bottomLeft'｜'bottomCenter'｜'bottomRight'｜'topLeft'｜'topCenter'｜'topRight'`",
         "default": "`'bottomLeft'`",
-        "typeDefinition": [
-          "bottomLeft",
-          "bottomCenter",
-          "bottomRight",
-          "topLeft",
-          "topCenter",
-          "topRight"
-        ],
+        "typeDefinition": ["bottomLeft", "bottomCenter", "bottomRight", "topLeft", "topCenter", "topRight"],
         "pureDefault": "bottomLeft"
       },
       {
@@ -3587,11 +3287,7 @@
         "type": "Enum",
         "typeRaw": "`'large'｜'small'｜'default'`",
         "default": "`'default'`",
-        "typeDefinition": [
-          "large",
-          "small",
-          "default"
-        ],
+        "typeDefinition": ["large", "small", "default"],
         "pureDefault": "default"
       },
       {
@@ -3601,13 +3297,7 @@
         "type": "Enum",
         "typeRaw": "`'primary'｜'ghost'｜'dashed'｜'danger'｜'default'`",
         "default": "`'default'`",
-        "typeDefinition": [
-          "primary",
-          "ghost",
-          "dashed",
-          "danger",
-          "default"
-        ],
+        "typeDefinition": ["primary", "ghost", "dashed", "danger", "default"],
         "pureDefault": "default"
       },
       {
@@ -3617,10 +3307,7 @@
         "type": "Enum",
         "typeRaw": "`'click'｜'hover'`",
         "default": "`'hover'`",
-        "typeDefinition": [
-          "click",
-          "hover"
-        ],
+        "typeDefinition": ["click", "hover"],
         "pureDefault": "hover"
       },
       {
@@ -3715,11 +3402,7 @@
         "type": "Enum",
         "typeRaw": "`'horizontal'｜'vertical'｜'inline'`",
         "default": "`'horizontal'`",
-        "typeDefinition": [
-          "horizontal",
-          "vertical",
-          "inline"
-        ],
+        "typeDefinition": ["horizontal", "vertical", "inline"],
         "pureDefault": "horizontal"
       },
       {
@@ -3765,11 +3448,7 @@
         "type": "Enum",
         "typeRaw": "`'top'｜'middle'｜'bottom'`",
         "default": "`'top'`",
-        "typeDefinition": [
-          "top",
-          "middle",
-          "bottom"
-        ],
+        "typeDefinition": ["top", "middle", "bottom"],
         "pureDefault": "top"
       },
       {
@@ -3780,17 +3459,7 @@
         "typeRaw": "`number｜object`",
         "default": "`0`",
         "pureDefault": "0",
-        "typeDefinition": [
-          "0",
-          "8",
-          "16",
-          "24",
-          "32",
-          "40",
-          "48",
-          "56",
-          "64"
-        ]
+        "typeDefinition": ["0", "8", "16", "24", "32", "40", "48", "56", "64"]
       },
       {
         "name": "nzJustify",
@@ -3799,13 +3468,7 @@
         "type": "Enum",
         "typeRaw": "`'start'｜'end'｜'center'｜'space-around'｜'space-between'`",
         "default": "`'start'`",
-        "typeDefinition": [
-          "start",
-          "end",
-          "center",
-          "space-around",
-          "space-between"
-        ],
+        "typeDefinition": ["start", "end", "center", "space-around", "space-between"],
         "pureDefault": "start"
       },
       {
@@ -3815,9 +3478,7 @@
         "type": "Enum",
         "typeRaw": "`'flex'`",
         "default": "",
-        "typeDefinition": [
-          "flex"
-        ]
+        "typeDefinition": ["flex"]
       },
       {
         "name": "nzFlex",
@@ -3850,17 +3511,7 @@
         "typeRaw": "`number`",
         "default": "`0`",
         "pureDefault": "0",
-        "typeDefinition": [
-          "0",
-          "8",
-          "16",
-          "24",
-          "32",
-          "40",
-          "48",
-          "56",
-          "64"
-        ]
+        "typeDefinition": ["0", "8", "16", "24", "32", "40", "48", "56", "64"]
       },
       {
         "name": "nzOrder",
@@ -3870,17 +3521,7 @@
         "typeRaw": "`number`",
         "default": "`0`",
         "pureDefault": "0",
-        "typeDefinition": [
-          "0",
-          "8",
-          "16",
-          "24",
-          "32",
-          "40",
-          "48",
-          "56",
-          "64"
-        ]
+        "typeDefinition": ["0", "8", "16", "24", "32", "40", "48", "56", "64"]
       },
       {
         "name": "nzPull",
@@ -3890,17 +3531,7 @@
         "typeRaw": "`number`",
         "default": "`0`",
         "pureDefault": "0",
-        "typeDefinition": [
-          "0",
-          "8",
-          "16",
-          "24",
-          "32",
-          "40",
-          "48",
-          "56",
-          "64"
-        ]
+        "typeDefinition": ["0", "8", "16", "24", "32", "40", "48", "56", "64"]
       },
       {
         "name": "nzPush",
@@ -3910,17 +3541,7 @@
         "typeRaw": "`number`",
         "default": "`0`",
         "pureDefault": "0",
-        "typeDefinition": [
-          "0",
-          "8",
-          "16",
-          "24",
-          "32",
-          "40",
-          "48",
-          "56",
-          "64"
-        ]
+        "typeDefinition": ["0", "8", "16", "24", "32", "40", "48", "56", "64"]
       },
       {
         "name": "nzSpan",
@@ -3929,17 +3550,7 @@
         "type": "Enum",
         "typeRaw": "`number`",
         "default": "",
-        "typeDefinition": [
-          "0",
-          "8",
-          "16",
-          "24",
-          "32",
-          "40",
-          "48",
-          "56",
-          "64"
-        ]
+        "typeDefinition": ["0", "8", "16", "24", "32", "40", "48", "56", "64"]
       },
       {
         "name": "nzXs",
@@ -3948,17 +3559,7 @@
         "type": "Enum",
         "typeRaw": "`number｜object`",
         "default": "",
-        "typeDefinition": [
-          "0",
-          "8",
-          "16",
-          "24",
-          "32",
-          "40",
-          "48",
-          "56",
-          "64"
-        ]
+        "typeDefinition": ["0", "8", "16", "24", "32", "40", "48", "56", "64"]
       },
       {
         "name": "nzSm",
@@ -3967,17 +3568,7 @@
         "type": "Enum",
         "typeRaw": "`number｜object`",
         "default": "",
-        "typeDefinition": [
-          "0",
-          "8",
-          "16",
-          "24",
-          "32",
-          "40",
-          "48",
-          "56",
-          "64"
-        ]
+        "typeDefinition": ["0", "8", "16", "24", "32", "40", "48", "56", "64"]
       },
       {
         "name": "nzMd",
@@ -3986,17 +3577,7 @@
         "type": "Enum",
         "typeRaw": "`number｜object`",
         "default": "",
-        "typeDefinition": [
-          "0",
-          "8",
-          "16",
-          "24",
-          "32",
-          "40",
-          "48",
-          "56",
-          "64"
-        ]
+        "typeDefinition": ["0", "8", "16", "24", "32", "40", "48", "56", "64"]
       },
       {
         "name": "nzLg",
@@ -4005,17 +3586,7 @@
         "type": "Enum",
         "typeRaw": "`number｜object`",
         "default": "",
-        "typeDefinition": [
-          "0",
-          "8",
-          "16",
-          "24",
-          "32",
-          "40",
-          "48",
-          "56",
-          "64"
-        ]
+        "typeDefinition": ["0", "8", "16", "24", "32", "40", "48", "56", "64"]
       },
       {
         "name": "nzXl",
@@ -4024,17 +3595,7 @@
         "type": "Enum",
         "typeRaw": "`number｜object`",
         "default": "",
-        "typeDefinition": [
-          "0",
-          "8",
-          "16",
-          "24",
-          "32",
-          "40",
-          "48",
-          "56",
-          "64"
-        ]
+        "typeDefinition": ["0", "8", "16", "24", "32", "40", "48", "56", "64"]
       },
       {
         "name": "nzXXl",
@@ -4043,17 +3604,7 @@
         "type": "Enum",
         "typeRaw": "`number｜object`",
         "default": "",
-        "typeDefinition": [
-          "0",
-          "8",
-          "16",
-          "24",
-          "32",
-          "40",
-          "48",
-          "56",
-          "64"
-        ]
+        "typeDefinition": ["0", "8", "16", "24", "32", "40", "48", "56", "64"]
       },
       {
         "name": "nzRequired",
@@ -4112,17 +3663,7 @@
         "typeRaw": "`number`",
         "default": "`0`",
         "pureDefault": "0",
-        "typeDefinition": [
-          "0",
-          "8",
-          "16",
-          "24",
-          "32",
-          "40",
-          "48",
-          "56",
-          "64"
-        ]
+        "typeDefinition": ["0", "8", "16", "24", "32", "40", "48", "56", "64"]
       },
       {
         "name": "nzOrder",
@@ -4132,17 +3673,7 @@
         "typeRaw": "`number`",
         "default": "`0`",
         "pureDefault": "0",
-        "typeDefinition": [
-          "0",
-          "8",
-          "16",
-          "24",
-          "32",
-          "40",
-          "48",
-          "56",
-          "64"
-        ]
+        "typeDefinition": ["0", "8", "16", "24", "32", "40", "48", "56", "64"]
       },
       {
         "name": "nzPull",
@@ -4152,17 +3683,7 @@
         "typeRaw": "`number`",
         "default": "`0`",
         "pureDefault": "0",
-        "typeDefinition": [
-          "0",
-          "8",
-          "16",
-          "24",
-          "32",
-          "40",
-          "48",
-          "56",
-          "64"
-        ]
+        "typeDefinition": ["0", "8", "16", "24", "32", "40", "48", "56", "64"]
       },
       {
         "name": "nzPush",
@@ -4172,17 +3693,7 @@
         "typeRaw": "`number`",
         "default": "`0`",
         "pureDefault": "0",
-        "typeDefinition": [
-          "0",
-          "8",
-          "16",
-          "24",
-          "32",
-          "40",
-          "48",
-          "56",
-          "64"
-        ]
+        "typeDefinition": ["0", "8", "16", "24", "32", "40", "48", "56", "64"]
       },
       {
         "name": "nzSpan",
@@ -4191,17 +3702,7 @@
         "type": "Enum",
         "typeRaw": "`number`",
         "default": "",
-        "typeDefinition": [
-          "0",
-          "8",
-          "16",
-          "24",
-          "32",
-          "40",
-          "48",
-          "56",
-          "64"
-        ]
+        "typeDefinition": ["0", "8", "16", "24", "32", "40", "48", "56", "64"]
       },
       {
         "name": "nzXs",
@@ -4210,17 +3711,7 @@
         "type": "Enum",
         "typeRaw": "`number｜object`",
         "default": "",
-        "typeDefinition": [
-          "0",
-          "8",
-          "16",
-          "24",
-          "32",
-          "40",
-          "48",
-          "56",
-          "64"
-        ]
+        "typeDefinition": ["0", "8", "16", "24", "32", "40", "48", "56", "64"]
       },
       {
         "name": "nzSm",
@@ -4229,17 +3720,7 @@
         "type": "Enum",
         "typeRaw": "`number｜object`",
         "default": "",
-        "typeDefinition": [
-          "0",
-          "8",
-          "16",
-          "24",
-          "32",
-          "40",
-          "48",
-          "56",
-          "64"
-        ]
+        "typeDefinition": ["0", "8", "16", "24", "32", "40", "48", "56", "64"]
       },
       {
         "name": "nzMd",
@@ -4248,17 +3729,7 @@
         "type": "Enum",
         "typeRaw": "`number｜object`",
         "default": "",
-        "typeDefinition": [
-          "0",
-          "8",
-          "16",
-          "24",
-          "32",
-          "40",
-          "48",
-          "56",
-          "64"
-        ]
+        "typeDefinition": ["0", "8", "16", "24", "32", "40", "48", "56", "64"]
       },
       {
         "name": "nzLg",
@@ -4267,17 +3738,7 @@
         "type": "Enum",
         "typeRaw": "`number｜object`",
         "default": "",
-        "typeDefinition": [
-          "0",
-          "8",
-          "16",
-          "24",
-          "32",
-          "40",
-          "48",
-          "56",
-          "64"
-        ]
+        "typeDefinition": ["0", "8", "16", "24", "32", "40", "48", "56", "64"]
       },
       {
         "name": "nzXl",
@@ -4286,17 +3747,7 @@
         "type": "Enum",
         "typeRaw": "`number｜object`",
         "default": "",
-        "typeDefinition": [
-          "0",
-          "8",
-          "16",
-          "24",
-          "32",
-          "40",
-          "48",
-          "56",
-          "64"
-        ]
+        "typeDefinition": ["0", "8", "16", "24", "32", "40", "48", "56", "64"]
       },
       {
         "name": "nzXXl",
@@ -4305,17 +3756,7 @@
         "type": "Enum",
         "typeRaw": "`number｜object`",
         "default": "",
-        "typeDefinition": [
-          "0",
-          "8",
-          "16",
-          "24",
-          "32",
-          "40",
-          "48",
-          "56",
-          "64"
-        ]
+        "typeDefinition": ["0", "8", "16", "24", "32", "40", "48", "56", "64"]
       },
       {
         "name": "nzValidateStatus",
@@ -4333,12 +3774,7 @@
         "type": "Enum",
         "typeRaw": "`'success'｜'warning'｜'error'｜'validating'`",
         "default": "",
-        "typeDefinition": [
-          "success",
-          "warning",
-          "error",
-          "validating"
-        ]
+        "typeDefinition": ["success", "warning", "error", "validating"]
       },
       {
         "name": "nzHasFeedback",
@@ -4430,11 +3866,7 @@
         "type": "Enum",
         "typeRaw": "`'fill'｜'outline'｜'twotone'`",
         "default": "`'outline'`",
-        "typeDefinition": [
-          "fill",
-          "outline",
-          "twotone"
-        ],
+        "typeDefinition": ["fill", "outline", "twotone"],
         "pureDefault": "outline"
       },
       {
@@ -4492,11 +3924,7 @@
         "type": "Enum",
         "typeRaw": "`'large'｜'small'｜'default'`",
         "default": "`'default'`",
-        "typeDefinition": [
-          "large",
-          "small",
-          "default"
-        ],
+        "typeDefinition": ["large", "small", "default"],
         "pureDefault": "default"
       },
       {
@@ -4556,7 +3984,7 @@
     "types": {},
     "properties": [
       {
-        "name": "nzAddonAfter",
+        "name": "nzAddOnAfter",
         "inputType": 0,
         "description": "The label text displayed after (on the right side of) the input field.",
         "type": "string",
@@ -4564,7 +3992,7 @@
         "default": ""
       },
       {
-        "name": "nzAddonBefore",
+        "name": "nzAddOnBefore",
         "inputType": 0,
         "description": "The label text displayed before (on the left side of) the input field.",
         "type": "string",
@@ -4603,11 +4031,7 @@
         "type": "Enum",
         "typeRaw": "`'large'｜'small'｜'default'`",
         "default": "`'default'`",
-        "typeDefinition": [
-          "large",
-          "small",
-          "default"
-        ],
+        "typeDefinition": ["large", "small", "default"],
         "pureDefault": "default"
       }
     ],
@@ -4700,11 +4124,7 @@
         "type": "Enum",
         "typeRaw": "`'large'｜'small'｜'default'`",
         "default": "`'default'`",
-        "typeDefinition": [
-          "large",
-          "small",
-          "default"
-        ],
+        "typeDefinition": ["large", "small", "default"],
         "pureDefault": "default"
       },
       {
@@ -4775,14 +4195,7 @@
         "type": "Enum",
         "typeRaw": "`'xs'｜'sm'｜'md'｜'lg'｜'xl'｜'xxl'`",
         "default": "",
-        "typeDefinition": [
-          "xs",
-          "sm",
-          "md",
-          "lg",
-          "xl",
-          "xxl"
-        ]
+        "typeDefinition": ["xs", "sm", "md", "lg", "xl", "xxl"]
       },
       {
         "name": "nzCollapsed",
@@ -4860,10 +4273,7 @@
         "type": "Enum",
         "typeRaw": "`'light'｜'dark'`",
         "default": "`dark`",
-        "typeDefinition": [
-          "light",
-          "dark"
-        ],
+        "typeDefinition": ["light", "dark"],
         "pureDefault": "dark"
       },
       {
@@ -4944,10 +4354,7 @@
         "type": "Enum",
         "typeRaw": "`'vertical'｜'horizontal'`",
         "default": "`'horizontal'`",
-        "typeDefinition": [
-          "vertical",
-          "horizontal"
-        ],
+        "typeDefinition": ["vertical", "horizontal"],
         "pureDefault": "horizontal"
       },
       {
@@ -4991,11 +4398,7 @@
         "type": "Enum",
         "typeRaw": "`'large'｜'small'｜'default'`",
         "default": "`'default'`",
-        "typeDefinition": [
-          "large",
-          "small",
-          "default"
-        ],
+        "typeDefinition": ["large", "small", "default"],
         "pureDefault": "default"
       },
       {
@@ -5139,10 +4542,7 @@
         "type": "Enum",
         "typeRaw": "`'button'｜'top'`",
         "default": "`'bottom'`",
-        "typeDefinition": [
-          "button",
-          "top"
-        ],
+        "typeDefinition": ["button", "top"],
         "pureDefault": "bottom"
       },
       {
@@ -5225,11 +4625,7 @@
         "type": "Enum",
         "typeRaw": "`'vertical'｜'horizontal'｜'inline'`",
         "default": "`'vertical'`",
-        "typeDefinition": [
-          "vertical",
-          "horizontal",
-          "inline"
-        ],
+        "typeDefinition": ["vertical", "horizontal", "inline"],
         "pureDefault": "vertical"
       },
       {
@@ -5248,10 +4644,7 @@
         "type": "Enum",
         "typeRaw": "`'light'｜'dark'`",
         "default": "`'light'`",
-        "typeDefinition": [
-          "light",
-          "dark"
-        ],
+        "typeDefinition": ["light", "dark"],
         "pureDefault": "light"
       },
       {
@@ -5490,9 +4883,7 @@
         "type": "Enum",
         "typeRaw": "`'small'`",
         "default": "`'default'`",
-        "typeDefinition": [
-          "small"
-        ],
+        "typeDefinition": ["small"],
         "pureDefault": "default"
       },
       {
@@ -5629,11 +5020,7 @@
         "type": "Enum",
         "typeRaw": "`'click'｜'focus'｜'hover'`",
         "default": "`'hover'`",
-        "typeDefinition": [
-          "click",
-          "focus",
-          "hover"
-        ],
+        "typeDefinition": ["click", "focus", "hover"],
         "pureDefault": "hover",
         "_common": true
       },
@@ -5689,13 +5076,7 @@
         "type": "Enum",
         "typeRaw": "`'primary'｜'ghost'｜'dashed'｜'danger'｜'default'`",
         "default": "`'primary'`",
-        "typeDefinition": [
-          "primary",
-          "ghost",
-          "dashed",
-          "danger",
-          "default"
-        ],
+        "typeDefinition": ["primary", "ghost", "dashed", "danger", "default"],
         "pureDefault": "primary"
       },
       {
@@ -5823,11 +5204,7 @@
         "type": "Enum",
         "typeRaw": "`'click'｜'focus'｜'hover'`",
         "default": "`'hover'`",
-        "typeDefinition": [
-          "click",
-          "focus",
-          "hover"
-        ],
+        "typeDefinition": ["click", "focus", "hover"],
         "pureDefault": "hover",
         "_common": true
       },
@@ -5897,12 +5274,7 @@
         "type": "Enum",
         "typeRaw": "`'top'｜'right'｜'bottom'｜'left'`",
         "default": "`'top'`",
-        "typeDefinition": [
-          "top",
-          "right",
-          "bottom",
-          "left"
-        ],
+        "typeDefinition": ["top", "right", "bottom", "left"],
         "pureDefault": "top"
       },
       {
@@ -5928,13 +5300,9 @@
         "inputType": 0,
         "description": "to set the status of the Progress",
         "type": "Enum",
-        "typeRaw": "`'success'｜'exception'｜'active'`",
+        "typeRaw": "`'success'｜'exception'｜'active'｜'normal'`",
         "default": "",
-        "typeDefinition": [
-          "success",
-          "exception",
-          "active"
-        ]
+        "typeDefinition": ["success", "exception", "active", "normal"]
       },
       {
         "name": "nzStrokeWidth",
@@ -5961,11 +5329,7 @@
         "type": "Enum",
         "typeRaw": "`'line'｜'circle'｜'dashboard'`",
         "default": "`'line'`",
-        "typeDefinition": [
-          "line",
-          "circle",
-          "dashboard"
-        ],
+        "typeDefinition": ["line", "circle", "dashboard"],
         "pureDefault": "line"
       },
       {
@@ -5984,10 +5348,7 @@
         "type": "Enum",
         "typeRaw": "`'round'｜'square'`",
         "default": "`'round'`",
-        "typeDefinition": [
-          "round",
-          "square"
-        ],
+        "typeDefinition": ["round", "square"],
         "pureDefault": "round"
       },
       {
@@ -6168,11 +5529,7 @@
         "type": "Enum",
         "typeRaw": "`'large'｜'small'｜'default'`",
         "default": "`'default'`",
-        "typeDefinition": [
-          "large",
-          "small",
-          "default"
-        ],
+        "typeDefinition": ["large", "small", "default"],
         "pureDefault": "default"
       },
       {
@@ -6190,10 +5547,7 @@
         "type": "Enum",
         "typeRaw": "`'outline'｜'solid'`",
         "default": "`'outline'`",
-        "typeDefinition": [
-          "outline",
-          "solid"
-        ],
+        "typeDefinition": ["outline", "solid"],
         "pureDefault": "outline"
       }
     ],
@@ -6463,11 +5817,7 @@
         "type": "Enum",
         "typeRaw": "`'multiple'｜'tags'｜'default'`",
         "default": "`'default'`",
-        "typeDefinition": [
-          "multiple",
-          "tags",
-          "default"
-        ],
+        "typeDefinition": ["multiple", "tags", "default"],
         "pureDefault": "default"
       },
       {
@@ -6512,11 +5862,7 @@
         "type": "Enum",
         "typeRaw": "`'large'｜'small'｜'default'`",
         "default": "`'default'`",
-        "typeDefinition": [
-          "large",
-          "small",
-          "default"
-        ],
+        "typeDefinition": ["large", "small", "default"],
         "pureDefault": "default"
       },
       {
@@ -6890,11 +6236,7 @@
         "type": "Enum",
         "typeRaw": "`'default'｜'always'｜'never'`",
         "default": "`default`",
-        "typeDefinition": [
-          "default",
-          "always",
-          "never"
-        ],
+        "typeDefinition": ["default", "always", "never"],
         "pureDefault": "default"
       },
       {
@@ -6956,11 +6298,7 @@
         "type": "Enum",
         "typeRaw": "`'large'｜'small'｜'default'`",
         "default": "`'default'`",
-        "typeDefinition": [
-          "large",
-          "small",
-          "default"
-        ],
+        "typeDefinition": ["large", "small", "default"],
         "pureDefault": "default"
       },
       {
@@ -7145,10 +6483,7 @@
         "type": "Enum",
         "typeRaw": "`'vertical'｜'horizontal'`",
         "default": "`horizontal`",
-        "typeDefinition": [
-          "vertical",
-          "horizontal"
-        ],
+        "typeDefinition": ["vertical", "horizontal"],
         "pureDefault": "horizontal"
       },
       {
@@ -7158,10 +6493,7 @@
         "type": "Enum",
         "typeRaw": "`'vertical'｜'horizontal'`",
         "default": "`horizontal`",
-        "typeDefinition": [
-          "vertical",
-          "horizontal"
-        ],
+        "typeDefinition": ["vertical", "horizontal"],
         "pureDefault": "horizontal"
       },
       {
@@ -7180,10 +6512,7 @@
         "type": "Enum",
         "typeRaw": "`'small'｜'default'`",
         "default": "`'default'`",
-        "typeDefinition": [
-          "small",
-          "default"
-        ],
+        "typeDefinition": ["small", "default"],
         "pureDefault": "default"
       },
       {
@@ -7193,12 +6522,7 @@
         "type": "Enum",
         "typeRaw": "`'wait'｜'process'｜'finish'｜'error'`",
         "default": "`'process'`",
-        "typeDefinition": [
-          "wait",
-          "process",
-          "finish",
-          "error"
-        ],
+        "typeDefinition": ["wait", "process", "finish", "error"],
         "pureDefault": "process"
       },
       {
@@ -7247,12 +6571,7 @@
         "type": "Enum",
         "typeRaw": "`'wait'｜'process'｜'finish'｜'error'`",
         "default": "`'wait'`",
-        "typeDefinition": [
-          "wait",
-          "process",
-          "finish",
-          "error"
-        ],
+        "typeDefinition": ["wait", "process", "finish", "error"],
         "pureDefault": "wait"
       },
       {
@@ -7319,10 +6638,7 @@
         "type": "Enum",
         "typeRaw": "`'small'｜'default'`",
         "default": "`'default'`",
-        "typeDefinition": [
-          "small",
-          "default"
-        ],
+        "typeDefinition": ["small", "default"],
         "pureDefault": "default"
       },
       {
@@ -7429,11 +6745,7 @@
         "type": "Enum",
         "typeRaw": "`'top'｜'bottom'｜'both'`",
         "default": "`bottom`",
-        "typeDefinition": [
-          "top",
-          "bottom",
-          "both"
-        ],
+        "typeDefinition": ["top", "bottom", "both"],
         "pureDefault": "bottom"
       },
       {
@@ -7460,11 +6772,7 @@
         "type": "Enum",
         "typeRaw": "`'middle'｜'small'｜'default'`",
         "default": "`'default'`",
-        "typeDefinition": [
-          "middle",
-          "small",
-          "default"
-        ],
+        "typeDefinition": ["middle", "small", "default"],
         "pureDefault": "default"
       },
       {
@@ -7791,11 +7099,7 @@
         "type": "Enum",
         "typeRaw": "`'left'｜'right'｜'center'`",
         "default": "",
-        "typeDefinition": [
-          "left",
-          "right",
-          "center"
-        ]
+        "typeDefinition": ["left", "right", "center"]
       },
       {
         "name": "nzExpand",
@@ -7908,11 +7212,7 @@
         "type": "Enum",
         "typeRaw": "`'left'｜'right'｜'center'`",
         "default": "",
-        "typeDefinition": [
-          "left",
-          "right",
-          "center"
-        ]
+        "typeDefinition": ["left", "right", "center"]
       },
       {
         "name": "nzIndentSize",
@@ -8026,11 +7326,7 @@
         "type": "Enum",
         "typeRaw": "`'large'｜'small'｜'default'`",
         "default": "`'default'`",
-        "typeDefinition": [
-          "large",
-          "small",
-          "default"
-        ],
+        "typeDefinition": ["large", "small", "default"],
         "pureDefault": "default"
       },
       {
@@ -8056,12 +7352,7 @@
         "type": "Enum",
         "typeRaw": "`'top'｜'right'｜'bottom'｜'left'`",
         "default": "`'top'`",
-        "typeDefinition": [
-          "top",
-          "right",
-          "bottom",
-          "left"
-        ],
+        "typeDefinition": ["top", "right", "bottom", "left"],
         "pureDefault": "top"
       },
       {
@@ -8071,10 +7362,7 @@
         "type": "Enum",
         "typeRaw": "`'line'｜'card'`",
         "default": "`'line'`",
-        "typeDefinition": [
-          "line",
-          "card"
-        ],
+        "typeDefinition": ["line", "card"],
         "pureDefault": "line"
       },
       {
@@ -8454,11 +7742,7 @@
         "type": "Enum",
         "typeRaw": "`'left'｜'alternate'｜'right'`",
         "default": "",
-        "typeDefinition": [
-          "left",
-          "alternate",
-          "right"
-        ]
+        "typeDefinition": ["left", "alternate", "right"]
       }
     ],
     "description": "Timeline",
@@ -9012,11 +8296,7 @@
         "type": "Enum",
         "typeRaw": "`'large'｜'small'｜'default'`",
         "default": "`'default'`",
-        "typeDefinition": [
-          "large",
-          "small",
-          "default"
-        ],
+        "typeDefinition": ["large", "small", "default"],
         "pureDefault": "default"
       },
       {
@@ -9250,11 +8530,7 @@
         "type": "Enum",
         "typeRaw": "`'text'｜'picture'｜'picture-card'`",
         "default": "`'text'`",
-        "typeDefinition": [
-          "text",
-          "picture",
-          "picture-card"
-        ],
+        "typeDefinition": ["text", "picture", "picture-card"],
         "pureDefault": "text"
       },
       {
@@ -9356,12 +8632,7 @@
         "type": "Enum",
         "typeRaw": "`'large','small','mini','default'`",
         "default": "`'default'`",
-        "typeDefinition": [
-          "large",
-          "small",
-          "mini",
-          "default"
-        ],
+        "typeDefinition": ["large", "small", "mini", "default"],
         "pureDefault": "default"
       },
       {
@@ -9644,10 +8915,7 @@
         "type": "Enum",
         "typeRaw": "`'large'｜'small'`",
         "default": "",
-        "typeDefinition": [
-          "large",
-          "small"
-        ]
+        "typeDefinition": ["large", "small"]
       },
       {
         "name": "nzStyle",
@@ -9817,17 +9085,7 @@
         "typeRaw": "`number`",
         "default": "`32`",
         "pureDefault": "32",
-        "typeDefinition": [
-          "0",
-          "8",
-          "16",
-          "24",
-          "32",
-          "40",
-          "48",
-          "56",
-          "64"
-        ]
+        "typeDefinition": ["0", "8", "16", "24", "32", "40", "48", "56", "64"]
       },
       {
         "name": "se-container",
@@ -9836,14 +9094,7 @@
         "type": "Enum",
         "typeRaw": "`'1','2','3','4','5','6'`",
         "default": "",
-        "typeDefinition": [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6"
-        ]
+        "typeDefinition": ["1", "2", "3", "4", "5", "6"]
       },
       {
         "name": "col",
@@ -9852,14 +9103,7 @@
         "type": "Enum",
         "typeRaw": "`'1','2','3','4','5','6'`",
         "default": "",
-        "typeDefinition": [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6"
-        ]
+        "typeDefinition": ["1", "2", "3", "4", "5", "6"]
       },
       {
         "name": "labelWidth",
@@ -9877,11 +9121,7 @@
         "type": "Enum",
         "typeRaw": "`'horizontal','vertical','inline'`",
         "default": "`'horizontal'`",
-        "typeDefinition": [
-          "horizontal",
-          "vertical",
-          "inline"
-        ],
+        "typeDefinition": ["horizontal", "vertical", "inline"],
         "pureDefault": "horizontal"
       },
       {
@@ -9891,10 +9131,7 @@
         "type": "Enum",
         "typeRaw": "`'default','compact'`",
         "default": "`'default'`",
-        "typeDefinition": [
-          "default",
-          "compact"
-        ],
+        "typeDefinition": ["default", "compact"],
         "pureDefault": "default"
       },
       {
@@ -9945,17 +9182,7 @@
         "typeRaw": "`number`",
         "default": "`32`",
         "pureDefault": "32",
-        "typeDefinition": [
-          "0",
-          "8",
-          "16",
-          "24",
-          "32",
-          "40",
-          "48",
-          "56",
-          "64"
-        ]
+        "typeDefinition": ["0", "8", "16", "24", "32", "40", "48", "56", "64"]
       },
       {
         "name": "se-container",
@@ -9964,14 +9191,7 @@
         "type": "Enum",
         "typeRaw": "`'1','2','3','4','5','6'`",
         "default": "",
-        "typeDefinition": [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6"
-        ]
+        "typeDefinition": ["1", "2", "3", "4", "5", "6"]
       },
       {
         "name": "col",
@@ -9980,14 +9200,7 @@
         "type": "Enum",
         "typeRaw": "`'1','2','3','4','5','6'`",
         "default": "",
-        "typeDefinition": [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6"
-        ]
+        "typeDefinition": ["1", "2", "3", "4", "5", "6"]
       },
       {
         "name": "labelWidth",
@@ -10005,11 +9218,7 @@
         "type": "Enum",
         "typeRaw": "`'horizontal','vertical','inline'`",
         "default": "`'horizontal'`",
-        "typeDefinition": [
-          "horizontal",
-          "vertical",
-          "inline"
-        ],
+        "typeDefinition": ["horizontal", "vertical", "inline"],
         "pureDefault": "horizontal"
       },
       {
@@ -10019,10 +9228,7 @@
         "type": "Enum",
         "typeRaw": "`'default','compact'`",
         "default": "`'default'`",
-        "typeDefinition": [
-          "default",
-          "compact"
-        ],
+        "typeDefinition": ["default", "compact"],
         "pureDefault": "default"
       },
       {
@@ -10072,14 +9278,7 @@
         "type": "Enum",
         "typeRaw": "`'1','2','3','4','5','6'`",
         "default": "",
-        "typeDefinition": [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6"
-        ]
+        "typeDefinition": ["1", "2", "3", "4", "5", "6"]
       },
       {
         "name": "label",
@@ -10272,11 +9471,7 @@
         "type": "Enum",
         "typeRaw": "`'403','404','500'`",
         "default": "",
-        "typeDefinition": [
-          "403",
-          "404",
-          "500"
-        ]
+        "typeDefinition": ["403", "404", "500"]
       },
       {
         "name": "title",
@@ -11233,11 +10428,7 @@
           "type": "Enum",
           "typeRaw": "`'left','center','right'`",
           "default": "`'right'`",
-          "typeDefinition": [
-            "left",
-            "center",
-            "right"
-          ],
+          "typeDefinition": ["left", "center", "right"],
           "pureDefault": "right"
         },
         {
@@ -11477,11 +10668,7 @@
         "type": "Enum",
         "typeRaw": "`'small','middle','default'`",
         "default": "`'default'`",
-        "typeDefinition": [
-          "small",
-          "middle",
-          "default"
-        ],
+        "typeDefinition": ["small", "middle", "default"],
         "pureDefault": "default"
       },
       {
@@ -11681,10 +10868,7 @@
         "type": "Enum",
         "typeRaw": "`'small','large'`",
         "default": "`'large'`",
-        "typeDefinition": [
-          "small",
-          "large"
-        ],
+        "typeDefinition": ["small", "large"],
         "pureDefault": "large"
       },
       {
@@ -11694,10 +10878,7 @@
         "type": "Enum",
         "typeRaw": "`'horizontal','vertical'`",
         "default": "`'horizontal'`",
-        "typeDefinition": [
-          "horizontal",
-          "vertical"
-        ],
+        "typeDefinition": ["horizontal", "vertical"],
         "pureDefault": "horizontal"
       },
       {
@@ -11716,14 +10897,7 @@
         "type": "Enum",
         "typeRaw": "`'1','2','3','4','5','6'`",
         "default": "`3`",
-        "typeDefinition": [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6"
-        ],
+        "typeDefinition": ["1", "2", "3", "4", "5", "6"],
         "pureDefault": "3"
       },
       {
@@ -11773,10 +10947,7 @@
         "type": "Enum",
         "typeRaw": "`'small','large'`",
         "default": "`'large'`",
-        "typeDefinition": [
-          "small",
-          "large"
-        ],
+        "typeDefinition": ["small", "large"],
         "pureDefault": "large"
       },
       {
@@ -11786,10 +10957,7 @@
         "type": "Enum",
         "typeRaw": "`'horizontal','vertical'`",
         "default": "`'horizontal'`",
-        "typeDefinition": [
-          "horizontal",
-          "vertical"
-        ],
+        "typeDefinition": ["horizontal", "vertical"],
         "pureDefault": "horizontal"
       },
       {
@@ -11808,14 +10976,7 @@
         "type": "Enum",
         "typeRaw": "`'1','2','3','4','5','6'`",
         "default": "`3`",
-        "typeDefinition": [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6"
-        ],
+        "typeDefinition": ["1", "2", "3", "4", "5", "6"],
         "pureDefault": "3"
       },
       {
@@ -11897,12 +11058,7 @@
         "type": "Enum",
         "typeRaw": "`'primary','success','danger','warning'`",
         "default": "",
-        "typeDefinition": [
-          "primary",
-          "success",
-          "danger",
-          "warning"
-        ]
+        "typeDefinition": ["primary", "success", "danger", "warning"]
       }
     ],
     "lib": "@delon/abc",
@@ -12334,10 +11490,7 @@
         "type": "Enum",
         "typeRaw": "`'mini','default'`",
         "default": "`'default'`",
-        "typeDefinition": [
-          "mini",
-          "default"
-        ],
+        "typeDefinition": ["mini", "default"],
         "pureDefault": "default"
       },
       {
@@ -12403,10 +11556,7 @@
         "type": "Enum",
         "typeRaw": "`'mini','default'`",
         "default": "`'default'`",
-        "typeDefinition": [
-          "mini",
-          "default"
-        ],
+        "typeDefinition": ["mini", "default"],
         "pureDefault": "default"
       },
       {
@@ -12542,10 +11692,7 @@
         "type": "Enum",
         "typeRaw": "`'up','down'`",
         "default": "",
-        "typeDefinition": [
-          "up",
-          "down"
-        ]
+        "typeDefinition": ["up", "down"]
       },
       {
         "name": "theme",
@@ -12554,10 +11701,7 @@
         "type": "Enum",
         "typeRaw": "`'light','default'`",
         "default": "`'light'`",
-        "typeDefinition": [
-          "light",
-          "default"
-        ],
+        "typeDefinition": ["light", "default"],
         "pureDefault": "light"
       },
       {
@@ -13037,12 +12181,7 @@
         "type": "Enum",
         "typeRaw": "`'top','right','bottom','left'`",
         "default": "`'top'`",
-        "typeDefinition": [
-          "top",
-          "right",
-          "bottom",
-          "left"
-        ],
+        "typeDefinition": ["top", "right", "bottom", "left"],
         "pureDefault": "top"
       },
       {
@@ -13084,10 +12223,7 @@
         "type": "Enum",
         "typeRaw": "`'up','down'`",
         "default": "",
-        "typeDefinition": [
-          "up",
-          "down"
-        ]
+        "typeDefinition": ["up", "down"]
       },
       {
         "name": "reverseColor",
