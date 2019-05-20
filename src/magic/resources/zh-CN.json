@@ -1463,6 +1463,19 @@
         "typeDefinition": [
           "inner"
         ]
+      },
+      {
+        "name": "nzSize",
+        "inputType": 0,
+        "description": "卡片的尺寸",
+        "type": "Enum",
+        "typeRaw": "`'default'｜'small'`",
+        "default": "`'default'`",
+        "typeDefinition": [
+          "default",
+          "small"
+        ],
+        "pureDefault": "default"
       }
     ],
     "lib": "ng-zorro-antd",
@@ -1473,7 +1486,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/card"
   },
   {
-    "_idx": 169,
+    "_idx": 183,
     "type": "component",
     "selector": "nz-card-meta",
     "types": {},
@@ -1511,7 +1524,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/card"
   },
   {
-    "_idx": 234,
+    "_idx": 248,
     "type": "directive",
     "selector": "nz-card-grid",
     "types": {},
@@ -1524,7 +1537,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/card"
   },
   {
-    "_idx": 240,
+    "_idx": 254,
     "type": "component",
     "selector": "nz-card-tab",
     "types": {},
@@ -3330,7 +3343,7 @@
       {
         "name": "nzOnClose",
         "inputType": 1,
-        "description": "点击遮罩层或右上角叉或取消按钮的回调",
+        "description": "点击遮罩层或右上角叉的回调",
         "type": "EventEmitter",
         "typeRaw": "`EventEmitter<MouseEvent>`",
         "default": ""
@@ -9090,6 +9103,15 @@
         "default": "`false`",
         "pureDefault": "false",
         "forceInputType": 0
+      },
+      {
+        "name": "nzShowIcon",
+        "inputType": 0,
+        "description": "是否展示 TreeNode title 前的图标，没有默认样式",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
       },
       {
         "name": "nzShowSearch",
