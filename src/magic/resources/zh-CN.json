@@ -1235,13 +1235,14 @@
         "inputType": 0,
         "description": "设置按钮类型，可选值为 `primary` `dashed` `danger` 或者不设",
         "type": "Enum",
-        "typeRaw": "`'primary'｜'dashed'｜'danger'｜'default'`",
+        "typeRaw": "`'primary'｜'dashed'｜'danger'｜'default'｜'link'`",
         "default": "`'default'`",
         "typeDefinition": [
           "primary",
           "dashed",
           "danger",
-          "default"
+          "default",
+          "link"
         ],
         "pureDefault": "default"
       },
@@ -1574,6 +1575,14 @@
         "pureDefault": "3000"
       },
       {
+        "name": "nzDotRender",
+        "inputType": 0,
+        "description": "Dot渲染模板",
+        "type": "TemplateRef",
+        "typeRaw": "`TemplateRef<{ $implicit: number }>`",
+        "default": ""
+      },
+      {
         "name": "nzDots",
         "inputType": 0,
         "description": "是否显示面板指示点",
@@ -1583,25 +1592,26 @@
         "pureDefault": "true"
       },
       {
-        "name": "nzDotRender",
-        "inputType": 0,
-        "description": "Dot渲染模板",
-        "type": "TemplateRef",
-        "typeRaw": "`TemplateRef<{ $implicit: number }>`",
-        "default": ""
-      },
-      {
         "name": "nzEffect",
         "inputType": 0,
-        "description": "动画效果函数，可取 scrollx, fade",
+        "description": "动画效果函数，可取 `scrollx`, `fade`",
         "type": "Enum",
-        "typeRaw": "`'scrollx'｜'fade'`",
+        "typeRaw": "`'scrollx'\\|'fade'`",
         "default": "`'scrollx'`",
         "typeDefinition": [
-          "scrollx",
+          "scrollx'\\",
           "fade"
         ],
         "pureDefault": "scrollx"
+      },
+      {
+        "name": "nzEnableSwipe",
+        "inputType": 0,
+        "description": "是否支持手势划动切换",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`true`",
+        "pureDefault": "true"
       },
       {
         "name": "nzVertical",
@@ -1627,15 +1637,6 @@
         "type": "EventEmitter",
         "typeRaw": "`EventEmitter<{ from: number; to: number }>`",
         "default": ""
-      },
-      {
-        "name": "nzEnableSwipe",
-        "inputType": 0,
-        "description": "是否支持手势划动切换",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`true`",
-        "pureDefault": "true"
       }
     ],
     "lib": "ng-zorro-antd",
@@ -3150,6 +3151,92 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/date-picker"
   },
   {
+    "_idx": 12,
+    "type": "component",
+    "selector": "nz-descriptions",
+    "types": {},
+    "properties": [
+      {
+        "name": "nzTitle",
+        "inputType": 0,
+        "description": "描述列表的标题，显示在最顶部",
+        "type": "string",
+        "typeRaw": "`string\\|TemplateRef<void>`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzBorder",
+        "inputType": 0,
+        "description": "是否展示边框",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzColumn",
+        "inputType": 0,
+        "description": "一行的 `nz-descriptions-item` 的数量，可以写成像素值或支持响应式的对象写法 `{ xs: 8, sm: 16, md: 24}`",
+        "type": "string",
+        "typeRaw": "`number\\|object`",
+        "default": "`{ xxl: 3, xl: 3, lg: 3, md: 3, sm: 2, xs: 1 }`",
+        "pureDefault": "{ xxl: 3, xl: 3, lg: 3, md: 3, sm: 2, xs: 1 }"
+      },
+      {
+        "name": "nzSize",
+        "inputType": 0,
+        "description": "设置列表的大小（只有设置 `nzBordered` 时生效）",
+        "type": "Enum",
+        "typeRaw": "`'default'｜'middle'｜'small'`",
+        "default": "`'default'`",
+        "typeDefinition": [
+          "default",
+          "middle",
+          "small"
+        ],
+        "pureDefault": "default"
+      }
+    ],
+    "lib": "ng-zorro-antd",
+    "title": "描述列表",
+    "description": "成组显示多个只读字段。",
+    "whenToUse": "常见于详情页的信息展示。",
+    "doc": "/components/descriptions/zh",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/descriptions"
+  },
+  {
+    "_idx": 98,
+    "type": "component",
+    "selector": "nz-descriptions-item",
+    "types": {},
+    "properties": [
+      {
+        "name": "nzTitle",
+        "inputType": 0,
+        "description": "内容的描述",
+        "type": "string",
+        "typeRaw": "`string\\|TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "nzSpan",
+        "inputType": 0,
+        "description": "包含列的数量",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`1`",
+        "pureDefault": "1"
+      }
+    ],
+    "lib": "ng-zorro-antd",
+    "title": "描述列表",
+    "description": "成组显示多个只读字段。",
+    "whenToUse": "常见于详情页的信息展示。",
+    "doc": "/components/descriptions/zh",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/descriptions"
+  },
+  {
     "_idx": 28,
     "type": "component",
     "selector": "nz-divider",
@@ -3544,6 +3631,15 @@
         "default": ""
       },
       {
+        "name": "nzIcon",
+        "inputType": 0,
+        "description": "右侧的 icon",
+        "type": "string",
+        "typeRaw": "`string｜TemplateRef<void>`",
+        "default": "`'ellipsis'`",
+        "pureDefault": "ellipsis"
+      },
+      {
         "name": "nzVisibleChange",
         "inputType": 1,
         "description": "菜单显示状态改变时调用，参数为 nzVisible",
@@ -3658,6 +3754,15 @@
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": ""
+      },
+      {
+        "name": "nzIcon",
+        "inputType": 0,
+        "description": "右侧的 icon",
+        "type": "string",
+        "typeRaw": "`string｜TemplateRef<void>`",
+        "default": "`'ellipsis'`",
+        "pureDefault": "ellipsis"
       },
       {
         "name": "nzVisibleChange",
@@ -5421,7 +5526,7 @@
         "default": ""
       },
       {
-        "name": "nzSubTitle",
+        "name": "nzSubtitle",
         "inputType": 0,
         "description": "subTitle 文字",
         "type": "string",
@@ -11346,7 +11451,7 @@
           "inputType": 0,
           "description": "数据预处理",
           "type": "function",
-          "typeRaw": "`(data: STData[]) => STData[]`",
+          "typeRaw": "`(data: STData[], rawData?: any) => STData[]`",
           "default": ""
         }
       ],
@@ -11370,17 +11475,21 @@
           "pureDefault": "false"
         },
         {
+          "name": "position",
+          "inputType": 0,
+          "description": "指定分页显示的位置",
+          "type": "string",
+          "typeRaw": "`top,bottom,both`",
+          "default": "`bottom`",
+          "pureDefault": "bottom"
+        },
+        {
           "name": "placement",
           "inputType": 0,
-          "description": "分页方向",
-          "type": "Enum",
-          "typeRaw": "`'left','center','right'`",
-          "default": "`'right'`",
-          "typeDefinition": [
-            "left",
-            "center",
-            "right"
-          ],
+          "description": "指定分页分页方向",
+          "type": "string",
+          "typeRaw": "`left,center,right`",
+          "default": "`right`",
           "pureDefault": "right"
         },
         {
@@ -11634,6 +11743,14 @@
         "pureDefault": "null"
       },
       {
+        "name": "loadingIndicator",
+        "inputType": 0,
+        "description": "加载指示符",
+        "type": "TemplateRef",
+        "typeRaw": "`TemplateRef<void>`",
+        "default": ""
+      },
+      {
         "name": "loadingDelay",
         "inputType": 0,
         "description": "延迟显示加载效果的时间（防止闪烁）",
@@ -11649,6 +11766,42 @@
         "type": "object",
         "typeRaw": "`{ y?: string; x?: string }`",
         "default": ""
+      },
+      {
+        "name": "virtualScroll",
+        "inputType": 0,
+        "description": "是否启用虚拟滚动模式，与 `[nzScroll]` 配合使用",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "virtualItemSize",
+        "inputType": 0,
+        "description": "虚拟滚动时每一列的高度，与 [cdk itemSize](https://material.angular.io/cdk/scrolling/api) 相同",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`54`",
+        "pureDefault": "54"
+      },
+      {
+        "name": "virtualMaxBufferPx",
+        "inputType": 0,
+        "description": "缓冲区最大像素高度，与 [cdk maxBufferPx](https://material.angular.io/cdk/scrolling/api) 相同",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`200`",
+        "pureDefault": "200"
+      },
+      {
+        "name": "virtualMinBufferPx",
+        "inputType": 0,
+        "description": "缓冲区最小像素高度，低于该值时将加载新结构，与 [cdk minBufferPx](https://material.angular.io/cdk/scrolling/api) 相同",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`100`",
+        "pureDefault": "100"
       },
       {
         "name": "singleSort",
@@ -11728,12 +11881,39 @@
         "pureDefault": "false"
       },
       {
+        "name": "expandAccordion",
+        "inputType": 0,
+        "description": "手风琴模式",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
         "name": "expand",
         "inputType": 0,
         "description": "当前列是否包含展开按钮，当数据源中包括 `expand` 表示展开状态",
         "type": "TemplateRef",
         "typeRaw": "`TemplateRef<void>`",
         "default": ""
+      },
+      {
+        "name": "responsive",
+        "inputType": 0,
+        "description": "是否开启响应式",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`true`",
+        "pureDefault": "true"
+      },
+      {
+        "name": "responsiveHideHeaderFooter",
+        "inputType": 0,
+        "description": "是否在小屏幕下才显示顶部与底部",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
       },
       {
         "name": "change",
@@ -12033,6 +12213,22 @@
           "danger",
           "warning"
         ]
+      },
+      {
+        "name": "optional",
+        "inputType": 0,
+        "description": "标签可选信息",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
+      },
+      {
+        "name": "optionalHelp",
+        "inputType": 0,
+        "description": "标签可选帮助",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
       }
     ],
     "lib": "@delon/abc",
@@ -12043,7 +12239,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/view"
   },
   {
-    "_idx": 220,
+    "_idx": 248,
     "type": "component",
     "selector": "sv-title",
     "types": {},
@@ -12056,7 +12252,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/view"
   },
   {
-    "_idx": 220,
+    "_idx": 248,
     "type": "directive",
     "selector": "sv-title",
     "types": {},
