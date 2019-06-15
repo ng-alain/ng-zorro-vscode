@@ -13627,6 +13627,16 @@
         "pureDefault": "null"
       },
       {
+        "name": "disabled",
+        "inputType": 0,
+        "description": "是否禁用状态",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false",
+        "forceInputType": 0
+      },
+      {
         "name": "loading",
         "inputType": 0,
         "description": "是否加载状态，当 `true` 重置按钮禁止状态，提交按钮加载状态",
@@ -13820,6 +13830,16 @@
           "off"
         ],
         "pureDefault": "null"
+      },
+      {
+        "name": "disabled",
+        "inputType": 0,
+        "description": "是否禁用状态",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false",
+        "forceInputType": 0
       },
       {
         "name": "loading",

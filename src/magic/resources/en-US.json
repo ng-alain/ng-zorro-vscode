@@ -13507,6 +13507,16 @@
         "pureDefault": "null"
       },
       {
+        "name": "disabled",
+        "inputType": 0,
+        "description": "Whether to disabled status",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false",
+        "forceInputType": 0
+      },
+      {
         "name": "loading",
         "inputType": 0,
         "description": "Whether to load status，when `true` reset button is disabled status, submit button is loading status",
@@ -13686,6 +13696,16 @@
         "typeRaw": "`on,off`",
         "default": "`null`",
         "pureDefault": "null"
+      },
+      {
+        "name": "disabled",
+        "inputType": 0,
+        "description": "Whether to disabled status",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false",
+        "forceInputType": 0
       },
       {
         "name": "loading",
