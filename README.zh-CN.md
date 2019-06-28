@@ -2,6 +2,8 @@
 
 ![Help](help.gif)
 
+> 当前为 ZORRO `8.x`，如果你使用 `7.x` 请手动下载 [cipchk.ng-zorro-vscode-7.3.4](https://raw.githubusercontent.com/ng-alain/ng-zorro-vscode/master/cipchk.ng-zorro-vscode-zh-CN-7.3.4.vsix).
+
 ## 特征
 
 - 自动补全组件名、属性、复杂参数、可选值

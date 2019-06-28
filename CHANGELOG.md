@@ -1,3 +1,9 @@
+# 8.0.0
+
+- 同步 ng-zorro-antd 8.0.0-rc.2
+- 同步 @delon 8.0.0-rc.0
+- 优化 `selector` 名包含输入属性时自动增加 `[]`
+
 # 7.3.3
 
 - 同步 ng-zorro-antd 7.5.0

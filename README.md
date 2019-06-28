@@ -4,6 +4,8 @@
 
 [中文](README.zh-CN.md)
 
+> Currently for ZORRO `8.x`, if you use `7.x` please download [cipchk.ng-zorro-vscode-7.3.4](https://raw.githubusercontent.com/ng-alain/ng-zorro-vscode/master/cipchk.ng-zorro-vscode-7.3.4.vsix).
+
 ## Features
 
 - Automatically completion component names, properties, complex parameters, and optional values

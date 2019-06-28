@@ -8,5 +8,7 @@ package-lock.json
 npm-debug.log
 yarn.lock
 /cipchk*.vsix
+!/cipchk.ng-zorro-vscode-7.3.4.vsix
+!/cipchk.ng-zorro-vscode-zh-CN-7.3.4.vsix
 /out
 /snippets

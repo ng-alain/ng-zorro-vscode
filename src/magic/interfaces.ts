@@ -32,6 +32,10 @@ export interface Directive {
    */
   properties?: DirectiveProperty[];
   /**
+   * e.g: `nzAutocomplete`
+   */
+  directiveNameIsOutput?: boolean;
+  /**
    * 类型定义
    */
   types?: { [key: string]: DirectiveProperty[] };

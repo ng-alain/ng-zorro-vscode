@@ -25,15 +25,15 @@ function notNull(value: any, defaultValue: any = '') {
 }
 
 function getPure(value: string): string {
-  return value.replace(/nz([A-Z])/g, (raw: string, val: string) => {
-    return val.toLowerCase();
-  });
+  return value.replace(/nz([A-Z])/g, (_raw: string, val: string) => val.toLowerCase());
 }
 
 function getFullDoc(item: Directive): string {
   if (item.doc.startsWith('http')) return item.doc;
   if (item.lib === 'ng-zorro-antd') {
-    return (CONFIG.language === 'zh-CN' ? 'https://ng-zorro.gitee.io' : 'https://ng.ant.design') + item.doc;
+    // TODO: Muse be release version
+    // return (CONFIG.language === 'zh-CN' ? 'https://ng-zorro.gitee.io' : 'https://ng.ant.design') + item.doc;
+    return `https://ng-zorro-master.netlify.com` + item.doc;
   }
   return (CONFIG.language === 'zh-CN' ? 'https://ng-alain.com' : 'https://netlify.ng-alain.com') + item.doc;
 }
@@ -150,6 +150,9 @@ export async function INIT(notifier: Notifier) {
       Object.keys(i.types).forEach(key => {
         i.types[key].forEach(p => fixProperty(p));
       });
+    }
+    if (~i.properties.findIndex(w => w.name === i.selector)) {
+      i.directiveNameIsOutput = true;
     }
 
     i._doc = new MarkdownString(genComponentMarkdown(i));

@@ -129,7 +129,7 @@ function getDirective(): Directive[] {
     .map(idx => {
       const selectorList = (ast.getText(idx) || '').split('|').map(s => s.trim());
       let selector = selectorList[0];
-      if (selectorList.length === 1 && !/^\[?[a-z][-a-z0-9]+\]?$/g.test(selector) && !COG.VALID_COMPONENT_NAMES.includes(selector)) {
+      if (selectorList.length === 1 && !/^\[?[a-z][-a-zA-Z0-9]+\]?$/g.test(selector) && !COG.VALID_COMPONENT_NAMES.includes(selector)) {
         return null;
       }
 
@@ -255,11 +255,15 @@ function genPropertyItem(directive: Directive, data: string[]): DirectivePropert
 }
 
 function getValidSeparator(text: string): string {
-  return ['｜', '丨', '|'].find(s => text.indexOf(s) !== -1) || ',';
+  return ['\\|', '｜', '丨', '|'].find(s => text.indexOf(s) !== -1) || ',';
 }
 
 function parseType(directive: Directive, item: DirectiveProperty) {
   let typeRaw: string = item.typeRaw.replace(/`/g, '');
+  // if (typeRaw.indexOf('HTMLElement') !== -1) {
+  //   console.log(typeRaw, typeRaw.split(getValidSeparator(typeRaw)));
+  //   debugger;
+  // }
   // split mulit type
   const types = typeRaw
     .split(getValidSeparator(typeRaw))
@@ -401,7 +405,6 @@ function metaToItem(zone: string, filePath: string, meta: any): Directive[] {
         list.push(directive);
       }
     });
-
   return list.map(i => {
     i.lib = lib;
     i.title = title;

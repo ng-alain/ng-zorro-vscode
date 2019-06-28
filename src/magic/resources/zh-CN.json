@@ -10,7 +10,7 @@
         "inputType": 0,
         "description": "flex 布局下的垂直对齐方式",
         "type": "Enum",
-        "typeRaw": "`'top'｜'middle'｜'bottom'`",
+        "typeRaw": "`'top' \\| 'middle' \\| 'bottom'`",
         "default": "`'top'`",
         "typeDefinition": [
           "top",
@@ -24,7 +24,7 @@
         "inputType": 0,
         "description": "栅格间隔，可以写成像素值或支持响应式的对象写法 `{ xs: 8, sm: 16, md: 24, lg: 32, xl: 32, xxl: 32 }`",
         "type": "Enum",
-        "typeRaw": "`number｜object`",
+        "typeRaw": "`number \\| object`",
         "default": "`0`",
         "pureDefault": "0",
         "typeDefinition": [
@@ -44,7 +44,7 @@
         "inputType": 0,
         "description": "flex 布局下的水平排列方式",
         "type": "Enum",
-        "typeRaw": "`'start'｜'end'｜'center'｜'space-around'｜'space-between'`",
+        "typeRaw": "`'start' \\| 'end' \\| 'center' \\| 'space-around' \\| 'space-between'`",
         "default": "`'start'`",
         "typeDefinition": [
           "start",
@@ -184,7 +184,7 @@
         "inputType": 0,
         "description": "`<576px` 响应式栅格，可为栅格数或一个包含其他属性的对象",
         "type": "Enum",
-        "typeRaw": "`number｜object`",
+        "typeRaw": "`number \\| object`",
         "default": "",
         "typeDefinition": [
           "0",
@@ -203,7 +203,7 @@
         "inputType": 0,
         "description": "`≥576px` 响应式栅格，可为栅格数或一个包含其他属性的对象",
         "type": "Enum",
-        "typeRaw": "`number｜object`",
+        "typeRaw": "`number \\| object`",
         "default": "",
         "typeDefinition": [
           "0",
@@ -222,7 +222,7 @@
         "inputType": 0,
         "description": "`≥768px` 响应式栅格，可为栅格数或一个包含其他属性的对象",
         "type": "Enum",
-        "typeRaw": "`number｜object`",
+        "typeRaw": "`number \\| object`",
         "default": "",
         "typeDefinition": [
           "0",
@@ -241,7 +241,7 @@
         "inputType": 0,
         "description": "`≥992px` 响应式栅格，可为栅格数或一个包含其他属性的对象",
         "type": "Enum",
-        "typeRaw": "`number｜object`",
+        "typeRaw": "`number \\| object`",
         "default": "",
         "typeDefinition": [
           "0",
@@ -260,7 +260,7 @@
         "inputType": 0,
         "description": "`≥1200px` 响应式栅格，可为栅格数或一个包含其他属性的对象",
         "type": "Enum",
-        "typeRaw": "`number｜object`",
+        "typeRaw": "`number \\| object`",
         "default": "",
         "typeDefinition": [
           "0",
@@ -279,7 +279,7 @@
         "inputType": 0,
         "description": "`≥1600px` 响应式栅格，可为栅格数或一个包含其他属性的对象",
         "type": "Enum",
-        "typeRaw": "`number｜object`",
+        "typeRaw": "`number \\| object`",
         "default": "",
         "typeDefinition": [
           "0",
@@ -351,7 +351,7 @@
         "inputType": 0,
         "description": "气泡框位置",
         "type": "Enum",
-        "typeRaw": "`'top'｜'left'｜'right'｜'bottom'｜'topLeft'｜'topRight'｜'bottomLeft'｜'bottomRight'｜'leftTop'｜'leftBottom'｜'rightTop'｜'rightBottom'`",
+        "typeRaw": "`'top' \\| 'left' \\| 'right' \\| 'bottom' \\| 'topLeft' \\| 'topRight' \\| 'bottomLeft' \\| 'bottomRight' \\| 'leftTop' \\| 'leftBottom' \\| 'rightTop' \\| 'rightBottom'`",
         "default": "`'top'`",
         "typeDefinition": [
           "top",
@@ -375,7 +375,7 @@
         "inputType": 0,
         "description": "触发行为，可选 `hover/focus/click`",
         "type": "Enum",
-        "typeRaw": "`'click'｜'focus'｜'hover'`",
+        "typeRaw": "`'click' \\| 'focus' \\| 'hover'`",
         "default": "`'hover'`",
         "typeDefinition": [
           "click",
@@ -409,7 +409,7 @@
         "inputType": 0,
         "description": "提示文字",
         "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
+        "typeRaw": "`string \\| TemplateRef<void>`",
         "default": ""
       }
     ],
@@ -611,7 +611,7 @@
         "inputType": 0,
         "description": "设置 `nz-affix` 需要监听其滚动事件的元素，值为一个返回对应 DOM 元素的函数",
         "type": "string",
-        "typeRaw": "`string｜HTMLElement`",
+        "typeRaw": "`string \\| HTMLElement`",
         "default": "`window`",
         "pureDefault": "window"
       },
@@ -647,7 +647,7 @@
         "pureDefault": "false"
       },
       {
-        "name": "nzClosable",
+        "name": "nzCloseable",
         "inputType": 0,
         "description": "默认不显示关闭按钮",
         "type": "boolean",
@@ -659,7 +659,7 @@
         "inputType": 0,
         "description": "自定义关闭按钮",
         "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
+        "typeRaw": "`string \\| TemplateRef<void>`",
         "default": ""
       },
       {
@@ -667,7 +667,7 @@
         "inputType": 0,
         "description": "警告提示的辅助性文字介绍",
         "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
+        "typeRaw": "`string \\| TemplateRef<void>`",
         "default": ""
       },
       {
@@ -675,7 +675,7 @@
         "inputType": 0,
         "description": "警告提示内容",
         "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
+        "typeRaw": "`string \\| TemplateRef<void>`",
         "default": ""
       },
       {
@@ -692,7 +692,7 @@
         "inputType": 0,
         "description": "自定义图标类型，`nzShowIcon` 为 `true` 时有效",
         "type": "string",
-        "typeRaw": "`string｜string[]｜Set<string>｜{ [klass: string]: any; }`",
+        "typeRaw": "`string \\| string[] \\| Set<string> \\| { [klass: string]: any; }`",
         "default": ""
       },
       {
@@ -700,7 +700,7 @@
         "inputType": 0,
         "description": "指定警告提示的样式，`nzBanner` 模式下默认值为 `'warning'`",
         "type": "Enum",
-        "typeRaw": "`'success'｜'info'｜'warning'｜'error'`",
+        "typeRaw": "`'success' \\| 'info' \\| 'warning' \\| 'error'`",
         "default": "`'info'`",
         "typeDefinition": [
           "success",
@@ -780,7 +780,7 @@
         "inputType": 0,
         "description": "指定滚动的容器",
         "type": "string",
-        "typeRaw": "`string｜HTMLElement`",
+        "typeRaw": "`string \\| HTMLElement`",
         "default": "`window`",
         "pureDefault": "window"
       },
@@ -827,7 +827,7 @@
         "inputType": 0,
         "description": "文字内容",
         "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
+        "typeRaw": "`string \\| TemplateRef<void>`",
         "default": ""
       }
     ],
@@ -837,6 +837,28 @@
     "whenToUse": "需要展现当前页面上可供跳转的锚点链接，以及快速在锚点之间跳转。",
     "doc": "/components/anchor/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/anchor"
+  },
+  {
+    "_idx": 21,
+    "type": "directive",
+    "selector": "nzAutocomplete",
+    "types": {},
+    "properties": [
+      {
+        "name": "nzAutocomplete",
+        "inputType": 0,
+        "description": "用于绑定 nzAutocomplete 组件",
+        "type": "object",
+        "typeRaw": "`NzAutocompleteComponent`",
+        "default": ""
+      }
+    ],
+    "lib": "ng-zorro-antd",
+    "title": "自动完成",
+    "description": "输入框自动完成功能。",
+    "whenToUse": "需要自动完成时。",
+    "doc": "/components/auto-complete/zh",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/auto-complete"
   },
   {
     "_idx": 58,
@@ -963,7 +985,7 @@
         "inputType": 0,
         "description": "指定头像的形状",
         "type": "Enum",
-        "typeRaw": "`'circle'｜'square'`",
+        "typeRaw": "`'circle' \\| 'square'`",
         "default": "`'circle'`",
         "typeDefinition": [
           "circle",
@@ -976,7 +998,7 @@
         "inputType": 0,
         "description": "设置头像的大小",
         "type": "Enum",
-        "typeRaw": "`'large'｜'small'｜'default'｜number`",
+        "typeRaw": "`'large' \\| 'small' \\| 'default' \\| number`",
         "default": "`'default'`",
         "typeDefinition": [
           "large",
@@ -992,6 +1014,22 @@
         "description": "图片类头像的资源地址",
         "type": "string",
         "typeRaw": "`string`",
+        "default": ""
+      },
+      {
+        "name": "nzSrcSet",
+        "inputType": 0,
+        "description": "设置图片类头像响应式资源地址",
+        "type": "string",
+        "typeRaw": "string",
+        "default": ""
+      },
+      {
+        "name": "nzAlt",
+        "inputType": 0,
+        "description": "图像无法显示时的替代文本",
+        "type": "string",
+        "typeRaw": "string",
         "default": ""
       },
       {
@@ -1038,7 +1076,7 @@
         "inputType": 0,
         "description": "设置需要监听其滚动事件的元素，值为一个返回对应 DOM 元素的函数",
         "type": "string",
-        "typeRaw": "`string｜Element`",
+        "typeRaw": "`string \\| Element`",
         "default": "`window`",
         "pureDefault": "window"
       },
@@ -1077,7 +1115,7 @@
         "inputType": 0,
         "description": "展示的数字，大于 nzOverflowCount 时显示为 `${nzOverflowCount}+`，为 0 时隐藏",
         "type": "number",
-        "typeRaw": "`number｜TemplateRef<void>`",
+        "typeRaw": "`number \\| TemplateRef<void>`",
         "default": ""
       },
       {
@@ -1121,7 +1159,7 @@
         "inputType": 0,
         "description": "设置 `nz-badge` 为状态点",
         "type": "Enum",
-        "typeRaw": "`'success'｜'processing'｜'default'｜'error'｜'warning'`",
+        "typeRaw": "`'success' \\| 'processing' \\| 'default' \\| 'error' \\| 'warning'`",
         "default": "",
         "typeDefinition": [
           "success",
@@ -1158,7 +1196,7 @@
         "inputType": 0,
         "description": "分隔符自定义",
         "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
+        "typeRaw": "`string \\| TemplateRef<void>`",
         "default": "`'/'`",
         "pureDefault": "/"
       },
@@ -1209,7 +1247,7 @@
         "inputType": 0,
         "description": "设置按钮形状，可选值为 `circle` `round` 或者不设",
         "type": "Enum",
-        "typeRaw": "`'circle'｜'round'`",
+        "typeRaw": "`'circle' \\| 'round'`",
         "default": "",
         "typeDefinition": [
           "circle",
@@ -1221,7 +1259,7 @@
         "inputType": 0,
         "description": "设置按钮大小，可选值为 `small` `large` 或者不设",
         "type": "Enum",
-        "typeRaw": "`'large'｜'small'｜'default'`",
+        "typeRaw": "`'large' \\| 'small' \\| 'default'`",
         "default": "`'default'`",
         "typeDefinition": [
           "large",
@@ -1235,7 +1273,7 @@
         "inputType": 0,
         "description": "设置按钮类型，可选值为 `primary` `dashed` `danger` 或者不设",
         "type": "Enum",
-        "typeRaw": "`'primary'｜'dashed'｜'danger'｜'default'｜'link'`",
+        "typeRaw": "`'primary' \\| 'dashed' \\| 'danger' \\| 'default' \\| 'link'`",
         "default": "`'default'`",
         "typeDefinition": [
           "primary",
@@ -1297,7 +1335,7 @@
         "inputType": 2,
         "description": "（可双向绑定）显示模式",
         "type": "Enum",
-        "typeRaw": "`'month'｜'year'`",
+        "typeRaw": "`'month' \\| 'year'`",
         "default": "`'month'`",
         "typeDefinition": [
           "month",
@@ -1361,7 +1399,7 @@
         "inputType": 1,
         "description": "面板变化的回调",
         "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<{ date: Date, mode: 'month'｜'year' }>`",
+        "typeRaw": "`EventEmitter<{ date: Date, mode: 'month' \\| 'year' }>`",
         "default": ""
       },
       {
@@ -1424,7 +1462,7 @@
         "inputType": 0,
         "description": "卡片右上角的操作区域",
         "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
+        "typeRaw": "`string \\| TemplateRef<void>`",
         "default": ""
       },
       {
@@ -1451,7 +1489,7 @@
         "inputType": 0,
         "description": "卡片标题",
         "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
+        "typeRaw": "`string \\| TemplateRef<void>`",
         "default": ""
       },
       {
@@ -1470,7 +1508,7 @@
         "inputType": 0,
         "description": "卡片的尺寸",
         "type": "Enum",
-        "typeRaw": "`'default'｜'small'`",
+        "typeRaw": "`'default' \\| 'small'`",
         "default": "`'default'`",
         "typeDefinition": [
           "default",
@@ -1505,7 +1543,7 @@
         "inputType": 0,
         "description": "描述内容",
         "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
+        "typeRaw": "`string \\| TemplateRef<void>`",
         "default": ""
       },
       {
@@ -1513,7 +1551,7 @@
         "inputType": 0,
         "description": "标题内容",
         "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
+        "typeRaw": "`string \\| TemplateRef<void>`",
         "default": ""
       }
     ],
@@ -1555,90 +1593,7 @@
     "type": "component",
     "selector": "nz-carousel",
     "types": {},
-    "properties": [
-      {
-        "name": "nzAutoPlay",
-        "inputType": 0,
-        "description": "是否自动切换",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false"
-      },
-      {
-        "name": "nzAutoPlaySpeed",
-        "inputType": 0,
-        "description": "切换时间(毫秒)，当设置为0时不切换",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "`3000`",
-        "pureDefault": "3000"
-      },
-      {
-        "name": "nzDotRender",
-        "inputType": 0,
-        "description": "Dot渲染模板",
-        "type": "TemplateRef",
-        "typeRaw": "`TemplateRef<{ $implicit: number }>`",
-        "default": ""
-      },
-      {
-        "name": "nzDots",
-        "inputType": 0,
-        "description": "是否显示面板指示点",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`true`",
-        "pureDefault": "true"
-      },
-      {
-        "name": "nzEffect",
-        "inputType": 0,
-        "description": "动画效果函数，可取 `scrollx`, `fade`",
-        "type": "Enum",
-        "typeRaw": "`'scrollx'\\|'fade'`",
-        "default": "`'scrollx'`",
-        "typeDefinition": [
-          "scrollx'\\",
-          "fade"
-        ],
-        "pureDefault": "scrollx"
-      },
-      {
-        "name": "nzEnableSwipe",
-        "inputType": 0,
-        "description": "是否支持手势划动切换",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`true`",
-        "pureDefault": "true"
-      },
-      {
-        "name": "nzVertical",
-        "inputType": 0,
-        "description": "垂直显示",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false"
-      },
-      {
-        "name": "nzAfterChange",
-        "inputType": 1,
-        "description": "切换面板的回调",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<number>`",
-        "default": ""
-      },
-      {
-        "name": "nzBeforeChange",
-        "inputType": 1,
-        "description": "切换面板的回调",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<{ from: number; to: number }>`",
-        "default": ""
-      }
-    ],
+    "properties": [],
     "lib": "ng-zorro-antd",
     "title": "走马灯",
     "description": "旋转木马，一组轮播的区域。",
@@ -1718,7 +1673,7 @@
         "inputType": 0,
         "description": "次级菜单的展开方式，可选 'click' 和 'hover'",
         "type": "Enum",
-        "typeRaw": "`'click'｜'hover'`",
+        "typeRaw": "`'click' \\| 'hover'`",
         "default": "`'click'`",
         "typeDefinition": [
           "click",
@@ -1747,7 +1702,7 @@
         "inputType": 0,
         "description": "当下拉列表为空时显示的内容",
         "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
+        "typeRaw": "`string \\| TemplateRef<void>`",
         "default": ""
       },
       {
@@ -1815,7 +1770,7 @@
         "inputType": 0,
         "description": "是否支持搜索，默认情况下对 `label` 进行全匹配搜索，不能和 `[nzLoadData]` 同时使用",
         "type": "boolean",
-        "typeRaw": "`boolean｜NzShowSearchOptions`",
+        "typeRaw": "`boolean \\| NzShowSearchOptions`",
         "default": "`false`",
         "pureDefault": "false"
       },
@@ -1824,7 +1779,7 @@
         "inputType": 0,
         "description": "输入框大小，可选 `large` `default` `small`",
         "type": "Enum",
-        "typeRaw": "`'large'｜'small'｜'default'`",
+        "typeRaw": "`'large' \\| 'small' \\| 'default'`",
         "default": "`'default'`",
         "typeDefinition": [
           "large",
@@ -2087,7 +2042,7 @@
         "inputType": 0,
         "description": "面板头内容",
         "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
+        "typeRaw": "`string \\| TemplateRef<void>`",
         "default": ""
       },
       {
@@ -2095,7 +2050,7 @@
         "inputType": 0,
         "description": "自定义切换图标",
         "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
+        "typeRaw": "`string \\| TemplateRef<void>`",
         "default": ""
       },
       {
@@ -2103,7 +2058,7 @@
         "inputType": 0,
         "description": "自定义渲染每个面板右上角的内容",
         "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
+        "typeRaw": "`string \\| TemplateRef<void>`",
         "default": ""
       },
       {
@@ -2138,6 +2093,36 @@
     "whenToUse": "- 对复杂区域进行分组和隐藏，保持页面的整洁。\n- `手风琴` 是一种特殊的折叠面板，只允许单个内容区域展开。",
     "doc": "/components/collapse/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/collapse"
+  },
+  {
+    "_idx": 19,
+    "type": "component",
+    "selector": "nz-comment",
+    "types": {},
+    "properties": [
+      {
+        "name": "nzAuthor",
+        "inputType": 0,
+        "description": "显示评论的作者",
+        "type": "string",
+        "typeRaw": "`string \\| TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "nzDatetime",
+        "inputType": 0,
+        "description": "展示时间描述",
+        "type": "string",
+        "typeRaw": "`string \\| TemplateRef<void>`",
+        "default": ""
+      }
+    ],
+    "lib": "ng-zorro-antd",
+    "title": "评论",
+    "description": "对网站内容的反馈、评价和讨论。",
+    "whenToUse": "评论组件可用于对事物的讨论，例如页面、博客文章、问题等等。",
+    "doc": "/components/comment/zh",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/comment"
   },
   {
     "_idx": 259,
@@ -2180,7 +2165,7 @@
         "inputType": 0,
         "description": "自定义日期单元格的内容（month-picker/year-picker不支持）",
         "type": "TemplateRef",
-        "typeRaw": "`TemplateRef<Date>｜string｜((d: Date) => TemplateRef<Date>｜string)`",
+        "typeRaw": "`TemplateRef<Date> \\| string \\| ((d: Date) => TemplateRef<Date> \\| string)`",
         "default": "",
         "_common": true
       },
@@ -2247,7 +2232,7 @@
         "inputType": 0,
         "description": "输入框大小，`large` 高度为 40px，`small` 为 24px，默认是 32px",
         "type": "Enum",
-        "typeRaw": "`'large'｜'small'`",
+        "typeRaw": "`'large' \\| 'small'`",
         "default": "",
         "typeDefinition": [
           "large",
@@ -2304,7 +2289,7 @@
         "inputType": 0,
         "description": "在面板中添加额外的页脚",
         "type": "TemplateRef",
-        "typeRaw": "`TemplateRef｜string｜(() => TemplateRef｜string)`",
+        "typeRaw": "`TemplateRef \\| string \\| (() => TemplateRef \\| string)`",
         "default": ""
       },
       {
@@ -2312,7 +2297,7 @@
         "inputType": 0,
         "description": "增加时间选择功能",
         "type": "object",
-        "typeRaw": "`object｜boolean`",
+        "typeRaw": "`object \\| boolean`",
         "default": "[TimePicker Options](/components/time-picker/zh#api)",
         "pureDefault": "[TimePicker Options](/components/time-picker/zh#api)"
       },
@@ -2404,7 +2389,7 @@
         "inputType": 0,
         "description": "自定义日期单元格的内容（month-picker/year-picker不支持）",
         "type": "TemplateRef",
-        "typeRaw": "`TemplateRef<Date>｜string｜((d: Date) => TemplateRef<Date>｜string)`",
+        "typeRaw": "`TemplateRef<Date> \\| string \\| ((d: Date) => TemplateRef<Date> \\| string)`",
         "default": "",
         "_common": true
       },
@@ -2471,7 +2456,7 @@
         "inputType": 0,
         "description": "输入框大小，`large` 高度为 40px，`small` 为 24px，默认是 32px",
         "type": "Enum",
-        "typeRaw": "`'large'｜'small'`",
+        "typeRaw": "`'large' \\| 'small'`",
         "default": "",
         "typeDefinition": [
           "large",
@@ -2520,7 +2505,7 @@
         "inputType": 0,
         "description": "在面板中添加额外的页脚",
         "type": "TemplateRef",
-        "typeRaw": "`TemplateRef｜string｜(() => TemplateRef｜string)`",
+        "typeRaw": "`TemplateRef \\| string \\| (() => TemplateRef \\| string)`",
         "default": ""
       },
       {
@@ -2588,7 +2573,7 @@
         "inputType": 0,
         "description": "自定义日期单元格的内容（month-picker/year-picker不支持）",
         "type": "TemplateRef",
-        "typeRaw": "`TemplateRef<Date>｜string｜((d: Date) => TemplateRef<Date>｜string)`",
+        "typeRaw": "`TemplateRef<Date> \\| string \\| ((d: Date) => TemplateRef<Date> \\| string)`",
         "default": "",
         "_common": true
       },
@@ -2655,7 +2640,7 @@
         "inputType": 0,
         "description": "输入框大小，`large` 高度为 40px，`small` 为 24px，默认是 32px",
         "type": "Enum",
-        "typeRaw": "`'large'｜'small'`",
+        "typeRaw": "`'large' \\| 'small'`",
         "default": "",
         "typeDefinition": [
           "large",
@@ -2704,7 +2689,7 @@
         "inputType": 0,
         "description": "在面板中添加额外的页脚",
         "type": "TemplateRef",
-        "typeRaw": "`TemplateRef｜string｜(() => TemplateRef｜string)`",
+        "typeRaw": "`TemplateRef \\| string \\| (() => TemplateRef \\| string)`",
         "default": ""
       },
       {
@@ -2778,7 +2763,7 @@
         "inputType": 0,
         "description": "自定义日期单元格的内容（month-picker/year-picker不支持）",
         "type": "TemplateRef",
-        "typeRaw": "`TemplateRef<Date>｜string｜((d: Date) => TemplateRef<Date>｜string)`",
+        "typeRaw": "`TemplateRef<Date> \\| string \\| ((d: Date) => TemplateRef<Date> \\| string)`",
         "default": "",
         "_common": true
       },
@@ -2845,7 +2830,7 @@
         "inputType": 0,
         "description": "输入框大小，`large` 高度为 40px，`small` 为 24px，默认是 32px",
         "type": "Enum",
-        "typeRaw": "`'large'｜'small'`",
+        "typeRaw": "`'large' \\| 'small'`",
         "default": "",
         "typeDefinition": [
           "large",
@@ -2960,7 +2945,7 @@
         "inputType": 0,
         "description": "自定义日期单元格的内容（month-picker/year-picker不支持）",
         "type": "TemplateRef",
-        "typeRaw": "`TemplateRef<Date>｜string｜((d: Date) => TemplateRef<Date>｜string)`",
+        "typeRaw": "`TemplateRef<Date> \\| string \\| ((d: Date) => TemplateRef<Date> \\| string)`",
         "default": "",
         "_common": true
       },
@@ -3027,7 +3012,7 @@
         "inputType": 0,
         "description": "输入框大小，`large` 高度为 40px，`small` 为 24px，默认是 32px",
         "type": "Enum",
-        "typeRaw": "`'large'｜'small'`",
+        "typeRaw": "`'large' \\| 'small'`",
         "default": "",
         "typeDefinition": [
           "large",
@@ -3067,7 +3052,7 @@
         "inputType": 0,
         "description": "不可选择的时间",
         "type": "function",
-        "typeRaw": "`(current: Date, partial: 'start'｜'end') => { nzDisabledHours, nzDisabledMinutes, nzDisabledSeconds }`",
+        "typeRaw": "`(current: Date, partial: 'start' \\| 'end') => { nzDisabledHours, nzDisabledMinutes, nzDisabledSeconds }`",
         "default": ""
       },
       {
@@ -3084,7 +3069,7 @@
         "inputType": 0,
         "description": "预设时间范围快捷选择",
         "type": "object",
-        "typeRaw": "`{ [ key: string ]: Date[] } ｜ { [ key: string ]: () => Date[] }`",
+        "typeRaw": "`{ [ key: string ]: Date[] }  \\|  { [ key: string ]: () => Date[] }`",
         "default": ""
       },
       {
@@ -3092,7 +3077,7 @@
         "inputType": 0,
         "description": "在面板中添加额外的页脚",
         "type": "TemplateRef",
-        "typeRaw": "`TemplateRef｜string｜(() => TemplateRef｜string)`",
+        "typeRaw": "`TemplateRef \\| string \\| (() => TemplateRef \\| string)`",
         "default": ""
       },
       {
@@ -3100,7 +3085,7 @@
         "inputType": 0,
         "description": "增加时间选择功能",
         "type": "object",
-        "typeRaw": "`object｜boolean`",
+        "typeRaw": "`object \\| boolean`",
         "default": "[TimePicker Options](/components/time-picker/zh#api)",
         "pureDefault": "[TimePicker Options](/components/time-picker/zh#api)"
       },
@@ -3151,7 +3136,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/date-picker"
   },
   {
-    "_idx": 12,
+    "_idx": 19,
     "type": "component",
     "selector": "nz-descriptions",
     "types": {},
@@ -3178,7 +3163,7 @@
         "name": "nzColumn",
         "inputType": 0,
         "description": "一行的 `nz-descriptions-item` 的数量，可以写成像素值或支持响应式的对象写法 `{ xs: 8, sm: 16, md: 24}`",
-        "type": "string",
+        "type": "number",
         "typeRaw": "`number\\|object`",
         "default": "`{ xxl: 3, xl: 3, lg: 3, md: 3, sm: 2, xs: 1 }`",
         "pureDefault": "{ xxl: 3, xl: 3, lg: 3, md: 3, sm: 2, xs: 1 }"
@@ -3188,7 +3173,7 @@
         "inputType": 0,
         "description": "设置列表的大小（只有设置 `nzBordered` 时生效）",
         "type": "Enum",
-        "typeRaw": "`'default'｜'middle'｜'small'`",
+        "typeRaw": "`'default' \\| 'middle' \\| 'small'`",
         "default": "`'default'`",
         "typeDefinition": [
           "default",
@@ -3256,7 +3241,7 @@
         "inputType": 0,
         "description": "水平还是垂直类型",
         "type": "Enum",
-        "typeRaw": "`'horizontal'｜'vertical'`",
+        "typeRaw": "`'horizontal' \\| 'vertical'`",
         "default": "`'horizontal'`",
         "typeDefinition": [
           "horizontal",
@@ -3269,7 +3254,7 @@
         "inputType": 0,
         "description": "中间文字",
         "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
+        "typeRaw": "`string \\| TemplateRef<void>`",
         "default": ""
       },
       {
@@ -3277,12 +3262,14 @@
         "inputType": 0,
         "description": "中间文字方向",
         "type": "Enum",
-        "typeRaw": "`'left'｜'right'`",
-        "default": "",
+        "typeRaw": "`'center' \\| 'left' \\| 'right'`",
+        "default": "`'center'`",
         "typeDefinition": [
+          "center",
           "left",
           "right"
-        ]
+        ],
+        "pureDefault": "center"
       }
     ],
     "lib": "ng-zorro-antd",
@@ -3348,7 +3335,7 @@
         "inputType": 0,
         "description": "标题",
         "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
+        "typeRaw": "`string \\| TemplateRef<void>`",
         "default": ""
       },
       {
@@ -3364,7 +3351,7 @@
         "inputType": 0,
         "description": "抽屉的方向",
         "type": "Enum",
-        "typeRaw": "`'top'｜'right'｜'bottom'｜'left'`",
+        "typeRaw": "`'top' \\| 'right' \\| 'bottom' \\| 'left'`",
         "default": "`'right'`",
         "typeDefinition": [
           "top",
@@ -3379,7 +3366,7 @@
         "inputType": 0,
         "description": "宽度, 只在方向为 `'right'`或`'left'` 时生效",
         "type": "number",
-        "typeRaw": "`number｜string`",
+        "typeRaw": "`number \\| string`",
         "default": "`256`",
         "pureDefault": "256"
       },
@@ -3388,7 +3375,7 @@
         "inputType": 0,
         "description": "高度, 只在方向为 `'top'`或`'bottom'` 时生效",
         "type": "number",
-        "typeRaw": "`number｜string`",
+        "typeRaw": "`number \\| string`",
         "default": "`256`",
         "pureDefault": "256"
       },
@@ -3445,10 +3432,18 @@
   },
   {
     "_idx": 19,
-    "type": "component",
+    "type": "directive",
     "selector": "nz-dropdown",
     "types": {},
     "properties": [
+      {
+        "name": "nzDropdownMenu",
+        "inputType": 0,
+        "description": "Dropdown 下拉菜单组件",
+        "type": "object",
+        "typeRaw": "`NzDropdownMenuComponent`",
+        "default": ""
+      },
       {
         "name": "nzDisabled",
         "inputType": 0,
@@ -3463,7 +3458,7 @@
         "inputType": 0,
         "description": "菜单弹出位置",
         "type": "Enum",
-        "typeRaw": "`'bottomLeft'｜'bottomCenter'｜'bottomRight'｜'topLeft'｜'topCenter'｜'topRight'`",
+        "typeRaw": "`'bottomLeft' \\| 'bottomCenter' \\| 'bottomRight' \\| 'topLeft' \\| 'topCenter' \\| 'topRight'`",
         "default": "`'bottomLeft'`",
         "typeDefinition": [
           "bottomLeft",
@@ -3480,7 +3475,7 @@
         "inputType": 0,
         "description": "触发下拉的行为",
         "type": "Enum",
-        "typeRaw": "`'click'｜'hover'`",
+        "typeRaw": "`'click' \\| 'hover'`",
         "default": "`'hover'`",
         "typeDefinition": [
           "click",
@@ -3531,259 +3526,22 @@
         "default": ""
       }
     ],
-    "description": "需要在触发下拉菜单的元素上加入 `[nz-dropdown]` 标记用于定位元素位置",
-    "lib": "ng-zorro-antd",
-    "title": "下拉菜单",
-    "whenToUse": "当页面上的操作命令过多时，用此组件可以收纳操作元素。点击或移入触点，会出现一个下拉菜单。可在列表中进行选择，并执行相应的命令。",
-    "doc": "/components/dropdown/zh",
-    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/dropdown"
-  },
-  {
-    "_idx": 167,
-    "type": "directive",
-    "selector": "nz-dropdown",
-    "types": {},
-    "properties": [
-      {
-        "name": "nzDisabled",
-        "inputType": 0,
-        "description": "菜单是否禁用",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "",
-        "forceInputType": 0
-      },
-      {
-        "name": "nzPlacement",
-        "inputType": 0,
-        "description": "菜单弹出位置",
-        "type": "Enum",
-        "typeRaw": "`'bottomLeft'｜'bottomCenter'｜'bottomRight'｜'topLeft'｜'topCenter'｜'topRight'`",
-        "default": "`'bottomLeft'`",
-        "typeDefinition": [
-          "bottomLeft",
-          "bottomCenter",
-          "bottomRight",
-          "topLeft",
-          "topCenter",
-          "topRight"
-        ],
-        "pureDefault": "bottomLeft"
-      },
-      {
-        "name": "nzSize",
-        "inputType": 0,
-        "description": "按钮大小，和 [nz-button](/components/button/zh) 一致",
-        "type": "Enum",
-        "typeRaw": "`'large'｜'small'｜'default'`",
-        "default": "`'default'`",
-        "typeDefinition": [
-          "large",
-          "small",
-          "default"
-        ],
-        "pureDefault": "default"
-      },
-      {
-        "name": "nzType",
-        "inputType": 0,
-        "description": "按钮类型，和 [nz-button](/components/button/zh) 一致",
-        "type": "Enum",
-        "typeRaw": "`'primary'｜'ghost'｜'dashed'｜'danger'｜'default'`",
-        "default": "`'default'`",
-        "typeDefinition": [
-          "primary",
-          "ghost",
-          "dashed",
-          "danger",
-          "default"
-        ],
-        "pureDefault": "default"
-      },
-      {
-        "name": "nzTrigger",
-        "inputType": 0,
-        "description": "触发下拉的行为",
-        "type": "Enum",
-        "typeRaw": "`'click'｜'hover'`",
-        "default": "`'hover'`",
-        "typeDefinition": [
-          "click",
-          "hover"
-        ],
-        "pureDefault": "hover"
-      },
-      {
-        "name": "nzClickHide",
-        "inputType": 0,
-        "description": "点击后是否隐藏菜单",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`true`",
-        "pureDefault": "true"
-      },
-      {
-        "name": "nzVisible",
-        "inputType": 0,
-        "description": "菜单是否显示",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": ""
-      },
-      {
-        "name": "nzIcon",
-        "inputType": 0,
-        "description": "右侧的 icon",
-        "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
-        "default": "`'ellipsis'`",
-        "pureDefault": "ellipsis"
-      },
-      {
-        "name": "nzVisibleChange",
-        "inputType": 1,
-        "description": "菜单显示状态改变时调用，参数为 nzVisible",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<boolean>`",
-        "default": ""
-      },
-      {
-        "name": "nzClick",
-        "inputType": 1,
-        "description": "点击左侧按钮的回调",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<MouseEvent>`",
-        "default": ""
-      }
-    ],
-    "description": "用于标定下拉菜单定位元素",
-    "lib": "ng-zorro-antd",
-    "title": "下拉菜单",
-    "whenToUse": "当页面上的操作命令过多时，用此组件可以收纳操作元素。点击或移入触点，会出现一个下拉菜单。可在列表中进行选择，并执行相应的命令。",
-    "doc": "/components/dropdown/zh",
-    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/dropdown"
-  },
-  {
-    "_idx": 173,
-    "type": "component",
-    "selector": "nz-dropdown-button",
-    "types": {},
-    "properties": [
-      {
-        "name": "nzDisabled",
-        "inputType": 0,
-        "description": "菜单是否禁用",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "",
-        "forceInputType": 0
-      },
-      {
-        "name": "nzPlacement",
-        "inputType": 0,
-        "description": "菜单弹出位置",
-        "type": "Enum",
-        "typeRaw": "`'bottomLeft'｜'bottomCenter'｜'bottomRight'｜'topLeft'｜'topCenter'｜'topRight'`",
-        "default": "`'bottomLeft'`",
-        "typeDefinition": [
-          "bottomLeft",
-          "bottomCenter",
-          "bottomRight",
-          "topLeft",
-          "topCenter",
-          "topRight"
-        ],
-        "pureDefault": "bottomLeft"
-      },
-      {
-        "name": "nzSize",
-        "inputType": 0,
-        "description": "按钮大小，和 [nz-button](/components/button/zh) 一致",
-        "type": "Enum",
-        "typeRaw": "`'large'｜'small'｜'default'`",
-        "default": "`'default'`",
-        "typeDefinition": [
-          "large",
-          "small",
-          "default"
-        ],
-        "pureDefault": "default"
-      },
-      {
-        "name": "nzType",
-        "inputType": 0,
-        "description": "按钮类型，和 [nz-button](/components/button/zh) 一致",
-        "type": "Enum",
-        "typeRaw": "`'primary'｜'ghost'｜'dashed'｜'danger'｜'default'`",
-        "default": "`'default'`",
-        "typeDefinition": [
-          "primary",
-          "ghost",
-          "dashed",
-          "danger",
-          "default"
-        ],
-        "pureDefault": "default"
-      },
-      {
-        "name": "nzTrigger",
-        "inputType": 0,
-        "description": "触发下拉的行为",
-        "type": "Enum",
-        "typeRaw": "`'click'｜'hover'`",
-        "default": "`'hover'`",
-        "typeDefinition": [
-          "click",
-          "hover"
-        ],
-        "pureDefault": "hover"
-      },
-      {
-        "name": "nzClickHide",
-        "inputType": 0,
-        "description": "点击后是否隐藏菜单",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`true`",
-        "pureDefault": "true"
-      },
-      {
-        "name": "nzVisible",
-        "inputType": 0,
-        "description": "菜单是否显示",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": ""
-      },
-      {
-        "name": "nzIcon",
-        "inputType": 0,
-        "description": "右侧的 icon",
-        "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
-        "default": "`'ellipsis'`",
-        "pureDefault": "ellipsis"
-      },
-      {
-        "name": "nzVisibleChange",
-        "inputType": 1,
-        "description": "菜单显示状态改变时调用，参数为 nzVisible",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<boolean>`",
-        "default": ""
-      },
-      {
-        "name": "nzClick",
-        "inputType": 1,
-        "description": "点击左侧按钮的回调",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<MouseEvent>`",
-        "default": ""
-      }
-    ],
     "lib": "ng-zorro-antd",
     "title": "下拉菜单",
     "description": "向下弹出的列表。",
+    "whenToUse": "当页面上的操作命令过多时，用此组件可以收纳操作元素。点击或移入触点，会出现一个下拉菜单。可在列表中进行选择，并执行相应的命令。",
+    "doc": "/components/dropdown/zh",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/dropdown"
+  },
+  {
+    "_idx": 176,
+    "type": "component",
+    "selector": "nz-dropdown-menu",
+    "types": {},
+    "properties": [],
+    "description": "用于包裹菜单项，可以通过 `nzDropdownMenu` 模板变量导出后传入 `[nz-dropdown]` 和 `NzContextMenuService`。",
+    "lib": "ng-zorro-antd",
+    "title": "下拉菜单",
     "whenToUse": "当页面上的操作命令过多时，用此组件可以收纳操作元素。点击或移入触点，会出现一个下拉菜单。可在列表中进行选择，并执行相应的命令。",
     "doc": "/components/dropdown/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/dropdown"
@@ -3799,7 +3557,7 @@
         "inputType": 0,
         "description": "设置显示图片，为 `string` 时表示自定义图片地址",
         "type": "string",
-        "typeRaw": "`string` ｜ `TemplateRef<void>`",
+        "typeRaw": "`string`  \\|  `TemplateRef<void>`",
         "default": ""
       },
       {
@@ -3807,7 +3565,7 @@
         "inputType": 0,
         "description": "自定义描述内容",
         "type": "string",
-        "typeRaw": "`string` ｜ `TemplateRef<void>`",
+        "typeRaw": "`string`  \\|  `TemplateRef<void>`",
         "default": ""
       },
       {
@@ -3815,7 +3573,7 @@
         "inputType": 0,
         "description": "设置自定义 footer",
         "type": "string",
-        "typeRaw": "`string` ｜ `TemplateRef<void>`",
+        "typeRaw": "`string`  \\|  `TemplateRef<void>`",
         "default": ""
       }
     ],
@@ -3828,7 +3586,7 @@
   },
   {
     "_idx": 63,
-    "type": "component",
+    "type": "directive",
     "selector": "nz-form",
     "types": {},
     "properties": [
@@ -3837,7 +3595,7 @@
         "inputType": 0,
         "description": "表单布局",
         "type": "Enum",
-        "typeRaw": "`'horizontal'｜'vertical'｜'inline'`",
+        "typeRaw": "`'horizontal' \\| 'vertical' \\| 'inline'`",
         "default": "`'horizontal'`",
         "typeDefinition": [
           "horizontal",
@@ -3887,7 +3645,7 @@
         "inputType": 0,
         "description": "flex 布局下的垂直对齐方式",
         "type": "Enum",
-        "typeRaw": "`'top'｜'middle'｜'bottom'`",
+        "typeRaw": "`'top' \\| 'middle' \\| 'bottom'`",
         "default": "`'top'`",
         "typeDefinition": [
           "top",
@@ -3901,7 +3659,7 @@
         "inputType": 0,
         "description": "栅格间隔，可以写成像素值或支持响应式的对象写法 `{ xs: 8, sm: 16, md: 24, lg: 32, xl: 32, xxl: 32 }`",
         "type": "Enum",
-        "typeRaw": "`number｜object`",
+        "typeRaw": "`number \\| object`",
         "default": "`0`",
         "pureDefault": "0",
         "typeDefinition": [
@@ -3921,7 +3679,7 @@
         "inputType": 0,
         "description": "flex 布局下的水平排列方式",
         "type": "Enum",
-        "typeRaw": "`'start'｜'end'｜'center'｜'space-around'｜'space-between'`",
+        "typeRaw": "`'start' \\| 'end' \\| 'center' \\| 'space-around' \\| 'space-between'`",
         "default": "`'start'`",
         "typeDefinition": [
           "start",
@@ -4070,7 +3828,7 @@
         "inputType": 0,
         "description": "`<576px` 响应式栅格，可为栅格数或一个包含其他属性的对象",
         "type": "Enum",
-        "typeRaw": "`number｜object`",
+        "typeRaw": "`number \\| object`",
         "default": "",
         "typeDefinition": [
           "0",
@@ -4089,7 +3847,7 @@
         "inputType": 0,
         "description": "`≥576px` 响应式栅格，可为栅格数或一个包含其他属性的对象",
         "type": "Enum",
-        "typeRaw": "`number｜object`",
+        "typeRaw": "`number \\| object`",
         "default": "",
         "typeDefinition": [
           "0",
@@ -4108,7 +3866,7 @@
         "inputType": 0,
         "description": "`≥768px` 响应式栅格，可为栅格数或一个包含其他属性的对象",
         "type": "Enum",
-        "typeRaw": "`number｜object`",
+        "typeRaw": "`number \\| object`",
         "default": "",
         "typeDefinition": [
           "0",
@@ -4127,7 +3885,7 @@
         "inputType": 0,
         "description": "`≥992px` 响应式栅格，可为栅格数或一个包含其他属性的对象",
         "type": "Enum",
-        "typeRaw": "`number｜object`",
+        "typeRaw": "`number \\| object`",
         "default": "",
         "typeDefinition": [
           "0",
@@ -4146,7 +3904,7 @@
         "inputType": 0,
         "description": "`≥1200px` 响应式栅格，可为栅格数或一个包含其他属性的对象",
         "type": "Enum",
-        "typeRaw": "`number｜object`",
+        "typeRaw": "`number \\| object`",
         "default": "",
         "typeDefinition": [
           "0",
@@ -4165,7 +3923,7 @@
         "inputType": 0,
         "description": "`≥1600px` 响应式栅格，可为栅格数或一个包含其他属性的对象",
         "type": "Enum",
-        "typeRaw": "`number｜object`",
+        "typeRaw": "`number \\| object`",
         "default": "",
         "typeDefinition": [
           "0",
@@ -4204,15 +3962,6 @@
         "type": "string",
         "typeRaw": "`string`",
         "default": ""
-      },
-      {
-        "name": "nzColon",
-        "inputType": 0,
-        "description": "配合 label 属性使用，表示是否显示 label 后面的冒号",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`true`",
-        "pureDefault": "true"
       }
     ],
     "description": "用于标示当前表单项的内容，可选。",
@@ -4223,7 +3972,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/form"
   },
   {
-    "_idx": 246,
+    "_idx": 232,
     "type": "component",
     "selector": "nz-form-control",
     "types": {},
@@ -4332,7 +4081,7 @@
         "inputType": 0,
         "description": "`<576px` 响应式栅格，可为栅格数或一个包含其他属性的对象",
         "type": "Enum",
-        "typeRaw": "`number｜object`",
+        "typeRaw": "`number \\| object`",
         "default": "",
         "typeDefinition": [
           "0",
@@ -4351,7 +4100,7 @@
         "inputType": 0,
         "description": "`≥576px` 响应式栅格，可为栅格数或一个包含其他属性的对象",
         "type": "Enum",
-        "typeRaw": "`number｜object`",
+        "typeRaw": "`number \\| object`",
         "default": "",
         "typeDefinition": [
           "0",
@@ -4370,7 +4119,7 @@
         "inputType": 0,
         "description": "`≥768px` 响应式栅格，可为栅格数或一个包含其他属性的对象",
         "type": "Enum",
-        "typeRaw": "`number｜object`",
+        "typeRaw": "`number \\| object`",
         "default": "",
         "typeDefinition": [
           "0",
@@ -4389,7 +4138,7 @@
         "inputType": 0,
         "description": "`≥992px` 响应式栅格，可为栅格数或一个包含其他属性的对象",
         "type": "Enum",
-        "typeRaw": "`number｜object`",
+        "typeRaw": "`number \\| object`",
         "default": "",
         "typeDefinition": [
           "0",
@@ -4408,7 +4157,7 @@
         "inputType": 0,
         "description": "`≥1200px` 响应式栅格，可为栅格数或一个包含其他属性的对象",
         "type": "Enum",
-        "typeRaw": "`number｜object`",
+        "typeRaw": "`number \\| object`",
         "default": "",
         "typeDefinition": [
           "0",
@@ -4427,7 +4176,7 @@
         "inputType": 0,
         "description": "`≥1600px` 响应式栅格，可为栅格数或一个包含其他属性的对象",
         "type": "Enum",
-        "typeRaw": "`number｜object`",
+        "typeRaw": "`number \\| object`",
         "default": "",
         "typeDefinition": [
           "0",
@@ -4444,25 +4193,19 @@
       {
         "name": "nzValidateStatus",
         "inputType": 0,
-        "description": "Reactive Forms：会根据 FormControl 的状态自动生成校验状态",
-        "type": "object",
-        "typeRaw": "`FormControl`",
-        "default": "`nz-form-control` 中包裹的第一个 `FormControl`",
-        "pureDefault": "nz-form-control` 中包裹的第一个 `FormControl"
-      },
-      {
-        "name": "nzValidateStatus",
-        "inputType": 0,
-        "description": "Template-driven Forms：校验状态",
+        "description": "会根据传入的 `FormControl` 或 `NgModel` 自动生成校验状态，也可以直接指定状态，不传入时默认值为 `nz-form-control` 中包裹的第一个 `FormControl` 或 `NgModel`",
         "type": "Enum",
-        "typeRaw": "`'success'｜'warning'｜'error'｜'validating'`",
-        "default": "",
+        "typeRaw": "`'success' \\| 'warning' \\| 'error' \\| 'validating'  \\|  FormControl  \\|  NgModel`",
+        "default": "`nz-form-control` 中包裹的第一个 `FormControl` 或 `NgModel`",
         "typeDefinition": [
           "success",
           "warning",
           "error",
-          "validating"
-        ]
+          "validating",
+          "FormControl",
+          "NgModel"
+        ],
+        "pureDefault": "nz-form-control` 中包裹的第一个 `FormControl` 或 `NgModel"
       },
       {
         "name": "nzHasFeedback",
@@ -4472,6 +4215,46 @@
         "typeRaw": "`boolean`",
         "default": "`false`",
         "pureDefault": "false"
+      },
+      {
+        "name": "nzExtra",
+        "inputType": 0,
+        "description": "用于显示表单额外提示信息",
+        "type": "string",
+        "typeRaw": "`string  \\|  TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "nzSuccessTip",
+        "inputType": 0,
+        "description": "校验状态 success 时提示信息",
+        "type": "string",
+        "typeRaw": "`string  \\|  TemplateRef<{ $implicit: FormControl  \\|  NgModel }>`",
+        "default": ""
+      },
+      {
+        "name": "nzWarningTip",
+        "inputType": 0,
+        "description": "校验状态 warning 时提示信息",
+        "type": "string",
+        "typeRaw": "`string  \\|  TemplateRef<{ $implicit: FormControl  \\|  NgModel }>`",
+        "default": ""
+      },
+      {
+        "name": "nzErrorTip",
+        "inputType": 0,
+        "description": "校验状态 error 时提示信息",
+        "type": "string",
+        "typeRaw": "`string  \\|  TemplateRef<{ $implicit: FormControl  \\|  NgModel }>`",
+        "default": ""
+      },
+      {
+        "name": "nzValidatingTip",
+        "inputType": 0,
+        "description": "正在校验时提示信息",
+        "type": "string",
+        "typeRaw": "`string  \\|  TemplateRef<{ $implicit: FormControl  \\|  NgModel }>`",
+        "default": ""
       }
     ],
     "description": "注意：由于 Angular Form 目前提供的[状态变更订阅](https://github.com/angular/angular/issues/10887)不完整。手动更改表单状态时，例如 `markAsDirty` 后，需要执行 `updateValueAndValidity` 通知 `nz-form-control` 进行状态变更。",
@@ -4482,33 +4265,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/form"
   },
   {
-    "_idx": 327,
-    "type": "component",
-    "selector": "nz-form-explain",
-    "types": {},
-    "properties": [],
-    "description": "用于显示提示信息，会自动根据当前的 nzValidateStatus 显示不同的颜色",
-    "lib": "ng-zorro-antd",
-    "title": "表单",
-    "whenToUse": "",
-    "doc": "/components/form/zh",
-    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/form"
-  },
-  {
-    "_idx": 338,
-    "type": "component",
-    "selector": "nz-form-extra",
-    "types": {},
-    "properties": [],
-    "description": "用于显示表单额外提示信息",
-    "lib": "ng-zorro-antd",
-    "title": "表单",
-    "whenToUse": "",
-    "doc": "/components/form/zh",
-    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/form"
-  },
-  {
-    "_idx": 344,
+    "_idx": 366,
     "type": "component",
     "selector": "nz-form-split",
     "types": {},
@@ -4521,7 +4278,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/form"
   },
   {
-    "_idx": 350,
+    "_idx": 372,
     "type": "component",
     "selector": "nz-form-text",
     "types": {},
@@ -4534,7 +4291,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/form"
   },
   {
-    "_idx": 27,
+    "_idx": 24,
     "type": "directive",
     "selector": "nz-icon",
     "types": {},
@@ -4614,7 +4371,7 @@
         "inputType": 0,
         "description": "控件大小。注：标准表单内的输入框大小限制为 `large`",
         "type": "Enum",
-        "typeRaw": "`'large'｜'small'｜'default'`",
+        "typeRaw": "`'large' \\| 'small' \\| 'default'`",
         "default": "`'default'`",
         "typeDefinition": [
           "large",
@@ -4628,7 +4385,7 @@
         "inputType": 0,
         "description": "只可以用于 `textarea`，自适应内容高度，可设置为 `boolean` 或对象：`{ minRows: 2, maxRows: 6 }`",
         "type": "boolean",
-        "typeRaw": "`boolean｜{ minRows: number, maxRows: number }`",
+        "typeRaw": "`boolean \\| { minRows: number, maxRows: number }`",
         "default": "`false`",
         "pureDefault": "false"
       },
@@ -4682,33 +4439,33 @@
       {
         "name": "nzAddOnAfter",
         "inputType": 0,
-        "description": "带标签的 input，设置后置标签",
+        "description": "带标签的 input，设置后置标签，可以与 `nzAddOnBefore` 配合使用",
         "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
+        "typeRaw": "`string \\| TemplateRef<void>`",
         "default": ""
       },
       {
         "name": "nzAddOnBefore",
         "inputType": 0,
-        "description": "带标签的 input，设置前置标签",
+        "description": "带标签的 input，设置前置标签，可以与 `nzAddOnBefore` 配合使用",
         "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
+        "typeRaw": "`string \\| TemplateRef<void>`",
         "default": ""
       },
       {
         "name": "nzPrefix",
         "inputType": 0,
-        "description": "带有前缀图标的 input",
+        "description": "带有前缀图标的 input，可以与 `nzSuffix` 配合使用",
         "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
+        "typeRaw": "`string \\| TemplateRef<void>`",
         "default": ""
       },
       {
         "name": "nzSuffix",
         "inputType": 0,
-        "description": "带有后缀图标的 input",
+        "description": "带有后缀图标的 input，可以与 `nzPrefix` 配合使用",
         "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
+        "typeRaw": "`string \\| TemplateRef<void>`",
         "default": ""
       },
       {
@@ -4734,7 +4491,7 @@
         "inputType": 0,
         "description": "`nz-input-group` 中所有的 `nz-input` 的大小",
         "type": "Enum",
-        "typeRaw": "`'large'｜'small'｜'default'`",
+        "typeRaw": "`'large' \\| 'small' \\| 'default'`",
         "default": "`'default'`",
         "typeDefinition": [
           "large",
@@ -4752,7 +4509,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/input"
   },
   {
-    "_idx": 27,
+    "_idx": 24,
     "type": "component",
     "selector": "nz-input-number",
     "types": {},
@@ -4762,7 +4519,7 @@
         "inputType": 2,
         "description": "当前值，可双向绑定",
         "type": "number",
-        "typeRaw": "`number｜string` ｜ `string`",
+        "typeRaw": "`number \\| string`  \\|  `string`",
         "default": ""
       },
       {
@@ -4807,7 +4564,7 @@
         "inputType": 0,
         "description": "指定输入框展示值的格式",
         "type": "function",
-        "typeRaw": "`(value: number｜string) => string｜number`",
+        "typeRaw": "`(value: number \\| string) => string \\| number`",
         "default": ""
       },
       {
@@ -4815,7 +4572,7 @@
         "inputType": 0,
         "description": "指定从 nzFormatter 里转换回数字的方式，和 nzFormatter 搭配使用",
         "type": "function",
-        "typeRaw": "`(value: string) => string｜number`",
+        "typeRaw": "`(value: string) => string \\| number`",
         "default": ""
       },
       {
@@ -4831,7 +4588,7 @@
         "inputType": 0,
         "description": "输入框大小",
         "type": "Enum",
-        "typeRaw": "`'large'｜'small'｜'default'`",
+        "typeRaw": "`'large' \\| 'small' \\| 'default'`",
         "default": "`'default'`",
         "typeDefinition": [
           "large",
@@ -4845,7 +4602,7 @@
         "inputType": 0,
         "description": "每次改变步数，可以为小数",
         "type": "number",
-        "typeRaw": "`number｜string`",
+        "typeRaw": "`number \\| string`",
         "default": "`1`",
         "pureDefault": "1"
       },
@@ -4853,6 +4610,14 @@
         "name": "nzPlaceHolder",
         "inputType": 0,
         "description": "选择框默认文字",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
+      },
+      {
+        "name": "nzId",
+        "inputType": 0,
+        "description": "组件内部 input 的 id 值",
         "type": "string",
         "typeRaw": "`string`",
         "default": ""
@@ -4888,9 +4653,9 @@
         "typeRaw": "`string`"
       }
     ],
+    "description": "在 `nz-input-number` 中输入的数值不会在输入时进行校验，而是在特定时机（回车键，上下键，失去焦点等）时才会校验后反馈到 `[ngModel]` 和 `(ngModelChange)` 中，否则输入 `-0.12` 或者 `1e10` 这种类型数据时，双向绑定的数据会永远是 `undefined`",
     "lib": "ng-zorro-antd",
     "title": "数字输入框",
-    "description": "通过鼠标或键盘，输入范围内的数值。",
     "whenToUse": "当需要获取标准数值时。",
     "doc": "/components/input-number/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/input-number"
@@ -4906,7 +4671,7 @@
         "inputType": 0,
         "description": "触发响应式布局的断点",
         "type": "Enum",
-        "typeRaw": "`'xs'｜'sm'｜'md'｜'lg'｜'xl'｜'xxl'`",
+        "typeRaw": "`'xs' \\| 'sm' \\| 'md' \\| 'lg' \\| 'xl' \\| 'xxl'`",
         "default": "",
         "typeDefinition": [
           "xs",
@@ -4982,7 +4747,7 @@
         "inputType": 0,
         "description": "宽度",
         "type": "number",
-        "typeRaw": "`number｜string`",
+        "typeRaw": "`number \\| string`",
         "default": "`200`",
         "pureDefault": "200"
       },
@@ -4991,7 +4756,7 @@
         "inputType": 0,
         "description": "主题颜色",
         "type": "Enum",
-        "typeRaw": "`'light'｜'dark'`",
+        "typeRaw": "`'light' \\| 'dark'`",
         "default": "`dark`",
         "typeDefinition": [
           "light",
@@ -5051,7 +4816,7 @@
         "inputType": 0,
         "description": "列表底部",
         "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
+        "typeRaw": "`string \\| TemplateRef<void>`",
         "default": ""
       },
       {
@@ -5067,7 +4832,7 @@
         "inputType": 0,
         "description": "列表头部",
         "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
+        "typeRaw": "`string \\| TemplateRef<void>`",
         "default": ""
       },
       {
@@ -5075,7 +4840,7 @@
         "inputType": 0,
         "description": "设置 `nz-list-item` 布局, 设置成 `vertical` 则竖直样式显示, 默认横排",
         "type": "Enum",
-        "typeRaw": "`'vertical'｜'horizontal'`",
+        "typeRaw": "`'vertical' \\| 'horizontal'`",
         "default": "`'horizontal'`",
         "typeDefinition": [
           "vertical",
@@ -5106,7 +4871,7 @@
         "inputType": 0,
         "description": "当列表为空时加载的内容",
         "type": "string",
-        "typeRaw": "`string` ｜ `TemplateRef<void>`",
+        "typeRaw": "`string`  \\|  `TemplateRef<void>`",
         "default": ""
       },
       {
@@ -5122,7 +4887,7 @@
         "inputType": 0,
         "description": "list 的尺寸",
         "type": "Enum",
-        "typeRaw": "`'large'｜'small'｜'default'`",
+        "typeRaw": "`'large' \\| 'small' \\| 'default'`",
         "default": "`'default'`",
         "typeDefinition": [
           "large",
@@ -5159,7 +4924,7 @@
         "inputType": 0,
         "description": "内容项",
         "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
+        "typeRaw": "`string \\| TemplateRef<void>`",
         "default": ""
       },
       {
@@ -5177,6 +4942,15 @@
         "type": "TemplateRef",
         "typeRaw": "`TemplateRef<void>`",
         "default": ""
+      },
+      {
+        "name": "nzNoFlex",
+        "inputType": 0,
+        "description": "是否非 `flex` 布局渲染",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
       }
     ],
     "lib": "ng-zorro-antd",
@@ -5187,7 +4961,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/list"
   },
   {
-    "_idx": 424,
+    "_idx": 438,
     "type": "component",
     "selector": "nz-list-item-meta",
     "types": {},
@@ -5197,7 +4971,7 @@
         "inputType": 0,
         "description": "列表元素的图标",
         "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
+        "typeRaw": "`string \\| TemplateRef<void>`",
         "default": ""
       },
       {
@@ -5205,7 +4979,7 @@
         "inputType": 0,
         "description": "列表元素的描述内容",
         "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
+        "typeRaw": "`string \\| TemplateRef<void>`",
         "default": ""
       },
       {
@@ -5213,7 +4987,7 @@
         "inputType": 0,
         "description": "列表元素的标题",
         "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
+        "typeRaw": "`string \\| TemplateRef<void>`",
         "default": ""
       }
     ],
@@ -5235,7 +5009,7 @@
         "inputType": 0,
         "description": "用于指定提及的触发元素 **(必须)**",
         "type": "object",
-        "typeRaw": "`HTMLTextAreaElement｜HTMLInputElement`",
+        "typeRaw": "`HTMLTextAreaElement \\| HTMLInputElement`",
         "default": ""
       },
       {
@@ -5270,7 +5044,7 @@
         "inputType": 0,
         "description": "建议框位置",
         "type": "Enum",
-        "typeRaw": "`'button'｜'top'`",
+        "typeRaw": "`'button' \\| 'top'`",
         "default": "`'bottom'`",
         "typeDefinition": [
           "button",
@@ -5283,7 +5057,7 @@
         "inputType": 0,
         "description": "触发弹出下拉框的字符",
         "type": "string",
-        "typeRaw": "`string｜string[]`",
+        "typeRaw": "`string \\| string[]`",
         "default": "`'@'`",
         "pureDefault": "@"
       },
@@ -5301,7 +5075,7 @@
         "inputType": 0,
         "description": "建议选项的取值方法",
         "type": "function",
-        "typeRaw": "`(any) => string｜(value: string) => string`",
+        "typeRaw": "`(any) => string \\| (value: string) => string`",
         "default": ""
       },
       {
@@ -5313,7 +5087,7 @@
         "default": ""
       },
       {
-        "name": "onSearchChange",
+        "name": "nzOnSearchChange",
         "inputType": 1,
         "description": "输入框中 @ 变化时回调",
         "type": "EventEmitter",
@@ -5324,6 +5098,32 @@
     "lib": "ng-zorro-antd",
     "title": "提及",
     "description": "提及组件。",
+    "whenToUse": "用于在输入中提及某人或某事，常用于发布、聊天或评论功能。",
+    "doc": "/components/mention/zh",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/mention"
+  },
+  {
+    "_idx": 208,
+    "type": "component",
+    "selector": "nzMentionTrigger",
+    "types": {},
+    "properties": [],
+    "description": "用于指定提及的触发元素",
+    "lib": "ng-zorro-antd",
+    "title": "提及",
+    "whenToUse": "用于在输入中提及某人或某事，常用于发布、聊天或评论功能。",
+    "doc": "/components/mention/zh",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/mention"
+  },
+  {
+    "_idx": 216,
+    "type": "component",
+    "selector": "nzMentionSuggestion",
+    "types": {},
+    "properties": [],
+    "description": "自定义建议渲染模板",
+    "lib": "ng-zorro-antd",
+    "title": "提及",
     "whenToUse": "用于在输入中提及某人或某事，常用于发布、聊天或评论功能。",
     "doc": "/components/mention/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/mention"
@@ -5356,7 +5156,7 @@
         "inputType": 0,
         "description": "菜单类型，现在支持垂直、水平、和内嵌模式三种",
         "type": "Enum",
-        "typeRaw": "`'vertical'｜'horizontal'｜'inline'`",
+        "typeRaw": "`'vertical' \\| 'horizontal' \\| 'inline'`",
         "default": "`'vertical'`",
         "typeDefinition": [
           "vertical",
@@ -5379,7 +5179,7 @@
         "inputType": 0,
         "description": "主题颜色",
         "type": "Enum",
-        "typeRaw": "`'light'｜'dark'`",
+        "typeRaw": "`'light' \\| 'dark'`",
         "default": "`'light'`",
         "typeDefinition": [
           "light",
@@ -5427,6 +5227,24 @@
         "typeRaw": "`boolean`",
         "default": "`false`",
         "pureDefault": "false"
+      },
+      {
+        "name": "nzMatchRouter",
+        "inputType": 0,
+        "description": "是否根据 [routerLink](https://www.angular.cn/api/router/RouterLink) 自动设定 `nzSelected`",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzMatchRouterExact",
+        "inputType": 0,
+        "description": "是否路由完整精确匹配, 详见 [routerLinkActiveOptions](https://angular.io/api/router/RouterLinkActive#routerLinkActiveOptions)",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
       }
     ],
     "lib": "ng-zorro-antd",
@@ -5437,7 +5255,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/menu"
   },
   {
-    "_idx": 181,
+    "_idx": 209,
     "type": "directive",
     "selector": "nz-submenu",
     "types": {},
@@ -5462,6 +5280,22 @@
         "forceInputType": 0
       },
       {
+        "name": "nzTitle",
+        "inputType": 0,
+        "description": "标题内容",
+        "type": "string",
+        "typeRaw": "`string \\| TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "nzIcon",
+        "inputType": 0,
+        "description": "标题中 icon 类型",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
+      },
+      {
         "name": "nzMenuClassName",
         "inputType": 0,
         "description": "自定义子菜单容器类名",
@@ -5478,7 +5312,7 @@
         "default": ""
       }
     ],
-    "description": "使用 `title` 标识符来标定子菜单标题部分",
+    "description": "你可以使用以下三种方式来定义 `nz-submenu` 的标题",
     "lib": "ng-zorro-antd",
     "title": "导航菜单",
     "whenToUse": "导航菜单是一个网站的灵魂，用户依赖导航在各个页面中进行跳转。一般分为顶部导航和侧边导航，顶部导航提供全局性的类目和功能，侧边导航提供多级结构来收纳和排列网站架构。",
@@ -5486,12 +5320,21 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/menu"
   },
   {
-    "_idx": 263,
+    "_idx": 320,
     "type": "directive",
     "selector": "nz-menu-group",
     "types": {},
-    "properties": [],
-    "description": "使用 `title` 标识符来标定标题部分",
+    "properties": [
+      {
+        "name": "nzTitle",
+        "inputType": 0,
+        "description": "标题内容",
+        "type": "string",
+        "typeRaw": "`string \\| TemplateRef<void>`",
+        "default": ""
+      }
+    ],
+    "description": "你可以使用以下三种方式来定义 `nz-menu-group` 的标题",
     "lib": "ng-zorro-antd",
     "title": "导航菜单",
     "whenToUse": "导航菜单是一个网站的灵魂，用户依赖导航在各个页面中进行跳转。一般分为顶部导航和侧边导航，顶部导航提供全局性的类目和功能，侧边导航提供多级结构来收纳和排列网站架构。",
@@ -5499,7 +5342,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/menu"
   },
   {
-    "_idx": 269,
+    "_idx": 361,
     "type": "directive",
     "selector": "nz-menu-divider",
     "types": {},
@@ -5522,7 +5365,7 @@
         "inputType": 0,
         "description": "title 文字",
         "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
+        "typeRaw": "`string \\| TemplateRef<void>`",
         "default": ""
       },
       {
@@ -5530,7 +5373,7 @@
         "inputType": 0,
         "description": "subTitle 文字",
         "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
+        "typeRaw": "`string \\| TemplateRef<void>`",
         "default": ""
       },
       {
@@ -5538,7 +5381,7 @@
         "inputType": 0,
         "description": "自定义 back icon",
         "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
+        "typeRaw": "`string \\| TemplateRef<void>`",
         "default": ""
       },
       {
@@ -5588,6 +5431,16 @@
         "typeRaw": "`number`",
         "default": "`10`",
         "pureDefault": "10"
+      },
+      {
+        "name": "nzDisabled",
+        "inputType": 0,
+        "description": "是否禁用",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false",
+        "forceInputType": 0
       },
       {
         "name": "nzShowQuickJumper",
@@ -5641,7 +5494,7 @@
         "inputType": 0,
         "description": "用于自定义页码的结构",
         "type": "TemplateRef",
-        "typeRaw": "`TemplateRef<{ $implicit: 'page'｜'prev'｜'next', page: number }>`",
+        "typeRaw": "`TemplateRef<{ $implicit: 'page' \\| 'prev' \\| 'next', page: number }>`",
         "default": ""
       },
       {
@@ -5735,7 +5588,7 @@
         "inputType": 0,
         "description": "气泡框位置",
         "type": "Enum",
-        "typeRaw": "`'top'｜'left'｜'right'｜'bottom'｜'topLeft'｜'topRight'｜'bottomLeft'｜'bottomRight'｜'leftTop'｜'leftBottom'｜'rightTop'｜'rightBottom'`",
+        "typeRaw": "`'top' \\| 'left' \\| 'right' \\| 'bottom' \\| 'topLeft' \\| 'topRight' \\| 'bottomLeft' \\| 'bottomRight' \\| 'leftTop' \\| 'leftBottom' \\| 'rightTop' \\| 'rightBottom'`",
         "default": "`'top'`",
         "typeDefinition": [
           "top",
@@ -5759,7 +5612,7 @@
         "inputType": 0,
         "description": "触发行为，可选 `hover/focus/click`",
         "type": "Enum",
-        "typeRaw": "`'click'｜'focus'｜'hover'`",
+        "typeRaw": "`'click' \\| 'focus' \\| 'hover'`",
         "default": "`'hover'`",
         "typeDefinition": [
           "click",
@@ -5793,7 +5646,7 @@
         "inputType": 0,
         "description": "提示文字",
         "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
+        "typeRaw": "`string \\| TemplateRef<void>`",
         "default": ""
       },
       {
@@ -5819,7 +5672,7 @@
         "inputType": 0,
         "description": "确认按钮类型",
         "type": "Enum",
-        "typeRaw": "`'primary'｜'ghost'｜'dashed'｜'danger'｜'default'`",
+        "typeRaw": "`'primary' \\| 'ghost' \\| 'dashed' \\| 'danger' \\| 'default'`",
         "default": "`'primary'`",
         "typeDefinition": [
           "primary",
@@ -5835,7 +5688,7 @@
         "inputType": 0,
         "description": "确认框的描述",
         "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
+        "typeRaw": "`string \\| TemplateRef<void>`",
         "default": ""
       },
       {
@@ -5852,7 +5705,7 @@
         "inputType": 0,
         "description": "自定义弹出框的 icon",
         "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
+        "typeRaw": "`string \\| TemplateRef<void>`",
         "default": ""
       },
       {
@@ -5929,7 +5782,7 @@
         "inputType": 0,
         "description": "气泡框位置",
         "type": "Enum",
-        "typeRaw": "`'top'｜'left'｜'right'｜'bottom'｜'topLeft'｜'topRight'｜'bottomLeft'｜'bottomRight'｜'leftTop'｜'leftBottom'｜'rightTop'｜'rightBottom'`",
+        "typeRaw": "`'top' \\| 'left' \\| 'right' \\| 'bottom' \\| 'topLeft' \\| 'topRight' \\| 'bottomLeft' \\| 'bottomRight' \\| 'leftTop' \\| 'leftBottom' \\| 'rightTop' \\| 'rightBottom'`",
         "default": "`'top'`",
         "typeDefinition": [
           "top",
@@ -5953,7 +5806,7 @@
         "inputType": 0,
         "description": "触发行为，可选 `hover/focus/click`",
         "type": "Enum",
-        "typeRaw": "`'click'｜'focus'｜'hover'`",
+        "typeRaw": "`'click' \\| 'focus' \\| 'hover'`",
         "default": "`'hover'`",
         "typeDefinition": [
           "click",
@@ -5987,7 +5840,7 @@
         "inputType": 0,
         "description": "提示文字",
         "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
+        "typeRaw": "`string \\| TemplateRef<void>`",
         "default": ""
       },
       {
@@ -5995,7 +5848,7 @@
         "inputType": 0,
         "description": "卡片标题",
         "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
+        "typeRaw": "`string \\| TemplateRef<void>`",
         "default": ""
       },
       {
@@ -6003,7 +5856,7 @@
         "inputType": 0,
         "description": "用于定义Content内容",
         "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
+        "typeRaw": "`string \\| TemplateRef<void>`",
         "default": ""
       }
     ],
@@ -6043,7 +5896,7 @@
         "inputType": 0,
         "description": "圆形进度条缺口位置",
         "type": "Enum",
-        "typeRaw": "`'top'｜'right'｜'bottom'｜'left'`",
+        "typeRaw": "`'top' \\| 'right' \\| 'bottom' \\| 'left'`",
         "default": "`'top'`",
         "typeDefinition": [
           "top",
@@ -6076,7 +5929,7 @@
         "inputType": 0,
         "description": "状态",
         "type": "Enum",
-        "typeRaw": "`'success'｜'exception'｜'active'｜'normal'`",
+        "typeRaw": "`'success' \\| 'exception' \\| 'active' \\| 'normal'`",
         "default": "",
         "typeDefinition": [
           "success",
@@ -6108,7 +5961,7 @@
         "inputType": 0,
         "description": "类型",
         "type": "Enum",
-        "typeRaw": "`'line'｜'circle'｜'dashboard'`",
+        "typeRaw": "`'line' \\| 'circle' \\| 'dashboard'`",
         "default": "`'line'`",
         "typeDefinition": [
           "line",
@@ -6131,7 +5984,7 @@
         "inputType": 0,
         "description": "进度条端点形状",
         "type": "Enum",
-        "typeRaw": "`'round'｜'square'`",
+        "typeRaw": "`'round' \\| 'square'`",
         "default": "`'round'`",
         "typeDefinition": [
           "round",
@@ -6315,7 +6168,7 @@
         "inputType": 0,
         "description": "大小，只对按钮样式生效",
         "type": "Enum",
-        "typeRaw": "`'large'｜'small'｜'default'`",
+        "typeRaw": "`'large' \\| 'small' \\| 'default'`",
         "default": "`'default'`",
         "typeDefinition": [
           "large",
@@ -6337,7 +6190,7 @@
         "inputType": 0,
         "description": "RadioButton 的风格样式，目前有描边和填色两种风格",
         "type": "Enum",
-        "typeRaw": "`'outline'｜'solid'`",
+        "typeRaw": "`'outline' \\| 'solid'`",
         "default": "`'outline'`",
         "typeDefinition": [
           "outline",
@@ -6392,8 +6245,8 @@
         "description": "自定义字符",
         "type": "TemplateRef",
         "typeRaw": "`TemplateRef<void>`",
-        "default": "`<i nz-icon type=\"star\"></i>`",
-        "pureDefault": "<i nz-icon type=\"star\"></i>"
+        "default": "`<i nz-icon nzType=\"star\"></i>`",
+        "pureDefault": "<i nz-icon nzType=\"star\"></i>"
       },
       {
         "name": "nzCount",
@@ -6497,7 +6350,7 @@
         "inputType": 2,
         "description": "当前选中的 nz-option 的 nzValue 值，可双向绑定，当 `nzMode` 为 `multiple` 或 `tags` 时，ngModel 为数组",
         "type": "object",
-        "typeRaw": "`any｜any[]`",
+        "typeRaw": "`any \\| any[]`",
         "default": ""
       },
       {
@@ -6581,6 +6434,14 @@
         "default": ""
       },
       {
+        "name": "nzCustomTemplate",
+        "inputType": 0,
+        "description": "自定义选择框的Template内容",
+        "type": "TemplateRef",
+        "typeRaw": "`TemplateRef<{ $implicit: NzOptionComponent }>`",
+        "default": ""
+      },
+      {
         "name": "nzServerSearch",
         "inputType": 0,
         "description": "是否使用服务端搜索，当为 true 时，将不再在前端对 nz-option 进行过滤",
@@ -6611,7 +6472,7 @@
         "inputType": 0,
         "description": "设置 nz-select 的模式",
         "type": "Enum",
-        "typeRaw": "`'multiple'｜'tags'｜'default'`",
+        "typeRaw": "`'multiple' \\| 'tags' \\| 'default'`",
         "default": "`'default'`",
         "typeDefinition": [
           "multiple",
@@ -6625,7 +6486,7 @@
         "inputType": 0,
         "description": "当下拉列表为空时显示的内容",
         "type": "string",
-        "typeRaw": "`string`",
+        "typeRaw": "`string \\| TemplateRef<void>`",
         "default": ""
       },
       {
@@ -6641,7 +6502,7 @@
         "inputType": 0,
         "description": "是否显示下拉小箭头",
         "type": "boolean",
-        "typeRaw": "boolean",
+        "typeRaw": "`boolean`",
         "default": "`true`",
         "pureDefault": "true"
       },
@@ -6659,7 +6520,7 @@
         "inputType": 0,
         "description": "选择框大小",
         "type": "Enum",
-        "typeRaw": "`'large'｜'small'｜'default'`",
+        "typeRaw": "`'large' \\| 'small' \\| 'default'`",
         "default": "`'default'`",
         "typeDefinition": [
           "large",
@@ -6714,7 +6575,7 @@
         "inputType": 0,
         "description": "加载中状态",
         "type": "boolean",
-        "typeRaw": "boolean",
+        "typeRaw": "`boolean`",
         "default": "`false`",
         "pureDefault": "false",
         "forceInputType": 0
@@ -6724,7 +6585,7 @@
         "inputType": 0,
         "description": "最多显示多少个 tag",
         "type": "number",
-        "typeRaw": "number",
+        "typeRaw": "`number`",
         "default": ""
       },
       {
@@ -6732,7 +6593,7 @@
         "inputType": 0,
         "description": "隐藏 tag 时显示的内容",
         "type": "TemplateRef",
-        "typeRaw": "TemplateRef<{ $implicit: any[] }>",
+        "typeRaw": "`TemplateRef<{ $implicit: any[] }>`",
         "default": ""
       },
       {
@@ -6798,7 +6659,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/select"
   },
   {
-    "_idx": 514,
+    "_idx": 528,
     "type": "component",
     "selector": "nz-option",
     "types": {},
@@ -6826,7 +6687,7 @@
         "inputType": 0,
         "description": "nz-select 中 ngModel 的值",
         "type": "object",
-        "typeRaw": "`any `",
+        "typeRaw": "`any`",
         "default": ""
       },
       {
@@ -6847,7 +6708,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/select"
   },
   {
-    "_idx": 593,
+    "_idx": 607,
     "type": "component",
     "selector": "nz-option-group",
     "types": {},
@@ -6857,7 +6718,7 @@
         "inputType": 0,
         "description": "组名",
         "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
+        "typeRaw": "`string \\| TemplateRef<void>`",
         "default": ""
       }
     ],
@@ -6888,7 +6749,7 @@
         "inputType": 0,
         "description": "是否显示头像占位图",
         "type": "boolean",
-        "typeRaw": "`boolean｜NzSkeletonAvatar`",
+        "typeRaw": "`boolean \\| NzSkeletonAvatar`",
         "default": "`false`",
         "pureDefault": "false"
       },
@@ -6906,7 +6767,7 @@
         "inputType": 0,
         "description": "是否显示段落占位图",
         "type": "boolean",
-        "typeRaw": "`boolean｜NzSkeletonParagraph`",
+        "typeRaw": "`boolean \\| NzSkeletonParagraph`",
         "default": "`true`",
         "pureDefault": "true"
       },
@@ -6915,7 +6776,7 @@
         "inputType": 0,
         "description": "是否显示标题占位图",
         "type": "boolean",
-        "typeRaw": "`boolean｜NzSkeletonTitle`",
+        "typeRaw": "`boolean \\| NzSkeletonTitle`",
         "default": "`true`",
         "pureDefault": "true"
       }
@@ -7002,7 +6863,7 @@
         "inputType": 0,
         "description": "步长，取值必须大于 0，并且可被 (max - min) 整除。当 `marks` 不为空对象时，可以设置 `step` 为 `null`，此时 Slider 的可选值仅有 marks 标出来的部分。",
         "type": "number",
-        "typeRaw": "`number｜null`",
+        "typeRaw": "`number \\| null`",
         "default": "`1`",
         "pureDefault": "1"
       },
@@ -7019,7 +6880,7 @@
         "inputType": 2,
         "description": "设置当前取值。当 `range` 为 `false` 时，使用 `number`，否则用 `[number, number]`",
         "type": "number",
-        "typeRaw": "`number｜number[]`",
+        "typeRaw": "`number \\| number[]`",
         "default": ""
       },
       {
@@ -7036,7 +6897,7 @@
         "inputType": 0,
         "description": "值为 `always` 时总是显示，值为 `never` 时在任何情况下都不显示",
         "type": "Enum",
-        "typeRaw": "`'default'｜'always'｜'never'`",
+        "typeRaw": "`'default' \\| 'always' \\| 'never'`",
         "default": "`default`",
         "typeDefinition": [
           "default",
@@ -7050,7 +6911,7 @@
         "inputType": 1,
         "description": "与 `onmouseup` 触发时机一致，把当前值作为参数传入。",
         "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<number[] ｜ number>`",
+        "typeRaw": "`EventEmitter<number[]  \\|  number>`",
         "default": ""
       },
       {
@@ -7058,7 +6919,7 @@
         "inputType": 1,
         "description": "当 Slider 的值发生改变时，会触发 ngModelChange 事件，并把改变后的值作为参数传入。",
         "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<number[] ｜ number>>`",
+        "typeRaw": "`EventEmitter<number[]  \\|  number>>`",
         "default": ""
       },
       {
@@ -7102,7 +6963,7 @@
         "inputType": 0,
         "description": "组件大小",
         "type": "Enum",
-        "typeRaw": "`'large'｜'small'｜'default'`",
+        "typeRaw": "`'large' \\| 'small' \\| 'default'`",
         "default": "`'default'`",
         "typeDefinition": [
           "large",
@@ -7157,7 +7018,7 @@
         "inputType": 0,
         "description": "设置数值的前缀",
         "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
+        "typeRaw": "`string \\| TemplateRef<void>`",
         "default": ""
       },
       {
@@ -7165,7 +7026,7 @@
         "inputType": 0,
         "description": "设置数值的后缀",
         "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
+        "typeRaw": "`string \\| TemplateRef<void>`",
         "default": ""
       },
       {
@@ -7173,7 +7034,7 @@
         "inputType": 0,
         "description": "数值的标题",
         "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
+        "typeRaw": "`string \\| TemplateRef<void>`",
         "default": ""
       },
       {
@@ -7181,7 +7042,7 @@
         "inputType": 0,
         "description": "数值内容",
         "type": "string",
-        "typeRaw": "`string｜number`",
+        "typeRaw": "`string \\| number`",
         "default": ""
       },
       {
@@ -7197,7 +7058,7 @@
         "inputType": 0,
         "description": "自定义数值展示",
         "type": "TemplateRef",
-        "typeRaw": "`TemplateRef<{ $implicit: string｜number }>`",
+        "typeRaw": "`TemplateRef<{ $implicit: string \\| number }>`",
         "default": ""
       }
     ],
@@ -7228,7 +7089,7 @@
         "inputType": 0,
         "description": "设置数值的前缀",
         "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
+        "typeRaw": "`string \\| TemplateRef<void>`",
         "default": ""
       },
       {
@@ -7236,7 +7097,7 @@
         "inputType": 0,
         "description": "设置数值的后缀",
         "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
+        "typeRaw": "`string \\| TemplateRef<void>`",
         "default": ""
       },
       {
@@ -7244,7 +7105,7 @@
         "inputType": 0,
         "description": "数值的标题",
         "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
+        "typeRaw": "`string \\| TemplateRef<void>`",
         "default": ""
       },
       {
@@ -7252,7 +7113,7 @@
         "inputType": 0,
         "description": "时间戳格式的目标时间",
         "type": "string",
-        "typeRaw": "`string｜number`",
+        "typeRaw": "`string \\| number`",
         "default": ""
       },
       {
@@ -7264,6 +7125,19 @@
         "default": ""
       }
     ],
+    "lib": "ng-zorro-antd",
+    "title": "统计",
+    "description": "展示统计数字。",
+    "whenToUse": "- 当需要突出某个或某组数字时。\n- 当需要展示带描述的统计类数据时使用。",
+    "doc": "/components/statistic/zh",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/statistic"
+  },
+  {
+    "_idx": 242,
+    "type": "component",
+    "selector": "nzFormat",
+    "types": {},
+    "properties": [],
     "lib": "ng-zorro-antd",
     "title": "统计",
     "description": "展示统计数字。",
@@ -7291,7 +7165,7 @@
         "inputType": 0,
         "description": "指定步骤条方向。目前支持水平（`horizontal`）和竖直（`vertical`）两种方向",
         "type": "Enum",
-        "typeRaw": "`'vertical'｜'horizontal'`",
+        "typeRaw": "`'vertical' \\| 'horizontal'`",
         "default": "`horizontal`",
         "typeDefinition": [
           "vertical",
@@ -7304,7 +7178,7 @@
         "inputType": 0,
         "description": "指定标签放置位置，默认水平放图标右侧，可选 `vertical` 放图标下方",
         "type": "Enum",
-        "typeRaw": "`'vertical'｜'horizontal'`",
+        "typeRaw": "`'vertical' \\| 'horizontal'`",
         "default": "`horizontal`",
         "typeDefinition": [
           "vertical",
@@ -7317,7 +7191,7 @@
         "inputType": 0,
         "description": "点状步骤条，可以设置为一个 TemplateRef",
         "type": "boolean",
-        "typeRaw": "`boolean｜TemplateRef<{ $implicit: TemplateRef<void>, status: string, index: number }>`",
+        "typeRaw": "`boolean \\| TemplateRef<{ $implicit: TemplateRef<void>, status: string, index: number }>`",
         "default": "`false`",
         "pureDefault": "false"
       },
@@ -7326,7 +7200,7 @@
         "inputType": 0,
         "description": "指定大小，目前支持普通（`default`）和迷你（`small`）",
         "type": "Enum",
-        "typeRaw": "`'small'｜'default'`",
+        "typeRaw": "`'small' \\| 'default'`",
         "default": "`'default'`",
         "typeDefinition": [
           "small",
@@ -7339,7 +7213,7 @@
         "inputType": 0,
         "description": "指定当前步骤的状态，可选 `wait` `process` `finish` `error`",
         "type": "Enum",
-        "typeRaw": "`'wait'｜'process'｜'finish'｜'error'`",
+        "typeRaw": "`'wait' \\| 'process' \\| 'finish' \\| 'error'`",
         "default": "`'process'`",
         "typeDefinition": [
           "wait",
@@ -7377,7 +7251,7 @@
         "inputType": 0,
         "description": "步骤的详情描述，可选",
         "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
+        "typeRaw": "`string \\| TemplateRef<void>`",
         "default": ""
       },
       {
@@ -7385,7 +7259,7 @@
         "inputType": 0,
         "description": "步骤图标的类型，可选",
         "type": "string",
-        "typeRaw": "`string｜string[]｜Set<string>｜{ [klass: string]: any; }` ｜ `TemplateRef<void>`",
+        "typeRaw": "`string \\| string[] \\| Set<string> \\| { [klass: string]: any; }`  \\|  `TemplateRef<void>`",
         "default": ""
       },
       {
@@ -7393,7 +7267,7 @@
         "inputType": 0,
         "description": "指定状态。当不配置该属性时，会使用 `nz-steps` 的 `nzCurrent` 来自动指定状态。可选：`wait` `process` `finish` `error`",
         "type": "Enum",
-        "typeRaw": "`'wait'｜'process'｜'finish'｜'error'`",
+        "typeRaw": "`'wait' \\| 'process' \\| 'finish' \\| 'error'`",
         "default": "`'wait'`",
         "typeDefinition": [
           "wait",
@@ -7408,7 +7282,7 @@
         "inputType": 0,
         "description": "标题",
         "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
+        "typeRaw": "`string \\| TemplateRef<void>`",
         "default": ""
       }
     ],
@@ -7439,7 +7313,7 @@
         "inputType": 0,
         "description": "选中时的内容",
         "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
+        "typeRaw": "`string \\| TemplateRef<void>`",
         "default": ""
       },
       {
@@ -7447,7 +7321,7 @@
         "inputType": 0,
         "description": "非选中时的内容",
         "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
+        "typeRaw": "`string \\| TemplateRef<void>`",
         "default": ""
       },
       {
@@ -7465,7 +7339,7 @@
         "inputType": 0,
         "description": "开关大小，可选值：`default` `small`",
         "type": "Enum",
-        "typeRaw": "`'small'｜'default'`",
+        "typeRaw": "`'small' \\| 'default'`",
         "default": "`'default'`",
         "typeDefinition": [
           "small",
@@ -7576,7 +7450,7 @@
         "inputType": 0,
         "description": "指定分页显示的位置",
         "type": "Enum",
-        "typeRaw": "`'top'｜'bottom'｜'both'`",
+        "typeRaw": "`'top' \\| 'bottom' \\| 'both'`",
         "default": "`bottom`",
         "typeDefinition": [
           "top",
@@ -7607,7 +7481,7 @@
         "inputType": 0,
         "description": "正常或迷你类型",
         "type": "Enum",
-        "typeRaw": "`'middle'｜'small'｜'default'`",
+        "typeRaw": "`'middle' \\| 'small' \\| 'default'`",
         "default": "`'default'`",
         "typeDefinition": [
           "middle",
@@ -7656,7 +7530,7 @@
         "inputType": 0,
         "description": "表格标题",
         "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
+        "typeRaw": "`string \\| TemplateRef<void>`",
         "default": ""
       },
       {
@@ -7664,7 +7538,7 @@
         "inputType": 0,
         "description": "表格尾部",
         "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
+        "typeRaw": "`string \\| TemplateRef<void>`",
         "default": ""
       },
       {
@@ -7672,7 +7546,7 @@
         "inputType": 0,
         "description": "无数据时显示内容",
         "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
+        "typeRaw": "`string \\| TemplateRef<void>`",
         "default": ""
       },
       {
@@ -7715,7 +7589,7 @@
         "inputType": 0,
         "description": "用于自定义页码的结构，用法参照 Pagination 组件",
         "type": "TemplateRef",
-        "typeRaw": "`TemplateRef<{ $implicit: 'page'｜'prev'｜'next', page: number }>`",
+        "typeRaw": "`TemplateRef<{ $implicit: 'page' \\| 'prev' \\| 'next', page: number }>`",
         "default": ""
       },
       {
@@ -7772,6 +7646,14 @@
         "pureDefault": "100"
       },
       {
+        "name": "nzVirtualForTrackBy",
+        "inputType": 0,
+        "description": "虚拟滚动数据 `TrackByFunction` 函数",
+        "type": "object",
+        "typeRaw": "`TrackByFunction<T>`",
+        "default": ""
+      },
+      {
         "name": "nzPageIndexChange",
         "inputType": 1,
         "description": "当前页码改变时的回调函数",
@@ -7804,7 +7686,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/table"
   },
   {
-    "_idx": 510,
+    "_idx": 524,
     "type": "component",
     "selector": "th",
     "types": {},
@@ -7888,7 +7770,7 @@
         "inputType": 2,
         "description": "当前排序状态，受控模式使用，可双向绑定",
         "type": "Enum",
-        "typeRaw": "'descend'｜'ascend'｜null",
+        "typeRaw": "'descend' \\| 'ascend' \\| null",
         "default": "null",
         "typeDefinition": [
           "descend",
@@ -7902,7 +7784,7 @@
         "inputType": 1,
         "description": "排序状态改变回调，受控模式使用",
         "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<'descend'｜'ascend'｜null>`",
+        "typeRaw": "`EventEmitter<'descend' \\| 'ascend' \\| null>`",
         "default": ""
       },
       {
@@ -7935,7 +7817,7 @@
         "inputType": 1,
         "description": "过滤器内容选择的 value 数据回调",
         "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<any[]｜any>`",
+        "typeRaw": "`EventEmitter<any[] \\| any>`",
         "default": ""
       },
       {
@@ -7967,7 +7849,7 @@
         "inputType": 0,
         "description": "设置列内容的对齐方式",
         "type": "Enum",
-        "typeRaw": "`'left'｜'right'｜'center'`",
+        "typeRaw": "`'left' \\| 'right' \\| 'center'`",
         "default": "",
         "typeDefinition": [
           "left",
@@ -7992,7 +7874,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/table"
   },
   {
-    "_idx": 931,
+    "_idx": 945,
     "type": "component",
     "selector": "td",
     "types": {},
@@ -8084,7 +7966,7 @@
         "inputType": 0,
         "description": "设置列内容的对齐方式",
         "type": "Enum",
-        "typeRaw": "`'left'｜'right'｜'center'`",
+        "typeRaw": "`'left' \\| 'right' \\| 'center'`",
         "default": "",
         "typeDefinition": [
           "left",
@@ -8109,7 +7991,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/table"
   },
   {
-    "_idx": 1194,
+    "_idx": 1208,
     "type": "component",
     "selector": "thead",
     "types": {},
@@ -8128,7 +8010,7 @@
         "inputType": 1,
         "description": "排序改变时的回调函数，需要与 `th` 上的 `nzSortKey` 同时使用，非受控排序下使用",
         "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<{ nzSortKey: string, value: 'descend'｜'ascend'｜null }>`",
+        "typeRaw": "`EventEmitter<{ nzSortKey: string, value: 'descend' \\| 'ascend' \\| null }>`",
         "default": ""
       }
     ],
@@ -8140,7 +8022,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/table"
   },
   {
-    "_idx": 1245,
+    "_idx": 1259,
     "type": "component",
     "selector": "tr",
     "types": {},
@@ -8162,7 +8044,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/table"
   },
   {
-    "_idx": 1282,
+    "_idx": 1296,
     "type": "directive",
     "selector": "nz-virtual-scroll",
     "types": {},
@@ -8191,9 +8073,9 @@
       {
         "name": "nzAnimated",
         "inputType": 0,
-        "description": "是否使用动画切换 Tabs，在 nzTabPosition=top｜bottom 时有效",
+        "description": "是否使用动画切换 Tabs，在 nzTabPosition=top \\| bottom 时有效",
         "type": "boolean",
-        "typeRaw": "`boolean｜{inkBar:boolean, tabPane:boolean}`",
+        "typeRaw": "`boolean \\| {inkBar:boolean, tabPane:boolean}`",
         "default": "`true`, 当 `type=\"card\"` 时为 `false`",
         "pureDefault": "true`, 当 `type=\"card\"` 时为 `false"
       },
@@ -8202,7 +8084,7 @@
         "inputType": 0,
         "description": "大小，提供 `large` `default` 和 `small` 三种大小",
         "type": "Enum",
-        "typeRaw": "`'large'｜'small'｜'default'`",
+        "typeRaw": "`'large' \\| 'small' \\| 'default'`",
         "default": "`'default'`",
         "typeDefinition": [
           "large",
@@ -8232,7 +8114,7 @@
         "inputType": 0,
         "description": "页签位置，可选值有 `top` `right` `bottom` `left`",
         "type": "Enum",
-        "typeRaw": "`'top'｜'right'｜'bottom'｜'left'`",
+        "typeRaw": "`'top' \\| 'right' \\| 'bottom' \\| 'left'`",
         "default": "`'top'`",
         "typeDefinition": [
           "top",
@@ -8247,7 +8129,7 @@
         "inputType": 0,
         "description": "页签的基本样式，可选 `line`、`card` 类型",
         "type": "Enum",
-        "typeRaw": "`'line'｜'card'`",
+        "typeRaw": "`'line' \\| 'card'`",
         "default": "`'line'`",
         "typeDefinition": [
           "line",
@@ -8332,7 +8214,7 @@
         "inputType": 0,
         "description": "选项卡头显示文字",
         "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
+        "typeRaw": "`string \\| TemplateRef<void>`",
         "default": ""
       },
       {
@@ -8409,7 +8291,7 @@
         "inputType": 0,
         "description": "设定标签工作的模式",
         "type": "Enum",
-        "typeRaw": "`'closeable'｜'default'｜'checkable'`",
+        "typeRaw": "`'closeable' \\| 'default' \\| 'checkable'`",
         "default": "`'default'`",
         "typeDefinition": [
           "closeable",
@@ -8672,7 +8554,7 @@
         "inputType": 0,
         "description": "指定最后一个幽灵节点是否存在或内容",
         "type": "string",
-        "typeRaw": "`string｜boolean｜TemplateRef<void>`",
+        "typeRaw": "`string \\| boolean \\| TemplateRef<void>`",
         "default": "`false`",
         "pureDefault": "false"
       },
@@ -8681,9 +8563,9 @@
         "inputType": 0,
         "description": "当最后一个幽灵节点存在時，指定其时间图点",
         "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
-        "default": "`<i nz-icon type=\"loading\"></i>`",
-        "pureDefault": "<i nz-icon type=\"loading\"></i>"
+        "typeRaw": "`string \\| TemplateRef<void>`",
+        "default": "`<i nz-icon nzType=\"loading\"></i>`",
+        "pureDefault": "<i nz-icon nzType=\"loading\"></i>"
       },
       {
         "name": "nzReverse",
@@ -8699,7 +8581,7 @@
         "inputType": 0,
         "description": "可以改变时间轴和内容的相对位置",
         "type": "Enum",
-        "typeRaw": "`'left'｜'alternate'｜'right'`",
+        "typeRaw": "`'left' \\| 'alternate' \\| 'right'`",
         "default": "",
         "typeDefinition": [
           "left",
@@ -8735,7 +8617,7 @@
         "inputType": 0,
         "description": "自定义时间轴点",
         "type": "string",
-        "typeRaw": "`string｜TemplateRef<void>`",
+        "typeRaw": "`string \\| TemplateRef<void>`",
         "default": ""
       }
     ],
@@ -8755,7 +8637,7 @@
       {
         "name": "nzDataSource",
         "inputType": 0,
-        "description": "数据源，其中若数据属性 `direction: 'right'` 将会被渲染到右边一栏中",
+        "description": "数据源，其中若数据属性 `direction: 'right'` 将会被渲染到右边一栏中或使用 `nzTargetKeys`",
         "type": "Array",
         "typeRaw": "`TransferItem[]`",
         "default": "`[]`",
@@ -8814,6 +8696,15 @@
         "typeRaw": "`string`",
         "default": "`'项目'`",
         "pureDefault": "项目"
+      },
+      {
+        "name": "nzRenderList",
+        "inputType": 0,
+        "description": "自定义渲染列表，见示例",
+        "type": "Array",
+        "typeRaw": "`Array<TemplateRef<void> \\| null>`",
+        "default": "`[null, null]`",
+        "pureDefault": "[null, null]"
       },
       {
         "name": "nzRender",
@@ -8875,6 +8766,14 @@
         "default": ""
       },
       {
+        "name": "nzTargetKeys",
+        "inputType": 0,
+        "description": "显示在右侧框数据的 key 集合",
+        "type": "Array",
+        "typeRaw": "`string[]`",
+        "default": ""
+      },
+      {
         "name": "nzChange",
         "inputType": 1,
         "description": "选项在两栏之间转移时的回调函数",
@@ -8917,7 +8816,7 @@
         "inputType": 0,
         "description": "元数据",
         "type": "Array",
-        "typeRaw": "`NzTreeNodeOptions[]｜NzTreeNode[]`",
+        "typeRaw": "`NzTreeNodeOptions[] \\| NzTreeNode[]`",
         "default": "`[]`",
         "pureDefault": "[]"
       },
@@ -9266,7 +9165,7 @@
         "inputType": 0,
         "description": "选择框大小",
         "type": "Enum",
-        "typeRaw": "`'large'｜'small'｜'default'`",
+        "typeRaw": "`'large' \\| 'small' \\| 'default'`",
         "default": "`'default'`",
         "typeDefinition": [
           "large",
@@ -9385,6 +9284,120 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tree-select"
   },
   {
+    "_idx": 21,
+    "type": "directive",
+    "selector": "nz-typography",
+    "types": {},
+    "properties": [
+      {
+        "name": "nzContent",
+        "inputType": 0,
+        "description": "组件内容",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
+      },
+      {
+        "name": "nzCopyable",
+        "inputType": 0,
+        "description": "是否可拷贝，需要配合 `[nzContent]` 使用",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzEditable",
+        "inputType": 0,
+        "description": "是否可编辑，是否可拷贝，需要配合 `[nzContent]` 使用",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzEllipsis",
+        "inputType": 0,
+        "description": "自动溢出省略，动态内容时需要配合 `[nzContent]` 使用",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzExpandable",
+        "inputType": 0,
+        "description": "自动溢出省略时是否可展开",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzCopyText",
+        "inputType": 0,
+        "description": "自定义被拷贝的文本",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
+      },
+      {
+        "name": "nzDisabled",
+        "inputType": 0,
+        "description": "禁用文本",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false",
+        "forceInputType": 0
+      },
+      {
+        "name": "nzEllipsisRows",
+        "inputType": 0,
+        "description": "自动溢出省略时省略行数",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`1`",
+        "pureDefault": "1"
+      },
+      {
+        "name": "nzType",
+        "inputType": 0,
+        "description": "文本类型",
+        "type": "Enum",
+        "typeRaw": "`'secondary'｜'warning'｜'danger'`",
+        "default": "",
+        "typeDefinition": [
+          "secondary",
+          "warning",
+          "danger"
+        ]
+      },
+      {
+        "name": "nzContentChange",
+        "inputType": 1,
+        "description": "当用户提交编辑内容时触发",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<string>`",
+        "default": ""
+      },
+      {
+        "name": "nzExpandChange",
+        "inputType": 1,
+        "description": "展开省略文本时触发",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<void>`",
+        "default": ""
+      }
+    ],
+    "description": "`p[nz-paragraph]`, `span[nz-text]`, `h1[nz-title]`, `h2[nz-title]`, `h3[nz-title]`, `h4[nz-title]` 的使用方法与 `[nz-typography]` 相同",
+    "lib": "ng-zorro-antd",
+    "title": "排版",
+    "whenToUse": "- 当需要展示标题、段落、列表内容时使用，如文章/博客/日志的文本样式。\n- 当需要一列基于文本的基础操作时，如拷贝/省略/可编辑。",
+    "doc": "/components/typography/zh",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/typography"
+  },
+  {
     "_idx": 41,
     "type": "component",
     "selector": "nz-upload",
@@ -9420,7 +9433,7 @@
         "inputType": 0,
         "description": "上传文件之前的钩子，参数为上传的文件，若返回 `false` 则停止上传。注意：**IE9** 不支持该方法；注意：务必使用 `=>` 定义处理方法。",
         "type": "function",
-        "typeRaw": "`(file: UploadFile, fileList: UploadFile[]) => boolean｜Observable<boolean>`",
+        "typeRaw": "`(file: UploadFile, fileList: UploadFile[]) => boolean \\| Observable<boolean>`",
         "default": ""
       },
       {
@@ -9436,7 +9449,7 @@
         "inputType": 0,
         "description": "上传所需参数或返回上传参数的方法；注意：务必使用 `=>` 定义处理方法。",
         "type": "object",
-        "typeRaw": "`Object｜((file: UploadFile) => Object)`",
+        "typeRaw": "`Object \\| ((file: UploadFile) => Object)`",
         "default": ""
       },
       {
@@ -9496,7 +9509,7 @@
         "inputType": 0,
         "description": "设置上传的请求头部，IE10 以上有效；注意：务必使用 `=>` 定义处理方法。",
         "type": "object",
-        "typeRaw": "`Object｜((file: UploadFile) => Object)`",
+        "typeRaw": "`Object \\| ((file: UploadFile) => Object)`",
         "default": ""
       },
       {
@@ -9504,7 +9517,7 @@
         "inputType": 0,
         "description": "上传列表的内建样式，支持三种基本样式 `text`, `picture` 和 `picture-card`",
         "type": "Enum",
-        "typeRaw": "`'text'｜'picture'｜'picture-card'`",
+        "typeRaw": "`'text' \\| 'picture' \\| 'picture-card'`",
         "default": "`'text'`",
         "typeDefinition": [
           "text",
@@ -9536,7 +9549,7 @@
         "inputType": 0,
         "description": "是否展示 uploadList, 可设为一个对象，用于单独设定 showPreviewIcon 和 showRemoveIcon",
         "type": "boolean",
-        "typeRaw": "`boolean｜{ showPreviewIcon?: boolean, showRemoveIcon?: boolean }`",
+        "typeRaw": "`boolean \\| { showPreviewIcon?: boolean, showRemoveIcon?: boolean }`",
         "default": "`true`",
         "pureDefault": "true"
       },
@@ -9580,7 +9593,7 @@
         "inputType": 0,
         "description": "点击移除文件时的回调，返回值为 false 时不移除。支持返回 `Observable` 对象；注意：务必使用 `=>` 定义处理方法。",
         "type": "function",
-        "typeRaw": "`(file: UploadFile) => boolean｜Observable<boolean>`",
+        "typeRaw": "`(file: UploadFile) => boolean \\| Observable<boolean>`",
         "default": ""
       },
       {
@@ -10803,6 +10816,19 @@
     "whenToUse": "",
     "doc": "/components/notice-icon/zh",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/notice-icon"
+  },
+  {
+    "_idx": 6,
+    "type": "component",
+    "selector": "numberToChinese",
+    "types": {},
+    "properties": [],
+    "description": "转化方法，包括三个参数：",
+    "lib": "@delon/abc",
+    "title": "人民币大写",
+    "whenToUse": "",
+    "doc": "/components/number-to-chinese/zh",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/number-to-chinese"
   },
   {
     "_idx": 6,

@@ -52,6 +52,9 @@ export default class implements CompletionItemProvider {
     item.command = this.triggerHideSuggestCommand;
     item.documentation = i._doc;
     if (isClean) {
+      if (i.directiveNameIsOutput) {
+        item.insertText = new SnippetString(`[${i.selector}]="$0"`);
+      }
       return item;
     }
     // `<` 非单词部分需要提前移除触发词
