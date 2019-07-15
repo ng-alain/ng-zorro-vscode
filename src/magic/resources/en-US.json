@@ -2118,6 +2118,45 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/comment"
   },
   {
+    "_idx": 70,
+    "type": "directive",
+    "selector": "nz-comment-avatar",
+    "types": {},
+    "properties": [],
+    "description": "The element to display as the comment avatar.",
+    "lib": "ng-zorro-antd",
+    "title": "Comment",
+    "whenToUse": "Comments can be used to enable discussions on an entity such as a page, blog post, issue or other.",
+    "doc": "/components/comment/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/comment"
+  },
+  {
+    "_idx": 76,
+    "type": "component",
+    "selector": "nz-comment-content",
+    "types": {},
+    "properties": [],
+    "description": "The main content of the comment.",
+    "lib": "ng-zorro-antd",
+    "title": "Comment",
+    "whenToUse": "Comments can be used to enable discussions on an entity such as a page, blog post, issue or other.",
+    "doc": "/components/comment/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/comment"
+  },
+  {
+    "_idx": 82,
+    "type": "component",
+    "selector": "nz-comment-action",
+    "types": {},
+    "properties": [],
+    "description": "The element items rendered below the comment content.",
+    "lib": "ng-zorro-antd",
+    "title": "Comment",
+    "whenToUse": "Comments can be used to enable discussions on an entity such as a page, blog post, issue or other.",
+    "doc": "/components/comment/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/comment"
+  },
+  {
     "_idx": 262,
     "type": "component",
     "selector": "nz-date-picker",
@@ -4341,7 +4380,7 @@
       {
         "name": "nzRotate",
         "inputType": 0,
-        "description": "Rotate degrees (since 7.0.0)",
+        "description": "Rotate degrees",
         "type": "number",
         "typeRaw": "`number`",
         "default": ""

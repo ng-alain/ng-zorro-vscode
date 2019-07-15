@@ -20,7 +20,7 @@ export default class implements CompletionItemProvider {
   provideCompletionItems(
     document: TextDocument,
     position: Position,
-    token: CancellationToken,
+    _token: CancellationToken,
     context: CompletionContext,
   ): ProviderResult<CompletionItem[] | CompletionList> {
     let char = context.triggerCharacter;
@@ -70,9 +70,31 @@ export default class implements CompletionItemProvider {
     const tag = getTag(document, position);
     if (tag == null) return this.genDirective();
 
-    const directive = getDirective(tag);
-    if (directive == null) return this.genDirective();
+    const directives = getDirective(tag);
+    if (directives.length === 0) return this.genDirective();
 
+    if (directives.length === 1) {
+      return this.genPropertiesByDirective(document, position, triggerCharacter, tag, directives[0]);
+    }
+
+    const res: CompletionItem[] = [];
+    directives.forEach(directive => {
+      const list = this.genPropertiesByDirective(document, position, triggerCharacter, tag, directive).map(i => {
+        i.label = `${directive.selector}.${i.label}`;
+        return i;
+      });
+      res.push(...list);
+    });
+    return res;
+  }
+
+  private genPropertiesByDirective(
+    document: TextDocument,
+    position: Position,
+    triggerCharacter: string,
+    tag: Tag,
+    directive: Directive,
+  ): CompletionItem[] {
     if (tag.isOnAttrValue) {
       const attr = tag.attributes[tag.attrName];
       if (attr.value.trim() === '') {

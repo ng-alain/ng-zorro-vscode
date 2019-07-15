@@ -1,6 +1,7 @@
 import { CancellationToken, Hover, HoverProvider, Position, ProviderResult, TextDocument } from 'vscode';
-import { first, getDirective } from '../resources';
+import { first, getDirective as getDirectives } from '../resources';
 import { getTag } from '../utils';
+import { Directive, DirectiveProperty } from '../interfaces';
 
 export default class implements HoverProvider {
   provideHover(doc: TextDocument, pos: Position, token: CancellationToken): ProviderResult<Hover> {
@@ -20,10 +21,10 @@ export default class implements HoverProvider {
 
     // when is property name
     if (tag.isOnAttrName) {
-      const directive = getDirective(tag);
-      if (directive == null) return null;
+      const directives = getDirectives(tag);
+      if (directives.length === 0) return null;
 
-      const property = directive.properties.find(w => w.name === tag.word);
+      const { property } = this.findProperty(directives, tag.word);
       return property ? new Hover(property._doc) : null;
     }
 
@@ -32,14 +33,25 @@ export default class implements HoverProvider {
       const attr = tag.attributes[tag.attrName];
       // when is complex type
       if (attr.value && attr.value.startsWith('{')) {
-        const directive = getDirective(tag);
-        if (directive == null) return null;
-        const property = directive.properties.find(w => w.name === attr.name);
+        const directives = getDirectives(tag);
+        if (directives.length === 0) return null;
+        const { property, directive } = this.findProperty(directives, attr.name);
         if (property == null || !property.complexType || property.complexType.length === 0) return null;
         const complexTypeProperties = directive.types[property.complexType];
         const complexDirective = complexTypeProperties.find(w => w.name === tag.word);
         return complexDirective ? new Hover(complexDirective._doc) : null;
       }
     }
+    return null; // todo: asdf
+  }
+
+  private findProperty(directives: Directive[], propertyName: string): { directive: Directive; property: DirectiveProperty } | null {
+    for (const directive of directives) {
+      const property = directive.properties.find(w => w.name === propertyName);
+      if (property) {
+        return { directive, property };
+      }
+    }
+    return null;
   }
 }

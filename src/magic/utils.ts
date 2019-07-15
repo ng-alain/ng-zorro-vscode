@@ -30,7 +30,7 @@ function getOffsetText(document: TextDocument, position: Position): { start: num
 export function getTag(doc: TextDocument, pos: Position, includeAttr = true): Tag {
   const offsetText = getOffsetText(doc, pos); // doc.lineAt(pos.line).text;
   const replacer = (char: string) => (raw: string) => char.repeat(raw.length);
-  const pureLine = offsetText.text.replace(/\{\{[^\}]*?\}\}/g, replacer('^'));
+  const pureLine = offsetText.text.replace(/\{\{[^\}]*?\}\}/g, replacer('^')).replace(/\*[a-zA-Z]+=\"[^"]+\"/g, replacer('^'));
   const attrFlagLine = pureLine.replace(/("[^"]*"|'[^']*')/g, replacer('%'));
   let tag: Tag;
   let attrstr = '';

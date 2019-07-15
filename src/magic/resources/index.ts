@@ -165,15 +165,19 @@ export function isComponent(text: string): boolean {
   return text.startsWith('nz-') || DIRECTIVE_NAMES.indexOf(text) !== -1;
 }
 
-export function getDirective(tag: Tag): Directive {
+export function getDirective(tag: Tag): Directive[] {
+  const list: Directive[] = [];
   if (isComponent(tag.name)) {
-    return first(tag.name);
+    list.push(first(tag.name));
   }
-  const key = Object.keys(tag.attributes).find(key => DIRECTIVE_NAMES.indexOf(tag.attributes[key].name) !== -1);
-  if (key) {
-    return first(tag.attributes[key].name);
-  }
-  return null;
+
+  Object.keys(tag.attributes)
+    .filter(key => DIRECTIVE_NAMES.indexOf(tag.attributes[key].name) !== -1)
+    .forEach(key => {
+      list.push(first(tag.attributes[key].name));
+    });
+
+  return list;
 }
 
 export function query(type: DirectiveType) {

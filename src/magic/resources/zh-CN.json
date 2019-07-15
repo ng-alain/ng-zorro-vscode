@@ -2125,6 +2125,45 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/comment"
   },
   {
+    "_idx": 70,
+    "type": "directive",
+    "selector": "nz-comment-avatar",
+    "types": {},
+    "properties": [],
+    "description": "要显示为评论头像的元素。",
+    "lib": "ng-zorro-antd",
+    "title": "评论",
+    "whenToUse": "评论组件可用于对事物的讨论，例如页面、博客文章、问题等等。",
+    "doc": "/components/comment/zh",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/comment"
+  },
+  {
+    "_idx": 76,
+    "type": "component",
+    "selector": "nz-comment-content",
+    "types": {},
+    "properties": [],
+    "description": "评论的主要内容。",
+    "lib": "ng-zorro-antd",
+    "title": "评论",
+    "whenToUse": "评论组件可用于对事物的讨论，例如页面、博客文章、问题等等。",
+    "doc": "/components/comment/zh",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/comment"
+  },
+  {
+    "_idx": 82,
+    "type": "component",
+    "selector": "nz-comment-action",
+    "types": {},
+    "properties": [],
+    "description": "在评论内容下面呈现的操作项。",
+    "lib": "ng-zorro-antd",
+    "title": "评论",
+    "whenToUse": "评论组件可用于对事物的讨论，例如页面、博客文章、问题等等。",
+    "doc": "/components/comment/zh",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/comment"
+  },
+  {
     "_idx": 259,
     "type": "component",
     "selector": "nz-date-picker",
@@ -4346,7 +4385,7 @@
       {
         "name": "nzRotate",
         "inputType": 0,
-        "description": "图标旋转角度（7.0.0 开始支持）",
+        "description": "图标旋转角度",
         "type": "number",
         "typeRaw": "`number`",
         "default": ""
