@@ -166,18 +166,20 @@ export function isComponent(text: string): boolean {
 }
 
 export function getDirective(tag: Tag): Directive[] {
-  const list: Directive[] = [];
+  const dict: { [key: string]: Directive } = {};
   if (isComponent(tag.name)) {
-    list.push(first(tag.name));
+    dict[tag.name] = first(tag.name);
   }
 
   Object.keys(tag.attributes)
     .filter(key => DIRECTIVE_NAMES.indexOf(tag.attributes[key].name) !== -1)
     .forEach(key => {
-      list.push(first(tag.attributes[key].name));
+      const keyValue = tag.attributes[key].name;
+      if (dict[keyValue]) return;
+      dict[keyValue] = first(tag.name);
     });
 
-  return list;
+  return Object.values(dict);
 }
 
 export function query(type: DirectiveType) {
