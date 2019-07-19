@@ -18,10 +18,11 @@
 
 ## 配置项
 
-| 名称                       | 描述         | 类型           | 默认值  |
-|----------------------------|------------|----------------|---------|
-| `ng-zorro-vscode.language` | 语言         | `zh-CN, en-US` | `en-US` |
-| `ng-zorro-vscode.hover`    | 是否开启悬停 | `boolean`      | `true`  |
+| 名称                             | 描述             | 类型           | 默认值  |
+|----------------------------------|----------------|----------------|---------|
+| `ng-zorro-vscode.language`       | 语言             | `zh-CN, en-US` | `en-US` |
+| `ng-zorro-vscode.hover`          | 是否开启悬停     | `boolean`      | `true`  |
+| `ng-zorro-vscode.inlineTemplate` | 是否支持内联模板 | `boolean`      | `true`  |
 
 > **注意:** 修改配置必须**重启Visual Studio Code**。
 

@@ -8,8 +8,9 @@ import { readFileSync, existsSync } from 'fs';
 import { join } from 'path';
 
 export const CONFIG = {
-  language: 'zh-CN',
+  language: 'en-US',
   hover: true,
+  inlineTemplate: true,
   isAntd: true,
   isAlain: true,
 };
@@ -104,6 +105,7 @@ export async function INIT(notifier: Notifier) {
   const cog = workspace.getConfiguration(NAME);
   CONFIG.language = cog.language;
   CONFIG.hover = cog.hover;
+  CONFIG.inlineTemplate = cog.inlineTemplate;
   if (workspace.workspaceFolders != null && workspace.workspaceFolders.length > 0) {
     CONFIG.isAntd = false;
     CONFIG.isAlain = false;
@@ -176,10 +178,10 @@ export function getDirective(tag: Tag): Directive[] {
     .forEach(key => {
       const keyValue = tag.attributes[key].name;
       if (dict[keyValue]) return;
-      dict[keyValue] = first(tag.name);
+      dict[keyValue] = first(keyValue);
     });
 
-  return Object.values(dict);
+  return Object.values(dict).filter(w => !!w);
 }
 
 export function query(type: DirectiveType) {

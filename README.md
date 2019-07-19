@@ -20,10 +20,11 @@ In addition, some common completion code snippets are built in and prefix with `
 
 ## Configuration
 
-| Name                       | Description             | Type           | Default |
-|----------------------------|-------------------------|----------------|---------|
-| `ng-zorro-vscode.language` | Set language code       | `zh-CN, en-US` | `en-US` |
-| `ng-zorro-vscode.hover`    | Whether to enable hover | `boolean`      | `true`  |
+| Name                             | Description                                                  | Type           | Default |
+|----------------------------------|--------------------------------------------------------------|----------------|---------|
+| `ng-zorro-vscode.language`       | Set language code                                            | `zh-CN, en-US` | `en-US` |
+| `ng-zorro-vscode.hover`          | Whether to enable hover                                      | `boolean`      | `true`  |
+| `ng-zorro-vscode.inlineTemplate` | Whether to enable support inline template in typescript file | `boolean`      | `true`  |
 
 > **NOTICE:** Changed configuration must **restart Visual Studio Code**.
 

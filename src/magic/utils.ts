@@ -1,6 +1,6 @@
 import { Position, Range, TextDocument } from 'vscode';
 import { Tag, TagAttr, InputAttrType, TagAttrValueType } from './interfaces';
-import { isComponent } from './resources';
+import { isComponent, CONFIG } from './resources';
 
 function getOffsetText(document: TextDocument, position: Position): { start: number; end: number; cursor: number; text: string } {
   const text = document.getText();
@@ -27,7 +27,21 @@ function getOffsetText(document: TextDocument, position: Position): { start: num
   };
 }
 
+export function inTemplate(doc: TextDocument, pos: Position): boolean {
+  if (CONFIG.inlineTemplate && doc.languageId === 'typescript') {
+    const templateMatch = /template: `([^`]+)`/gm.exec(doc.getText());
+    if (!templateMatch) return false;
+    const templateStartOffset = templateMatch.index + 11; // 11 = 'template: `'.length
+    const templateEndOffset = templateStartOffset + templateMatch[1].length;
+    const templateStartPosition = doc.positionAt(templateStartOffset);
+    const templateEndPosition = doc.positionAt(templateEndOffset);
+    if (pos.isBefore(templateStartPosition) || pos.isAfter(templateEndPosition)) return false;
+  }
+  return true;
+}
+
 export function getTag(doc: TextDocument, pos: Position, includeAttr = true): Tag {
+  if (!inTemplate(doc, pos)) return null;
   const offsetText = getOffsetText(doc, pos); // doc.lineAt(pos.line).text;
   const replacer = (char: string) => (raw: string) => char.repeat(raw.length);
   const pureLine = offsetText.text.replace(/\{\{[^\}]*?\}\}/g, replacer('^')).replace(/\*[a-zA-Z]+=\"[^"]+\"/g, replacer('^'));

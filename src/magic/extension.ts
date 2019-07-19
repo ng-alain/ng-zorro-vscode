@@ -15,13 +15,14 @@ export async function activate(context: ExtensionContext) {
   }
 
   const hoverProvider = new NAHoverProvider();
+  const languageSchemes = [{ scheme: 'file', language: 'html' }, { scheme: 'file', language: 'typescript' }];
 
-  const htmlScheme = { scheme: 'file', language: 'html' };
-
-  const providers = [languages.registerCompletionItemProvider(htmlScheme, new NAAutoCompletionItemProvider(), '<', ' ', '[', '(', '"')];
+  const providers = languageSchemes.map(scheme => {
+    return languages.registerCompletionItemProvider(scheme, new NAAutoCompletionItemProvider(), '<', ' ', '[', '(', '"');
+  });
 
   if (CONFIG.hover) {
-    providers.push(languages.registerHoverProvider([htmlScheme], hoverProvider));
+    providers.push(languages.registerHoverProvider(languageSchemes, hoverProvider));
   }
 
   context.subscriptions.push(...providers);

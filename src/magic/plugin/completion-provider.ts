@@ -14,7 +14,7 @@ import {
 } from 'vscode';
 import { DirectiveProperty, Directive, DirectiveTypeDefinition, InputAttrType, DirectiveTypeDefinitionComplex, Tag } from '../interfaces';
 import { getDirective, CONFIG, RESOURCES } from '../resources';
-import { getTag } from '../utils';
+import { getTag, inTemplate } from '../utils';
 
 export default class implements CompletionItemProvider {
   provideCompletionItems(
@@ -23,6 +23,7 @@ export default class implements CompletionItemProvider {
     _token: CancellationToken,
     context: CompletionContext,
   ): ProviderResult<CompletionItem[] | CompletionList> {
+    if (!inTemplate(document, position)) return [];
     let char = context.triggerCharacter;
     switch (char) {
       // Component
