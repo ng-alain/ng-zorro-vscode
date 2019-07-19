@@ -3535,6 +3535,15 @@
         "default": ""
       },
       {
+        "name": "nzBackdrop",
+        "inputType": 0,
+        "description": "whether the dropdown has a backdrop when `nzTrigger` is `click`",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`true`",
+        "pureDefault": "true"
+      },
+      {
         "name": "nzOverlayClassName",
         "inputType": 0,
         "description": "Class name of the dropdown root element",
@@ -3568,7 +3577,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/dropdown"
   },
   {
-    "_idx": 176,
+    "_idx": 190,
     "type": "component",
     "selector": "nz-dropdown-menu",
     "types": {},
@@ -5380,6 +5389,19 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/menu"
   },
   {
+    "_idx": 726,
+    "type": "directive",
+    "selector": "nzModalFooter",
+    "types": {},
+    "properties": [],
+    "description": "Another way to customize the footer button.",
+    "lib": "ng-zorro-antd",
+    "title": "Modal",
+    "whenToUse": "When requiring users to interact with application, but without jumping to a new page to interrupt\nthe user's workflow, you can use `Modal` to create a new floating layer over the current page for user\ngetting feedback or information purposes.\nAdditionally, if you need show a simple confirmation dialog, you can use `NzModalService.confirm()`,\nand so on.",
+    "doc": "/components/modal/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/modal"
+  },
+  {
     "_idx": 20,
     "type": "component",
     "selector": "nz-page-header",
@@ -6347,6 +6369,19 @@
     "whenToUse": "- Show evaluation.\n- A quick rating operation on something.",
     "doc": "/components/rate/en",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/rate"
+  },
+  {
+    "_idx": 19,
+    "type": "component",
+    "selector": "nz-result",
+    "types": {},
+    "properties": [],
+    "lib": "ng-zorro-antd",
+    "title": "Result",
+    "description": "Used to feed back the results of a series of operational tasks.",
+    "whenToUse": "Use when important operations need to inform the user to process the results and the feedback is more complicated.",
+    "doc": "/components/result/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/result"
   },
   {
     "_idx": 29,
@@ -8145,6 +8180,15 @@
         "pureDefault": "true"
       },
       {
+        "name": "nzLinkRouter",
+        "inputType": 0,
+        "description": "Link with Angular router. It supports child mode and query param mode",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
         "name": "nzSelectedIndexChange",
         "inputType": 1,
         "description": "Current tab's index change callback",
@@ -8185,7 +8229,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tabs"
   },
   {
-    "_idx": 255,
+    "_idx": 269,
     "type": "component",
     "selector": "nz-tab",
     "types": {},
@@ -8249,12 +8293,25 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tabs"
   },
   {
-    "_idx": 362,
+    "_idx": 376,
     "type": "directive",
     "selector": "nz-tab",
     "types": {},
     "properties": [],
     "description": "Tab contents can be lazy loaded by declaring the body in a `ng-template` with the `[nz-tab]` attribute.",
+    "lib": "ng-zorro-antd",
+    "title": "Tabs",
+    "whenToUse": "Ant Design has 3 types of Tabs for different situations.",
+    "doc": "/components/tabs/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tabs"
+  },
+  {
+    "_idx": 382,
+    "type": "component",
+    "selector": "nz-tab-link",
+    "types": {},
+    "properties": [],
+    "description": "Show a link in tab's head. Used in router link mode.",
     "lib": "ng-zorro-antd",
     "title": "Tabs",
     "whenToUse": "Ant Design has 3 types of Tabs for different situations.",
@@ -9067,6 +9124,15 @@
         "name": "nzMultiple",
         "inputType": 0,
         "description": "Support multiple or not, will be `true` when enable `nzCheckable`.",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzHideUnMatched",
+        "inputType": 0,
+        "description": "Hide unmatched nodes while searching",
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",

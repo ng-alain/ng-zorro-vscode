@@ -3190,7 +3190,7 @@
         "pureDefault": "false"
       },
       {
-        "name": "nzBorder",
+        "name": "nzBorderer",
         "inputType": 0,
         "description": "是否展示边框",
         "type": "boolean",
@@ -3540,6 +3540,15 @@
         "default": ""
       },
       {
+        "name": "nzBackdrop",
+        "inputType": 0,
+        "description": "是否在 `nzTrigger` 为 `click`时增加背景蒙版",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`true`",
+        "pureDefault": "true"
+      },
+      {
         "name": "nzOverlayClassName",
         "inputType": 0,
         "description": "下拉根元素的类名称",
@@ -3573,7 +3582,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/dropdown"
   },
   {
-    "_idx": 176,
+    "_idx": 190,
     "type": "component",
     "selector": "nz-dropdown-menu",
     "types": {},
@@ -5394,6 +5403,19 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/menu"
   },
   {
+    "_idx": 727,
+    "type": "directive",
+    "selector": "nzModalFooter",
+    "types": {},
+    "properties": [],
+    "description": "另一种自定义页脚按钮的方式。",
+    "lib": "ng-zorro-antd",
+    "title": "对话框",
+    "whenToUse": "需要用户处理事务，又不希望跳转页面以致打断工作流程时，可以使用 `Modal` 在当前页面正中打开一个浮层，承载相应的操作。",
+    "doc": "/components/modal/zh",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/modal"
+  },
+  {
     "_idx": 20,
     "type": "component",
     "selector": "nz-page-header",
@@ -5425,7 +5447,7 @@
       },
       {
         "name": "nzBack",
-        "inputType": 0,
+        "inputType": 1,
         "description": "返回按钮的点击事件",
         "type": "EventEmitter",
         "typeRaw": "`EventEmitter<void>`",
@@ -6377,6 +6399,19 @@
     "whenToUse": "- 对评价进行展示。\n- 对事物进行快速的评级操作。",
     "doc": "/components/rate/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/rate"
+  },
+  {
+    "_idx": 19,
+    "type": "component",
+    "selector": "nz-result",
+    "types": {},
+    "properties": [],
+    "lib": "ng-zorro-antd",
+    "title": "结果",
+    "description": "用于反馈一系列操作任务的处理结果。",
+    "whenToUse": "当有重要操作需告知用户处理结果，且反馈内容较为复杂时使用。",
+    "doc": "/components/result/zh",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/result"
   },
   {
     "_idx": 29,
@@ -8203,6 +8238,15 @@
         "pureDefault": "true"
       },
       {
+        "name": "nzLinkRouter",
+        "inputType": 0,
+        "description": "与 Angular 路由联动",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
         "name": "nzSelectedIndexChange",
         "inputType": 1,
         "description": "当前激活 tab 面板的 序列号变更回调函数",
@@ -8243,7 +8287,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tabs"
   },
   {
-    "_idx": 258,
+    "_idx": 272,
     "type": "component",
     "selector": "nz-tab",
     "types": {},
@@ -8307,12 +8351,25 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tabs"
   },
   {
-    "_idx": 365,
+    "_idx": 379,
     "type": "directive",
     "selector": "nz-tab",
     "types": {},
     "properties": [],
     "description": "与 `ng-template` 一同使用，用于标记需要懒加载的 `tab` 内容，具体用法见示例。",
+    "lib": "ng-zorro-antd",
+    "title": "标签页",
+    "whenToUse": "提供平级的区域将大块内容进行收纳和展现，保持界面整洁。",
+    "doc": "/components/tabs/zh",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tabs"
+  },
+  {
+    "_idx": 385,
+    "type": "directive",
+    "selector": "nz-tab-link",
+    "types": {},
+    "properties": [],
+    "description": "选项卡头显示链接，在路由联动模式下使用。",
     "lib": "ng-zorro-antd",
     "title": "标签页",
     "whenToUse": "提供平级的区域将大块内容进行收纳和展现，保持界面整洁。",
@@ -9194,6 +9251,15 @@
         "name": "nzMultiple",
         "inputType": 0,
         "description": "支持多选（当设置 nzCheckable 时自动变为true）",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzHideUnMatched",
+        "inputType": 0,
+        "description": "搜索隐藏未匹配的节点",
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
