@@ -8483,6 +8483,15 @@
         "pureDefault": ""
       },
       {
+        "name": "nzUse12Hours",
+        "inputType": 0,
+        "description": "display as 12 hours format, with default format `h:mm:ss a`",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
         "name": "ngModelChange",
         "inputType": 1,
         "description": "a callback function, can be executed when the selected time is changing",
@@ -9207,7 +9216,7 @@
         "pureDefault": "false"
       },
       {
-        "name": "nzDefaultExpandedKeys",
+        "name": "nzExpandedKeys",
         "inputType": 0,
         "description": "Default expanded treeNodes",
         "type": "Array",
@@ -10867,6 +10876,14 @@
         "pureDefault": "/"
       },
       {
+        "name": "homeI18n",
+        "inputType": 0,
+        "description": "首页链接国际化参数",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
+      },
+      {
         "name": "autoBreadcrumb",
         "inputType": 0,
         "description": "自动生成导航，以当前路由从主菜单中定位",
@@ -11187,8 +11204,52 @@
     "_idx": 487,
     "type": "component",
     "selector": "reuse-tab",
-    "types": {},
+    "types": {
+      "ReuseContextI18n": [
+        {
+          "name": "close",
+          "inputType": 0,
+          "description": "Close",
+          "type": "string",
+          "typeRaw": "`string`",
+          "default": ""
+        },
+        {
+          "name": "closeOther",
+          "inputType": 0,
+          "description": "Close other tabs",
+          "type": "string",
+          "typeRaw": "`string`",
+          "default": ""
+        },
+        {
+          "name": "closeRight",
+          "inputType": 0,
+          "description": "Close tabs to the right",
+          "type": "string",
+          "typeRaw": "`string`",
+          "default": ""
+        },
+        {
+          "name": "clear",
+          "inputType": 0,
+          "description": "Clear tabs",
+          "type": "string",
+          "typeRaw": "`string`",
+          "default": ""
+        }
+      ]
+    },
     "properties": [
+      {
+        "name": "i18n",
+        "inputType": 0,
+        "description": "Context Menu internationalization, support HTML",
+        "type": "object",
+        "typeRaw": "`ReuseContextI18n`",
+        "default": "",
+        "complexType": "ReuseContextI18n"
+      },
       {
         "name": "mode",
         "inputType": 0,
@@ -11291,6 +11352,15 @@
         "type": "number",
         "typeRaw": "`number`",
         "default": ""
+      },
+      {
+        "name": "tabType",
+        "inputType": 0,
+        "description": "Basic style of tabs",
+        "type": "string",
+        "typeRaw": "`line, card`",
+        "default": "`line`",
+        "pureDefault": "line"
       },
       {
         "name": "close",
@@ -11435,6 +11505,15 @@
           "name": "allInBody",
           "inputType": 0,
           "description": "Whether to request all parameter data into `body` (except `url` itself parameter)",
+          "type": "boolean",
+          "typeRaw": "`boolean`",
+          "default": "`false`",
+          "pureDefault": "false"
+        },
+        {
+          "name": "lazyLoad",
+          "inputType": 0,
+          "description": "Whether to dealy loading data in first render `st` component",
           "type": "boolean",
           "typeRaw": "`boolean`",
           "default": "`false`",

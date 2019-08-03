@@ -200,7 +200,7 @@ function getProperties(directive: Directive, data: string[][]): DirectivePropert
 
 function genPropertyItem(directive: Directive, data: string[]): DirectiveProperty {
   if (COG.INGORE_PROPERTIES.includes(data[0])) return null;
-  const nameMatch = data[0].trim().match(/((?:\[|\(|\[\()[\-a-zA-Z]+(?:\)\]|\]|\)))/g);
+  const nameMatch = data[0].trim().match(/((?:\[|\(|\[\()[\-a-zA-Z0-9]+(?:\)\]|\]|\)))/g);
   if (nameMatch == null || nameMatch.length === 0) return null;
   // ingore includes `Deprecated` in description
   if (data[1].trim().includes('Deprecated')) return null;
@@ -339,7 +339,7 @@ function parseType(directive: Directive, item: DirectiveProperty) {
 
   // 默认复杂类型，从类型列表中查看到第一个带有定义的复杂类型
   for (let t of types) {
-    if (!/^[A-Z][a-zA-Z]+$/g.test(t)) continue;
+    if (!/^[A-Z][a-zA-Z0-9]+$/g.test(t)) continue;
     if (directive.types[t]) {
       item.complexType = t;
       break;

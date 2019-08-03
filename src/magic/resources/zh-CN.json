@@ -8610,6 +8610,15 @@
         "pureDefault": ""
       },
       {
+        "name": "nzUse12Hours",
+        "inputType": 0,
+        "description": "使用12小时制，为true时format默认为`h:mm:ss a`",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
         "name": "ngModelChange",
         "inputType": 1,
         "description": "时间发生变化的回调",
@@ -9334,7 +9343,7 @@
         "pureDefault": "false"
       },
       {
-        "name": "nzDefaultExpandedKeys",
+        "name": "nzExpandedKeys",
         "inputType": 0,
         "description": "默认展开指定的树节点",
         "type": "Array",
@@ -10986,6 +10995,14 @@
         "pureDefault": "/"
       },
       {
+        "name": "homeI18n",
+        "inputType": 0,
+        "description": "首页链接国际化参数",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
+      },
+      {
         "name": "autoBreadcrumb",
         "inputType": 0,
         "description": "自动生成导航，以当前路由从主菜单中定位",
@@ -11306,8 +11323,52 @@
     "_idx": 489,
     "type": "component",
     "selector": "reuse-tab",
-    "types": {},
+    "types": {
+      "ReuseContextI18n": [
+        {
+          "name": "close",
+          "inputType": 0,
+          "description": "关闭",
+          "type": "string",
+          "typeRaw": "`string`",
+          "default": ""
+        },
+        {
+          "name": "closeOther",
+          "inputType": 0,
+          "description": "关闭其它",
+          "type": "string",
+          "typeRaw": "`string`",
+          "default": ""
+        },
+        {
+          "name": "closeRight",
+          "inputType": 0,
+          "description": "关闭右边",
+          "type": "string",
+          "typeRaw": "`string`",
+          "default": ""
+        },
+        {
+          "name": "clear",
+          "inputType": 0,
+          "description": "清空",
+          "type": "string",
+          "typeRaw": "`string`",
+          "default": ""
+        }
+      ]
+    },
     "properties": [
+      {
+        "name": "i18n",
+        "inputType": 0,
+        "description": "右击菜单国际化，支持HTML",
+        "type": "object",
+        "typeRaw": "`ReuseContextI18n`",
+        "default": "",
+        "complexType": "ReuseContextI18n"
+      },
       {
         "name": "mode",
         "inputType": 0,
@@ -11410,6 +11471,15 @@
         "type": "number",
         "typeRaw": "`number`",
         "default": ""
+      },
+      {
+        "name": "tabType",
+        "inputType": 0,
+        "description": "tabs 页签的基本样式",
+        "type": "string",
+        "typeRaw": "`line, card`",
+        "default": "`line`",
+        "pureDefault": "line"
       },
       {
         "name": "close",
@@ -11554,6 +11624,15 @@
           "name": "allInBody",
           "inputType": 0,
           "description": "是否将请求所有参数数据都放入 `body` 当中（`url` 地址本身参数除外），仅当 `method: 'POST'` 时有效",
+          "type": "boolean",
+          "typeRaw": "`boolean`",
+          "default": "`false`",
+          "pureDefault": "false"
+        },
+        {
+          "name": "lazyLoad",
+          "inputType": 0,
+          "description": "是否延迟加载数据，即渲染结束后不会主动发起请求",
           "type": "boolean",
           "typeRaw": "`boolean`",
           "default": "`false`",

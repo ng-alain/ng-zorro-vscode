@@ -1,3 +1,8 @@
+# 8.2.2
+
+- 同步 ng-zorro-antd 8.1.2
+- 同步 ng-alain 8.3.0
+
 # 8.2.1
 
 - 同步 ng-zorro-antd 8.1.0
