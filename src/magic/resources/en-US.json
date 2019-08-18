@@ -347,45 +347,6 @@
         "forceInputType": 0
       },
       {
-        "name": "nzPlacement",
-        "inputType": 0,
-        "description": "The position of the tooltip relative to the target",
-        "type": "Enum",
-        "typeRaw": "`'top' \\| 'left' \\| 'right' \\| 'bottom' \\| 'topLeft' \\| 'topRight' \\| 'bottomLeft' \\| 'bottomRight' \\| 'leftTop' \\| 'leftBottom' \\| 'rightTop' \\| 'rightBottom'`",
-        "default": "`'top'`",
-        "typeDefinition": [
-          "top",
-          "left",
-          "right",
-          "bottom",
-          "topLeft",
-          "topRight",
-          "bottomLeft",
-          "bottomRight",
-          "leftTop",
-          "leftBottom",
-          "rightTop",
-          "rightBottom"
-        ],
-        "pureDefault": "top",
-        "_common": true
-      },
-      {
-        "name": "nzTrigger",
-        "inputType": 0,
-        "description": "Tooltip trigger mode",
-        "type": "Enum",
-        "typeRaw": "`'click' \\| 'focus' \\| 'hover'`",
-        "default": "`'hover'`",
-        "typeDefinition": [
-          "click",
-          "focus",
-          "hover"
-        ],
-        "pureDefault": "hover",
-        "_common": true
-      },
-      {
         "name": "nzVisible",
         "inputType": 0,
         "description": "Whether the floating tooltip card is visible or not",
@@ -405,12 +366,49 @@
         "_common": true
       },
       {
-        "name": "nzTitle",
+        "name": "nzTooltipTitle",
         "inputType": 0,
         "description": "The text shown in the tooltip",
         "type": "string",
         "typeRaw": "`string \\| TemplateRef<void>`",
         "default": ""
+      },
+      {
+        "name": "nzTooltipTrigger",
+        "inputType": 0,
+        "description": "Tooltip trigger mode",
+        "type": "Enum",
+        "typeRaw": "`'click' \\| 'focus' \\| 'hover'`",
+        "default": "`'hover'`",
+        "typeDefinition": [
+          "click",
+          "focus",
+          "hover"
+        ],
+        "pureDefault": "hover"
+      },
+      {
+        "name": "nzTooltipPlacement",
+        "inputType": 0,
+        "description": "The position of the tooltip relative to the target",
+        "type": "Enum",
+        "typeRaw": "`'top' \\| 'left' \\| 'right' \\| 'bottom' \\| 'topLeft' \\| 'topRight' \\| 'bottomLeft' \\| 'bottomRight' \\| 'leftTop' \\| 'leftBottom' \\| 'rightTop' \\| 'rightBottom'`",
+        "default": "`'top'`",
+        "typeDefinition": [
+          "top",
+          "left",
+          "right",
+          "bottom",
+          "topLeft",
+          "topRight",
+          "bottomLeft",
+          "bottomRight",
+          "leftTop",
+          "leftBottom",
+          "rightTop",
+          "rightBottom"
+        ],
+        "pureDefault": "top"
       }
     ],
     "lib": "ng-zorro-antd",
@@ -751,14 +749,6 @@
         "pureDefault": "5"
       },
       {
-        "name": "nzOffsetBottom",
-        "inputType": 0,
-        "description": "Pixels to offset from bottom when calculating position of scroll",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": ""
-      },
-      {
         "name": "nzOffsetTop",
         "inputType": 0,
         "description": "Pixels to offset from top when calculating position of scroll",
@@ -810,7 +800,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/anchor"
   },
   {
-    "_idx": 154,
+    "_idx": 140,
     "type": "component",
     "selector": "nz-link",
     "types": {},
@@ -1040,6 +1030,14 @@
         "type": "string",
         "typeRaw": "`string`",
         "default": ""
+      },
+      {
+        "name": "nzError",
+        "inputType": 1,
+        "description": "handler when img load error, call the `preventDefault` method to prevent default fallback behavior",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<Event>`",
+        "default": ""
       }
     ],
     "lib": "ng-zorro-antd",
@@ -1176,6 +1174,23 @@
         "description": "If `nzStatus` is set, `text` sets the display text of the status `dot`",
         "type": "string",
         "typeRaw": "`string`",
+        "default": ""
+      },
+      {
+        "name": "nzTitle",
+        "inputType": 0,
+        "description": "Text to show when hovering over the badge（Only Non-standalone)",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": "`nzCount`",
+        "pureDefault": "nzCount"
+      },
+      {
+        "name": "nzOffset",
+        "inputType": 0,
+        "description": "set offset of the badge dot, like[x, y] (Only Non-standalone)",
+        "type": "string",
+        "typeRaw": "`[number, number]`",
         "default": ""
       }
     ],
@@ -1981,6 +1996,82 @@
     "whenToUse": "- Used for selecting multiple values from several options.\n- If you use only one checkbox, it is the same as using Switch to toggle between two states. The difference is that Switch will trigger the state change directly, but Checkbox just marks the state as changed and this needs to be submitted.",
     "doc": "/components/checkbox/en",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/checkbox"
+  },
+  {
+    "_idx": 27,
+    "type": "component",
+    "selector": "nz-code-editor",
+    "types": {},
+    "properties": [
+      {
+        "name": "nzEditorMode",
+        "inputType": 0,
+        "description": "Mode of monaco editor",
+        "type": "string",
+        "typeRaw": "`normal`\\|`diff`",
+        "default": "`normal`",
+        "pureDefault": "normal"
+      },
+      {
+        "name": "nzLoading",
+        "inputType": 0,
+        "description": "Show the loading spin",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false",
+        "forceInputType": 0
+      },
+      {
+        "name": "nzOriginalText",
+        "inputType": 0,
+        "description": "The content of the left editor in `diff` mode",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzFullControl",
+        "inputType": 0,
+        "description": "Enable full control mode. User should manage `TextModel` manually in this mode",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzEditorOption",
+        "inputType": 0,
+        "description": "[Please refer to the doc of monaco editor](https://microsoft.github.io/monaco-editor/api/interfaces/monaco.editor.ieditorconstructionoptions.html)",
+        "type": "object",
+        "typeRaw": "`IEditorConstructionOptions`",
+        "default": "`{}`",
+        "pureDefault": "{}"
+      },
+      {
+        "name": "nzToolkit",
+        "inputType": 0,
+        "description": "A placeholder for adding some quick actions",
+        "type": "TemplateRef",
+        "typeRaw": "`TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "nzEditorInitialized",
+        "inputType": 1,
+        "description": "The event that a code editor is initialized",
+        "type": "object",
+        "typeRaw": "`IEditor` \\| `IDiffEditor`",
+        "default": ""
+      }
+    ],
+    "lib": "ng-zorro-antd",
+    "title": "Code Editor",
+    "description": "Support monaco editor in Angular.",
+    "whenToUse": "- When you want to use monaco editor in Angular.",
+    "doc": "/components/code-editor/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/code-editor"
   },
   {
     "_idx": 28,
@@ -3213,6 +3304,15 @@
           "small"
         ],
         "pureDefault": "default"
+      },
+      {
+        "name": "nzColon",
+        "inputType": 0,
+        "description": "Show colon after title",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`true`",
+        "pureDefault": "true"
       }
     ],
     "lib": "ng-zorro-antd",
@@ -3223,7 +3323,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/descriptions"
   },
   {
-    "_idx": 98,
+    "_idx": 112,
     "type": "component",
     "selector": "nz-descriptions-item",
     "types": {},
@@ -3340,6 +3440,15 @@
         "name": "nzMaskClosable",
         "inputType": 0,
         "description": "Clicking on the mask (area outside the Drawer) to close the Drawer or not.",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`true`",
+        "pureDefault": "true"
+      },
+      {
+        "name": "nzKeyboard",
+        "inputType": 0,
+        "description": "Whether support press esc to close",
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`true`",
@@ -5410,7 +5519,7 @@
       {
         "name": "nzTitle",
         "inputType": 0,
-        "description": "title string",
+        "description": "Title string",
         "type": "string",
         "typeRaw": "`string \\| TemplateRef<void>`",
         "default": ""
@@ -5418,7 +5527,7 @@
       {
         "name": "nzSubtitle",
         "inputType": 0,
-        "description": "subTitle string",
+        "description": "SubTitle string",
         "type": "string",
         "typeRaw": "`string \\| TemplateRef<void>`",
         "default": ""
@@ -5426,7 +5535,7 @@
       {
         "name": "nzBackIcon",
         "inputType": 0,
-        "description": "custom back icon",
+        "description": "Custom back icon",
         "type": "string",
         "typeRaw": "`string \\| TemplateRef<void>`",
         "default": ""
@@ -5434,10 +5543,11 @@
       {
         "name": "nzBack",
         "inputType": 1,
-        "description": "back icon click event",
+        "description": "Back icon click event",
         "type": "EventEmitter",
         "typeRaw": "`EventEmitter<void>`",
-        "default": ""
+        "default": "Call [Location[back]](https://angular.io/api/common/Location#back) when the event not subscribed",
+        "pureDefault": "Call [Location[back]](https://angular.io/api/common/Location#back) when the event not subscribed"
       }
     ],
     "lib": "ng-zorro-antd",
@@ -5632,45 +5742,6 @@
         "forceInputType": 0
       },
       {
-        "name": "nzPlacement",
-        "inputType": 0,
-        "description": "The position of the tooltip relative to the target",
-        "type": "Enum",
-        "typeRaw": "`'top' \\| 'left' \\| 'right' \\| 'bottom' \\| 'topLeft' \\| 'topRight' \\| 'bottomLeft' \\| 'bottomRight' \\| 'leftTop' \\| 'leftBottom' \\| 'rightTop' \\| 'rightBottom'`",
-        "default": "`'top'`",
-        "typeDefinition": [
-          "top",
-          "left",
-          "right",
-          "bottom",
-          "topLeft",
-          "topRight",
-          "bottomLeft",
-          "bottomRight",
-          "leftTop",
-          "leftBottom",
-          "rightTop",
-          "rightBottom"
-        ],
-        "pureDefault": "top",
-        "_common": true
-      },
-      {
-        "name": "nzTrigger",
-        "inputType": 0,
-        "description": "Tooltip trigger mode",
-        "type": "Enum",
-        "typeRaw": "`'click' \\| 'focus' \\| 'hover'`",
-        "default": "`'hover'`",
-        "typeDefinition": [
-          "click",
-          "focus",
-          "hover"
-        ],
-        "pureDefault": "hover",
-        "_common": true
-      },
-      {
         "name": "nzVisible",
         "inputType": 0,
         "description": "Whether the floating tooltip card is visible or not",
@@ -5690,12 +5761,94 @@
         "_common": true
       },
       {
-        "name": "nzTitle",
+        "name": "nzTooltipTitle",
         "inputType": 0,
         "description": "The text shown in the tooltip",
         "type": "string",
         "typeRaw": "`string \\| TemplateRef<void>`",
         "default": ""
+      },
+      {
+        "name": "nzTooltipTrigger",
+        "inputType": 0,
+        "description": "Tooltip trigger mode",
+        "type": "Enum",
+        "typeRaw": "`'click' \\| 'focus' \\| 'hover'`",
+        "default": "`'hover'`",
+        "typeDefinition": [
+          "click",
+          "focus",
+          "hover"
+        ],
+        "pureDefault": "hover"
+      },
+      {
+        "name": "nzTooltipPlacement",
+        "inputType": 0,
+        "description": "The position of the tooltip relative to the target",
+        "type": "Enum",
+        "typeRaw": "`'top' \\| 'left' \\| 'right' \\| 'bottom' \\| 'topLeft' \\| 'topRight' \\| 'bottomLeft' \\| 'bottomRight' \\| 'leftTop' \\| 'leftBottom' \\| 'rightTop' \\| 'rightBottom'`",
+        "default": "`'top'`",
+        "typeDefinition": [
+          "top",
+          "left",
+          "right",
+          "bottom",
+          "topLeft",
+          "topRight",
+          "bottomLeft",
+          "bottomRight",
+          "leftTop",
+          "leftBottom",
+          "rightTop",
+          "rightBottom"
+        ],
+        "pureDefault": "top"
+      },
+      {
+        "name": "nzPopconfirmTitle",
+        "inputType": 0,
+        "description": "Title of the confirmation box",
+        "type": "string",
+        "typeRaw": "`string \\| TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "nzPopconfirmTrigger",
+        "inputType": 0,
+        "description": "Popconfirm trigger mode",
+        "type": "Enum",
+        "typeRaw": "`'click' \\| 'focus' \\| 'hover'`",
+        "default": "`'hover'`",
+        "typeDefinition": [
+          "click",
+          "focus",
+          "hover"
+        ],
+        "pureDefault": "hover"
+      },
+      {
+        "name": "nzPopconfirmPlacement",
+        "inputType": 0,
+        "description": "The position of the popconfirm relative to the target",
+        "type": "Enum",
+        "typeRaw": "`'top' \\| 'left' \\| 'right' \\| 'bottom' \\| 'topLeft' \\| 'topRight' \\| 'bottomLeft' \\| 'bottomRight' \\| 'leftTop' \\| 'leftBottom' \\| 'rightTop' \\| 'rightBottom'`",
+        "default": "`'top'`",
+        "typeDefinition": [
+          "top",
+          "left",
+          "right",
+          "bottom",
+          "topLeft",
+          "topRight",
+          "bottomLeft",
+          "bottomRight",
+          "leftTop",
+          "leftBottom",
+          "rightTop",
+          "rightBottom"
+        ],
+        "pureDefault": "top"
       },
       {
         "name": "nzCancelText",
@@ -5730,14 +5883,6 @@
           "default"
         ],
         "pureDefault": "primary"
-      },
-      {
-        "name": "nzTitle",
-        "inputType": 0,
-        "description": "Title of the confirmation box",
-        "type": "string",
-        "typeRaw": "`string \\| TemplateRef<void>`",
-        "default": ""
       },
       {
         "name": "nzCondition",
@@ -5826,45 +5971,6 @@
         "forceInputType": 0
       },
       {
-        "name": "nzPlacement",
-        "inputType": 0,
-        "description": "The position of the tooltip relative to the target",
-        "type": "Enum",
-        "typeRaw": "`'top' \\| 'left' \\| 'right' \\| 'bottom' \\| 'topLeft' \\| 'topRight' \\| 'bottomLeft' \\| 'bottomRight' \\| 'leftTop' \\| 'leftBottom' \\| 'rightTop' \\| 'rightBottom'`",
-        "default": "`'top'`",
-        "typeDefinition": [
-          "top",
-          "left",
-          "right",
-          "bottom",
-          "topLeft",
-          "topRight",
-          "bottomLeft",
-          "bottomRight",
-          "leftTop",
-          "leftBottom",
-          "rightTop",
-          "rightBottom"
-        ],
-        "pureDefault": "top",
-        "_common": true
-      },
-      {
-        "name": "nzTrigger",
-        "inputType": 0,
-        "description": "Tooltip trigger mode",
-        "type": "Enum",
-        "typeRaw": "`'click' \\| 'focus' \\| 'hover'`",
-        "default": "`'hover'`",
-        "typeDefinition": [
-          "click",
-          "focus",
-          "hover"
-        ],
-        "pureDefault": "hover",
-        "_common": true
-      },
-      {
         "name": "nzVisible",
         "inputType": 0,
         "description": "Whether the floating tooltip card is visible or not",
@@ -5884,12 +5990,102 @@
         "_common": true
       },
       {
-        "name": "nzTitle",
+        "name": "nzTooltipTitle",
         "inputType": 0,
         "description": "The text shown in the tooltip",
         "type": "string",
         "typeRaw": "`string \\| TemplateRef<void>`",
         "default": ""
+      },
+      {
+        "name": "nzTooltipTrigger",
+        "inputType": 0,
+        "description": "Tooltip trigger mode",
+        "type": "Enum",
+        "typeRaw": "`'click' \\| 'focus' \\| 'hover'`",
+        "default": "`'hover'`",
+        "typeDefinition": [
+          "click",
+          "focus",
+          "hover"
+        ],
+        "pureDefault": "hover"
+      },
+      {
+        "name": "nzTooltipPlacement",
+        "inputType": 0,
+        "description": "The position of the tooltip relative to the target",
+        "type": "Enum",
+        "typeRaw": "`'top' \\| 'left' \\| 'right' \\| 'bottom' \\| 'topLeft' \\| 'topRight' \\| 'bottomLeft' \\| 'bottomRight' \\| 'leftTop' \\| 'leftBottom' \\| 'rightTop' \\| 'rightBottom'`",
+        "default": "`'top'`",
+        "typeDefinition": [
+          "top",
+          "left",
+          "right",
+          "bottom",
+          "topLeft",
+          "topRight",
+          "bottomLeft",
+          "bottomRight",
+          "leftTop",
+          "leftBottom",
+          "rightTop",
+          "rightBottom"
+        ],
+        "pureDefault": "top"
+      },
+      {
+        "name": "nzPopoverTitle",
+        "inputType": 0,
+        "description": "Title of the popover",
+        "type": "string",
+        "typeRaw": "`string \\| TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "nzPopoverContent",
+        "inputType": 0,
+        "description": "Content of the popover",
+        "type": "string",
+        "typeRaw": "`string \\| TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "nzPopoverTrigger",
+        "inputType": 0,
+        "description": "Popover trigger mode",
+        "type": "Enum",
+        "typeRaw": "`'click' \\| 'focus' \\| 'hover'`",
+        "default": "`'hover'`",
+        "typeDefinition": [
+          "click",
+          "focus",
+          "hover"
+        ],
+        "pureDefault": "hover"
+      },
+      {
+        "name": "nzPopoverPlacement",
+        "inputType": 0,
+        "description": "The position of the popover relative to the target",
+        "type": "Enum",
+        "typeRaw": "`'top' \\| 'left' \\| 'right' \\| 'bottom' \\| 'topLeft' \\| 'topRight' \\| 'bottomLeft' \\| 'bottomRight' \\| 'leftTop' \\| 'leftBottom' \\| 'rightTop' \\| 'rightBottom'`",
+        "default": "`'top'`",
+        "typeDefinition": [
+          "top",
+          "left",
+          "right",
+          "bottom",
+          "topLeft",
+          "topRight",
+          "bottomLeft",
+          "bottomRight",
+          "leftTop",
+          "leftBottom",
+          "rightTop",
+          "rightBottom"
+        ],
+        "pureDefault": "top"
       }
     ],
     "lib": "ng-zorro-antd",
@@ -6369,6 +6565,181 @@
     "whenToUse": "- Show evaluation.\n- A quick rating operation on something.",
     "doc": "/components/rate/en",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/rate"
+  },
+  {
+    "_idx": 23,
+    "type": "directive",
+    "selector": "nz-resizable",
+    "types": {},
+    "properties": [
+      {
+        "name": "nzBounds",
+        "inputType": 0,
+        "description": "Specifies resize boundaries.",
+        "type": "Enum",
+        "typeRaw": "`'window' \\| 'parent' \\| ElementRef<HTMLElement>`",
+        "default": "`parent`",
+        "typeDefinition": [
+          "window",
+          "parent",
+          "ElementRef<HTMLElement>"
+        ],
+        "pureDefault": "parent"
+      },
+      {
+        "name": "nzMaxHeight",
+        "inputType": 0,
+        "description": "Maximum height of resizable element",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": ""
+      },
+      {
+        "name": "nzMaxWidth",
+        "inputType": 0,
+        "description": "Maximum width of resizable element",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": ""
+      },
+      {
+        "name": "nzMinHeight",
+        "inputType": 0,
+        "description": "Minimum height of resizable element",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`40`",
+        "pureDefault": "40"
+      },
+      {
+        "name": "nzMinWidth",
+        "inputType": 0,
+        "description": "Minimum width of resizable element",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`40`",
+        "pureDefault": "40"
+      },
+      {
+        "name": "nzGridColumnCount",
+        "inputType": 0,
+        "description": "Number of columns(-1 is not grid)",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`-1`",
+        "pureDefault": "-1"
+      },
+      {
+        "name": "nzMaxColumn",
+        "inputType": 0,
+        "description": "Maximum Column",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": ""
+      },
+      {
+        "name": "nzMinColumn",
+        "inputType": 0,
+        "description": "Minimum Column",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": ""
+      },
+      {
+        "name": "nzLockAspectRatio",
+        "inputType": 0,
+        "description": "Lock the aspect ratio based on the initial size",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzPreview",
+        "inputType": 0,
+        "description": "Enable preview when resizing",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzResize",
+        "inputType": 1,
+        "description": "Calls when Resizing",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<NzResizeEvent>`",
+        "default": ""
+      },
+      {
+        "name": "nzResizeStart",
+        "inputType": 1,
+        "description": "Calls when resize start",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<NzResizeEvent>`",
+        "default": ""
+      },
+      {
+        "name": "nzResizeEnd",
+        "inputType": 1,
+        "description": "Calls when resize end",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<NzResizeEvent>`",
+        "default": ""
+      }
+    ],
+    "description": "Resizable element the `position` attribute  must be one of `'relative' | 'absolute' | 'fixed' |'sticky'`，default is `'relative'`.",
+    "lib": "ng-zorro-antd",
+    "title": "Resizable",
+    "whenToUse": "",
+    "doc": "/components/resizable/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/resizable"
+  },
+  {
+    "_idx": 232,
+    "type": "component",
+    "selector": "nz-resize-handle",
+    "types": {},
+    "properties": [
+      {
+        "name": "nzDirection",
+        "inputType": 0,
+        "description": "Set the direction of resizable",
+        "type": "object",
+        "typeRaw": "`NzResizeDirection`",
+        "default": "`'bottomRight'`",
+        "pureDefault": "bottomRight"
+      }
+    ],
+    "description": "Define handles and directions.",
+    "lib": "ng-zorro-antd",
+    "title": "Resizable",
+    "whenToUse": "",
+    "doc": "/components/resizable/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/resizable"
+  },
+  {
+    "_idx": 273,
+    "type": "component",
+    "selector": "nz-resize-handles",
+    "types": {},
+    "properties": [
+      {
+        "name": "nzDirections",
+        "inputType": 0,
+        "description": "Allow directions of resizable",
+        "type": "Array",
+        "typeRaw": "`NzResizeDirection[]`",
+        "default": "`DEFAULT_RESIZE_DIRECTION`",
+        "pureDefault": "DEFAULT_RESIZE_DIRECTION"
+      }
+    ],
+    "description": "Simpler way to define handles.",
+    "lib": "ng-zorro-antd",
+    "title": "Resizable",
+    "whenToUse": "",
+    "doc": "/components/resizable/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/resizable"
   },
   {
     "_idx": 19,
@@ -7169,6 +7540,14 @@
         "type": "TemplateRef",
         "typeRaw": "`TemplateRef<{ $implicit: number }>`",
         "default": ""
+      },
+      {
+        "name": "nzCountdownFinish",
+        "inputType": 1,
+        "description": "Emit when countdown finishes",
+        "type": "string",
+        "typeRaw": "`void`",
+        "default": ""
       }
     ],
     "lib": "ng-zorro-antd",
@@ -7179,7 +7558,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/statistic"
   },
   {
-    "_idx": 242,
+    "_idx": 256,
     "type": "component",
     "selector": "nzFormat",
     "types": {},
@@ -7277,6 +7656,14 @@
         "typeRaw": "`number`",
         "default": "`0`",
         "pureDefault": "0"
+      },
+      {
+        "name": "nzIndexChange",
+        "inputType": 1,
+        "description": "Trigger event when step click",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": ""
       }
     ],
     "description": "The whole of the step bar.",
@@ -7287,7 +7674,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/steps"
   },
   {
-    "_idx": 144,
+    "_idx": 158,
     "type": "component",
     "selector": "nz-step",
     "types": {},
@@ -8189,6 +8576,15 @@
         "pureDefault": "false"
       },
       {
+        "name": "nzLinkExact",
+        "inputType": 0,
+        "description": "Use exact routing matching",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`true`",
+        "pureDefault": "true"
+      },
+      {
         "name": "nzSelectedIndexChange",
         "inputType": 1,
         "description": "Current tab's index change callback",
@@ -8229,7 +8625,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tabs"
   },
   {
-    "_idx": 269,
+    "_idx": 283,
     "type": "component",
     "selector": "nz-tab",
     "types": {},
@@ -8293,7 +8689,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tabs"
   },
   {
-    "_idx": 376,
+    "_idx": 390,
     "type": "directive",
     "selector": "nz-tab",
     "types": {},
@@ -8306,7 +8702,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tabs"
   },
   {
-    "_idx": 382,
+    "_idx": 396,
     "type": "component",
     "selector": "nz-tab-link",
     "types": {},
@@ -8584,7 +8980,7 @@
       {
         "name": "nzColor",
         "inputType": 0,
-        "description": "Set the circle's color to `blue`, `red`, `green` or other custom colors (css color)",
+        "description": "Set the circle's color to `'blue' \\| 'red' \\| 'green' \\| 'gray'` or other custom colors (css color)",
         "type": "string",
         "typeRaw": "`string`",
         "default": "`blue`",

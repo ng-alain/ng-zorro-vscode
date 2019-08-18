@@ -347,45 +347,6 @@
         "forceInputType": 0
       },
       {
-        "name": "nzPlacement",
-        "inputType": 0,
-        "description": "气泡框位置",
-        "type": "Enum",
-        "typeRaw": "`'top' \\| 'left' \\| 'right' \\| 'bottom' \\| 'topLeft' \\| 'topRight' \\| 'bottomLeft' \\| 'bottomRight' \\| 'leftTop' \\| 'leftBottom' \\| 'rightTop' \\| 'rightBottom'`",
-        "default": "`'top'`",
-        "typeDefinition": [
-          "top",
-          "left",
-          "right",
-          "bottom",
-          "topLeft",
-          "topRight",
-          "bottomLeft",
-          "bottomRight",
-          "leftTop",
-          "leftBottom",
-          "rightTop",
-          "rightBottom"
-        ],
-        "pureDefault": "top",
-        "_common": true
-      },
-      {
-        "name": "nzTrigger",
-        "inputType": 0,
-        "description": "触发行为，可选 `hover/focus/click`",
-        "type": "Enum",
-        "typeRaw": "`'click' \\| 'focus' \\| 'hover'`",
-        "default": "`'hover'`",
-        "typeDefinition": [
-          "click",
-          "focus",
-          "hover"
-        ],
-        "pureDefault": "hover",
-        "_common": true
-      },
-      {
         "name": "nzVisible",
         "inputType": 0,
         "description": "用于手动控制浮层显隐",
@@ -405,12 +366,49 @@
         "_common": true
       },
       {
-        "name": "nzTitle",
+        "name": "nzTooltipTitle",
         "inputType": 0,
         "description": "提示文字",
         "type": "string",
         "typeRaw": "`string \\| TemplateRef<void>`",
         "default": ""
+      },
+      {
+        "name": "nzTooltipTrigger",
+        "inputType": 0,
+        "description": "触发行为，可选 `hover/focus/click`",
+        "type": "Enum",
+        "typeRaw": "`'click' \\| 'focus' \\| 'hover'`",
+        "default": "`'hover'`",
+        "typeDefinition": [
+          "click",
+          "focus",
+          "hover"
+        ],
+        "pureDefault": "hover"
+      },
+      {
+        "name": "nzTooltipPlacement",
+        "inputType": 0,
+        "description": "气泡框位置",
+        "type": "Enum",
+        "typeRaw": "`'top' \\| 'left' \\| 'right' \\| 'bottom' \\| 'topLeft' \\| 'topRight' \\| 'bottomLeft' \\| 'bottomRight' \\| 'leftTop' \\| 'leftBottom' \\| 'rightTop' \\| 'rightBottom'`",
+        "default": "`'top'`",
+        "typeDefinition": [
+          "top",
+          "left",
+          "right",
+          "bottom",
+          "topLeft",
+          "topRight",
+          "bottomLeft",
+          "bottomRight",
+          "leftTop",
+          "leftBottom",
+          "rightTop",
+          "rightBottom"
+        ],
+        "pureDefault": "top"
       }
     ],
     "lib": "ng-zorro-antd",
@@ -751,14 +749,6 @@
         "pureDefault": "5"
       },
       {
-        "name": "nzOffsetBottom",
-        "inputType": 0,
-        "description": "距离窗口底部达到指定偏移量后触发",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": ""
-      },
-      {
         "name": "nzOffsetTop",
         "inputType": 0,
         "description": "距离窗口顶部达到指定偏移量后触发",
@@ -809,7 +799,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/anchor"
   },
   {
-    "_idx": 154,
+    "_idx": 140,
     "type": "component",
     "selector": "nz-link",
     "types": {},
@@ -1039,6 +1029,14 @@
         "type": "string",
         "typeRaw": "`string`",
         "default": ""
+      },
+      {
+        "name": "nzError",
+        "inputType": 1,
+        "description": "图片加载失败的事件，调用 `preventDefault` 方法会阻止组件默认的 fallback 行为",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<Event>`",
+        "default": ""
       }
     ],
     "lib": "ng-zorro-antd",
@@ -1175,6 +1173,23 @@
         "description": "在设置了 `nzStatus` 的前提下有效，设置状态点的文本",
         "type": "string",
         "typeRaw": "`string`",
+        "default": ""
+      },
+      {
+        "name": "nzTitle",
+        "inputType": 0,
+        "description": "设置鼠标放在状态点上时显示的文字（非独立使用时)",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": "`nzCount`",
+        "pureDefault": "nzCount"
+      },
+      {
+        "name": "nzOffset",
+        "inputType": 0,
+        "description": "设置状态点的位置偏移，格式为 [x, y] (非独立使用时)",
+        "type": "string",
+        "typeRaw": "`[number, number]`",
         "default": ""
       }
     ],
@@ -1988,6 +2003,82 @@
     "whenToUse": "- 在一组可选项中进行多项选择时；\n- 单独使用可以表示两种状态之间的切换，和 `switch` 类似。区别在于切换 `switch` 会直接触发状态改变，而 `checkbox` 一般用于状态标记，需要和提交操作配合。",
     "doc": "/components/checkbox/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/checkbox"
+  },
+  {
+    "_idx": 27,
+    "type": "component",
+    "selector": "nz-code-editor",
+    "types": {},
+    "properties": [
+      {
+        "name": "nzEditorMode",
+        "inputType": 0,
+        "description": "编辑器的模式",
+        "type": "string",
+        "typeRaw": "`normal`\\|`diff`",
+        "default": "`normal`",
+        "pureDefault": "normal"
+      },
+      {
+        "name": "nzLoading",
+        "inputType": 0,
+        "description": "加载中",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false",
+        "forceInputType": 0
+      },
+      {
+        "name": "nzOriginalText",
+        "inputType": 0,
+        "description": "Diff 模式下，左半边的文本内容",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzFullControl",
+        "inputType": 0,
+        "description": "完全控制模式，此模式下组件不会帮助用户处理 `TextModel`，用户应当自行管理 monaco editor 实例",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzEditorOption",
+        "inputType": 0,
+        "description": "编辑器选项，[参考 monaco editor 的定义](https://microsoft.github.io/monaco-editor/api/interfaces/monaco.editor.ieditorconstructionoptions.html)",
+        "type": "object",
+        "typeRaw": "`IEditorConstructionOptions`",
+        "default": "`{}`",
+        "pureDefault": "{}"
+      },
+      {
+        "name": "nzToolkit",
+        "inputType": 0,
+        "description": "暴露快捷操作",
+        "type": "TemplateRef",
+        "typeRaw": "`TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "nzEditorInitialized",
+        "inputType": 1,
+        "description": "当编辑器组件初始化完毕之后派发事件",
+        "type": "object",
+        "typeRaw": "`IEditor` \\| `IDiffEditor`",
+        "default": ""
+      }
+    ],
+    "lib": "ng-zorro-antd",
+    "title": "代码编辑器",
+    "description": "monaco editor 组件。",
+    "whenToUse": "- 需要在网页上渲染 monaco editor 时使用。",
+    "doc": "/components/code-editor/zh",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/code-editor"
   },
   {
     "_idx": 28,
@@ -3190,7 +3281,7 @@
         "pureDefault": "false"
       },
       {
-        "name": "nzBorderer",
+        "name": "nzBordered",
         "inputType": 0,
         "description": "是否展示边框",
         "type": "boolean",
@@ -3220,6 +3311,15 @@
           "small"
         ],
         "pureDefault": "default"
+      },
+      {
+        "name": "nzColon",
+        "inputType": 0,
+        "description": "在标题后显示冒号",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`true`",
+        "pureDefault": "true"
       }
     ],
     "lib": "ng-zorro-antd",
@@ -3230,7 +3330,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/descriptions"
   },
   {
-    "_idx": 98,
+    "_idx": 112,
     "type": "component",
     "selector": "nz-descriptions-item",
     "types": {},
@@ -3346,6 +3446,15 @@
         "name": "nzMask",
         "inputType": 0,
         "description": "是否展示遮罩",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`true`",
+        "pureDefault": "true"
+      },
+      {
+        "name": "nzKeyboard",
+        "inputType": 0,
+        "description": "是否支持键盘esc关闭",
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`true`",
@@ -5451,7 +5560,8 @@
         "description": "返回按钮的点击事件",
         "type": "EventEmitter",
         "typeRaw": "`EventEmitter<void>`",
-        "default": ""
+        "default": "未订阅该事件时默认调用 [Location[back]](https://angular.cn/api/common/Location#back)",
+        "pureDefault": "未订阅该事件时默认调用 [Location[back]](https://angular.cn/api/common/Location#back)"
       }
     ],
     "lib": "ng-zorro-antd",
@@ -5645,45 +5755,6 @@
         "forceInputType": 0
       },
       {
-        "name": "nzPlacement",
-        "inputType": 0,
-        "description": "气泡框位置",
-        "type": "Enum",
-        "typeRaw": "`'top' \\| 'left' \\| 'right' \\| 'bottom' \\| 'topLeft' \\| 'topRight' \\| 'bottomLeft' \\| 'bottomRight' \\| 'leftTop' \\| 'leftBottom' \\| 'rightTop' \\| 'rightBottom'`",
-        "default": "`'top'`",
-        "typeDefinition": [
-          "top",
-          "left",
-          "right",
-          "bottom",
-          "topLeft",
-          "topRight",
-          "bottomLeft",
-          "bottomRight",
-          "leftTop",
-          "leftBottom",
-          "rightTop",
-          "rightBottom"
-        ],
-        "pureDefault": "top",
-        "_common": true
-      },
-      {
-        "name": "nzTrigger",
-        "inputType": 0,
-        "description": "触发行为，可选 `hover/focus/click`",
-        "type": "Enum",
-        "typeRaw": "`'click' \\| 'focus' \\| 'hover'`",
-        "default": "`'hover'`",
-        "typeDefinition": [
-          "click",
-          "focus",
-          "hover"
-        ],
-        "pureDefault": "hover",
-        "_common": true
-      },
-      {
         "name": "nzVisible",
         "inputType": 0,
         "description": "用于手动控制浮层显隐",
@@ -5703,12 +5774,94 @@
         "_common": true
       },
       {
-        "name": "nzTitle",
+        "name": "nzTooltipTitle",
         "inputType": 0,
         "description": "提示文字",
         "type": "string",
         "typeRaw": "`string \\| TemplateRef<void>`",
         "default": ""
+      },
+      {
+        "name": "nzTooltipTrigger",
+        "inputType": 0,
+        "description": "触发行为，可选 `hover/focus/click`",
+        "type": "Enum",
+        "typeRaw": "`'click' \\| 'focus' \\| 'hover'`",
+        "default": "`'hover'`",
+        "typeDefinition": [
+          "click",
+          "focus",
+          "hover"
+        ],
+        "pureDefault": "hover"
+      },
+      {
+        "name": "nzTooltipPlacement",
+        "inputType": 0,
+        "description": "气泡框位置",
+        "type": "Enum",
+        "typeRaw": "`'top' \\| 'left' \\| 'right' \\| 'bottom' \\| 'topLeft' \\| 'topRight' \\| 'bottomLeft' \\| 'bottomRight' \\| 'leftTop' \\| 'leftBottom' \\| 'rightTop' \\| 'rightBottom'`",
+        "default": "`'top'`",
+        "typeDefinition": [
+          "top",
+          "left",
+          "right",
+          "bottom",
+          "topLeft",
+          "topRight",
+          "bottomLeft",
+          "bottomRight",
+          "leftTop",
+          "leftBottom",
+          "rightTop",
+          "rightBottom"
+        ],
+        "pureDefault": "top"
+      },
+      {
+        "name": "nzPopconfirmTitle",
+        "inputType": 0,
+        "description": "确认框的描述",
+        "type": "string",
+        "typeRaw": "`string \\| TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "nzPopconfirmTrigger",
+        "inputType": 0,
+        "description": "触发行为",
+        "type": "Enum",
+        "typeRaw": "`'click' \\| 'focus' \\| 'hover'`",
+        "default": "`'hover'`",
+        "typeDefinition": [
+          "click",
+          "focus",
+          "hover"
+        ],
+        "pureDefault": "hover"
+      },
+      {
+        "name": "nzPopconfirmPlacement",
+        "inputType": 0,
+        "description": "气泡框位置",
+        "type": "Enum",
+        "typeRaw": "`'top' \\| 'left' \\| 'right' \\| 'bottom' \\| 'topLeft' \\| 'topRight' \\| 'bottomLeft' \\| 'bottomRight' \\| 'leftTop' \\| 'leftBottom' \\| 'rightTop' \\| 'rightBottom'`",
+        "default": "`'top'`",
+        "typeDefinition": [
+          "top",
+          "left",
+          "right",
+          "bottom",
+          "topLeft",
+          "topRight",
+          "bottomLeft",
+          "bottomRight",
+          "leftTop",
+          "leftBottom",
+          "rightTop",
+          "rightBottom"
+        ],
+        "pureDefault": "top"
       },
       {
         "name": "nzCancelText",
@@ -5743,14 +5896,6 @@
           "default"
         ],
         "pureDefault": "primary"
-      },
-      {
-        "name": "nzTitle",
-        "inputType": 0,
-        "description": "确认框的描述",
-        "type": "string",
-        "typeRaw": "`string \\| TemplateRef<void>`",
-        "default": ""
       },
       {
         "name": "nzCondition",
@@ -5839,45 +5984,6 @@
         "forceInputType": 0
       },
       {
-        "name": "nzPlacement",
-        "inputType": 0,
-        "description": "气泡框位置",
-        "type": "Enum",
-        "typeRaw": "`'top' \\| 'left' \\| 'right' \\| 'bottom' \\| 'topLeft' \\| 'topRight' \\| 'bottomLeft' \\| 'bottomRight' \\| 'leftTop' \\| 'leftBottom' \\| 'rightTop' \\| 'rightBottom'`",
-        "default": "`'top'`",
-        "typeDefinition": [
-          "top",
-          "left",
-          "right",
-          "bottom",
-          "topLeft",
-          "topRight",
-          "bottomLeft",
-          "bottomRight",
-          "leftTop",
-          "leftBottom",
-          "rightTop",
-          "rightBottom"
-        ],
-        "pureDefault": "top",
-        "_common": true
-      },
-      {
-        "name": "nzTrigger",
-        "inputType": 0,
-        "description": "触发行为，可选 `hover/focus/click`",
-        "type": "Enum",
-        "typeRaw": "`'click' \\| 'focus' \\| 'hover'`",
-        "default": "`'hover'`",
-        "typeDefinition": [
-          "click",
-          "focus",
-          "hover"
-        ],
-        "pureDefault": "hover",
-        "_common": true
-      },
-      {
         "name": "nzVisible",
         "inputType": 0,
         "description": "用于手动控制浮层显隐",
@@ -5897,7 +6003,7 @@
         "_common": true
       },
       {
-        "name": "nzTitle",
+        "name": "nzTooltipTitle",
         "inputType": 0,
         "description": "提示文字",
         "type": "string",
@@ -5905,20 +6011,94 @@
         "default": ""
       },
       {
-        "name": "nzTitle",
+        "name": "nzTooltipTrigger",
         "inputType": 0,
-        "description": "卡片标题",
+        "description": "触发行为，可选 `hover/focus/click`",
+        "type": "Enum",
+        "typeRaw": "`'click' \\| 'focus' \\| 'hover'`",
+        "default": "`'hover'`",
+        "typeDefinition": [
+          "click",
+          "focus",
+          "hover"
+        ],
+        "pureDefault": "hover"
+      },
+      {
+        "name": "nzTooltipPlacement",
+        "inputType": 0,
+        "description": "气泡框位置",
+        "type": "Enum",
+        "typeRaw": "`'top' \\| 'left' \\| 'right' \\| 'bottom' \\| 'topLeft' \\| 'topRight' \\| 'bottomLeft' \\| 'bottomRight' \\| 'leftTop' \\| 'leftBottom' \\| 'rightTop' \\| 'rightBottom'`",
+        "default": "`'top'`",
+        "typeDefinition": [
+          "top",
+          "left",
+          "right",
+          "bottom",
+          "topLeft",
+          "topRight",
+          "bottomLeft",
+          "bottomRight",
+          "leftTop",
+          "leftBottom",
+          "rightTop",
+          "rightBottom"
+        ],
+        "pureDefault": "top"
+      },
+      {
+        "name": "nzPopoverTitle",
+        "inputType": 0,
+        "description": "标题",
         "type": "string",
         "typeRaw": "`string \\| TemplateRef<void>`",
         "default": ""
       },
       {
-        "name": "nzContent",
+        "name": "nzPopoverContent",
         "inputType": 0,
-        "description": "用于定义Content内容",
+        "description": "用于定义内容",
         "type": "string",
         "typeRaw": "`string \\| TemplateRef<void>`",
         "default": ""
+      },
+      {
+        "name": "nzPopoverTrigger",
+        "inputType": 0,
+        "description": "触发行为",
+        "type": "Enum",
+        "typeRaw": "`'click' \\| 'focus' \\| 'hover'`",
+        "default": "`'hover'`",
+        "typeDefinition": [
+          "click",
+          "focus",
+          "hover"
+        ],
+        "pureDefault": "hover"
+      },
+      {
+        "name": "nzPopoverPlacement",
+        "inputType": 0,
+        "description": "气泡框位置",
+        "type": "Enum",
+        "typeRaw": "`'top' \\| 'left' \\| 'right' \\| 'bottom' \\| 'topLeft' \\| 'topRight' \\| 'bottomLeft' \\| 'bottomRight' \\| 'leftTop' \\| 'leftBottom' \\| 'rightTop' \\| 'rightBottom'`",
+        "default": "`'top'`",
+        "typeDefinition": [
+          "top",
+          "left",
+          "right",
+          "bottom",
+          "topLeft",
+          "topRight",
+          "bottomLeft",
+          "bottomRight",
+          "leftTop",
+          "leftBottom",
+          "rightTop",
+          "rightBottom"
+        ],
+        "pureDefault": "top"
       }
     ],
     "lib": "ng-zorro-antd",
@@ -6399,6 +6579,181 @@
     "whenToUse": "- 对评价进行展示。\n- 对事物进行快速的评级操作。",
     "doc": "/components/rate/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/rate"
+  },
+  {
+    "_idx": 23,
+    "type": "directive",
+    "selector": "nz-resizable",
+    "types": {},
+    "properties": [
+      {
+        "name": "nzBounds",
+        "inputType": 0,
+        "description": "调整尺寸的边界",
+        "type": "Enum",
+        "typeRaw": "`'window' \\| 'parent' \\| ElementRef<HTMLElement>`",
+        "default": "`parent`",
+        "typeDefinition": [
+          "window",
+          "parent",
+          "ElementRef<HTMLElement>"
+        ],
+        "pureDefault": "parent"
+      },
+      {
+        "name": "nzMaxHeight",
+        "inputType": 0,
+        "description": "最大高度(超过边界部分忽略)",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": ""
+      },
+      {
+        "name": "nzMaxWidth",
+        "inputType": 0,
+        "description": "最大宽度(超过边界部分忽略)",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": ""
+      },
+      {
+        "name": "nzMinHeight",
+        "inputType": 0,
+        "description": "最小高度",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`40`",
+        "pureDefault": "40"
+      },
+      {
+        "name": "nzMinWidth",
+        "inputType": 0,
+        "description": "最小宽度",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`40`",
+        "pureDefault": "40"
+      },
+      {
+        "name": "nzGridColumnCount",
+        "inputType": 0,
+        "description": "栅格列数(-1 为不栅格)",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`-1`",
+        "pureDefault": "-1"
+      },
+      {
+        "name": "nzMaxColumn",
+        "inputType": 0,
+        "description": "栅格最大列数",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": ""
+      },
+      {
+        "name": "nzMinColumn",
+        "inputType": 0,
+        "description": "栅格最小列数",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": ""
+      },
+      {
+        "name": "nzLockAspectRatio",
+        "inputType": 0,
+        "description": "锁定宽高比",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzPreview",
+        "inputType": 0,
+        "description": "开启预览",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzResize",
+        "inputType": 1,
+        "description": "调整尺寸时的事件",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<NzResizeEvent>`",
+        "default": ""
+      },
+      {
+        "name": "nzResizeStart",
+        "inputType": 1,
+        "description": "开始调整尺寸时的事件",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<NzResizeEvent>`",
+        "default": ""
+      },
+      {
+        "name": "nzResizeEnd",
+        "inputType": 1,
+        "description": "结束调整尺寸时的事件",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<NzResizeEvent>`",
+        "default": ""
+      }
+    ],
+    "description": "声明在需要调整尺寸的元素上，元素 `position` 属性必须为 `'relative' | 'absolute' | 'fixed' |'sticky'` 之一，默认会自动设置为 `'relative'`。",
+    "lib": "ng-zorro-antd",
+    "title": "调整尺寸",
+    "whenToUse": "",
+    "doc": "/components/resizable/zh",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/resizable"
+  },
+  {
+    "_idx": 232,
+    "type": "component",
+    "selector": "nz-resize-handle",
+    "types": {},
+    "properties": [
+      {
+        "name": "nzDirection",
+        "inputType": 0,
+        "description": "调整方向",
+        "type": "object",
+        "typeRaw": "`NzResizeDirection`",
+        "default": "`'bottomRight'`",
+        "pureDefault": "bottomRight"
+      }
+    ],
+    "description": "定义调整手柄及方向。",
+    "lib": "ng-zorro-antd",
+    "title": "调整尺寸",
+    "whenToUse": "",
+    "doc": "/components/resizable/zh",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/resizable"
+  },
+  {
+    "_idx": 273,
+    "type": "component",
+    "selector": "nz-resize-handles",
+    "types": {},
+    "properties": [
+      {
+        "name": "nzDirections",
+        "inputType": 0,
+        "description": "需要添加那些调整手柄的方向",
+        "type": "Array",
+        "typeRaw": "`NzResizeDirection[]`",
+        "default": "`DEFAULT_RESIZE_DIRECTION`",
+        "pureDefault": "DEFAULT_RESIZE_DIRECTION"
+      }
+    ],
+    "description": "定义调整手柄的快捷组件。",
+    "lib": "ng-zorro-antd",
+    "title": "调整尺寸",
+    "whenToUse": "",
+    "doc": "/components/resizable/zh",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/resizable"
   },
   {
     "_idx": 19,
@@ -7197,6 +7552,14 @@
         "type": "TemplateRef",
         "typeRaw": "`TemplateRef<{ $implicit: number }>`",
         "default": ""
+      },
+      {
+        "name": "nzCountdownFinish",
+        "inputType": 1,
+        "description": "当倒计时完成时发出事件",
+        "type": "string",
+        "typeRaw": "`void`",
+        "default": ""
       }
     ],
     "lib": "ng-zorro-antd",
@@ -7207,7 +7570,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/statistic"
   },
   {
-    "_idx": 242,
+    "_idx": 256,
     "type": "component",
     "selector": "nzFormat",
     "types": {},
@@ -7305,6 +7668,14 @@
         "typeRaw": "`number`",
         "default": "`0`",
         "pureDefault": "0"
+      },
+      {
+        "name": "nzIndexChange",
+        "inputType": 1,
+        "description": "点击单个步骤时触发的事件",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": ""
       }
     ],
     "description": "整体步骤条。",
@@ -7315,7 +7686,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/steps"
   },
   {
-    "_idx": 144,
+    "_idx": 158,
     "type": "component",
     "selector": "nz-step",
     "types": {},
@@ -8247,6 +8618,15 @@
         "pureDefault": "false"
       },
       {
+        "name": "nzLinkExact",
+        "inputType": 0,
+        "description": "以严格匹配模式确定联动的路由",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`true`",
+        "pureDefault": "true"
+      },
+      {
         "name": "nzSelectedIndexChange",
         "inputType": 1,
         "description": "当前激活 tab 面板的 序列号变更回调函数",
@@ -8287,7 +8667,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tabs"
   },
   {
-    "_idx": 272,
+    "_idx": 286,
     "type": "component",
     "selector": "nz-tab",
     "types": {},
@@ -8351,7 +8731,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tabs"
   },
   {
-    "_idx": 379,
+    "_idx": 393,
     "type": "directive",
     "selector": "nz-tab",
     "types": {},
@@ -8364,7 +8744,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tabs"
   },
   {
-    "_idx": 385,
+    "_idx": 399,
     "type": "directive",
     "selector": "nz-tab-link",
     "types": {},
@@ -8711,7 +9091,7 @@
       {
         "name": "nzColor",
         "inputType": 0,
-        "description": "指定圆圈颜色 `blue, red, green`，或自定义的色值(CSS 颜色)",
+        "description": "指定圆圈颜色 `'blue' \\| 'red' \\| 'green' \\| 'gray'`，或自定义的色值 (CSS 颜色)",
         "type": "string",
         "typeRaw": "`string`",
         "default": "blue",
