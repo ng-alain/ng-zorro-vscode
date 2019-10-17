@@ -193,7 +193,7 @@ function getDirective(): Directive[] {
 
 function getProperties(directive: Directive, data: string[][]): DirectiveProperty[] {
   return data
-    .filter(tds => tds.length === 4)
+    .filter(tds => tds.length >= 4)
     .map(tds => genPropertyItem(directive, tds.map(v => v || '')))
     .filter(w => !!w);
 }

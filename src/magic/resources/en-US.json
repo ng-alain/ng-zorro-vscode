@@ -10,7 +10,7 @@
         "inputType": 0,
         "description": "the vertical alignment of the flex layout",
         "type": "Enum",
-        "typeRaw": "`'top' \\| 'middle' \\| 'bottom'`",
+        "typeRaw": "`'top'\\|'middle'\\|'bottom'`",
         "default": "`'top'`",
         "typeDefinition": [
           "top",
@@ -24,7 +24,7 @@
         "inputType": 0,
         "description": "spacing between grids, could be a number or a object like `{ xs: 8, sm: 16, md: 24, lg: 32, xl: 32, xxl: 32 }`",
         "type": "Enum",
-        "typeRaw": "`number \\| object`",
+        "typeRaw": "`number\\|object`",
         "default": "`0`",
         "pureDefault": "0",
         "typeDefinition": [
@@ -44,7 +44,7 @@
         "inputType": 0,
         "description": "horizontal arrangement of the flex layout",
         "type": "Enum",
-        "typeRaw": "`'start' \\| 'end' \\| 'center' \\| 'space-around' \\| 'space-between'`",
+        "typeRaw": "`'start'\\|'end'\\|'center'\\|'space-around'\\|'space-between'`",
         "default": "`'start'`",
         "typeDefinition": [
           "start",
@@ -75,7 +75,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/grid"
   },
   {
-    "_idx": 144,
+    "_idx": 159,
     "type": "directive",
     "selector": "nz-col",
     "types": {},
@@ -376,14 +376,15 @@
       {
         "name": "nzTooltipTrigger",
         "inputType": 0,
-        "description": "Tooltip trigger mode",
+        "description": "Tooltip trigger mode. If set to `null` it would not be triggered",
         "type": "Enum",
-        "typeRaw": "`'click' \\| 'focus' \\| 'hover'`",
+        "typeRaw": "`'click' \\| 'focus' \\| 'hover' \\| null`",
         "default": "`'hover'`",
         "typeDefinition": [
           "click",
           "focus",
-          "hover"
+          "hover",
+          "null"
         ],
         "pureDefault": "hover"
       },
@@ -800,7 +801,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/anchor"
   },
   {
-    "_idx": 140,
+    "_idx": 164,
     "type": "component",
     "selector": "nz-link",
     "types": {},
@@ -1224,6 +1225,15 @@
         "typeRaw": "`boolean`",
         "default": "`false`",
         "pureDefault": "false"
+      },
+      {
+        "name": "nzRouteLabel",
+        "inputType": 0,
+        "description": "Name of property that determines displayed text in routing config. It should be used when `nzAutoGenerate` is `true`",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": "`'breadcrumb'`",
+        "pureDefault": "breadcrumb"
       }
     ],
     "lib": "ng-zorro-antd",
@@ -1263,7 +1273,7 @@
         "inputType": 0,
         "description": "can be set to `circle` `round` or omitted",
         "type": "Enum",
-        "typeRaw": "`'circle' \\| 'round'`",
+        "typeRaw": "`'circle'\\|'round'`",
         "default": "",
         "typeDefinition": [
           "circle",
@@ -1275,7 +1285,7 @@
         "inputType": 0,
         "description": "can be set to `small` `large` or omitted",
         "type": "Enum",
-        "typeRaw": "`'large' \\| 'small' \\| 'default'`",
+        "typeRaw": "`'large'\\|'small'\\|'default'`",
         "default": "`'default'`",
         "typeDefinition": [
           "large",
@@ -1289,7 +1299,7 @@
         "inputType": 0,
         "description": "can be set to `primary` `dashed` `danger` or omitted (meaning `default`)",
         "type": "Enum",
-        "typeRaw": "`'primary' \\| 'dashed' \\| 'danger' \\| 'default' \\| 'link'`",
+        "typeRaw": "`'primary'\\|'dashed'\\|'danger'\\|'default'\\|'link'`",
         "default": "`'default'`",
         "typeDefinition": [
           "primary",
@@ -1323,7 +1333,7 @@
         "forceInputType": 0
       }
     ],
-    "description": "To get a customized button, just set `nzType`/`nzShape`/`nzSize`/`nzLoading`/`disabled`.",
+    "description": "Note：nz-button is Directive, it accepts all props which native button [support](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button).",
     "lib": "ng-zorro-antd",
     "title": "Button",
     "whenToUse": "A button means an operation (or a series of operations). Clicking a button will trigger corresponding business logic.",
@@ -1368,15 +1378,6 @@
         "default": "`true`",
         "pureDefault": "true",
         "forceInputType": 0
-      },
-      {
-        "name": "nzCard",
-        "inputType": 0,
-        "description": "Whether to not display in full-screen",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false"
       },
       {
         "name": "nzDateCell",
@@ -1470,7 +1471,7 @@
         "inputType": 0,
         "description": "Content to render in the top-right corner of the card",
         "type": "string",
-        "typeRaw": "`string \\| TemplateRef<void>`",
+        "typeRaw": "`string\\|TemplateRef<void>`",
         "default": ""
       },
       {
@@ -1497,7 +1498,7 @@
         "inputType": 0,
         "description": "Card title",
         "type": "string",
-        "typeRaw": "`string \\| TemplateRef<void>`",
+        "typeRaw": "`string\\|TemplateRef<void>`",
         "default": ""
       },
       {
@@ -1516,7 +1517,7 @@
         "inputType": 0,
         "description": "Size of card",
         "type": "Enum",
-        "typeRaw": "`'default' \\| 'small'`",
+        "typeRaw": "`'default'\\|'small'`",
         "default": "`'default'`",
         "typeDefinition": [
           "default",
@@ -1533,7 +1534,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/card"
   },
   {
-    "_idx": 183,
+    "_idx": 216,
     "type": "component",
     "selector": "nz-card-meta",
     "types": {},
@@ -1551,7 +1552,7 @@
         "inputType": 0,
         "description": "description content",
         "type": "string",
-        "typeRaw": "`string \\| TemplateRef<void>`",
+        "typeRaw": "`string\\|TemplateRef<void>`",
         "default": ""
       },
       {
@@ -1559,7 +1560,7 @@
         "inputType": 0,
         "description": "title content",
         "type": "string",
-        "typeRaw": "`string \\| TemplateRef<void>`",
+        "typeRaw": "`string\\|TemplateRef<void>`",
         "default": ""
       }
     ],
@@ -1571,20 +1572,30 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/card"
   },
   {
-    "_idx": 248,
+    "_idx": 281,
     "type": "directive",
     "selector": "nz-card-grid",
     "types": {},
-    "properties": [],
-    "description": "Area for grid style card",
+    "properties": [
+      {
+        "name": "nzHoverable",
+        "inputType": 0,
+        "description": "Lift up when hovering card",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`true`",
+        "pureDefault": "true"
+      }
+    ],
     "lib": "ng-zorro-antd",
     "title": "Card",
+    "description": "Simple rectangular container.",
     "whenToUse": "A card can be used to display content related to a single subject. The content can consist of multiple elements of varying types and sizes.",
     "doc": "/components/card/en",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/card"
   },
   {
-    "_idx": 254,
+    "_idx": 327,
     "type": "component",
     "selector": "nz-card-tab",
     "types": {},
@@ -1601,7 +1612,90 @@
     "type": "component",
     "selector": "nz-carousel",
     "types": {},
-    "properties": [],
+    "properties": [
+      {
+        "name": "nzAutoPlay",
+        "inputType": 0,
+        "description": "Whether to scroll automatically",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzAutoPlaySpeed",
+        "inputType": 0,
+        "description": "Duration (milliseconds), does not scroll when set to 0",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`3000`",
+        "pureDefault": "3000"
+      },
+      {
+        "name": "nzDotRender",
+        "inputType": 0,
+        "description": "Dot render template",
+        "type": "TemplateRef",
+        "typeRaw": "`TemplateRef<{ $implicit: number }>`",
+        "default": ""
+      },
+      {
+        "name": "nzDotPosition",
+        "inputType": 0,
+        "description": "The position of the dots, which can be one of `top` `bottom` `left` `right`",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": "`bottom`",
+        "pureDefault": "bottom"
+      },
+      {
+        "name": "nzDots",
+        "inputType": 0,
+        "description": "Whether to show the dots at the bottom of the gallery",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`true`",
+        "pureDefault": "true"
+      },
+      {
+        "name": "nzEffect",
+        "inputType": 0,
+        "description": "Transition effect",
+        "type": "Enum",
+        "typeRaw": "`'scrollx'\\|'fade'`",
+        "default": "`'scrollx'`",
+        "typeDefinition": [
+          "scrollx",
+          "fade"
+        ],
+        "pureDefault": "scrollx"
+      },
+      {
+        "name": "nzEnableSwipe",
+        "inputType": 0,
+        "description": "Whether to support swipe gesture",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`true`",
+        "pureDefault": "true"
+      },
+      {
+        "name": "nzAfterChange",
+        "inputType": 1,
+        "description": "Callback function called after the current index changes",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<number>`",
+        "default": ""
+      },
+      {
+        "name": "nzBeforeChange",
+        "inputType": 1,
+        "description": "Callback function called before the current index changes",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter{ from: number; to: number }>`",
+        "default": ""
+      }
+    ],
     "lib": "ng-zorro-antd",
     "title": "Carousel",
     "description": "A carousel component. Scales with its container.",
@@ -1646,7 +1740,7 @@
         "inputType": 0,
         "description": "change value on each selection if this function return `true`",
         "type": "function",
-        "typeRaw": "`function(option: any, index: number) => boolean`",
+        "typeRaw": "`(option: any, index: number) => boolean`",
         "default": ""
       },
       {
@@ -1681,7 +1775,7 @@
         "inputType": 0,
         "description": "expand current item when click or hover, one of 'click' 'hover'",
         "type": "Enum",
-        "typeRaw": "`'click' \\| 'hover'`",
+        "typeRaw": "`'click'\\|'hover'`",
         "default": "`'click'`",
         "typeDefinition": [
           "click",
@@ -1710,7 +1804,7 @@
         "inputType": 0,
         "description": "Specify content to show when no result matches.",
         "type": "string",
-        "typeRaw": "`string \\| TemplateRef<void>`",
+        "typeRaw": "`string\\|TemplateRef<void>`",
         "default": ""
       },
       {
@@ -1728,6 +1822,14 @@
         "description": "render template of displaying selected options",
         "type": "TemplateRef",
         "typeRaw": "`TemplateRef<any>`",
+        "default": ""
+      },
+      {
+        "name": "nzOptionRender",
+        "inputType": 0,
+        "description": "render template of cascader options",
+        "type": "TemplateRef",
+        "typeRaw": "`TemplateRef<{ $implicit: NzCascaderOption, index: number }>`",
         "default": ""
       },
       {
@@ -1778,7 +1880,7 @@
         "inputType": 0,
         "description": "Whether support search. Cannot be used with `[nzLoadData]` at the same time",
         "type": "boolean",
-        "typeRaw": "`boolean \\| NzShowSearchOptions`",
+        "typeRaw": "`boolean\\|NzShowSearchOptions`",
         "default": "`false`",
         "pureDefault": "false"
       },
@@ -1787,7 +1889,7 @@
         "inputType": 0,
         "description": "input size, one of `large` `default` `small`",
         "type": "Enum",
-        "typeRaw": "`'large' \\| 'small' \\| 'default'`",
+        "typeRaw": "`'large'\\|'small'\\|'default'`",
         "default": "`'default'`",
         "typeDefinition": [
           "large",
@@ -1830,19 +1932,11 @@
         "default": ""
       },
       {
-        "name": "nzSelect",
-        "inputType": 1,
-        "description": "Emit on select",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<{option: any, index: number}>`",
-        "default": ""
-      },
-      {
         "name": "nzSelectionChange",
         "inputType": 1,
-        "description": "Emit on selection change",
+        "description": "Emit on values change",
         "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<any[]>`",
+        "typeRaw": "`EventEmitter<NzCascaderOption[]>`",
         "default": ""
       },
       {
@@ -2106,7 +2200,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/collapse"
   },
   {
-    "_idx": 79,
+    "_idx": 88,
     "type": "component",
     "selector": "nz-collapse-panel",
     "types": {},
@@ -3323,7 +3417,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/descriptions"
   },
   {
-    "_idx": 112,
+    "_idx": 130,
     "type": "component",
     "selector": "nz-descriptions-item",
     "types": {},
@@ -3787,7 +3881,7 @@
     "snippet": "<form __$1>$0</form>"
   },
   {
-    "_idx": 114,
+    "_idx": 123,
     "type": "component",
     "selector": "nz-form-item",
     "types": {},
@@ -3797,7 +3891,7 @@
         "inputType": 0,
         "description": "the vertical alignment of the flex layout",
         "type": "Enum",
-        "typeRaw": "`'top' \\| 'middle' \\| 'bottom'`",
+        "typeRaw": "`'top'\\|'middle'\\|'bottom'`",
         "default": "`'top'`",
         "typeDefinition": [
           "top",
@@ -3811,7 +3905,7 @@
         "inputType": 0,
         "description": "spacing between grids, could be a number or a object like `{ xs: 8, sm: 16, md: 24, lg: 32, xl: 32, xxl: 32 }`",
         "type": "Enum",
-        "typeRaw": "`number \\| object`",
+        "typeRaw": "`number\\|object`",
         "default": "`0`",
         "pureDefault": "0",
         "typeDefinition": [
@@ -3831,7 +3925,7 @@
         "inputType": 0,
         "description": "horizontal arrangement of the flex layout",
         "type": "Enum",
-        "typeRaw": "`'start' \\| 'end' \\| 'center' \\| 'space-around' \\| 'space-between'`",
+        "typeRaw": "`'start'\\|'end'\\|'center'\\|'space-around'\\|'space-between'`",
         "default": "`'start'`",
         "typeDefinition": [
           "start",
@@ -3871,7 +3965,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/form"
   },
   {
-    "_idx": 159,
+    "_idx": 168,
     "type": "component",
     "selector": "nz-form-label",
     "types": {},
@@ -4124,7 +4218,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/form"
   },
   {
-    "_idx": 232,
+    "_idx": 241,
     "type": "component",
     "selector": "nz-form-control",
     "types": {},
@@ -4417,7 +4511,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/form"
   },
   {
-    "_idx": 366,
+    "_idx": 375,
     "type": "component",
     "selector": "nz-form-split",
     "types": {},
@@ -4430,7 +4524,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/form"
   },
   {
-    "_idx": 372,
+    "_idx": 381,
     "type": "component",
     "selector": "nz-form-text",
     "types": {},
@@ -4443,7 +4537,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/form"
   },
   {
-    "_idx": 24,
+    "_idx": 19,
     "type": "directive",
     "selector": "nz-icon",
     "types": {},
@@ -4461,7 +4555,7 @@
         "inputType": 0,
         "description": "Type of the ant design icon",
         "type": "Enum",
-        "typeRaw": "`'fill' \\| 'outline' \\| 'twotone'`",
+        "typeRaw": "`'fill'\\|'outline'\\|'twotone'`",
         "default": "`'outline'`",
         "typeDefinition": [
           "fill",
@@ -5498,7 +5592,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/menu"
   },
   {
-    "_idx": 726,
+    "_idx": 716,
     "type": "directive",
     "selector": "nzModalFooter",
     "types": {},
@@ -5771,14 +5865,15 @@
       {
         "name": "nzTooltipTrigger",
         "inputType": 0,
-        "description": "Tooltip trigger mode",
+        "description": "Tooltip trigger mode. If set to `null` it would not be triggered",
         "type": "Enum",
-        "typeRaw": "`'click' \\| 'focus' \\| 'hover'`",
+        "typeRaw": "`'click' \\| 'focus' \\| 'hover' \\| null`",
         "default": "`'hover'`",
         "typeDefinition": [
           "click",
           "focus",
-          "hover"
+          "hover",
+          "null"
         ],
         "pureDefault": "hover"
       },
@@ -5816,14 +5911,15 @@
       {
         "name": "nzPopconfirmTrigger",
         "inputType": 0,
-        "description": "Popconfirm trigger mode",
+        "description": "Popconfirm trigger mode. If set to `null` it would not be triggered",
         "type": "Enum",
-        "typeRaw": "`'click' \\| 'focus' \\| 'hover'`",
+        "typeRaw": "`'click' \\| 'focus' \\| 'hover' \\| null`",
         "default": "`'hover'`",
         "typeDefinition": [
           "click",
           "focus",
-          "hover"
+          "hover",
+          "null"
         ],
         "pureDefault": "hover"
       },
@@ -5849,73 +5945,6 @@
           "rightBottom"
         ],
         "pureDefault": "top"
-      },
-      {
-        "name": "nzCancelText",
-        "inputType": 0,
-        "description": "Text of the Cancel button",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": "`'Cancel'`",
-        "pureDefault": "Cancel"
-      },
-      {
-        "name": "nzOkText",
-        "inputType": 0,
-        "description": "Text of the Confirm button",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": "`'Confirm'`",
-        "pureDefault": "Confirm"
-      },
-      {
-        "name": "nzOkType",
-        "inputType": 0,
-        "description": "Button `type` of the Confirm button",
-        "type": "Enum",
-        "typeRaw": "`'primary' \\| 'ghost' \\| 'dashed' \\| 'danger' \\| 'default'`",
-        "default": "`'primary'`",
-        "typeDefinition": [
-          "primary",
-          "ghost",
-          "dashed",
-          "danger",
-          "default"
-        ],
-        "pureDefault": "primary"
-      },
-      {
-        "name": "nzCondition",
-        "inputType": 0,
-        "description": "Whether to directly emit `onConfirm` without showing Popconfirm",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false"
-      },
-      {
-        "name": "nzIcon",
-        "inputType": 0,
-        "description": "Customize icon of confirmation",
-        "type": "string",
-        "typeRaw": "`string \\| TemplateRef<void>`",
-        "default": ""
-      },
-      {
-        "name": "nzOnCancel",
-        "inputType": 1,
-        "description": "Callback of cancel",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<void>`",
-        "default": ""
-      },
-      {
-        "name": "nzOnConfirm",
-        "inputType": 1,
-        "description": "Callback of confirmation",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<void>`",
-        "default": ""
       }
     ],
     "lib": "ng-zorro-antd",
@@ -6000,14 +6029,15 @@
       {
         "name": "nzTooltipTrigger",
         "inputType": 0,
-        "description": "Tooltip trigger mode",
+        "description": "Tooltip trigger mode. If set to `null` it would not be triggered",
         "type": "Enum",
-        "typeRaw": "`'click' \\| 'focus' \\| 'hover'`",
+        "typeRaw": "`'click' \\| 'focus' \\| 'hover' \\| null`",
         "default": "`'hover'`",
         "typeDefinition": [
           "click",
           "focus",
-          "hover"
+          "hover",
+          "null"
         ],
         "pureDefault": "hover"
       },
@@ -6053,14 +6083,15 @@
       {
         "name": "nzPopoverTrigger",
         "inputType": 0,
-        "description": "Popover trigger mode",
+        "description": "Popover trigger mode. If set to `null` it would not be triggered",
         "type": "Enum",
-        "typeRaw": "`'click' \\| 'focus' \\| 'hover'`",
+        "typeRaw": "`'click' \\| 'focus' \\| 'hover' \\| null`",
         "default": "`'hover'`",
         "typeDefinition": [
           "click",
           "focus",
-          "hover"
+          "hover",
+          "null"
         ],
         "pureDefault": "hover"
       },
@@ -6102,6 +6133,20 @@
     "types": {},
     "properties": [
       {
+        "name": "nzType",
+        "inputType": 0,
+        "description": "to set the type",
+        "type": "Enum",
+        "typeRaw": "`'line' \\| 'circle' \\| 'dashboard'`",
+        "default": "`'line'`",
+        "typeDefinition": [
+          "line",
+          "circle",
+          "dashboard"
+        ],
+        "pureDefault": "line"
+      },
+      {
         "name": "nzFormat",
         "inputType": 0,
         "description": "template function of the content",
@@ -6109,30 +6154,6 @@
         "typeRaw": "`(percent: number) => string`",
         "default": "`percent => percent + '%'`",
         "pureDefault": "percent => percent + '%"
-      },
-      {
-        "name": "nzGapDegree",
-        "inputType": 0,
-        "description": "the gap degree of half circle, 0 ~ 360",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "`0`",
-        "pureDefault": "0"
-      },
-      {
-        "name": "nzGapPosition",
-        "inputType": 0,
-        "description": "the gap position",
-        "type": "Enum",
-        "typeRaw": "`'top' \\| 'right' \\| 'bottom' \\| 'left'`",
-        "default": "`'top'`",
-        "typeDefinition": [
-          "top",
-          "right",
-          "bottom",
-          "left"
-        ],
-        "pureDefault": "top"
       },
       {
         "name": "nzPercent",
@@ -6167,47 +6188,6 @@
         ]
       },
       {
-        "name": "nzStrokeWidth",
-        "inputType": 0,
-        "description": "to set the width of the progress bar, unit: `px`",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "`8`",
-        "pureDefault": "8"
-      },
-      {
-        "name": "nzStrokeWidth",
-        "inputType": 0,
-        "description": "to set the width of the circular progress bar, unit: percentage of the canvas width",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "`6`",
-        "pureDefault": "6"
-      },
-      {
-        "name": "nzType",
-        "inputType": 0,
-        "description": "to set the type",
-        "type": "Enum",
-        "typeRaw": "`'line' \\| 'circle' \\| 'dashboard'`",
-        "default": "`'line'`",
-        "typeDefinition": [
-          "line",
-          "circle",
-          "dashboard"
-        ],
-        "pureDefault": "line"
-      },
-      {
-        "name": "nzWidth",
-        "inputType": 0,
-        "description": "to set the canvas width of the circular progress bar, unit: `px`",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "`132`",
-        "pureDefault": "132"
-      },
-      {
         "name": "nzStrokeLinecap",
         "inputType": 0,
         "description": "to set the style of the progress linecap",
@@ -6223,10 +6203,19 @@
       {
         "name": "nzStrokeColor",
         "inputType": 0,
-        "description": "color of progress bar",
+        "description": "color of progress bar, render linear-gradient when passing an object",
         "type": "string",
-        "typeRaw": "`string`",
+        "typeRaw": "`string \\| { from: string; to: string: direction: string; [percent: string]: string }`",
         "default": ""
+      },
+      {
+        "name": "nzSuccessPercent",
+        "inputType": 0,
+        "description": "segmented success percent",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "0",
+        "pureDefault": "0"
       }
     ],
     "lib": "ng-zorro-antd",
@@ -7108,6 +7097,15 @@
         "default": ""
       },
       {
+        "name": "nzHide",
+        "inputType": 0,
+        "description": "Whether hide the option in the option list",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
         "name": "nzCustomContent",
         "inputType": 0,
         "description": "Whether custom nz-option content in drodown menu, the ng-content in nz-option will relace nzLabel when it was set to true",
@@ -7125,7 +7123,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/select"
   },
   {
-    "_idx": 607,
+    "_idx": 621,
     "type": "component",
     "selector": "nz-option-group",
     "types": {},
@@ -7147,7 +7145,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/select"
   },
   {
-    "_idx": 28,
+    "_idx": 38,
     "type": "component",
     "selector": "nz-skeleton",
     "types": {},
@@ -7200,8 +7198,8 @@
     ],
     "lib": "ng-zorro-antd",
     "title": "Skeleton",
-    "description": "Provide a placeholder at the place which need waiting for loading.",
-    "whenToUse": "- When resource need long time loading, like low network speed.\n- The component contains much information, such as List or Card.",
+    "description": "Provide a placeholder while you wait for content to load, or to visualise content that doesn't exist yet.",
+    "whenToUse": "- When resource need long time loading, like low network speed.\n- The component contains much information, such as List or Card.\n- Only works when loading data for the first time.\n- Could be replaced by Spin in any situation, but can provide a better user experience.",
     "doc": "/components/skeleton/en",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/skeleton"
   },
@@ -7322,6 +7320,14 @@
           "never"
         ],
         "pureDefault": "default"
+      },
+      {
+        "name": "nzTooltipPlacement",
+        "inputType": 0,
+        "description": "Set the default placement of Tooltip",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
       },
       {
         "name": "nzOnAfterChange",
@@ -7577,6 +7583,19 @@
     "types": {},
     "properties": [
       {
+        "name": "nzType",
+        "inputType": 0,
+        "description": "type of steps, can be set to one of the following values: `default`, `navigation`",
+        "type": "Enum",
+        "typeRaw": "`'default' \\| 'navigation'`",
+        "default": "`default`",
+        "typeDefinition": [
+          "default",
+          "navigation"
+        ],
+        "pureDefault": "default"
+      },
+      {
         "name": "nzCurrent",
         "inputType": 0,
         "description": "To set the current step, counting from 0. You can overwrite this state by using `nzStatus` of `nz-step`",
@@ -7674,7 +7693,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/steps"
   },
   {
-    "_idx": 158,
+    "_idx": 172,
     "type": "component",
     "selector": "nz-step",
     "types": {},
@@ -7717,6 +7736,24 @@
         "type": "string",
         "typeRaw": "`string \\| TemplateRef<void>`",
         "default": ""
+      },
+      {
+        "name": "nzSubtitle",
+        "inputType": 0,
+        "description": "subTitle of the step",
+        "type": "string",
+        "typeRaw": "`string \\| TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "nzDisabled",
+        "inputType": 0,
+        "description": "disable click",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false",
+        "forceInputType": 0
       }
     ],
     "description": "A single step in the step bar.",
@@ -8127,7 +8164,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/table"
   },
   {
-    "_idx": 538,
+    "_idx": 640,
     "type": "component",
     "selector": "th",
     "types": {},
@@ -8261,6 +8298,15 @@
         ]
       },
       {
+        "name": "nzBreakWord",
+        "inputType": 0,
+        "description": "Whether insert line breaks within words",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
         "name": "nzExpand",
         "inputType": 0,
         "description": "Whether current column include expand icon",
@@ -8277,7 +8323,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/table"
   },
   {
-    "_idx": 880,
+    "_idx": 996,
     "type": "component",
     "selector": "td",
     "types": {},
@@ -8394,7 +8440,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/table"
   },
   {
-    "_idx": 1143,
+    "_idx": 1259,
     "type": "component",
     "selector": "thead",
     "types": {},
@@ -8425,7 +8471,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/table"
   },
   {
-    "_idx": 1194,
+    "_idx": 1310,
     "type": "component",
     "selector": "tr",
     "types": {},
@@ -8447,7 +8493,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/table"
   },
   {
-    "_idx": 1231,
+    "_idx": 1347,
     "type": "directive",
     "selector": "nz-virtual-scroll",
     "types": {},
@@ -8625,7 +8671,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tabs"
   },
   {
-    "_idx": 283,
+    "_idx": 334,
     "type": "component",
     "selector": "nz-tab",
     "types": {},
@@ -8689,7 +8735,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tabs"
   },
   {
-    "_idx": 390,
+    "_idx": 441,
     "type": "directive",
     "selector": "nz-tab",
     "types": {},
@@ -8702,7 +8748,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tabs"
   },
   {
-    "_idx": 396,
+    "_idx": 447,
     "type": "component",
     "selector": "nz-tab-link",
     "types": {},
@@ -8928,7 +8974,7 @@
         "inputType": 0,
         "description": "Set the last ghost node's existence or its content",
         "type": "string",
-        "typeRaw": "`string \\| boolean \\| TemplateRef<void>`",
+        "typeRaw": "`string\\|boolean\\|TemplateRef<void>`",
         "default": "`false`",
         "pureDefault": "false"
       },
@@ -8937,7 +8983,7 @@
         "inputType": 0,
         "description": "Set the dot of the last ghost node when pending is true",
         "type": "string",
-        "typeRaw": "`string \\| TemplateRef<void>`",
+        "typeRaw": "`string\\|TemplateRef<void>`",
         "default": "`<i nz-icon nzType=\"loading\"></i>`",
         "pureDefault": "<i nz-icon nzType=\"loading\"></i>"
       },
@@ -9293,6 +9339,14 @@
         "pureDefault": "false"
       },
       {
+        "name": "nzTreeTemplate",
+        "inputType": 0,
+        "description": "Custom Nodes",
+        "type": "TemplateRef",
+        "typeRaw": "`TemplateRef<{ $implicit: NzTreeNode }>`",
+        "default": ""
+      },
+      {
         "name": "nzExpandAll",
         "inputType": 0,
         "description": "Whether to expand all treeNodes",
@@ -9567,6 +9621,15 @@
         "pureDefault": "false"
       },
       {
+        "name": "nzCheckStrictly",
+        "inputType": 0,
+        "description": "Check treeNode precisely; parent treeNode and children treeNodes are not associated",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
         "name": "nzShowExpand",
         "inputType": 0,
         "description": "Show a Expand Icon before the treeNodes",
@@ -9642,6 +9705,14 @@
         "description": "Placeholder for not showing tags",
         "type": "TemplateRef",
         "typeRaw": "TemplateRef<{ $implicit: NzTreeNode[] }>",
+        "default": ""
+      },
+      {
+        "name": "nzTreeTemplate",
+        "inputType": 0,
+        "description": "Custom Nodes",
+        "type": "TemplateRef",
+        "typeRaw": "`TemplateRef<{ $implicit: NzTreeNode }>`",
         "default": ""
       },
       {
@@ -10103,13 +10174,21 @@
       {
         "name": "config",
         "inputType": 0,
-        "description": "完整 [Config](https://github.com/cipchk/ngx-countdown#config) 参数",
+        "description": "完整 [Config](https://github.com/cipchk/ngx-countdown#countdownconfig) 参数",
         "type": "object",
-        "typeRaw": "`object`",
+        "typeRaw": "`CountdownConfig`",
         "default": ""
       },
       {
-        "name": "begin",
+        "name": "event",
+        "inputType": 1,
+        "description": "事件通知",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<CountdownEvent>`",
+        "default": ""
+      },
+      {
+        "name": "deprecated",
         "inputType": 1,
         "description": "开始时触发",
         "type": "EventEmitter",
@@ -10117,7 +10196,7 @@
         "default": ""
       },
       {
-        "name": "notify",
+        "name": "deprecated",
         "inputType": 1,
         "description": "通知时触发，需要在 `config` 中配置 notify",
         "type": "EventEmitter",
@@ -10125,7 +10204,7 @@
         "default": ""
       },
       {
-        "name": "end",
+        "name": "deprecated",
         "inputType": 1,
         "description": "结束时触发",
         "type": "EventEmitter",
@@ -11757,6 +11836,14 @@
         "typeRaw": "`line, card`",
         "default": "`line`",
         "pureDefault": "line"
+      },
+      {
+        "name": "tabMaxWidth",
+        "inputType": 0,
+        "description": "The maximum width of each tab, unit: `px`",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": ""
       },
       {
         "name": "close",
