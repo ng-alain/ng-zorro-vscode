@@ -2091,7 +2091,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/checkbox"
   },
   {
-    "_idx": 27,
+    "_idx": 29,
     "type": "component",
     "selector": "nz-code-editor",
     "types": {},
@@ -5617,6 +5617,15 @@
     "types": {},
     "properties": [
       {
+        "name": "nzGhost",
+        "inputType": 0,
+        "description": "使背景色透明",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`true`",
+        "pureDefault": "true"
+      },
+      {
         "name": "nzTitle",
         "inputType": 0,
         "description": "title 文字",
@@ -5950,6 +5959,73 @@
           "rightBottom"
         ],
         "pureDefault": "top"
+      },
+      {
+        "name": "nzCancelText",
+        "inputType": 0,
+        "description": "取消按钮文字",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": "`'取消'`",
+        "pureDefault": "取消"
+      },
+      {
+        "name": "nzOkText",
+        "inputType": 0,
+        "description": "确认按钮文字",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": "`'确定'`",
+        "pureDefault": "确定"
+      },
+      {
+        "name": "nzOkType",
+        "inputType": 0,
+        "description": "确认按钮类型",
+        "type": "Enum",
+        "typeRaw": "`'primary' \\| 'ghost' \\| 'dashed' \\| 'danger' \\| 'default'`",
+        "default": "`'primary'`",
+        "typeDefinition": [
+          "primary",
+          "ghost",
+          "dashed",
+          "danger",
+          "default"
+        ],
+        "pureDefault": "primary"
+      },
+      {
+        "name": "nzCondition",
+        "inputType": 0,
+        "description": "是否直接触发 `nzOnConfirm` 而不弹出框",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzIcon",
+        "inputType": 0,
+        "description": "自定义弹出框的 icon",
+        "type": "string",
+        "typeRaw": "`string \\| TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "nzOnCancel",
+        "inputType": 1,
+        "description": "点击取消的回调",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<void>`",
+        "default": ""
+      },
+      {
+        "name": "nzOnConfirm",
+        "inputType": 1,
+        "description": "点击确认的回调",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<void>`",
+        "default": ""
       }
     ],
     "lib": "ng-zorro-antd",
@@ -7849,7 +7925,8 @@
         "description": "表头分组时指定每列宽度，与 `th` 的 `nzWidth` 不可混用",
         "type": "Array",
         "typeRaw": "`string[]`",
-        "default": ""
+        "default": "`[]`",
+        "pureDefault": "[]"
       },
       {
         "name": "nzSize",
@@ -8808,7 +8885,7 @@
       {
         "name": "nzDefaultOpenValue",
         "inputType": 0,
-        "description": "设置面板打开时默认选中的值",
+        "description": "当 `[ngModel]` 不存在时，可以设置面板打开时默认选中的值",
         "type": "object",
         "typeRaw": "`Date`",
         "default": "`new Date()`",
@@ -10821,7 +10898,7 @@
         "inputType": 0,
         "description": "标签可选信息",
         "type": "string",
-        "typeRaw": "`string`",
+        "typeRaw": "`string, TemplateRef<void>`",
         "default": ""
       },
       {
@@ -10829,7 +10906,7 @@
         "inputType": 0,
         "description": "标签可选帮助",
         "type": "string",
-        "typeRaw": "`string`",
+        "typeRaw": "`string, TemplateRef<void>`",
         "default": ""
       },
       {
@@ -12781,7 +12858,7 @@
         "inputType": 0,
         "description": "标签可选信息",
         "type": "string",
-        "typeRaw": "`string`",
+        "typeRaw": "`string, TemplateRef<void>`",
         "default": ""
       },
       {
@@ -12789,7 +12866,7 @@
         "inputType": 0,
         "description": "标签可选帮助",
         "type": "string",
-        "typeRaw": "`string`",
+        "typeRaw": "`string, TemplateRef<void>`",
         "default": ""
       }
     ],
@@ -14001,6 +14078,15 @@
     "types": {},
     "properties": [
       {
+        "name": "delay",
+        "inputType": 0,
+        "description": "延迟渲染，单位：毫秒",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`0`",
+        "pureDefault": "0"
+      },
+      {
         "name": "title",
         "inputType": 0,
         "description": "图表标题",
@@ -14208,6 +14294,24 @@
         "pureDefault": "false"
       },
       {
+        "name": "noColon",
+        "inputType": 0,
+        "description": "是否不显示 `label` 后面的冒号",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "cleanValue",
+        "inputType": 0,
+        "description": "是否清理未定义 Schema 的数据",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
         "name": "formChange",
         "inputType": 1,
         "description": "数据变更时回调",
@@ -14407,6 +14511,24 @@
         "name": "loading",
         "inputType": 0,
         "description": "是否加载状态，当 `true` 重置按钮禁止状态，提交按钮加载状态",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "noColon",
+        "inputType": 0,
+        "description": "是否不显示 `label` 后面的冒号",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "cleanValue",
+        "inputType": 0,
+        "description": "是否清理未定义 Schema 的数据",
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",

@@ -4,7 +4,7 @@ export const COG = {
   /** 同时拥有组件与指令能力清单 */
   COMPONET_AND_DIRECTIVE: ['se-container', 'se-title', 'error-collect', 'sg-container', 'sv-container', 'sv-title', 'sf'],
   /** 被拆分多个表格属性的组件清单 */
-  SPLIT_PROPERTIES: ['th', 'td'],
+  SPLIT_PROPERTIES: ['th', 'td', '[nz-popconfirm]'],
   /** 忽略组件 */
   INGORE_COMPONENTS: [],
   /** 忽略属性清单 */

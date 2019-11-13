@@ -2092,7 +2092,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/checkbox"
   },
   {
-    "_idx": 27,
+    "_idx": 29,
     "type": "component",
     "selector": "nz-code-editor",
     "types": {},
@@ -5611,6 +5611,15 @@
     "types": {},
     "properties": [
       {
+        "name": "nzGhost",
+        "inputType": 0,
+        "description": "Make background transparent",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`true`",
+        "pureDefault": "true"
+      },
+      {
         "name": "nzTitle",
         "inputType": 0,
         "description": "Title string",
@@ -5945,6 +5954,73 @@
           "rightBottom"
         ],
         "pureDefault": "top"
+      },
+      {
+        "name": "nzCancelText",
+        "inputType": 0,
+        "description": "Text of the Cancel button",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": "`'Cancel'`",
+        "pureDefault": "Cancel"
+      },
+      {
+        "name": "nzOkText",
+        "inputType": 0,
+        "description": "Text of the Confirm button",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": "`'Confirm'`",
+        "pureDefault": "Confirm"
+      },
+      {
+        "name": "nzOkType",
+        "inputType": 0,
+        "description": "Button `type` of the Confirm button",
+        "type": "Enum",
+        "typeRaw": "`'primary' \\| 'ghost' \\| 'dashed' \\| 'danger' \\| 'default'`",
+        "default": "`'primary'`",
+        "typeDefinition": [
+          "primary",
+          "ghost",
+          "dashed",
+          "danger",
+          "default"
+        ],
+        "pureDefault": "primary"
+      },
+      {
+        "name": "nzCondition",
+        "inputType": 0,
+        "description": "Whether to directly emit `onConfirm` without showing Popconfirm",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzIcon",
+        "inputType": 0,
+        "description": "Customize icon of confirmation",
+        "type": "string",
+        "typeRaw": "`string \\| TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "nzOnCancel",
+        "inputType": 1,
+        "description": "Callback of cancel",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<void>`",
+        "default": ""
+      },
+      {
+        "name": "nzOnConfirm",
+        "inputType": 1,
+        "description": "Callback of confirmation",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<void>`",
+        "default": ""
       }
     ],
     "lib": "ng-zorro-antd",
@@ -7943,7 +8019,8 @@
         "description": "Set col width can not used with `nzWidth` of `th`",
         "type": "Array",
         "typeRaw": "`string[]`",
-        "default": ""
+        "default": "`[]`",
+        "pureDefault": "[]"
       },
       {
         "name": "nzSize",
@@ -8812,7 +8889,7 @@
       {
         "name": "nzDefaultOpenValue",
         "inputType": 0,
-        "description": "default open panel value",
+        "description": "default open panel value if `[ngModel]` is null",
         "type": "object",
         "typeRaw": "`Date`",
         "default": "`new Date()`",
@@ -10833,7 +10910,7 @@
         "inputType": 0,
         "description": "Label optional information",
         "type": "string",
-        "typeRaw": "`string`",
+        "typeRaw": "`string, TemplateRef<void>`",
         "default": ""
       },
       {
@@ -10841,7 +10918,7 @@
         "inputType": 0,
         "description": "Label optional help",
         "type": "string",
-        "typeRaw": "`string`",
+        "typeRaw": "`string, TemplateRef<void>`",
         "default": ""
       },
       {
@@ -12806,7 +12883,7 @@
         "inputType": 0,
         "description": "Label optional information",
         "type": "string",
-        "typeRaw": "`string`",
+        "typeRaw": "`string, TemplateRef<void>`",
         "default": ""
       },
       {
@@ -12814,7 +12891,7 @@
         "inputType": 0,
         "description": "Label optional help",
         "type": "string",
-        "typeRaw": "`string`",
+        "typeRaw": "`string, TemplateRef<void>`",
         "default": ""
       }
     ],
@@ -14026,6 +14103,15 @@
     "types": {},
     "properties": [
       {
+        "name": "delay",
+        "inputType": 0,
+        "description": "延迟渲染，单位：毫秒",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`0`",
+        "pureDefault": "0"
+      },
+      {
         "name": "title",
         "inputType": 0,
         "description": "图表标题",
@@ -14219,6 +14305,24 @@
         "pureDefault": "false"
       },
       {
+        "name": "noColon",
+        "inputType": 0,
+        "description": "Whether to not display `:` after label text.",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "cleanValue",
+        "inputType": 0,
+        "description": "Whether to clean up data for undefined Schema",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
         "name": "formChange",
         "inputType": 1,
         "description": "Callback when data changes",
@@ -14404,6 +14508,24 @@
         "name": "loading",
         "inputType": 0,
         "description": "Whether to load status，when `true` reset button is disabled status, submit button is loading status",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "noColon",
+        "inputType": 0,
+        "description": "Whether to not display `:` after label text.",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "cleanValue",
+        "inputType": 0,
+        "description": "Whether to clean up data for undefined Schema",
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",

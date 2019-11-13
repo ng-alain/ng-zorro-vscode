@@ -139,7 +139,8 @@ function getDirective(): Directive[] {
         selector,
         types: {},
       };
-      item.properties = getProperties(item, ast.getTable(idx, COG.SPLIT_PROPERTIES.includes(selector)));
+      const isSplitTable = COG.SPLIT_PROPERTIES.includes(selector);
+      item.properties = getProperties(item, ast.getTable(idx, isSplitTable));
       const checkType = (i: Directive) => {
         if (i.selector.startsWith('[')) {
           i.type = 'directive';
@@ -165,7 +166,10 @@ function getDirective(): Directive[] {
         let commonProperties: DirectiveProperty[];
         // component
         if (mergeCog.component) {
-          commonProperties = processRes.find(w => w.selector === mergeCog.component).properties;
+          const targetComponent = processRes.find(w => w.selector === mergeCog.component);
+          if (targetComponent != null) {
+            commonProperties = targetComponent.properties;
+          }
         } else {
           const commonHeading = mergeCog[ast.zone];
           const commonIdx = ast.offsetAt(commonHeading);
@@ -174,7 +178,9 @@ function getDirective(): Directive[] {
             return i;
           });
         }
-        item.properties = commonProperties.concat(...item.properties);
+        if (commonProperties) {
+          item.properties = commonProperties.concat(...item.properties);
+        }
       }
       // fix description
       const descriptionStart = ast.offsetTagAndTypeAt(AST_KEYS.ParagraphOpen, 'p', idx + 1);
