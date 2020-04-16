@@ -1,6 +1,6 @@
 [
   {
-    "_idx": 62,
+    "_idx": 53,
     "type": "directive",
     "selector": "nz-row",
     "types": {},
@@ -8,25 +8,23 @@
       {
         "name": "nzAlign",
         "inputType": 0,
-        "description": "flex 布局下的垂直对齐方式",
+        "description": "垂直对齐方式",
         "type": "Enum",
         "typeRaw": "`'top' \\| 'middle' \\| 'bottom'`",
-        "default": "`'top'`",
+        "default": "",
         "typeDefinition": [
           "top",
           "middle",
           "bottom"
-        ],
-        "pureDefault": "top"
+        ]
       },
       {
         "name": "nzGutter",
         "inputType": 0,
-        "description": "栅格间隔，可以写成像素值或支持响应式的对象写法 `{ xs: 8, sm: 16, md: 24, lg: 32, xl: 32, xxl: 32 }`",
+        "description": "栅格间隔，可以写成像素值或支持响应式的对象写法来设置水平间隔 `{ xs: 8, sm: 16, md: 24}`。或者使用数组形式同时设置 `[水平间距, 垂直间距]`。",
         "type": "Enum",
-        "typeRaw": "`number \\| object`",
-        "default": "`0`",
-        "pureDefault": "0",
+        "typeRaw": "`number\\|object\\|[number, number]\\|[object, object]`",
+        "default": "",
         "typeDefinition": [
           "0",
           "8",
@@ -42,28 +40,16 @@
       {
         "name": "nzJustify",
         "inputType": 0,
-        "description": "flex 布局下的水平排列方式",
+        "description": "水平排列方式",
         "type": "Enum",
         "typeRaw": "`'start' \\| 'end' \\| 'center' \\| 'space-around' \\| 'space-between'`",
-        "default": "`'start'`",
+        "default": "",
         "typeDefinition": [
           "start",
           "end",
           "center",
           "space-around",
           "space-between"
-        ],
-        "pureDefault": "start"
-      },
-      {
-        "name": "nzType",
-        "inputType": 0,
-        "description": "布局模式，可选 `flex`，[现代浏览器](http://caniuse.com/#search=flex) 下有效",
-        "type": "Enum",
-        "typeRaw": "`'flex'`",
-        "default": "",
-        "typeDefinition": [
-          "flex"
         ]
       }
     ],
@@ -75,19 +61,26 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/grid"
   },
   {
-    "_idx": 156,
+    "_idx": 118,
     "type": "directive",
     "selector": "nz-col",
     "types": {},
     "properties": [
+      {
+        "name": "nzFlex",
+        "inputType": 0,
+        "description": "flex 布局属性",
+        "type": "string",
+        "typeRaw": "`string \\| number`",
+        "default": ""
+      },
       {
         "name": "nzOffset",
         "inputType": 0,
         "description": "栅格左侧的间隔格数，间隔内不可以有栅格",
         "type": "Enum",
         "typeRaw": "`number`",
-        "default": "`0`",
-        "pureDefault": "0",
+        "default": "",
         "typeDefinition": [
           "0",
           "8",
@@ -103,11 +96,10 @@
       {
         "name": "nzOrder",
         "inputType": 0,
-        "description": "栅格顺序，`flex` 布局模式下有效",
+        "description": "栅格顺序",
         "type": "Enum",
         "typeRaw": "`number`",
-        "default": "`0`",
-        "pureDefault": "0",
+        "default": "",
         "typeDefinition": [
           "0",
           "8",
@@ -126,8 +118,7 @@
         "description": "栅格向左移动格数",
         "type": "Enum",
         "typeRaw": "`number`",
-        "default": "`0`",
-        "pureDefault": "0",
+        "default": "",
         "typeDefinition": [
           "0",
           "8",
@@ -146,8 +137,7 @@
         "description": "栅格向右移动格数",
         "type": "Enum",
         "typeRaw": "`number`",
-        "default": "`0`",
-        "pureDefault": "0",
+        "default": "",
         "typeDefinition": [
           "0",
           "8",
@@ -302,7 +292,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/grid"
   },
   {
-    "_idx": 22,
+    "_idx": 16,
     "type": "directive",
     "selector": "nz-tooltip",
     "types": {},
@@ -410,6 +400,14 @@
           "rightBottom"
         ],
         "pureDefault": "top"
+      },
+      {
+        "name": "nzTooltipOrigin",
+        "inputType": 0,
+        "description": "气泡框定位元素",
+        "type": "object",
+        "typeRaw": "`ElementRef`",
+        "default": ""
       }
     ],
     "lib": "ng-zorro-antd",
@@ -421,169 +419,7 @@
     "snippet": "<span __$1>$2</span>"
   },
   {
-    "_idx": 11,
-    "type": "component",
-    "selector": "sg-container",
-    "types": {},
-    "properties": [
-      {
-        "name": "gutter",
-        "inputType": 0,
-        "description": "间距，当 `nzLayout:horizontal` 时有效",
-        "type": "Enum",
-        "typeRaw": "`number`",
-        "default": "`32`",
-        "pureDefault": "32",
-        "typeDefinition": [
-          "0",
-          "8",
-          "16",
-          "24",
-          "32",
-          "40",
-          "48",
-          "56",
-          "64"
-        ]
-      },
-      {
-        "name": "sg-container",
-        "inputType": 0,
-        "description": "指定表单元素最多分几列展示，最终一行几列由 col 配置结合[响应式规则](/theme/responsive)决定，",
-        "type": "Enum",
-        "typeRaw": "`'1','2','3','4','5','6'`",
-        "default": "",
-        "typeDefinition": [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6"
-        ]
-      },
-      {
-        "name": "col",
-        "inputType": 0,
-        "description": "指定表单元素最多分几列展示，最终一行几列由 col 配置结合[响应式规则](/theme/responsive)决定，",
-        "type": "Enum",
-        "typeRaw": "`'1','2','3','4','5','6'`",
-        "default": "",
-        "typeDefinition": [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6"
-        ]
-      }
-    ],
-    "lib": "@delon/abc",
-    "title": "简易栅格",
-    "description": "简化栅格系统运用的高阶组件，它由 `sg-container` 容器（指令）和 `sg` 组件组合代替一个响应式布局：",
-    "whenToUse": "",
-    "doc": "/components/grid/zh",
-    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/grid"
-  },
-  {
-    "_idx": 11,
-    "type": "directive",
-    "selector": "sg-container",
-    "types": {},
-    "properties": [
-      {
-        "name": "gutter",
-        "inputType": 0,
-        "description": "间距，当 `nzLayout:horizontal` 时有效",
-        "type": "Enum",
-        "typeRaw": "`number`",
-        "default": "`32`",
-        "pureDefault": "32",
-        "typeDefinition": [
-          "0",
-          "8",
-          "16",
-          "24",
-          "32",
-          "40",
-          "48",
-          "56",
-          "64"
-        ]
-      },
-      {
-        "name": "sg-container",
-        "inputType": 0,
-        "description": "指定表单元素最多分几列展示，最终一行几列由 col 配置结合[响应式规则](/theme/responsive)决定，",
-        "type": "Enum",
-        "typeRaw": "`'1','2','3','4','5','6'`",
-        "default": "",
-        "typeDefinition": [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6"
-        ]
-      },
-      {
-        "name": "col",
-        "inputType": 0,
-        "description": "指定表单元素最多分几列展示，最终一行几列由 col 配置结合[响应式规则](/theme/responsive)决定，",
-        "type": "Enum",
-        "typeRaw": "`'1','2','3','4','5','6'`",
-        "default": "",
-        "typeDefinition": [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6"
-        ]
-      }
-    ],
-    "lib": "@delon/abc",
-    "title": "简易栅格",
-    "description": "简化栅格系统运用的高阶组件，它由 `sg-container` 容器（指令）和 `sg` 组件组合代替一个响应式布局：",
-    "whenToUse": "",
-    "doc": "/components/grid/zh",
-    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/grid"
-  },
-  {
-    "_idx": 76,
-    "type": "component",
-    "selector": "sg",
-    "types": {},
-    "properties": [
-      {
-        "name": "col",
-        "inputType": 0,
-        "description": "指定表单元素最多分几列展示，最终一行几列由 col 配置结合[响应式规则](/theme/responsive)决定，",
-        "type": "Enum",
-        "typeRaw": "`'1','2','3','4','5','6'`",
-        "default": "",
-        "typeDefinition": [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6"
-        ]
-      }
-    ],
-    "lib": "@delon/abc",
-    "title": "简易栅格",
-    "description": "简化栅格系统运用的高阶组件，它由 `sg-container` 容器（指令）和 `sg` 组件组合代替一个响应式布局：",
-    "whenToUse": "",
-    "doc": "/components/grid/zh",
-    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/grid"
-  },
-  {
-    "_idx": 22,
+    "_idx": 16,
     "type": "component",
     "selector": "nz-affix",
     "types": {},
@@ -631,7 +467,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/affix"
   },
   {
-    "_idx": 28,
+    "_idx": 22,
     "type": "component",
     "selector": "nz-alert",
     "types": {},
@@ -691,7 +527,7 @@
         "inputType": 0,
         "description": "自定义图标类型，`nzShowIcon` 为 `true` 时有效",
         "type": "string",
-        "typeRaw": "`string \\| string[] \\| Set<string> \\| { [klass: string]: any; }`",
+        "typeRaw": "`string`",
         "default": ""
       },
       {
@@ -726,7 +562,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/alert"
   },
   {
-    "_idx": 19,
+    "_idx": 13,
     "type": "component",
     "selector": "nz-anchor",
     "types": {},
@@ -767,7 +603,7 @@
         "pureDefault": "false"
       },
       {
-        "name": "nzTarget",
+        "name": "nzContainer",
         "inputType": 0,
         "description": "指定滚动的容器",
         "type": "string",
@@ -800,7 +636,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/anchor"
   },
   {
-    "_idx": 164,
+    "_idx": 158,
     "type": "component",
     "selector": "nz-link",
     "types": {},
@@ -830,7 +666,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/anchor"
   },
   {
-    "_idx": 21,
+    "_idx": 15,
     "type": "directive",
     "selector": "nzAutocomplete",
     "types": {},
@@ -852,7 +688,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/auto-complete"
   },
   {
-    "_idx": 58,
+    "_idx": 52,
     "type": "component",
     "selector": "nz-autocomplete",
     "types": {},
@@ -918,7 +754,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/auto-complete"
   },
   {
-    "_idx": 165,
+    "_idx": 159,
     "type": "component",
     "selector": "nz-auto-option",
     "types": {},
@@ -958,7 +794,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/auto-complete"
   },
   {
-    "_idx": 13,
+    "_idx": 7,
     "type": "component",
     "selector": "nz-avatar",
     "types": {},
@@ -1048,7 +884,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/avatar"
   },
   {
-    "_idx": 28,
+    "_idx": 22,
     "type": "component",
     "selector": "nz-back-top",
     "types": {},
@@ -1096,7 +932,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/back-top"
   },
   {
-    "_idx": 21,
+    "_idx": 15,
     "type": "component",
     "selector": "nz-badge",
     "types": {},
@@ -1179,9 +1015,9 @@
       {
         "name": "nzTitle",
         "inputType": 0,
-        "description": "设置鼠标放在状态点上时显示的文字（非独立使用时)",
+        "description": "设置鼠标放在状态点上时显示的文字（非独立使用时), 为 `null` 时隐藏",
         "type": "string",
-        "typeRaw": "`string`",
+        "typeRaw": "`string \\| null`",
         "default": "`nzCount`",
         "pureDefault": "nzCount"
       },
@@ -1202,7 +1038,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/badge"
   },
   {
-    "_idx": 33,
+    "_idx": 27,
     "type": "component",
     "selector": "nz-breadcrumb",
     "types": {},
@@ -1212,7 +1048,7 @@
         "inputType": 0,
         "description": "分隔符自定义",
         "type": "string",
-        "typeRaw": "`string \\| TemplateRef<void>`",
+        "typeRaw": "`string \\| TemplateRef<void> \\| null`",
         "default": "`'/'`",
         "pureDefault": "/"
       },
@@ -1243,7 +1079,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/breadcrumb"
   },
   {
-    "_idx": 19,
+    "_idx": 63,
     "type": "directive",
     "selector": "nz-button",
     "types": {},
@@ -1296,18 +1132,15 @@
       {
         "name": "nzType",
         "inputType": 0,
-        "description": "设置按钮类型，可选值为 `primary` `dashed` `danger` 或者不设",
+        "description": "设置按钮类型，可选值为 `primary` `dashed` `link` 或者不设",
         "type": "Enum",
-        "typeRaw": "`'primary'\\|'dashed'\\|'danger'\\|'default'\\|'link'`",
-        "default": "`'default'`",
+        "typeRaw": "`'primary'\\|'dashed'\\|'link'`",
+        "default": "",
         "typeDefinition": [
           "primary",
           "dashed",
-          "danger",
-          "default",
           "link"
-        ],
-        "pureDefault": "default"
+        ]
       },
       {
         "name": "nzBlock",
@@ -1315,6 +1148,15 @@
         "description": "将按钮宽度调整为其父宽度的选项",
         "type": "boolean",
         "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzDanger",
+        "inputType": 0,
+        "description": "设置危险按钮",
+        "type": "boolean",
+        "typeRaw": "boolean",
         "default": "`false`",
         "pureDefault": "false"
       },
@@ -1341,7 +1183,35 @@
     "snippet": "<button __$1>${2|保存,提交,取消,新建,删除,搜索|}</button>"
   },
   {
-    "_idx": 27,
+    "_idx": 219,
+    "type": "component",
+    "selector": "nz-button-group",
+    "types": {},
+    "properties": [
+      {
+        "name": "nzSize",
+        "inputType": 0,
+        "description": "设置按钮大小，可选值为 `small` `large` 或者不设",
+        "type": "Enum",
+        "typeRaw": "`'large'\\|'small'\\|'default'`",
+        "default": "`'default'`",
+        "typeDefinition": [
+          "large",
+          "small",
+          "default"
+        ],
+        "pureDefault": "default"
+      }
+    ],
+    "lib": "ng-zorro-antd",
+    "title": "按钮",
+    "description": "按钮用于开始一个即时操作。",
+    "whenToUse": "标记了一个（或封装一组）操作命令，响应用户点击行为，触发相应的业务逻辑。",
+    "doc": "/components/button/zh",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/button"
+  },
+  {
+    "_idx": 21,
     "type": "component",
     "selector": "nz-calendar",
     "types": {},
@@ -1435,7 +1305,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/calendar"
   },
   {
-    "_idx": 20,
+    "_idx": 14,
     "type": "component",
     "selector": "nz-card",
     "types": {},
@@ -1541,7 +1411,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/card"
   },
   {
-    "_idx": 216,
+    "_idx": 210,
     "type": "component",
     "selector": "nz-card-meta",
     "types": {},
@@ -1579,7 +1449,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/card"
   },
   {
-    "_idx": 281,
+    "_idx": 275,
     "type": "directive",
     "selector": "nz-card-grid",
     "types": {},
@@ -1602,7 +1472,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/card"
   },
   {
-    "_idx": 327,
+    "_idx": 321,
     "type": "component",
     "selector": "nz-card-tab",
     "types": {},
@@ -1615,7 +1485,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/card"
   },
   {
-    "_idx": 33,
+    "_idx": 27,
     "type": "component",
     "selector": "nz-carousel",
     "types": {},
@@ -1711,7 +1581,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/carousel"
   },
   {
-    "_idx": 34,
+    "_idx": 28,
     "type": "component",
     "selector": "nz-cascader",
     "types": {},
@@ -1953,7 +1823,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/cascader"
   },
   {
-    "_idx": 28,
+    "_idx": 22,
     "type": "directive",
     "selector": "nz-checkbox",
     "types": {},
@@ -2000,8 +1870,8 @@
         "name": "nzValue",
         "inputType": 0,
         "description": "仅与 `nz-checkbox-wrapper` 的选中回调配合使用",
-        "type": "string",
-        "typeRaw": "`string`",
+        "type": "object",
+        "typeRaw": "`any`",
         "default": ""
       },
       {
@@ -2028,7 +1898,7 @@
     "snippet": "<label __$1>$2</label>"
   },
   {
-    "_idx": 135,
+    "_idx": 129,
     "type": "component",
     "selector": "nz-checkbox-group",
     "types": {},
@@ -2069,7 +1939,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/checkbox"
   },
   {
-    "_idx": 200,
+    "_idx": 194,
     "type": "component",
     "selector": "nz-checkbox-wrapper",
     "types": {},
@@ -2079,7 +1949,7 @@
         "inputType": 1,
         "description": "选中数据变化时的回调",
         "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<string[]>`",
+        "typeRaw": "`EventEmitter<any[]>`",
         "default": ""
       }
     ],
@@ -2091,7 +1961,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/checkbox"
   },
   {
-    "_idx": 29,
+    "_idx": 74,
     "type": "component",
     "selector": "nz-code-editor",
     "types": {},
@@ -2161,13 +2031,13 @@
     ],
     "lib": "ng-zorro-antd",
     "title": "代码编辑器",
-    "description": "monaco editor 组件。",
-    "whenToUse": "- 需要在网页上渲染 monaco editor 时使用。",
+    "description": "<blockquote style=\"border-color: #faad14;\">\n<p>NG-ZORRO 实验性功能是指已发布但不稳定或者还未准备好用于生产环境的功能。</p>\n<p>开发者或用户可以选择在正式发布前使用这些功能，但是每次发布版本时都可能存在 <strong>breaking changes</strong>。</p>\n</blockquote>",
+    "whenToUse": "需要在网页上渲染 monaco editor 时使用。",
     "doc": "/components/code-editor/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/code-editor"
   },
   {
-    "_idx": 28,
+    "_idx": 22,
     "type": "component",
     "selector": "nz-collapse",
     "types": {},
@@ -2189,6 +2059,19 @@
         "typeRaw": "`boolean`",
         "default": "`true`",
         "pureDefault": "true"
+      },
+      {
+        "name": "nzExpandIconPosition",
+        "inputType": 0,
+        "description": "设置图标位置",
+        "type": "Enum",
+        "typeRaw": "`'left' \\| 'right'`",
+        "default": "`left`",
+        "typeDefinition": [
+          "left",
+          "right"
+        ],
+        "pureDefault": "left"
       }
     ],
     "lib": "ng-zorro-antd",
@@ -2199,7 +2082,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/collapse"
   },
   {
-    "_idx": 88,
+    "_idx": 99,
     "type": "component",
     "selector": "nz-collapse-panel",
     "types": {},
@@ -2272,7 +2155,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/collapse"
   },
   {
-    "_idx": 19,
+    "_idx": 13,
     "type": "component",
     "selector": "nz-comment",
     "types": {},
@@ -2302,7 +2185,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/comment"
   },
   {
-    "_idx": 70,
+    "_idx": 64,
     "type": "directive",
     "selector": "nz-comment-avatar",
     "types": {},
@@ -2315,7 +2198,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/comment"
   },
   {
-    "_idx": 76,
+    "_idx": 70,
     "type": "component",
     "selector": "nz-comment-content",
     "types": {},
@@ -2328,7 +2211,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/comment"
   },
   {
-    "_idx": 82,
+    "_idx": 76,
     "type": "component",
     "selector": "nz-comment-action",
     "types": {},
@@ -2341,7 +2224,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/comment"
   },
   {
-    "_idx": 259,
+    "_idx": 239,
     "type": "component",
     "selector": "nz-date-picker",
     "types": {},
@@ -2364,16 +2247,6 @@
         "typeRaw": "`boolean`",
         "default": "`false`",
         "pureDefault": "false",
-        "_common": true
-      },
-      {
-        "name": "nzClassName",
-        "inputType": 0,
-        "description": "选择器 className",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": "`''`",
-        "pureDefault": "",
         "_common": true
       },
       {
@@ -2457,13 +2330,12 @@
         "_common": true
       },
       {
-        "name": "nzStyle",
+        "name": "nzDefaultPickerValue",
         "inputType": 0,
-        "description": "自定义输入框样式",
+        "description": "默认面板日期",
         "type": "object",
-        "typeRaw": "`object`",
-        "default": "`{}`",
-        "pureDefault": "{}",
+        "typeRaw": "`Date` \\| `Date[]`",
+        "default": "",
         "_common": true
       },
       {
@@ -2497,7 +2369,7 @@
         "description": "展示的日期格式，见`nzFormat特别说明`",
         "type": "string",
         "typeRaw": "`string`",
-        "default": "`\"yyyy-MM-dd\"`",
+        "default": "`'yyyy-MM-dd'`",
         "pureDefault": "yyyy-MM-dd"
       },
       {
@@ -2565,7 +2437,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/date-picker"
   },
   {
-    "_idx": 408,
+    "_idx": 388,
     "type": "component",
     "selector": "nz-year-picker",
     "types": {},
@@ -2588,16 +2460,6 @@
         "typeRaw": "`boolean`",
         "default": "`false`",
         "pureDefault": "false",
-        "_common": true
-      },
-      {
-        "name": "nzClassName",
-        "inputType": 0,
-        "description": "选择器 className",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": "`''`",
-        "pureDefault": "",
         "_common": true
       },
       {
@@ -2681,13 +2543,12 @@
         "_common": true
       },
       {
-        "name": "nzStyle",
+        "name": "nzDefaultPickerValue",
         "inputType": 0,
-        "description": "自定义输入框样式",
+        "description": "默认面板日期",
         "type": "object",
-        "typeRaw": "`object`",
-        "default": "`{}`",
-        "pureDefault": "{}",
+        "typeRaw": "`Date` \\| `Date[]`",
+        "default": "",
         "_common": true
       },
       {
@@ -2713,7 +2574,7 @@
         "description": "展示的日期格式，见`nzFormat特别说明`",
         "type": "string",
         "typeRaw": "`string`",
-        "default": "`\"yyyy\"`",
+        "default": "`'yyyy'`",
         "pureDefault": "yyyy"
       },
       {
@@ -2749,7 +2610,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/date-picker"
   },
   {
-    "_idx": 501,
+    "_idx": 481,
     "type": "component",
     "selector": "nz-month-picker",
     "types": {},
@@ -2772,16 +2633,6 @@
         "typeRaw": "`boolean`",
         "default": "`false`",
         "pureDefault": "false",
-        "_common": true
-      },
-      {
-        "name": "nzClassName",
-        "inputType": 0,
-        "description": "选择器 className",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": "`''`",
-        "pureDefault": "",
         "_common": true
       },
       {
@@ -2865,13 +2716,12 @@
         "_common": true
       },
       {
-        "name": "nzStyle",
+        "name": "nzDefaultPickerValue",
         "inputType": 0,
-        "description": "自定义输入框样式",
+        "description": "默认面板日期",
         "type": "object",
-        "typeRaw": "`object`",
-        "default": "`{}`",
-        "pureDefault": "{}",
+        "typeRaw": "`Date` \\| `Date[]`",
+        "default": "",
         "_common": true
       },
       {
@@ -2897,7 +2747,7 @@
         "description": "展示的日期格式，见`nzFormat特别说明`",
         "type": "string",
         "typeRaw": "`string`",
-        "default": "`\"yyyy-MM\"`",
+        "default": "`'yyyy-MM'`",
         "pureDefault": "yyyy-MM"
       },
       {
@@ -2939,7 +2789,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/date-picker"
   },
   {
-    "_idx": 594,
+    "_idx": 574,
     "type": "component",
     "selector": "nz-week-picker",
     "types": {},
@@ -2962,16 +2812,6 @@
         "typeRaw": "`boolean`",
         "default": "`false`",
         "pureDefault": "false",
-        "_common": true
-      },
-      {
-        "name": "nzClassName",
-        "inputType": 0,
-        "description": "选择器 className",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": "`''`",
-        "pureDefault": "",
         "_common": true
       },
       {
@@ -3055,13 +2895,12 @@
         "_common": true
       },
       {
-        "name": "nzStyle",
+        "name": "nzDefaultPickerValue",
         "inputType": 0,
-        "description": "自定义输入框样式",
+        "description": "默认面板日期",
         "type": "object",
-        "typeRaw": "`object`",
-        "default": "`{}`",
-        "pureDefault": "{}",
+        "typeRaw": "`Date` \\| `Date[]`",
+        "default": "",
         "_common": true
       },
       {
@@ -3087,7 +2926,7 @@
         "description": "展示的日期格式，见`nzFormat特别说明`",
         "type": "string",
         "typeRaw": "`string`",
-        "default": "`\"yyyy-ww\"`",
+        "default": "`'yyyy-ww'`",
         "pureDefault": "yyyy-ww"
       },
       {
@@ -3121,7 +2960,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/date-picker"
   },
   {
-    "_idx": 673,
+    "_idx": 653,
     "type": "component",
     "selector": "nz-range-picker",
     "types": {},
@@ -3144,16 +2983,6 @@
         "typeRaw": "`boolean`",
         "default": "`false`",
         "pureDefault": "false",
-        "_common": true
-      },
-      {
-        "name": "nzClassName",
-        "inputType": 0,
-        "description": "选择器 className",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": "`''`",
-        "pureDefault": "",
         "_common": true
       },
       {
@@ -3237,13 +3066,12 @@
         "_common": true
       },
       {
-        "name": "nzStyle",
+        "name": "nzDefaultPickerValue",
         "inputType": 0,
-        "description": "自定义输入框样式",
+        "description": "默认面板日期",
         "type": "object",
-        "typeRaw": "`object`",
-        "default": "`{}`",
-        "pureDefault": "{}",
+        "typeRaw": "`Date` \\| `Date[]`",
+        "default": "",
         "_common": true
       },
       {
@@ -3277,7 +3105,7 @@
         "description": "展示的日期格式，见`nzFormat特别说明`",
         "type": "string",
         "typeRaw": "`string`",
-        "default": "`\"yyyy-MM-dd\"`",
+        "default": "`'yyyy-MM-dd'`",
         "pureDefault": "yyyy-MM-dd"
       },
       {
@@ -3312,6 +3140,15 @@
         "type": "Array",
         "typeRaw": "`string[]`",
         "default": ""
+      },
+      {
+        "name": "nzSeparator",
+        "inputType": 0,
+        "description": "分隔符",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": "`'~'`",
+        "pureDefault": "~"
       },
       {
         "name": "nzOnOk",
@@ -3352,7 +3189,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/date-picker"
   },
   {
-    "_idx": 19,
+    "_idx": 13,
     "type": "component",
     "selector": "nz-descriptions",
     "types": {},
@@ -3416,7 +3253,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/descriptions"
   },
   {
-    "_idx": 130,
+    "_idx": 124,
     "type": "component",
     "selector": "nz-descriptions-item",
     "types": {},
@@ -3447,7 +3284,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/descriptions"
   },
   {
-    "_idx": 28,
+    "_idx": 22,
     "type": "component",
     "selector": "nz-divider",
     "types": {},
@@ -3505,7 +3342,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/divider"
   },
   {
-    "_idx": 28,
+    "_idx": 22,
     "type": "component",
     "selector": "nz-drawer",
     "types": {},
@@ -3665,7 +3502,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/drawer"
   },
   {
-    "_idx": 19,
+    "_idx": 13,
     "type": "directive",
     "selector": "nz-dropdown",
     "types": {},
@@ -3777,7 +3614,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/dropdown"
   },
   {
-    "_idx": 190,
+    "_idx": 184,
     "type": "component",
     "selector": "nz-dropdown-menu",
     "types": {},
@@ -3790,7 +3627,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/dropdown"
   },
   {
-    "_idx": 19,
+    "_idx": 13,
     "type": "component",
     "selector": "nz-empty",
     "types": {},
@@ -3800,7 +3637,7 @@
         "inputType": 0,
         "description": "设置显示图片，为 `string` 时表示自定义图片地址",
         "type": "string",
-        "typeRaw": "`string`  \\|  `TemplateRef<void>`",
+        "typeRaw": "`string \\| TemplateRef<void>`",
         "default": ""
       },
       {
@@ -3808,7 +3645,7 @@
         "inputType": 0,
         "description": "自定义描述内容",
         "type": "string",
-        "typeRaw": "`string`  \\|  `TemplateRef<void>`",
+        "typeRaw": "`string \\| TemplateRef<void> \\| null`",
         "default": ""
       },
       {
@@ -3816,7 +3653,7 @@
         "inputType": 0,
         "description": "设置自定义 footer",
         "type": "string",
-        "typeRaw": "`string`  \\|  `TemplateRef<void>`",
+        "typeRaw": "`string \\| TemplateRef<void>`",
         "default": ""
       }
     ],
@@ -3828,7 +3665,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/empty"
   },
   {
-    "_idx": 63,
+    "_idx": 57,
     "type": "directive",
     "selector": "nz-form",
     "types": {},
@@ -3857,6 +3694,24 @@
         "pureDefault": "false"
       },
       {
+        "name": "nzAutoTips",
+        "inputType": 0,
+        "description": "配置 `nz-form-control` 的 `[nzAutoTips]` 的默认值, 具体用法请参考示例：**自动提示**",
+        "type": "object",
+        "typeRaw": "`Record<string, Record<string, string>>`",
+        "default": "`{}`",
+        "pureDefault": "{}"
+      },
+      {
+        "name": "nzDisableAutoTips",
+        "inputType": 0,
+        "description": "配置 `nz-form-control` 的 `[nzDisableAutoTips]` 的默认值",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
         "name": "formGroup",
         "inputType": 0,
         "type": "object",
@@ -3878,7 +3733,7 @@
     "snippet": "<form __$1>$0</form>"
   },
   {
-    "_idx": 123,
+    "_idx": 151,
     "type": "component",
     "selector": "nz-form-item",
     "types": {},
@@ -3886,25 +3741,23 @@
       {
         "name": "nzAlign",
         "inputType": 0,
-        "description": "flex 布局下的垂直对齐方式",
+        "description": "垂直对齐方式",
         "type": "Enum",
         "typeRaw": "`'top' \\| 'middle' \\| 'bottom'`",
-        "default": "`'top'`",
+        "default": "",
         "typeDefinition": [
           "top",
           "middle",
           "bottom"
-        ],
-        "pureDefault": "top"
+        ]
       },
       {
         "name": "nzGutter",
         "inputType": 0,
-        "description": "栅格间隔，可以写成像素值或支持响应式的对象写法 `{ xs: 8, sm: 16, md: 24, lg: 32, xl: 32, xxl: 32 }`",
+        "description": "栅格间隔，可以写成像素值或支持响应式的对象写法来设置水平间隔 `{ xs: 8, sm: 16, md: 24}`。或者使用数组形式同时设置 `[水平间距, 垂直间距]`。",
         "type": "Enum",
-        "typeRaw": "`number \\| object`",
-        "default": "`0`",
-        "pureDefault": "0",
+        "typeRaw": "`number\\|object\\|[number, number]\\|[object, object]`",
+        "default": "",
         "typeDefinition": [
           "0",
           "8",
@@ -3920,38 +3773,43 @@
       {
         "name": "nzJustify",
         "inputType": 0,
-        "description": "flex 布局下的水平排列方式",
+        "description": "水平排列方式",
         "type": "Enum",
         "typeRaw": "`'start' \\| 'end' \\| 'center' \\| 'space-around' \\| 'space-between'`",
-        "default": "`'start'`",
+        "default": "",
         "typeDefinition": [
           "start",
           "end",
           "center",
           "space-around",
           "space-between"
-        ],
-        "pureDefault": "start"
-      },
-      {
-        "name": "nzType",
-        "inputType": 0,
-        "description": "布局模式，可选 `flex`，[现代浏览器](http://caniuse.com/#search=flex) 下有效",
-        "type": "Enum",
-        "typeRaw": "`'flex'`",
-        "default": "",
-        "typeDefinition": [
-          "flex"
         ]
       },
       {
-        "name": "nzFlex",
+        "name": "nzRequired",
         "inputType": 0,
-        "description": "是否Flex布局",
+        "description": "当前项是否为必填，仅影响样式",
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
         "pureDefault": "false"
+      },
+      {
+        "name": "nzNoColon",
+        "inputType": 0,
+        "description": "是否不显示 label 后面的冒号",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzFor",
+        "inputType": 0,
+        "description": "label 标签的 for 属性",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
       }
     ],
     "description": "表单项用于区分表单中不同的区域，包含表单域和表单标签(可选)。",
@@ -3962,19 +3820,26 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/form"
   },
   {
-    "_idx": 168,
+    "_idx": 162,
     "type": "component",
     "selector": "nz-form-label",
     "types": {},
     "properties": [
+      {
+        "name": "nzFlex",
+        "inputType": 0,
+        "description": "flex 布局属性",
+        "type": "string",
+        "typeRaw": "`string \\| number`",
+        "default": ""
+      },
       {
         "name": "nzOffset",
         "inputType": 0,
         "description": "栅格左侧的间隔格数，间隔内不可以有栅格",
         "type": "Enum",
         "typeRaw": "`number`",
-        "default": "`0`",
-        "pureDefault": "0",
+        "default": "",
         "typeDefinition": [
           "0",
           "8",
@@ -3990,11 +3855,10 @@
       {
         "name": "nzOrder",
         "inputType": 0,
-        "description": "栅格顺序，`flex` 布局模式下有效",
+        "description": "栅格顺序",
         "type": "Enum",
         "typeRaw": "`number`",
-        "default": "`0`",
-        "pureDefault": "0",
+        "default": "",
         "typeDefinition": [
           "0",
           "8",
@@ -4013,8 +3877,7 @@
         "description": "栅格向左移动格数",
         "type": "Enum",
         "typeRaw": "`number`",
-        "default": "`0`",
-        "pureDefault": "0",
+        "default": "",
         "typeDefinition": [
           "0",
           "8",
@@ -4033,8 +3896,7 @@
         "description": "栅格向右移动格数",
         "type": "Enum",
         "typeRaw": "`number`",
-        "default": "`0`",
-        "pureDefault": "0",
+        "default": "",
         "typeDefinition": [
           "0",
           "8",
@@ -4215,19 +4077,26 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/form"
   },
   {
-    "_idx": 241,
+    "_idx": 235,
     "type": "component",
     "selector": "nz-form-control",
     "types": {},
     "properties": [
+      {
+        "name": "nzFlex",
+        "inputType": 0,
+        "description": "flex 布局属性",
+        "type": "string",
+        "typeRaw": "`string \\| number`",
+        "default": ""
+      },
       {
         "name": "nzOffset",
         "inputType": 0,
         "description": "栅格左侧的间隔格数，间隔内不可以有栅格",
         "type": "Enum",
         "typeRaw": "`number`",
-        "default": "`0`",
-        "pureDefault": "0",
+        "default": "",
         "typeDefinition": [
           "0",
           "8",
@@ -4243,11 +4112,10 @@
       {
         "name": "nzOrder",
         "inputType": 0,
-        "description": "栅格顺序，`flex` 布局模式下有效",
+        "description": "栅格顺序",
         "type": "Enum",
         "typeRaw": "`number`",
-        "default": "`0`",
-        "pureDefault": "0",
+        "default": "",
         "typeDefinition": [
           "0",
           "8",
@@ -4266,8 +4134,7 @@
         "description": "栅格向左移动格数",
         "type": "Enum",
         "typeRaw": "`number`",
-        "default": "`0`",
-        "pureDefault": "0",
+        "default": "",
         "typeDefinition": [
           "0",
           "8",
@@ -4286,8 +4153,7 @@
         "description": "栅格向右移动格数",
         "type": "Enum",
         "typeRaw": "`number`",
-        "default": "`0`",
-        "pureDefault": "0",
+        "default": "",
         "typeDefinition": [
           "0",
           "8",
@@ -4498,6 +4364,22 @@
         "type": "string",
         "typeRaw": "`string  \\|  TemplateRef<{ $implicit: FormControl  \\|  NgModel }>`",
         "default": ""
+      },
+      {
+        "name": "nzAutoTips",
+        "inputType": 0,
+        "description": "配置提示的对象, 具体用法请参考示例：**自动提示**",
+        "type": "object",
+        "typeRaw": "`Record<string, Record<string, string>>`",
+        "default": ""
+      },
+      {
+        "name": "nzDisableAutoTips",
+        "inputType": 0,
+        "description": "禁用自动提示",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": ""
       }
     ],
     "description": "注意：由于 Angular Form 目前提供的[状态变更订阅](https://github.com/angular/angular/issues/10887)不完整。手动更改表单状态时，例如 `markAsDirty` 后，需要执行 `updateValueAndValidity` 通知 `nz-form-control` 进行状态变更。",
@@ -4508,7 +4390,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/form"
   },
   {
-    "_idx": 375,
+    "_idx": 397,
     "type": "component",
     "selector": "nz-form-split",
     "types": {},
@@ -4521,7 +4403,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/form"
   },
   {
-    "_idx": 381,
+    "_idx": 403,
     "type": "component",
     "selector": "nz-form-text",
     "types": {},
@@ -4534,7 +4416,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/form"
   },
   {
-    "_idx": 19,
+    "_idx": 13,
     "type": "directive",
     "selector": "nz-icon",
     "types": {},
@@ -4604,7 +4486,7 @@
     "snippet": "<i __$1></i>"
   },
   {
-    "_idx": 28,
+    "_idx": 22,
     "type": "directive",
     "selector": "nz-input",
     "types": {},
@@ -4674,7 +4556,7 @@
     "snippet": "<input __$1>"
   },
   {
-    "_idx": 82,
+    "_idx": 76,
     "type": "component",
     "selector": "nz-input-group",
     "types": {},
@@ -4752,7 +4634,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/input"
   },
   {
-    "_idx": 24,
+    "_idx": 13,
     "type": "component",
     "selector": "nz-input-number",
     "types": {},
@@ -4816,7 +4698,8 @@
         "description": "指定从 nzFormatter 里转换回数字的方式，和 nzFormatter 搭配使用",
         "type": "function",
         "typeRaw": "`(value: string) => string \\| number`",
-        "default": ""
+        "default": "`(value: string) => value.trim().replace(/。/g, '.').replace(/[^\\w\\.-]+/g, '')`",
+        "pureDefault": "(value: string) => value.trim().replace(/。/g, '.').replace(/[^\\w\\.-]+/g, '')"
       },
       {
         "name": "nzPrecision",
@@ -4825,6 +4708,21 @@
         "type": "number",
         "typeRaw": "`number`",
         "default": ""
+      },
+      {
+        "name": "nzPrecisionMode",
+        "inputType": 0,
+        "description": "数值精度的取值方式",
+        "type": "Enum",
+        "typeRaw": "`'cut' \\| 'toFixed' \\| ((value: number \\| string, precision?: number) => number)`",
+        "default": "`'toFixed'`",
+        "typeDefinition": [
+          "cut",
+          "toFixed",
+          "((value: number",
+          "string, precision?: number) => number)"
+        ],
+        "pureDefault": "toFixed"
       },
       {
         "name": "nzSize",
@@ -4896,15 +4794,15 @@
         "typeRaw": "`string`"
       }
     ],
-    "description": "在 `nz-input-number` 中输入的数值不会在输入时进行校验，而是在特定时机（回车键，上下键，失去焦点等）时才会校验后反馈到 `[ngModel]` 和 `(ngModelChange)` 中，否则输入 `-0.12` 或者 `1e10` 这种类型数据时，双向绑定的数据会永远是 `undefined`",
     "lib": "ng-zorro-antd",
     "title": "数字输入框",
+    "description": "通过鼠标或键盘，输入范围内的数值。",
     "whenToUse": "当需要获取标准数值时。",
     "doc": "/components/input-number/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/input-number"
   },
   {
-    "_idx": 145,
+    "_idx": 139,
     "type": "component",
     "selector": "nz-sider",
     "types": {},
@@ -5024,27 +4922,11 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/layout"
   },
   {
-    "_idx": 19,
+    "_idx": 13,
     "type": "component",
     "selector": "nz-list",
     "types": {},
     "properties": [
-      {
-        "name": "nzDataSource",
-        "inputType": 0,
-        "description": "列表数据源",
-        "type": "object",
-        "typeRaw": "`any[]`",
-        "default": ""
-      },
-      {
-        "name": "nzRenderItem",
-        "inputType": 0,
-        "description": "自定义列表项",
-        "type": "TemplateRef",
-        "typeRaw": "`TemplateRef<void>`",
-        "default": ""
-      },
       {
         "name": "nzBordered",
         "inputType": 0,
@@ -5060,14 +4942,6 @@
         "description": "列表底部",
         "type": "string",
         "typeRaw": "`string \\| TemplateRef<void>`",
-        "default": ""
-      },
-      {
-        "name": "nzGrid",
-        "inputType": 0,
-        "description": "列表栅格配置",
-        "type": "object",
-        "typeRaw": "`object`",
         "default": ""
       },
       {
@@ -5102,30 +4976,6 @@
         "forceInputType": 0
       },
       {
-        "name": "nzLoadMore",
-        "inputType": 0,
-        "description": "加载更多",
-        "type": "TemplateRef",
-        "typeRaw": "`TemplateRef<void>`",
-        "default": ""
-      },
-      {
-        "name": "nzNoResult",
-        "inputType": 0,
-        "description": "当列表为空时加载的内容",
-        "type": "string",
-        "typeRaw": "`string`  \\|  `TemplateRef<void>`",
-        "default": ""
-      },
-      {
-        "name": "nzPagination",
-        "inputType": 0,
-        "description": "对应的 `pagination` 配置",
-        "type": "TemplateRef",
-        "typeRaw": "`TemplateRef<void>`",
-        "default": ""
-      },
-      {
         "name": "nzSize",
         "inputType": 0,
         "description": "list 的尺寸",
@@ -5157,35 +5007,125 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/list"
   },
   {
-    "_idx": 359,
+    "_idx": 134,
+    "type": "component",
+    "selector": "nz-list-empty",
+    "types": {},
+    "properties": [
+      {
+        "name": "nzNoResult",
+        "inputType": 0,
+        "description": "空内容显示内容",
+        "type": "string",
+        "typeRaw": "`string \\| TemplateRef<void>`",
+        "default": ""
+      }
+    ],
+    "description": "列表空内容组件",
+    "lib": "ng-zorro-antd",
+    "title": "列表",
+    "whenToUse": "最基础的列表展示，可承载文字、列表、图片、段落，常用于后台数据展示页面。",
+    "doc": "/components/list/zh",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/list"
+  },
+  {
+    "_idx": 180,
+    "type": "component",
+    "selector": "nz-list-header",
+    "types": {},
+    "properties": [
+      {
+        "name": "nzNoFlex",
+        "inputType": 0,
+        "description": "是否非 `flex` 布局渲染",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      }
+    ],
+    "description": "列表头部位置组件",
+    "lib": "ng-zorro-antd",
+    "title": "列表",
+    "whenToUse": "最基础的列表展示，可承载文字、列表、图片、段落，常用于后台数据展示页面。",
+    "doc": "/components/list/zh",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/list"
+  },
+  {
+    "_idx": 186,
+    "type": "component",
+    "selector": "nz-list-footer",
+    "types": {},
+    "properties": [
+      {
+        "name": "nzNoFlex",
+        "inputType": 0,
+        "description": "是否非 `flex` 布局渲染",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      }
+    ],
+    "description": "列表脚部位置组件",
+    "lib": "ng-zorro-antd",
+    "title": "列表",
+    "whenToUse": "最基础的列表展示，可承载文字、列表、图片、段落，常用于后台数据展示页面。",
+    "doc": "/components/list/zh",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/list"
+  },
+  {
+    "_idx": 192,
+    "type": "component",
+    "selector": "nz-list-pagination",
+    "types": {},
+    "properties": [
+      {
+        "name": "nzNoFlex",
+        "inputType": 0,
+        "description": "是否非 `flex` 布局渲染",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      }
+    ],
+    "description": "列表分页位置组件",
+    "lib": "ng-zorro-antd",
+    "title": "列表",
+    "whenToUse": "最基础的列表展示，可承载文字、列表、图片、段落，常用于后台数据展示页面。",
+    "doc": "/components/list/zh",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/list"
+  },
+  {
+    "_idx": 198,
+    "type": "component",
+    "selector": "nz-list-load-more",
+    "types": {},
+    "properties": [
+      {
+        "name": "nzNoFlex",
+        "inputType": 0,
+        "description": "是否非 `flex` 布局渲染",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      }
+    ],
+    "description": "列表加载更多位置组件",
+    "lib": "ng-zorro-antd",
+    "title": "列表",
+    "whenToUse": "最基础的列表展示，可承载文字、列表、图片、段落，常用于后台数据展示页面。",
+    "doc": "/components/list/zh",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/list"
+  },
+  {
+    "_idx": 205,
     "type": "component",
     "selector": "nz-list-item",
     "types": {},
     "properties": [
-      {
-        "name": "nzContent",
-        "inputType": 0,
-        "description": "内容项",
-        "type": "string",
-        "typeRaw": "`string \\| TemplateRef<void>`",
-        "default": ""
-      },
-      {
-        "name": "nzActions",
-        "inputType": 0,
-        "description": "列表操作组，根据 `nzItemLayout` 的不同, 位置在卡片底部或者最右侧。",
-        "type": "Array",
-        "typeRaw": "`Array<TemplateRef<void><void>>`",
-        "default": ""
-      },
-      {
-        "name": "nzExtra",
-        "inputType": 0,
-        "description": "额外内容, 通常用在 `nzItemLayout` 为 `vertical` 的情况下, 展示右侧内容; `horizontal` 展示在列表元素最右侧",
-        "type": "TemplateRef",
-        "typeRaw": "`TemplateRef<void>`",
-        "default": ""
-      },
       {
         "name": "nzNoFlex",
         "inputType": 0,
@@ -5204,7 +5144,83 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/list"
   },
   {
-    "_idx": 438,
+    "_idx": 248,
+    "type": "component",
+    "selector": "nz-list-item-action",
+    "types": {},
+    "properties": [
+      {
+        "name": "nzAvatar",
+        "inputType": 0,
+        "description": "列表元素的图标",
+        "type": "string",
+        "typeRaw": "`string \\| TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "nzDescription",
+        "inputType": 0,
+        "description": "列表元素的描述内容",
+        "type": "string",
+        "typeRaw": "`string \\| TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "nzTitle",
+        "inputType": 0,
+        "description": "列表元素的标题",
+        "type": "string",
+        "typeRaw": "`string \\| TemplateRef<void>`",
+        "default": ""
+      }
+    ],
+    "description": "列表项操作项组件",
+    "lib": "ng-zorro-antd",
+    "title": "列表",
+    "whenToUse": "最基础的列表展示，可承载文字、列表、图片、段落，常用于后台数据展示页面。",
+    "doc": "/components/list/zh",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/list"
+  },
+  {
+    "_idx": 254,
+    "type": "component",
+    "selector": "nz-list-item-extra",
+    "types": {},
+    "properties": [
+      {
+        "name": "nzAvatar",
+        "inputType": 0,
+        "description": "列表元素的图标",
+        "type": "string",
+        "typeRaw": "`string \\| TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "nzDescription",
+        "inputType": 0,
+        "description": "列表元素的描述内容",
+        "type": "string",
+        "typeRaw": "`string \\| TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "nzTitle",
+        "inputType": 0,
+        "description": "列表元素的标题",
+        "type": "string",
+        "typeRaw": "`string \\| TemplateRef<void>`",
+        "default": ""
+      }
+    ],
+    "description": "列表项扩展内容位置组件",
+    "lib": "ng-zorro-antd",
+    "title": "列表",
+    "whenToUse": "最基础的列表展示，可承载文字、列表、图片、段落，常用于后台数据展示页面。",
+    "doc": "/components/list/zh",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/list"
+  },
+  {
+    "_idx": 261,
     "type": "component",
     "selector": "nz-list-item-meta",
     "types": {},
@@ -5242,7 +5258,46 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/list"
   },
   {
-    "_idx": 20,
+    "_idx": 326,
+    "type": "component",
+    "selector": "nz-list-item-meta-title",
+    "types": {},
+    "properties": [],
+    "description": "列表项元信息标题部分组件",
+    "lib": "ng-zorro-antd",
+    "title": "列表",
+    "whenToUse": "最基础的列表展示，可承载文字、列表、图片、段落，常用于后台数据展示页面。",
+    "doc": "/components/list/zh",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/list"
+  },
+  {
+    "_idx": 332,
+    "type": "component",
+    "selector": "nz-list-item-meta-description",
+    "types": {},
+    "properties": [],
+    "description": "列表项元信息描述部分组件",
+    "lib": "ng-zorro-antd",
+    "title": "列表",
+    "whenToUse": "最基础的列表展示，可承载文字、列表、图片、段落，常用于后台数据展示页面。",
+    "doc": "/components/list/zh",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/list"
+  },
+  {
+    "_idx": 338,
+    "type": "component",
+    "selector": "nz-list-item-meta-avatar",
+    "types": {},
+    "properties": [],
+    "description": "列表项元信息头像部分组件",
+    "lib": "ng-zorro-antd",
+    "title": "列表",
+    "whenToUse": "最基础的列表展示，可承载文字、列表、图片、段落，常用于后台数据展示页面。",
+    "doc": "/components/list/zh",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/list"
+  },
+  {
+    "_idx": 14,
     "type": "component",
     "selector": "nz-mention",
     "types": {},
@@ -5346,7 +5401,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/mention"
   },
   {
-    "_idx": 208,
+    "_idx": 202,
     "type": "component",
     "selector": "nzMentionTrigger",
     "types": {},
@@ -5359,7 +5414,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/mention"
   },
   {
-    "_idx": 216,
+    "_idx": 210,
     "type": "component",
     "selector": "nzMentionSuggestion",
     "types": {},
@@ -5372,7 +5427,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/mention"
   },
   {
-    "_idx": 23,
+    "_idx": 17,
     "type": "directive",
     "selector": "nz-menu",
     "types": {},
@@ -5447,7 +5502,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/menu"
   },
   {
-    "_idx": 130,
+    "_idx": 124,
     "type": "directive",
     "selector": "nz-menu-item",
     "types": {},
@@ -5498,7 +5553,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/menu"
   },
   {
-    "_idx": 209,
+    "_idx": 203,
     "type": "directive",
     "selector": "nz-submenu",
     "types": {},
@@ -5563,7 +5618,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/menu"
   },
   {
-    "_idx": 320,
+    "_idx": 314,
     "type": "directive",
     "selector": "nz-menu-group",
     "types": {},
@@ -5585,7 +5640,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/menu"
   },
   {
-    "_idx": 361,
+    "_idx": 355,
     "type": "directive",
     "selector": "nz-menu-divider",
     "types": {},
@@ -5598,7 +5653,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/menu"
   },
   {
-    "_idx": 815,
+    "_idx": 826,
     "type": "directive",
     "selector": "nzModalFooter",
     "types": {},
@@ -5611,7 +5666,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/modal"
   },
   {
-    "_idx": 20,
+    "_idx": 14,
     "type": "component",
     "selector": "nz-page-header",
     "types": {},
@@ -5655,19 +5710,19 @@
         "description": "返回按钮的点击事件",
         "type": "EventEmitter",
         "typeRaw": "`EventEmitter<void>`",
-        "default": "未订阅该事件时默认调用 [Location[back]](https://angular.cn/api/common/Location#back)",
-        "pureDefault": "未订阅该事件时默认调用 [Location[back]](https://angular.cn/api/common/Location#back)"
+        "default": "未订阅该事件时默认调用 [Location[back]](https://angular.cn/api/common/Location#back)（需要引入 [RouterModule](https://angular.io/api/router/RouterModule) 或者注册 [Location](https://angular.io/api/common/Location))）",
+        "pureDefault": "未订阅该事件时默认调用 [Location[back]](https://angular.cn/api/common/Location#back)（需要引入 [RouterModule](https://angular.io/api/router/RouterModule) 或者注册 [Location](https://angular.io/api/common/Location))）"
       }
     ],
     "lib": "ng-zorro-antd",
     "title": "页头",
-    "description": "页头用来声明页面的主题，包含了用户所关注的最重要的信息。",
-    "whenToUse": "当需要用户快速理解当前页面是什么以及它的功能时使用。",
+    "description": "页头位于页容器中，页容器顶部，起到了内容概览和引导页级操作的作用。包括由面包屑、标题、页面内容简介、页面级操作等、页面级导航组成。",
+    "whenToUse": "当需要使用户快速理解当前页是什么以及方便用户使用页面功能时使用，通常也可被用作页面间导航。",
     "doc": "/components/page-header/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/page-header"
   },
   {
-    "_idx": 29,
+    "_idx": 23,
     "type": "component",
     "selector": "nz-pagination",
     "types": {},
@@ -5747,6 +5802,15 @@
         "pureDefault": "default"
       },
       {
+        "name": "nzResponsive",
+        "inputType": 0,
+        "description": "当 `nzSize` 未指定时，根据屏幕宽度自动调整尺寸",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
         "name": "nzPageSizeOptions",
         "inputType": 0,
         "description": "指定每页可以显示多少条",
@@ -5760,7 +5824,7 @@
         "inputType": 0,
         "description": "用于自定义页码的结构",
         "type": "TemplateRef",
-        "typeRaw": "`TemplateRef<{ $implicit: 'page' \\| 'prev' \\| 'next', page: number }>`",
+        "typeRaw": "`TemplateRef<{ $implicit: 'page' \\| 'prev' \\| 'next'\\| 'prev_5'\\| 'next_5', page: number }>`",
         "default": ""
       },
       {
@@ -5805,7 +5869,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/pagination"
   },
   {
-    "_idx": 22,
+    "_idx": 16,
     "type": "directive",
     "selector": "nz-popconfirm",
     "types": {},
@@ -5915,6 +5979,14 @@
         "pureDefault": "top"
       },
       {
+        "name": "nzTooltipOrigin",
+        "inputType": 0,
+        "description": "气泡框定位元素",
+        "type": "object",
+        "typeRaw": "`ElementRef`",
+        "default": ""
+      },
+      {
         "name": "nzPopconfirmTitle",
         "inputType": 0,
         "description": "确认框的描述",
@@ -5959,6 +6031,14 @@
           "rightBottom"
         ],
         "pureDefault": "top"
+      },
+      {
+        "name": "nzPopconfirmOrigin",
+        "inputType": 0,
+        "description": "气泡框定位元素",
+        "type": "object",
+        "typeRaw": "`ElementRef`",
+        "default": ""
       },
       {
         "name": "nzCancelText",
@@ -6036,7 +6116,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/popconfirm"
   },
   {
-    "_idx": 22,
+    "_idx": 16,
     "type": "directive",
     "selector": "nz-popover",
     "types": {},
@@ -6146,6 +6226,14 @@
         "pureDefault": "top"
       },
       {
+        "name": "nzTooltipOrigin",
+        "inputType": 0,
+        "description": "气泡框定位元素",
+        "type": "object",
+        "typeRaw": "`ElementRef`",
+        "default": ""
+      },
+      {
         "name": "nzPopoverTitle",
         "inputType": 0,
         "description": "标题",
@@ -6198,6 +6286,14 @@
           "rightBottom"
         ],
         "pureDefault": "top"
+      },
+      {
+        "name": "nzPopoverOrigin",
+        "inputType": 0,
+        "description": "气泡框定位元素",
+        "type": "object",
+        "typeRaw": "`ElementRef`",
+        "default": ""
       }
     ],
     "lib": "ng-zorro-antd",
@@ -6208,7 +6304,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/popover"
   },
   {
-    "_idx": 28,
+    "_idx": 22,
     "type": "directive",
     "selector": "nz-radio",
     "types": {},
@@ -6245,8 +6341,8 @@
         "name": "nzValue",
         "inputType": 0,
         "description": "设置 value，与 `nz-radio-group` 配合使用",
-        "type": "string",
-        "typeRaw": "`string`",
+        "type": "object",
+        "typeRaw": "`any`",
         "default": ""
       },
       {
@@ -6273,7 +6369,7 @@
     "snippet": "<label __$1>$2</label>"
   },
   {
-    "_idx": 28,
+    "_idx": 22,
     "type": "directive",
     "selector": "nz-radio-button",
     "types": {},
@@ -6310,8 +6406,8 @@
         "name": "nzValue",
         "inputType": 0,
         "description": "设置 value，与 `nz-radio-group` 配合使用",
-        "type": "string",
-        "typeRaw": "`string`",
+        "type": "object",
+        "typeRaw": "`any`",
         "default": ""
       },
       {
@@ -6331,7 +6427,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/radio"
   },
   {
-    "_idx": 121,
+    "_idx": 115,
     "type": "component",
     "selector": "nz-radio-group",
     "types": {},
@@ -6340,8 +6436,8 @@
         "name": "ngModel",
         "inputType": 2,
         "description": "指定选中的 `nz-radio` 的 value 值",
-        "type": "string",
-        "typeRaw": "`string`",
+        "type": "object",
+        "typeRaw": "`any`",
         "default": ""
       },
       {
@@ -6406,7 +6502,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/radio"
   },
   {
-    "_idx": 28,
+    "_idx": 22,
     "type": "component",
     "selector": "nz-rate",
     "types": {},
@@ -6539,7 +6635,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/rate"
   },
   {
-    "_idx": 23,
+    "_idx": 40,
     "type": "directive",
     "selector": "nz-resizable",
     "types": {},
@@ -6663,12 +6759,12 @@
     "description": "声明在需要调整尺寸的元素上，元素 `position` 属性必须为 `'relative' | 'absolute' | 'fixed' |'sticky'` 之一，默认会自动设置为 `'relative'`。",
     "lib": "ng-zorro-antd",
     "title": "调整尺寸",
-    "whenToUse": "",
+    "whenToUse": "当你想调整元素尺寸时.",
     "doc": "/components/resizable/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/resizable"
   },
   {
-    "_idx": 232,
+    "_idx": 249,
     "type": "component",
     "selector": "nz-resize-handle",
     "types": {},
@@ -6686,12 +6782,12 @@
     "description": "定义调整手柄及方向。",
     "lib": "ng-zorro-antd",
     "title": "调整尺寸",
-    "whenToUse": "",
+    "whenToUse": "当你想调整元素尺寸时.",
     "doc": "/components/resizable/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/resizable"
   },
   {
-    "_idx": 273,
+    "_idx": 290,
     "type": "component",
     "selector": "nz-resize-handles",
     "types": {},
@@ -6709,12 +6805,12 @@
     "description": "定义调整手柄的快捷组件。",
     "lib": "ng-zorro-antd",
     "title": "调整尺寸",
-    "whenToUse": "",
+    "whenToUse": "当你想调整元素尺寸时.",
     "doc": "/components/resizable/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/resizable"
   },
   {
-    "_idx": 19,
+    "_idx": 13,
     "type": "component",
     "selector": "nz-result",
     "types": {},
@@ -6727,7 +6823,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/result"
   },
   {
-    "_idx": 29,
+    "_idx": 23,
     "type": "component",
     "selector": "nz-select",
     "types": {},
@@ -7046,7 +7142,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/select"
   },
   {
-    "_idx": 528,
+    "_idx": 522,
     "type": "component",
     "selector": "nz-option",
     "types": {},
@@ -7104,7 +7200,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/select"
   },
   {
-    "_idx": 621,
+    "_idx": 615,
     "type": "component",
     "selector": "nz-option-group",
     "types": {},
@@ -7126,7 +7222,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/select"
   },
   {
-    "_idx": 38,
+    "_idx": 32,
     "type": "component",
     "selector": "nz-skeleton",
     "types": {},
@@ -7185,7 +7281,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/skeleton"
   },
   {
-    "_idx": 19,
+    "_idx": 13,
     "type": "component",
     "selector": "nz-slider",
     "types": {},
@@ -7341,7 +7437,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/slider"
   },
   {
-    "_idx": 19,
+    "_idx": 13,
     "type": "component",
     "selector": "nz-spin",
     "types": {},
@@ -7412,7 +7508,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/spin"
   },
   {
-    "_idx": 28,
+    "_idx": 22,
     "type": "component",
     "selector": "nz-statistic",
     "types": {},
@@ -7474,7 +7570,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/statistic"
   },
   {
-    "_idx": 135,
+    "_idx": 129,
     "type": "component",
     "selector": "nz-countdown",
     "types": {},
@@ -7545,7 +7641,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/statistic"
   },
   {
-    "_idx": 256,
+    "_idx": 250,
     "type": "component",
     "selector": "nzFormat",
     "types": {},
@@ -7558,7 +7654,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/statistic"
   },
   {
-    "_idx": 20,
+    "_idx": 14,
     "type": "component",
     "selector": "nz-steps",
     "types": {},
@@ -7674,7 +7770,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/steps"
   },
   {
-    "_idx": 172,
+    "_idx": 166,
     "type": "component",
     "selector": "nz-step",
     "types": {},
@@ -7745,7 +7841,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/steps"
   },
   {
-    "_idx": 28,
+    "_idx": 22,
     "type": "component",
     "selector": "nz-switch",
     "types": {},
@@ -7841,7 +7937,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/switch"
   },
   {
-    "_idx": 53,
+    "_idx": 47,
     "type": "component",
     "selector": "nz-table",
     "types": {},
@@ -7922,7 +8018,7 @@
       {
         "name": "nzWidthConfig",
         "inputType": 0,
-        "description": "表头分组时指定每列宽度，与 `th` 的 `nzWidth` 不可混用",
+        "description": "表头分组时指定每列宽度，与 `th` 的 `[nzWidth]` 不可混用",
         "type": "Array",
         "typeRaw": "`string[]`",
         "default": "`[]`",
@@ -8062,15 +8158,6 @@
         "default": ""
       },
       {
-        "name": "nzVirtualScroll",
-        "inputType": 0,
-        "description": "是否启用虚拟滚动模式，与 `[nzScroll]` 配合使用",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false"
-      },
-      {
         "name": "nzVirtualItemSize",
         "inputType": 0,
         "description": "虚拟滚动时每一列的高度，与 [cdk itemSize](https://material.angular.io/cdk/scrolling/api) 相同",
@@ -8128,6 +8215,14 @@
         "type": "EventEmitter",
         "typeRaw": "`EventEmitter<any[]>`",
         "default": ""
+      },
+      {
+        "name": "nzQueryParams",
+        "inputType": 1,
+        "description": "当服务端分页、筛选、排序时，用于获得参数，具体见示例",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<NzTableQueryParams>`",
+        "default": ""
       }
     ],
     "lib": "ng-zorro-antd",
@@ -8138,7 +8233,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/table"
   },
   {
-    "_idx": 623,
+    "_idx": 617,
     "type": "component",
     "selector": "th",
     "types": {},
@@ -8210,17 +8305,26 @@
         "default": ""
       },
       {
-        "name": "nzSortKey",
+        "name": "nzSortFn",
         "inputType": 0,
-        "description": "排序key，非受控模式使用，与 `thead` 中 `nzSortChange` 配合使用",
-        "type": "string",
-        "typeRaw": "`string`",
+        "description": "排序函数，前端排序使用一个函数(参考 Array.sort 的 compareFunction)，服务端排序时传入 true",
+        "type": "function",
+        "typeRaw": "`((a: any, b: any, sortOrder?: string) => number) | boolean`",
         "default": ""
       },
       {
-        "name": "nzSort",
+        "name": "nzSortDirections",
+        "inputType": 0,
+        "description": "支持的排序方式，取值为 `'ascend'`, `'descend'`, `null`",
+        "type": "Array",
+        "typeRaw": "`Array<'ascend' \\| 'descend' \\| null>`",
+        "default": "`['ascend', 'descend', null]`",
+        "pureDefault": "['ascend', 'descend', null]"
+      },
+      {
+        "name": "nzSortOrder",
         "inputType": 2,
-        "description": "当前排序状态，受控模式使用，可双向绑定",
+        "description": "当前排序状态，可双向绑定",
         "type": "Enum",
         "typeRaw": "'descend' \\| 'ascend' \\| null",
         "default": "null",
@@ -8232,9 +8336,9 @@
         "pureDefault": "null"
       },
       {
-        "name": "nzSortChange",
+        "name": "nzSortOrderChange",
         "inputType": 1,
-        "description": "排序状态改变回调，受控模式使用",
+        "description": "排序状态改变回调",
         "type": "EventEmitter",
         "typeRaw": "`EventEmitter<'descend' \\| 'ascend' \\| null>`",
         "default": ""
@@ -8245,6 +8349,14 @@
         "description": "是否显示过滤",
         "type": "boolean",
         "typeRaw": "`boolean`",
+        "default": ""
+      },
+      {
+        "name": "nzFilterFn",
+        "inputType": 0,
+        "description": "前端排序时，确定筛选的运行函数，服务端排序时，传入 true",
+        "type": "function",
+        "typeRaw": "`((value: any, data: any) => boolean;) | boolean`",
         "default": ""
       },
       {
@@ -8283,18 +8395,20 @@
       {
         "name": "nzLeft",
         "inputType": 0,
-        "description": "左侧距离，用于固定左侧列",
+        "description": "左侧距离，用于固定左侧列，当为 `true` 时自动计算，为 `false` 时停止固定",
         "type": "string",
-        "typeRaw": "`string`",
-        "default": ""
+        "typeRaw": "`string \\| boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
       },
       {
         "name": "nzRight",
         "inputType": 0,
-        "description": "右侧距离，用于固定右侧列",
+        "description": "右侧距离，用于固定右侧列，当为 `true` 时自动计算，为 `false` 时停止固定",
         "type": "string",
-        "typeRaw": "`string`",
-        "default": ""
+        "typeRaw": "`string \\| boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
       },
       {
         "name": "nzAlign",
@@ -8310,11 +8424,29 @@
         ]
       },
       {
-        "name": "nzExpand",
+        "name": "nzBreakWord",
         "inputType": 0,
-        "description": "当前列是否包含展开按钮",
+        "description": "是否折行显示",
         "type": "boolean",
         "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzEllipsis",
+        "inputType": 0,
+        "description": "超过宽度将自动省略，暂不支持和排序筛选一起使用。仅当表格布局将为 `nzTableLayout=\"fixed\"`时可用",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzColumnKey",
+        "inputType": 0,
+        "description": "当前列的key，用于服务端筛选和排序使用",
+        "type": "string",
+        "typeRaw": "`string`",
         "default": ""
       }
     ],
@@ -8326,7 +8458,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/table"
   },
   {
-    "_idx": 1044,
+    "_idx": 1094,
     "type": "component",
     "selector": "td",
     "types": {},
@@ -8400,18 +8532,20 @@
       {
         "name": "nzLeft",
         "inputType": 0,
-        "description": "左侧距离，用于固定左侧列",
+        "description": "左侧距离，用于固定左侧列，当为 `true` 时自动计算，为 `false` 时停止固定",
         "type": "string",
-        "typeRaw": "`string`",
-        "default": ""
+        "typeRaw": "`string \\| boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
       },
       {
         "name": "nzRight",
         "inputType": 0,
-        "description": "右侧距离，用于固定右侧列",
+        "description": "右侧距离，用于固定右侧列，当为 `true` 时自动计算，为 `false` 时停止固定",
         "type": "string",
-        "typeRaw": "`string`",
-        "default": ""
+        "typeRaw": "`string \\| boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
       },
       {
         "name": "nzAlign",
@@ -8436,6 +8570,15 @@
         "pureDefault": "false"
       },
       {
+        "name": "nzEllipsis",
+        "inputType": 0,
+        "description": "超过宽度将自动省略，暂不支持和排序筛选一起使用。仅当表格布局将为 `nzTableLayout=\"fixed\"`时可用",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
         "name": "nzIndentSize",
         "inputType": 0,
         "description": "展示树形数据时，每层缩进的宽度，以 px 为单位",
@@ -8452,38 +8595,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/table"
   },
   {
-    "_idx": 1321,
-    "type": "component",
-    "selector": "thead",
-    "types": {},
-    "properties": [
-      {
-        "name": "nzSingleSort",
-        "inputType": 0,
-        "description": "是否单列排序模式，非受控排序下使用",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false"
-      },
-      {
-        "name": "nzSortChange",
-        "inputType": 1,
-        "description": "排序改变时的回调函数，需要与 `th` 上的 `nzSortKey` 同时使用，非受控排序下使用",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<{ nzSortKey: string, value: 'descend' \\| 'ascend' \\| null }>`",
-        "default": ""
-      }
-    ],
-    "lib": "ng-zorro-antd",
-    "title": "表格",
-    "description": "展示行列数据。",
-    "whenToUse": "- 当有大量结构化的数据需要展现时；\n- 当需要对数据进行排序、搜索、分页、自定义操作等复杂行为时。",
-    "doc": "/components/table/zh",
-    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/table"
-  },
-  {
-    "_idx": 1372,
+    "_idx": 1385,
     "type": "component",
     "selector": "tr",
     "types": {},
@@ -8505,7 +8617,54 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/table"
   },
   {
-    "_idx": 1409,
+    "_idx": 1422,
+    "type": "component",
+    "selector": "nz-filter-trigger",
+    "types": {},
+    "properties": [
+      {
+        "name": "nzDropdownMenu",
+        "inputType": 0,
+        "description": "Dropdown 下拉菜单组件",
+        "type": "object",
+        "typeRaw": "`NzDropdownMenuComponent`",
+        "default": ""
+      },
+      {
+        "name": "nzVisible",
+        "inputType": 2,
+        "description": "菜单是否显示，可双向绑定",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": ""
+      },
+      {
+        "name": "nzActive",
+        "inputType": 0,
+        "description": "是否激活选中图标效果",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzVisibleChange",
+        "inputType": 1,
+        "description": "菜单显示状态改变时调用，参数为 nzVisible",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<boolean>`",
+        "default": ""
+      }
+    ],
+    "description": "用于自定义筛选功能",
+    "lib": "ng-zorro-antd",
+    "title": "表格",
+    "whenToUse": "- 当有大量结构化的数据需要展现时；\n- 当需要对数据进行排序、搜索、分页、自定义操作等复杂行为时。",
+    "doc": "/components/table/zh",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/table"
+  },
+  {
+    "_idx": 1504,
     "type": "directive",
     "selector": "nz-virtual-scroll",
     "types": {},
@@ -8518,7 +8677,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/table"
   },
   {
-    "_idx": 39,
+    "_idx": 33,
     "type": "component",
     "selector": "nz-tabset",
     "types": {},
@@ -8643,6 +8802,14 @@
         "pureDefault": "true"
       },
       {
+        "name": "nzCanDeactivate",
+        "inputType": 0,
+        "description": "决定一个 tab 是否可以被切换",
+        "type": "object",
+        "typeRaw": "`NzTabsCanDeactivateFn`",
+        "default": ""
+      },
+      {
         "name": "nzSelectedIndexChange",
         "inputType": 1,
         "description": "当前激活 tab 面板的 序列号变更回调函数",
@@ -8683,7 +8850,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tabs"
   },
   {
-    "_idx": 337,
+    "_idx": 348,
     "type": "component",
     "selector": "nz-tab",
     "types": {},
@@ -8747,7 +8914,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tabs"
   },
   {
-    "_idx": 444,
+    "_idx": 455,
     "type": "directive",
     "selector": "nz-tab",
     "types": {},
@@ -8760,7 +8927,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tabs"
   },
   {
-    "_idx": 450,
+    "_idx": 461,
     "type": "directive",
     "selector": "nz-tab-link",
     "types": {},
@@ -8773,7 +8940,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tabs"
   },
   {
-    "_idx": 28,
+    "_idx": 22,
     "type": "component",
     "selector": "nz-tag",
     "types": {},
@@ -8834,7 +9001,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tag"
   },
   {
-    "_idx": 20,
+    "_idx": 14,
     "type": "component",
     "selector": "nz-time-picker",
     "types": {},
@@ -9037,7 +9204,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/time-picker"
   },
   {
-    "_idx": 29,
+    "_idx": 23,
     "type": "component",
     "selector": "nz-timeline",
     "types": {},
@@ -9091,7 +9258,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/timeline"
   },
   {
-    "_idx": 111,
+    "_idx": 105,
     "type": "component",
     "selector": "nz-timeline-item",
     "types": {},
@@ -9122,7 +9289,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/timeline"
   },
   {
-    "_idx": 22,
+    "_idx": 16,
     "type": "component",
     "selector": "nz-transfer",
     "types": {},
@@ -9259,6 +9426,14 @@
         "default": ""
       },
       {
+        "name": "nzSelectedKeys",
+        "inputType": 0,
+        "description": "设置被选中的 key 集合",
+        "type": "Array",
+        "typeRaw": "`string[]`",
+        "default": ""
+      },
+      {
         "name": "nzTargetKeys",
         "inputType": 0,
         "description": "显示在右侧框数据的 key 集合",
@@ -9299,7 +9474,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/transfer"
   },
   {
-    "_idx": 16,
+    "_idx": 10,
     "type": "component",
     "selector": "nz-tree",
     "types": {},
@@ -9465,12 +9640,56 @@
         "pureDefault": "null"
       },
       {
+        "name": "nzSearchFunc",
+        "inputType": 0,
+        "description": "自定义匹配方法，配合 nzSearchValue 使用",
+        "type": "function",
+        "typeRaw": "`(node: NzTreeNodeOptions) => boolean`",
+        "default": "`null`",
+        "pureDefault": "null"
+      },
+      {
         "name": "nzBeforeDrop",
         "inputType": 0,
         "description": "drop前二次校验,允许用户自行决定是否允许放置",
         "type": "function",
         "typeRaw": "`(confirm: NzFormatBeforeDropEvent) => Observable<boolean>`",
         "default": ""
+      },
+      {
+        "name": "nzVirtualHeight",
+        "inputType": 0,
+        "description": "虚拟滚动的总高度",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
+      },
+      {
+        "name": "nzVirtualItemSize",
+        "inputType": 0,
+        "description": "虚拟滚动时每一列的高度，与 [cdk itemSize](https://material.angular.io/cdk/scrolling/api) 相同",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`0`",
+        "pureDefault": "0"
+      },
+      {
+        "name": "nzVirtualMaxBufferPx",
+        "inputType": 0,
+        "description": "缓冲区最大像素高度，与 [cdk maxBufferPx](https://material.angular.io/cdk/scrolling/api) 相同",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`200`",
+        "pureDefault": "200"
+      },
+      {
+        "name": "nzVirtualMinBufferPx",
+        "inputType": 0,
+        "description": "缓冲区最小像素高度，低于该值时将加载新结构，与 [cdk minBufferPx](https://material.angular.io/cdk/scrolling/api) 相同",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`100`",
+        "pureDefault": "100"
       },
       {
         "name": "nzClick",
@@ -9577,7 +9796,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tree"
   },
   {
-    "_idx": 19,
+    "_idx": 13,
     "type": "component",
     "selector": "nz-tree-select",
     "types": {},
@@ -9650,6 +9869,14 @@
         "description": "下拉菜单的样式",
         "type": "object",
         "typeRaw": "`{ [key: string]: string; }`",
+        "default": ""
+      },
+      {
+        "name": "nzDropdownClassName",
+        "inputType": 0,
+        "description": "下拉菜单的 className 属性",
+        "type": "string",
+        "typeRaw": "`string`",
         "default": ""
       },
       {
@@ -9836,7 +10063,7 @@
       {
         "name": "nzEditable",
         "inputType": 0,
-        "description": "是否可编辑，是否可拷贝，需要配合 `[nzContent]` 使用",
+        "description": "是否可编辑，需要配合 `[nzContent]` 使用",
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
@@ -9859,6 +10086,14 @@
         "typeRaw": "`boolean`",
         "default": "`false`",
         "pureDefault": "false"
+      },
+      {
+        "name": "nzSuffix",
+        "inputType": 0,
+        "description": "自动溢出省略时的文本后缀",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
       },
       {
         "name": "nzCopyText",
@@ -9917,15 +10152,15 @@
         "default": ""
       }
     ],
-    "description": "`p[nz-paragraph]`, `span[nz-text]`, `h1[nz-title]`, `h2[nz-title]`, `h3[nz-title]`, `h4[nz-title]` 的使用方法与 `[nz-typography]` 相同",
     "lib": "ng-zorro-antd",
     "title": "排版",
+    "description": "文本的基本格式。",
     "whenToUse": "- 当需要展示标题、段落、列表内容时使用，如文章/博客/日志的文本样式。\n- 当需要一列基于文本的基础操作时，如拷贝/省略/可编辑。",
     "doc": "/components/typography/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/typography"
   },
   {
-    "_idx": 41,
+    "_idx": 35,
     "type": "component",
     "selector": "nz-upload",
     "types": {},
@@ -9943,7 +10178,7 @@
         "inputType": 0,
         "description": "必选参数, 上传的地址",
         "type": "string",
-        "typeRaw": "`string`",
+        "typeRaw": "`string \\| ((file: UploadFile) => string \\| Observable<string>)`",
         "default": ""
       },
       {
@@ -9976,7 +10211,7 @@
         "inputType": 0,
         "description": "上传所需参数或返回上传参数的方法；注意：务必使用 `=>` 定义处理方法。",
         "type": "object",
-        "typeRaw": "`Object \\| ((file: UploadFile) => Object)`",
+        "typeRaw": "`Object \\| ((file: UploadFile) => Object \\| Observable<{}>)`",
         "default": ""
       },
       {
@@ -10036,7 +10271,7 @@
         "inputType": 0,
         "description": "设置上传的请求头部，IE10 以上有效；注意：务必使用 `=>` 定义处理方法。",
         "type": "object",
-        "typeRaw": "`Object \\| ((file: UploadFile) => Object)`",
+        "typeRaw": "`Object \\| ((file: UploadFile) => Object \\| Observable<{}>)`",
         "default": ""
       },
       {
@@ -10074,9 +10309,9 @@
       {
         "name": "nzShowUploadList",
         "inputType": 0,
-        "description": "是否展示 uploadList, 可设为一个对象，用于单独设定 showPreviewIcon 和 showRemoveIcon",
+        "description": "是否展示 uploadList, 可设为一个对象，用于单独设定 `showPreviewIcon`，`showRemoveIcon` 和 `showDownloadIcon`",
         "type": "boolean",
-        "typeRaw": "`boolean \\| { showPreviewIcon?: boolean, showRemoveIcon?: boolean }`",
+        "typeRaw": "`boolean \\| { showPreviewIcon?: boolean, showRemoveIcon?: boolean, showDownloadIcon?: boolean }`",
         "default": "`true`",
         "pureDefault": "true"
       },
@@ -10116,6 +10351,14 @@
         "default": ""
       },
       {
+        "name": "nzPreviewFile",
+        "inputType": 0,
+        "description": "自定义文件预览逻辑；注意：务必使用 `=>` 定义处理方法。",
+        "type": "function",
+        "typeRaw": "`(file: UploadFile) => Observable<dataURL: string>`",
+        "default": ""
+      },
+      {
         "name": "nzRemove",
         "inputType": 0,
         "description": "点击移除文件时的回调，返回值为 false 时不移除。支持返回 `Observable` 对象；注意：务必使用 `=>` 定义处理方法。",
@@ -10129,6 +10372,31 @@
         "description": "上传文件改变时的状态",
         "type": "EventEmitter",
         "typeRaw": "`EventEmitter<UploadChangeParam>`",
+        "default": ""
+      },
+      {
+        "name": "nzDownload",
+        "inputType": 0,
+        "description": "点击下载文件时的回调，如果没有指定，则默认跳转到文件 url 对应的标签页",
+        "type": "function",
+        "typeRaw": "`(file: UploadFile) => void`",
+        "default": "跳转新标签页",
+        "pureDefault": "跳转新标签页"
+      },
+      {
+        "name": "nzTransformFile",
+        "inputType": 0,
+        "description": "在上传之前转换文件。支持返回一个 Observable 对象",
+        "type": "function",
+        "typeRaw": "`(file: UploadFile) => UploadTransformFileType`",
+        "default": ""
+      },
+      {
+        "name": "nzIconRender",
+        "inputType": 0,
+        "description": "自定义显示 icon",
+        "type": "TemplateRef",
+        "typeRaw": "`TemplateRef<void>`",
         "default": ""
       }
     ],
@@ -10259,30 +10527,6 @@
         "type": "EventEmitter",
         "typeRaw": "`EventEmitter<CountdownEvent>`",
         "default": ""
-      },
-      {
-        "name": "deprecated",
-        "inputType": 1,
-        "description": "开始时触发",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<void>`",
-        "default": ""
-      },
-      {
-        "name": "deprecated",
-        "inputType": 1,
-        "description": "通知时触发，需要在 `config` 中配置 notify",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<number>`",
-        "default": ""
-      },
-      {
-        "name": "deprecated",
-        "inputType": 1,
-        "description": "结束时触发",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<void>`",
-        "default": ""
       }
     ],
     "lib": "@delon/abc",
@@ -10293,7 +10537,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/count-down"
   },
   {
-    "_idx": 6,
+    "_idx": 12,
     "type": "component",
     "selector": "range-picker",
     "types": {
@@ -10551,6 +10795,14 @@
         "default": ""
       },
       {
+        "name": "http-body",
+        "inputType": 0,
+        "description": "POST请求响应体",
+        "type": "object",
+        "typeRaw": "`any`",
+        "default": ""
+      },
+      {
         "name": "http-method",
         "inputType": 0,
         "description": "请求类型",
@@ -10572,7 +10824,7 @@
         "inputType": 0,
         "description": "指定文件名，若为空从服务端返回的 `header` 中获取 `filename`、`x-filename`",
         "type": "string",
-        "typeRaw": "`string`",
+        "typeRaw": "`string, (rep: HttpResponse<Blob>) => string`",
         "default": ""
       },
       {
@@ -10598,398 +10850,6 @@
     "whenToUse": "",
     "doc": "/components/down-file/zh",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/down-file"
-  },
-  {
-    "_idx": 30,
-    "type": "component",
-    "selector": "se-container",
-    "types": {},
-    "properties": [
-      {
-        "name": "gutter",
-        "inputType": 0,
-        "description": "间距，当 `nzLayout:horizontal` 时有效",
-        "type": "Enum",
-        "typeRaw": "`number`",
-        "default": "`32`",
-        "pureDefault": "32",
-        "typeDefinition": [
-          "0",
-          "8",
-          "16",
-          "24",
-          "32",
-          "40",
-          "48",
-          "56",
-          "64"
-        ]
-      },
-      {
-        "name": "se-container",
-        "inputType": 0,
-        "description": "指定表单元素最多分几列展示，最终一行几列由 col 配置结合[响应式规则](/theme/responsive)决定",
-        "type": "Enum",
-        "typeRaw": "`'1','2','3','4','5','6'`",
-        "default": "",
-        "typeDefinition": [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6"
-        ]
-      },
-      {
-        "name": "col",
-        "inputType": 0,
-        "description": "指定表单元素最多分几列展示，最终一行几列由 col 配置结合[响应式规则](/theme/responsive)决定",
-        "type": "Enum",
-        "typeRaw": "`'1','2','3','4','5','6'`",
-        "default": "",
-        "typeDefinition": [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6"
-        ]
-      },
-      {
-        "name": "labelWidth",
-        "inputType": 0,
-        "description": "表单元素默认标签文本宽度，单位：`px`",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "`150`",
-        "pureDefault": "150"
-      },
-      {
-        "name": "nzLayout",
-        "inputType": 0,
-        "description": "表单布局，当 `inline` 时强制大小为 `compact`",
-        "type": "Enum",
-        "typeRaw": "`'horizontal','vertical','inline'`",
-        "default": "`'horizontal'`",
-        "typeDefinition": [
-          "horizontal",
-          "vertical",
-          "inline"
-        ],
-        "pureDefault": "horizontal"
-      },
-      {
-        "name": "size",
-        "inputType": 0,
-        "description": "大小 `compact` 紧凑型，强制忽略 `error`、`extra` 展示",
-        "type": "Enum",
-        "typeRaw": "`'default','compact'`",
-        "default": "`'default'`",
-        "typeDefinition": [
-          "default",
-          "compact"
-        ],
-        "pureDefault": "default"
-      },
-      {
-        "name": "firstVisual",
-        "inputType": 0,
-        "description": "是否立即呈现错误视觉",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false"
-      },
-      {
-        "name": "line",
-        "inputType": 0,
-        "description": "分隔线",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false"
-      },
-      {
-        "name": "title",
-        "inputType": 0,
-        "description": "标题",
-        "type": "string",
-        "typeRaw": "`string,TemplateRef<void>`",
-        "default": ""
-      }
-    ],
-    "lib": "@delon/abc",
-    "title": "编辑",
-    "description": "简化表单HTML模板的高阶组件，并进一步优化了一些细节：",
-    "whenToUse": "",
-    "doc": "/components/edit/zh",
-    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/edit"
-  },
-  {
-    "_idx": 30,
-    "type": "directive",
-    "selector": "se-container",
-    "types": {},
-    "properties": [
-      {
-        "name": "gutter",
-        "inputType": 0,
-        "description": "间距，当 `nzLayout:horizontal` 时有效",
-        "type": "Enum",
-        "typeRaw": "`number`",
-        "default": "`32`",
-        "pureDefault": "32",
-        "typeDefinition": [
-          "0",
-          "8",
-          "16",
-          "24",
-          "32",
-          "40",
-          "48",
-          "56",
-          "64"
-        ]
-      },
-      {
-        "name": "se-container",
-        "inputType": 0,
-        "description": "指定表单元素最多分几列展示，最终一行几列由 col 配置结合[响应式规则](/theme/responsive)决定",
-        "type": "Enum",
-        "typeRaw": "`'1','2','3','4','5','6'`",
-        "default": "",
-        "typeDefinition": [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6"
-        ]
-      },
-      {
-        "name": "col",
-        "inputType": 0,
-        "description": "指定表单元素最多分几列展示，最终一行几列由 col 配置结合[响应式规则](/theme/responsive)决定",
-        "type": "Enum",
-        "typeRaw": "`'1','2','3','4','5','6'`",
-        "default": "",
-        "typeDefinition": [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6"
-        ]
-      },
-      {
-        "name": "labelWidth",
-        "inputType": 0,
-        "description": "表单元素默认标签文本宽度，单位：`px`",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "`150`",
-        "pureDefault": "150"
-      },
-      {
-        "name": "nzLayout",
-        "inputType": 0,
-        "description": "表单布局，当 `inline` 时强制大小为 `compact`",
-        "type": "Enum",
-        "typeRaw": "`'horizontal','vertical','inline'`",
-        "default": "`'horizontal'`",
-        "typeDefinition": [
-          "horizontal",
-          "vertical",
-          "inline"
-        ],
-        "pureDefault": "horizontal"
-      },
-      {
-        "name": "size",
-        "inputType": 0,
-        "description": "大小 `compact` 紧凑型，强制忽略 `error`、`extra` 展示",
-        "type": "Enum",
-        "typeRaw": "`'default','compact'`",
-        "default": "`'default'`",
-        "typeDefinition": [
-          "default",
-          "compact"
-        ],
-        "pureDefault": "default"
-      },
-      {
-        "name": "firstVisual",
-        "inputType": 0,
-        "description": "是否立即呈现错误视觉",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false"
-      },
-      {
-        "name": "line",
-        "inputType": 0,
-        "description": "分隔线",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false"
-      },
-      {
-        "name": "title",
-        "inputType": 0,
-        "description": "标题",
-        "type": "string",
-        "typeRaw": "`string,TemplateRef<void>`",
-        "default": ""
-      }
-    ],
-    "lib": "@delon/abc",
-    "title": "编辑",
-    "description": "简化表单HTML模板的高阶组件，并进一步优化了一些细节：",
-    "whenToUse": "",
-    "doc": "/components/edit/zh",
-    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/edit"
-  },
-  {
-    "_idx": 179,
-    "type": "component",
-    "selector": "se",
-    "types": {},
-    "properties": [
-      {
-        "name": "col",
-        "inputType": 0,
-        "description": "指定表单元素最多分几列展示，最终一行几列由 col 配置结合[响应式规则](/theme/responsive)决定（继承于 `se-container`）",
-        "type": "Enum",
-        "typeRaw": "`'1','2','3','4','5','6'`",
-        "default": "",
-        "typeDefinition": [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6"
-        ]
-      },
-      {
-        "name": "label",
-        "inputType": 0,
-        "description": "标签文本",
-        "type": "string",
-        "typeRaw": "`string,TemplateRef<void>`",
-        "default": ""
-      },
-      {
-        "name": "labelWidth",
-        "inputType": 0,
-        "description": "标签文本宽度，单位：`px`（继承于 `se-container`）",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": ""
-      },
-      {
-        "name": "optional",
-        "inputType": 0,
-        "description": "标签可选信息",
-        "type": "string",
-        "typeRaw": "`string, TemplateRef<void>`",
-        "default": ""
-      },
-      {
-        "name": "optionalHelp",
-        "inputType": 0,
-        "description": "标签可选帮助",
-        "type": "string",
-        "typeRaw": "`string, TemplateRef<void>`",
-        "default": ""
-      },
-      {
-        "name": "error",
-        "inputType": 0,
-        "description": "错误描述",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": ""
-      },
-      {
-        "name": "extra",
-        "inputType": 0,
-        "description": "额外提示信息",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": ""
-      },
-      {
-        "name": "required",
-        "inputType": 0,
-        "description": "是否必填项标识符",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": ""
-      },
-      {
-        "name": "controlClass",
-        "inputType": 0,
-        "description": "控件区域样式名",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": ""
-      },
-      {
-        "name": "id",
-        "inputType": 0,
-        "description": "自定义组件 `id`",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": ""
-      },
-      {
-        "name": "line",
-        "inputType": 0,
-        "description": "分隔线（继承于 `se-container`）",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": ""
-      }
-    ],
-    "lib": "@delon/abc",
-    "title": "编辑",
-    "description": "简化表单HTML模板的高阶组件，并进一步优化了一些细节：",
-    "whenToUse": "",
-    "doc": "/components/edit/zh",
-    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/edit"
-  },
-  {
-    "_idx": 356,
-    "type": "component",
-    "selector": "se-title",
-    "types": {},
-    "properties": [],
-    "description": "用于展示标题，单独一行。",
-    "lib": "@delon/abc",
-    "title": "编辑",
-    "whenToUse": "",
-    "doc": "/components/edit/zh",
-    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/edit"
-  },
-  {
-    "_idx": 356,
-    "type": "directive",
-    "selector": "se-title",
-    "types": {},
-    "properties": [],
-    "description": "用于展示标题，单独一行。",
-    "lib": "@delon/abc",
-    "title": "编辑",
-    "whenToUse": "",
-    "doc": "/components/edit/zh",
-    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/edit"
   },
   {
     "_idx": 6,
@@ -11935,7 +11795,561 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/reuse-tab"
   },
   {
-    "_idx": 53,
+    "_idx": 30,
+    "type": "component",
+    "selector": "se-container",
+    "types": {},
+    "properties": [
+      {
+        "name": "gutter",
+        "inputType": 0,
+        "description": "间距，当 `nzLayout:horizontal` 时有效",
+        "type": "Enum",
+        "typeRaw": "`number`",
+        "default": "`32`",
+        "pureDefault": "32",
+        "typeDefinition": [
+          "0",
+          "8",
+          "16",
+          "24",
+          "32",
+          "40",
+          "48",
+          "56",
+          "64"
+        ]
+      },
+      {
+        "name": "se-container",
+        "inputType": 0,
+        "description": "指定表单元素最多分几列展示，最终一行几列由 col 配置结合[响应式规则](/theme/responsive)决定",
+        "type": "Enum",
+        "typeRaw": "`'1','2','3','4','5','6'`",
+        "default": "",
+        "typeDefinition": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ]
+      },
+      {
+        "name": "col",
+        "inputType": 0,
+        "description": "指定表单元素最多分几列展示，最终一行几列由 col 配置结合[响应式规则](/theme/responsive)决定",
+        "type": "Enum",
+        "typeRaw": "`'1','2','3','4','5','6'`",
+        "default": "",
+        "typeDefinition": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ]
+      },
+      {
+        "name": "labelWidth",
+        "inputType": 0,
+        "description": "表单元素默认标签文本宽度，单位：`px`",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`150`",
+        "pureDefault": "150"
+      },
+      {
+        "name": "nzLayout",
+        "inputType": 0,
+        "description": "表单布局，当 `inline` 时强制大小为 `compact`",
+        "type": "Enum",
+        "typeRaw": "`'horizontal','vertical','inline'`",
+        "default": "`'horizontal'`",
+        "typeDefinition": [
+          "horizontal",
+          "vertical",
+          "inline"
+        ],
+        "pureDefault": "horizontal"
+      },
+      {
+        "name": "size",
+        "inputType": 0,
+        "description": "大小 `compact` 紧凑型，强制忽略 `error`、`extra` 展示",
+        "type": "Enum",
+        "typeRaw": "`'default','compact'`",
+        "default": "`'default'`",
+        "typeDefinition": [
+          "default",
+          "compact"
+        ],
+        "pureDefault": "default"
+      },
+      {
+        "name": "firstVisual",
+        "inputType": 0,
+        "description": "是否立即呈现错误视觉",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "line",
+        "inputType": 0,
+        "description": "分隔线",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "title",
+        "inputType": 0,
+        "description": "标题",
+        "type": "string",
+        "typeRaw": "`string,TemplateRef<void>`",
+        "default": ""
+      }
+    ],
+    "lib": "@delon/abc",
+    "title": "编辑",
+    "description": "简化表单HTML模板的高阶组件，并进一步优化了一些细节：",
+    "whenToUse": "",
+    "doc": "/components/se/zh",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/se"
+  },
+  {
+    "_idx": 30,
+    "type": "directive",
+    "selector": "se-container",
+    "types": {},
+    "properties": [
+      {
+        "name": "gutter",
+        "inputType": 0,
+        "description": "间距，当 `nzLayout:horizontal` 时有效",
+        "type": "Enum",
+        "typeRaw": "`number`",
+        "default": "`32`",
+        "pureDefault": "32",
+        "typeDefinition": [
+          "0",
+          "8",
+          "16",
+          "24",
+          "32",
+          "40",
+          "48",
+          "56",
+          "64"
+        ]
+      },
+      {
+        "name": "se-container",
+        "inputType": 0,
+        "description": "指定表单元素最多分几列展示，最终一行几列由 col 配置结合[响应式规则](/theme/responsive)决定",
+        "type": "Enum",
+        "typeRaw": "`'1','2','3','4','5','6'`",
+        "default": "",
+        "typeDefinition": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ]
+      },
+      {
+        "name": "col",
+        "inputType": 0,
+        "description": "指定表单元素最多分几列展示，最终一行几列由 col 配置结合[响应式规则](/theme/responsive)决定",
+        "type": "Enum",
+        "typeRaw": "`'1','2','3','4','5','6'`",
+        "default": "",
+        "typeDefinition": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ]
+      },
+      {
+        "name": "labelWidth",
+        "inputType": 0,
+        "description": "表单元素默认标签文本宽度，单位：`px`",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`150`",
+        "pureDefault": "150"
+      },
+      {
+        "name": "nzLayout",
+        "inputType": 0,
+        "description": "表单布局，当 `inline` 时强制大小为 `compact`",
+        "type": "Enum",
+        "typeRaw": "`'horizontal','vertical','inline'`",
+        "default": "`'horizontal'`",
+        "typeDefinition": [
+          "horizontal",
+          "vertical",
+          "inline"
+        ],
+        "pureDefault": "horizontal"
+      },
+      {
+        "name": "size",
+        "inputType": 0,
+        "description": "大小 `compact` 紧凑型，强制忽略 `error`、`extra` 展示",
+        "type": "Enum",
+        "typeRaw": "`'default','compact'`",
+        "default": "`'default'`",
+        "typeDefinition": [
+          "default",
+          "compact"
+        ],
+        "pureDefault": "default"
+      },
+      {
+        "name": "firstVisual",
+        "inputType": 0,
+        "description": "是否立即呈现错误视觉",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "line",
+        "inputType": 0,
+        "description": "分隔线",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "title",
+        "inputType": 0,
+        "description": "标题",
+        "type": "string",
+        "typeRaw": "`string,TemplateRef<void>`",
+        "default": ""
+      }
+    ],
+    "lib": "@delon/abc",
+    "title": "编辑",
+    "description": "简化表单HTML模板的高阶组件，并进一步优化了一些细节：",
+    "whenToUse": "",
+    "doc": "/components/se/zh",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/se"
+  },
+  {
+    "_idx": 179,
+    "type": "component",
+    "selector": "se",
+    "types": {},
+    "properties": [
+      {
+        "name": "col",
+        "inputType": 0,
+        "description": "指定表单元素最多分几列展示，最终一行几列由 col 配置结合[响应式规则](/theme/responsive)决定（继承于 `se-container`）",
+        "type": "Enum",
+        "typeRaw": "`'1','2','3','4','5','6'`",
+        "default": "",
+        "typeDefinition": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ]
+      },
+      {
+        "name": "label",
+        "inputType": 0,
+        "description": "标签文本",
+        "type": "string",
+        "typeRaw": "`string, TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "labelWidth",
+        "inputType": 0,
+        "description": "标签文本宽度，单位：`px`（继承于 `se-container`）",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": ""
+      },
+      {
+        "name": "optional",
+        "inputType": 0,
+        "description": "标签可选信息",
+        "type": "string",
+        "typeRaw": "`string, TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "optionalHelp",
+        "inputType": 0,
+        "description": "标签可选帮助",
+        "type": "string",
+        "typeRaw": "`string, TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "error",
+        "inputType": 0,
+        "description": "错误描述",
+        "type": "string",
+        "typeRaw": "`string, TemplateRef<void>, { [key: string]: string, TemplateRef<void> }`",
+        "default": ""
+      },
+      {
+        "name": "extra",
+        "inputType": 0,
+        "description": "额外提示信息",
+        "type": "string",
+        "typeRaw": "`string, TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "required",
+        "inputType": 0,
+        "description": "是否必填项标识符，若不设置自动根据表单元素是否有 `RequiredValidator` 校验来设置值",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
+      },
+      {
+        "name": "controlClass",
+        "inputType": 0,
+        "description": "控件区域样式名",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
+      },
+      {
+        "name": "id",
+        "inputType": 0,
+        "description": "自定义组件 `id`",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
+      },
+      {
+        "name": "line",
+        "inputType": 0,
+        "description": "分隔线（继承于 `se-container`）",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": ""
+      }
+    ],
+    "lib": "@delon/abc",
+    "title": "编辑",
+    "description": "简化表单HTML模板的高阶组件，并进一步优化了一些细节：",
+    "whenToUse": "",
+    "doc": "/components/se/zh",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/se"
+  },
+  {
+    "_idx": 356,
+    "type": "component",
+    "selector": "se-title",
+    "types": {},
+    "properties": [],
+    "description": "用于展示标题，单独一行。",
+    "lib": "@delon/abc",
+    "title": "编辑",
+    "whenToUse": "",
+    "doc": "/components/se/zh",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/se"
+  },
+  {
+    "_idx": 356,
+    "type": "directive",
+    "selector": "se-title",
+    "types": {},
+    "properties": [],
+    "description": "用于展示标题，单独一行。",
+    "lib": "@delon/abc",
+    "title": "编辑",
+    "whenToUse": "",
+    "doc": "/components/se/zh",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/se"
+  },
+  {
+    "_idx": 11,
+    "type": "component",
+    "selector": "sg-container",
+    "types": {},
+    "properties": [
+      {
+        "name": "gutter",
+        "inputType": 0,
+        "description": "间距，当 `nzLayout:horizontal` 时有效",
+        "type": "Enum",
+        "typeRaw": "`number`",
+        "default": "`32`",
+        "pureDefault": "32",
+        "typeDefinition": [
+          "0",
+          "8",
+          "16",
+          "24",
+          "32",
+          "40",
+          "48",
+          "56",
+          "64"
+        ]
+      },
+      {
+        "name": "sg-container",
+        "inputType": 0,
+        "description": "指定表单元素最多分几列展示，最终一行几列由 col 配置结合[响应式规则](/theme/responsive)决定，",
+        "type": "Enum",
+        "typeRaw": "`'1','2','3','4','5','6'`",
+        "default": "",
+        "typeDefinition": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ]
+      },
+      {
+        "name": "col",
+        "inputType": 0,
+        "description": "指定表单元素最多分几列展示，最终一行几列由 col 配置结合[响应式规则](/theme/responsive)决定，",
+        "type": "Enum",
+        "typeRaw": "`'1','2','3','4','5','6'`",
+        "default": "",
+        "typeDefinition": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ]
+      }
+    ],
+    "lib": "@delon/abc",
+    "title": "简易栅格",
+    "description": "简化栅格系统运用的高阶组件，它由 `sg-container` 容器（指令）和 `sg` 组件组合代替一个响应式布局：",
+    "whenToUse": "",
+    "doc": "/components/sg/zh",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sg"
+  },
+  {
+    "_idx": 11,
+    "type": "directive",
+    "selector": "sg-container",
+    "types": {},
+    "properties": [
+      {
+        "name": "gutter",
+        "inputType": 0,
+        "description": "间距，当 `nzLayout:horizontal` 时有效",
+        "type": "Enum",
+        "typeRaw": "`number`",
+        "default": "`32`",
+        "pureDefault": "32",
+        "typeDefinition": [
+          "0",
+          "8",
+          "16",
+          "24",
+          "32",
+          "40",
+          "48",
+          "56",
+          "64"
+        ]
+      },
+      {
+        "name": "sg-container",
+        "inputType": 0,
+        "description": "指定表单元素最多分几列展示，最终一行几列由 col 配置结合[响应式规则](/theme/responsive)决定，",
+        "type": "Enum",
+        "typeRaw": "`'1','2','3','4','5','6'`",
+        "default": "",
+        "typeDefinition": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ]
+      },
+      {
+        "name": "col",
+        "inputType": 0,
+        "description": "指定表单元素最多分几列展示，最终一行几列由 col 配置结合[响应式规则](/theme/responsive)决定，",
+        "type": "Enum",
+        "typeRaw": "`'1','2','3','4','5','6'`",
+        "default": "",
+        "typeDefinition": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ]
+      }
+    ],
+    "lib": "@delon/abc",
+    "title": "简易栅格",
+    "description": "简化栅格系统运用的高阶组件，它由 `sg-container` 容器（指令）和 `sg` 组件组合代替一个响应式布局：",
+    "whenToUse": "",
+    "doc": "/components/sg/zh",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sg"
+  },
+  {
+    "_idx": 76,
+    "type": "component",
+    "selector": "sg",
+    "types": {},
+    "properties": [
+      {
+        "name": "col",
+        "inputType": 0,
+        "description": "指定表单元素最多分几列展示，最终一行几列由 col 配置结合[响应式规则](/theme/responsive)决定，",
+        "type": "Enum",
+        "typeRaw": "`'1','2','3','4','5','6'`",
+        "default": "",
+        "typeDefinition": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ]
+      }
+    ],
+    "lib": "@delon/abc",
+    "title": "简易栅格",
+    "description": "简化栅格系统运用的高阶组件，它由 `sg-container` 容器（指令）和 `sg` 组件组合代替一个响应式布局：",
+    "whenToUse": "",
+    "doc": "/components/sg/zh",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sg"
+  },
+  {
+    "_idx": 59,
     "type": "component",
     "selector": "sidebar-nav",
     "types": {},
@@ -12246,6 +12660,15 @@
           "name": "global",
           "inputType": 0,
           "description": "是否全局多排序模式<br>`true` 表示所有 `st` 默认为多排序<br>`false` 表示需要为每个 `st` 添加 `multiSort` 才会视为多排序模式",
+          "type": "boolean",
+          "typeRaw": "`boolean`",
+          "default": "`true`",
+          "pureDefault": "true"
+        },
+        {
+          "name": "keepEmptyKey",
+          "inputType": 0,
+          "description": "是否保持空值的键名<br>`true` 表示不管是否有排序都会发送 `key` 键名<br>`false` 表示无排序动作时不会发送 `key` 键名",
           "type": "boolean",
           "typeRaw": "`boolean`",
           "default": "`true`",
@@ -12575,39 +12998,8 @@
     "title": "表格",
     "description": "`st` 并不是在创造另一个表格组件，而是在 `nz-table` 基础上以**可配置**形式渲染表格，在中后台里这种方式可以满足绝大多数场景，但又可以更易地管理表格渲染动作。",
     "whenToUse": "",
-    "doc": "/components/table/zh",
-    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/table"
-  },
-  {
-    "_idx": 6,
-    "type": "component",
-    "selector": "tag-select",
-    "types": {},
-    "properties": [
-      {
-        "name": "expandable",
-        "inputType": 0,
-        "description": "是否启用 `展开与收进`",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`true`",
-        "pureDefault": "true"
-      },
-      {
-        "name": "change",
-        "inputType": 1,
-        "description": "展开与收进回调函数，参数：`boolean`",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<boolean>`",
-        "default": ""
-      }
-    ],
-    "lib": "@delon/abc",
-    "title": "标签选择器",
-    "description": "增加标签的展开与收进功能。",
-    "whenToUse": "",
-    "doc": "/components/tag-select/zh",
-    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/tag-select"
+    "doc": "/components/st/zh",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/st"
   },
   {
     "_idx": 6,
@@ -12698,8 +13090,8 @@
     "title": "查看",
     "description": "查看栅格系统是在原 [Grid 栅格](https://ng.ant.design/components/grid/zh) 基础上构建更高阶的组件，用于简化查看页布局。",
     "whenToUse": "",
-    "doc": "/components/view/zh",
-    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/view"
+    "doc": "/components/sv/zh",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sv"
   },
   {
     "_idx": 6,
@@ -12790,8 +13182,8 @@
     "title": "查看",
     "description": "查看栅格系统是在原 [Grid 栅格](https://ng.ant.design/components/grid/zh) 基础上构建更高阶的组件，用于简化查看页布局。",
     "whenToUse": "",
-    "doc": "/components/view/zh",
-    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/view"
+    "doc": "/components/sv/zh",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sv"
   },
   {
     "_idx": 127,
@@ -12874,8 +13266,8 @@
     "title": "查看",
     "description": "查看栅格系统是在原 [Grid 栅格](https://ng.ant.design/components/grid/zh) 基础上构建更高阶的组件，用于简化查看页布局。",
     "whenToUse": "",
-    "doc": "/components/view/zh",
-    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/view"
+    "doc": "/components/sv/zh",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sv"
   },
   {
     "_idx": 248,
@@ -12887,8 +13279,8 @@
     "lib": "@delon/abc",
     "title": "查看",
     "whenToUse": "",
-    "doc": "/components/view/zh",
-    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/view"
+    "doc": "/components/sv/zh",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sv"
   },
   {
     "_idx": 248,
@@ -12900,8 +13292,39 @@
     "lib": "@delon/abc",
     "title": "查看",
     "whenToUse": "",
-    "doc": "/components/view/zh",
-    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/view"
+    "doc": "/components/sv/zh",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sv"
+  },
+  {
+    "_idx": 6,
+    "type": "component",
+    "selector": "tag-select",
+    "types": {},
+    "properties": [
+      {
+        "name": "expandable",
+        "inputType": 0,
+        "description": "是否启用 `展开与收进`",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`true`",
+        "pureDefault": "true"
+      },
+      {
+        "name": "change",
+        "inputType": 1,
+        "description": "展开与收进回调函数，参数：`boolean`",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<boolean>`",
+        "default": ""
+      }
+    ],
+    "lib": "@delon/abc",
+    "title": "标签选择器",
+    "description": "增加标签的展开与收进功能。",
+    "whenToUse": "",
+    "doc": "/components/tag-select/zh",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/tag-select"
   },
   {
     "_idx": 148,
@@ -12982,6 +13405,15 @@
         "typeRaw": "`boolean`",
         "default": "`true`",
         "pureDefault": "true"
+      },
+      {
+        "name": "interaction",
+        "inputType": 0,
+        "description": "交互类型，none 无 element-active 图形元素，active-region 图表组件，brush 框选，drag-move 移动",
+        "type": "object",
+        "typeRaw": "`InteractionType`",
+        "default": "`none`",
+        "pureDefault": "none"
       }
     ],
     "lib": "@delon/chart",
@@ -13637,15 +14069,6 @@
         "pureDefault": "true"
       },
       {
-        "name": "select",
-        "inputType": 0,
-        "description": "几何标记的选中模式",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`true`",
-        "pureDefault": "true"
-      },
-      {
         "name": "subTitle",
         "inputType": 0,
         "description": "图表子标题",
@@ -13676,6 +14099,15 @@
         "type": "Array",
         "typeRaw": "`G2PieData[]`",
         "default": ""
+      },
+      {
+        "name": "interaction",
+        "inputType": 0,
+        "description": "交互类型，none 无 element-active 图形元素，active-region 图表组件，brush 框选，drag-move 移动",
+        "type": "object",
+        "typeRaw": "`InteractionType`",
+        "default": "`none`",
+        "pureDefault": "none"
       }
     ],
     "lib": "@delon/chart",
@@ -14575,7 +15007,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/form/src"
   },
   {
-    "_idx": 33,
+    "_idx": 27,
     "type": "component",
     "selector": "nz-breadcrumb-item",
     "types": {},

@@ -1,3 +1,7 @@
+# 9.0.0
+
+- 同步 ng-zorro-antd 9.0.0
+
 # 8.2.3
 
 - 同步 ng-zorro-antd 8.2.0
