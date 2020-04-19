@@ -9,9 +9,9 @@ const srcPath = path.join(rootPath, 'src', 'magic', 'resources');
 const LANGS = ['en-US', 'zh-CN'];
 
 const langFiles = getFiles(LANGS, buildPath);
-Object.keys(langFiles).forEach(l => {
+Object.keys(langFiles).forEach((l) => {
   const files = langFiles[l];
-  // const files = langFiles[l].filter(w => w.includes('components/grid'));
+  // const files = langFiles[l].filter((w) => w.includes('components/pagination'));
   const res = makeObject(l, files);
   fs.writeFileSync(path.join(srcPath, l + '.json'), JSON.stringify(res, null, 2));
 });

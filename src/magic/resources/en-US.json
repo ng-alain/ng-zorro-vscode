@@ -10,7 +10,7 @@
         "inputType": 0,
         "description": "the vertical alignment",
         "type": "Enum",
-        "typeRaw": "`'top'\\|'middle'\\|'bottom'`",
+        "typeRaw": "`'top'|'middle'|'bottom'`",
         "default": "",
         "typeDefinition": [
           "top",
@@ -23,7 +23,7 @@
         "inputType": 0,
         "description": "spacing between grids, could be a number or a object like `{ xs: 8, sm: 16, md: 24}`. or you can use array to make horizontal and vertical spacing work at the same time `[horizontal, vertical]`",
         "type": "Enum",
-        "typeRaw": "`number\\|object\\|[number, number]\\|[object, object]`",
+        "typeRaw": "`number|object|[number, number]|[object, object]`",
         "default": "`0`",
         "pureDefault": "0",
         "typeDefinition": [
@@ -43,7 +43,7 @@
         "inputType": 0,
         "description": "horizontal arrangement",
         "type": "Enum",
-        "typeRaw": "`'start'\\|'end'\\|'center'\\|'space-around'\\|'space-between'`",
+        "typeRaw": "`'start'|'end'|'center'|'space-around'|'space-between'`",
         "default": "",
         "typeDefinition": [
           "start",
@@ -72,7 +72,7 @@
         "inputType": 0,
         "description": "flex layout style",
         "type": "string",
-        "typeRaw": "`string \\| number`",
+        "typeRaw": "`string | number`",
         "default": ""
       },
       {
@@ -179,7 +179,7 @@
         "inputType": 0,
         "description": "`<576px` and also default setting, could be a `span` value or an object containing above props",
         "type": "Enum",
-        "typeRaw": "`number \\| object`",
+        "typeRaw": "`number | object`",
         "default": "",
         "typeDefinition": [
           "0",
@@ -198,7 +198,7 @@
         "inputType": 0,
         "description": "`≥576px`, could be a `span` value or an object containing above props",
         "type": "Enum",
-        "typeRaw": "`number \\| object`",
+        "typeRaw": "`number | object`",
         "default": "",
         "typeDefinition": [
           "0",
@@ -217,7 +217,7 @@
         "inputType": 0,
         "description": "`≥768px`, could be a `span` value or an object containing above props",
         "type": "Enum",
-        "typeRaw": "`number \\| object`",
+        "typeRaw": "`number | object`",
         "default": "",
         "typeDefinition": [
           "0",
@@ -236,7 +236,7 @@
         "inputType": 0,
         "description": "`≥992px`, could be a `span` value or an object containing above props",
         "type": "Enum",
-        "typeRaw": "`number \\| object`",
+        "typeRaw": "`number | object`",
         "default": "",
         "typeDefinition": [
           "0",
@@ -255,7 +255,7 @@
         "inputType": 0,
         "description": "`≥1200px`, could be a `span` value or an object containing above props",
         "type": "Enum",
-        "typeRaw": "`number \\| object`",
+        "typeRaw": "`number | object`",
         "default": "",
         "typeDefinition": [
           "0",
@@ -274,7 +274,7 @@
         "inputType": 0,
         "description": "`≥1600px`, could be a `span` value or an object containing above props",
         "type": "Enum",
-        "typeRaw": "`number \\| object`",
+        "typeRaw": "`number | object`",
         "default": "",
         "typeDefinition": [
           "0",
@@ -365,7 +365,7 @@
         "inputType": 0,
         "description": "The text shown in the tooltip",
         "type": "string",
-        "typeRaw": "`string \\| TemplateRef<void>`",
+        "typeRaw": "`string | TemplateRef<void>`",
         "default": ""
       },
       {
@@ -373,7 +373,7 @@
         "inputType": 0,
         "description": "Tooltip trigger mode. If set to `null` it would not be triggered",
         "type": "Enum",
-        "typeRaw": "`'click' \\| 'focus' \\| 'hover' \\| null`",
+        "typeRaw": "`'click' | 'focus' | 'hover' | null`",
         "default": "`'hover'`",
         "typeDefinition": [
           "click",
@@ -388,7 +388,7 @@
         "inputType": 0,
         "description": "The position of the tooltip relative to the target",
         "type": "Enum",
-        "typeRaw": "`'top' \\| 'left' \\| 'right' \\| 'bottom' \\| 'topLeft' \\| 'topRight' \\| 'bottomLeft' \\| 'bottomRight' \\| 'leftTop' \\| 'leftBottom' \\| 'rightTop' \\| 'rightBottom'`",
+        "typeRaw": "`'top' | 'left' | 'right' | 'bottom' | 'topLeft' | 'topRight' | 'bottomLeft' | 'bottomRight' | 'leftTop' | 'leftBottom' | 'rightTop' | 'rightBottom'`",
         "default": "`'top'`",
         "typeDefinition": [
           "top",
@@ -451,7 +451,7 @@
         "inputType": 0,
         "description": "specifies the scrollable area dom node",
         "type": "string",
-        "typeRaw": "`string \\| HTMLElement`",
+        "typeRaw": "`string | HTMLElement`",
         "default": "`window`",
         "pureDefault": "window"
       },
@@ -499,7 +499,7 @@
         "inputType": 0,
         "description": "Close text to show",
         "type": "string",
-        "typeRaw": "`string \\| TemplateRef<void>`",
+        "typeRaw": "`string | TemplateRef<void>`",
         "default": ""
       },
       {
@@ -507,7 +507,7 @@
         "inputType": 0,
         "description": "Additional content of Alert",
         "type": "string",
-        "typeRaw": "`string \\| TemplateRef<void>`",
+        "typeRaw": "`string | TemplateRef<void>`",
         "default": ""
       },
       {
@@ -515,7 +515,7 @@
         "inputType": 0,
         "description": "Content of Alert",
         "type": "string",
-        "typeRaw": "`string \\| TemplateRef<void>`",
+        "typeRaw": "`string | TemplateRef<void>`",
         "default": ""
       },
       {
@@ -540,7 +540,7 @@
         "inputType": 0,
         "description": "Type of Alert styles, in `nzBanner` mode default is `'warning'`",
         "type": "Enum",
-        "typeRaw": "`'success' \\| 'info' \\| 'warning' \\| 'error'`",
+        "typeRaw": "`'success' | 'info' | 'warning' | 'error'`",
         "default": "`'info'`",
         "typeDefinition": [
           "success",
@@ -613,7 +613,7 @@
         "inputType": 0,
         "description": "Scrolling container",
         "type": "string",
-        "typeRaw": "`string \\| HTMLElement`",
+        "typeRaw": "`string | HTMLElement`",
         "default": "`window`",
         "pureDefault": "window"
       },
@@ -660,7 +660,7 @@
         "inputType": 0,
         "description": "content of  hyperlink",
         "type": "string",
-        "typeRaw": "`string \\| TemplateRef<void>`",
+        "typeRaw": "`string | TemplateRef<void>`",
         "default": ""
       }
     ],
@@ -818,7 +818,7 @@
         "inputType": 0,
         "description": "the shape of avatar",
         "type": "Enum",
-        "typeRaw": "`'circle' \\| 'square'`",
+        "typeRaw": "`'circle' | 'square'`",
         "default": "`'circle'`",
         "typeDefinition": [
           "circle",
@@ -831,7 +831,7 @@
         "inputType": 0,
         "description": "the size of the avatar",
         "type": "Enum",
-        "typeRaw": "`'large' \\| 'small' \\| 'default' \\| number`",
+        "typeRaw": "`'large' | 'small' | 'default' | number`",
         "default": "`'default'`",
         "typeDefinition": [
           "large",
@@ -917,7 +917,7 @@
         "inputType": 0,
         "description": "specifies the scrollable area dom node",
         "type": "string",
-        "typeRaw": "`string \\| Element`",
+        "typeRaw": "`string | Element`",
         "default": "`window`",
         "pureDefault": "window"
       },
@@ -956,7 +956,7 @@
         "inputType": 0,
         "description": "Number to show in badge",
         "type": "number",
-        "typeRaw": "`number \\| TemplateRef<void>`",
+        "typeRaw": "`number | TemplateRef<void>`",
         "default": ""
       },
       {
@@ -1000,7 +1000,7 @@
         "inputType": 0,
         "description": "Set `nz-badge` as a status dot",
         "type": "Enum",
-        "typeRaw": "`'success' \\| 'processing' \\| 'default' \\| 'error' \\| 'warning'`",
+        "typeRaw": "`'success' | 'processing' | 'default' | 'error' | 'warning'`",
         "default": "",
         "typeDefinition": [
           "success",
@@ -1023,7 +1023,7 @@
         "inputType": 0,
         "description": "Text to show when hovering over the badge（Only Non-standalone), hide when value is `null`",
         "type": "string",
-        "typeRaw": "`string \\| null`",
+        "typeRaw": "`string | null`",
         "default": "`nzCount`",
         "pureDefault": "nzCount"
       },
@@ -1054,7 +1054,7 @@
         "inputType": 0,
         "description": "Custom separator",
         "type": "string",
-        "typeRaw": "`string \\| TemplateRef<void> \\| null`",
+        "typeRaw": "`string | TemplateRef<void> | null`",
         "default": "`'/'`",
         "pureDefault": "/"
       },
@@ -1114,7 +1114,7 @@
         "inputType": 0,
         "description": "can be set to `circle` `round` or omitted",
         "type": "Enum",
-        "typeRaw": "`'circle'\\|'round'`",
+        "typeRaw": "`'circle'|'round'`",
         "default": "",
         "typeDefinition": [
           "circle",
@@ -1126,7 +1126,7 @@
         "inputType": 0,
         "description": "can be set to `small` `large` or omitted",
         "type": "Enum",
-        "typeRaw": "`'large'\\|'small'\\|'default'`",
+        "typeRaw": "`'large'|'small'|'default'`",
         "default": "`'default'`",
         "typeDefinition": [
           "large",
@@ -1140,7 +1140,7 @@
         "inputType": 0,
         "description": "can be set to `primary` `dashed` `link` or omitted (meaning `default`)",
         "type": "Enum",
-        "typeRaw": "`'primary'\\|'dashed'\\|'link'`",
+        "typeRaw": "`'primary'|'dashed'|'link'`",
         "default": "",
         "typeDefinition": [
           "primary",
@@ -1199,7 +1199,7 @@
         "inputType": 0,
         "description": "can be set to `small` `large` or omitted",
         "type": "Enum",
-        "typeRaw": "`'large'\\|'small'\\|'default'`",
+        "typeRaw": "`'large'|'small'|'default'`",
         "default": "`'default'`",
         "typeDefinition": [
           "large",
@@ -1236,7 +1236,7 @@
         "inputType": 2,
         "description": "The display mode of the calendar (two-way bindable)",
         "type": "Enum",
-        "typeRaw": "`'month' \\| 'year'`",
+        "typeRaw": "`'month' | 'year'`",
         "default": "`'month'`",
         "typeDefinition": [
           "month",
@@ -1291,7 +1291,7 @@
         "inputType": 1,
         "description": "Callback for when panel changes",
         "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<{ date: Date, mode: 'month' \\| 'year' }>`",
+        "typeRaw": "`EventEmitter<{ date: Date, mode: 'month' | 'year' }>`",
         "default": ""
       }
     ],
@@ -1346,7 +1346,7 @@
         "inputType": 0,
         "description": "Content to render in the top-right corner of the card",
         "type": "string",
-        "typeRaw": "`string\\|TemplateRef<void>`",
+        "typeRaw": "`string|TemplateRef<void>`",
         "default": ""
       },
       {
@@ -1373,7 +1373,7 @@
         "inputType": 0,
         "description": "Card title",
         "type": "string",
-        "typeRaw": "`string\\|TemplateRef<void>`",
+        "typeRaw": "`string|TemplateRef<void>`",
         "default": ""
       },
       {
@@ -1392,7 +1392,7 @@
         "inputType": 0,
         "description": "Size of card",
         "type": "Enum",
-        "typeRaw": "`'default'\\|'small'`",
+        "typeRaw": "`'default'|'small'`",
         "default": "`'default'`",
         "typeDefinition": [
           "default",
@@ -1427,7 +1427,7 @@
         "inputType": 0,
         "description": "description content",
         "type": "string",
-        "typeRaw": "`string\\|TemplateRef<void>`",
+        "typeRaw": "`string|TemplateRef<void>`",
         "default": ""
       },
       {
@@ -1435,7 +1435,7 @@
         "inputType": 0,
         "description": "title content",
         "type": "string",
-        "typeRaw": "`string\\|TemplateRef<void>`",
+        "typeRaw": "`string|TemplateRef<void>`",
         "default": ""
       }
     ],
@@ -1537,7 +1537,7 @@
         "inputType": 0,
         "description": "Transition effect",
         "type": "Enum",
-        "typeRaw": "`'scrollx'\\|'fade'`",
+        "typeRaw": "`'scrollx'|'fade'`",
         "default": "`'scrollx'`",
         "typeDefinition": [
           "scrollx",
@@ -1650,7 +1650,7 @@
         "inputType": 0,
         "description": "expand current item when click or hover, one of 'click' 'hover'",
         "type": "Enum",
-        "typeRaw": "`'click'\\|'hover'`",
+        "typeRaw": "`'click'|'hover'`",
         "default": "`'click'`",
         "typeDefinition": [
           "click",
@@ -1679,7 +1679,7 @@
         "inputType": 0,
         "description": "Specify content to show when no result matches.",
         "type": "string",
-        "typeRaw": "`string\\|TemplateRef<void>`",
+        "typeRaw": "`string|TemplateRef<void>`",
         "default": ""
       },
       {
@@ -1755,7 +1755,7 @@
         "inputType": 0,
         "description": "Whether support search. Cannot be used with `[nzLoadData]` at the same time",
         "type": "boolean",
-        "typeRaw": "`boolean\\|NzShowSearchOptions`",
+        "typeRaw": "`boolean|NzShowSearchOptions`",
         "default": "`false`",
         "pureDefault": "false"
       },
@@ -1764,7 +1764,7 @@
         "inputType": 0,
         "description": "input size, one of `large` `default` `small`",
         "type": "Enum",
-        "typeRaw": "`'large'\\|'small'\\|'default'`",
+        "typeRaw": "`'large'|'small'|'default'`",
         "default": "`'default'`",
         "typeDefinition": [
           "large",
@@ -1977,7 +1977,7 @@
         "inputType": 0,
         "description": "Mode of monaco editor",
         "type": "string",
-        "typeRaw": "`normal`\\|`diff`",
+        "typeRaw": "`normal`|`diff`",
         "default": "`normal`",
         "pureDefault": "normal"
       },
@@ -2031,7 +2031,7 @@
         "inputType": 1,
         "description": "The event that a code editor is initialized",
         "type": "object",
-        "typeRaw": "`IEditor` \\| `IDiffEditor`",
+        "typeRaw": "`IEditor` | `IDiffEditor`",
         "default": ""
       }
     ],
@@ -2071,7 +2071,7 @@
         "inputType": 0,
         "description": "Set expand icon position",
         "type": "Enum",
-        "typeRaw": "`'left' \\| 'right'`",
+        "typeRaw": "`'left' | 'right'`",
         "default": "`left`",
         "typeDefinition": [
           "left",
@@ -2108,7 +2108,7 @@
         "inputType": 0,
         "description": "Title of the panel",
         "type": "string",
-        "typeRaw": "`string \\| TemplateRef<void>`",
+        "typeRaw": "`string | TemplateRef<void>`",
         "default": ""
       },
       {
@@ -2116,7 +2116,7 @@
         "inputType": 0,
         "description": "Customize an icon for toggle",
         "type": "string",
-        "typeRaw": "`string \\| TemplateRef<void>`",
+        "typeRaw": "`string | TemplateRef<void>`",
         "default": ""
       },
       {
@@ -2124,7 +2124,7 @@
         "inputType": 0,
         "description": "Extra element in the corner",
         "type": "string",
-        "typeRaw": "`string \\| TemplateRef<void>`",
+        "typeRaw": "`string | TemplateRef<void>`",
         "default": ""
       },
       {
@@ -2171,7 +2171,7 @@
         "inputType": 0,
         "description": "The element to display as the comment author",
         "type": "string",
-        "typeRaw": "`string \\| TemplateRef<void>`",
+        "typeRaw": "`string | TemplateRef<void>`",
         "default": ""
       },
       {
@@ -2179,7 +2179,7 @@
         "inputType": 0,
         "description": "A datetime element containing the time to be displayed",
         "type": "string",
-        "typeRaw": "`string \\| TemplateRef<void>`",
+        "typeRaw": "`string | TemplateRef<void>`",
         "default": ""
       }
     ],
@@ -2260,7 +2260,7 @@
         "inputType": 0,
         "description": "custom rendering function for date cells (Not support by month-picker/year-picker)",
         "type": "TemplateRef",
-        "typeRaw": "`TemplateRef<Date> \\| string \\| ((d: Date) => TemplateRef<Date> \\| string)`",
+        "typeRaw": "`TemplateRef<Date> | string | ((d: Date) => TemplateRef<Date> | string)`",
         "default": "",
         "_common": true
       },
@@ -2327,7 +2327,7 @@
         "inputType": 0,
         "description": "determine the size of the input box, the height of `large` and `small`, are 40px and 24px respectively, while default size is 32px",
         "type": "Enum",
-        "typeRaw": "`'large' \\| 'small'`",
+        "typeRaw": "`'large' | 'small'`",
         "default": "",
         "typeDefinition": [
           "large",
@@ -2340,7 +2340,7 @@
         "inputType": 0,
         "description": "default picker date",
         "type": "object",
-        "typeRaw": "`Date` \\| `Date[]`",
+        "typeRaw": "`Date` | `Date[]`",
         "default": "",
         "_common": true
       },
@@ -2383,7 +2383,7 @@
         "inputType": 0,
         "description": "render extra footer in panel",
         "type": "TemplateRef",
-        "typeRaw": "`TemplateRef \\| string \\| (() => TemplateRef \\| string)`",
+        "typeRaw": "`TemplateRef | string | (() => TemplateRef | string)`",
         "default": ""
       },
       {
@@ -2391,7 +2391,7 @@
         "inputType": 0,
         "description": "to provide an additional time selection",
         "type": "object",
-        "typeRaw": "`object \\| boolean`",
+        "typeRaw": "`object | boolean`",
         "default": "[TimePicker Options](/components/time-picker/en#api)",
         "pureDefault": "[TimePicker Options](/components/time-picker/en#api)"
       },
@@ -2473,7 +2473,7 @@
         "inputType": 0,
         "description": "custom rendering function for date cells (Not support by month-picker/year-picker)",
         "type": "TemplateRef",
-        "typeRaw": "`TemplateRef<Date> \\| string \\| ((d: Date) => TemplateRef<Date> \\| string)`",
+        "typeRaw": "`TemplateRef<Date> | string | ((d: Date) => TemplateRef<Date> | string)`",
         "default": "",
         "_common": true
       },
@@ -2540,7 +2540,7 @@
         "inputType": 0,
         "description": "determine the size of the input box, the height of `large` and `small`, are 40px and 24px respectively, while default size is 32px",
         "type": "Enum",
-        "typeRaw": "`'large' \\| 'small'`",
+        "typeRaw": "`'large' | 'small'`",
         "default": "",
         "typeDefinition": [
           "large",
@@ -2553,7 +2553,7 @@
         "inputType": 0,
         "description": "default picker date",
         "type": "object",
-        "typeRaw": "`Date` \\| `Date[]`",
+        "typeRaw": "`Date` | `Date[]`",
         "default": "",
         "_common": true
       },
@@ -2588,7 +2588,7 @@
         "inputType": 0,
         "description": "render extra footer in panel",
         "type": "TemplateRef",
-        "typeRaw": "`TemplateRef \\| string \\| (() => TemplateRef \\| string)`",
+        "typeRaw": "`TemplateRef | string | (() => TemplateRef | string)`",
         "default": ""
       },
       {
@@ -2646,7 +2646,7 @@
         "inputType": 0,
         "description": "custom rendering function for date cells (Not support by month-picker/year-picker)",
         "type": "TemplateRef",
-        "typeRaw": "`TemplateRef<Date> \\| string \\| ((d: Date) => TemplateRef<Date> \\| string)`",
+        "typeRaw": "`TemplateRef<Date> | string | ((d: Date) => TemplateRef<Date> | string)`",
         "default": "",
         "_common": true
       },
@@ -2713,7 +2713,7 @@
         "inputType": 0,
         "description": "determine the size of the input box, the height of `large` and `small`, are 40px and 24px respectively, while default size is 32px",
         "type": "Enum",
-        "typeRaw": "`'large' \\| 'small'`",
+        "typeRaw": "`'large' | 'small'`",
         "default": "",
         "typeDefinition": [
           "large",
@@ -2726,7 +2726,7 @@
         "inputType": 0,
         "description": "default picker date",
         "type": "object",
-        "typeRaw": "`Date` \\| `Date[]`",
+        "typeRaw": "`Date` | `Date[]`",
         "default": "",
         "_common": true
       },
@@ -2761,7 +2761,7 @@
         "inputType": 0,
         "description": "render extra footer in panel",
         "type": "TemplateRef",
-        "typeRaw": "`TemplateRef \\| string \\| (() => TemplateRef \\| string)`",
+        "typeRaw": "`TemplateRef | string | (() => TemplateRef | string)`",
         "default": ""
       },
       {
@@ -2825,7 +2825,7 @@
         "inputType": 0,
         "description": "custom rendering function for date cells (Not support by month-picker/year-picker)",
         "type": "TemplateRef",
-        "typeRaw": "`TemplateRef<Date> \\| string \\| ((d: Date) => TemplateRef<Date> \\| string)`",
+        "typeRaw": "`TemplateRef<Date> | string | ((d: Date) => TemplateRef<Date> | string)`",
         "default": "",
         "_common": true
       },
@@ -2892,7 +2892,7 @@
         "inputType": 0,
         "description": "determine the size of the input box, the height of `large` and `small`, are 40px and 24px respectively, while default size is 32px",
         "type": "Enum",
-        "typeRaw": "`'large' \\| 'small'`",
+        "typeRaw": "`'large' | 'small'`",
         "default": "",
         "typeDefinition": [
           "large",
@@ -2905,7 +2905,7 @@
         "inputType": 0,
         "description": "default picker date",
         "type": "object",
-        "typeRaw": "`Date` \\| `Date[]`",
+        "typeRaw": "`Date` | `Date[]`",
         "default": "",
         "_common": true
       },
@@ -2996,7 +2996,7 @@
         "inputType": 0,
         "description": "custom rendering function for date cells (Not support by month-picker/year-picker)",
         "type": "TemplateRef",
-        "typeRaw": "`TemplateRef<Date> \\| string \\| ((d: Date) => TemplateRef<Date> \\| string)`",
+        "typeRaw": "`TemplateRef<Date> | string | ((d: Date) => TemplateRef<Date> | string)`",
         "default": "",
         "_common": true
       },
@@ -3063,7 +3063,7 @@
         "inputType": 0,
         "description": "determine the size of the input box, the height of `large` and `small`, are 40px and 24px respectively, while default size is 32px",
         "type": "Enum",
-        "typeRaw": "`'large' \\| 'small'`",
+        "typeRaw": "`'large' | 'small'`",
         "default": "",
         "typeDefinition": [
           "large",
@@ -3076,7 +3076,7 @@
         "inputType": 0,
         "description": "default picker date",
         "type": "object",
-        "typeRaw": "`Date` \\| `Date[]`",
+        "typeRaw": "`Date` | `Date[]`",
         "default": "",
         "_common": true
       },
@@ -3102,7 +3102,7 @@
         "inputType": 0,
         "description": "to specify the time that cannot be selected",
         "type": "function",
-        "typeRaw": "`(current: Date, partial: 'start' \\| 'end') => { nzDisabledHours, nzDisabledMinutes, nzDisabledSeconds }`",
+        "typeRaw": "`(current: Date, partial: 'start' | 'end') => { nzDisabledHours, nzDisabledMinutes, nzDisabledSeconds }`",
         "default": ""
       },
       {
@@ -3119,7 +3119,7 @@
         "inputType": 0,
         "description": "preseted ranges for quick selection",
         "type": "object",
-        "typeRaw": "`{ [ key: string ]: Date[] }  \\|  { [ key: string ]: () => Date[] }`",
+        "typeRaw": "`{ [ key: string ]: Date[] }  |  { [ key: string ]: () => Date[] }`",
         "default": ""
       },
       {
@@ -3127,7 +3127,7 @@
         "inputType": 0,
         "description": "render extra footer in panel",
         "type": "TemplateRef",
-        "typeRaw": "`TemplateRef \\| string \\| (() => TemplateRef \\| string)`",
+        "typeRaw": "`TemplateRef | string | (() => TemplateRef | string)`",
         "default": ""
       },
       {
@@ -3135,7 +3135,7 @@
         "inputType": 0,
         "description": "to provide an additional time selection",
         "type": "object",
-        "typeRaw": "`object \\| boolean`",
+        "typeRaw": "`object | boolean`",
         "default": "[TimePicker Options](/components/time-picker/en#api)",
         "pureDefault": "[TimePicker Options](/components/time-picker/en#api)"
       },
@@ -3205,7 +3205,7 @@
         "inputType": 0,
         "description": "Describe the title of the list, displayed at the top",
         "type": "string",
-        "typeRaw": "`string\\|TemplateRef<void>`",
+        "typeRaw": "`string|TemplateRef<void>`",
         "default": "`false`",
         "pureDefault": "false"
       },
@@ -3223,7 +3223,7 @@
         "inputType": 0,
         "description": "The number of `nz-descriptions-item` in a row. It could be a number or a object like `{ xs: 8, sm: 16, md: 24}`",
         "type": "number",
-        "typeRaw": "`number\\|object`",
+        "typeRaw": "`number|object`",
         "default": "`{ xxl: 3, xl: 3, lg: 3, md: 3, sm: 2, xs: 1 }`",
         "pureDefault": "{ xxl: 3, xl: 3, lg: 3, md: 3, sm: 2, xs: 1 }"
       },
@@ -3232,7 +3232,7 @@
         "inputType": 0,
         "description": "Set the size of the list. Only works when `nzBordered` is set",
         "type": "Enum",
-        "typeRaw": "`'default' \\| 'middle' \\| 'small'`",
+        "typeRaw": "`'default' | 'middle' | 'small'`",
         "default": "`'default'`",
         "typeDefinition": [
           "default",
@@ -3310,7 +3310,7 @@
         "inputType": 0,
         "description": "direction type of divider",
         "type": "Enum",
-        "typeRaw": "`'horizontal' \\| 'vertical'`",
+        "typeRaw": "`'horizontal' | 'vertical'`",
         "default": "`'horizontal'`",
         "typeDefinition": [
           "horizontal",
@@ -3323,7 +3323,7 @@
         "inputType": 0,
         "description": "inner text of divider",
         "type": "string",
-        "typeRaw": "`string \\| TemplateRef<void>`",
+        "typeRaw": "`string | TemplateRef<void>`",
         "default": ""
       },
       {
@@ -3331,7 +3331,7 @@
         "inputType": 0,
         "description": "inner text orientation",
         "type": "Enum",
-        "typeRaw": "`'center' \\| 'left' \\| 'right'`",
+        "typeRaw": "`'center' | 'left' | 'right'`",
         "default": "`'center'`",
         "typeDefinition": [
           "center",
@@ -3413,7 +3413,7 @@
         "inputType": 0,
         "description": "The title for Drawer.",
         "type": "string",
-        "typeRaw": "`string \\| TemplateRef<void>`",
+        "typeRaw": "`string | TemplateRef<void>`",
         "default": ""
       },
       {
@@ -3430,7 +3430,7 @@
         "inputType": 0,
         "description": "The placement of the Drawer.",
         "type": "Enum",
-        "typeRaw": "`'top' \\| 'right' \\| 'bottom' \\| 'left'`",
+        "typeRaw": "`'top' | 'right' | 'bottom' | 'left'`",
         "default": "`'right'`",
         "typeDefinition": [
           "top",
@@ -3445,7 +3445,7 @@
         "inputType": 0,
         "description": "Width of the Drawer dialog, only when placement is `'right'` or `'left'`.",
         "type": "number",
-        "typeRaw": "`number \\| string`",
+        "typeRaw": "`number | string`",
         "default": "`256`",
         "pureDefault": "256"
       },
@@ -3454,7 +3454,7 @@
         "inputType": 0,
         "description": "Height of the Drawer dialog, only when placement is `'top'` or `'bottom'`.",
         "type": "number",
-        "typeRaw": "`number \\| string`",
+        "typeRaw": "`number | string`",
         "default": "`256`",
         "pureDefault": "256"
       },
@@ -3537,7 +3537,7 @@
         "inputType": 0,
         "description": "placement of pop menu",
         "type": "Enum",
-        "typeRaw": "`'bottomLeft' \\| 'bottomCenter' \\| 'bottomRight' \\| 'topLeft' \\| 'topCenter' \\| 'topRight'`",
+        "typeRaw": "`'bottomLeft' | 'bottomCenter' | 'bottomRight' | 'topLeft' | 'topCenter' | 'topRight'`",
         "default": "`'bottomLeft'`",
         "typeDefinition": [
           "bottomLeft",
@@ -3554,7 +3554,7 @@
         "inputType": 0,
         "description": "the trigger mode which executes the drop-down action",
         "type": "Enum",
-        "typeRaw": "`'click' \\| 'hover'`",
+        "typeRaw": "`'click' | 'hover'`",
         "default": "`'hover'`",
         "typeDefinition": [
           "click",
@@ -3645,7 +3645,7 @@
         "inputType": 0,
         "description": "Customize image. Will tread as image url when string provided",
         "type": "string",
-        "typeRaw": "`string \\| TemplateRef<void>`",
+        "typeRaw": "`string | TemplateRef<void>`",
         "default": ""
       },
       {
@@ -3653,7 +3653,7 @@
         "inputType": 0,
         "description": "Custom description",
         "type": "string",
-        "typeRaw": "`string \\| TemplateRef<void> \\| null`",
+        "typeRaw": "`string | TemplateRef<void> | null`",
         "default": ""
       },
       {
@@ -3661,7 +3661,7 @@
         "inputType": 0,
         "description": "Custom Footer",
         "type": "string",
-        "typeRaw": "`string \\| TemplateRef<void>`",
+        "typeRaw": "`string | TemplateRef<void>`",
         "default": ""
       }
     ],
@@ -3683,7 +3683,7 @@
         "inputType": 0,
         "description": "Form layout",
         "type": "Enum",
-        "typeRaw": "`'horizontal' \\| 'vertical' \\| 'inline'`",
+        "typeRaw": "`'horizontal' | 'vertical' | 'inline'`",
         "default": "`'horizontal'`",
         "typeDefinition": [
           "horizontal",
@@ -3751,7 +3751,7 @@
         "inputType": 0,
         "description": "the vertical alignment",
         "type": "Enum",
-        "typeRaw": "`'top'\\|'middle'\\|'bottom'`",
+        "typeRaw": "`'top'|'middle'|'bottom'`",
         "default": "",
         "typeDefinition": [
           "top",
@@ -3764,7 +3764,7 @@
         "inputType": 0,
         "description": "spacing between grids, could be a number or a object like `{ xs: 8, sm: 16, md: 24}`. or you can use array to make horizontal and vertical spacing work at the same time `[horizontal, vertical]`",
         "type": "Enum",
-        "typeRaw": "`number\\|object\\|[number, number]\\|[object, object]`",
+        "typeRaw": "`number|object|[number, number]|[object, object]`",
         "default": "`0`",
         "pureDefault": "0",
         "typeDefinition": [
@@ -3784,7 +3784,7 @@
         "inputType": 0,
         "description": "horizontal arrangement",
         "type": "Enum",
-        "typeRaw": "`'start'\\|'end'\\|'center'\\|'space-around'\\|'space-between'`",
+        "typeRaw": "`'start'|'end'|'center'|'space-around'|'space-between'`",
         "default": "",
         "typeDefinition": [
           "start",
@@ -3839,7 +3839,7 @@
         "inputType": 0,
         "description": "flex layout style",
         "type": "string",
-        "typeRaw": "`string \\| number`",
+        "typeRaw": "`string | number`",
         "default": ""
       },
       {
@@ -3946,7 +3946,7 @@
         "inputType": 0,
         "description": "`<576px` and also default setting, could be a `span` value or an object containing above props",
         "type": "Enum",
-        "typeRaw": "`number \\| object`",
+        "typeRaw": "`number | object`",
         "default": "",
         "typeDefinition": [
           "0",
@@ -3965,7 +3965,7 @@
         "inputType": 0,
         "description": "`≥576px`, could be a `span` value or an object containing above props",
         "type": "Enum",
-        "typeRaw": "`number \\| object`",
+        "typeRaw": "`number | object`",
         "default": "",
         "typeDefinition": [
           "0",
@@ -3984,7 +3984,7 @@
         "inputType": 0,
         "description": "`≥768px`, could be a `span` value or an object containing above props",
         "type": "Enum",
-        "typeRaw": "`number \\| object`",
+        "typeRaw": "`number | object`",
         "default": "",
         "typeDefinition": [
           "0",
@@ -4003,7 +4003,7 @@
         "inputType": 0,
         "description": "`≥992px`, could be a `span` value or an object containing above props",
         "type": "Enum",
-        "typeRaw": "`number \\| object`",
+        "typeRaw": "`number | object`",
         "default": "",
         "typeDefinition": [
           "0",
@@ -4022,7 +4022,7 @@
         "inputType": 0,
         "description": "`≥1200px`, could be a `span` value or an object containing above props",
         "type": "Enum",
-        "typeRaw": "`number \\| object`",
+        "typeRaw": "`number | object`",
         "default": "",
         "typeDefinition": [
           "0",
@@ -4041,7 +4041,7 @@
         "inputType": 0,
         "description": "`≥1600px`, could be a `span` value or an object containing above props",
         "type": "Enum",
-        "typeRaw": "`number \\| object`",
+        "typeRaw": "`number | object`",
         "default": "",
         "typeDefinition": [
           "0",
@@ -4100,7 +4100,7 @@
         "inputType": 0,
         "description": "flex layout style",
         "type": "string",
-        "typeRaw": "`string \\| number`",
+        "typeRaw": "`string | number`",
         "default": ""
       },
       {
@@ -4207,7 +4207,7 @@
         "inputType": 0,
         "description": "`<576px` and also default setting, could be a `span` value or an object containing above props",
         "type": "Enum",
-        "typeRaw": "`number \\| object`",
+        "typeRaw": "`number | object`",
         "default": "",
         "typeDefinition": [
           "0",
@@ -4226,7 +4226,7 @@
         "inputType": 0,
         "description": "`≥576px`, could be a `span` value or an object containing above props",
         "type": "Enum",
-        "typeRaw": "`number \\| object`",
+        "typeRaw": "`number | object`",
         "default": "",
         "typeDefinition": [
           "0",
@@ -4245,7 +4245,7 @@
         "inputType": 0,
         "description": "`≥768px`, could be a `span` value or an object containing above props",
         "type": "Enum",
-        "typeRaw": "`number \\| object`",
+        "typeRaw": "`number | object`",
         "default": "",
         "typeDefinition": [
           "0",
@@ -4264,7 +4264,7 @@
         "inputType": 0,
         "description": "`≥992px`, could be a `span` value or an object containing above props",
         "type": "Enum",
-        "typeRaw": "`number \\| object`",
+        "typeRaw": "`number | object`",
         "default": "",
         "typeDefinition": [
           "0",
@@ -4283,7 +4283,7 @@
         "inputType": 0,
         "description": "`≥1200px`, could be a `span` value or an object containing above props",
         "type": "Enum",
-        "typeRaw": "`number \\| object`",
+        "typeRaw": "`number | object`",
         "default": "",
         "typeDefinition": [
           "0",
@@ -4302,7 +4302,7 @@
         "inputType": 0,
         "description": "`≥1600px`, could be a `span` value or an object containing above props",
         "type": "Enum",
-        "typeRaw": "`number \\| object`",
+        "typeRaw": "`number | object`",
         "default": "",
         "typeDefinition": [
           "0",
@@ -4321,7 +4321,7 @@
         "inputType": 0,
         "description": "Will generate status based on the input `FormControl`, `NgModel` or string, the default value is the first `FormControl` or `NgModel` in `nz-form-control`",
         "type": "Enum",
-        "typeRaw": "`'success' \\| 'warning' \\| 'error' \\| 'validating'  \\|  FormControl  \\|  NgModel`",
+        "typeRaw": "`'success' | 'warning' | 'error' | 'validating'  |  FormControl  |  NgModel`",
         "default": "first `FormControl` or `NgModel` in `nz-form-control`",
         "typeDefinition": [
           "success",
@@ -4347,7 +4347,7 @@
         "inputType": 0,
         "description": "The extra prompt message",
         "type": "string",
-        "typeRaw": "`string  \\|  TemplateRef<void>`",
+        "typeRaw": "`string  |  TemplateRef<void>`",
         "default": ""
       },
       {
@@ -4355,7 +4355,7 @@
         "inputType": 0,
         "description": "Tip display when validate success",
         "type": "string",
-        "typeRaw": "`string  \\|  TemplateRef<{ $implicit: FormControl  \\|  NgModel }>`",
+        "typeRaw": "`string  |  TemplateRef<{ $implicit: FormControl  |  NgModel }>`",
         "default": ""
       },
       {
@@ -4363,7 +4363,7 @@
         "inputType": 0,
         "description": "Tip display when validate warning",
         "type": "string",
-        "typeRaw": "`string  \\|  TemplateRef<{ $implicit: FormControl  \\|  NgModel }>`",
+        "typeRaw": "`string  |  TemplateRef<{ $implicit: FormControl  |  NgModel }>`",
         "default": ""
       },
       {
@@ -4371,7 +4371,7 @@
         "inputType": 0,
         "description": "Tip display when validate error",
         "type": "string",
-        "typeRaw": "`string  \\|  TemplateRef<{ $implicit: FormControl  \\|  NgModel }>`",
+        "typeRaw": "`string  |  TemplateRef<{ $implicit: FormControl  |  NgModel }>`",
         "default": ""
       },
       {
@@ -4379,7 +4379,7 @@
         "inputType": 0,
         "description": "Tip display when validating",
         "type": "string",
-        "typeRaw": "`string  \\|  TemplateRef<{ $implicit: FormControl  \\|  NgModel }>`",
+        "typeRaw": "`string  |  TemplateRef<{ $implicit: FormControl  |  NgModel }>`",
         "default": ""
       },
       {
@@ -4387,7 +4387,7 @@
         "inputType": 0,
         "description": "The object of the tips, please refer to the example: **Auto tips**",
         "type": "object",
-        "typeRaw": "`Record<string, string \\| Record<string, string>>`",
+        "typeRaw": "`Record<string, string | Record<string, string>>`",
         "default": ""
       },
       {
@@ -4451,7 +4451,7 @@
         "inputType": 0,
         "description": "Type of the ant design icon",
         "type": "Enum",
-        "typeRaw": "`'fill'\\|'outline'\\|'twotone'`",
+        "typeRaw": "`'fill'|'outline'|'twotone'`",
         "default": "`'outline'`",
         "typeDefinition": [
           "fill",
@@ -4513,7 +4513,7 @@
         "inputType": 0,
         "description": "The size of the input box. Note: in the context of a form, the `large` size is used.",
         "type": "Enum",
-        "typeRaw": "`'large' \\| 'small' \\| 'default'`",
+        "typeRaw": "`'large' | 'small' | 'default'`",
         "default": "`'default'`",
         "typeDefinition": [
           "large",
@@ -4527,7 +4527,7 @@
         "inputType": 0,
         "description": "Only used for `textarea`, height autosize feature, can be set to `boolean` or an object `{ minRows: 2, maxRows: 6 }`",
         "type": "boolean",
-        "typeRaw": "`boolean \\| { minRows: number, maxRows: number }`",
+        "typeRaw": "`boolean | { minRows: number, maxRows: number }`",
         "default": "`false`",
         "pureDefault": "false"
       },
@@ -4583,7 +4583,7 @@
         "inputType": 0,
         "description": "The label text displayed after (on the right side of) the input field, can work with `nzAddOnBefore`",
         "type": "string",
-        "typeRaw": "`string \\| TemplateRef<void>`",
+        "typeRaw": "`string | TemplateRef<void>`",
         "default": ""
       },
       {
@@ -4591,7 +4591,7 @@
         "inputType": 0,
         "description": "The label text displayed before (on the left side of) the input field, can work with `nzAddOnAfter`",
         "type": "string",
-        "typeRaw": "`string \\| TemplateRef<void>`",
+        "typeRaw": "`string | TemplateRef<void>`",
         "default": ""
       },
       {
@@ -4599,7 +4599,7 @@
         "inputType": 0,
         "description": "The prefix icon for the Input, can work with `nzSuffix`",
         "type": "string",
-        "typeRaw": "`string \\| TemplateRef<void>`",
+        "typeRaw": "`string | TemplateRef<void>`",
         "default": ""
       },
       {
@@ -4607,7 +4607,7 @@
         "inputType": 0,
         "description": "The suffix icon for the Input, can work with `nzPrefix`",
         "type": "string",
-        "typeRaw": "`string \\| TemplateRef<void>`",
+        "typeRaw": "`string | TemplateRef<void>`",
         "default": ""
       },
       {
@@ -4624,7 +4624,7 @@
         "inputType": 0,
         "description": "The size of `nz-input-group` specifies the size of the included `nz-input` fields",
         "type": "Enum",
-        "typeRaw": "`'large' \\| 'small' \\| 'default'`",
+        "typeRaw": "`'large' | 'small' | 'default'`",
         "default": "`'default'`",
         "typeDefinition": [
           "large",
@@ -4652,7 +4652,7 @@
         "inputType": 2,
         "description": "current value, double binding",
         "type": "number",
-        "typeRaw": "`number \\| string`  \\|  `string`",
+        "typeRaw": "`number | string`  |  `string`",
         "default": ""
       },
       {
@@ -4697,7 +4697,7 @@
         "inputType": 0,
         "description": "Specifies the format of the value presented",
         "type": "function",
-        "typeRaw": "`(value: number \\| string) => string \\| number`",
+        "typeRaw": "`(value: number | string) => string | number`",
         "default": ""
       },
       {
@@ -4705,7 +4705,7 @@
         "inputType": 0,
         "description": "Specifies the value extracted from nzFormatter",
         "type": "function",
-        "typeRaw": "`(value: string) => string \\| number`",
+        "typeRaw": "`(value: string) => string | number`",
         "default": "`(value: string) => value.trim().replace(/。/g, '.').replace(/[^\\w\\.-]+/g, '')`",
         "pureDefault": "(value: string) => value.trim().replace(/。/g, '.').replace(/[^\\w\\.-]+/g, '')"
       },
@@ -4722,7 +4722,7 @@
         "inputType": 0,
         "description": "The method for calculating the precision of input value",
         "type": "Enum",
-        "typeRaw": "`'cut' \\| 'toFixed' \\| ((value: number \\| string, precision?: number) => number)`",
+        "typeRaw": "`'cut' | 'toFixed' | ((value: number | string, precision?: number) => number)`",
         "default": "`'toFixed'`",
         "typeDefinition": [
           "cut",
@@ -4737,7 +4737,7 @@
         "inputType": 0,
         "description": "width of input box",
         "type": "Enum",
-        "typeRaw": "`'large' \\| 'small' \\| 'default'`",
+        "typeRaw": "`'large' | 'small' | 'default'`",
         "default": "`'default'`",
         "typeDefinition": [
           "large",
@@ -4751,7 +4751,7 @@
         "inputType": 0,
         "description": "The number to which the current value is increased or decreased. It can be an integer or decimal.",
         "type": "number",
-        "typeRaw": "`number \\| string`",
+        "typeRaw": "`number | string`",
         "default": "`1`",
         "pureDefault": "1"
       },
@@ -4820,7 +4820,7 @@
         "inputType": 0,
         "description": "breakpoints of the responsive layout",
         "type": "Enum",
-        "typeRaw": "`'xs' \\| 'sm' \\| 'md' \\| 'lg' \\| 'xl' \\| 'xxl'`",
+        "typeRaw": "`'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl'`",
         "default": "",
         "typeDefinition": [
           "xs",
@@ -4880,7 +4880,7 @@
         "inputType": 0,
         "description": "specify the customized trigger, set to null to hide the trigger",
         "type": "string",
-        "typeRaw": "`string \\| TemplateRef<void>`",
+        "typeRaw": "`string | TemplateRef<void>`",
         "default": ""
       },
       {
@@ -4896,7 +4896,7 @@
         "inputType": 0,
         "description": "width of the sidebar",
         "type": "number",
-        "typeRaw": "`number \\| string`",
+        "typeRaw": "`number | string`",
         "default": "`200`",
         "pureDefault": "200"
       },
@@ -4905,7 +4905,7 @@
         "inputType": 0,
         "description": "color theme of the sidebar",
         "type": "Enum",
-        "typeRaw": "`'light' \\| 'dark'`",
+        "typeRaw": "`'light' | 'dark'`",
         "default": "`dark`",
         "typeDefinition": [
           "light",
@@ -4949,7 +4949,7 @@
         "inputType": 0,
         "description": "List footer renderer",
         "type": "string",
-        "typeRaw": "`string \\| TemplateRef<void>`",
+        "typeRaw": "`string | TemplateRef<void>`",
         "default": ""
       },
       {
@@ -4957,7 +4957,7 @@
         "inputType": 0,
         "description": "List header renderer",
         "type": "string",
-        "typeRaw": "`string \\| TemplateRef<void>`",
+        "typeRaw": "`string | TemplateRef<void>`",
         "default": ""
       },
       {
@@ -4965,7 +4965,7 @@
         "inputType": 0,
         "description": "The layout of list, default is `horizontal`, If a vertical list is desired, set the itemLayout property to `vertical`",
         "type": "Enum",
-        "typeRaw": "`'vertical' \\| 'horizontal'`",
+        "typeRaw": "`'vertical' | 'horizontal'`",
         "default": "`'horizontal'`",
         "typeDefinition": [
           "vertical",
@@ -4988,7 +4988,7 @@
         "inputType": 0,
         "description": "Size of list",
         "type": "Enum",
-        "typeRaw": "`'large' \\| 'small' \\| 'default'`",
+        "typeRaw": "`'large' | 'small' | 'default'`",
         "default": "`'default'`",
         "typeDefinition": [
           "large",
@@ -5025,7 +5025,7 @@
         "inputType": 0,
         "description": "Empty content",
         "type": "string",
-        "typeRaw": "`string \\| TemplateRef<void>`",
+        "typeRaw": "`string | TemplateRef<void>`",
         "default": ""
       }
     ],
@@ -5162,7 +5162,7 @@
         "inputType": 0,
         "description": "The avatar of list item",
         "type": "string",
-        "typeRaw": "`string \\| TemplateRef<void>`",
+        "typeRaw": "`string | TemplateRef<void>`",
         "default": ""
       },
       {
@@ -5170,7 +5170,7 @@
         "inputType": 0,
         "description": "The description of list item",
         "type": "string",
-        "typeRaw": "`string \\| TemplateRef<void>`",
+        "typeRaw": "`string | TemplateRef<void>`",
         "default": ""
       },
       {
@@ -5178,7 +5178,7 @@
         "inputType": 0,
         "description": "The title of list item",
         "type": "string",
-        "typeRaw": "`string \\| TemplateRef<void>`",
+        "typeRaw": "`string | TemplateRef<void>`",
         "default": ""
       }
     ],
@@ -5200,7 +5200,7 @@
         "inputType": 0,
         "description": "Trigger element **(required)**",
         "type": "object",
-        "typeRaw": "`HTMLTextAreaElement \\| HTMLInputElement`",
+        "typeRaw": "`HTMLTextAreaElement | HTMLInputElement`",
         "default": ""
       },
       {
@@ -5235,7 +5235,7 @@
         "inputType": 0,
         "description": "The position of the suggestion relative to the target, which can be one of top and bottom",
         "type": "Enum",
-        "typeRaw": "`'button' \\| 'top'`",
+        "typeRaw": "`'button' | 'top'`",
         "default": "`'bottom'`",
         "typeDefinition": [
           "button",
@@ -5248,7 +5248,7 @@
         "inputType": 0,
         "description": "Character which will trigger Mention to show mention list",
         "type": "string",
-        "typeRaw": "`string \\| string[]`",
+        "typeRaw": "`string | string[]`",
         "default": "`'@'`",
         "pureDefault": "@"
       },
@@ -5266,7 +5266,7 @@
         "inputType": 0,
         "description": "Function that maps an suggestion's value",
         "type": "function",
-        "typeRaw": "`(any) => string \\| (value: string) => string`",
+        "typeRaw": "`(any) => string | (value: string) => string`",
         "default": ""
       },
       {
@@ -5347,7 +5347,7 @@
         "inputType": 0,
         "description": "type of the menu; `vertical`, `horizontal`, and `inline` modes are supported",
         "type": "Enum",
-        "typeRaw": "`'vertical' \\| 'horizontal' \\| 'inline'`",
+        "typeRaw": "`'vertical' | 'horizontal' | 'inline'`",
         "default": "`'vertical'`",
         "typeDefinition": [
           "vertical",
@@ -5370,7 +5370,7 @@
         "inputType": 0,
         "description": "color theme of the menu",
         "type": "Enum",
-        "typeRaw": "`'light' \\| 'dark'`",
+        "typeRaw": "`'light' | 'dark'`",
         "default": "`'light'`",
         "typeDefinition": [
           "light",
@@ -5475,7 +5475,7 @@
         "inputType": 0,
         "description": "set submenu title",
         "type": "string",
-        "typeRaw": "`string \\| TemplateRef<void>`",
+        "typeRaw": "`string | TemplateRef<void>`",
         "default": ""
       },
       {
@@ -5521,7 +5521,7 @@
         "inputType": 0,
         "description": "set menu group title",
         "type": "string",
-        "typeRaw": "`string \\| TemplateRef<void>`",
+        "typeRaw": "`string | TemplateRef<void>`",
         "default": ""
       }
     ],
@@ -5578,7 +5578,7 @@
         "inputType": 0,
         "description": "Title string",
         "type": "string",
-        "typeRaw": "`string \\| TemplateRef<void>`",
+        "typeRaw": "`string | TemplateRef<void>`",
         "default": ""
       },
       {
@@ -5586,7 +5586,7 @@
         "inputType": 0,
         "description": "SubTitle string",
         "type": "string",
-        "typeRaw": "`string \\| TemplateRef<void>`",
+        "typeRaw": "`string | TemplateRef<void>`",
         "default": ""
       },
       {
@@ -5594,7 +5594,7 @@
         "inputType": 0,
         "description": "Custom back icon",
         "type": "string",
-        "typeRaw": "`string \\| TemplateRef<void>`",
+        "typeRaw": "`string | TemplateRef<void>`",
         "default": ""
       },
       {
@@ -5718,7 +5718,7 @@
         "inputType": 0,
         "description": "to customize item",
         "type": "TemplateRef",
-        "typeRaw": "`TemplateRef<{ $implicit: 'page' \\| 'prev' \\| 'next'\\| 'prev_5'\\| 'next_5', page: number }>`",
+        "typeRaw": "`TemplateRef<{ $implicit: 'page' | 'prev' | 'next'| 'prev_5'| 'next_5', page: number }>`",
         "default": ""
       },
       {
@@ -5831,7 +5831,7 @@
         "inputType": 0,
         "description": "The text shown in the tooltip",
         "type": "string",
-        "typeRaw": "`string \\| TemplateRef<void>`",
+        "typeRaw": "`string | TemplateRef<void>`",
         "default": ""
       },
       {
@@ -5839,7 +5839,7 @@
         "inputType": 0,
         "description": "Tooltip trigger mode. If set to `null` it would not be triggered",
         "type": "Enum",
-        "typeRaw": "`'click' \\| 'focus' \\| 'hover' \\| null`",
+        "typeRaw": "`'click' | 'focus' | 'hover' | null`",
         "default": "`'hover'`",
         "typeDefinition": [
           "click",
@@ -5854,7 +5854,7 @@
         "inputType": 0,
         "description": "The position of the tooltip relative to the target",
         "type": "Enum",
-        "typeRaw": "`'top' \\| 'left' \\| 'right' \\| 'bottom' \\| 'topLeft' \\| 'topRight' \\| 'bottomLeft' \\| 'bottomRight' \\| 'leftTop' \\| 'leftBottom' \\| 'rightTop' \\| 'rightBottom'`",
+        "typeRaw": "`'top' | 'left' | 'right' | 'bottom' | 'topLeft' | 'topRight' | 'bottomLeft' | 'bottomRight' | 'leftTop' | 'leftBottom' | 'rightTop' | 'rightBottom'`",
         "default": "`'top'`",
         "typeDefinition": [
           "top",
@@ -5885,7 +5885,7 @@
         "inputType": 0,
         "description": "Title of the confirmation box",
         "type": "string",
-        "typeRaw": "`string \\| TemplateRef<void>`",
+        "typeRaw": "`string | TemplateRef<void>`",
         "default": ""
       },
       {
@@ -5893,7 +5893,7 @@
         "inputType": 0,
         "description": "Popconfirm trigger mode. If set to `null` it would not be triggered",
         "type": "Enum",
-        "typeRaw": "`'click' \\| 'focus' \\| 'hover' \\| null`",
+        "typeRaw": "`'click' | 'focus' | 'hover' | null`",
         "default": "`'hover'`",
         "typeDefinition": [
           "click",
@@ -5908,7 +5908,7 @@
         "inputType": 0,
         "description": "The position of the popconfirm relative to the target",
         "type": "Enum",
-        "typeRaw": "`'top' \\| 'left' \\| 'right' \\| 'bottom' \\| 'topLeft' \\| 'topRight' \\| 'bottomLeft' \\| 'bottomRight' \\| 'leftTop' \\| 'leftBottom' \\| 'rightTop' \\| 'rightBottom'`",
+        "typeRaw": "`'top' | 'left' | 'right' | 'bottom' | 'topLeft' | 'topRight' | 'bottomLeft' | 'bottomRight' | 'leftTop' | 'leftBottom' | 'rightTop' | 'rightBottom'`",
         "default": "`'top'`",
         "typeDefinition": [
           "top",
@@ -5957,7 +5957,7 @@
         "inputType": 0,
         "description": "Button `type` of the Confirm button",
         "type": "Enum",
-        "typeRaw": "`'primary' \\| 'ghost' \\| 'dashed' \\| 'danger' \\| 'default'`",
+        "typeRaw": "`'primary' | 'ghost' | 'dashed' | 'danger' | 'default'`",
         "default": "`'primary'`",
         "typeDefinition": [
           "primary",
@@ -5982,7 +5982,7 @@
         "inputType": 0,
         "description": "Customize icon of confirmation",
         "type": "string",
-        "typeRaw": "`string \\| TemplateRef<void>`",
+        "typeRaw": "`string | TemplateRef<void>`",
         "default": ""
       },
       {
@@ -6078,7 +6078,7 @@
         "inputType": 0,
         "description": "The text shown in the tooltip",
         "type": "string",
-        "typeRaw": "`string \\| TemplateRef<void>`",
+        "typeRaw": "`string | TemplateRef<void>`",
         "default": ""
       },
       {
@@ -6086,7 +6086,7 @@
         "inputType": 0,
         "description": "Tooltip trigger mode. If set to `null` it would not be triggered",
         "type": "Enum",
-        "typeRaw": "`'click' \\| 'focus' \\| 'hover' \\| null`",
+        "typeRaw": "`'click' | 'focus' | 'hover' | null`",
         "default": "`'hover'`",
         "typeDefinition": [
           "click",
@@ -6101,7 +6101,7 @@
         "inputType": 0,
         "description": "The position of the tooltip relative to the target",
         "type": "Enum",
-        "typeRaw": "`'top' \\| 'left' \\| 'right' \\| 'bottom' \\| 'topLeft' \\| 'topRight' \\| 'bottomLeft' \\| 'bottomRight' \\| 'leftTop' \\| 'leftBottom' \\| 'rightTop' \\| 'rightBottom'`",
+        "typeRaw": "`'top' | 'left' | 'right' | 'bottom' | 'topLeft' | 'topRight' | 'bottomLeft' | 'bottomRight' | 'leftTop' | 'leftBottom' | 'rightTop' | 'rightBottom'`",
         "default": "`'top'`",
         "typeDefinition": [
           "top",
@@ -6132,7 +6132,7 @@
         "inputType": 0,
         "description": "Title of the popover",
         "type": "string",
-        "typeRaw": "`string \\| TemplateRef<void>`",
+        "typeRaw": "`string | TemplateRef<void>`",
         "default": ""
       },
       {
@@ -6140,7 +6140,7 @@
         "inputType": 0,
         "description": "Content of the popover",
         "type": "string",
-        "typeRaw": "`string \\| TemplateRef<void>`",
+        "typeRaw": "`string | TemplateRef<void>`",
         "default": ""
       },
       {
@@ -6148,7 +6148,7 @@
         "inputType": 0,
         "description": "Popover trigger mode. If set to `null` it would not be triggered",
         "type": "Enum",
-        "typeRaw": "`'click' \\| 'focus' \\| 'hover' \\| null`",
+        "typeRaw": "`'click' | 'focus' | 'hover' | null`",
         "default": "`'hover'`",
         "typeDefinition": [
           "click",
@@ -6163,7 +6163,7 @@
         "inputType": 0,
         "description": "The position of the popover relative to the target",
         "type": "Enum",
-        "typeRaw": "`'top' \\| 'left' \\| 'right' \\| 'bottom' \\| 'topLeft' \\| 'topRight' \\| 'bottomLeft' \\| 'bottomRight' \\| 'leftTop' \\| 'leftBottom' \\| 'rightTop' \\| 'rightBottom'`",
+        "typeRaw": "`'top' | 'left' | 'right' | 'bottom' | 'topLeft' | 'topRight' | 'bottomLeft' | 'bottomRight' | 'leftTop' | 'leftBottom' | 'rightTop' | 'rightBottom'`",
         "default": "`'top'`",
         "typeDefinition": [
           "top",
@@ -6208,7 +6208,7 @@
         "inputType": 0,
         "description": "to set the type",
         "type": "Enum",
-        "typeRaw": "`'line' \\| 'circle' \\| 'dashboard'`",
+        "typeRaw": "`'line' | 'circle' | 'dashboard'`",
         "default": "`'line'`",
         "typeDefinition": [
           "line",
@@ -6222,7 +6222,7 @@
         "inputType": 0,
         "description": "template function of the content",
         "type": "function",
-        "typeRaw": "`(percent: number) => string \\| TemplateRef<{ $implicit: number }>`",
+        "typeRaw": "`(percent: number) => string | TemplateRef<{ $implicit: number }>`",
         "default": "`percent => percent + '%'`",
         "pureDefault": "percent => percent + '%"
       },
@@ -6249,7 +6249,7 @@
         "inputType": 0,
         "description": "to set the status of the Progress",
         "type": "Enum",
-        "typeRaw": "`'success' \\| 'exception' \\| 'active' \\| 'normal'`",
+        "typeRaw": "`'success' | 'exception' | 'active' | 'normal'`",
         "default": "",
         "typeDefinition": [
           "success",
@@ -6263,7 +6263,7 @@
         "inputType": 0,
         "description": "to set the style of the progress linecap",
         "type": "Enum",
-        "typeRaw": "`'round' \\| 'square'`",
+        "typeRaw": "`'round' | 'square'`",
         "default": "`'round'`",
         "typeDefinition": [
           "round",
@@ -6276,7 +6276,7 @@
         "inputType": 0,
         "description": "color of progress bar, render linear-gradient when passing an object",
         "type": "string",
-        "typeRaw": "`string \\| { from: string; to: string: direction: string; [percent: string]: string }`",
+        "typeRaw": "`string | { from: string; to: string: direction: string; [percent: string]: string }`",
         "default": ""
       },
       {
@@ -6456,7 +6456,7 @@
         "inputType": 0,
         "description": "Size, only on radio style",
         "type": "Enum",
-        "typeRaw": "`'large' \\| 'small' \\| 'default'`",
+        "typeRaw": "`'large' | 'small' | 'default'`",
         "default": "`'default'`",
         "typeDefinition": [
           "large",
@@ -6478,7 +6478,7 @@
         "inputType": 0,
         "description": "style type of radio button",
         "type": "Enum",
-        "typeRaw": "`'outline' \\| 'solid'`",
+        "typeRaw": "`'outline' | 'solid'`",
         "default": "`'outline'`",
         "typeDefinition": [
           "outline",
@@ -6637,7 +6637,7 @@
         "inputType": 0,
         "description": "Specifies resize boundaries.",
         "type": "Enum",
-        "typeRaw": "`'window' \\| 'parent' \\| ElementRef<HTMLElement>`",
+        "typeRaw": "`'window' | 'parent' | ElementRef<HTMLElement>`",
         "default": "`parent`",
         "typeDefinition": [
           "window",
@@ -6825,7 +6825,7 @@
         "inputType": 2,
         "description": "Current selected nz-option value, double binding.",
         "type": "object",
-        "typeRaw": "`any \\| any[]`",
+        "typeRaw": "`any | any[]`",
         "default": ""
       },
       {
@@ -6947,7 +6947,7 @@
         "inputType": 0,
         "description": "Set mode of Select",
         "type": "Enum",
-        "typeRaw": "`'multiple' \\| 'tags' \\| 'default'`",
+        "typeRaw": "`'multiple' | 'tags' | 'default'`",
         "default": "`'default'`",
         "typeDefinition": [
           "multiple",
@@ -6961,7 +6961,7 @@
         "inputType": 0,
         "description": "Specify content to show when no result matches..",
         "type": "string",
-        "typeRaw": "`string  \\|  TemplateRef<void>`",
+        "typeRaw": "`string  |  TemplateRef<void>`",
         "default": "`'Not Found'`",
         "pureDefault": "Not Found"
       },
@@ -6996,7 +6996,7 @@
         "inputType": 0,
         "description": "Size of Select input",
         "type": "Enum",
-        "typeRaw": "`'large' \\| 'small' \\| 'default'`",
+        "typeRaw": "`'large' | 'small' | 'default'`",
         "default": "`'default'`",
         "typeDefinition": [
           "large",
@@ -7204,7 +7204,7 @@
         "inputType": 0,
         "description": "Group label",
         "type": "string",
-        "typeRaw": "`string \\| TemplateRef<void>`",
+        "typeRaw": "`string | TemplateRef<void>`",
         "default": ""
       }
     ],
@@ -7235,7 +7235,7 @@
         "inputType": 0,
         "description": "Show avatar placeholder",
         "type": "boolean",
-        "typeRaw": "`boolean \\| NzSkeletonAvatar`",
+        "typeRaw": "`boolean | NzSkeletonAvatar`",
         "default": "`false`",
         "pureDefault": "false"
       },
@@ -7253,7 +7253,7 @@
         "inputType": 0,
         "description": "Show paragraph placeholder",
         "type": "boolean",
-        "typeRaw": "`boolean \\| NzSkeletonParagraph`",
+        "typeRaw": "`boolean | NzSkeletonParagraph`",
         "default": "`true`",
         "pureDefault": "true"
       },
@@ -7262,7 +7262,7 @@
         "inputType": 0,
         "description": "Show title placeholder",
         "type": "boolean",
-        "typeRaw": "`boolean \\| NzSkeletonTitle`",
+        "typeRaw": "`boolean | NzSkeletonTitle`",
         "default": "`true`",
         "pureDefault": "true"
       }
@@ -7349,7 +7349,7 @@
         "inputType": 0,
         "description": "The granularity the slider can step through values. Must greater than 0, and be divided by (max - min) . When  `marks` no null, `step` can be `null`.",
         "type": "number",
-        "typeRaw": "`number \\| null`",
+        "typeRaw": "`number | null`",
         "default": "`1`",
         "pureDefault": "1"
       },
@@ -7366,7 +7366,7 @@
         "inputType": 2,
         "description": "The value of slider. When `range` is `false`, use `number`, otherwise, use `[number, number]`",
         "type": "number",
-        "typeRaw": "`number \\| number[]`",
+        "typeRaw": "`number | number[]`",
         "default": ""
       },
       {
@@ -7383,7 +7383,7 @@
         "inputType": 0,
         "description": "When set to `always` tooltips are always displayed. When set to `never` they are never displayed",
         "type": "Enum",
-        "typeRaw": "`'default' \\| 'always' \\| 'never'`",
+        "typeRaw": "`'default' | 'always' | 'never'`",
         "default": "`default`",
         "typeDefinition": [
           "default",
@@ -7405,7 +7405,7 @@
         "inputType": 1,
         "description": "Fire when `onmouseup` is fired.",
         "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<number[]  \\|  number>`",
+        "typeRaw": "`EventEmitter<number[]  |  number>`",
         "default": ""
       },
       {
@@ -7413,7 +7413,7 @@
         "inputType": 1,
         "description": "Callback function that is fired when the user changes the slider's value.",
         "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<number[]  \\|  number>`",
+        "typeRaw": "`EventEmitter<number[]  |  number>`",
         "default": ""
       },
       {
@@ -7441,7 +7441,7 @@
         "inputType": 0,
         "description": "space size",
         "type": "string",
-        "typeRaw": "`small` \\| `middle` \\| `large` \\| `number`",
+        "typeRaw": "`small` | `middle` | `large` | `number`",
         "default": "`small`",
         "pureDefault": "small"
       },
@@ -7450,7 +7450,7 @@
         "inputType": 0,
         "description": "space direction",
         "type": "string",
-        "typeRaw": "`vertical` \\| `horizontal`",
+        "typeRaw": "`vertical` | `horizontal`",
         "default": "`horizontal`",
         "pureDefault": "horizontal"
       }
@@ -7489,7 +7489,7 @@
         "inputType": 0,
         "description": "size of Spin",
         "type": "Enum",
-        "typeRaw": "`'large' \\| 'small' \\| 'default'`",
+        "typeRaw": "`'large' | 'small' | 'default'`",
         "default": "`'default'`",
         "typeDefinition": [
           "large",
@@ -7544,7 +7544,7 @@
         "inputType": 0,
         "description": "Prefix of Value",
         "type": "string",
-        "typeRaw": "`string \\| TemplateRef<void>`",
+        "typeRaw": "`string | TemplateRef<void>`",
         "default": ""
       },
       {
@@ -7552,7 +7552,7 @@
         "inputType": 0,
         "description": "Suffix of Value",
         "type": "string",
-        "typeRaw": "`string \\| TemplateRef<void>`",
+        "typeRaw": "`string | TemplateRef<void>`",
         "default": ""
       },
       {
@@ -7560,7 +7560,7 @@
         "inputType": 0,
         "description": "Title",
         "type": "string",
-        "typeRaw": "`string \\| TemplateRef<void>`",
+        "typeRaw": "`string | TemplateRef<void>`",
         "default": ""
       },
       {
@@ -7568,7 +7568,7 @@
         "inputType": 0,
         "description": "Value",
         "type": "string",
-        "typeRaw": "`string \\| number`",
+        "typeRaw": "`string | number`",
         "default": ""
       },
       {
@@ -7584,7 +7584,7 @@
         "inputType": 0,
         "description": "Custom template to render a number",
         "type": "TemplateRef",
-        "typeRaw": "`TemplateRef<{ $implicit: string \\| number }>`",
+        "typeRaw": "`TemplateRef<{ $implicit: string | number }>`",
         "default": ""
       }
     ],
@@ -7615,7 +7615,7 @@
         "inputType": 0,
         "description": "Prefix of Value",
         "type": "string",
-        "typeRaw": "`string \\| TemplateRef<void>`",
+        "typeRaw": "`string | TemplateRef<void>`",
         "default": ""
       },
       {
@@ -7623,7 +7623,7 @@
         "inputType": 0,
         "description": "Suffix of Value",
         "type": "string",
-        "typeRaw": "`string \\| TemplateRef<void>`",
+        "typeRaw": "`string | TemplateRef<void>`",
         "default": ""
       },
       {
@@ -7631,7 +7631,7 @@
         "inputType": 0,
         "description": "Title",
         "type": "string",
-        "typeRaw": "`string \\| TemplateRef<void>`",
+        "typeRaw": "`string | TemplateRef<void>`",
         "default": ""
       },
       {
@@ -7639,7 +7639,7 @@
         "inputType": 0,
         "description": "Target time in timestamp form",
         "type": "string",
-        "typeRaw": "`string \\| number`",
+        "typeRaw": "`string | number`",
         "default": ""
       },
       {
@@ -7690,7 +7690,7 @@
         "inputType": 0,
         "description": "type of steps, can be set to one of the following values: `default`, `navigation`",
         "type": "Enum",
-        "typeRaw": "`'default' \\| 'navigation'`",
+        "typeRaw": "`'default' | 'navigation'`",
         "default": "`default`",
         "typeDefinition": [
           "default",
@@ -7712,7 +7712,7 @@
         "inputType": 0,
         "description": "To specify the direction of the step bar, `horizontal` and `vertical` are currently supported",
         "type": "Enum",
-        "typeRaw": "`'vertical' \\| 'horizontal'`",
+        "typeRaw": "`'vertical' | 'horizontal'`",
         "default": "`horizontal`",
         "typeDefinition": [
           "vertical",
@@ -7725,7 +7725,7 @@
         "inputType": 0,
         "description": "Support vertical title and description",
         "type": "Enum",
-        "typeRaw": "`'vertical' \\| 'horizontal'`",
+        "typeRaw": "`'vertical' | 'horizontal'`",
         "default": "`horizontal`",
         "typeDefinition": [
           "vertical",
@@ -7738,7 +7738,7 @@
         "inputType": 0,
         "description": "Steps with progress dot style, customize the progress dot by setting it with TemplateRef",
         "type": "boolean",
-        "typeRaw": "`boolean \\| TemplateRef<{ $implicit: TemplateRef<void>, status: string, index: number }>`",
+        "typeRaw": "`boolean | TemplateRef<{ $implicit: TemplateRef<void>, status: string, index: number }>`",
         "default": "`false`",
         "pureDefault": "false"
       },
@@ -7747,7 +7747,7 @@
         "inputType": 0,
         "description": "To specify the size of the step bar, `default` and `small` are currently supported",
         "type": "Enum",
-        "typeRaw": "`'small' \\| 'default'`",
+        "typeRaw": "`'small' | 'default'`",
         "default": "`'default'`",
         "typeDefinition": [
           "small",
@@ -7760,7 +7760,7 @@
         "inputType": 0,
         "description": "To specify the status of current step, can be set to one of the following values: `wait` `process` `finish` `error`",
         "type": "Enum",
-        "typeRaw": "`'wait' \\| 'process' \\| 'finish' \\| 'error'`",
+        "typeRaw": "`'wait' | 'process' | 'finish' | 'error'`",
         "default": "`'process'`",
         "typeDefinition": [
           "wait",
@@ -7806,7 +7806,7 @@
         "inputType": 0,
         "description": "description of the step, optional property",
         "type": "string",
-        "typeRaw": "`string \\| TemplateRef<void>`",
+        "typeRaw": "`string | TemplateRef<void>`",
         "default": ""
       },
       {
@@ -7814,7 +7814,7 @@
         "inputType": 0,
         "description": "icon of the step, optional property",
         "type": "string",
-        "typeRaw": "`string \\| string[] \\| Set<string> \\| { [klass: string]: any; }`  \\|  `TemplateRef<void>`",
+        "typeRaw": "`string | string[] | Set<string> | { [klass: string]: any; }`  |  `TemplateRef<void>`",
         "default": ""
       },
       {
@@ -7822,7 +7822,7 @@
         "inputType": 0,
         "description": "to specify the status. It will be automatically set by `nzCurrent` of `nz-steps` if not configured. Optional values are: `wait` `process` `finish` `error`",
         "type": "Enum",
-        "typeRaw": "`'wait' \\| 'process' \\| 'finish' \\| 'error'`",
+        "typeRaw": "`'wait' | 'process' | 'finish' | 'error'`",
         "default": "`'wait'`",
         "typeDefinition": [
           "wait",
@@ -7837,7 +7837,7 @@
         "inputType": 0,
         "description": "title of the step",
         "type": "string",
-        "typeRaw": "`string \\| TemplateRef<void>`",
+        "typeRaw": "`string | TemplateRef<void>`",
         "default": ""
       },
       {
@@ -7845,7 +7845,7 @@
         "inputType": 0,
         "description": "subTitle of the step",
         "type": "string",
-        "typeRaw": "`string \\| TemplateRef<void>`",
+        "typeRaw": "`string | TemplateRef<void>`",
         "default": ""
       },
       {
@@ -7886,7 +7886,7 @@
         "inputType": 0,
         "description": "content to be shown when the state is checked",
         "type": "string",
-        "typeRaw": "`string \\| TemplateRef<void>`",
+        "typeRaw": "`string | TemplateRef<void>`",
         "default": ""
       },
       {
@@ -7894,7 +7894,7 @@
         "inputType": 0,
         "description": "content to be shown when the state is unchecked",
         "type": "string",
-        "typeRaw": "`string \\| TemplateRef<void>`",
+        "typeRaw": "`string | TemplateRef<void>`",
         "default": ""
       },
       {
@@ -7912,7 +7912,7 @@
         "inputType": 0,
         "description": "the size of the `nz-switch`, options: `default` `small`",
         "type": "Enum",
-        "typeRaw": "`'small' \\| 'default'`",
+        "typeRaw": "`'small' | 'default'`",
         "default": "`'default'`",
         "typeDefinition": [
           "small",
@@ -8022,7 +8022,7 @@
         "inputType": 0,
         "description": "Specify the position of Pagination",
         "type": "Enum",
-        "typeRaw": "`'top' \\| 'bottom' \\| 'both'`",
+        "typeRaw": "`'top' | 'bottom' | 'both'`",
         "default": "`bottom`",
         "typeDefinition": [
           "top",
@@ -8054,7 +8054,7 @@
         "inputType": 0,
         "description": "Size of table",
         "type": "Enum",
-        "typeRaw": "`'middle' \\| 'small' \\| 'default'`",
+        "typeRaw": "`'middle' | 'small' | 'default'`",
         "default": "`'default'`",
         "typeDefinition": [
           "middle",
@@ -8103,7 +8103,7 @@
         "inputType": 0,
         "description": "Table title renderer",
         "type": "string",
-        "typeRaw": "`string \\| TemplateRef<void>`",
+        "typeRaw": "`string | TemplateRef<void>`",
         "default": ""
       },
       {
@@ -8111,7 +8111,7 @@
         "inputType": 0,
         "description": "Table footer renderer",
         "type": "string",
-        "typeRaw": "`string \\| TemplateRef<void>`",
+        "typeRaw": "`string | TemplateRef<void>`",
         "default": ""
       },
       {
@@ -8119,7 +8119,7 @@
         "inputType": 0,
         "description": "Custom no result content",
         "type": "string",
-        "typeRaw": "`string \\| TemplateRef<void>`",
+        "typeRaw": "`string | TemplateRef<void>`",
         "default": ""
       },
       {
@@ -8162,7 +8162,7 @@
         "inputType": 0,
         "description": "to customize Pagination item, same as Pagination",
         "type": "TemplateRef",
-        "typeRaw": "`TemplateRef<{ $implicit: 'page' \\| 'prev' \\| 'next', page: number }>`",
+        "typeRaw": "`TemplateRef<{ $implicit: 'page' | 'prev' | 'next', page: number }>`",
         "default": ""
       },
       {
@@ -8356,7 +8356,7 @@
         "inputType": 0,
         "description": "supported sort way, could be `'ascend'`, `'descend'`, `null`",
         "type": "Array",
-        "typeRaw": "`Array<'ascend' \\| 'descend' \\| null>`",
+        "typeRaw": "`Array<'ascend' | 'descend' | null>`",
         "default": "`['ascend', 'descend', null]`",
         "pureDefault": "['ascend', 'descend', null]"
       },
@@ -8365,7 +8365,7 @@
         "inputType": 1,
         "description": "Sort direction change callback",
         "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<'ascend' \\| 'descend' \\| null>`",
+        "typeRaw": "`EventEmitter<'ascend' | 'descend' | null>`",
         "default": ""
       },
       {
@@ -8406,7 +8406,7 @@
         "inputType": 1,
         "description": "Filter change callback `value`",
         "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<any[] \\| any>`",
+        "typeRaw": "`EventEmitter<any[] | any>`",
         "default": ""
       },
       {
@@ -8422,7 +8422,7 @@
         "inputType": 0,
         "description": "Left pixels, used to fixed column to left, auto calc when set to `true` and disable fixed when `false`",
         "type": "string",
-        "typeRaw": "`string \\| boolean`",
+        "typeRaw": "`string | boolean`",
         "default": ""
       },
       {
@@ -8430,7 +8430,7 @@
         "inputType": 0,
         "description": "Right pixels, used to fixed column to right, auto calc when set to `true` and disable fixed when `false`",
         "type": "string",
-        "typeRaw": "`string \\| boolean`",
+        "typeRaw": "`string | boolean`",
         "default": ""
       },
       {
@@ -8438,7 +8438,7 @@
         "inputType": 0,
         "description": "Specify how content is aligned",
         "type": "Enum",
-        "typeRaw": "`'left' \\| 'right' \\| 'center'`",
+        "typeRaw": "`'left' | 'right' | 'center'`",
         "default": "",
         "typeDefinition": [
           "left",
@@ -8557,7 +8557,7 @@
         "inputType": 0,
         "description": "Left pixels, used to fixed column to left, auto calc when set to `true` and disable fixed when `false`",
         "type": "string",
-        "typeRaw": "`string \\| boolean`",
+        "typeRaw": "`string | boolean`",
         "default": ""
       },
       {
@@ -8565,7 +8565,7 @@
         "inputType": 0,
         "description": "Right pixels, used to fixed column to right, auto calc when set to `true` and disable fixed when `false`",
         "type": "string",
-        "typeRaw": "`string \\| boolean`",
+        "typeRaw": "`string | boolean`",
         "default": ""
       },
       {
@@ -8573,7 +8573,7 @@
         "inputType": 0,
         "description": "Specify how content is aligned",
         "type": "Enum",
-        "typeRaw": "`'left' \\| 'right' \\| 'center'`",
+        "typeRaw": "`'left' | 'right' | 'center'`",
         "default": "",
         "typeDefinition": [
           "left",
@@ -8716,7 +8716,7 @@
         "inputType": 0,
         "description": "Whether to change tabs with animation. Only works while `nzTabPosition=\"top\" \\| \"bottom\"`",
         "type": "boolean",
-        "typeRaw": "`boolean \\| {inkBar:boolean, tabPane:boolean}`",
+        "typeRaw": "`boolean | {inkBar:boolean, tabPane:boolean}`",
         "default": "`true`, `false` when `type=\"card\"`",
         "pureDefault": "true`, `false` when `type=\"card"
       },
@@ -8725,7 +8725,7 @@
         "inputType": 0,
         "description": "preset tab bar size",
         "type": "Enum",
-        "typeRaw": "`'large' \\| 'small' \\| 'default'`",
+        "typeRaw": "`'large' | 'small' | 'default'`",
         "default": "`'default'`",
         "typeDefinition": [
           "large",
@@ -8755,7 +8755,7 @@
         "inputType": 0,
         "description": "Position of tabs",
         "type": "Enum",
-        "typeRaw": "`'top' \\| 'right' \\| 'bottom' \\| 'left'`",
+        "typeRaw": "`'top' | 'right' | 'bottom' | 'left'`",
         "default": "`'top'`",
         "typeDefinition": [
           "top",
@@ -8770,7 +8770,7 @@
         "inputType": 0,
         "description": "Basic style of tabs",
         "type": "Enum",
-        "typeRaw": "`'line' \\| 'card'`",
+        "typeRaw": "`'line' | 'card'`",
         "default": "`'line'`",
         "typeDefinition": [
           "line",
@@ -8881,7 +8881,7 @@
         "inputType": 0,
         "description": "Show text in tab's head",
         "type": "string",
-        "typeRaw": "`string \\| TemplateRef<void>`",
+        "typeRaw": "`string | TemplateRef<void>`",
         "default": ""
       },
       {
@@ -9174,7 +9174,7 @@
         "inputType": 0,
         "description": "Set the last ghost node's existence or its content",
         "type": "string",
-        "typeRaw": "`string\\|boolean\\|TemplateRef<void>`",
+        "typeRaw": "`string|boolean|TemplateRef<void>`",
         "default": "`false`",
         "pureDefault": "false"
       },
@@ -9183,7 +9183,7 @@
         "inputType": 0,
         "description": "Set the dot of the last ghost node when pending is true",
         "type": "string",
-        "typeRaw": "`string\\|TemplateRef<void>`",
+        "typeRaw": "`string|TemplateRef<void>`",
         "default": "`<i nz-icon nzType=\"loading\"></i>`",
         "pureDefault": "<i nz-icon nzType=\"loading\"></i>"
       },
@@ -9201,7 +9201,7 @@
         "inputType": 0,
         "description": "By sending `alternate` the timeline will distribute the nodes to the left and right",
         "type": "Enum",
-        "typeRaw": "`'left' \\| 'alternate' \\| 'right'`",
+        "typeRaw": "`'left' | 'alternate' | 'right'`",
         "default": "",
         "typeDefinition": [
           "left",
@@ -9237,7 +9237,7 @@
         "inputType": 0,
         "description": "Customize timeline dot",
         "type": "string",
-        "typeRaw": "`string \\| TemplateRef<void>`",
+        "typeRaw": "`string | TemplateRef<void>`",
         "default": ""
       }
     ],
@@ -9322,7 +9322,7 @@
         "inputType": 0,
         "description": "Customize render list, please refer to the case.",
         "type": "Array",
-        "typeRaw": "`Array<TemplateRef<void> \\| null>`",
+        "typeRaw": "`Array<TemplateRef<void> | null>`",
         "default": "`[null, null]`",
         "pureDefault": "[null, null]"
       },
@@ -9444,7 +9444,7 @@
         "inputType": 0,
         "description": "Tree data (Reference NzTreeNode)",
         "type": "Array",
-        "typeRaw": "`NzTreeNodeOptions[] \\| NzTreeNode[]`",
+        "typeRaw": "`NzTreeNodeOptions[] | NzTreeNode[]`",
         "default": "`[]`",
         "pureDefault": "[]"
       },
@@ -9862,7 +9862,7 @@
         "inputType": 0,
         "description": "To set the size of the select input",
         "type": "Enum",
-        "typeRaw": "`'large' \\| 'small' \\| 'default'`",
+        "typeRaw": "`'large' | 'small' | 'default'`",
         "default": "`'default'`",
         "typeDefinition": [
           "large",
@@ -10138,7 +10138,7 @@
         "inputType": 0,
         "description": "Required. Uploading URL",
         "type": "string",
-        "typeRaw": "`string \\| ((file: UploadFile) => string \\| Observable<string>)`",
+        "typeRaw": "`string | ((file: UploadFile) => string | Observable<string>)`",
         "default": ""
       },
       {
@@ -10155,7 +10155,7 @@
         "inputType": 0,
         "description": "Hook function which will be executed before uploading. Uploading will be stopped with `false` or a Observable. **Warning：this function is not supported in IE9**. NOTICE: Muse be use `=>` to define the method.",
         "type": "function",
-        "typeRaw": "`(file: UploadFile, fileList: UploadFile[]) => boolean \\| Observable<boolean>`",
+        "typeRaw": "`(file: UploadFile, fileList: UploadFile[]) => boolean | Observable<boolean>`",
         "default": ""
       },
       {
@@ -10171,7 +10171,7 @@
         "inputType": 0,
         "description": "Uploading params or function which can return uploading params. NOTICE: Muse be use `=>` to define the method.",
         "type": "object",
-        "typeRaw": "`Object \\| ((file: UploadFile) => Object \\| Observable<{}>)`",
+        "typeRaw": "`Object | ((file: UploadFile) => Object | Observable<{}>)`",
         "default": ""
       },
       {
@@ -10231,7 +10231,7 @@
         "inputType": 0,
         "description": "Set request headers, valid above IE10. NOTICE: Muse be use `=>` to define the method.",
         "type": "object",
-        "typeRaw": "`Object \\| ((file: UploadFile) => Object \\| Observable<{}>)`",
+        "typeRaw": "`Object | ((file: UploadFile) => Object | Observable<{}>)`",
         "default": ""
       },
       {
@@ -10239,7 +10239,7 @@
         "inputType": 0,
         "description": "Built-in stylesheets, support for three types: `text`, `picture` or `picture-card`",
         "type": "Enum",
-        "typeRaw": "`'text' \\| 'picture' \\| 'picture-card'`",
+        "typeRaw": "`'text' | 'picture' | 'picture-card'`",
         "default": "`'text'`",
         "typeDefinition": [
           "text",
@@ -10271,7 +10271,7 @@
         "inputType": 0,
         "description": "Whether to show default upload list, could be an object to specify `showPreviewIcon`, `showRemoveIcon` and `showDownloadIcon` individually",
         "type": "boolean",
-        "typeRaw": "`boolean \\| { showPreviewIcon?: boolean, showRemoveIcon?: boolean, showDownloadIcon?: boolean }`",
+        "typeRaw": "`boolean | { showPreviewIcon?: boolean, showRemoveIcon?: boolean, showDownloadIcon?: boolean }`",
         "default": "`true`",
         "pureDefault": "true"
       },
@@ -10323,7 +10323,7 @@
         "inputType": 0,
         "description": "A callback function, will be executed when removing file button is clicked, remove event will be prevented when return value is `false` or a Observable. NOTICE: Muse be use `=>` to define the method.",
         "type": "function",
-        "typeRaw": "`(file: UploadFile) => boolean \\| Observable<boolean>`",
+        "typeRaw": "`(file: UploadFile) => boolean | Observable<boolean>`",
         "default": ""
       },
       {

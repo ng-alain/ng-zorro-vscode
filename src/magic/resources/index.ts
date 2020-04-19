@@ -33,10 +33,10 @@ function getFullDoc(item: Directive): string {
   if (item.doc.startsWith('http')) return item.doc;
   if (item.lib === 'ng-zorro-antd') {
     // TODO: Muse be release version
-    // return (CONFIG.language === 'zh-CN' ? 'https://ng-zorro.gitee.io' : 'https://ng.ant.design') + item.doc;
-    return `https://ng-zorro-master.netlify.com` + item.doc;
+    return (CONFIG.language === 'zh-CN' ? 'https://ng-zorro.gitee.io' : 'https://ng.ant.design') + item.doc;
+    // return `https://ng-zorro-master.netlify.com` + item.doc;
   }
-  return (CONFIG.language === 'zh-CN' ? 'https://ng-alain.com' : 'https://netlify.ng-alain.com') + item.doc;
+  return (CONFIG.language === 'zh-CN' ? 'https://ng-alain.com' : 'https://ng-alain-doc.surge.sh') + item.doc;
 }
 
 function genComponentMarkdown(item: Directive): string {
@@ -53,7 +53,7 @@ function genComponentMarkdown(item: Directive): string {
     rows.push(`[${i18n('document')}](${getFullDoc(item)})${item.github ? ` － [${i18n('github')}](${item.github})` : ''}`);
   }
 
-  return rows.filter(w => !!w).join('\n\n');
+  return rows.filter((w) => !!w).join('\n\n');
 }
 
 function genPropertyMarkdown(property: DirectiveProperty): string {
@@ -127,14 +127,14 @@ export async function INIT(notifier: Notifier) {
 
   const data = (CONFIG.language === 'en-US' ? en_US : zh_CN) as Directive[];
   if (CONFIG.isAntd) {
-    RESOURCES.push(...data.filter(i => i.lib === 'ng-zorro-antd'));
+    RESOURCES.push(...data.filter((i) => i.lib === 'ng-zorro-antd'));
   }
 
   if (CONFIG.isAlain) {
-    RESOURCES.push(...data.filter(i => i.lib !== 'ng-zorro-antd'));
+    RESOURCES.push(...data.filter((i) => i.lib !== 'ng-zorro-antd'));
   }
 
-  RESOURCES.forEach(i => {
+  RESOURCES.forEach((i) => {
     i.description = notNull(i.description);
     i.whenToUse = notNull(i.whenToUse);
     i.doc = notNull(i.doc);
@@ -147,13 +147,13 @@ export async function INIT(notifier: Notifier) {
     i.snippet = i.snippet.replace(/__/g, i.selector);
 
     i.properties = notNull(i.properties, []);
-    i.properties.forEach(p => fixProperty(p));
+    i.properties.forEach((p) => fixProperty(p));
     if (i.types) {
-      Object.keys(i.types).forEach(key => {
-        i.types[key].forEach(p => fixProperty(p));
+      Object.keys(i.types).forEach((key) => {
+        i.types[key].forEach((p) => fixProperty(p));
       });
     }
-    if (~i.properties.findIndex(w => w.name === i.selector)) {
+    if (~i.properties.findIndex((w) => w.name === i.selector)) {
       i.directiveNameIsOutput = true;
     }
 
@@ -174,20 +174,20 @@ export function getDirective(tag: Tag): Directive[] {
   }
 
   Object.keys(tag.attributes)
-    .filter(key => DIRECTIVE_NAMES.indexOf(tag.attributes[key].name) !== -1)
-    .forEach(key => {
+    .filter((key) => DIRECTIVE_NAMES.indexOf(tag.attributes[key].name) !== -1)
+    .forEach((key) => {
       const keyValue = tag.attributes[key].name;
       if (dict[keyValue]) return;
       dict[keyValue] = first(keyValue);
     });
 
-  return Object.values(dict).filter(w => !!w);
+  return Object.values(dict).filter((w) => !!w);
 }
 
 export function query(type: DirectiveType) {
-  return [...RESOURCES].filter(i => i.type === type);
+  return [...RESOURCES].filter((i) => i.type === type);
 }
 
 export function first(selector: string) {
-  return RESOURCES.find(w => w.selector === selector);
+  return RESOURCES.find((w) => w.selector === selector);
 }

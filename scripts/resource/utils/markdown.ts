@@ -19,10 +19,10 @@ export function makeObject(lang: string, filePaths: string[]): Directive[] {
   const zone = lang.split('-').shift();
   filePaths
     // 优先处理包含公共属性的组件文件
-    .map(p => ({ p, s: COG.COMMON_PROPERTIE_PATH_PART.find(k => p.includes(k)) ? 9999 : 10 }))
+    .map((p) => ({ p, s: COG.COMMON_PROPERTIE_PATH_PART.find((k) => p.includes(k)) ? 9999 : 10 }))
     .sort((a, b) => b.s - a.s)
-    .map(i => i.p)
-    .forEach(p => {
+    .map((i) => i.p)
+    .forEach((p) => {
       const content = fs.readFileSync(p).toString();
       const meta = yamlFront.loadFront(content);
       meta.md = md.parse(meta.__content, {});
@@ -31,8 +31,8 @@ export function makeObject(lang: string, filePaths: string[]): Directive[] {
     });
 
   // Merge extra comoponents
-  const extraComponents = FIX.extraComponents.map(ei => {
-    const orgComponent = processRes.find(w => w.selector === ei.from);
+  const extraComponents = FIX.extraComponents.map((ei) => {
+    const orgComponent = processRes.find((w) => w.selector === ei.from);
     return { ...orgComponent, type: 'component', selector: ei.to, types: {}, properties: [], ...ei.data } as any;
   });
 
@@ -46,13 +46,13 @@ export function makeObject(lang: string, filePaths: string[]): Directive[] {
 function verify(filePaths: string[]) {
   // 获取所有组件KEY，以目录名为准，非完整组件名，但可以区分
   const notExistsList = filePaths
-    .map(p => {
+    .map((p) => {
       if (~p.indexOf('ng-zorro-antd')) {
         const key = p
           .split('ng-zorro-antd')[1]
           .split(path.sep)
-          .filter(w => !!w)[1];
-        if (processRes.some(w => w.selector.indexOf(key) !== -1)) {
+          .filter((w) => !!w)[1];
+        if (processRes.some((w) => w.selector.indexOf(key) !== -1)) {
           return null;
         }
         return key;
@@ -60,7 +60,7 @@ function verify(filePaths: string[]) {
       }
       return null;
     })
-    .filter(w => w != null)
+    .filter((w) => w != null)
     .join(',');
   console.error(`${Lang}-不存在以下组件：`, notExistsList);
 }
@@ -126,8 +126,8 @@ function getDirective(): Directive[] {
 
   const list: Directive[] = ast
     .findTags('h3', start + 1, end)
-    .map(idx => {
-      const selectorList = (ast.getText(idx) || '').split('|').map(s => s.trim());
+    .map((idx) => {
+      const selectorList = (ast.getText(idx) || '').split('|').map((s) => s.trim());
       let selector = selectorList[0];
       if (selectorList.length === 1 && !/^\[?[a-z][-a-zA-Z0-9]+\]?$/g.test(selector) && !COG.VALID_COMPONENT_NAMES.includes(selector)) {
         return null;
@@ -150,7 +150,7 @@ function getDirective(): Directive[] {
       // fix muliter selector
       if (selectorList.length > 1) {
         const directives: Directive[] = [];
-        selectorList.forEach(sel => {
+        selectorList.forEach((sel) => {
           const copyItem = copy(item) as Directive;
           copyItem.selector = sel;
           checkType(copyItem);
@@ -166,14 +166,14 @@ function getDirective(): Directive[] {
         let commonProperties: DirectiveProperty[];
         // component
         if (mergeCog.component) {
-          const targetComponent = processRes.find(w => w.selector === mergeCog.component);
+          const targetComponent = processRes.find((w) => w.selector === mergeCog.component);
           if (targetComponent != null) {
             commonProperties = targetComponent.properties;
           }
         } else {
           const commonHeading = mergeCog[ast.zone];
           const commonIdx = ast.offsetAt(commonHeading);
-          commonProperties = getProperties(item, ast.getTable(commonIdx, false)).map(i => {
+          commonProperties = getProperties(item, ast.getTable(commonIdx, false)).map((i) => {
             i._common = true;
             return i;
           });
@@ -194,14 +194,19 @@ function getDirective(): Directive[] {
     })
     .reduce((p: any, c: any) => (p = p.concat(...(Array.isArray(c) ? c : [c]))), []);
 
-  return list.filter(i => !!i && !COG.INGORE_COMPONENTS.includes(i.selector));
+  return list.filter((i) => !!i && !COG.INGORE_COMPONENTS.includes(i.selector));
 }
 
 function getProperties(directive: Directive, data: string[][]): DirectiveProperty[] {
   return data
-    .filter(tds => tds.length >= 4)
-    .map(tds => genPropertyItem(directive, tds.map(v => v || '')))
-    .filter(w => !!w);
+    .filter((tds) => tds.length >= 4)
+    .map((tds) =>
+      genPropertyItem(
+        directive,
+        tds.map((v) => v || ''),
+      ),
+    )
+    .filter((w) => !!w);
 }
 
 function genPropertyItem(directive: Directive, data: string[]): DirectiveProperty {
@@ -216,7 +221,7 @@ function genPropertyItem(directive: Directive, data: string[]): DirectivePropert
     inputType: InputAttrType.Input,
     description: data[1].trim(),
     type: 'string',
-    typeRaw: data[2].trim(),
+    typeRaw: data[2].trim().replace(/\\/g, ''),
     default: data[3].trim(),
   };
 
@@ -261,7 +266,7 @@ function genPropertyItem(directive: Directive, data: string[]): DirectivePropert
 }
 
 function getValidSeparator(text: string): string {
-  return ['\\|', '｜', '丨', '|'].find(s => text.indexOf(s) !== -1) || ',';
+  return ['\\|', '｜', '丨', '|'].find((s) => text.indexOf(s) !== -1) || ',';
 }
 
 function parseType(directive: Directive, item: DirectiveProperty) {
@@ -273,9 +278,9 @@ function parseType(directive: Directive, item: DirectiveProperty) {
   // split mulit type
   const types = typeRaw
     .split(getValidSeparator(typeRaw))
-    .filter(v => !!v)
-    .map(v => v.trim())
-    .map(v => trimSemicolon(v));
+    .filter((v) => !!v)
+    .map((v) => v.trim())
+    .map((v) => trimSemicolon(v));
 
   // get first type
   const firstType = types.length > 0 ? types[0].split(' ').shift() : '';
@@ -339,7 +344,7 @@ function parseType(directive: Directive, item: DirectiveProperty) {
     // )
   ) {
     item.type = 'Enum';
-    item.typeDefinition = types.filter(value => !!value);
+    item.typeDefinition = types.filter((value) => !!value);
     // .filter(value => value !== 'null')
   }
 
@@ -402,8 +407,8 @@ function metaToItem(zone: string, filePath: string, meta: any): Directive[] {
   const whenToUse = ast.getParagraph(zone === 'en' ? 'When To Use' : '何时使用');
   let list: Directive[] = [];
   getDirective()
-    .filter(w => !!w)
-    .forEach(i => {
+    .filter((w) => !!w)
+    .forEach((i) => {
       list.push(copy(i));
       if (i.type === 'component' && COG.COMPONET_AND_DIRECTIVE.includes(i.selector)) {
         const directive = copy(i) as Directive;
@@ -411,7 +416,7 @@ function metaToItem(zone: string, filePath: string, meta: any): Directive[] {
         list.push(directive);
       }
     });
-  return list.map(i => {
+  return list.map((i) => {
     i.lib = lib;
     i.title = title;
     if (typeof i.description === 'undefined') {
@@ -433,7 +438,7 @@ function metaToItem(zone: string, filePath: string, meta: any): Directive[] {
     if (FIX.extraProperty[i.selector]) {
       i.properties.push(...FIX.extraProperty[i.selector]);
     }
-    i.properties.forEach(p => {
+    i.properties.forEach((p) => {
       // override type definition
       if (FIX.typeDefinition[i.selector]) {
         p.typeDefinition = FIX.typeDefinition[i.selector][p.name] || p.typeDefinition;
