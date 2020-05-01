@@ -750,6 +750,15 @@
         "typeRaw": "`object`",
         "default": "",
         "forceInputType": 0
+      },
+      {
+        "name": "compareWith",
+        "inputType": 0,
+        "description": "Same as [SelectControlValueAccessor](https://angular.io/api/forms/SelectControlValueAccessor#caveat-option-selection)",
+        "type": "function",
+        "typeRaw": "`(o1: any, o2: any) => boolean`",
+        "default": "`(o1: any, o2: any) => o1===o2`",
+        "pureDefault": "(o1: any, o2: any) => o1===o2"
       }
     ],
     "lib": "ng-zorro-antd",
@@ -760,7 +769,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/auto-complete"
   },
   {
-    "_idx": 159,
+    "_idx": 173,
     "type": "component",
     "selector": "nz-auto-option",
     "types": {},
@@ -2230,7 +2239,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/comment"
   },
   {
-    "_idx": 242,
+    "_idx": 298,
     "type": "component",
     "selector": "nz-date-picker",
     "types": {},
@@ -2259,9 +2268,10 @@
         "name": "nzDateRender",
         "inputType": 0,
         "description": "custom rendering function for date cells (Not support by month-picker/year-picker)",
-        "type": "TemplateRef",
-        "typeRaw": "`TemplateRef<Date> | string | ((d: Date) => TemplateRef<Date> | string)`",
-        "default": "",
+        "type": "string",
+        "typeRaw": "-",
+        "default": "`TemplateRef<Date> \\| string \\| ((d: Date) => TemplateRef<Date> \\| string)`",
+        "pureDefault": "TemplateRef<Date> \\| string \\| ((d: Date) => TemplateRef<Date> \\| string)",
         "_common": true
       },
       {
@@ -2341,6 +2351,15 @@
         "description": "default picker date",
         "type": "object",
         "typeRaw": "`Date` | `Date[]`",
+        "default": "",
+        "_common": true
+      },
+      {
+        "name": "nzSuffixIcon",
+        "inputType": 0,
+        "description": "the custom suffix icon",
+        "type": "string",
+        "typeRaw": "`string` | `TemplateRef`",
         "default": "",
         "_common": true
       },
@@ -2443,7 +2462,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/date-picker"
   },
   {
-    "_idx": 391,
+    "_idx": 447,
     "type": "component",
     "selector": "nz-year-picker",
     "types": {},
@@ -2472,9 +2491,10 @@
         "name": "nzDateRender",
         "inputType": 0,
         "description": "custom rendering function for date cells (Not support by month-picker/year-picker)",
-        "type": "TemplateRef",
-        "typeRaw": "`TemplateRef<Date> | string | ((d: Date) => TemplateRef<Date> | string)`",
-        "default": "",
+        "type": "string",
+        "typeRaw": "-",
+        "default": "`TemplateRef<Date> \\| string \\| ((d: Date) => TemplateRef<Date> \\| string)`",
+        "pureDefault": "TemplateRef<Date> \\| string \\| ((d: Date) => TemplateRef<Date> \\| string)",
         "_common": true
       },
       {
@@ -2554,6 +2574,15 @@
         "description": "default picker date",
         "type": "object",
         "typeRaw": "`Date` | `Date[]`",
+        "default": "",
+        "_common": true
+      },
+      {
+        "name": "nzSuffixIcon",
+        "inputType": 0,
+        "description": "the custom suffix icon",
+        "type": "string",
+        "typeRaw": "`string` | `TemplateRef`",
         "default": "",
         "_common": true
       },
@@ -2616,7 +2645,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/date-picker"
   },
   {
-    "_idx": 484,
+    "_idx": 540,
     "type": "component",
     "selector": "nz-month-picker",
     "types": {},
@@ -2645,9 +2674,10 @@
         "name": "nzDateRender",
         "inputType": 0,
         "description": "custom rendering function for date cells (Not support by month-picker/year-picker)",
-        "type": "TemplateRef",
-        "typeRaw": "`TemplateRef<Date> | string | ((d: Date) => TemplateRef<Date> | string)`",
-        "default": "",
+        "type": "string",
+        "typeRaw": "-",
+        "default": "`TemplateRef<Date> \\| string \\| ((d: Date) => TemplateRef<Date> \\| string)`",
+        "pureDefault": "TemplateRef<Date> \\| string \\| ((d: Date) => TemplateRef<Date> \\| string)",
         "_common": true
       },
       {
@@ -2727,6 +2757,15 @@
         "description": "default picker date",
         "type": "object",
         "typeRaw": "`Date` | `Date[]`",
+        "default": "",
+        "_common": true
+      },
+      {
+        "name": "nzSuffixIcon",
+        "inputType": 0,
+        "description": "the custom suffix icon",
+        "type": "string",
+        "typeRaw": "`string` | `TemplateRef`",
         "default": "",
         "_common": true
       },
@@ -2795,7 +2834,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/date-picker"
   },
   {
-    "_idx": 577,
+    "_idx": 633,
     "type": "component",
     "selector": "nz-week-picker",
     "types": {},
@@ -2824,9 +2863,10 @@
         "name": "nzDateRender",
         "inputType": 0,
         "description": "custom rendering function for date cells (Not support by month-picker/year-picker)",
-        "type": "TemplateRef",
-        "typeRaw": "`TemplateRef<Date> | string | ((d: Date) => TemplateRef<Date> | string)`",
-        "default": "",
+        "type": "string",
+        "typeRaw": "-",
+        "default": "`TemplateRef<Date> \\| string \\| ((d: Date) => TemplateRef<Date> \\| string)`",
+        "pureDefault": "TemplateRef<Date> \\| string \\| ((d: Date) => TemplateRef<Date> \\| string)",
         "_common": true
       },
       {
@@ -2906,6 +2946,15 @@
         "description": "default picker date",
         "type": "object",
         "typeRaw": "`Date` | `Date[]`",
+        "default": "",
+        "_common": true
+      },
+      {
+        "name": "nzSuffixIcon",
+        "inputType": 0,
+        "description": "the custom suffix icon",
+        "type": "string",
+        "typeRaw": "`string` | `TemplateRef`",
         "default": "",
         "_common": true
       },
@@ -2966,7 +3015,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/date-picker"
   },
   {
-    "_idx": 656,
+    "_idx": 712,
     "type": "component",
     "selector": "nz-range-picker",
     "types": {},
@@ -2995,9 +3044,10 @@
         "name": "nzDateRender",
         "inputType": 0,
         "description": "custom rendering function for date cells (Not support by month-picker/year-picker)",
-        "type": "TemplateRef",
-        "typeRaw": "`TemplateRef<Date> | string | ((d: Date) => TemplateRef<Date> | string)`",
-        "default": "",
+        "type": "string",
+        "typeRaw": "-",
+        "default": "`TemplateRef<Date> \\| string \\| ((d: Date) => TemplateRef<Date> \\| string)`",
+        "pureDefault": "TemplateRef<Date> \\| string \\| ((d: Date) => TemplateRef<Date> \\| string)",
         "_common": true
       },
       {
@@ -3077,6 +3127,15 @@
         "description": "default picker date",
         "type": "object",
         "typeRaw": "`Date` | `Date[]`",
+        "default": "",
+        "_common": true
+      },
+      {
+        "name": "nzSuffixIcon",
+        "inputType": 0,
+        "description": "the custom suffix icon",
+        "type": "string",
+        "typeRaw": "`string` | `TemplateRef`",
         "default": "",
         "_common": true
       },
@@ -6856,6 +6915,15 @@
         "pureDefault": "false"
       },
       {
+        "name": "nzBorderless",
+        "inputType": 0,
+        "description": "whether has borderless style",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
         "name": "nzOpen",
         "inputType": 2,
         "description": "dropdown expand state, double binding",
@@ -7010,7 +7078,7 @@
         "inputType": 0,
         "description": "The custom suffix icon",
         "type": "TemplateRef",
-        "typeRaw": "`TemplateRef<void>`",
+        "typeRaw": "`TemplateRef<any> | string`",
         "default": ""
       },
       {
@@ -7018,7 +7086,7 @@
         "inputType": 0,
         "description": "The custom remove icon",
         "type": "TemplateRef",
-        "typeRaw": "`TemplateRef<void>`",
+        "typeRaw": "`TemplateRef<any>`",
         "default": ""
       },
       {
@@ -7026,7 +7094,7 @@
         "inputType": 0,
         "description": "The custom clear icon",
         "type": "TemplateRef",
-        "typeRaw": "`TemplateRef<void>`",
+        "typeRaw": "`TemplateRef<any>`",
         "default": ""
       },
       {
@@ -7034,7 +7102,7 @@
         "inputType": 0,
         "description": "The custom menuItemSelected icon",
         "type": "TemplateRef",
-        "typeRaw": "`TemplateRef<void>`",
+        "typeRaw": "`TemplateRef<any>`",
         "default": ""
       },
       {
@@ -7065,12 +7133,38 @@
         "default": ""
       },
       {
+        "name": "nzOptions",
+        "inputType": 0,
+        "description": "use nzOptions or `nz-option` to pass options to the select",
+        "type": "Array",
+        "typeRaw": "`Array<{ label: string | TemplateRef<any>; value: any; disabled?: boolean; hide?: boolean; groupLabel?: string | TemplateRef<any>;}>`",
+        "default": ""
+      },
+      {
         "name": "nzMaxTagPlaceholder",
         "inputType": 0,
         "description": "Placeholder for not showing tags",
         "type": "TemplateRef",
         "typeRaw": "`TemplateRef<{ $implicit: any[] }>`",
         "default": ""
+      },
+      {
+        "name": "nzOptionHeightPx",
+        "inputType": 0,
+        "description": "Each option height inside the dropdown",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`32`",
+        "pureDefault": "32"
+      },
+      {
+        "name": "nzOptionOverflowSize",
+        "inputType": 0,
+        "description": "Max option size inside the dropdown, overflow when exceed the size",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`8`",
+        "pureDefault": "8"
       },
       {
         "name": "ngModelChange",
@@ -7094,7 +7188,7 @@
         "inputType": 1,
         "description": "Called when dropdown scrolls to bottom",
         "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<void>`",
+        "typeRaw": "`EventEmitter<any>`",
         "default": ""
       },
       {
@@ -7110,7 +7204,7 @@
         "inputType": 1,
         "description": "focus callback",
         "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<void>`",
+        "typeRaw": "`EventEmitter<any>`",
         "default": ""
       },
       {
@@ -7118,7 +7212,7 @@
         "inputType": 1,
         "description": "blur callback",
         "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<void>`",
+        "typeRaw": "`EventEmitter<any>`",
         "default": ""
       },
       {
@@ -7136,7 +7230,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/select"
   },
   {
-    "_idx": 522,
+    "_idx": 695,
     "type": "component",
     "selector": "nz-option",
     "types": {},
@@ -7194,7 +7288,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/select"
   },
   {
-    "_idx": 615,
+    "_idx": 788,
     "type": "component",
     "selector": "nz-option-group",
     "types": {},
@@ -9134,6 +9228,14 @@
         "pureDefault": "false"
       },
       {
+        "name": "nzSuffixIcon",
+        "inputType": 0,
+        "description": "the custom suffix icon",
+        "type": "string",
+        "typeRaw": "`string` | `TemplateRef`",
+        "default": ""
+      },
+      {
         "name": "ngModelChange",
         "inputType": 1,
         "description": "a callback function, can be executed when the selected time is changing",
@@ -9748,9 +9850,9 @@
         "default": ""
       }
     ],
+    "description": "Tips: According to the current data structure design, you need to ensure that `nzData` is set first, otherwise other attributes will not take effect. After the asynchronous operation returns data, re-assign other attributes to trigger rendering(including `nzExpandAll` `nzExpandedKeys` `nzCheckedKeys` `nzSelectedKeys` `nzSearchValue`). Please refer to [#5152](https://github.com/NG-ZORRO/ng-zorro-antd/issues/5152) to track the optimization progress.",
     "lib": "ng-zorro-antd",
     "title": "Tree",
-    "description": "When To Use",
     "whenToUse": "Almost anything can be represented in a tree structure. Examples include directories, organization hierarchies, biological classifications, countries, etc. The `Tree` component is a way of representing the hierarchical relationship between these things. You can also  expand, collapse, and select a treeNode within a `Tree`.",
     "doc": "/components/tree/en",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tree"
@@ -10497,7 +10599,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/count-down"
   },
   {
-    "_idx": 12,
+    "_idx": 6,
     "type": "component",
     "selector": "range-picker",
     "types": {
@@ -11000,7 +11102,7 @@
     ],
     "lib": "@delon/abc",
     "title": "Full Screen Workspace",
-    "description": "Often used for tables with scroll bars, a simple [demo](https://ng-alain.github.io/ng-alain/#/delon/simple-table)。",
+    "description": "Often used for tables with scroll bars, a simple [demo](https://ng-alain.surge.sh/#/delon/simple-table)。",
     "whenToUse": "",
     "doc": "/components/full-content/en",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/full-content"
@@ -11027,7 +11129,7 @@
         {
           "name": "title",
           "inputType": 0,
-          "description": "标题",
+          "description": "Title",
           "type": "string",
           "typeRaw": "`string`",
           "default": ""
@@ -11035,7 +11137,7 @@
         {
           "name": "href",
           "inputType": 0,
-          "description": "路由链接",
+          "description": "Routing link",
           "type": "string",
           "typeRaw": "`string`",
           "default": ""
@@ -11043,7 +11145,7 @@
         {
           "name": "blankTarget",
           "inputType": 0,
-          "description": "是否打开新窗口",
+          "description": "Whether to open a new window",
           "type": "boolean",
           "typeRaw": "`boolean`",
           "default": "`false`",
@@ -11055,7 +11157,7 @@
       {
         "name": "links",
         "inputType": 0,
-        "description": "链接数据",
+        "description": "Link data",
         "type": "object",
         "typeRaw": "`GlobalFooterLink`",
         "default": "",
@@ -11064,15 +11166,15 @@
       {
         "name": "copyright",
         "inputType": 0,
-        "description": "版权信息",
+        "description": "Copyright Information",
         "type": "TemplateRef",
         "typeRaw": "`TemplateRef`",
         "default": ""
       }
     ],
     "lib": "@delon/abc",
-    "title": "全局页脚",
-    "description": "页脚属于全局导航的一部分，作为对顶部导航的补充，通过传递数据控制展示内容。",
+    "title": "Global footer",
+    "description": "The footer is part of the global navigation as a supplement to the top navigation.",
     "whenToUse": "",
     "doc": "/components/global-footer/en",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/global-footer"
@@ -11086,7 +11188,7 @@
       {
         "name": "href",
         "inputType": 0,
-        "description": "路由链接",
+        "description": "Routing link",
         "type": "string",
         "typeRaw": "`string`",
         "default": ""
@@ -11094,7 +11196,7 @@
       {
         "name": "blankTarget",
         "inputType": 0,
-        "description": "是否打开新窗口",
+        "description": "Whether to open a new window",
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
@@ -11102,11 +11204,66 @@
       }
     ],
     "lib": "@delon/abc",
-    "title": "全局页脚",
-    "description": "页脚属于全局导航的一部分，作为对顶部导航的补充，通过传递数据控制展示内容。",
+    "title": "Global footer",
+    "description": "The footer is part of the global navigation as a supplement to the top navigation.",
     "whenToUse": "",
     "doc": "/components/global-footer/en",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/global-footer"
+  },
+  {
+    "_idx": 12,
+    "type": "component",
+    "selector": "media",
+    "types": {},
+    "properties": [
+      {
+        "name": "type",
+        "inputType": 0,
+        "description": "Media type",
+        "type": "string",
+        "typeRaw": "`audio, video`",
+        "default": "`video`",
+        "pureDefault": "video"
+      },
+      {
+        "name": "source",
+        "inputType": 0,
+        "description": "Source of the media",
+        "type": "string",
+        "typeRaw": "`string, PlyrMediaSource`",
+        "default": ""
+      },
+      {
+        "name": "options",
+        "inputType": 0,
+        "description": "Source options of the media, please refer to [plyr options](https://github.com/sampotts/plyr#options)",
+        "type": "object",
+        "typeRaw": "`any`",
+        "default": ""
+      },
+      {
+        "name": "delay",
+        "inputType": 0,
+        "description": "Delay init plyr player, unit: ms",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": ""
+      },
+      {
+        "name": "ready",
+        "inputType": 1,
+        "description": "Ready callback",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<Plyr>`",
+        "default": ""
+      }
+    ],
+    "lib": "@delon/abc",
+    "title": "HTML5 Media",
+    "description": "HTML5 player based on [plyr](https://github.com/sampotts/plyr).",
+    "whenToUse": "",
+    "doc": "/components/media/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/media"
   },
   {
     "_idx": 6,
@@ -11390,8 +11547,8 @@
         "description": "Background alpha of the QR code",
         "type": "number",
         "typeRaw": "`number`",
-        "default": "`1.0`",
-        "pureDefault": "1.0"
+        "default": "`1`",
+        "pureDefault": "1"
       },
       {
         "name": "foreground",
@@ -11408,8 +11565,8 @@
         "description": "Foreground alpha of the QR code",
         "type": "number",
         "typeRaw": "`number`",
-        "default": "`1.0`",
-        "pureDefault": "1.0"
+        "default": "`1`",
+        "pureDefault": "1"
       },
       {
         "name": "level",
@@ -11472,7 +11629,7 @@
       {
         "name": "icon",
         "inputType": 0,
-        "description": "图标",
+        "description": "Icon for the quick menu",
         "type": "string",
         "typeRaw": "`string,TemplateRef<void>`",
         "default": "`question-circle`",
@@ -11481,7 +11638,7 @@
       {
         "name": "top",
         "inputType": 0,
-        "description": "距离顶部",
+        "description": "Icon from top",
         "type": "number",
         "typeRaw": "`number`",
         "default": "`120`",
@@ -11490,7 +11647,7 @@
       {
         "name": "width",
         "inputType": 0,
-        "description": "打开后宽度",
+        "description": "Width after opening",
         "type": "number",
         "typeRaw": "`number`",
         "default": "`200`",
@@ -11499,7 +11656,7 @@
       {
         "name": "bgColor",
         "inputType": 0,
-        "description": "背景",
+        "description": "Background for the quick menu",
         "type": "string",
         "typeRaw": "`string`",
         "default": "`#fff`",
@@ -11508,7 +11665,7 @@
       {
         "name": "borderColor",
         "inputType": 0,
-        "description": "边框颜色",
+        "description": "Border for the quick menu",
         "type": "string",
         "typeRaw": "`string`",
         "default": "`#ddd`",
@@ -11516,8 +11673,8 @@
       }
     ],
     "lib": "@delon/abc",
-    "title": "快速菜单",
-    "description": "快速菜单，用于右侧隐式辅助列表。",
+    "title": "Quick Menu",
+    "description": "Quick menu for the implicit auxiliary list on the right.",
     "whenToUse": "",
     "doc": "/components/quick-menu/en",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/quick-menu"
@@ -11531,7 +11688,7 @@
       {
         "name": "type",
         "inputType": 0,
-        "description": "类型，不同类型自带对应的图标",
+        "description": "Types, different types come with corresponding icons",
         "type": "string",
         "typeRaw": "`string`",
         "default": ""
@@ -11539,7 +11696,7 @@
       {
         "name": "title",
         "inputType": 0,
-        "description": "标题",
+        "description": "Title for the result",
         "type": "string",
         "typeRaw": "`string,TemplateRef<void>`",
         "default": ""
@@ -11547,7 +11704,7 @@
       {
         "name": "description",
         "inputType": 0,
-        "description": "结果描述",
+        "description": "Description for the result",
         "type": "string",
         "typeRaw": "`string,TemplateRef<void>`",
         "default": ""
@@ -11555,21 +11712,21 @@
       {
         "name": "extra",
         "inputType": 0,
-        "description": "补充信息，有默认的灰色背景",
+        "description": "Supplemental information, with default gray background",
         "type": "string",
         "typeRaw": "`string,TemplateRef<void>`",
         "default": ""
       }
     ],
     "lib": "@delon/abc",
-    "title": "处理结果",
-    "description": "结果页用于对用户进行的一系列任务处理结果进行反馈。",
+    "title": "Result",
+    "description": "Used to feedback the processing results of a series of tasks performed by the user.",
     "whenToUse": "",
     "doc": "/components/result/en",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/result"
   },
   {
-    "_idx": 487,
+    "_idx": 492,
     "type": "component",
     "selector": "reuse-tab",
     "types": {
@@ -11675,15 +11832,6 @@
         "name": "allowClose",
         "inputType": 0,
         "description": "Whether to allow close tab",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`true`",
-        "pureDefault": "true"
-      },
-      {
-        "name": "showCurrent",
-        "inputType": 0,
-        "description": "Always show current page",
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`true`",
@@ -12019,7 +12167,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/se"
   },
   {
-    "_idx": 179,
+    "_idx": 209,
     "type": "component",
     "selector": "se",
     "types": {},
@@ -12129,7 +12277,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/se"
   },
   {
-    "_idx": 356,
+    "_idx": 386,
     "type": "component",
     "selector": "se-title",
     "types": {},
@@ -12142,7 +12290,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/se"
   },
   {
-    "_idx": 356,
+    "_idx": 386,
     "type": "directive",
     "selector": "se-title",
     "types": {},
@@ -12202,7 +12350,7 @@
         "description": "specify the maximum number of columns to display, the final columns number is determined by col setting combined with [Responsive Rules](/theme/responsive)",
         "type": "Enum",
         "typeRaw": "`'1','2','3','4','5','6'`",
-        "default": "",
+        "default": "`2`",
         "typeDefinition": [
           "1",
           "2",
@@ -12210,7 +12358,8 @@
           "4",
           "5",
           "6"
-        ]
+        ],
+        "pureDefault": "2"
       }
     ],
     "lib": "@delon/abc",
@@ -12268,7 +12417,7 @@
         "description": "specify the maximum number of columns to display, the final columns number is determined by col setting combined with [Responsive Rules](/theme/responsive)",
         "type": "Enum",
         "typeRaw": "`'1','2','3','4','5','6'`",
-        "default": "",
+        "default": "`2`",
         "typeDefinition": [
           "1",
           "2",
@@ -12276,7 +12425,8 @@
           "4",
           "5",
           "6"
-        ]
+        ],
+        "pureDefault": "2"
       }
     ],
     "lib": "@delon/abc",
@@ -12287,7 +12437,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sg"
   },
   {
-    "_idx": 76,
+    "_idx": 88,
     "type": "component",
     "selector": "sg",
     "types": {},
@@ -12854,6 +13004,14 @@
         "pureDefault": "100"
       },
       {
+        "name": "virtualForTrackBy",
+        "inputType": 0,
+        "description": "The TrackByFunction to use for tracking changes.",
+        "type": "object",
+        "typeRaw": "`TrackByFunction<T>`",
+        "default": ""
+      },
+      {
         "name": "singleSort",
         "inputType": 0,
         "description": "Single sort config<br>If not specified, return: `columnName=ascend|descend`<br>If specified, return: `sort=columnName.(ascend|descend)`",
@@ -13054,8 +13212,7 @@
         "description": "label text of width",
         "type": "number",
         "typeRaw": "`number`",
-        "default": "`null`",
-        "pureDefault": "null"
+        "default": ""
       },
       {
         "name": "default",
@@ -13146,8 +13303,7 @@
         "description": "label text of width",
         "type": "number",
         "typeRaw": "`number`",
-        "default": "`null`",
-        "pureDefault": "null"
+        "default": ""
       },
       {
         "name": "default",
@@ -13175,7 +13331,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sv"
   },
   {
-    "_idx": 127,
+    "_idx": 151,
     "type": "component",
     "selector": "sv",
     "types": {},
@@ -13251,7 +13407,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sv"
   },
   {
-    "_idx": 248,
+    "_idx": 272,
     "type": "component",
     "selector": "sv-title",
     "types": {},
@@ -13264,7 +13420,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sv"
   },
   {
-    "_idx": 248,
+    "_idx": 272,
     "type": "directive",
     "selector": "sv-title",
     "types": {},
@@ -13395,6 +13551,14 @@
         "typeRaw": "`InteractionType`",
         "default": "`none`",
         "pureDefault": "none"
+      },
+      {
+        "name": "theme",
+        "inputType": 0,
+        "description": "定制图表主题",
+        "type": "string",
+        "typeRaw": "`string | LooseObject`",
+        "default": ""
       }
     ],
     "lib": "@delon/chart",
@@ -13482,6 +13646,15 @@
     "types": {},
     "properties": [
       {
+        "name": "delay",
+        "inputType": 0,
+        "description": "Delayed rendering, unit: ms",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`0`",
+        "pureDefault": "0"
+      },
+      {
         "name": "height",
         "inputType": 0,
         "description": "Height of chart container",
@@ -13520,6 +13693,14 @@
         "description": "Destroy event",
         "type": "EventEmitter",
         "typeRaw": "`EventEmitter<ElementRef>`",
+        "default": ""
+      },
+      {
+        "name": "theme",
+        "inputType": 0,
+        "description": "Custom chart theme",
+        "type": "string",
+        "typeRaw": "`string | LooseObject`",
         "default": ""
       }
     ],
@@ -13602,6 +13783,14 @@
         "description": "坐标轴格式",
         "type": "function",
         "typeRaw": "`(text: string, item: {}, index: number) => string`",
+        "default": ""
+      },
+      {
+        "name": "theme",
+        "inputType": 0,
+        "description": "定制图表主题",
+        "type": "string",
+        "typeRaw": "`string | LooseObject`",
         "default": ""
       }
     ],
@@ -13725,6 +13914,14 @@
         "type": "Array",
         "typeRaw": "`G2MiniAreaData[]`",
         "default": ""
+      },
+      {
+        "name": "theme",
+        "inputType": 0,
+        "description": "定制图表主题",
+        "type": "string",
+        "typeRaw": "`string | LooseObject`",
+        "default": ""
       }
     ],
     "lib": "@delon/chart",
@@ -13811,6 +14008,14 @@
         "description": "数据",
         "type": "Array",
         "typeRaw": "`G2MiniBarData[]`",
+        "default": ""
+      },
+      {
+        "name": "theme",
+        "inputType": 0,
+        "description": "定制图表主题",
+        "type": "string",
+        "typeRaw": "`string | LooseObject`",
         "default": ""
       }
     ],
@@ -14041,6 +14246,15 @@
         "pureDefault": "0.75"
       },
       {
+        "name": "blockMaxWidth",
+        "inputType": 0,
+        "description": "多少宽度为块显示",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`380`",
+        "pureDefault": "380"
+      },
+      {
         "name": "tooltip",
         "inputType": 0,
         "description": "是否显示 tooltip",
@@ -14089,6 +14303,14 @@
         "typeRaw": "`InteractionType`",
         "default": "`none`",
         "pureDefault": "none"
+      },
+      {
+        "name": "theme",
+        "inputType": 0,
+        "description": "定制图表主题",
+        "type": "string",
+        "typeRaw": "`string | LooseObject`",
+        "default": ""
       }
     ],
     "lib": "@delon/chart",
@@ -14161,6 +14383,14 @@
         "description": "数据",
         "type": "Array",
         "typeRaw": "`G2RadarData[]`",
+        "default": ""
+      },
+      {
+        "name": "theme",
+        "inputType": 0,
+        "description": "定制图表主题",
+        "type": "string",
+        "typeRaw": "`string | LooseObject`",
         "default": ""
       }
     ],
@@ -14274,6 +14504,14 @@
         "typeRaw": "`any`",
         "default": "`{ fontSize: 12, color: '#595959' }`",
         "pureDefault": "{ fontSize: 12, color: '#595959' }"
+      },
+      {
+        "name": "theme",
+        "inputType": 0,
+        "description": "定制图表主题",
+        "type": "string",
+        "typeRaw": "`string | LooseObject`",
+        "default": ""
       }
     ],
     "lib": "@delon/chart",
@@ -14295,8 +14533,8 @@
         "description": "延迟渲染，单位：毫秒",
         "type": "number",
         "typeRaw": "`number`",
-        "default": "`0`",
-        "pureDefault": "0"
+        "default": "`200`",
+        "pureDefault": "200"
       },
       {
         "name": "height",
@@ -14304,8 +14542,17 @@
         "description": "高度值",
         "type": "number",
         "typeRaw": "`number`",
-        "default": "`100`",
-        "pureDefault": "100"
+        "default": "`200`",
+        "pureDefault": "200"
+      },
+      {
+        "name": "width",
+        "inputType": 0,
+        "description": "宽度值，若不指定自动按宿主元素的宽度",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`0`",
+        "pureDefault": "0"
       },
       {
         "name": "data",
@@ -14315,6 +14562,14 @@
         "typeRaw": "`G2TagCloudData[]`",
         "default": "`[]`",
         "pureDefault": "[]"
+      },
+      {
+        "name": "theme",
+        "inputType": 0,
+        "description": "定制图表主题",
+        "type": "string",
+        "typeRaw": "`string | LooseObject`",
+        "default": ""
       }
     ],
     "lib": "@delon/chart",
@@ -14328,7 +14583,50 @@
     "_idx": 6,
     "type": "component",
     "selector": "g2-timeline",
-    "types": {},
+    "types": {
+      "G2TimelineMap": [
+        {
+          "name": "y1",
+          "inputType": 0,
+          "description": "指标1",
+          "type": "string",
+          "typeRaw": "`string`",
+          "default": ""
+        },
+        {
+          "name": "y2",
+          "inputType": 0,
+          "description": "指标2",
+          "type": "string",
+          "typeRaw": "`string`",
+          "default": ""
+        },
+        {
+          "name": "y3",
+          "inputType": 0,
+          "description": "指标3",
+          "type": "string",
+          "typeRaw": "`string`",
+          "default": ""
+        },
+        {
+          "name": "y4",
+          "inputType": 0,
+          "description": "指标4",
+          "type": "string",
+          "typeRaw": "`string`",
+          "default": ""
+        },
+        {
+          "name": "y5",
+          "inputType": 0,
+          "description": "指标5",
+          "type": "string",
+          "typeRaw": "`string`",
+          "default": ""
+        }
+      ]
+    },
     "properties": [
       {
         "name": "delay",
@@ -14348,6 +14646,15 @@
         "default": ""
       },
       {
+        "name": "maxAxis",
+        "inputType": 0,
+        "description": "最大指标数量",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`2`",
+        "pureDefault": "2"
+      },
+      {
         "name": "data",
         "inputType": 0,
         "description": "数据",
@@ -14360,17 +14667,19 @@
         "inputType": 0,
         "description": "指标别名",
         "type": "object",
-        "typeRaw": "`{ y1: string , y2: string }`",
-        "default": ""
+        "typeRaw": "`G2TimelineMap`",
+        "default": "",
+        "complexType": "G2TimelineMap"
       },
       {
         "name": "colorMap",
         "inputType": 0,
         "description": "颜色",
         "type": "object",
-        "typeRaw": "`{ y1: string , y2: string }`",
-        "default": "`{ y1: '#1890FF', y2: '#2FC25B' }`",
-        "pureDefault": "{ y1: '#1890FF', y2: '#2FC25B' }"
+        "typeRaw": "`G2TimelineMap`",
+        "default": "`{ y1: '#5B8FF9', y2: '#5AD8A6', y3: '#5D7092', y4: '#F6BD16', y5: '#E86452' }`",
+        "complexType": "G2TimelineMap",
+        "pureDefault": "{ y1: '#5B8FF9', y2: '#5AD8A6', y3: '#5D7092', y4: '#F6BD16', y5: '#E86452' }"
       },
       {
         "name": "height",
@@ -14387,8 +14696,8 @@
         "description": "图表内部间距",
         "type": "Array",
         "typeRaw": "`number[]`",
-        "default": "`[60, 20, 40, 40]`",
-        "pureDefault": "[60, 20, 40, 40]"
+        "default": "`[40, 8, 64, 40]`",
+        "pureDefault": "[40, 8, 64, 40]"
       },
       {
         "name": "borderWidth",
@@ -14431,6 +14740,14 @@
         "typeRaw": "`boolean`",
         "default": "`true`",
         "pureDefault": "true"
+      },
+      {
+        "name": "theme",
+        "inputType": 0,
+        "description": "定制图表主题",
+        "type": "string",
+        "typeRaw": "`string | LooseObject`",
+        "default": ""
       }
     ],
     "lib": "@delon/chart",
@@ -14542,7 +14859,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/water-wave"
   },
   {
-    "_idx": 333,
+    "_idx": 335,
     "type": "component",
     "selector": "sf",
     "types": {
@@ -14751,7 +15068,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/form/src"
   },
   {
-    "_idx": 333,
+    "_idx": 335,
     "type": "directive",
     "selector": "sf",
     "types": {

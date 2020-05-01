@@ -744,6 +744,15 @@
         "typeRaw": "`object`",
         "default": "",
         "forceInputType": 0
+      },
+      {
+        "name": "compareWith",
+        "inputType": 0,
+        "description": "与 [SelectControlValueAccessor](https://angular.io/api/forms/SelectControlValueAccessor#caveat-option-selection) 相同",
+        "type": "function",
+        "typeRaw": "`(o1: any, o2: any) => boolean`",
+        "default": "`(o1: any, o2: any) => o1===o2`",
+        "pureDefault": "(o1: any, o2: any) => o1===o2"
       }
     ],
     "lib": "ng-zorro-antd",
@@ -754,7 +763,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/auto-complete"
   },
   {
-    "_idx": 159,
+    "_idx": 173,
     "type": "component",
     "selector": "nz-auto-option",
     "types": {},
@@ -2224,7 +2233,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/comment"
   },
   {
-    "_idx": 239,
+    "_idx": 295,
     "type": "component",
     "selector": "nz-date-picker",
     "types": {},
@@ -2339,6 +2348,15 @@
         "_common": true
       },
       {
+        "name": "nzSuffixIcon",
+        "inputType": 0,
+        "description": "自定义的后缀图标",
+        "type": "string",
+        "typeRaw": "`string` | `TemplateRef`",
+        "default": "",
+        "_common": true
+      },
+      {
         "name": "nzOnOpenChange",
         "inputType": 1,
         "description": "弹出日历和关闭日历的回调",
@@ -2437,7 +2455,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/date-picker"
   },
   {
-    "_idx": 388,
+    "_idx": 444,
     "type": "component",
     "selector": "nz-year-picker",
     "types": {},
@@ -2552,6 +2570,15 @@
         "_common": true
       },
       {
+        "name": "nzSuffixIcon",
+        "inputType": 0,
+        "description": "自定义的后缀图标",
+        "type": "string",
+        "typeRaw": "`string` | `TemplateRef`",
+        "default": "",
+        "_common": true
+      },
+      {
         "name": "nzOnOpenChange",
         "inputType": 1,
         "description": "弹出日历和关闭日历的回调",
@@ -2610,7 +2637,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/date-picker"
   },
   {
-    "_idx": 481,
+    "_idx": 537,
     "type": "component",
     "selector": "nz-month-picker",
     "types": {},
@@ -2725,6 +2752,15 @@
         "_common": true
       },
       {
+        "name": "nzSuffixIcon",
+        "inputType": 0,
+        "description": "自定义的后缀图标",
+        "type": "string",
+        "typeRaw": "`string` | `TemplateRef`",
+        "default": "",
+        "_common": true
+      },
+      {
         "name": "nzOnOpenChange",
         "inputType": 1,
         "description": "弹出日历和关闭日历的回调",
@@ -2789,7 +2825,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/date-picker"
   },
   {
-    "_idx": 574,
+    "_idx": 630,
     "type": "component",
     "selector": "nz-week-picker",
     "types": {},
@@ -2904,6 +2940,15 @@
         "_common": true
       },
       {
+        "name": "nzSuffixIcon",
+        "inputType": 0,
+        "description": "自定义的后缀图标",
+        "type": "string",
+        "typeRaw": "`string` | `TemplateRef`",
+        "default": "",
+        "_common": true
+      },
+      {
         "name": "nzOnOpenChange",
         "inputType": 1,
         "description": "弹出日历和关闭日历的回调",
@@ -2960,7 +3005,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/date-picker"
   },
   {
-    "_idx": 653,
+    "_idx": 709,
     "type": "component",
     "selector": "nz-range-picker",
     "types": {},
@@ -3071,6 +3116,15 @@
         "description": "默认面板日期",
         "type": "object",
         "typeRaw": "`Date` | `Date[]`",
+        "default": "",
+        "_common": true
+      },
+      {
+        "name": "nzSuffixIcon",
+        "inputType": 0,
+        "description": "自定义的后缀图标",
+        "type": "string",
+        "typeRaw": "`string` | `TemplateRef`",
         "default": "",
         "_common": true
       },
@@ -6864,6 +6918,15 @@
         "pureDefault": "false"
       },
       {
+        "name": "nzBorderless",
+        "inputType": 0,
+        "description": "是否无边框",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
         "name": "nzOpen",
         "inputType": 2,
         "description": "下拉菜单是否打开，可双向绑定",
@@ -7017,7 +7080,7 @@
         "inputType": 0,
         "description": "自定义的选择框后缀图标",
         "type": "TemplateRef",
-        "typeRaw": "`TemplateRef<void>`",
+        "typeRaw": "`TemplateRef<any> | string`",
         "default": ""
       },
       {
@@ -7025,7 +7088,7 @@
         "inputType": 0,
         "description": "自定义的多选框清除图标",
         "type": "TemplateRef",
-        "typeRaw": "`TemplateRef<void>`",
+        "typeRaw": "`TemplateRef<any>`",
         "default": ""
       },
       {
@@ -7033,7 +7096,7 @@
         "inputType": 0,
         "description": "自定义的多选框清空图标",
         "type": "TemplateRef",
-        "typeRaw": "`TemplateRef<void>`",
+        "typeRaw": "`TemplateRef<any>`",
         "default": ""
       },
       {
@@ -7041,7 +7104,7 @@
         "inputType": 0,
         "description": "自定义当前选中的条目图标",
         "type": "TemplateRef",
-        "typeRaw": "`TemplateRef<void>`",
+        "typeRaw": "`TemplateRef<any>`",
         "default": ""
       },
       {
@@ -7080,6 +7143,32 @@
         "default": ""
       },
       {
+        "name": "nzOptions",
+        "inputType": 0,
+        "description": "option 列表，可以取代 nz-option，用法参见例子",
+        "type": "Array",
+        "typeRaw": "`Array<{ label: string | TemplateRef<any>; value: any; disabled?: boolean; hide?: boolean; groupLabel?: string | TemplateRef<any>;}>`",
+        "default": ""
+      },
+      {
+        "name": "nzOptionHeightPx",
+        "inputType": 0,
+        "description": "下拉菜单中每个 Option 的高度",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`32`",
+        "pureDefault": "32"
+      },
+      {
+        "name": "nzOptionOverflowSize",
+        "inputType": 0,
+        "description": "下拉菜单中最多展示的 Option 个数，超出部分滚动",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`8`",
+        "pureDefault": "8"
+      },
+      {
         "name": "ngModelChange",
         "inputType": 1,
         "description": "选中的 nz-option 发生变化时，调用此函数",
@@ -7100,7 +7189,7 @@
         "inputType": 1,
         "description": "下拉列表滚动到底部的回调",
         "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<void>`",
+        "typeRaw": "`EventEmitter<any>`",
         "default": ""
       },
       {
@@ -7116,7 +7205,7 @@
         "inputType": 1,
         "description": "focus时回调",
         "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<void>`",
+        "typeRaw": "`EventEmitter<any>`",
         "default": ""
       },
       {
@@ -7124,7 +7213,7 @@
         "inputType": 1,
         "description": "blur时回调",
         "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<void>`",
+        "typeRaw": "`EventEmitter<any>`",
         "default": ""
       },
       {
@@ -7142,7 +7231,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/select"
   },
   {
-    "_idx": 522,
+    "_idx": 695,
     "type": "component",
     "selector": "nz-option",
     "types": {},
@@ -7200,7 +7289,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/select"
   },
   {
-    "_idx": 615,
+    "_idx": 788,
     "type": "component",
     "selector": "nz-option-group",
     "types": {},
@@ -9206,6 +9295,14 @@
         "pureDefault": "false"
       },
       {
+        "name": "nzSuffixIcon",
+        "inputType": 0,
+        "description": "自定义的后缀图标",
+        "type": "string",
+        "typeRaw": "`string` | `TemplateRef`",
+        "default": ""
+      },
+      {
         "name": "ngModelChange",
         "inputType": 1,
         "description": "时间发生变化的回调",
@@ -9820,9 +9917,9 @@
         "default": ""
       }
     ],
+    "description": "说明: 根据目前的数据结构设计，需要保证优先设置 `nzData`，否则各属性不会生效。异步操作待数据返回后，重新赋值其他各属性触发渲染(`nzExpandAll` `nzExpandedKeys` `nzCheckedKeys` `nzSelectedKeys` `nzSearchValue`)。重构优化工作请追踪 [#5152](https://github.com/NG-ZORRO/ng-zorro-antd/issues/5152)。",
     "lib": "ng-zorro-antd",
     "title": "树形控件",
-    "description": "何时使用",
     "whenToUse": "文件夹、组织架构、生物分类、国家地区等等，世间万物的大多数结构都是树形结构。使用`树控件`可以完整展现其中的层级关系，并具有展开收起选择等交互功能。",
     "doc": "/components/tree/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tree"
@@ -10569,7 +10666,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/count-down"
   },
   {
-    "_idx": 12,
+    "_idx": 6,
     "type": "component",
     "selector": "range-picker",
     "types": {
@@ -10625,7 +10722,7 @@
         "inputType": 0,
         "description": "设置快捷键",
         "type": "boolean",
-        "typeRaw": "`boolean | DateRangePickerShortcut`",
+        "typeRaw": "`boolean, DateRangePickerShortcut`",
         "default": "`false`",
         "complexType": "DateRangePickerShortcut",
         "pureDefault": "false"
@@ -10662,7 +10759,7 @@
         "inputType": 0,
         "description": "自定义日期单元格的内容（month-picker/year-picker不支持）",
         "type": "TemplateRef",
-        "typeRaw": "`TemplateRef<Date>｜string｜((d: Date) => TemplateRef<Date>｜string)`",
+        "typeRaw": "`TemplateRef<Date>|string|((d: Date) => TemplateRef<Date>｜string)`",
         "default": ""
       },
       {
@@ -11064,7 +11161,7 @@
     ],
     "lib": "@delon/abc",
     "title": "全屏工作区",
-    "description": "全屏工作区，常用于带有滚动条表格，一个在线[示例](https://ng-alain.github.io/ng-alain/#/delon/simple-table)。",
+    "description": "全屏工作区，常用于带有滚动条表格，一个在线[示例](https://ng-alain.surge.sh/#/delon/simple-table)。",
     "whenToUse": "",
     "doc": "/components/full-content/zh",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/full-content"
@@ -11171,6 +11268,61 @@
     "whenToUse": "",
     "doc": "/components/global-footer/zh",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/global-footer"
+  },
+  {
+    "_idx": 12,
+    "type": "component",
+    "selector": "media",
+    "types": {},
+    "properties": [
+      {
+        "name": "type",
+        "inputType": 0,
+        "description": "媒体类型",
+        "type": "string",
+        "typeRaw": "`audio, video`",
+        "default": "`video`",
+        "pureDefault": "video"
+      },
+      {
+        "name": "source",
+        "inputType": 0,
+        "description": "媒体数据源",
+        "type": "string",
+        "typeRaw": "`string, PlyrMediaSource`",
+        "default": ""
+      },
+      {
+        "name": "options",
+        "inputType": 0,
+        "description": "播放器参数 [plyr options](https://github.com/sampotts/plyr#options)",
+        "type": "object",
+        "typeRaw": "`any`",
+        "default": ""
+      },
+      {
+        "name": "delay",
+        "inputType": 0,
+        "description": "延迟初始化，单位：毫秒",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": ""
+      },
+      {
+        "name": "ready",
+        "inputType": 1,
+        "description": "准备就绪回调",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<Plyr>`",
+        "default": ""
+      }
+    ],
+    "lib": "@delon/abc",
+    "title": "HTML5媒体",
+    "description": "基于 [plyr](https://github.com/sampotts/plyr) HTML5播放器。",
+    "whenToUse": "",
+    "doc": "/components/media/zh",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/media"
   },
   {
     "_idx": 6,
@@ -11454,8 +11606,8 @@
         "description": "背景透明级别，范围：`0-1` 之间",
         "type": "number",
         "typeRaw": "`number`",
-        "default": "`1.0`",
-        "pureDefault": "1.0"
+        "default": "`1`",
+        "pureDefault": "1"
       },
       {
         "name": "foreground",
@@ -11472,8 +11624,8 @@
         "description": "前景透明级别，范围：`0-1` 之间",
         "type": "number",
         "typeRaw": "`number`",
-        "default": "`1.0`",
-        "pureDefault": "1.0"
+        "default": "`1`",
+        "pureDefault": "1"
       },
       {
         "name": "level",
@@ -11633,7 +11785,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/result"
   },
   {
-    "_idx": 489,
+    "_idx": 494,
     "type": "component",
     "selector": "reuse-tab",
     "types": {
@@ -11739,15 +11891,6 @@
         "name": "allowClose",
         "inputType": 0,
         "description": "允许关闭",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`true`",
-        "pureDefault": "true"
-      },
-      {
-        "name": "showCurrent",
-        "inputType": 0,
-        "description": "总是显示当前页",
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`true`",
@@ -12083,7 +12226,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/se"
   },
   {
-    "_idx": 179,
+    "_idx": 209,
     "type": "component",
     "selector": "se",
     "types": {},
@@ -12193,7 +12336,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/se"
   },
   {
-    "_idx": 356,
+    "_idx": 386,
     "type": "component",
     "selector": "se-title",
     "types": {},
@@ -12206,7 +12349,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/se"
   },
   {
-    "_idx": 356,
+    "_idx": 386,
     "type": "directive",
     "selector": "se-title",
     "types": {},
@@ -12266,7 +12409,7 @@
         "description": "指定表单元素最多分几列展示，最终一行几列由 col 配置结合[响应式规则](/theme/responsive)决定，",
         "type": "Enum",
         "typeRaw": "`'1','2','3','4','5','6'`",
-        "default": "",
+        "default": "`2`",
         "typeDefinition": [
           "1",
           "2",
@@ -12274,7 +12417,8 @@
           "4",
           "5",
           "6"
-        ]
+        ],
+        "pureDefault": "2"
       }
     ],
     "lib": "@delon/abc",
@@ -12332,7 +12476,7 @@
         "description": "指定表单元素最多分几列展示，最终一行几列由 col 配置结合[响应式规则](/theme/responsive)决定，",
         "type": "Enum",
         "typeRaw": "`'1','2','3','4','5','6'`",
-        "default": "",
+        "default": "`2`",
         "typeDefinition": [
           "1",
           "2",
@@ -12340,7 +12484,8 @@
           "4",
           "5",
           "6"
-        ]
+        ],
+        "pureDefault": "2"
       }
     ],
     "lib": "@delon/abc",
@@ -12351,7 +12496,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sg"
   },
   {
-    "_idx": 76,
+    "_idx": 88,
     "type": "component",
     "selector": "sg",
     "types": {},
@@ -12898,6 +13043,14 @@
         "pureDefault": "100"
       },
       {
+        "name": "virtualForTrackBy",
+        "inputType": 0,
+        "description": "虚拟滚动数据 `TrackByFunction` 函数",
+        "type": "object",
+        "typeRaw": "`TrackByFunction<T>`",
+        "default": ""
+      },
+      {
         "name": "singleSort",
         "inputType": 0,
         "description": "单排序规则<br>若不指定，则返回：`columnName=ascend|descend`<br>若指定，则返回：`sort=columnName.(ascend|descend)`",
@@ -13097,8 +13250,7 @@
         "description": "默认标签文本宽度",
         "type": "number",
         "typeRaw": "`number`",
-        "default": "`null`",
-        "pureDefault": "null"
+        "default": ""
       },
       {
         "name": "default",
@@ -13189,8 +13341,7 @@
         "description": "默认标签文本宽度",
         "type": "number",
         "typeRaw": "`number`",
-        "default": "`null`",
-        "pureDefault": "null"
+        "default": ""
       },
       {
         "name": "default",
@@ -13218,7 +13369,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sv"
   },
   {
-    "_idx": 127,
+    "_idx": 151,
     "type": "component",
     "selector": "sv",
     "types": {},
@@ -13302,7 +13453,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sv"
   },
   {
-    "_idx": 248,
+    "_idx": 272,
     "type": "component",
     "selector": "sv-title",
     "types": {},
@@ -13315,7 +13466,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sv"
   },
   {
-    "_idx": 248,
+    "_idx": 272,
     "type": "directive",
     "selector": "sv-title",
     "types": {},
@@ -13446,6 +13597,14 @@
         "typeRaw": "`InteractionType`",
         "default": "`none`",
         "pureDefault": "none"
+      },
+      {
+        "name": "theme",
+        "inputType": 0,
+        "description": "定制图表主题",
+        "type": "string",
+        "typeRaw": "`string | LooseObject`",
+        "default": ""
       }
     ],
     "lib": "@delon/chart",
@@ -13533,6 +13692,15 @@
     "types": {},
     "properties": [
       {
+        "name": "delay",
+        "inputType": 0,
+        "description": "延迟渲染，单位：毫秒",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`0`",
+        "pureDefault": "0"
+      },
+      {
         "name": "height",
         "inputType": 0,
         "description": "高",
@@ -13571,6 +13739,14 @@
         "description": "销毁事件",
         "type": "EventEmitter",
         "typeRaw": "`EventEmitter<ElementRef>`",
+        "default": ""
+      },
+      {
+        "name": "theme",
+        "inputType": 0,
+        "description": "定制图表主题",
+        "type": "string",
+        "typeRaw": "`string | LooseObject`",
         "default": ""
       }
     ],
@@ -13653,6 +13829,14 @@
         "description": "坐标轴格式",
         "type": "function",
         "typeRaw": "`(text: string, item: {}, index: number) => string`",
+        "default": ""
+      },
+      {
+        "name": "theme",
+        "inputType": 0,
+        "description": "定制图表主题",
+        "type": "string",
+        "typeRaw": "`string | LooseObject`",
         "default": ""
       }
     ],
@@ -13776,6 +13960,14 @@
         "type": "Array",
         "typeRaw": "`G2MiniAreaData[]`",
         "default": ""
+      },
+      {
+        "name": "theme",
+        "inputType": 0,
+        "description": "定制图表主题",
+        "type": "string",
+        "typeRaw": "`string | LooseObject`",
+        "default": ""
       }
     ],
     "lib": "@delon/chart",
@@ -13862,6 +14054,14 @@
         "description": "数据",
         "type": "Array",
         "typeRaw": "`G2MiniBarData[]`",
+        "default": ""
+      },
+      {
+        "name": "theme",
+        "inputType": 0,
+        "description": "定制图表主题",
+        "type": "string",
+        "typeRaw": "`string | LooseObject`",
         "default": ""
       }
     ],
@@ -14092,6 +14292,15 @@
         "pureDefault": "0.75"
       },
       {
+        "name": "blockMaxWidth",
+        "inputType": 0,
+        "description": "多少宽度为块显示",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`380`",
+        "pureDefault": "380"
+      },
+      {
         "name": "tooltip",
         "inputType": 0,
         "description": "是否显示 tooltip",
@@ -14140,6 +14349,14 @@
         "typeRaw": "`InteractionType`",
         "default": "`none`",
         "pureDefault": "none"
+      },
+      {
+        "name": "theme",
+        "inputType": 0,
+        "description": "定制图表主题",
+        "type": "string",
+        "typeRaw": "`string | LooseObject`",
+        "default": ""
       }
     ],
     "lib": "@delon/chart",
@@ -14212,6 +14429,14 @@
         "description": "数据",
         "type": "Array",
         "typeRaw": "`G2RadarData[]`",
+        "default": ""
+      },
+      {
+        "name": "theme",
+        "inputType": 0,
+        "description": "定制图表主题",
+        "type": "string",
+        "typeRaw": "`string | LooseObject`",
         "default": ""
       }
     ],
@@ -14325,6 +14550,14 @@
         "typeRaw": "`any`",
         "default": "`{ fontSize: 12, color: '#595959' }`",
         "pureDefault": "{ fontSize: 12, color: '#595959' }"
+      },
+      {
+        "name": "theme",
+        "inputType": 0,
+        "description": "定制图表主题",
+        "type": "string",
+        "typeRaw": "`string | LooseObject`",
+        "default": ""
       }
     ],
     "lib": "@delon/chart",
@@ -14346,8 +14579,8 @@
         "description": "延迟渲染，单位：毫秒",
         "type": "number",
         "typeRaw": "`number`",
-        "default": "`0`",
-        "pureDefault": "0"
+        "default": "`200`",
+        "pureDefault": "200"
       },
       {
         "name": "height",
@@ -14355,8 +14588,17 @@
         "description": "高度值",
         "type": "number",
         "typeRaw": "`number`",
-        "default": "`100`",
-        "pureDefault": "100"
+        "default": "`200`",
+        "pureDefault": "200"
+      },
+      {
+        "name": "width",
+        "inputType": 0,
+        "description": "宽度值，若不指定自动按宿主元素的宽度",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`0`",
+        "pureDefault": "0"
       },
       {
         "name": "data",
@@ -14366,6 +14608,14 @@
         "typeRaw": "`G2TagCloudData[]`",
         "default": "`[]`",
         "pureDefault": "[]"
+      },
+      {
+        "name": "theme",
+        "inputType": 0,
+        "description": "定制图表主题",
+        "type": "string",
+        "typeRaw": "`string | LooseObject`",
+        "default": ""
       }
     ],
     "lib": "@delon/chart",
@@ -14379,7 +14629,50 @@
     "_idx": 6,
     "type": "component",
     "selector": "g2-timeline",
-    "types": {},
+    "types": {
+      "G2TimelineMap": [
+        {
+          "name": "y1",
+          "inputType": 0,
+          "description": "指标1",
+          "type": "string",
+          "typeRaw": "`string`",
+          "default": ""
+        },
+        {
+          "name": "y2",
+          "inputType": 0,
+          "description": "指标2",
+          "type": "string",
+          "typeRaw": "`string`",
+          "default": ""
+        },
+        {
+          "name": "y3",
+          "inputType": 0,
+          "description": "指标3",
+          "type": "string",
+          "typeRaw": "`string`",
+          "default": ""
+        },
+        {
+          "name": "y4",
+          "inputType": 0,
+          "description": "指标4",
+          "type": "string",
+          "typeRaw": "`string`",
+          "default": ""
+        },
+        {
+          "name": "y5",
+          "inputType": 0,
+          "description": "指标5",
+          "type": "string",
+          "typeRaw": "`string`",
+          "default": ""
+        }
+      ]
+    },
     "properties": [
       {
         "name": "delay",
@@ -14399,6 +14692,15 @@
         "default": ""
       },
       {
+        "name": "maxAxis",
+        "inputType": 0,
+        "description": "最大指标数量",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`2`",
+        "pureDefault": "2"
+      },
+      {
         "name": "data",
         "inputType": 0,
         "description": "数据",
@@ -14411,17 +14713,19 @@
         "inputType": 0,
         "description": "指标别名",
         "type": "object",
-        "typeRaw": "`{ y1: string , y2: string }`",
-        "default": ""
+        "typeRaw": "`G2TimelineMap`",
+        "default": "",
+        "complexType": "G2TimelineMap"
       },
       {
         "name": "colorMap",
         "inputType": 0,
         "description": "颜色",
         "type": "object",
-        "typeRaw": "`{ y1: string , y2: string }`",
-        "default": "`{ y1: '#1890FF', y2: '#2FC25B' }`",
-        "pureDefault": "{ y1: '#1890FF', y2: '#2FC25B' }"
+        "typeRaw": "`G2TimelineMap`",
+        "default": "`{ y1: '#5B8FF9', y2: '#5AD8A6', y3: '#5D7092', y4: '#F6BD16', y5: '#E86452' }`",
+        "complexType": "G2TimelineMap",
+        "pureDefault": "{ y1: '#5B8FF9', y2: '#5AD8A6', y3: '#5D7092', y4: '#F6BD16', y5: '#E86452' }"
       },
       {
         "name": "height",
@@ -14438,8 +14742,8 @@
         "description": "图表内部间距",
         "type": "Array",
         "typeRaw": "`number[]`",
-        "default": "`[60, 20, 40, 40]`",
-        "pureDefault": "[60, 20, 40, 40]"
+        "default": "`[40, 8, 64, 40]`",
+        "pureDefault": "[40, 8, 64, 40]"
       },
       {
         "name": "borderWidth",
@@ -14482,6 +14786,14 @@
         "typeRaw": "`boolean`",
         "default": "`true`",
         "pureDefault": "true"
+      },
+      {
+        "name": "theme",
+        "inputType": 0,
+        "description": "定制图表主题",
+        "type": "string",
+        "typeRaw": "`string | LooseObject`",
+        "default": ""
       }
     ],
     "lib": "@delon/chart",
@@ -14593,7 +14905,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/water-wave"
   },
   {
-    "_idx": 336,
+    "_idx": 335,
     "type": "component",
     "selector": "sf",
     "types": {
@@ -14816,7 +15128,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/form/src"
   },
   {
-    "_idx": 336,
+    "_idx": 335,
     "type": "directive",
     "selector": "sf",
     "types": {
