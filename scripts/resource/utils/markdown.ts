@@ -1,12 +1,14 @@
 import * as path from 'path';
 import * as fs from 'fs';
 import * as MarkdownIt from 'markdown-it';
+import * as colors from 'ansi-colors';
 const yamlFront = require('yaml-front-matter');
 
 import { Directive, DirectiveProperty, InputAttrType } from '../../../src/magic/interfaces';
 import { FIX } from '../_fix';
 import { COG } from '../config';
 import { AST, AST_KEYS } from './ast';
+import { MERGE_DATA } from '../_merge';
 
 const md = new MarkdownIt();
 let processRes: Directive[] = [];
@@ -36,33 +38,14 @@ export function makeObject(lang: string, filePaths: string[]): Directive[] {
     return { ...orgComponent, type: 'component', selector: ei.to, types: {}, properties: [], ...ei.data } as any;
   });
 
-  processRes = processRes.concat(...extraComponents);
+  processRes = processRes.concat(...extraComponents, ...genMerge(lang));
+
+  // 修正idx
+  processRes.forEach((i, idx) => (i._idx = idx + 1));
 
   verify(filePaths);
 
   return processRes;
-}
-
-function verify(filePaths: string[]) {
-  // 获取所有组件KEY，以目录名为准，非完整组件名，但可以区分
-  const notExistsList = filePaths
-    .map((p) => {
-      if (~p.indexOf('ng-zorro-antd')) {
-        const key = p
-          .split('ng-zorro-antd')[1]
-          .split(path.sep)
-          .filter((w) => !!w)[1];
-        if (processRes.some((w) => w.selector.indexOf(key) !== -1)) {
-          return null;
-        }
-        return key;
-      } else {
-      }
-      return null;
-    })
-    .filter((w) => w != null)
-    .join(',');
-  console.error(`${Lang}-不存在以下组件：`, notExistsList);
 }
 
 function getLibary(filePath: string) {
@@ -160,6 +143,11 @@ function getDirective(): Directive[] {
       } else {
         checkType(item);
       }
+      // 处理需要替换组件名
+      const replaceSelector = COG.COMPONENT_REPLACE.find((w) => w.name === item.selector);
+      if (replaceSelector) {
+        item.selector = replaceSelector.replace;
+      }
       // merge properties
       const mergeCog = COG.COMMON_PROPERTIES[item.selector];
       if (mergeCog) {
@@ -211,13 +199,20 @@ function getProperties(directive: Directive, data: string[][]): DirectivePropert
 
 function genPropertyItem(directive: Directive, data: string[]): DirectiveProperty {
   if (COG.INGORE_PROPERTIES.includes(data[0])) return null;
-  const nameMatch = data[0].trim().match(/((?:\[|\(|\[\()[\-a-zA-Z0-9]+(?:\)\]|\]|\)))/g);
-  if (nameMatch == null || nameMatch.length === 0) return null;
+  let name = '';
+  const orgName = data[0].trim();
+  const standardNameMatch = orgName.match(/((?:\[|\(|\[\()[\-a-zA-Z0-9]+(?:\)\]|\]|\)))/g);
+  if (standardNameMatch != null && standardNameMatch.length > 0) {
+    name = standardNameMatch[0];
+  }
+  if (name.length <= 0 && /nz[A-Za-z]+/g.test(orgName)) {
+    name = orgName;
+  }
   // ingore includes `Deprecated` in description
-  if (data[1].trim().includes('Deprecated')) return null;
+  if (name.length <= 0 || data[1].trim().includes('Deprecated')) return null;
 
   const item: DirectiveProperty = {
-    name: nameMatch[0],
+    name,
     inputType: InputAttrType.Input,
     description: data[1].trim(),
     type: 'string',
@@ -459,5 +454,40 @@ function metaToItem(zone: string, filePath: string, meta: any): Directive[] {
     });
 
     return i;
+  });
+}
+
+function verify(filePaths: string[]) {
+  // 获取所有组件KEY，以目录名为准，非完整组件名，但可以区分
+  const notExistsList = filePaths
+    .map((p) => {
+      if (~p.indexOf('ng-zorro-antd')) {
+        const key = p
+          .split('ng-zorro-antd')[1]
+          .split(path.sep)
+          .filter((w) => !!w)[1];
+        if (processRes.some((w) => w.selector.indexOf(key) !== -1)) {
+          return null;
+        }
+        return key;
+      } else {
+      }
+      return null;
+    })
+    .filter((w) => w != null)
+    .filter((w) => !COG.INGORE_COMPONENTS.includes(w))
+    .join(',');
+  console.error(colors.yellow(`${Lang}-不存在以下组件：`), notExistsList);
+}
+
+function genMerge(lang: string): Directive[] {
+  return Object.keys(MERGE_DATA).map((key) => {
+    const item = MERGE_DATA[key];
+    return {
+      selector: key,
+      description: item.desc[lang],
+      type: item.type || 'component',
+      lib: item.lib || 'ng-zorro-antd',
+    } as Directive;
   });
 }

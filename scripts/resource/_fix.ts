@@ -112,15 +112,35 @@ export const FIX = {
       nzXXl: BASE_GUTTER,
     },
     'nz-icon': {
-      type: {
+      nzType: {
         type: 'complex',
         conditionField: 'theme',
         list: [
-          { conditionValue: 'outline', values: manifest.outline.map(item => ({ value: item, label: item })) },
-          { conditionValue: 'fill', values: manifest.fill.map(item => ({ value: item, label: item })) },
-          { conditionValue: 'twotone', values: manifest.twotone.map(item => ({ value: item, label: item })) },
+          { conditionValue: 'outline', values: manifest.outline.map((item) => ({ value: item, label: item })) },
+          { conditionValue: 'fill', values: manifest.fill.map((item) => ({ value: item, label: item })) },
+          { conditionValue: 'twotone', values: manifest.twotone.map((item) => ({ value: item, label: item })) },
         ],
       },
+    },
+    'nz-tag': {
+      nzColor: [
+        'success',
+        'processing',
+        'error',
+        'default',
+        'warning',
+        'magenta',
+        'red',
+        'volcano',
+        'orange',
+        'gold',
+        'lime',
+        'green',
+        'cyan',
+        'blue',
+        'geekblue',
+        'purple',
+      ],
     },
     'se-container': {
       gutter: BASE_GUTTER,
@@ -144,7 +164,7 @@ export const FIX = {
 };
 
 // 为所有数据输入增加 `formControlName` 属性
-DATA_ENTRY.forEach(selector => {
+DATA_ENTRY.forEach((selector) => {
   if (!FIX.extraProperty[selector]) {
     FIX.extraProperty[selector] = [];
   }

@@ -1,6 +1,6 @@
 [
   {
-    "_idx": 53,
+    "_idx": 1,
     "type": "directive",
     "selector": "nz-row",
     "types": {},
@@ -61,7 +61,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/grid"
   },
   {
-    "_idx": 118,
+    "_idx": 2,
     "type": "directive",
     "selector": "nz-col",
     "types": {},
@@ -292,7 +292,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/grid"
   },
   {
-    "_idx": 16,
+    "_idx": 3,
     "type": "directive",
     "selector": "nz-tooltip",
     "types": {},
@@ -419,7 +419,7 @@
     "snippet": "<span __$1>$2</span>"
   },
   {
-    "_idx": 16,
+    "_idx": 4,
     "type": "component",
     "selector": "nz-affix",
     "types": {},
@@ -467,7 +467,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/affix"
   },
   {
-    "_idx": 22,
+    "_idx": 5,
     "type": "component",
     "selector": "nz-alert",
     "types": {},
@@ -562,7 +562,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/alert"
   },
   {
-    "_idx": 13,
+    "_idx": 6,
     "type": "component",
     "selector": "nz-anchor",
     "types": {},
@@ -636,7 +636,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/anchor"
   },
   {
-    "_idx": 158,
+    "_idx": 7,
     "type": "component",
     "selector": "nz-link",
     "types": {},
@@ -666,7 +666,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/anchor"
   },
   {
-    "_idx": 15,
+    "_idx": 8,
     "type": "directive",
     "selector": "nzAutocomplete",
     "types": {},
@@ -688,7 +688,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/auto-complete"
   },
   {
-    "_idx": 52,
+    "_idx": 9,
     "type": "component",
     "selector": "nz-autocomplete",
     "types": {},
@@ -763,7 +763,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/auto-complete"
   },
   {
-    "_idx": 173,
+    "_idx": 10,
     "type": "component",
     "selector": "nz-auto-option",
     "types": {},
@@ -803,7 +803,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/auto-complete"
   },
   {
-    "_idx": 7,
+    "_idx": 11,
     "type": "component",
     "selector": "nz-avatar",
     "types": {},
@@ -893,7 +893,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/avatar"
   },
   {
-    "_idx": 22,
+    "_idx": 12,
     "type": "component",
     "selector": "nz-back-top",
     "types": {},
@@ -941,7 +941,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/back-top"
   },
   {
-    "_idx": 15,
+    "_idx": 13,
     "type": "component",
     "selector": "nz-badge",
     "types": {},
@@ -1047,7 +1047,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/badge"
   },
   {
-    "_idx": 27,
+    "_idx": 14,
     "type": "component",
     "selector": "nz-breadcrumb",
     "types": {},
@@ -1088,7 +1088,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/breadcrumb"
   },
   {
-    "_idx": 63,
+    "_idx": 15,
     "type": "directive",
     "selector": "nz-button",
     "types": {},
@@ -1192,7 +1192,7 @@
     "snippet": "<button __$1>${2|保存,提交,取消,新建,删除,搜索|}</button>"
   },
   {
-    "_idx": 219,
+    "_idx": 16,
     "type": "component",
     "selector": "nz-button-group",
     "types": {},
@@ -1220,7 +1220,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/button"
   },
   {
-    "_idx": 21,
+    "_idx": 17,
     "type": "component",
     "selector": "nz-calendar",
     "types": {},
@@ -1314,7 +1314,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/calendar"
   },
   {
-    "_idx": 14,
+    "_idx": 18,
     "type": "component",
     "selector": "nz-card",
     "types": {},
@@ -1420,7 +1420,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/card"
   },
   {
-    "_idx": 210,
+    "_idx": 19,
     "type": "component",
     "selector": "nz-card-meta",
     "types": {},
@@ -1458,7 +1458,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/card"
   },
   {
-    "_idx": 275,
+    "_idx": 20,
     "type": "directive",
     "selector": "nz-card-grid",
     "types": {},
@@ -1481,7 +1481,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/card"
   },
   {
-    "_idx": 321,
+    "_idx": 21,
     "type": "component",
     "selector": "nz-card-tab",
     "types": {},
@@ -1494,7 +1494,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/card"
   },
   {
-    "_idx": 27,
+    "_idx": 22,
     "type": "component",
     "selector": "nz-carousel",
     "types": {},
@@ -1590,7 +1590,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/carousel"
   },
   {
-    "_idx": 28,
+    "_idx": 23,
     "type": "component",
     "selector": "nz-cascader",
     "types": {},
@@ -1832,7 +1832,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/cascader"
   },
   {
-    "_idx": 22,
+    "_idx": 24,
     "type": "directive",
     "selector": "nz-checkbox",
     "types": {},
@@ -1907,7 +1907,7 @@
     "snippet": "<label __$1>$2</label>"
   },
   {
-    "_idx": 129,
+    "_idx": 25,
     "type": "component",
     "selector": "nz-checkbox-group",
     "types": {},
@@ -1948,7 +1948,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/checkbox"
   },
   {
-    "_idx": 194,
+    "_idx": 26,
     "type": "component",
     "selector": "nz-checkbox-wrapper",
     "types": {},
@@ -1970,7 +1970,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/checkbox"
   },
   {
-    "_idx": 74,
+    "_idx": 27,
     "type": "component",
     "selector": "nz-code-editor",
     "types": {},
@@ -2046,7 +2046,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/code-editor"
   },
   {
-    "_idx": 22,
+    "_idx": 28,
     "type": "component",
     "selector": "nz-collapse",
     "types": {},
@@ -2091,7 +2091,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/collapse"
   },
   {
-    "_idx": 99,
+    "_idx": 29,
     "type": "component",
     "selector": "nz-collapse-panel",
     "types": {},
@@ -2164,7 +2164,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/collapse"
   },
   {
-    "_idx": 13,
+    "_idx": 30,
     "type": "component",
     "selector": "nz-comment",
     "types": {},
@@ -2194,7 +2194,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/comment"
   },
   {
-    "_idx": 64,
+    "_idx": 31,
     "type": "directive",
     "selector": "nz-comment-avatar",
     "types": {},
@@ -2207,7 +2207,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/comment"
   },
   {
-    "_idx": 70,
+    "_idx": 32,
     "type": "component",
     "selector": "nz-comment-content",
     "types": {},
@@ -2220,7 +2220,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/comment"
   },
   {
-    "_idx": 76,
+    "_idx": 33,
     "type": "component",
     "selector": "nz-comment-action",
     "types": {},
@@ -2233,7 +2233,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/comment"
   },
   {
-    "_idx": 295,
+    "_idx": 34,
     "type": "component",
     "selector": "nz-date-picker",
     "types": {},
@@ -2455,7 +2455,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/date-picker"
   },
   {
-    "_idx": 444,
+    "_idx": 35,
     "type": "component",
     "selector": "nz-year-picker",
     "types": {},
@@ -2637,7 +2637,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/date-picker"
   },
   {
-    "_idx": 537,
+    "_idx": 36,
     "type": "component",
     "selector": "nz-month-picker",
     "types": {},
@@ -2825,7 +2825,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/date-picker"
   },
   {
-    "_idx": 630,
+    "_idx": 37,
     "type": "component",
     "selector": "nz-week-picker",
     "types": {},
@@ -3005,7 +3005,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/date-picker"
   },
   {
-    "_idx": 709,
+    "_idx": 38,
     "type": "component",
     "selector": "nz-range-picker",
     "types": {},
@@ -3243,7 +3243,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/date-picker"
   },
   {
-    "_idx": 13,
+    "_idx": 39,
     "type": "component",
     "selector": "nz-descriptions",
     "types": {},
@@ -3307,7 +3307,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/descriptions"
   },
   {
-    "_idx": 124,
+    "_idx": 40,
     "type": "component",
     "selector": "nz-descriptions-item",
     "types": {},
@@ -3338,7 +3338,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/descriptions"
   },
   {
-    "_idx": 22,
+    "_idx": 41,
     "type": "component",
     "selector": "nz-divider",
     "types": {},
@@ -3396,7 +3396,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/divider"
   },
   {
-    "_idx": 22,
+    "_idx": 42,
     "type": "component",
     "selector": "nz-drawer",
     "types": {},
@@ -3556,7 +3556,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/drawer"
   },
   {
-    "_idx": 13,
+    "_idx": 43,
     "type": "directive",
     "selector": "nz-dropdown",
     "types": {},
@@ -3668,7 +3668,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/dropdown"
   },
   {
-    "_idx": 184,
+    "_idx": 44,
     "type": "component",
     "selector": "nz-dropdown-menu",
     "types": {},
@@ -3681,7 +3681,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/dropdown"
   },
   {
-    "_idx": 13,
+    "_idx": 45,
     "type": "component",
     "selector": "nz-empty",
     "types": {},
@@ -3719,7 +3719,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/empty"
   },
   {
-    "_idx": 57,
+    "_idx": 46,
     "type": "directive",
     "selector": "nz-form",
     "types": {},
@@ -3787,7 +3787,7 @@
     "snippet": "<form __$1>$0</form>"
   },
   {
-    "_idx": 151,
+    "_idx": 47,
     "type": "component",
     "selector": "nz-form-item",
     "types": {},
@@ -3874,7 +3874,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/form"
   },
   {
-    "_idx": 162,
+    "_idx": 48,
     "type": "component",
     "selector": "nz-form-label",
     "types": {},
@@ -4131,7 +4131,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/form"
   },
   {
-    "_idx": 235,
+    "_idx": 49,
     "type": "component",
     "selector": "nz-form-control",
     "types": {},
@@ -4444,7 +4444,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/form"
   },
   {
-    "_idx": 397,
+    "_idx": 50,
     "type": "component",
     "selector": "nz-form-split",
     "types": {},
@@ -4457,7 +4457,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/form"
   },
   {
-    "_idx": 403,
+    "_idx": 51,
     "type": "component",
     "selector": "nz-form-text",
     "types": {},
@@ -4470,7 +4470,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/form"
   },
   {
-    "_idx": 13,
+    "_idx": 52,
     "type": "directive",
     "selector": "nz-icon",
     "types": {},
@@ -4481,7 +4481,3180 @@
         "description": "图标类型，遵循图标的命名规范",
         "type": "string",
         "typeRaw": "string",
-        "default": ""
+        "default": "",
+        "typeDefinition": {
+          "type": "complex",
+          "conditionField": "theme",
+          "list": [
+            {
+              "conditionValue": "outline",
+              "values": [
+                {
+                  "value": "alert",
+                  "label": "alert"
+                },
+                {
+                  "value": "account-book",
+                  "label": "account-book"
+                },
+                {
+                  "value": "aim",
+                  "label": "aim"
+                },
+                {
+                  "value": "align-center",
+                  "label": "align-center"
+                },
+                {
+                  "value": "align-right",
+                  "label": "align-right"
+                },
+                {
+                  "value": "align-left",
+                  "label": "align-left"
+                },
+                {
+                  "value": "alibaba",
+                  "label": "alibaba"
+                },
+                {
+                  "value": "alipay-circle",
+                  "label": "alipay-circle"
+                },
+                {
+                  "value": "alipay",
+                  "label": "alipay"
+                },
+                {
+                  "value": "aliwangwang",
+                  "label": "aliwangwang"
+                },
+                {
+                  "value": "aliyun",
+                  "label": "aliyun"
+                },
+                {
+                  "value": "ant-design",
+                  "label": "ant-design"
+                },
+                {
+                  "value": "android",
+                  "label": "android"
+                },
+                {
+                  "value": "apartment",
+                  "label": "apartment"
+                },
+                {
+                  "value": "ant-cloud",
+                  "label": "ant-cloud"
+                },
+                {
+                  "value": "amazon",
+                  "label": "amazon"
+                },
+                {
+                  "value": "api",
+                  "label": "api"
+                },
+                {
+                  "value": "appstore-add",
+                  "label": "appstore-add"
+                },
+                {
+                  "value": "appstore",
+                  "label": "appstore"
+                },
+                {
+                  "value": "apple",
+                  "label": "apple"
+                },
+                {
+                  "value": "area-chart",
+                  "label": "area-chart"
+                },
+                {
+                  "value": "arrow-right",
+                  "label": "arrow-right"
+                },
+                {
+                  "value": "arrow-down",
+                  "label": "arrow-down"
+                },
+                {
+                  "value": "arrow-up",
+                  "label": "arrow-up"
+                },
+                {
+                  "value": "arrow-left",
+                  "label": "arrow-left"
+                },
+                {
+                  "value": "arrows-alt",
+                  "label": "arrows-alt"
+                },
+                {
+                  "value": "audio-muted",
+                  "label": "audio-muted"
+                },
+                {
+                  "value": "audio",
+                  "label": "audio"
+                },
+                {
+                  "value": "backward",
+                  "label": "backward"
+                },
+                {
+                  "value": "audit",
+                  "label": "audit"
+                },
+                {
+                  "value": "bank",
+                  "label": "bank"
+                },
+                {
+                  "value": "barcode",
+                  "label": "barcode"
+                },
+                {
+                  "value": "bars",
+                  "label": "bars"
+                },
+                {
+                  "value": "bar-chart",
+                  "label": "bar-chart"
+                },
+                {
+                  "value": "behance",
+                  "label": "behance"
+                },
+                {
+                  "value": "behance-square",
+                  "label": "behance-square"
+                },
+                {
+                  "value": "bg-colors",
+                  "label": "bg-colors"
+                },
+                {
+                  "value": "bell",
+                  "label": "bell"
+                },
+                {
+                  "value": "block",
+                  "label": "block"
+                },
+                {
+                  "value": "bold",
+                  "label": "bold"
+                },
+                {
+                  "value": "book",
+                  "label": "book"
+                },
+                {
+                  "value": "border-bottom",
+                  "label": "border-bottom"
+                },
+                {
+                  "value": "border-horizontal",
+                  "label": "border-horizontal"
+                },
+                {
+                  "value": "border-left",
+                  "label": "border-left"
+                },
+                {
+                  "value": "border-outer",
+                  "label": "border-outer"
+                },
+                {
+                  "value": "border-inner",
+                  "label": "border-inner"
+                },
+                {
+                  "value": "border-right",
+                  "label": "border-right"
+                },
+                {
+                  "value": "border-top",
+                  "label": "border-top"
+                },
+                {
+                  "value": "border-verticle",
+                  "label": "border-verticle"
+                },
+                {
+                  "value": "border",
+                  "label": "border"
+                },
+                {
+                  "value": "box-plot",
+                  "label": "box-plot"
+                },
+                {
+                  "value": "borderless-table",
+                  "label": "borderless-table"
+                },
+                {
+                  "value": "bug",
+                  "label": "bug"
+                },
+                {
+                  "value": "branches",
+                  "label": "branches"
+                },
+                {
+                  "value": "build",
+                  "label": "build"
+                },
+                {
+                  "value": "bulb",
+                  "label": "bulb"
+                },
+                {
+                  "value": "calculator",
+                  "label": "calculator"
+                },
+                {
+                  "value": "calendar",
+                  "label": "calendar"
+                },
+                {
+                  "value": "camera",
+                  "label": "camera"
+                },
+                {
+                  "value": "caret-down",
+                  "label": "caret-down"
+                },
+                {
+                  "value": "car",
+                  "label": "car"
+                },
+                {
+                  "value": "caret-left",
+                  "label": "caret-left"
+                },
+                {
+                  "value": "caret-right",
+                  "label": "caret-right"
+                },
+                {
+                  "value": "caret-up",
+                  "label": "caret-up"
+                },
+                {
+                  "value": "carry-out",
+                  "label": "carry-out"
+                },
+                {
+                  "value": "check-circle",
+                  "label": "check-circle"
+                },
+                {
+                  "value": "check",
+                  "label": "check"
+                },
+                {
+                  "value": "check-square",
+                  "label": "check-square"
+                },
+                {
+                  "value": "ci-circle",
+                  "label": "ci-circle"
+                },
+                {
+                  "value": "ci",
+                  "label": "ci"
+                },
+                {
+                  "value": "chrome",
+                  "label": "chrome"
+                },
+                {
+                  "value": "clock-circle",
+                  "label": "clock-circle"
+                },
+                {
+                  "value": "clear",
+                  "label": "clear"
+                },
+                {
+                  "value": "close-circle",
+                  "label": "close-circle"
+                },
+                {
+                  "value": "close-square",
+                  "label": "close-square"
+                },
+                {
+                  "value": "close",
+                  "label": "close"
+                },
+                {
+                  "value": "cloud-server",
+                  "label": "cloud-server"
+                },
+                {
+                  "value": "cloud-sync",
+                  "label": "cloud-sync"
+                },
+                {
+                  "value": "cloud-upload",
+                  "label": "cloud-upload"
+                },
+                {
+                  "value": "cloud-download",
+                  "label": "cloud-download"
+                },
+                {
+                  "value": "cluster",
+                  "label": "cluster"
+                },
+                {
+                  "value": "cloud",
+                  "label": "cloud"
+                },
+                {
+                  "value": "code-sandbox",
+                  "label": "code-sandbox"
+                },
+                {
+                  "value": "code",
+                  "label": "code"
+                },
+                {
+                  "value": "codepen-circle",
+                  "label": "codepen-circle"
+                },
+                {
+                  "value": "codepen",
+                  "label": "codepen"
+                },
+                {
+                  "value": "column-height",
+                  "label": "column-height"
+                },
+                {
+                  "value": "coffee",
+                  "label": "coffee"
+                },
+                {
+                  "value": "comment",
+                  "label": "comment"
+                },
+                {
+                  "value": "compass",
+                  "label": "compass"
+                },
+                {
+                  "value": "column-width",
+                  "label": "column-width"
+                },
+                {
+                  "value": "compress",
+                  "label": "compress"
+                },
+                {
+                  "value": "console-sql",
+                  "label": "console-sql"
+                },
+                {
+                  "value": "contacts",
+                  "label": "contacts"
+                },
+                {
+                  "value": "container",
+                  "label": "container"
+                },
+                {
+                  "value": "control",
+                  "label": "control"
+                },
+                {
+                  "value": "copy",
+                  "label": "copy"
+                },
+                {
+                  "value": "copyright-circle",
+                  "label": "copyright-circle"
+                },
+                {
+                  "value": "copyright",
+                  "label": "copyright"
+                },
+                {
+                  "value": "credit-card",
+                  "label": "credit-card"
+                },
+                {
+                  "value": "dash",
+                  "label": "dash"
+                },
+                {
+                  "value": "customer-service",
+                  "label": "customer-service"
+                },
+                {
+                  "value": "crown",
+                  "label": "crown"
+                },
+                {
+                  "value": "dashboard",
+                  "label": "dashboard"
+                },
+                {
+                  "value": "database",
+                  "label": "database"
+                },
+                {
+                  "value": "delete-column",
+                  "label": "delete-column"
+                },
+                {
+                  "value": "delete-row",
+                  "label": "delete-row"
+                },
+                {
+                  "value": "delete",
+                  "label": "delete"
+                },
+                {
+                  "value": "deployment-unit",
+                  "label": "deployment-unit"
+                },
+                {
+                  "value": "desktop",
+                  "label": "desktop"
+                },
+                {
+                  "value": "delivered-procedure",
+                  "label": "delivered-procedure"
+                },
+                {
+                  "value": "dingtalk",
+                  "label": "dingtalk"
+                },
+                {
+                  "value": "diff",
+                  "label": "diff"
+                },
+                {
+                  "value": "dingding",
+                  "label": "dingding"
+                },
+                {
+                  "value": "disconnect",
+                  "label": "disconnect"
+                },
+                {
+                  "value": "dislike",
+                  "label": "dislike"
+                },
+                {
+                  "value": "dollar-circle",
+                  "label": "dollar-circle"
+                },
+                {
+                  "value": "dollar",
+                  "label": "dollar"
+                },
+                {
+                  "value": "dot-chart",
+                  "label": "dot-chart"
+                },
+                {
+                  "value": "double-left",
+                  "label": "double-left"
+                },
+                {
+                  "value": "double-right",
+                  "label": "double-right"
+                },
+                {
+                  "value": "down-square",
+                  "label": "down-square"
+                },
+                {
+                  "value": "down",
+                  "label": "down"
+                },
+                {
+                  "value": "down-circle",
+                  "label": "down-circle"
+                },
+                {
+                  "value": "download",
+                  "label": "download"
+                },
+                {
+                  "value": "dribbble",
+                  "label": "dribbble"
+                },
+                {
+                  "value": "drag",
+                  "label": "drag"
+                },
+                {
+                  "value": "dribbble-square",
+                  "label": "dribbble-square"
+                },
+                {
+                  "value": "dropbox",
+                  "label": "dropbox"
+                },
+                {
+                  "value": "edit",
+                  "label": "edit"
+                },
+                {
+                  "value": "ellipsis",
+                  "label": "ellipsis"
+                },
+                {
+                  "value": "enter",
+                  "label": "enter"
+                },
+                {
+                  "value": "euro-circle",
+                  "label": "euro-circle"
+                },
+                {
+                  "value": "environment",
+                  "label": "environment"
+                },
+                {
+                  "value": "euro",
+                  "label": "euro"
+                },
+                {
+                  "value": "exclamation-circle",
+                  "label": "exclamation-circle"
+                },
+                {
+                  "value": "expand-alt",
+                  "label": "expand-alt"
+                },
+                {
+                  "value": "exclamation",
+                  "label": "exclamation"
+                },
+                {
+                  "value": "exception",
+                  "label": "exception"
+                },
+                {
+                  "value": "expand",
+                  "label": "expand"
+                },
+                {
+                  "value": "experiment",
+                  "label": "experiment"
+                },
+                {
+                  "value": "export",
+                  "label": "export"
+                },
+                {
+                  "value": "eye-invisible",
+                  "label": "eye-invisible"
+                },
+                {
+                  "value": "eye",
+                  "label": "eye"
+                },
+                {
+                  "value": "facebook",
+                  "label": "facebook"
+                },
+                {
+                  "value": "fast-backward",
+                  "label": "fast-backward"
+                },
+                {
+                  "value": "fall",
+                  "label": "fall"
+                },
+                {
+                  "value": "fast-forward",
+                  "label": "fast-forward"
+                },
+                {
+                  "value": "field-binary",
+                  "label": "field-binary"
+                },
+                {
+                  "value": "field-time",
+                  "label": "field-time"
+                },
+                {
+                  "value": "field-number",
+                  "label": "field-number"
+                },
+                {
+                  "value": "field-string",
+                  "label": "field-string"
+                },
+                {
+                  "value": "file-add",
+                  "label": "file-add"
+                },
+                {
+                  "value": "file-done",
+                  "label": "file-done"
+                },
+                {
+                  "value": "file-excel",
+                  "label": "file-excel"
+                },
+                {
+                  "value": "file-exclamation",
+                  "label": "file-exclamation"
+                },
+                {
+                  "value": "file-gif",
+                  "label": "file-gif"
+                },
+                {
+                  "value": "file-image",
+                  "label": "file-image"
+                },
+                {
+                  "value": "file-jpg",
+                  "label": "file-jpg"
+                },
+                {
+                  "value": "file-ppt",
+                  "label": "file-ppt"
+                },
+                {
+                  "value": "file-markdown",
+                  "label": "file-markdown"
+                },
+                {
+                  "value": "file-pdf",
+                  "label": "file-pdf"
+                },
+                {
+                  "value": "file-protect",
+                  "label": "file-protect"
+                },
+                {
+                  "value": "file-search",
+                  "label": "file-search"
+                },
+                {
+                  "value": "file-text",
+                  "label": "file-text"
+                },
+                {
+                  "value": "file-sync",
+                  "label": "file-sync"
+                },
+                {
+                  "value": "file-unknown",
+                  "label": "file-unknown"
+                },
+                {
+                  "value": "file-word",
+                  "label": "file-word"
+                },
+                {
+                  "value": "file-zip",
+                  "label": "file-zip"
+                },
+                {
+                  "value": "filter",
+                  "label": "filter"
+                },
+                {
+                  "value": "fire",
+                  "label": "fire"
+                },
+                {
+                  "value": "file",
+                  "label": "file"
+                },
+                {
+                  "value": "folder-add",
+                  "label": "folder-add"
+                },
+                {
+                  "value": "folder-open",
+                  "label": "folder-open"
+                },
+                {
+                  "value": "flag",
+                  "label": "flag"
+                },
+                {
+                  "value": "font-colors",
+                  "label": "font-colors"
+                },
+                {
+                  "value": "folder",
+                  "label": "folder"
+                },
+                {
+                  "value": "font-size",
+                  "label": "font-size"
+                },
+                {
+                  "value": "folder-view",
+                  "label": "folder-view"
+                },
+                {
+                  "value": "forward",
+                  "label": "forward"
+                },
+                {
+                  "value": "fork",
+                  "label": "fork"
+                },
+                {
+                  "value": "form",
+                  "label": "form"
+                },
+                {
+                  "value": "format-painter",
+                  "label": "format-painter"
+                },
+                {
+                  "value": "fullscreen-exit",
+                  "label": "fullscreen-exit"
+                },
+                {
+                  "value": "fund-projection-screen",
+                  "label": "fund-projection-screen"
+                },
+                {
+                  "value": "frown",
+                  "label": "frown"
+                },
+                {
+                  "value": "fullscreen",
+                  "label": "fullscreen"
+                },
+                {
+                  "value": "fund-view",
+                  "label": "fund-view"
+                },
+                {
+                  "value": "function",
+                  "label": "function"
+                },
+                {
+                  "value": "fund",
+                  "label": "fund"
+                },
+                {
+                  "value": "funnel-plot",
+                  "label": "funnel-plot"
+                },
+                {
+                  "value": "gif",
+                  "label": "gif"
+                },
+                {
+                  "value": "gateway",
+                  "label": "gateway"
+                },
+                {
+                  "value": "github",
+                  "label": "github"
+                },
+                {
+                  "value": "gift",
+                  "label": "gift"
+                },
+                {
+                  "value": "gold",
+                  "label": "gold"
+                },
+                {
+                  "value": "google-plus",
+                  "label": "google-plus"
+                },
+                {
+                  "value": "google",
+                  "label": "google"
+                },
+                {
+                  "value": "gitlab",
+                  "label": "gitlab"
+                },
+                {
+                  "value": "global",
+                  "label": "global"
+                },
+                {
+                  "value": "hdd",
+                  "label": "hdd"
+                },
+                {
+                  "value": "heat-map",
+                  "label": "heat-map"
+                },
+                {
+                  "value": "group",
+                  "label": "group"
+                },
+                {
+                  "value": "highlight",
+                  "label": "highlight"
+                },
+                {
+                  "value": "heart",
+                  "label": "heart"
+                },
+                {
+                  "value": "history",
+                  "label": "history"
+                },
+                {
+                  "value": "home",
+                  "label": "home"
+                },
+                {
+                  "value": "ie",
+                  "label": "ie"
+                },
+                {
+                  "value": "hourglass",
+                  "label": "hourglass"
+                },
+                {
+                  "value": "idcard",
+                  "label": "idcard"
+                },
+                {
+                  "value": "import",
+                  "label": "import"
+                },
+                {
+                  "value": "inbox",
+                  "label": "inbox"
+                },
+                {
+                  "value": "html5",
+                  "label": "html5"
+                },
+                {
+                  "value": "info",
+                  "label": "info"
+                },
+                {
+                  "value": "info-circle",
+                  "label": "info-circle"
+                },
+                {
+                  "value": "insert-row-right",
+                  "label": "insert-row-right"
+                },
+                {
+                  "value": "insert-row-above",
+                  "label": "insert-row-above"
+                },
+                {
+                  "value": "issues-close",
+                  "label": "issues-close"
+                },
+                {
+                  "value": "instagram",
+                  "label": "instagram"
+                },
+                {
+                  "value": "insert-row-below",
+                  "label": "insert-row-below"
+                },
+                {
+                  "value": "left-square",
+                  "label": "left-square"
+                },
+                {
+                  "value": "layout",
+                  "label": "layout"
+                },
+                {
+                  "value": "insurance",
+                  "label": "insurance"
+                },
+                {
+                  "value": "key",
+                  "label": "key"
+                },
+                {
+                  "value": "laptop",
+                  "label": "laptop"
+                },
+                {
+                  "value": "insert-row-left",
+                  "label": "insert-row-left"
+                },
+                {
+                  "value": "left",
+                  "label": "left"
+                },
+                {
+                  "value": "italic",
+                  "label": "italic"
+                },
+                {
+                  "value": "left-circle",
+                  "label": "left-circle"
+                },
+                {
+                  "value": "line-height",
+                  "label": "line-height"
+                },
+                {
+                  "value": "like",
+                  "label": "like"
+                },
+                {
+                  "value": "interaction",
+                  "label": "interaction"
+                },
+                {
+                  "value": "linkedin",
+                  "label": "linkedin"
+                },
+                {
+                  "value": "loading",
+                  "label": "loading"
+                },
+                {
+                  "value": "link",
+                  "label": "link"
+                },
+                {
+                  "value": "loading-3-quarters",
+                  "label": "loading-3-quarters"
+                },
+                {
+                  "value": "login",
+                  "label": "login"
+                },
+                {
+                  "value": "line-chart",
+                  "label": "line-chart"
+                },
+                {
+                  "value": "line",
+                  "label": "line"
+                },
+                {
+                  "value": "lock",
+                  "label": "lock"
+                },
+                {
+                  "value": "medium-workmark",
+                  "label": "medium-workmark"
+                },
+                {
+                  "value": "logout",
+                  "label": "logout"
+                },
+                {
+                  "value": "mail",
+                  "label": "mail"
+                },
+                {
+                  "value": "mac-command",
+                  "label": "mac-command"
+                },
+                {
+                  "value": "man",
+                  "label": "man"
+                },
+                {
+                  "value": "medicine-box",
+                  "label": "medicine-box"
+                },
+                {
+                  "value": "menu-unfold",
+                  "label": "menu-unfold"
+                },
+                {
+                  "value": "medium",
+                  "label": "medium"
+                },
+                {
+                  "value": "menu-fold",
+                  "label": "menu-fold"
+                },
+                {
+                  "value": "menu",
+                  "label": "menu"
+                },
+                {
+                  "value": "meh",
+                  "label": "meh"
+                },
+                {
+                  "value": "minus-circle",
+                  "label": "minus-circle"
+                },
+                {
+                  "value": "minus",
+                  "label": "minus"
+                },
+                {
+                  "value": "message",
+                  "label": "message"
+                },
+                {
+                  "value": "minus-square",
+                  "label": "minus-square"
+                },
+                {
+                  "value": "merge-cells",
+                  "label": "merge-cells"
+                },
+                {
+                  "value": "more",
+                  "label": "more"
+                },
+                {
+                  "value": "node-collapse",
+                  "label": "node-collapse"
+                },
+                {
+                  "value": "node-index",
+                  "label": "node-index"
+                },
+                {
+                  "value": "mobile",
+                  "label": "mobile"
+                },
+                {
+                  "value": "one-to-one",
+                  "label": "one-to-one"
+                },
+                {
+                  "value": "node-expand",
+                  "label": "node-expand"
+                },
+                {
+                  "value": "notification",
+                  "label": "notification"
+                },
+                {
+                  "value": "money-collect",
+                  "label": "money-collect"
+                },
+                {
+                  "value": "number",
+                  "label": "number"
+                },
+                {
+                  "value": "monitor",
+                  "label": "monitor"
+                },
+                {
+                  "value": "pause",
+                  "label": "pause"
+                },
+                {
+                  "value": "pause-circle",
+                  "label": "pause-circle"
+                },
+                {
+                  "value": "pay-circle",
+                  "label": "pay-circle"
+                },
+                {
+                  "value": "ordered-list",
+                  "label": "ordered-list"
+                },
+                {
+                  "value": "partition",
+                  "label": "partition"
+                },
+                {
+                  "value": "percentage",
+                  "label": "percentage"
+                },
+                {
+                  "value": "paper-clip",
+                  "label": "paper-clip"
+                },
+                {
+                  "value": "phone",
+                  "label": "phone"
+                },
+                {
+                  "value": "pic-center",
+                  "label": "pic-center"
+                },
+                {
+                  "value": "pic-left",
+                  "label": "pic-left"
+                },
+                {
+                  "value": "play-circle",
+                  "label": "play-circle"
+                },
+                {
+                  "value": "picture",
+                  "label": "picture"
+                },
+                {
+                  "value": "pic-right",
+                  "label": "pic-right"
+                },
+                {
+                  "value": "plus-circle",
+                  "label": "plus-circle"
+                },
+                {
+                  "value": "play-square",
+                  "label": "play-square"
+                },
+                {
+                  "value": "pie-chart",
+                  "label": "pie-chart"
+                },
+                {
+                  "value": "pound-circle",
+                  "label": "pound-circle"
+                },
+                {
+                  "value": "printer",
+                  "label": "printer"
+                },
+                {
+                  "value": "pound",
+                  "label": "pound"
+                },
+                {
+                  "value": "plus",
+                  "label": "plus"
+                },
+                {
+                  "value": "project",
+                  "label": "project"
+                },
+                {
+                  "value": "poweroff",
+                  "label": "poweroff"
+                },
+                {
+                  "value": "profile",
+                  "label": "profile"
+                },
+                {
+                  "value": "pull-request",
+                  "label": "pull-request"
+                },
+                {
+                  "value": "qrcode",
+                  "label": "qrcode"
+                },
+                {
+                  "value": "plus-square",
+                  "label": "plus-square"
+                },
+                {
+                  "value": "radius-bottomright",
+                  "label": "radius-bottomright"
+                },
+                {
+                  "value": "pushpin",
+                  "label": "pushpin"
+                },
+                {
+                  "value": "radius-setting",
+                  "label": "radius-setting"
+                },
+                {
+                  "value": "radar-chart",
+                  "label": "radar-chart"
+                },
+                {
+                  "value": "qq",
+                  "label": "qq"
+                },
+                {
+                  "value": "property-safety",
+                  "label": "property-safety"
+                },
+                {
+                  "value": "radius-upleft",
+                  "label": "radius-upleft"
+                },
+                {
+                  "value": "question-circle",
+                  "label": "question-circle"
+                },
+                {
+                  "value": "reconciliation",
+                  "label": "reconciliation"
+                },
+                {
+                  "value": "radius-bottomleft",
+                  "label": "radius-bottomleft"
+                },
+                {
+                  "value": "read",
+                  "label": "read"
+                },
+                {
+                  "value": "redo",
+                  "label": "redo"
+                },
+                {
+                  "value": "question",
+                  "label": "question"
+                },
+                {
+                  "value": "radius-upright",
+                  "label": "radius-upright"
+                },
+                {
+                  "value": "rest",
+                  "label": "rest"
+                },
+                {
+                  "value": "red-envelope",
+                  "label": "red-envelope"
+                },
+                {
+                  "value": "right",
+                  "label": "right"
+                },
+                {
+                  "value": "reload",
+                  "label": "reload"
+                },
+                {
+                  "value": "reddit",
+                  "label": "reddit"
+                },
+                {
+                  "value": "retweet",
+                  "label": "retweet"
+                },
+                {
+                  "value": "right-square",
+                  "label": "right-square"
+                },
+                {
+                  "value": "rise",
+                  "label": "rise"
+                },
+                {
+                  "value": "robot",
+                  "label": "robot"
+                },
+                {
+                  "value": "right-circle",
+                  "label": "right-circle"
+                },
+                {
+                  "value": "rollback",
+                  "label": "rollback"
+                },
+                {
+                  "value": "safety-certificate",
+                  "label": "safety-certificate"
+                },
+                {
+                  "value": "rocket",
+                  "label": "rocket"
+                },
+                {
+                  "value": "safety",
+                  "label": "safety"
+                },
+                {
+                  "value": "save",
+                  "label": "save"
+                },
+                {
+                  "value": "rotate-right",
+                  "label": "rotate-right"
+                },
+                {
+                  "value": "rotate-left",
+                  "label": "rotate-left"
+                },
+                {
+                  "value": "scan",
+                  "label": "scan"
+                },
+                {
+                  "value": "schedule",
+                  "label": "schedule"
+                },
+                {
+                  "value": "search",
+                  "label": "search"
+                },
+                {
+                  "value": "share-alt",
+                  "label": "share-alt"
+                },
+                {
+                  "value": "scissor",
+                  "label": "scissor"
+                },
+                {
+                  "value": "select",
+                  "label": "select"
+                },
+                {
+                  "value": "security-scan",
+                  "label": "security-scan"
+                },
+                {
+                  "value": "shop",
+                  "label": "shop"
+                },
+                {
+                  "value": "shrink",
+                  "label": "shrink"
+                },
+                {
+                  "value": "send",
+                  "label": "send"
+                },
+                {
+                  "value": "shake",
+                  "label": "shake"
+                },
+                {
+                  "value": "setting",
+                  "label": "setting"
+                },
+                {
+                  "value": "skin",
+                  "label": "skin"
+                },
+                {
+                  "value": "shopping",
+                  "label": "shopping"
+                },
+                {
+                  "value": "sisternode",
+                  "label": "sisternode"
+                },
+                {
+                  "value": "slack-square",
+                  "label": "slack-square"
+                },
+                {
+                  "value": "shopping-cart",
+                  "label": "shopping-cart"
+                },
+                {
+                  "value": "smile",
+                  "label": "smile"
+                },
+                {
+                  "value": "skype",
+                  "label": "skype"
+                },
+                {
+                  "value": "small-dash",
+                  "label": "small-dash"
+                },
+                {
+                  "value": "slack",
+                  "label": "slack"
+                },
+                {
+                  "value": "sketch",
+                  "label": "sketch"
+                },
+                {
+                  "value": "sliders",
+                  "label": "sliders"
+                },
+                {
+                  "value": "solution",
+                  "label": "solution"
+                },
+                {
+                  "value": "sort-descending",
+                  "label": "sort-descending"
+                },
+                {
+                  "value": "step-backward",
+                  "label": "step-backward"
+                },
+                {
+                  "value": "snippets",
+                  "label": "snippets"
+                },
+                {
+                  "value": "star",
+                  "label": "star"
+                },
+                {
+                  "value": "split-cells",
+                  "label": "split-cells"
+                },
+                {
+                  "value": "step-forward",
+                  "label": "step-forward"
+                },
+                {
+                  "value": "sort-ascending",
+                  "label": "sort-ascending"
+                },
+                {
+                  "value": "stock",
+                  "label": "stock"
+                },
+                {
+                  "value": "sound",
+                  "label": "sound"
+                },
+                {
+                  "value": "stop",
+                  "label": "stop"
+                },
+                {
+                  "value": "subnode",
+                  "label": "subnode"
+                },
+                {
+                  "value": "swap-left",
+                  "label": "swap-left"
+                },
+                {
+                  "value": "table",
+                  "label": "table"
+                },
+                {
+                  "value": "strikethrough",
+                  "label": "strikethrough"
+                },
+                {
+                  "value": "swap",
+                  "label": "swap"
+                },
+                {
+                  "value": "switcher",
+                  "label": "switcher"
+                },
+                {
+                  "value": "tablet",
+                  "label": "tablet"
+                },
+                {
+                  "value": "tags",
+                  "label": "tags"
+                },
+                {
+                  "value": "swap-right",
+                  "label": "swap-right"
+                },
+                {
+                  "value": "taobao",
+                  "label": "taobao"
+                },
+                {
+                  "value": "taobao-circle",
+                  "label": "taobao-circle"
+                },
+                {
+                  "value": "team",
+                  "label": "team"
+                },
+                {
+                  "value": "sync",
+                  "label": "sync"
+                },
+                {
+                  "value": "tool",
+                  "label": "tool"
+                },
+                {
+                  "value": "tag",
+                  "label": "tag"
+                },
+                {
+                  "value": "to-top",
+                  "label": "to-top"
+                },
+                {
+                  "value": "trademark",
+                  "label": "trademark"
+                },
+                {
+                  "value": "trademark-circle",
+                  "label": "trademark-circle"
+                },
+                {
+                  "value": "twitter",
+                  "label": "twitter"
+                },
+                {
+                  "value": "thunderbolt",
+                  "label": "thunderbolt"
+                },
+                {
+                  "value": "trophy",
+                  "label": "trophy"
+                },
+                {
+                  "value": "translation",
+                  "label": "translation"
+                },
+                {
+                  "value": "transaction",
+                  "label": "transaction"
+                },
+                {
+                  "value": "undo",
+                  "label": "undo"
+                },
+                {
+                  "value": "unordered-list",
+                  "label": "unordered-list"
+                },
+                {
+                  "value": "unlock",
+                  "label": "unlock"
+                },
+                {
+                  "value": "underline",
+                  "label": "underline"
+                },
+                {
+                  "value": "up-circle",
+                  "label": "up-circle"
+                },
+                {
+                  "value": "upload",
+                  "label": "upload"
+                },
+                {
+                  "value": "up-square",
+                  "label": "up-square"
+                },
+                {
+                  "value": "up",
+                  "label": "up"
+                },
+                {
+                  "value": "user-switch",
+                  "label": "user-switch"
+                },
+                {
+                  "value": "user-delete",
+                  "label": "user-delete"
+                },
+                {
+                  "value": "ungroup",
+                  "label": "ungroup"
+                },
+                {
+                  "value": "verified",
+                  "label": "verified"
+                },
+                {
+                  "value": "user",
+                  "label": "user"
+                },
+                {
+                  "value": "usb",
+                  "label": "usb"
+                },
+                {
+                  "value": "usergroup-delete",
+                  "label": "usergroup-delete"
+                },
+                {
+                  "value": "usergroup-add",
+                  "label": "usergroup-add"
+                },
+                {
+                  "value": "vertical-left",
+                  "label": "vertical-left"
+                },
+                {
+                  "value": "user-add",
+                  "label": "user-add"
+                },
+                {
+                  "value": "vertical-align-middle",
+                  "label": "vertical-align-middle"
+                },
+                {
+                  "value": "vertical-align-top",
+                  "label": "vertical-align-top"
+                },
+                {
+                  "value": "video-camera-add",
+                  "label": "video-camera-add"
+                },
+                {
+                  "value": "vertical-align-bottom",
+                  "label": "vertical-align-bottom"
+                },
+                {
+                  "value": "wallet",
+                  "label": "wallet"
+                },
+                {
+                  "value": "vertical-right",
+                  "label": "vertical-right"
+                },
+                {
+                  "value": "video-camera",
+                  "label": "video-camera"
+                },
+                {
+                  "value": "weibo-circle",
+                  "label": "weibo-circle"
+                },
+                {
+                  "value": "wechat",
+                  "label": "wechat"
+                },
+                {
+                  "value": "warning",
+                  "label": "warning"
+                },
+                {
+                  "value": "weibo",
+                  "label": "weibo"
+                },
+                {
+                  "value": "weibo-square",
+                  "label": "weibo-square"
+                },
+                {
+                  "value": "woman",
+                  "label": "woman"
+                },
+                {
+                  "value": "whats-app",
+                  "label": "whats-app"
+                },
+                {
+                  "value": "windows",
+                  "label": "windows"
+                },
+                {
+                  "value": "yuque",
+                  "label": "yuque"
+                },
+                {
+                  "value": "yahoo",
+                  "label": "yahoo"
+                },
+                {
+                  "value": "youtube",
+                  "label": "youtube"
+                },
+                {
+                  "value": "zoom-out",
+                  "label": "zoom-out"
+                },
+                {
+                  "value": "wifi",
+                  "label": "wifi"
+                },
+                {
+                  "value": "zoom-in",
+                  "label": "zoom-in"
+                },
+                {
+                  "value": "zhihu",
+                  "label": "zhihu"
+                }
+              ]
+            },
+            {
+              "conditionValue": "fill",
+              "values": [
+                {
+                  "value": "alert",
+                  "label": "alert"
+                },
+                {
+                  "value": "account-book",
+                  "label": "account-book"
+                },
+                {
+                  "value": "alipay-circle",
+                  "label": "alipay-circle"
+                },
+                {
+                  "value": "alipay-square",
+                  "label": "alipay-square"
+                },
+                {
+                  "value": "amazon-circle",
+                  "label": "amazon-circle"
+                },
+                {
+                  "value": "aliwangwang",
+                  "label": "aliwangwang"
+                },
+                {
+                  "value": "amazon-square",
+                  "label": "amazon-square"
+                },
+                {
+                  "value": "android",
+                  "label": "android"
+                },
+                {
+                  "value": "api",
+                  "label": "api"
+                },
+                {
+                  "value": "apple",
+                  "label": "apple"
+                },
+                {
+                  "value": "appstore",
+                  "label": "appstore"
+                },
+                {
+                  "value": "audio",
+                  "label": "audio"
+                },
+                {
+                  "value": "backward",
+                  "label": "backward"
+                },
+                {
+                  "value": "bank",
+                  "label": "bank"
+                },
+                {
+                  "value": "behance-circle",
+                  "label": "behance-circle"
+                },
+                {
+                  "value": "book",
+                  "label": "book"
+                },
+                {
+                  "value": "box-plot",
+                  "label": "box-plot"
+                },
+                {
+                  "value": "bell",
+                  "label": "bell"
+                },
+                {
+                  "value": "behance-square",
+                  "label": "behance-square"
+                },
+                {
+                  "value": "build",
+                  "label": "build"
+                },
+                {
+                  "value": "bug",
+                  "label": "bug"
+                },
+                {
+                  "value": "bulb",
+                  "label": "bulb"
+                },
+                {
+                  "value": "calculator",
+                  "label": "calculator"
+                },
+                {
+                  "value": "camera",
+                  "label": "camera"
+                },
+                {
+                  "value": "calendar",
+                  "label": "calendar"
+                },
+                {
+                  "value": "car",
+                  "label": "car"
+                },
+                {
+                  "value": "caret-left",
+                  "label": "caret-left"
+                },
+                {
+                  "value": "caret-down",
+                  "label": "caret-down"
+                },
+                {
+                  "value": "caret-up",
+                  "label": "caret-up"
+                },
+                {
+                  "value": "caret-right",
+                  "label": "caret-right"
+                },
+                {
+                  "value": "carry-out",
+                  "label": "carry-out"
+                },
+                {
+                  "value": "check-circle",
+                  "label": "check-circle"
+                },
+                {
+                  "value": "chrome",
+                  "label": "chrome"
+                },
+                {
+                  "value": "clock-circle",
+                  "label": "clock-circle"
+                },
+                {
+                  "value": "check-square",
+                  "label": "check-square"
+                },
+                {
+                  "value": "close-circle",
+                  "label": "close-circle"
+                },
+                {
+                  "value": "ci-circle",
+                  "label": "ci-circle"
+                },
+                {
+                  "value": "code-sandbox-circle",
+                  "label": "code-sandbox-circle"
+                },
+                {
+                  "value": "close-square",
+                  "label": "close-square"
+                },
+                {
+                  "value": "cloud",
+                  "label": "cloud"
+                },
+                {
+                  "value": "code-sandbox-square",
+                  "label": "code-sandbox-square"
+                },
+                {
+                  "value": "codepen-circle",
+                  "label": "codepen-circle"
+                },
+                {
+                  "value": "code",
+                  "label": "code"
+                },
+                {
+                  "value": "contacts",
+                  "label": "contacts"
+                },
+                {
+                  "value": "compass",
+                  "label": "compass"
+                },
+                {
+                  "value": "codepen-square",
+                  "label": "codepen-square"
+                },
+                {
+                  "value": "control",
+                  "label": "control"
+                },
+                {
+                  "value": "container",
+                  "label": "container"
+                },
+                {
+                  "value": "copy",
+                  "label": "copy"
+                },
+                {
+                  "value": "credit-card",
+                  "label": "credit-card"
+                },
+                {
+                  "value": "customer-service",
+                  "label": "customer-service"
+                },
+                {
+                  "value": "copyright-circle",
+                  "label": "copyright-circle"
+                },
+                {
+                  "value": "database",
+                  "label": "database"
+                },
+                {
+                  "value": "crown",
+                  "label": "crown"
+                },
+                {
+                  "value": "dashboard",
+                  "label": "dashboard"
+                },
+                {
+                  "value": "diff",
+                  "label": "diff"
+                },
+                {
+                  "value": "delete",
+                  "label": "delete"
+                },
+                {
+                  "value": "dingtalk-circle",
+                  "label": "dingtalk-circle"
+                },
+                {
+                  "value": "dingtalk-square",
+                  "label": "dingtalk-square"
+                },
+                {
+                  "value": "dislike",
+                  "label": "dislike"
+                },
+                {
+                  "value": "dollar-circle",
+                  "label": "dollar-circle"
+                },
+                {
+                  "value": "down-square",
+                  "label": "down-square"
+                },
+                {
+                  "value": "down-circle",
+                  "label": "down-circle"
+                },
+                {
+                  "value": "dribbble-circle",
+                  "label": "dribbble-circle"
+                },
+                {
+                  "value": "dribbble-square",
+                  "label": "dribbble-square"
+                },
+                {
+                  "value": "dropbox-circle",
+                  "label": "dropbox-circle"
+                },
+                {
+                  "value": "edit",
+                  "label": "edit"
+                },
+                {
+                  "value": "dropbox-square",
+                  "label": "dropbox-square"
+                },
+                {
+                  "value": "euro-circle",
+                  "label": "euro-circle"
+                },
+                {
+                  "value": "exclamation-circle",
+                  "label": "exclamation-circle"
+                },
+                {
+                  "value": "environment",
+                  "label": "environment"
+                },
+                {
+                  "value": "eye-invisible",
+                  "label": "eye-invisible"
+                },
+                {
+                  "value": "experiment",
+                  "label": "experiment"
+                },
+                {
+                  "value": "facebook",
+                  "label": "facebook"
+                },
+                {
+                  "value": "eye",
+                  "label": "eye"
+                },
+                {
+                  "value": "fast-backward",
+                  "label": "fast-backward"
+                },
+                {
+                  "value": "fast-forward",
+                  "label": "fast-forward"
+                },
+                {
+                  "value": "file-excel",
+                  "label": "file-excel"
+                },
+                {
+                  "value": "file-add",
+                  "label": "file-add"
+                },
+                {
+                  "value": "file-exclamation",
+                  "label": "file-exclamation"
+                },
+                {
+                  "value": "file-pdf",
+                  "label": "file-pdf"
+                },
+                {
+                  "value": "file-image",
+                  "label": "file-image"
+                },
+                {
+                  "value": "file-markdown",
+                  "label": "file-markdown"
+                },
+                {
+                  "value": "file-ppt",
+                  "label": "file-ppt"
+                },
+                {
+                  "value": "file-text",
+                  "label": "file-text"
+                },
+                {
+                  "value": "file-unknown",
+                  "label": "file-unknown"
+                },
+                {
+                  "value": "file",
+                  "label": "file"
+                },
+                {
+                  "value": "file-zip",
+                  "label": "file-zip"
+                },
+                {
+                  "value": "file-word",
+                  "label": "file-word"
+                },
+                {
+                  "value": "filter",
+                  "label": "filter"
+                },
+                {
+                  "value": "fire",
+                  "label": "fire"
+                },
+                {
+                  "value": "flag",
+                  "label": "flag"
+                },
+                {
+                  "value": "folder-add",
+                  "label": "folder-add"
+                },
+                {
+                  "value": "format-painter",
+                  "label": "format-painter"
+                },
+                {
+                  "value": "folder",
+                  "label": "folder"
+                },
+                {
+                  "value": "folder-open",
+                  "label": "folder-open"
+                },
+                {
+                  "value": "forward",
+                  "label": "forward"
+                },
+                {
+                  "value": "fund",
+                  "label": "fund"
+                },
+                {
+                  "value": "frown",
+                  "label": "frown"
+                },
+                {
+                  "value": "funnel-plot",
+                  "label": "funnel-plot"
+                },
+                {
+                  "value": "github",
+                  "label": "github"
+                },
+                {
+                  "value": "gitlab",
+                  "label": "gitlab"
+                },
+                {
+                  "value": "gift",
+                  "label": "gift"
+                },
+                {
+                  "value": "gold",
+                  "label": "gold"
+                },
+                {
+                  "value": "golden",
+                  "label": "golden"
+                },
+                {
+                  "value": "google-circle",
+                  "label": "google-circle"
+                },
+                {
+                  "value": "google-plus-circle",
+                  "label": "google-plus-circle"
+                },
+                {
+                  "value": "google-plus-square",
+                  "label": "google-plus-square"
+                },
+                {
+                  "value": "google-square",
+                  "label": "google-square"
+                },
+                {
+                  "value": "hdd",
+                  "label": "hdd"
+                },
+                {
+                  "value": "heart",
+                  "label": "heart"
+                },
+                {
+                  "value": "highlight",
+                  "label": "highlight"
+                },
+                {
+                  "value": "home",
+                  "label": "home"
+                },
+                {
+                  "value": "hourglass",
+                  "label": "hourglass"
+                },
+                {
+                  "value": "html5",
+                  "label": "html5"
+                },
+                {
+                  "value": "idcard",
+                  "label": "idcard"
+                },
+                {
+                  "value": "ie-circle",
+                  "label": "ie-circle"
+                },
+                {
+                  "value": "info-circle",
+                  "label": "info-circle"
+                },
+                {
+                  "value": "ie-square",
+                  "label": "ie-square"
+                },
+                {
+                  "value": "instagram",
+                  "label": "instagram"
+                },
+                {
+                  "value": "insurance",
+                  "label": "insurance"
+                },
+                {
+                  "value": "layout",
+                  "label": "layout"
+                },
+                {
+                  "value": "interaction",
+                  "label": "interaction"
+                },
+                {
+                  "value": "linkedin",
+                  "label": "linkedin"
+                },
+                {
+                  "value": "left-circle",
+                  "label": "left-circle"
+                },
+                {
+                  "value": "left-square",
+                  "label": "left-square"
+                },
+                {
+                  "value": "like",
+                  "label": "like"
+                },
+                {
+                  "value": "lock",
+                  "label": "lock"
+                },
+                {
+                  "value": "mac-command",
+                  "label": "mac-command"
+                },
+                {
+                  "value": "mail",
+                  "label": "mail"
+                },
+                {
+                  "value": "medicine-box",
+                  "label": "medicine-box"
+                },
+                {
+                  "value": "medium-circle",
+                  "label": "medium-circle"
+                },
+                {
+                  "value": "meh",
+                  "label": "meh"
+                },
+                {
+                  "value": "message",
+                  "label": "message"
+                },
+                {
+                  "value": "medium-square",
+                  "label": "medium-square"
+                },
+                {
+                  "value": "minus-circle",
+                  "label": "minus-circle"
+                },
+                {
+                  "value": "mobile",
+                  "label": "mobile"
+                },
+                {
+                  "value": "money-collect",
+                  "label": "money-collect"
+                },
+                {
+                  "value": "minus-square",
+                  "label": "minus-square"
+                },
+                {
+                  "value": "notification",
+                  "label": "notification"
+                },
+                {
+                  "value": "pause-circle",
+                  "label": "pause-circle"
+                },
+                {
+                  "value": "pay-circle",
+                  "label": "pay-circle"
+                },
+                {
+                  "value": "phone",
+                  "label": "phone"
+                },
+                {
+                  "value": "picture",
+                  "label": "picture"
+                },
+                {
+                  "value": "pie-chart",
+                  "label": "pie-chart"
+                },
+                {
+                  "value": "plus-circle",
+                  "label": "plus-circle"
+                },
+                {
+                  "value": "play-circle",
+                  "label": "play-circle"
+                },
+                {
+                  "value": "play-square",
+                  "label": "play-square"
+                },
+                {
+                  "value": "plus-square",
+                  "label": "plus-square"
+                },
+                {
+                  "value": "pound-circle",
+                  "label": "pound-circle"
+                },
+                {
+                  "value": "printer",
+                  "label": "printer"
+                },
+                {
+                  "value": "project",
+                  "label": "project"
+                },
+                {
+                  "value": "property-safety",
+                  "label": "property-safety"
+                },
+                {
+                  "value": "profile",
+                  "label": "profile"
+                },
+                {
+                  "value": "pushpin",
+                  "label": "pushpin"
+                },
+                {
+                  "value": "qq-circle",
+                  "label": "qq-circle"
+                },
+                {
+                  "value": "qq-square",
+                  "label": "qq-square"
+                },
+                {
+                  "value": "question-circle",
+                  "label": "question-circle"
+                },
+                {
+                  "value": "read",
+                  "label": "read"
+                },
+                {
+                  "value": "red-envelope",
+                  "label": "red-envelope"
+                },
+                {
+                  "value": "reddit-circle",
+                  "label": "reddit-circle"
+                },
+                {
+                  "value": "reconciliation",
+                  "label": "reconciliation"
+                },
+                {
+                  "value": "reddit-square",
+                  "label": "reddit-square"
+                },
+                {
+                  "value": "right-circle",
+                  "label": "right-circle"
+                },
+                {
+                  "value": "right-square",
+                  "label": "right-square"
+                },
+                {
+                  "value": "robot",
+                  "label": "robot"
+                },
+                {
+                  "value": "rest",
+                  "label": "rest"
+                },
+                {
+                  "value": "safety-certificate",
+                  "label": "safety-certificate"
+                },
+                {
+                  "value": "rocket",
+                  "label": "rocket"
+                },
+                {
+                  "value": "save",
+                  "label": "save"
+                },
+                {
+                  "value": "security-scan",
+                  "label": "security-scan"
+                },
+                {
+                  "value": "schedule",
+                  "label": "schedule"
+                },
+                {
+                  "value": "sketch-circle",
+                  "label": "sketch-circle"
+                },
+                {
+                  "value": "signal",
+                  "label": "signal"
+                },
+                {
+                  "value": "setting",
+                  "label": "setting"
+                },
+                {
+                  "value": "shop",
+                  "label": "shop"
+                },
+                {
+                  "value": "shopping",
+                  "label": "shopping"
+                },
+                {
+                  "value": "skin",
+                  "label": "skin"
+                },
+                {
+                  "value": "sketch-square",
+                  "label": "sketch-square"
+                },
+                {
+                  "value": "slack-circle",
+                  "label": "slack-circle"
+                },
+                {
+                  "value": "skype",
+                  "label": "skype"
+                },
+                {
+                  "value": "smile",
+                  "label": "smile"
+                },
+                {
+                  "value": "slack-square",
+                  "label": "slack-square"
+                },
+                {
+                  "value": "sliders",
+                  "label": "sliders"
+                },
+                {
+                  "value": "sound",
+                  "label": "sound"
+                },
+                {
+                  "value": "snippets",
+                  "label": "snippets"
+                },
+                {
+                  "value": "star",
+                  "label": "star"
+                },
+                {
+                  "value": "step-forward",
+                  "label": "step-forward"
+                },
+                {
+                  "value": "stop",
+                  "label": "stop"
+                },
+                {
+                  "value": "tag",
+                  "label": "tag"
+                },
+                {
+                  "value": "step-backward",
+                  "label": "step-backward"
+                },
+                {
+                  "value": "switcher",
+                  "label": "switcher"
+                },
+                {
+                  "value": "tablet",
+                  "label": "tablet"
+                },
+                {
+                  "value": "tags",
+                  "label": "tags"
+                },
+                {
+                  "value": "thunderbolt",
+                  "label": "thunderbolt"
+                },
+                {
+                  "value": "taobao-square",
+                  "label": "taobao-square"
+                },
+                {
+                  "value": "trademark-circle",
+                  "label": "trademark-circle"
+                },
+                {
+                  "value": "taobao-circle",
+                  "label": "taobao-circle"
+                },
+                {
+                  "value": "tool",
+                  "label": "tool"
+                },
+                {
+                  "value": "twitter-circle",
+                  "label": "twitter-circle"
+                },
+                {
+                  "value": "trophy",
+                  "label": "trophy"
+                },
+                {
+                  "value": "twitter-square",
+                  "label": "twitter-square"
+                },
+                {
+                  "value": "up-square",
+                  "label": "up-square"
+                },
+                {
+                  "value": "up-circle",
+                  "label": "up-circle"
+                },
+                {
+                  "value": "warning",
+                  "label": "warning"
+                },
+                {
+                  "value": "usb",
+                  "label": "usb"
+                },
+                {
+                  "value": "unlock",
+                  "label": "unlock"
+                },
+                {
+                  "value": "wechat",
+                  "label": "wechat"
+                },
+                {
+                  "value": "video-camera",
+                  "label": "video-camera"
+                },
+                {
+                  "value": "weibo-circle",
+                  "label": "weibo-circle"
+                },
+                {
+                  "value": "windows",
+                  "label": "windows"
+                },
+                {
+                  "value": "wallet",
+                  "label": "wallet"
+                },
+                {
+                  "value": "weibo-square",
+                  "label": "weibo-square"
+                },
+                {
+                  "value": "yuque",
+                  "label": "yuque"
+                },
+                {
+                  "value": "youtube",
+                  "label": "youtube"
+                },
+                {
+                  "value": "zhihu-square",
+                  "label": "zhihu-square"
+                },
+                {
+                  "value": "yahoo",
+                  "label": "yahoo"
+                },
+                {
+                  "value": "zhihu-circle",
+                  "label": "zhihu-circle"
+                }
+              ]
+            },
+            {
+              "conditionValue": "twotone",
+              "values": [
+                {
+                  "value": "account-book",
+                  "label": "account-book"
+                },
+                {
+                  "value": "api",
+                  "label": "api"
+                },
+                {
+                  "value": "alert",
+                  "label": "alert"
+                },
+                {
+                  "value": "appstore",
+                  "label": "appstore"
+                },
+                {
+                  "value": "bank",
+                  "label": "bank"
+                },
+                {
+                  "value": "bell",
+                  "label": "bell"
+                },
+                {
+                  "value": "audio",
+                  "label": "audio"
+                },
+                {
+                  "value": "book",
+                  "label": "book"
+                },
+                {
+                  "value": "build",
+                  "label": "build"
+                },
+                {
+                  "value": "box-plot",
+                  "label": "box-plot"
+                },
+                {
+                  "value": "bulb",
+                  "label": "bulb"
+                },
+                {
+                  "value": "bug",
+                  "label": "bug"
+                },
+                {
+                  "value": "calculator",
+                  "label": "calculator"
+                },
+                {
+                  "value": "calendar",
+                  "label": "calendar"
+                },
+                {
+                  "value": "carry-out",
+                  "label": "carry-out"
+                },
+                {
+                  "value": "check-circle",
+                  "label": "check-circle"
+                },
+                {
+                  "value": "check-square",
+                  "label": "check-square"
+                },
+                {
+                  "value": "camera",
+                  "label": "camera"
+                },
+                {
+                  "value": "car",
+                  "label": "car"
+                },
+                {
+                  "value": "ci-circle",
+                  "label": "ci-circle"
+                },
+                {
+                  "value": "ci",
+                  "label": "ci"
+                },
+                {
+                  "value": "clock-circle",
+                  "label": "clock-circle"
+                },
+                {
+                  "value": "close-circle",
+                  "label": "close-circle"
+                },
+                {
+                  "value": "code",
+                  "label": "code"
+                },
+                {
+                  "value": "close-square",
+                  "label": "close-square"
+                },
+                {
+                  "value": "cloud",
+                  "label": "cloud"
+                },
+                {
+                  "value": "contacts",
+                  "label": "contacts"
+                },
+                {
+                  "value": "container",
+                  "label": "container"
+                },
+                {
+                  "value": "compass",
+                  "label": "compass"
+                },
+                {
+                  "value": "copy",
+                  "label": "copy"
+                },
+                {
+                  "value": "control",
+                  "label": "control"
+                },
+                {
+                  "value": "copyright",
+                  "label": "copyright"
+                },
+                {
+                  "value": "copyright-circle",
+                  "label": "copyright-circle"
+                },
+                {
+                  "value": "credit-card",
+                  "label": "credit-card"
+                },
+                {
+                  "value": "crown",
+                  "label": "crown"
+                },
+                {
+                  "value": "customer-service",
+                  "label": "customer-service"
+                },
+                {
+                  "value": "dashboard",
+                  "label": "dashboard"
+                },
+                {
+                  "value": "database",
+                  "label": "database"
+                },
+                {
+                  "value": "delete",
+                  "label": "delete"
+                },
+                {
+                  "value": "diff",
+                  "label": "diff"
+                },
+                {
+                  "value": "dollar-circle",
+                  "label": "dollar-circle"
+                },
+                {
+                  "value": "dislike",
+                  "label": "dislike"
+                },
+                {
+                  "value": "dollar",
+                  "label": "dollar"
+                },
+                {
+                  "value": "down-circle",
+                  "label": "down-circle"
+                },
+                {
+                  "value": "edit",
+                  "label": "edit"
+                },
+                {
+                  "value": "environment",
+                  "label": "environment"
+                },
+                {
+                  "value": "euro",
+                  "label": "euro"
+                },
+                {
+                  "value": "down-square",
+                  "label": "down-square"
+                },
+                {
+                  "value": "euro-circle",
+                  "label": "euro-circle"
+                },
+                {
+                  "value": "experiment",
+                  "label": "experiment"
+                },
+                {
+                  "value": "eye-invisible",
+                  "label": "eye-invisible"
+                },
+                {
+                  "value": "exclamation-circle",
+                  "label": "exclamation-circle"
+                },
+                {
+                  "value": "eye",
+                  "label": "eye"
+                },
+                {
+                  "value": "file-add",
+                  "label": "file-add"
+                },
+                {
+                  "value": "file-excel",
+                  "label": "file-excel"
+                },
+                {
+                  "value": "file-exclamation",
+                  "label": "file-exclamation"
+                },
+                {
+                  "value": "file-ppt",
+                  "label": "file-ppt"
+                },
+                {
+                  "value": "file-image",
+                  "label": "file-image"
+                },
+                {
+                  "value": "file-markdown",
+                  "label": "file-markdown"
+                },
+                {
+                  "value": "file-pdf",
+                  "label": "file-pdf"
+                },
+                {
+                  "value": "file-text",
+                  "label": "file-text"
+                },
+                {
+                  "value": "file-unknown",
+                  "label": "file-unknown"
+                },
+                {
+                  "value": "file-zip",
+                  "label": "file-zip"
+                },
+                {
+                  "value": "file-word",
+                  "label": "file-word"
+                },
+                {
+                  "value": "filter",
+                  "label": "filter"
+                },
+                {
+                  "value": "file",
+                  "label": "file"
+                },
+                {
+                  "value": "fire",
+                  "label": "fire"
+                },
+                {
+                  "value": "flag",
+                  "label": "flag"
+                },
+                {
+                  "value": "folder-add",
+                  "label": "folder-add"
+                },
+                {
+                  "value": "fund",
+                  "label": "fund"
+                },
+                {
+                  "value": "folder-open",
+                  "label": "folder-open"
+                },
+                {
+                  "value": "folder",
+                  "label": "folder"
+                },
+                {
+                  "value": "frown",
+                  "label": "frown"
+                },
+                {
+                  "value": "gift",
+                  "label": "gift"
+                },
+                {
+                  "value": "gold",
+                  "label": "gold"
+                },
+                {
+                  "value": "funnel-plot",
+                  "label": "funnel-plot"
+                },
+                {
+                  "value": "hdd",
+                  "label": "hdd"
+                },
+                {
+                  "value": "heart",
+                  "label": "heart"
+                },
+                {
+                  "value": "home",
+                  "label": "home"
+                },
+                {
+                  "value": "highlight",
+                  "label": "highlight"
+                },
+                {
+                  "value": "html5",
+                  "label": "html5"
+                },
+                {
+                  "value": "hourglass",
+                  "label": "hourglass"
+                },
+                {
+                  "value": "idcard",
+                  "label": "idcard"
+                },
+                {
+                  "value": "info-circle",
+                  "label": "info-circle"
+                },
+                {
+                  "value": "interaction",
+                  "label": "interaction"
+                },
+                {
+                  "value": "layout",
+                  "label": "layout"
+                },
+                {
+                  "value": "insurance",
+                  "label": "insurance"
+                },
+                {
+                  "value": "like",
+                  "label": "like"
+                },
+                {
+                  "value": "left-circle",
+                  "label": "left-circle"
+                },
+                {
+                  "value": "left-square",
+                  "label": "left-square"
+                },
+                {
+                  "value": "mail",
+                  "label": "mail"
+                },
+                {
+                  "value": "lock",
+                  "label": "lock"
+                },
+                {
+                  "value": "medicine-box",
+                  "label": "medicine-box"
+                },
+                {
+                  "value": "meh",
+                  "label": "meh"
+                },
+                {
+                  "value": "minus-circle",
+                  "label": "minus-circle"
+                },
+                {
+                  "value": "message",
+                  "label": "message"
+                },
+                {
+                  "value": "money-collect",
+                  "label": "money-collect"
+                },
+                {
+                  "value": "minus-square",
+                  "label": "minus-square"
+                },
+                {
+                  "value": "mobile",
+                  "label": "mobile"
+                },
+                {
+                  "value": "notification",
+                  "label": "notification"
+                },
+                {
+                  "value": "pause-circle",
+                  "label": "pause-circle"
+                },
+                {
+                  "value": "phone",
+                  "label": "phone"
+                },
+                {
+                  "value": "pie-chart",
+                  "label": "pie-chart"
+                },
+                {
+                  "value": "picture",
+                  "label": "picture"
+                },
+                {
+                  "value": "play-circle",
+                  "label": "play-circle"
+                },
+                {
+                  "value": "play-square",
+                  "label": "play-square"
+                },
+                {
+                  "value": "plus-circle",
+                  "label": "plus-circle"
+                },
+                {
+                  "value": "printer",
+                  "label": "printer"
+                },
+                {
+                  "value": "pound-circle",
+                  "label": "pound-circle"
+                },
+                {
+                  "value": "plus-square",
+                  "label": "plus-square"
+                },
+                {
+                  "value": "profile",
+                  "label": "profile"
+                },
+                {
+                  "value": "project",
+                  "label": "project"
+                },
+                {
+                  "value": "property-safety",
+                  "label": "property-safety"
+                },
+                {
+                  "value": "reconciliation",
+                  "label": "reconciliation"
+                },
+                {
+                  "value": "red-envelope",
+                  "label": "red-envelope"
+                },
+                {
+                  "value": "pushpin",
+                  "label": "pushpin"
+                },
+                {
+                  "value": "rest",
+                  "label": "rest"
+                },
+                {
+                  "value": "question-circle",
+                  "label": "question-circle"
+                },
+                {
+                  "value": "right-circle",
+                  "label": "right-circle"
+                },
+                {
+                  "value": "right-square",
+                  "label": "right-square"
+                },
+                {
+                  "value": "safety-certificate",
+                  "label": "safety-certificate"
+                },
+                {
+                  "value": "save",
+                  "label": "save"
+                },
+                {
+                  "value": "rocket",
+                  "label": "rocket"
+                },
+                {
+                  "value": "schedule",
+                  "label": "schedule"
+                },
+                {
+                  "value": "setting",
+                  "label": "setting"
+                },
+                {
+                  "value": "security-scan",
+                  "label": "security-scan"
+                },
+                {
+                  "value": "shop",
+                  "label": "shop"
+                },
+                {
+                  "value": "shopping",
+                  "label": "shopping"
+                },
+                {
+                  "value": "sliders",
+                  "label": "sliders"
+                },
+                {
+                  "value": "skin",
+                  "label": "skin"
+                },
+                {
+                  "value": "smile",
+                  "label": "smile"
+                },
+                {
+                  "value": "snippets",
+                  "label": "snippets"
+                },
+                {
+                  "value": "sound",
+                  "label": "sound"
+                },
+                {
+                  "value": "star",
+                  "label": "star"
+                },
+                {
+                  "value": "tablet",
+                  "label": "tablet"
+                },
+                {
+                  "value": "stop",
+                  "label": "stop"
+                },
+                {
+                  "value": "switcher",
+                  "label": "switcher"
+                },
+                {
+                  "value": "tag",
+                  "label": "tag"
+                },
+                {
+                  "value": "tags",
+                  "label": "tags"
+                },
+                {
+                  "value": "trademark-circle",
+                  "label": "trademark-circle"
+                },
+                {
+                  "value": "unlock",
+                  "label": "unlock"
+                },
+                {
+                  "value": "tool",
+                  "label": "tool"
+                },
+                {
+                  "value": "thunderbolt",
+                  "label": "thunderbolt"
+                },
+                {
+                  "value": "trophy",
+                  "label": "trophy"
+                },
+                {
+                  "value": "up-circle",
+                  "label": "up-circle"
+                },
+                {
+                  "value": "up-square",
+                  "label": "up-square"
+                },
+                {
+                  "value": "usb",
+                  "label": "usb"
+                },
+                {
+                  "value": "warning",
+                  "label": "warning"
+                },
+                {
+                  "value": "video-camera",
+                  "label": "video-camera"
+                },
+                {
+                  "value": "wallet",
+                  "label": "wallet"
+                }
+              ]
+            }
+          ]
+        }
       },
       {
         "name": "nzTheme",
@@ -4540,7 +7713,7 @@
     "snippet": "<i __$1></i>"
   },
   {
-    "_idx": 22,
+    "_idx": 53,
     "type": "directive",
     "selector": "nz-input",
     "types": {},
@@ -4610,7 +7783,7 @@
     "snippet": "<input __$1>"
   },
   {
-    "_idx": 76,
+    "_idx": 54,
     "type": "component",
     "selector": "nz-input-group",
     "types": {},
@@ -4688,7 +7861,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/input"
   },
   {
-    "_idx": 13,
+    "_idx": 55,
     "type": "component",
     "selector": "nz-input-number",
     "types": {},
@@ -4856,7 +8029,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/input-number"
   },
   {
-    "_idx": 139,
+    "_idx": 56,
     "type": "component",
     "selector": "nz-sider",
     "types": {},
@@ -4976,7 +8149,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/layout"
   },
   {
-    "_idx": 13,
+    "_idx": 57,
     "type": "component",
     "selector": "nz-list",
     "types": {},
@@ -5061,7 +8234,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/list"
   },
   {
-    "_idx": 134,
+    "_idx": 58,
     "type": "component",
     "selector": "nz-list-empty",
     "types": {},
@@ -5083,7 +8256,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/list"
   },
   {
-    "_idx": 180,
+    "_idx": 59,
     "type": "component",
     "selector": "nz-list-header",
     "types": {},
@@ -5106,7 +8279,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/list"
   },
   {
-    "_idx": 186,
+    "_idx": 60,
     "type": "component",
     "selector": "nz-list-footer",
     "types": {},
@@ -5129,7 +8302,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/list"
   },
   {
-    "_idx": 192,
+    "_idx": 61,
     "type": "component",
     "selector": "nz-list-pagination",
     "types": {},
@@ -5152,7 +8325,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/list"
   },
   {
-    "_idx": 198,
+    "_idx": 62,
     "type": "component",
     "selector": "nz-list-load-more",
     "types": {},
@@ -5175,7 +8348,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/list"
   },
   {
-    "_idx": 205,
+    "_idx": 63,
     "type": "component",
     "selector": "nz-list-item",
     "types": {},
@@ -5198,7 +8371,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/list"
   },
   {
-    "_idx": 248,
+    "_idx": 64,
     "type": "component",
     "selector": "nz-list-item-action",
     "types": {},
@@ -5236,7 +8409,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/list"
   },
   {
-    "_idx": 254,
+    "_idx": 65,
     "type": "component",
     "selector": "nz-list-item-extra",
     "types": {},
@@ -5274,7 +8447,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/list"
   },
   {
-    "_idx": 261,
+    "_idx": 66,
     "type": "component",
     "selector": "nz-list-item-meta",
     "types": {},
@@ -5312,7 +8485,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/list"
   },
   {
-    "_idx": 326,
+    "_idx": 67,
     "type": "component",
     "selector": "nz-list-item-meta-title",
     "types": {},
@@ -5325,7 +8498,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/list"
   },
   {
-    "_idx": 332,
+    "_idx": 68,
     "type": "component",
     "selector": "nz-list-item-meta-description",
     "types": {},
@@ -5338,7 +8511,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/list"
   },
   {
-    "_idx": 338,
+    "_idx": 69,
     "type": "component",
     "selector": "nz-list-item-meta-avatar",
     "types": {},
@@ -5351,7 +8524,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/list"
   },
   {
-    "_idx": 14,
+    "_idx": 70,
     "type": "component",
     "selector": "nz-mention",
     "types": {},
@@ -5455,7 +8628,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/mention"
   },
   {
-    "_idx": 202,
+    "_idx": 71,
     "type": "component",
     "selector": "nzMentionTrigger",
     "types": {},
@@ -5468,7 +8641,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/mention"
   },
   {
-    "_idx": 210,
+    "_idx": 72,
     "type": "component",
     "selector": "nzMentionSuggestion",
     "types": {},
@@ -5481,7 +8654,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/mention"
   },
   {
-    "_idx": 17,
+    "_idx": 73,
     "type": "directive",
     "selector": "nz-menu",
     "types": {},
@@ -5556,7 +8729,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/menu"
   },
   {
-    "_idx": 124,
+    "_idx": 74,
     "type": "directive",
     "selector": "nz-menu-item",
     "types": {},
@@ -5607,7 +8780,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/menu"
   },
   {
-    "_idx": 203,
+    "_idx": 75,
     "type": "directive",
     "selector": "nz-submenu",
     "types": {},
@@ -5672,7 +8845,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/menu"
   },
   {
-    "_idx": 314,
+    "_idx": 76,
     "type": "directive",
     "selector": "nz-menu-group",
     "types": {},
@@ -5694,7 +8867,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/menu"
   },
   {
-    "_idx": 355,
+    "_idx": 77,
     "type": "directive",
     "selector": "nz-menu-divider",
     "types": {},
@@ -5707,7 +8880,293 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/menu"
   },
   {
-    "_idx": 826,
+    "_idx": 78,
+    "type": "component",
+    "selector": "nz-modal",
+    "types": {},
+    "properties": [
+      {
+        "name": "nzAfterOpen",
+        "inputType": 0,
+        "description": "Modal 打开后的回调",
+        "type": "EventEmitter",
+        "typeRaw": "EventEmitter",
+        "default": ""
+      },
+      {
+        "name": "nzAfterClose",
+        "inputType": 0,
+        "description": "Modal 完全关闭后的回调，可监听close/destroy方法传入的参数",
+        "type": "EventEmitter",
+        "typeRaw": "EventEmitter",
+        "default": ""
+      },
+      {
+        "name": "nzBodyStyle",
+        "inputType": 0,
+        "description": "Modal body 样式",
+        "type": "object",
+        "typeRaw": "`object`",
+        "default": ""
+      },
+      {
+        "name": "nzCancelText",
+        "inputType": 0,
+        "description": "取消按钮文字。<i>设为 null 表示不显示取消按钮（若在普通模式下使用了 nzFooter 参数，则该值无效）</i>",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": "取消",
+        "pureDefault": "取消"
+      },
+      {
+        "name": "nzClosable",
+        "inputType": 0,
+        "description": "是否显示右上角的关闭按钮。<i>确认框模式下该值无效（默认会被隐藏）</i>",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`true`",
+        "pureDefault": "true"
+      },
+      {
+        "name": "nzOkLoading",
+        "inputType": 0,
+        "description": "确定按钮 loading",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzCancelLoading",
+        "inputType": 0,
+        "description": "取消按钮 loading",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzOkDisabled",
+        "inputType": 0,
+        "description": "是否禁用确定按钮",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzCancelDisabled",
+        "inputType": 0,
+        "description": "是否禁用取消按钮",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzFooter",
+        "inputType": 0,
+        "description": "底部内容。<i>1. 仅在普通模式下有效。<br>2. 可通过传入 ModalButtonOptions 来最大程度自定义按钮（详见案例或下方说明）。<br>3. 当不需要底部时，可以设为 null</i>",
+        "type": "string",
+        "typeRaw": "string<br>TemplateRef<br>ModalButtonOptions",
+        "default": "默认的确定取消按钮",
+        "pureDefault": "默认的确定取消按钮"
+      },
+      {
+        "name": "nzGetContainer",
+        "inputType": 0,
+        "description": "指定 Modal 挂载的 HTML 节点",
+        "type": "object",
+        "typeRaw": "HTMLElement<br>() => HTMLElement",
+        "default": "默认容器",
+        "pureDefault": "默认容器"
+      },
+      {
+        "name": "nzKeyboard",
+        "inputType": 0,
+        "description": "是否支持键盘esc关闭",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`true`",
+        "pureDefault": "true"
+      },
+      {
+        "name": "nzMask",
+        "inputType": 0,
+        "description": "是否展示遮罩",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`true`",
+        "pureDefault": "true"
+      },
+      {
+        "name": "nzMaskClosable",
+        "inputType": 0,
+        "description": "点击蒙层是否允许关闭",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`true`",
+        "pureDefault": "true"
+      },
+      {
+        "name": "nzMaskStyle",
+        "inputType": 0,
+        "description": "遮罩样式",
+        "type": "object",
+        "typeRaw": "`object`",
+        "default": ""
+      },
+      {
+        "name": "nzOkText",
+        "inputType": 0,
+        "description": "确认按钮文字。<i>设为 null 表示不显示确认按钮（若在普通模式下使用了 nzFooter 参数，则该值无效）</i>",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": "确定",
+        "pureDefault": "确定"
+      },
+      {
+        "name": "nzOkType",
+        "inputType": 0,
+        "description": "确认按钮类型。<i>与button的type类型值一致</i>",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": "primary",
+        "pureDefault": "primary"
+      },
+      {
+        "name": "nzStyle",
+        "inputType": 0,
+        "description": "可用于设置浮层的样式，调整浮层位置等",
+        "type": "object",
+        "typeRaw": "`object`",
+        "default": ""
+      },
+      {
+        "name": "nzTitle",
+        "inputType": 0,
+        "description": "标题。<i>留空表示不展示标题。TemplateRef的使用方法可参考案例</i>",
+        "type": "string",
+        "typeRaw": "string<br>TemplateRef",
+        "default": ""
+      },
+      {
+        "name": "nzCloseIcon",
+        "inputType": 0,
+        "description": "自定义关闭图标",
+        "type": "string",
+        "typeRaw": "`string|TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "nzVisible",
+        "inputType": 2,
+        "description": "对话框是否可见。<i>当以 `<nz-modal>` 标签使用时，请务必使用双向绑定，例如：`[(nzVisible)]=\"visible\"`</i>",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzWidth",
+        "inputType": 0,
+        "description": "宽度。<i>使用数字时，默认单位为px</i>",
+        "type": "string",
+        "typeRaw": "string<br>number",
+        "default": "520",
+        "pureDefault": "520"
+      },
+      {
+        "name": "nzClassName",
+        "inputType": 0,
+        "description": "对话框的类名",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
+      },
+      {
+        "name": "nzWrapClassName",
+        "inputType": 0,
+        "description": "对话框外层容器的类名",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
+      },
+      {
+        "name": "nzZIndex",
+        "inputType": 0,
+        "description": "设置 Modal 的 `z-index`",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "1000",
+        "pureDefault": "1000"
+      },
+      {
+        "name": "nzOnCancel",
+        "inputType": 0,
+        "description": "点击遮罩层或右上角叉或取消按钮的回调（若nzContent为Component，则将会以该Component实例作为参数）。<i>注：当以`NzModalService.create`创建时，此参数应传入function（回调函数）。该函数可返回promise，待执行完毕或promise结束时，将自动关闭对话框（返回false可阻止关闭）</i>",
+        "type": "EventEmitter",
+        "typeRaw": "EventEmitter",
+        "default": ""
+      },
+      {
+        "name": "nzOnOk",
+        "inputType": 0,
+        "description": "点击确定回调（若nzContent为Component，则将会以该Component实例作为参数）。<i>注：当以`NzModalService.create`创建时，此参数应传入function（回调函数）。该函数可返回promise，待执行完毕或promise结束时，将自动关闭对话框（返回false可阻止关闭）</i>",
+        "type": "EventEmitter",
+        "typeRaw": "EventEmitter",
+        "default": ""
+      },
+      {
+        "name": "nzContent",
+        "inputType": 0,
+        "description": "内容",
+        "type": "string",
+        "typeRaw": "string<br>TemplateRef<br>Component<br>ng-content",
+        "default": ""
+      },
+      {
+        "name": "nzComponentParams",
+        "inputType": 0,
+        "description": "当nzContent为组件类(Component)时，该参数中的属性将传入nzContent实例中",
+        "type": "object",
+        "typeRaw": "`object`",
+        "default": ""
+      },
+      {
+        "name": "nzIconType",
+        "inputType": 0,
+        "description": "图标 Icon 类型。<i>仅 确认框模式 下有效</i>",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": "`'question-circle'`",
+        "pureDefault": "question-circle"
+      },
+      {
+        "name": "nzAutofocus",
+        "inputType": 0,
+        "description": "自动聚焦及聚焦位置，为 `null` 时禁用",
+        "type": "Enum",
+        "typeRaw": "`'ok' | 'cancel' | 'auto' | null`",
+        "default": "`'auto'`",
+        "typeDefinition": [
+          "ok",
+          "cancel",
+          "auto",
+          "null"
+        ],
+        "pureDefault": "auto"
+      }
+    ],
+    "description": "对话框当前分为2种模式，`普通模式` 和 `确认框模式`（即`Confirm`对话框，通过调用`confirm/info/success/error/warning`弹出），两种模式对API的支持程度稍有不同。",
+    "lib": "ng-zorro-antd",
+    "title": "对话框",
+    "whenToUse": "需要用户处理事务，又不希望跳转页面以致打断工作流程时，可以使用 `Modal` 在当前页面正中打开一个浮层，承载相应的操作。",
+    "doc": "/components/modal/zh",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/modal"
+  },
+  {
+    "_idx": 79,
     "type": "directive",
     "selector": "nzModalFooter",
     "types": {},
@@ -5720,7 +9179,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/modal"
   },
   {
-    "_idx": 14,
+    "_idx": 80,
     "type": "component",
     "selector": "nz-page-header",
     "types": {},
@@ -5776,7 +9235,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/page-header"
   },
   {
-    "_idx": 23,
+    "_idx": 81,
     "type": "component",
     "selector": "nz-pagination",
     "types": {},
@@ -5923,7 +9382,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/pagination"
   },
   {
-    "_idx": 16,
+    "_idx": 82,
     "type": "directive",
     "selector": "nz-popconfirm",
     "types": {},
@@ -6170,7 +9629,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/popconfirm"
   },
   {
-    "_idx": 16,
+    "_idx": 83,
     "type": "directive",
     "selector": "nz-popover",
     "types": {},
@@ -6358,7 +9817,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/popover"
   },
   {
-    "_idx": 22,
+    "_idx": 84,
     "type": "directive",
     "selector": "nz-radio",
     "types": {},
@@ -6423,7 +9882,7 @@
     "snippet": "<label __$1>$2</label>"
   },
   {
-    "_idx": 22,
+    "_idx": 85,
     "type": "directive",
     "selector": "nz-radio-button",
     "types": {},
@@ -6481,7 +9940,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/radio"
   },
   {
-    "_idx": 115,
+    "_idx": 86,
     "type": "component",
     "selector": "nz-radio-group",
     "types": {},
@@ -6556,7 +10015,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/radio"
   },
   {
-    "_idx": 22,
+    "_idx": 87,
     "type": "component",
     "selector": "nz-rate",
     "types": {},
@@ -6689,7 +10148,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/rate"
   },
   {
-    "_idx": 40,
+    "_idx": 88,
     "type": "directive",
     "selector": "nz-resizable",
     "types": {},
@@ -6818,7 +10277,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/resizable"
   },
   {
-    "_idx": 249,
+    "_idx": 89,
     "type": "component",
     "selector": "nz-resize-handle",
     "types": {},
@@ -6841,7 +10300,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/resizable"
   },
   {
-    "_idx": 290,
+    "_idx": 90,
     "type": "component",
     "selector": "nz-resize-handles",
     "types": {},
@@ -6864,7 +10323,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/resizable"
   },
   {
-    "_idx": 13,
+    "_idx": 91,
     "type": "component",
     "selector": "nz-result",
     "types": {},
@@ -6877,7 +10336,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/result"
   },
   {
-    "_idx": 23,
+    "_idx": 92,
     "type": "component",
     "selector": "nz-select",
     "types": {},
@@ -7231,7 +10690,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/select"
   },
   {
-    "_idx": 695,
+    "_idx": 93,
     "type": "component",
     "selector": "nz-option",
     "types": {},
@@ -7289,7 +10748,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/select"
   },
   {
-    "_idx": 788,
+    "_idx": 94,
     "type": "component",
     "selector": "nz-option-group",
     "types": {},
@@ -7311,7 +10770,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/select"
   },
   {
-    "_idx": 32,
+    "_idx": 95,
     "type": "component",
     "selector": "nz-skeleton",
     "types": {},
@@ -7370,7 +10829,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/skeleton"
   },
   {
-    "_idx": 13,
+    "_idx": 96,
     "type": "component",
     "selector": "nz-slider",
     "types": {},
@@ -7526,7 +10985,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/slider"
   },
   {
-    "_idx": 13,
+    "_idx": 97,
     "type": "component",
     "selector": "nz-space",
     "types": {},
@@ -7558,7 +11017,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/space"
   },
   {
-    "_idx": 13,
+    "_idx": 98,
     "type": "component",
     "selector": "nz-spin",
     "types": {},
@@ -7629,7 +11088,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/spin"
   },
   {
-    "_idx": 22,
+    "_idx": 99,
     "type": "component",
     "selector": "nz-statistic",
     "types": {},
@@ -7691,7 +11150,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/statistic"
   },
   {
-    "_idx": 129,
+    "_idx": 100,
     "type": "component",
     "selector": "nz-countdown",
     "types": {},
@@ -7762,7 +11221,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/statistic"
   },
   {
-    "_idx": 250,
+    "_idx": 101,
     "type": "component",
     "selector": "nzFormat",
     "types": {},
@@ -7775,7 +11234,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/statistic"
   },
   {
-    "_idx": 14,
+    "_idx": 102,
     "type": "component",
     "selector": "nz-steps",
     "types": {},
@@ -7891,7 +11350,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/steps"
   },
   {
-    "_idx": 166,
+    "_idx": 103,
     "type": "component",
     "selector": "nz-step",
     "types": {},
@@ -7962,7 +11421,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/steps"
   },
   {
-    "_idx": 22,
+    "_idx": 104,
     "type": "component",
     "selector": "nz-switch",
     "types": {},
@@ -8058,7 +11517,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/switch"
   },
   {
-    "_idx": 47,
+    "_idx": 105,
     "type": "component",
     "selector": "nz-table",
     "types": {},
@@ -8354,7 +11813,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/table"
   },
   {
-    "_idx": 617,
+    "_idx": 106,
     "type": "component",
     "selector": "th",
     "types": {},
@@ -8579,7 +12038,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/table"
   },
   {
-    "_idx": 1094,
+    "_idx": 107,
     "type": "component",
     "selector": "td",
     "types": {},
@@ -8716,7 +12175,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/table"
   },
   {
-    "_idx": 1385,
+    "_idx": 108,
     "type": "component",
     "selector": "tr",
     "types": {},
@@ -8738,7 +12197,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/table"
   },
   {
-    "_idx": 1422,
+    "_idx": 109,
     "type": "component",
     "selector": "nz-filter-trigger",
     "types": {},
@@ -8785,7 +12244,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/table"
   },
   {
-    "_idx": 1504,
+    "_idx": 110,
     "type": "directive",
     "selector": "nz-virtual-scroll",
     "types": {},
@@ -8798,7 +12257,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/table"
   },
   {
-    "_idx": 33,
+    "_idx": 111,
     "type": "component",
     "selector": "nz-tabset",
     "types": {},
@@ -8971,7 +12430,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tabs"
   },
   {
-    "_idx": 348,
+    "_idx": 112,
     "type": "component",
     "selector": "nz-tab",
     "types": {},
@@ -9035,7 +12494,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tabs"
   },
   {
-    "_idx": 455,
+    "_idx": 113,
     "type": "directive",
     "selector": "nz-tab",
     "types": {},
@@ -9048,7 +12507,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tabs"
   },
   {
-    "_idx": 461,
+    "_idx": 114,
     "type": "directive",
     "selector": "nz-tab-link",
     "types": {},
@@ -9061,7 +12520,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tabs"
   },
   {
-    "_idx": 22,
+    "_idx": 115,
     "type": "component",
     "selector": "nz-tag",
     "types": {},
@@ -9093,9 +12552,27 @@
         "name": "nzColor",
         "inputType": 0,
         "description": "标签色",
-        "type": "string",
+        "type": "Enum",
         "typeRaw": "`string`",
-        "default": ""
+        "default": "",
+        "typeDefinition": [
+          "success",
+          "processing",
+          "error",
+          "default",
+          "warning",
+          "magenta",
+          "red",
+          "volcano",
+          "orange",
+          "gold",
+          "lime",
+          "green",
+          "cyan",
+          "blue",
+          "geekblue",
+          "purple"
+        ]
       },
       {
         "name": "nzOnClose",
@@ -9122,7 +12599,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tag"
   },
   {
-    "_idx": 14,
+    "_idx": 116,
     "type": "component",
     "selector": "nz-time-picker",
     "types": {},
@@ -9333,7 +12810,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/time-picker"
   },
   {
-    "_idx": 23,
+    "_idx": 117,
     "type": "component",
     "selector": "nz-timeline",
     "types": {},
@@ -9387,7 +12864,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/timeline"
   },
   {
-    "_idx": 105,
+    "_idx": 118,
     "type": "component",
     "selector": "nz-timeline-item",
     "types": {},
@@ -9418,7 +12895,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/timeline"
   },
   {
-    "_idx": 16,
+    "_idx": 119,
     "type": "component",
     "selector": "nz-transfer",
     "types": {},
@@ -9603,7 +13080,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/transfer"
   },
   {
-    "_idx": 10,
+    "_idx": 120,
     "type": "component",
     "selector": "nz-tree",
     "types": {},
@@ -9925,7 +13402,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tree"
   },
   {
-    "_idx": 13,
+    "_idx": 121,
     "type": "component",
     "selector": "nz-tree-select",
     "types": {},
@@ -10167,7 +13644,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tree-select"
   },
   {
-    "_idx": 21,
+    "_idx": 122,
     "type": "directive",
     "selector": "nz-typography",
     "types": {},
@@ -10289,7 +13766,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/typography"
   },
   {
-    "_idx": 35,
+    "_idx": 123,
     "type": "component",
     "selector": "nz-upload",
     "types": {},
@@ -10537,7 +14014,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/upload"
   },
   {
-    "_idx": 6,
+    "_idx": 124,
     "type": "component",
     "selector": "avatar-list",
     "types": {},
@@ -10582,7 +14059,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/avatar-list"
   },
   {
-    "_idx": 71,
+    "_idx": 125,
     "type": "component",
     "selector": "avatar-list-item",
     "types": {},
@@ -10628,7 +14105,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/avatar-list"
   },
   {
-    "_idx": 10,
+    "_idx": 126,
     "type": "component",
     "selector": "count-down",
     "types": {},
@@ -10666,7 +14143,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/count-down"
   },
   {
-    "_idx": 6,
+    "_idx": 127,
     "type": "component",
     "selector": "range-picker",
     "types": {
@@ -10910,7 +14387,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/date-picker"
   },
   {
-    "_idx": 10,
+    "_idx": 128,
     "type": "directive",
     "selector": "down-file",
     "types": {},
@@ -10981,7 +14458,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/down-file"
   },
   {
-    "_idx": 6,
+    "_idx": 129,
     "type": "component",
     "selector": "error-collect",
     "types": {},
@@ -11013,7 +14490,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/error-collect"
   },
   {
-    "_idx": 6,
+    "_idx": 130,
     "type": "directive",
     "selector": "error-collect",
     "types": {},
@@ -11045,7 +14522,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/error-collect"
   },
   {
-    "_idx": 6,
+    "_idx": 131,
     "type": "component",
     "selector": "exception",
     "types": {},
@@ -11096,7 +14573,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/exception"
   },
   {
-    "_idx": 12,
+    "_idx": 132,
     "type": "component",
     "selector": "footer-toolbar",
     "types": {},
@@ -11127,7 +14604,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/footer-toolbar"
   },
   {
-    "_idx": 6,
+    "_idx": 133,
     "type": "component",
     "selector": "full-content",
     "types": {},
@@ -11167,7 +14644,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/full-content"
   },
   {
-    "_idx": 71,
+    "_idx": 134,
     "type": "directive",
     "selector": "full-toggle",
     "types": {},
@@ -11180,7 +14657,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/full-content"
   },
   {
-    "_idx": 6,
+    "_idx": 135,
     "type": "component",
     "selector": "global-footer",
     "types": {
@@ -11239,7 +14716,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/global-footer"
   },
   {
-    "_idx": 57,
+    "_idx": 136,
     "type": "component",
     "selector": "global-footer-item",
     "types": {},
@@ -11270,7 +14747,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/global-footer"
   },
   {
-    "_idx": 12,
+    "_idx": 137,
     "type": "component",
     "selector": "media",
     "types": {},
@@ -11325,7 +14802,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/media"
   },
   {
-    "_idx": 6,
+    "_idx": 138,
     "type": "component",
     "selector": "notice-icon",
     "types": {},
@@ -11397,7 +14874,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/notice-icon"
   },
   {
-    "_idx": 6,
+    "_idx": 139,
     "type": "component",
     "selector": "numberToChinese",
     "types": {},
@@ -11410,7 +14887,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/number-to-chinese"
   },
   {
-    "_idx": 6,
+    "_idx": 140,
     "type": "component",
     "selector": "page-header",
     "types": {},
@@ -11578,7 +15055,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/page-header"
   },
   {
-    "_idx": 14,
+    "_idx": 141,
     "type": "component",
     "selector": "qr",
     "types": {},
@@ -11664,6 +15141,15 @@
         "pureDefault": "220"
       },
       {
+        "name": "delay",
+        "inputType": 0,
+        "description": "延迟渲染，单位：毫秒",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`0`",
+        "pureDefault": "0"
+      },
+      {
         "name": "change",
         "inputType": 1,
         "description": "变更时回调，返回二维码dataURL值",
@@ -11680,7 +15166,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/qr"
   },
   {
-    "_idx": 6,
+    "_idx": 142,
     "type": "component",
     "selector": "quick-menu",
     "types": {},
@@ -11739,7 +15225,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/quick-menu"
   },
   {
-    "_idx": 6,
+    "_idx": 143,
     "type": "component",
     "selector": "result",
     "types": {},
@@ -11785,7 +15271,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/result"
   },
   {
-    "_idx": 494,
+    "_idx": 144,
     "type": "component",
     "selector": "reuse-tab",
     "types": {
@@ -11970,7 +15456,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/reuse-tab"
   },
   {
-    "_idx": 30,
+    "_idx": 145,
     "type": "component",
     "selector": "se-container",
     "types": {},
@@ -12098,7 +15584,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/se"
   },
   {
-    "_idx": 30,
+    "_idx": 146,
     "type": "directive",
     "selector": "se-container",
     "types": {},
@@ -12226,7 +15712,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/se"
   },
   {
-    "_idx": 209,
+    "_idx": 147,
     "type": "component",
     "selector": "se",
     "types": {},
@@ -12336,7 +15822,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/se"
   },
   {
-    "_idx": 386,
+    "_idx": 148,
     "type": "component",
     "selector": "se-title",
     "types": {},
@@ -12349,7 +15835,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/se"
   },
   {
-    "_idx": 386,
+    "_idx": 149,
     "type": "directive",
     "selector": "se-title",
     "types": {},
@@ -12362,7 +15848,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/se"
   },
   {
-    "_idx": 11,
+    "_idx": 150,
     "type": "component",
     "selector": "sg-container",
     "types": {},
@@ -12429,7 +15915,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sg"
   },
   {
-    "_idx": 11,
+    "_idx": 151,
     "type": "directive",
     "selector": "sg-container",
     "types": {},
@@ -12496,7 +15982,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sg"
   },
   {
-    "_idx": 88,
+    "_idx": 152,
     "type": "component",
     "selector": "sg",
     "types": {},
@@ -12526,7 +16012,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sg"
   },
   {
-    "_idx": 59,
+    "_idx": 153,
     "type": "component",
     "selector": "sidebar-nav",
     "types": {},
@@ -12584,7 +16070,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sidebar-nav"
   },
   {
-    "_idx": 80,
+    "_idx": 154,
     "type": "component",
     "selector": "st",
     "types": {
@@ -13187,7 +16673,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/st"
   },
   {
-    "_idx": 6,
+    "_idx": 155,
     "type": "component",
     "selector": "sv-container",
     "types": {},
@@ -13278,7 +16764,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sv"
   },
   {
-    "_idx": 6,
+    "_idx": 156,
     "type": "directive",
     "selector": "sv-container",
     "types": {},
@@ -13369,7 +16855,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sv"
   },
   {
-    "_idx": 151,
+    "_idx": 157,
     "type": "component",
     "selector": "sv",
     "types": {},
@@ -13453,7 +16939,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sv"
   },
   {
-    "_idx": 272,
+    "_idx": 158,
     "type": "component",
     "selector": "sv-title",
     "types": {},
@@ -13466,7 +16952,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sv"
   },
   {
-    "_idx": 272,
+    "_idx": 159,
     "type": "directive",
     "selector": "sv-title",
     "types": {},
@@ -13479,7 +16965,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sv"
   },
   {
-    "_idx": 6,
+    "_idx": 160,
     "type": "component",
     "selector": "tag-select",
     "types": {},
@@ -13510,7 +16996,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/tag-select"
   },
   {
-    "_idx": 148,
+    "_idx": 161,
     "type": "directive",
     "selector": "xlsx",
     "types": {},
@@ -13523,7 +17009,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/xlsx"
   },
   {
-    "_idx": 6,
+    "_idx": 162,
     "type": "component",
     "selector": "g2-bar",
     "types": {},
@@ -13615,7 +17101,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/bar"
   },
   {
-    "_idx": 6,
+    "_idx": 163,
     "type": "component",
     "selector": "g2-card",
     "types": {},
@@ -13686,7 +17172,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/card"
   },
   {
-    "_idx": 34,
+    "_idx": 164,
     "type": "component",
     "selector": "g2-custom",
     "types": {},
@@ -13758,7 +17244,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/custom"
   },
   {
-    "_idx": 6,
+    "_idx": 165,
     "type": "component",
     "selector": "g2-gauge",
     "types": {},
@@ -13848,7 +17334,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/gauge"
   },
   {
-    "_idx": 6,
+    "_idx": 166,
     "type": "component",
     "selector": "g2-mini-area",
     "types": {},
@@ -13978,7 +17464,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/mini-area"
   },
   {
-    "_idx": 6,
+    "_idx": 167,
     "type": "component",
     "selector": "g2-mini-bar",
     "types": {},
@@ -14073,7 +17559,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/mini-bar"
   },
   {
-    "_idx": 6,
+    "_idx": 168,
     "type": "component",
     "selector": "g2-mini-progress",
     "types": {},
@@ -14119,7 +17605,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/mini-progress"
   },
   {
-    "_idx": 6,
+    "_idx": 169,
     "type": "component",
     "selector": "number-info",
     "types": {},
@@ -14207,7 +17693,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/number-info"
   },
   {
-    "_idx": 6,
+    "_idx": 170,
     "type": "component",
     "selector": "g2-pie",
     "types": {},
@@ -14367,7 +17853,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/pie"
   },
   {
-    "_idx": 6,
+    "_idx": 171,
     "type": "component",
     "selector": "g2-radar",
     "types": {},
@@ -14448,7 +17934,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/radar"
   },
   {
-    "_idx": 6,
+    "_idx": 172,
     "type": "component",
     "selector": "g2-single-bar",
     "types": {},
@@ -14568,7 +18054,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/single-bar"
   },
   {
-    "_idx": 6,
+    "_idx": 173,
     "type": "component",
     "selector": "g2-tag-cloud",
     "types": {},
@@ -14626,7 +18112,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/tag-cloud"
   },
   {
-    "_idx": 6,
+    "_idx": 174,
     "type": "component",
     "selector": "g2-timeline",
     "types": {
@@ -14804,7 +18290,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/timeline"
   },
   {
-    "_idx": 6,
+    "_idx": 175,
     "type": "component",
     "selector": "trend",
     "types": {},
@@ -14848,7 +18334,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/trend"
   },
   {
-    "_idx": 6,
+    "_idx": 176,
     "type": "component",
     "selector": "g2-water-wave",
     "types": {},
@@ -14905,7 +18391,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/water-wave"
   },
   {
-    "_idx": 335,
+    "_idx": 177,
     "type": "component",
     "selector": "sf",
     "types": {
@@ -15128,7 +18614,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/form/src"
   },
   {
-    "_idx": 335,
+    "_idx": 178,
     "type": "directive",
     "selector": "sf",
     "types": {
@@ -15351,7 +18837,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/form/src"
   },
   {
-    "_idx": 27,
+    "_idx": 179,
     "type": "component",
     "selector": "nz-breadcrumb-item",
     "types": {},
@@ -15362,5 +18848,33 @@
     "whenToUse": "- 当系统拥有超过两级以上的层级结构时；\n- 当需要告知用户『你在哪里』时；\n- 当需要向上导航的功能时。",
     "doc": "/components/breadcrumb/zh",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/breadcrumb"
+  },
+  {
+    "selector": "nz-layout",
+    "description": "布局容器，其下可嵌套 `nz-header` `nz-sider` `nz-content` `nz-footer` 或 `nz-layout` 本身，可以放在任何父容器中。",
+    "type": "component",
+    "lib": "ng-zorro-antd",
+    "_idx": 180
+  },
+  {
+    "selector": "nz-header",
+    "description": "顶部布局，自带默认样式，其下可嵌套任何元素，只能放在 `nz-layout` 中。",
+    "type": "component",
+    "lib": "ng-zorro-antd",
+    "_idx": 181
+  },
+  {
+    "selector": "nz-content",
+    "description": "内容部分，自带默认样式，其下可嵌套任何元素，只能放在 `nz-layout` 中。",
+    "type": "component",
+    "lib": "ng-zorro-antd",
+    "_idx": 182
+  },
+  {
+    "selector": "nz-footer",
+    "description": "底部布局，自带默认样式，其下可嵌套任何元素，只能放在 `nz-layout` 中。",
+    "type": "component",
+    "lib": "ng-zorro-antd",
+    "_idx": 183
   }
 ]
