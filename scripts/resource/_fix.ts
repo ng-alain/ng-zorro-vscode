@@ -31,6 +31,12 @@ const CP = {
     type: 'boolean',
     typeRaw: '`boolean`',
   },
+  name: {
+    name: 'name',
+    inputType: 0,
+    type: 'string',
+    typeRaw: '`string`',
+  },
   ngModel: {
     name: 'ngModel',
     inputType: 2,
@@ -168,5 +174,5 @@ DATA_ENTRY.forEach((selector) => {
   if (!FIX.extraProperty[selector]) {
     FIX.extraProperty[selector] = [];
   }
-  FIX.extraProperty[selector].push(CP.formControlName);
+  FIX.extraProperty[selector].push(CP.formControlName, CP.name);
 });

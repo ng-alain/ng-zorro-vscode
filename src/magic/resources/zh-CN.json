@@ -1822,6 +1822,12 @@
         "inputType": 0,
         "type": "string",
         "typeRaw": "`string`"
+      },
+      {
+        "name": "name",
+        "inputType": 0,
+        "type": "string",
+        "typeRaw": "`string`"
       }
     ],
     "lib": "ng-zorro-antd",
@@ -1893,6 +1899,12 @@
       },
       {
         "name": "formControlName",
+        "inputType": 0,
+        "type": "string",
+        "typeRaw": "`string`"
+      },
+      {
+        "name": "name",
         "inputType": 0,
         "type": "string",
         "typeRaw": "`string`"
@@ -2445,6 +2457,12 @@
         "inputType": 0,
         "type": "string",
         "typeRaw": "`string`"
+      },
+      {
+        "name": "name",
+        "inputType": 0,
+        "type": "string",
+        "typeRaw": "`string`"
       }
     ],
     "lib": "ng-zorro-antd",
@@ -2815,6 +2833,12 @@
         "inputType": 0,
         "type": "string",
         "typeRaw": "`string`"
+      },
+      {
+        "name": "name",
+        "inputType": 0,
+        "type": "string",
+        "typeRaw": "`string`"
       }
     ],
     "lib": "ng-zorro-antd",
@@ -2992,6 +3016,12 @@
       },
       {
         "name": "formControlName",
+        "inputType": 0,
+        "type": "string",
+        "typeRaw": "`string`"
+      },
+      {
+        "name": "name",
         "inputType": 0,
         "type": "string",
         "typeRaw": "`string`"
@@ -3230,6 +3260,12 @@
       },
       {
         "name": "formControlName",
+        "inputType": 0,
+        "type": "string",
+        "typeRaw": "`string`"
+      },
+      {
+        "name": "name",
         "inputType": 0,
         "type": "string",
         "typeRaw": "`string`"
@@ -7772,6 +7808,12 @@
         "inputType": 0,
         "type": "string",
         "typeRaw": "`string`"
+      },
+      {
+        "name": "name",
+        "inputType": 0,
+        "type": "string",
+        "typeRaw": "`string`"
       }
     ],
     "description": "nz-input 可以使用所有的W3C标准下的所有 [使用方式](https://www.w3schools.com/tags/tag_input.asp) 和 Angular对 input 的全部额外功能支持。",
@@ -8016,6 +8058,12 @@
       },
       {
         "name": "formControlName",
+        "inputType": 0,
+        "type": "string",
+        "typeRaw": "`string`"
+      },
+      {
+        "name": "name",
         "inputType": 0,
         "type": "string",
         "typeRaw": "`string`"
@@ -9871,6 +9919,12 @@
         "inputType": 0,
         "type": "string",
         "typeRaw": "`string`"
+      },
+      {
+        "name": "name",
+        "inputType": 0,
+        "type": "string",
+        "typeRaw": "`string`"
       }
     ],
     "lib": "ng-zorro-antd",
@@ -10135,6 +10189,12 @@
       },
       {
         "name": "formControlName",
+        "inputType": 0,
+        "type": "string",
+        "typeRaw": "`string`"
+      },
+      {
+        "name": "name",
         "inputType": 0,
         "type": "string",
         "typeRaw": "`string`"
@@ -10680,6 +10740,12 @@
         "inputType": 0,
         "type": "string",
         "typeRaw": "`string`"
+      },
+      {
+        "name": "name",
+        "inputType": 0,
+        "type": "string",
+        "typeRaw": "`string`"
       }
     ],
     "lib": "ng-zorro-antd",
@@ -10972,6 +11038,12 @@
       },
       {
         "name": "formControlName",
+        "inputType": 0,
+        "type": "string",
+        "typeRaw": "`string`"
+      },
+      {
+        "name": "name",
         "inputType": 0,
         "type": "string",
         "typeRaw": "`string`"
@@ -11504,6 +11576,12 @@
       },
       {
         "name": "formControlName",
+        "inputType": 0,
+        "type": "string",
+        "typeRaw": "`string`"
+      },
+      {
+        "name": "name",
         "inputType": 0,
         "type": "string",
         "typeRaw": "`string`"
@@ -12800,6 +12878,12 @@
         "inputType": 0,
         "type": "string",
         "typeRaw": "`string`"
+      },
+      {
+        "name": "name",
+        "inputType": 0,
+        "type": "string",
+        "typeRaw": "`string`"
       }
     ],
     "lib": "ng-zorro-antd",
@@ -13631,6 +13715,12 @@
       },
       {
         "name": "formControlName",
+        "inputType": 0,
+        "type": "string",
+        "typeRaw": "`string`"
+      },
+      {
+        "name": "name",
         "inputType": 0,
         "type": "string",
         "typeRaw": "`string`"
