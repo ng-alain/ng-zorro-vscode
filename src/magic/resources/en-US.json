@@ -1296,11 +1296,27 @@
         "default": ""
       },
       {
+        "name": "nzDisabledDate",
+        "inputType": 0,
+        "description": "specify the date that cannot be selected",
+        "type": "function",
+        "typeRaw": "`(current: Date) => boolean`",
+        "default": ""
+      },
+      {
         "name": "nzPanelChange",
         "inputType": 1,
         "description": "Callback for when panel changes",
         "type": "EventEmitter",
         "typeRaw": "`EventEmitter<{ date: Date, mode: 'month' | 'year' }>`",
+        "default": ""
+      },
+      {
+        "name": "nzSelectChange",
+        "inputType": 1,
+        "description": "A callback function of selected item",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<Date>`",
         "default": ""
       }
     ],
@@ -3477,6 +3493,15 @@
         "pureDefault": "true"
       },
       {
+        "name": "nzCloseOnNavigation",
+        "inputType": 0,
+        "description": "Whether to close the drawer when the navigation history changes",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`true`",
+        "pureDefault": "true"
+      },
+      {
         "name": "nzKeyboard",
         "inputType": 0,
         "description": "Whether support press esc to close",
@@ -3722,7 +3747,7 @@
     "selector": "nz-dropdown-menu",
     "types": {},
     "properties": [],
-    "description": "Wrap Dropdown Menu and pass to `[nz-dropdown]` 和 `NzContextMenuService`, you can export it via Template Syntax `nzDropdownMenu`",
+    "description": "Wrap Dropdown Menu and pass to `[nz-dropdown]` and `NzContextMenuService`, you can export it via Template Syntax `nzDropdownMenu`",
     "lib": "ng-zorro-antd",
     "title": "Dropdown",
     "whenToUse": "If there are too many operations to display, you can wrap them in a `Dropdown`. By clicking/hovering on the trigger, a dropdown menu should appear, which allows you to choose one option and execute relevant actions.",
@@ -8955,6 +8980,15 @@
         "pureDefault": "true"
       },
       {
+        "name": "nzCloseOnNavigation",
+        "inputType": 0,
+        "description": "Whether to close the modal when the navigation history changes",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`true`",
+        "pureDefault": "true"
+      },
+      {
         "name": "nzMaskStyle",
         "inputType": 0,
         "description": "Style for modal's mask element.",
@@ -9074,7 +9108,7 @@
       {
         "name": "nzComponentParams",
         "inputType": 0,
-        "description": "When nzContent is a Component, the attributes in this parameter will be passed to the nzContent instance",
+        "description": "Will be instance property when `nzContent` is a component，will be template variable when `nzContent` is `TemplateRef`",
         "type": "object",
         "typeRaw": "`object`",
         "default": ""
@@ -10998,6 +11032,15 @@
         "pureDefault": "false"
       },
       {
+        "name": "nzReverse",
+        "inputType": 0,
+        "description": "Reverse the component",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
         "name": "nzTooltipVisible",
         "inputType": 0,
         "description": "When set to `always` tooltips are always displayed. When set to `never` they are never displayed",
@@ -12474,7 +12517,7 @@
         "inputType": 1,
         "description": "Current tab's change callback",
         "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<{nzSelectedIndex: number,tab: NzTabComponent}>`",
+        "typeRaw": "`EventEmitter<{index: number,tab: NzTabComponent}>`",
         "default": ""
       },
       {
@@ -13840,6 +13883,14 @@
         "type": "EventEmitter",
         "typeRaw": "`EventEmitter<void>`",
         "default": ""
+      },
+      {
+        "name": "nzOnEllipsis",
+        "inputType": 1,
+        "description": "Trigger when ellipsis status changed",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<boolean>`",
+        "default": ""
       }
     ],
     "lib": "ng-zorro-antd",
@@ -13868,7 +13919,7 @@
         "inputType": 0,
         "description": "Required. Uploading URL",
         "type": "string",
-        "typeRaw": "`string | ((file: UploadFile) => string | Observable<string>)`",
+        "typeRaw": "`string | ((file: NzUploadFile) => string | Observable<string>)`",
         "default": ""
       },
       {
@@ -13885,7 +13936,7 @@
         "inputType": 0,
         "description": "Hook function which will be executed before uploading. Uploading will be stopped with `false` or a Observable. **Warning：this function is not supported in IE9**. NOTICE: Muse be use `=>` to define the method.",
         "type": "function",
-        "typeRaw": "`(file: UploadFile, fileList: UploadFile[]) => boolean | Observable<boolean>`",
+        "typeRaw": "`(file: NzUploadFile, fileList: NzUploadFile[]) => boolean | Observable<boolean>`",
         "default": ""
       },
       {
@@ -13901,7 +13952,7 @@
         "inputType": 0,
         "description": "Uploading params or function which can return uploading params. NOTICE: Muse be use `=>` to define the method.",
         "type": "object",
-        "typeRaw": "`Object | ((file: UploadFile) => Object | Observable<{}>)`",
+        "typeRaw": "`Object | ((file: NzUploadFile) => Object | Observable<{}>)`",
         "default": ""
       },
       {
@@ -13919,7 +13970,7 @@
         "inputType": 0,
         "description": "List of files, two-way data-binding",
         "type": "Array",
-        "typeRaw": "`UploadFile[]`",
+        "typeRaw": "`NzUploadFile[]`",
         "default": ""
       },
       {
@@ -13961,7 +14012,7 @@
         "inputType": 0,
         "description": "Set request headers, valid above IE10. NOTICE: Muse be use `=>` to define the method.",
         "type": "object",
-        "typeRaw": "`Object | ((file: UploadFile) => Object | Observable<{}>)`",
+        "typeRaw": "`Object | ((file: NzUploadFile) => Object | Observable<{}>)`",
         "default": ""
       },
       {
@@ -14037,7 +14088,7 @@
         "inputType": 0,
         "description": "A callback function, will be executed when file link or preview icon is clicked. NOTICE: Muse be use `=>` to define the method.",
         "type": "function",
-        "typeRaw": "`(file: UploadFile) => void`",
+        "typeRaw": "`(file: NzUploadFile) => void`",
         "default": ""
       },
       {
@@ -14045,7 +14096,7 @@
         "inputType": 0,
         "description": "Customize preview file logic. NOTICE: Muse be use `=>` to define the method.",
         "type": "function",
-        "typeRaw": "`(file: UploadFile) => Observable<dataURL: string>`",
+        "typeRaw": "`(file: NzUploadFile) => Observable<dataURL: string>`",
         "default": ""
       },
       {
@@ -14053,7 +14104,7 @@
         "inputType": 0,
         "description": "A callback function, will be executed when removing file button is clicked, remove event will be prevented when return value is `false` or a Observable. NOTICE: Muse be use `=>` to define the method.",
         "type": "function",
-        "typeRaw": "`(file: UploadFile) => boolean | Observable<boolean>`",
+        "typeRaw": "`(file: NzUploadFile) => boolean | Observable<boolean>`",
         "default": ""
       },
       {
@@ -14061,7 +14112,7 @@
         "inputType": 1,
         "description": "A callback function, can be executed when uploading state is changing",
         "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<UploadChangeParam>`",
+        "typeRaw": "`EventEmitter<NzUploadChangeParam>`",
         "default": ""
       },
       {
@@ -14069,7 +14120,7 @@
         "inputType": 0,
         "description": "Click the method to download the file, pass the method to perform the method logic, do not pass the default jump to the new TAB.",
         "type": "function",
-        "typeRaw": "`(file: UploadFile) => void`",
+        "typeRaw": "`(file: NzUploadFile) => void`",
         "default": "Jump to new TAB",
         "pureDefault": "Jump to new TAB"
       },
@@ -14078,7 +14129,7 @@
         "inputType": 0,
         "description": "Customize transform file before request",
         "type": "function",
-        "typeRaw": "`(file: UploadFile) => UploadTransformFileType`",
+        "typeRaw": "`(file: NzUploadFile) => NzUploadTransformFileType`",
         "default": ""
       },
       {
@@ -14552,38 +14603,63 @@
   {
     "_idx": 125,
     "type": "component",
-    "selector": "error-collect",
+    "selector": "ellipsis",
     "types": {},
     "properties": [
       {
-        "name": "freq",
+        "name": "tooltip",
         "inputType": 0,
-        "description": "Monitor frequency, unit is milliseconds",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "`500`",
-        "pureDefault": "500"
+        "description": "tooltip for showing the full text content when hovering over",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
       },
       {
-        "name": "offsetTop",
+        "name": "length",
         "inputType": 0,
-        "description": "Top offset, unit is `px`",
+        "description": "maximum number of characters in the text before being truncated",
         "type": "number",
         "typeRaw": "`number`",
-        "default": "`145`",
-        "pureDefault": "145"
+        "default": ""
+      },
+      {
+        "name": "lines",
+        "inputType": 0,
+        "description": "maximum number of rows in the text before being truncated",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": ""
+      },
+      {
+        "name": "fullWidthRecognition",
+        "inputType": 0,
+        "description": "whether consider full-width character length as 2 when calculate string length",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "tail",
+        "inputType": 0,
+        "description": "specify overflow tail",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": "`'...'`",
+        "pureDefault": "..."
       }
     ],
     "lib": "@delon/abc",
-    "title": "Error Collect",
-    "description": "A simple form exception messages collector that jump to element location via click icon; it must be a standard `form`.",
+    "title": "Ellipsis",
+    "description": "When the text is too long, the Ellipsis automatically shortens it according to its length or the maximum number of lines.",
     "whenToUse": "",
-    "doc": "/components/error-collect/en",
-    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/error-collect"
+    "doc": "/components/ellipsis/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/ellipsis"
   },
   {
     "_idx": 126,
-    "type": "directive",
+    "type": "component",
     "selector": "error-collect",
     "types": {},
     "properties": [
@@ -14615,6 +14691,38 @@
   },
   {
     "_idx": 127,
+    "type": "directive",
+    "selector": "error-collect",
+    "types": {},
+    "properties": [
+      {
+        "name": "freq",
+        "inputType": 0,
+        "description": "Monitor frequency, unit is milliseconds",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`500`",
+        "pureDefault": "500"
+      },
+      {
+        "name": "offsetTop",
+        "inputType": 0,
+        "description": "Top offset, unit is `px`",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`145`",
+        "pureDefault": "145"
+      }
+    ],
+    "lib": "@delon/abc",
+    "title": "Error Collect",
+    "description": "A simple form exception messages collector that jump to element location via click icon; it must be a standard `form`.",
+    "whenToUse": "",
+    "doc": "/components/error-collect/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/error-collect"
+  },
+  {
+    "_idx": 128,
     "type": "component",
     "selector": "exception",
     "types": {},
@@ -14665,7 +14773,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/exception"
   },
   {
-    "_idx": 128,
+    "_idx": 129,
     "type": "component",
     "selector": "footer-toolbar",
     "types": {},
@@ -14696,7 +14804,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/footer-toolbar"
   },
   {
-    "_idx": 129,
+    "_idx": 130,
     "type": "component",
     "selector": "full-content",
     "types": {},
@@ -14736,7 +14844,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/full-content"
   },
   {
-    "_idx": 130,
+    "_idx": 131,
     "type": "directive",
     "selector": "full-toggle",
     "types": {},
@@ -14749,7 +14857,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/full-content"
   },
   {
-    "_idx": 131,
+    "_idx": 132,
     "type": "component",
     "selector": "global-footer",
     "types": {
@@ -14808,7 +14916,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/global-footer"
   },
   {
-    "_idx": 132,
+    "_idx": 133,
     "type": "component",
     "selector": "global-footer-item",
     "types": {},
@@ -14839,7 +14947,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/global-footer"
   },
   {
-    "_idx": 133,
+    "_idx": 134,
     "type": "component",
     "selector": "media",
     "types": {},
@@ -14894,7 +15002,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/media"
   },
   {
-    "_idx": 134,
+    "_idx": 135,
     "type": "component",
     "selector": "notice-icon",
     "types": {},
@@ -14966,7 +15074,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/notice-icon"
   },
   {
-    "_idx": 135,
+    "_idx": 136,
     "type": "component",
     "selector": "numberToChinese",
     "types": {},
@@ -14979,7 +15087,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/number-to-chinese"
   },
   {
-    "_idx": 136,
+    "_idx": 137,
     "type": "component",
     "selector": "page-header",
     "types": {},
@@ -15147,7 +15255,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/page-header"
   },
   {
-    "_idx": 137,
+    "_idx": 138,
     "type": "component",
     "selector": "qr",
     "types": {},
@@ -15258,7 +15366,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/qr"
   },
   {
-    "_idx": 138,
+    "_idx": 139,
     "type": "component",
     "selector": "quick-menu",
     "types": {},
@@ -15296,8 +15404,7 @@
         "description": "Background for the quick menu",
         "type": "string",
         "typeRaw": "`string`",
-        "default": "`#fff`",
-        "pureDefault": "#fff"
+        "default": ""
       },
       {
         "name": "borderColor",
@@ -15305,8 +15412,7 @@
         "description": "Border for the quick menu",
         "type": "string",
         "typeRaw": "`string`",
-        "default": "`#ddd`",
-        "pureDefault": "#ddd"
+        "default": ""
       }
     ],
     "lib": "@delon/abc",
@@ -15317,7 +15423,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/quick-menu"
   },
   {
-    "_idx": 139,
+    "_idx": 140,
     "type": "component",
     "selector": "result",
     "types": {},
@@ -15363,7 +15469,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/result"
   },
   {
-    "_idx": 140,
+    "_idx": 141,
     "type": "component",
     "selector": "reuse-tab",
     "types": {
@@ -15548,7 +15654,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/reuse-tab"
   },
   {
-    "_idx": 141,
+    "_idx": 142,
     "type": "component",
     "selector": "se-container",
     "types": {},
@@ -15651,6 +15757,15 @@
         "pureDefault": "false"
       },
       {
+        "name": "ingoreDirty",
+        "inputType": 0,
+        "description": "Whether to ignore the `dirty` check",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
         "name": "line",
         "inputType": 0,
         "description": "whether separation line style",
@@ -15666,6 +15781,14 @@
         "type": "string",
         "typeRaw": "`string,TemplateRef<void>`",
         "default": ""
+      },
+      {
+        "name": "errors",
+        "inputType": 0,
+        "description": "Batch modify `se` error value",
+        "type": "Array",
+        "typeRaw": "`SEErrorRefresh[]`",
+        "default": ""
       }
     ],
     "lib": "@delon/abc",
@@ -15676,7 +15799,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/se"
   },
   {
-    "_idx": 142,
+    "_idx": 143,
     "type": "directive",
     "selector": "se-container",
     "types": {},
@@ -15779,6 +15902,15 @@
         "pureDefault": "false"
       },
       {
+        "name": "ingoreDirty",
+        "inputType": 0,
+        "description": "Whether to ignore the `dirty` check",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
         "name": "line",
         "inputType": 0,
         "description": "whether separation line style",
@@ -15794,6 +15926,14 @@
         "type": "string",
         "typeRaw": "`string,TemplateRef<void>`",
         "default": ""
+      },
+      {
+        "name": "errors",
+        "inputType": 0,
+        "description": "Batch modify `se` error value",
+        "type": "Array",
+        "typeRaw": "`SEErrorRefresh[]`",
+        "default": ""
       }
     ],
     "lib": "@delon/abc",
@@ -15804,7 +15944,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/se"
   },
   {
-    "_idx": 143,
+    "_idx": 144,
     "type": "component",
     "selector": "se",
     "types": {},
@@ -15914,21 +16054,8 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/se"
   },
   {
-    "_idx": 144,
-    "type": "component",
-    "selector": "se-title",
-    "types": {},
-    "properties": [],
-    "description": "Display title.",
-    "lib": "@delon/abc",
-    "title": "Edit",
-    "whenToUse": "",
-    "doc": "/components/se/en",
-    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/se"
-  },
-  {
     "_idx": 145,
-    "type": "directive",
+    "type": "component",
     "selector": "se-title",
     "types": {},
     "properties": [],
@@ -15941,74 +16068,20 @@
   },
   {
     "_idx": 146,
-    "type": "component",
-    "selector": "sg-container",
+    "type": "directive",
+    "selector": "se-title",
     "types": {},
-    "properties": [
-      {
-        "name": "gutter",
-        "inputType": 0,
-        "description": "specify the distance between two items, unit is `px`, only `nzLayout:horizontal`",
-        "type": "Enum",
-        "typeRaw": "`number`",
-        "default": "`32`",
-        "pureDefault": "32",
-        "typeDefinition": [
-          "0",
-          "8",
-          "16",
-          "24",
-          "32",
-          "40",
-          "48",
-          "56",
-          "64"
-        ]
-      },
-      {
-        "name": "sg-container",
-        "inputType": 0,
-        "description": "specify the maximum number of columns to display, the final columns number is determined by col setting combined with [Responsive Rules](/theme/responsive)",
-        "type": "Enum",
-        "typeRaw": "`'1','2','3','4','5','6'`",
-        "default": "",
-        "typeDefinition": [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6"
-        ]
-      },
-      {
-        "name": "col",
-        "inputType": 0,
-        "description": "specify the maximum number of columns to display, the final columns number is determined by col setting combined with [Responsive Rules](/theme/responsive)",
-        "type": "Enum",
-        "typeRaw": "`'1','2','3','4','5','6'`",
-        "default": "`2`",
-        "typeDefinition": [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6"
-        ],
-        "pureDefault": "2"
-      }
-    ],
+    "properties": [],
+    "description": "Display title.",
     "lib": "@delon/abc",
-    "title": "Simple Grid",
-    "description": "A higher-order components of grid systems, that consists of `sg-container` (directive) and `sg` components:",
+    "title": "Edit",
     "whenToUse": "",
-    "doc": "/components/sg/en",
-    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sg"
+    "doc": "/components/se/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/se"
   },
   {
     "_idx": 147,
-    "type": "directive",
+    "type": "component",
     "selector": "sg-container",
     "types": {},
     "properties": [
@@ -16075,6 +16148,73 @@
   },
   {
     "_idx": 148,
+    "type": "directive",
+    "selector": "sg-container",
+    "types": {},
+    "properties": [
+      {
+        "name": "gutter",
+        "inputType": 0,
+        "description": "specify the distance between two items, unit is `px`, only `nzLayout:horizontal`",
+        "type": "Enum",
+        "typeRaw": "`number`",
+        "default": "`32`",
+        "pureDefault": "32",
+        "typeDefinition": [
+          "0",
+          "8",
+          "16",
+          "24",
+          "32",
+          "40",
+          "48",
+          "56",
+          "64"
+        ]
+      },
+      {
+        "name": "sg-container",
+        "inputType": 0,
+        "description": "specify the maximum number of columns to display, the final columns number is determined by col setting combined with [Responsive Rules](/theme/responsive)",
+        "type": "Enum",
+        "typeRaw": "`'1','2','3','4','5','6'`",
+        "default": "",
+        "typeDefinition": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ]
+      },
+      {
+        "name": "col",
+        "inputType": 0,
+        "description": "specify the maximum number of columns to display, the final columns number is determined by col setting combined with [Responsive Rules](/theme/responsive)",
+        "type": "Enum",
+        "typeRaw": "`'1','2','3','4','5','6'`",
+        "default": "`2`",
+        "typeDefinition": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        "pureDefault": "2"
+      }
+    ],
+    "lib": "@delon/abc",
+    "title": "Simple Grid",
+    "description": "A higher-order components of grid systems, that consists of `sg-container` (directive) and `sg` components:",
+    "whenToUse": "",
+    "doc": "/components/sg/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sg"
+  },
+  {
+    "_idx": 149,
     "type": "component",
     "selector": "sg",
     "types": {},
@@ -16104,7 +16244,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sg"
   },
   {
-    "_idx": 149,
+    "_idx": 150,
     "type": "component",
     "selector": "sidebar-nav",
     "types": {},
@@ -16146,6 +16286,15 @@
         "pureDefault": "false"
       },
       {
+        "name": "maxLevelIcon",
+        "inputType": 0,
+        "description": "Icon displays up to which level",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`3`",
+        "pureDefault": "3"
+      },
+      {
         "name": "select",
         "inputType": 1,
         "description": "Callback when clicking menu (including `disabled`)",
@@ -16162,7 +16311,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sidebar-nav"
   },
   {
-    "_idx": 150,
+    "_idx": 151,
     "type": "component",
     "selector": "st",
     "types": {
@@ -16432,18 +16581,18 @@
           "pureDefault": "."
         },
         {
-          "name": "global",
+          "name": "keepEmptyKey",
           "inputType": 0,
-          "description": "Whether global multi sort mode<br>`true` all `st` defaults multi-sort<br>`false` all `st` non-multiple sorting, just only configurable for rule",
+          "description": "Whether to keep send empty key<br>`true` send the `key` name anyway<br>`false` don't send `key` when not sorting",
           "type": "boolean",
           "typeRaw": "`boolean`",
           "default": "`true`",
           "pureDefault": "true"
         },
         {
-          "name": "keepEmptyKey",
+          "name": "global",
           "inputType": 0,
-          "description": "Whether to keep send empty key<br>`true` send the `key` name anyway<br>`false` don't send `key` when not sorting",
+          "description": "**Only global config**, Whether global multi sort mode<br>`true` all `st` defaults multi-sort<br>`false` all `st` non-multiple sorting, just only configurable for rule",
           "type": "boolean",
           "typeRaw": "`boolean`",
           "default": "`true`",
@@ -16786,99 +16935,8 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/st"
   },
   {
-    "_idx": 151,
-    "type": "component",
-    "selector": "sv-container",
-    "types": {},
-    "properties": [
-      {
-        "name": "size",
-        "inputType": 0,
-        "description": "size of view",
-        "type": "Enum",
-        "typeRaw": "`'small','large'`",
-        "default": "`'large'`",
-        "typeDefinition": [
-          "small",
-          "large"
-        ],
-        "pureDefault": "large"
-      },
-      {
-        "name": "layout",
-        "inputType": 0,
-        "description": "type of layout",
-        "type": "Enum",
-        "typeRaw": "`'horizontal','vertical'`",
-        "default": "`'horizontal'`",
-        "typeDefinition": [
-          "horizontal",
-          "vertical"
-        ],
-        "pureDefault": "horizontal"
-      },
-      {
-        "name": "gutter",
-        "inputType": 0,
-        "description": "specify the distance between two items, unit is `px`",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "`32`",
-        "pureDefault": "32"
-      },
-      {
-        "name": "col",
-        "inputType": 0,
-        "description": "specify the maximum number of columns to display, the final columns number is determined by col setting combined with [Responsive Rules](/theme/responsive)",
-        "type": "Enum",
-        "typeRaw": "`'1','2','3','4','5','6'`",
-        "default": "`3`",
-        "typeDefinition": [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6"
-        ],
-        "pureDefault": "3"
-      },
-      {
-        "name": "labelWidth",
-        "inputType": 0,
-        "description": "label text of width",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": ""
-      },
-      {
-        "name": "default",
-        "inputType": 0,
-        "description": "whether default text",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`true`",
-        "pureDefault": "true"
-      },
-      {
-        "name": "title",
-        "inputType": 0,
-        "description": "Display title",
-        "type": "string",
-        "typeRaw": "`string,TemplateRef<void>`",
-        "default": ""
-      }
-    ],
-    "lib": "@delon/abc",
-    "title": "View",
-    "description": "Viewing grid system is a higher-order components based on the original [Grid System] (https://ng.ant.design/components/grid/zh) that server for view pages.",
-    "whenToUse": "",
-    "doc": "/components/sv/en",
-    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sv"
-  },
-  {
     "_idx": 152,
-    "type": "directive",
+    "type": "component",
     "selector": "sv-container",
     "types": {},
     "properties": [
@@ -16969,6 +17027,97 @@
   },
   {
     "_idx": 153,
+    "type": "directive",
+    "selector": "sv-container",
+    "types": {},
+    "properties": [
+      {
+        "name": "size",
+        "inputType": 0,
+        "description": "size of view",
+        "type": "Enum",
+        "typeRaw": "`'small','large'`",
+        "default": "`'large'`",
+        "typeDefinition": [
+          "small",
+          "large"
+        ],
+        "pureDefault": "large"
+      },
+      {
+        "name": "layout",
+        "inputType": 0,
+        "description": "type of layout",
+        "type": "Enum",
+        "typeRaw": "`'horizontal','vertical'`",
+        "default": "`'horizontal'`",
+        "typeDefinition": [
+          "horizontal",
+          "vertical"
+        ],
+        "pureDefault": "horizontal"
+      },
+      {
+        "name": "gutter",
+        "inputType": 0,
+        "description": "specify the distance between two items, unit is `px`",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`32`",
+        "pureDefault": "32"
+      },
+      {
+        "name": "col",
+        "inputType": 0,
+        "description": "specify the maximum number of columns to display, the final columns number is determined by col setting combined with [Responsive Rules](/theme/responsive)",
+        "type": "Enum",
+        "typeRaw": "`'1','2','3','4','5','6'`",
+        "default": "`3`",
+        "typeDefinition": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        "pureDefault": "3"
+      },
+      {
+        "name": "labelWidth",
+        "inputType": 0,
+        "description": "label text of width",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": ""
+      },
+      {
+        "name": "default",
+        "inputType": 0,
+        "description": "whether default text",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`true`",
+        "pureDefault": "true"
+      },
+      {
+        "name": "title",
+        "inputType": 0,
+        "description": "Display title",
+        "type": "string",
+        "typeRaw": "`string,TemplateRef<void>`",
+        "default": ""
+      }
+    ],
+    "lib": "@delon/abc",
+    "title": "View",
+    "description": "Viewing grid system is a higher-order components based on the original [Grid System] (https://ng.ant.design/components/grid/zh) that server for view pages.",
+    "whenToUse": "",
+    "doc": "/components/sv/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sv"
+  },
+  {
+    "_idx": 154,
     "type": "component",
     "selector": "sv",
     "types": {},
@@ -17044,7 +17193,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sv"
   },
   {
-    "_idx": 154,
+    "_idx": 155,
     "type": "component",
     "selector": "sv-title",
     "types": {},
@@ -17057,7 +17206,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sv"
   },
   {
-    "_idx": 155,
+    "_idx": 156,
     "type": "directive",
     "selector": "sv-title",
     "types": {},
@@ -17070,7 +17219,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sv"
   },
   {
-    "_idx": 156,
+    "_idx": 157,
     "type": "component",
     "selector": "tag-select",
     "types": {},
@@ -17101,7 +17250,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/tag-select"
   },
   {
-    "_idx": 157,
+    "_idx": 158,
     "type": "directive",
     "selector": "xlsx",
     "types": {},
@@ -17114,7 +17263,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/xlsx"
   },
   {
-    "_idx": 158,
+    "_idx": 159,
     "type": "component",
     "selector": "g2-bar",
     "types": {},
@@ -17196,6 +17345,14 @@
         "type": "string",
         "typeRaw": "`string | LooseObject`",
         "default": ""
+      },
+      {
+        "name": "clickItem",
+        "inputType": 1,
+        "description": "点击项回调",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<G2BarClickItem>`",
+        "default": ""
       }
     ],
     "lib": "@delon/chart",
@@ -17206,7 +17363,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/bar"
   },
   {
-    "_idx": 159,
+    "_idx": 160,
     "type": "component",
     "selector": "g2-card",
     "types": {},
@@ -17277,7 +17434,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/card"
   },
   {
-    "_idx": 160,
+    "_idx": 161,
     "type": "component",
     "selector": "g2-custom",
     "types": {},
@@ -17349,7 +17506,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/custom"
   },
   {
-    "_idx": 161,
+    "_idx": 162,
     "type": "component",
     "selector": "g2-gauge",
     "types": {},
@@ -17439,7 +17596,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/gauge"
   },
   {
-    "_idx": 162,
+    "_idx": 163,
     "type": "component",
     "selector": "g2-mini-area",
     "types": {},
@@ -17559,6 +17716,14 @@
         "type": "string",
         "typeRaw": "`string | LooseObject`",
         "default": ""
+      },
+      {
+        "name": "clickItem",
+        "inputType": 1,
+        "description": "点击项回调",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<G2MiniAreaClickItem>`",
+        "default": ""
       }
     ],
     "lib": "@delon/chart",
@@ -17569,7 +17734,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/mini-area"
   },
   {
-    "_idx": 163,
+    "_idx": 164,
     "type": "component",
     "selector": "g2-mini-bar",
     "types": {},
@@ -17654,6 +17819,14 @@
         "type": "string",
         "typeRaw": "`string | LooseObject`",
         "default": ""
+      },
+      {
+        "name": "clickItem",
+        "inputType": 1,
+        "description": "点击项回调",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<G2MiniBarClickItem>`",
+        "default": ""
       }
     ],
     "lib": "@delon/chart",
@@ -17664,7 +17837,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/mini-bar"
   },
   {
-    "_idx": 164,
+    "_idx": 165,
     "type": "component",
     "selector": "g2-mini-progress",
     "types": {},
@@ -17710,7 +17883,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/mini-progress"
   },
   {
-    "_idx": 165,
+    "_idx": 166,
     "type": "component",
     "selector": "number-info",
     "types": {},
@@ -17798,7 +17971,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/number-info"
   },
   {
-    "_idx": 166,
+    "_idx": 167,
     "type": "component",
     "selector": "g2-pie",
     "types": {},
@@ -17948,6 +18121,14 @@
         "type": "string",
         "typeRaw": "`string | LooseObject`",
         "default": ""
+      },
+      {
+        "name": "clickItem",
+        "inputType": 1,
+        "description": "点击项回调",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<G2PieClickItem>`",
+        "default": ""
       }
     ],
     "lib": "@delon/chart",
@@ -17958,7 +18139,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/pie"
   },
   {
-    "_idx": 167,
+    "_idx": 168,
     "type": "component",
     "selector": "g2-radar",
     "types": {},
@@ -18029,6 +18210,14 @@
         "type": "string",
         "typeRaw": "`string | LooseObject`",
         "default": ""
+      },
+      {
+        "name": "clickItem",
+        "inputType": 1,
+        "description": "点击项回调",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<G2RadarClickItem>`",
+        "default": ""
       }
     ],
     "lib": "@delon/chart",
@@ -18039,7 +18228,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/radar"
   },
   {
-    "_idx": 168,
+    "_idx": 169,
     "type": "component",
     "selector": "g2-single-bar",
     "types": {},
@@ -18159,7 +18348,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/single-bar"
   },
   {
-    "_idx": 169,
+    "_idx": 170,
     "type": "component",
     "selector": "g2-tag-cloud",
     "types": {},
@@ -18207,6 +18396,14 @@
         "type": "string",
         "typeRaw": "`string | LooseObject`",
         "default": ""
+      },
+      {
+        "name": "clickItem",
+        "inputType": 1,
+        "description": "点击项回调",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<G2TagCloudClickItem>`",
+        "default": ""
       }
     ],
     "lib": "@delon/chart",
@@ -18217,7 +18414,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/tag-cloud"
   },
   {
-    "_idx": 170,
+    "_idx": 171,
     "type": "component",
     "selector": "g2-timeline",
     "types": {
@@ -18385,6 +18582,14 @@
         "type": "string",
         "typeRaw": "`string | LooseObject`",
         "default": ""
+      },
+      {
+        "name": "clickItem",
+        "inputType": 1,
+        "description": "点击项回调",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<G2TimelineClickItem>`",
+        "default": ""
       }
     ],
     "lib": "@delon/chart",
@@ -18395,7 +18600,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/timeline"
   },
   {
-    "_idx": 171,
+    "_idx": 172,
     "type": "component",
     "selector": "trend",
     "types": {},
@@ -18439,11 +18644,20 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/trend"
   },
   {
-    "_idx": 172,
+    "_idx": 173,
     "type": "component",
     "selector": "g2-water-wave",
     "types": {},
     "properties": [
+      {
+        "name": "animate",
+        "inputType": 0,
+        "description": "是否显示动画",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`true`",
+        "pureDefault": "true"
+      },
       {
         "name": "delay",
         "inputType": 0,
@@ -18496,7 +18710,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/water-wave"
   },
   {
-    "_idx": 173,
+    "_idx": 174,
     "type": "component",
     "selector": "sf",
     "types": {
@@ -18656,6 +18870,15 @@
         "pureDefault": "false"
       },
       {
+        "name": "compact",
+        "inputType": 0,
+        "description": "Whether compact style",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
         "name": "cleanValue",
         "inputType": 0,
         "description": "Whether to clean up data for undefined Schema",
@@ -18705,7 +18928,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/form/src"
   },
   {
-    "_idx": 174,
+    "_idx": 175,
     "type": "directive",
     "selector": "sf",
     "types": {
@@ -18865,6 +19088,15 @@
         "pureDefault": "false"
       },
       {
+        "name": "compact",
+        "inputType": 0,
+        "description": "Whether compact style",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
         "name": "cleanValue",
         "inputType": 0,
         "description": "Whether to clean up data for undefined Schema",
@@ -18914,7 +19146,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/form/src"
   },
   {
-    "_idx": 175,
+    "_idx": 176,
     "type": "component",
     "selector": "nz-breadcrumb-item",
     "types": {},
@@ -18931,27 +19163,27 @@
     "description": "The layout wrapper, in which `nz-header` `nz-sider` `nz-content` `nz-footer` or `nz-layout` itself can be nested, and can be placed in any parent container.",
     "type": "component",
     "lib": "ng-zorro-antd",
-    "_idx": 176
+    "_idx": 177
   },
   {
     "selector": "nz-header",
     "description": "The top layout with default style, in which any element can be nested, and must be placed in `nz-layout`.",
     "type": "component",
     "lib": "ng-zorro-antd",
-    "_idx": 177
+    "_idx": 178
   },
   {
     "selector": "nz-content",
     "description": "The content layout with default style, in which any element can be nested, and must be placed in `nz-layout`.",
     "type": "component",
     "lib": "ng-zorro-antd",
-    "_idx": 178
+    "_idx": 179
   },
   {
     "selector": "nz-footer",
     "description": "The bottom layout with default style, in which any element can be nested, and must be placed in `nz-layout`.",
     "type": "component",
     "lib": "ng-zorro-antd",
-    "_idx": 179
+    "_idx": 180
   }
 ]

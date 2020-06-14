@@ -1290,6 +1290,14 @@
         "default": ""
       },
       {
+        "name": "nzDisabledDate",
+        "inputType": 0,
+        "description": "不可选择的日期",
+        "type": "function",
+        "typeRaw": "`(current: Date) => boolean`",
+        "default": ""
+      },
+      {
         "name": "nzPanelChange",
         "inputType": 1,
         "description": "面板变化的回调",
@@ -3459,6 +3467,15 @@
         "name": "nzMask",
         "inputType": 0,
         "description": "是否展示遮罩",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`true`",
+        "pureDefault": "true"
+      },
+      {
+        "name": "nzCloseOnNavigation",
+        "inputType": 0,
+        "description": "导航历史变化时是否关闭抽屉组件",
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`true`",
@@ -9057,6 +9074,15 @@
         "pureDefault": "true"
       },
       {
+        "name": "nzCloseOnNavigation",
+        "inputType": 0,
+        "description": "导航历史变化时是否关闭模态框",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`true`",
+        "pureDefault": "true"
+      },
+      {
         "name": "nzMaskStyle",
         "inputType": 0,
         "description": "遮罩样式",
@@ -9176,7 +9202,7 @@
       {
         "name": "nzComponentParams",
         "inputType": 0,
-        "description": "当nzContent为组件类(Component)时，该参数中的属性将传入nzContent实例中",
+        "description": "当 `nzContent` 为组件时将作为实例属性，为 `TemplateRef` 时将作为模版变量",
         "type": "object",
         "typeRaw": "`object`",
         "default": ""
@@ -10999,6 +11025,15 @@
         "pureDefault": "false"
       },
       {
+        "name": "nzReverse",
+        "inputType": 0,
+        "description": "反向坐标轴",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
         "name": "nzTooltipVisible",
         "inputType": 0,
         "description": "值为 `always` 时总是显示，值为 `never` 时在任何情况下都不显示",
@@ -12480,7 +12515,7 @@
         "inputType": 1,
         "description": "当前激活 tab 面板变更回调函数",
         "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<{nzSelectedIndex: number,tab: NzTabComponent}>`",
+        "typeRaw": "`EventEmitter<{index: number,tab: NzTabComponent}>`",
         "default": ""
       },
       {
@@ -13846,6 +13881,14 @@
         "type": "EventEmitter",
         "typeRaw": "`EventEmitter<void>`",
         "default": ""
+      },
+      {
+        "name": "nzOnEllipsis",
+        "inputType": 1,
+        "description": "当省略状态变化时触发",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<boolean>`",
+        "default": ""
       }
     ],
     "lib": "ng-zorro-antd",
@@ -13874,7 +13917,7 @@
         "inputType": 0,
         "description": "必选参数, 上传的地址",
         "type": "string",
-        "typeRaw": "`string | ((file: UploadFile) => string | Observable<string>)`",
+        "typeRaw": "`string | ((file: NzUploadFile) => string | Observable<string>)`",
         "default": ""
       },
       {
@@ -13891,7 +13934,7 @@
         "inputType": 0,
         "description": "上传文件之前的钩子，参数为上传的文件，若返回 `false` 则停止上传。注意：**IE9** 不支持该方法；注意：务必使用 `=>` 定义处理方法。",
         "type": "function",
-        "typeRaw": "`(file: UploadFile, fileList: UploadFile[]) => boolean | Observable<boolean>`",
+        "typeRaw": "`(file: NzUploadFile, fileList: NzUploadFile[]) => boolean | Observable<boolean>`",
         "default": ""
       },
       {
@@ -13907,7 +13950,7 @@
         "inputType": 0,
         "description": "上传所需参数或返回上传参数的方法；注意：务必使用 `=>` 定义处理方法。",
         "type": "object",
-        "typeRaw": "`Object | ((file: UploadFile) => Object | Observable<{}>)`",
+        "typeRaw": "`Object | ((file: NzUploadFile) => Object | Observable<{}>)`",
         "default": ""
       },
       {
@@ -13925,7 +13968,7 @@
         "inputType": 2,
         "description": "文件列表，双向绑定",
         "type": "Array",
-        "typeRaw": "`UploadFile[]`",
+        "typeRaw": "`NzUploadFile[]`",
         "default": ""
       },
       {
@@ -13967,7 +14010,7 @@
         "inputType": 0,
         "description": "设置上传的请求头部，IE10 以上有效；注意：务必使用 `=>` 定义处理方法。",
         "type": "object",
-        "typeRaw": "`Object | ((file: UploadFile) => Object | Observable<{}>)`",
+        "typeRaw": "`Object | ((file: NzUploadFile) => Object | Observable<{}>)`",
         "default": ""
       },
       {
@@ -14043,7 +14086,7 @@
         "inputType": 0,
         "description": "点击文件链接或预览图标时的回调；注意：务必使用 `=>` 定义处理方法。",
         "type": "function",
-        "typeRaw": "`(file: UploadFile) => void`",
+        "typeRaw": "`(file: NzUploadFile) => void`",
         "default": ""
       },
       {
@@ -14051,7 +14094,7 @@
         "inputType": 0,
         "description": "自定义文件预览逻辑；注意：务必使用 `=>` 定义处理方法。",
         "type": "function",
-        "typeRaw": "`(file: UploadFile) => Observable<dataURL: string>`",
+        "typeRaw": "`(file: NzUploadFile) => Observable<dataURL: string>`",
         "default": ""
       },
       {
@@ -14059,7 +14102,7 @@
         "inputType": 0,
         "description": "点击移除文件时的回调，返回值为 false 时不移除。支持返回 `Observable` 对象；注意：务必使用 `=>` 定义处理方法。",
         "type": "function",
-        "typeRaw": "`(file: UploadFile) => boolean | Observable<boolean>`",
+        "typeRaw": "`(file: NzUploadFile) => boolean | Observable<boolean>`",
         "default": ""
       },
       {
@@ -14067,7 +14110,7 @@
         "inputType": 1,
         "description": "上传文件改变时的状态",
         "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<UploadChangeParam>`",
+        "typeRaw": "`EventEmitter<NzUploadChangeParam>`",
         "default": ""
       },
       {
@@ -14075,7 +14118,7 @@
         "inputType": 0,
         "description": "点击下载文件时的回调，如果没有指定，则默认跳转到文件 url 对应的标签页",
         "type": "function",
-        "typeRaw": "`(file: UploadFile) => void`",
+        "typeRaw": "`(file: NzUploadFile) => void`",
         "default": "跳转新标签页",
         "pureDefault": "跳转新标签页"
       },
@@ -14084,7 +14127,7 @@
         "inputType": 0,
         "description": "在上传之前转换文件。支持返回一个 Observable 对象",
         "type": "function",
-        "typeRaw": "`(file: UploadFile) => UploadTransformFileType`",
+        "typeRaw": "`(file: NzUploadFile) => NzUploadTransformFileType`",
         "default": ""
       },
       {
@@ -14550,38 +14593,63 @@
   {
     "_idx": 129,
     "type": "component",
-    "selector": "error-collect",
+    "selector": "ellipsis",
     "types": {},
     "properties": [
       {
-        "name": "freq",
+        "name": "tooltip",
         "inputType": 0,
-        "description": "监听频率，单位：毫秒",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "`500`",
-        "pureDefault": "500"
+        "description": "移动到文本展示完整内容的提示",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
       },
       {
-        "name": "offsetTop",
+        "name": "length",
         "inputType": 0,
-        "description": "顶部偏移值，单位：`px`",
+        "description": "在按照长度截取下的文本最大字符数，超过则截取省略",
         "type": "number",
         "typeRaw": "`number`",
-        "default": "`145`",
-        "pureDefault": "145"
+        "default": ""
+      },
+      {
+        "name": "lines",
+        "inputType": 0,
+        "description": "在按照行数截取下最大的行数，超过则截取省略",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": ""
+      },
+      {
+        "name": "fullWidthRecognition",
+        "inputType": 0,
+        "description": "是否将全角字符的长度视为2来计算字符串长度",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "tail",
+        "inputType": 0,
+        "description": "指定溢出尾巴",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": "`'...'`",
+        "pureDefault": "..."
       }
     ],
     "lib": "@delon/abc",
-    "title": "表单异常消息采集器",
-    "description": "一个简单的表单异常消息采集器，点击图标跳转相应的位置；必须是一个标准 `form` 表单。",
+    "title": "文本自动省略号",
+    "description": "文本过长自动处理省略号，支持按照文本长度和最大行数两种方式截取。",
     "whenToUse": "",
-    "doc": "/components/error-collect/zh",
-    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/error-collect"
+    "doc": "/components/ellipsis/zh",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/ellipsis"
   },
   {
     "_idx": 130,
-    "type": "directive",
+    "type": "component",
     "selector": "error-collect",
     "types": {},
     "properties": [
@@ -14613,6 +14681,38 @@
   },
   {
     "_idx": 131,
+    "type": "directive",
+    "selector": "error-collect",
+    "types": {},
+    "properties": [
+      {
+        "name": "freq",
+        "inputType": 0,
+        "description": "监听频率，单位：毫秒",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`500`",
+        "pureDefault": "500"
+      },
+      {
+        "name": "offsetTop",
+        "inputType": 0,
+        "description": "顶部偏移值，单位：`px`",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`145`",
+        "pureDefault": "145"
+      }
+    ],
+    "lib": "@delon/abc",
+    "title": "表单异常消息采集器",
+    "description": "一个简单的表单异常消息采集器，点击图标跳转相应的位置；必须是一个标准 `form` 表单。",
+    "whenToUse": "",
+    "doc": "/components/error-collect/zh",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/error-collect"
+  },
+  {
+    "_idx": 132,
     "type": "component",
     "selector": "exception",
     "types": {},
@@ -14663,7 +14763,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/exception"
   },
   {
-    "_idx": 132,
+    "_idx": 133,
     "type": "component",
     "selector": "footer-toolbar",
     "types": {},
@@ -14694,7 +14794,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/footer-toolbar"
   },
   {
-    "_idx": 133,
+    "_idx": 134,
     "type": "component",
     "selector": "full-content",
     "types": {},
@@ -14734,7 +14834,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/full-content"
   },
   {
-    "_idx": 134,
+    "_idx": 135,
     "type": "directive",
     "selector": "full-toggle",
     "types": {},
@@ -14747,7 +14847,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/full-content"
   },
   {
-    "_idx": 135,
+    "_idx": 136,
     "type": "component",
     "selector": "global-footer",
     "types": {
@@ -14806,7 +14906,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/global-footer"
   },
   {
-    "_idx": 136,
+    "_idx": 137,
     "type": "component",
     "selector": "global-footer-item",
     "types": {},
@@ -14837,7 +14937,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/global-footer"
   },
   {
-    "_idx": 137,
+    "_idx": 138,
     "type": "component",
     "selector": "media",
     "types": {},
@@ -14892,7 +14992,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/media"
   },
   {
-    "_idx": 138,
+    "_idx": 139,
     "type": "component",
     "selector": "notice-icon",
     "types": {},
@@ -14964,7 +15064,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/notice-icon"
   },
   {
-    "_idx": 139,
+    "_idx": 140,
     "type": "component",
     "selector": "numberToChinese",
     "types": {},
@@ -14977,7 +15077,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/number-to-chinese"
   },
   {
-    "_idx": 140,
+    "_idx": 141,
     "type": "component",
     "selector": "page-header",
     "types": {},
@@ -15145,7 +15245,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/page-header"
   },
   {
-    "_idx": 141,
+    "_idx": 142,
     "type": "component",
     "selector": "qr",
     "types": {},
@@ -15256,7 +15356,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/qr"
   },
   {
-    "_idx": 142,
+    "_idx": 143,
     "type": "component",
     "selector": "quick-menu",
     "types": {},
@@ -15294,8 +15394,7 @@
         "description": "背景",
         "type": "string",
         "typeRaw": "`string`",
-        "default": "`#fff`",
-        "pureDefault": "#fff"
+        "default": ""
       },
       {
         "name": "borderColor",
@@ -15303,8 +15402,7 @@
         "description": "边框颜色",
         "type": "string",
         "typeRaw": "`string`",
-        "default": "`#ddd`",
-        "pureDefault": "#ddd"
+        "default": ""
       }
     ],
     "lib": "@delon/abc",
@@ -15315,7 +15413,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/quick-menu"
   },
   {
-    "_idx": 143,
+    "_idx": 144,
     "type": "component",
     "selector": "result",
     "types": {},
@@ -15361,7 +15459,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/result"
   },
   {
-    "_idx": 144,
+    "_idx": 145,
     "type": "component",
     "selector": "reuse-tab",
     "types": {
@@ -15546,7 +15644,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/reuse-tab"
   },
   {
-    "_idx": 145,
+    "_idx": 146,
     "type": "component",
     "selector": "se-container",
     "types": {},
@@ -15649,6 +15747,15 @@
         "pureDefault": "false"
       },
       {
+        "name": "ingoreDirty",
+        "inputType": 0,
+        "description": "是否忽略 `dirty` 校验",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
         "name": "line",
         "inputType": 0,
         "description": "分隔线",
@@ -15664,6 +15771,14 @@
         "type": "string",
         "typeRaw": "`string,TemplateRef<void>`",
         "default": ""
+      },
+      {
+        "name": "errors",
+        "inputType": 0,
+        "description": "批量修改 `se` 错误消息描述",
+        "type": "Array",
+        "typeRaw": "`SEErrorRefresh[]`",
+        "default": ""
       }
     ],
     "lib": "@delon/abc",
@@ -15674,7 +15789,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/se"
   },
   {
-    "_idx": 146,
+    "_idx": 147,
     "type": "directive",
     "selector": "se-container",
     "types": {},
@@ -15777,6 +15892,15 @@
         "pureDefault": "false"
       },
       {
+        "name": "ingoreDirty",
+        "inputType": 0,
+        "description": "是否忽略 `dirty` 校验",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
         "name": "line",
         "inputType": 0,
         "description": "分隔线",
@@ -15792,6 +15916,14 @@
         "type": "string",
         "typeRaw": "`string,TemplateRef<void>`",
         "default": ""
+      },
+      {
+        "name": "errors",
+        "inputType": 0,
+        "description": "批量修改 `se` 错误消息描述",
+        "type": "Array",
+        "typeRaw": "`SEErrorRefresh[]`",
+        "default": ""
       }
     ],
     "lib": "@delon/abc",
@@ -15802,7 +15934,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/se"
   },
   {
-    "_idx": 147,
+    "_idx": 148,
     "type": "component",
     "selector": "se",
     "types": {},
@@ -15912,21 +16044,8 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/se"
   },
   {
-    "_idx": 148,
-    "type": "component",
-    "selector": "se-title",
-    "types": {},
-    "properties": [],
-    "description": "用于展示标题，单独一行。",
-    "lib": "@delon/abc",
-    "title": "编辑",
-    "whenToUse": "",
-    "doc": "/components/se/zh",
-    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/se"
-  },
-  {
     "_idx": 149,
-    "type": "directive",
+    "type": "component",
     "selector": "se-title",
     "types": {},
     "properties": [],
@@ -15939,74 +16058,20 @@
   },
   {
     "_idx": 150,
-    "type": "component",
-    "selector": "sg-container",
+    "type": "directive",
+    "selector": "se-title",
     "types": {},
-    "properties": [
-      {
-        "name": "gutter",
-        "inputType": 0,
-        "description": "间距，当 `nzLayout:horizontal` 时有效",
-        "type": "Enum",
-        "typeRaw": "`number`",
-        "default": "`32`",
-        "pureDefault": "32",
-        "typeDefinition": [
-          "0",
-          "8",
-          "16",
-          "24",
-          "32",
-          "40",
-          "48",
-          "56",
-          "64"
-        ]
-      },
-      {
-        "name": "sg-container",
-        "inputType": 0,
-        "description": "指定表单元素最多分几列展示，最终一行几列由 col 配置结合[响应式规则](/theme/responsive)决定，",
-        "type": "Enum",
-        "typeRaw": "`'1','2','3','4','5','6'`",
-        "default": "",
-        "typeDefinition": [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6"
-        ]
-      },
-      {
-        "name": "col",
-        "inputType": 0,
-        "description": "指定表单元素最多分几列展示，最终一行几列由 col 配置结合[响应式规则](/theme/responsive)决定，",
-        "type": "Enum",
-        "typeRaw": "`'1','2','3','4','5','6'`",
-        "default": "`2`",
-        "typeDefinition": [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6"
-        ],
-        "pureDefault": "2"
-      }
-    ],
+    "properties": [],
+    "description": "用于展示标题，单独一行。",
     "lib": "@delon/abc",
-    "title": "简易栅格",
-    "description": "简化栅格系统运用的高阶组件，它由 `sg-container` 容器（指令）和 `sg` 组件组合代替一个响应式布局：",
+    "title": "编辑",
     "whenToUse": "",
-    "doc": "/components/sg/zh",
-    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sg"
+    "doc": "/components/se/zh",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/se"
   },
   {
     "_idx": 151,
-    "type": "directive",
+    "type": "component",
     "selector": "sg-container",
     "types": {},
     "properties": [
@@ -16073,6 +16138,73 @@
   },
   {
     "_idx": 152,
+    "type": "directive",
+    "selector": "sg-container",
+    "types": {},
+    "properties": [
+      {
+        "name": "gutter",
+        "inputType": 0,
+        "description": "间距，当 `nzLayout:horizontal` 时有效",
+        "type": "Enum",
+        "typeRaw": "`number`",
+        "default": "`32`",
+        "pureDefault": "32",
+        "typeDefinition": [
+          "0",
+          "8",
+          "16",
+          "24",
+          "32",
+          "40",
+          "48",
+          "56",
+          "64"
+        ]
+      },
+      {
+        "name": "sg-container",
+        "inputType": 0,
+        "description": "指定表单元素最多分几列展示，最终一行几列由 col 配置结合[响应式规则](/theme/responsive)决定，",
+        "type": "Enum",
+        "typeRaw": "`'1','2','3','4','5','6'`",
+        "default": "",
+        "typeDefinition": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ]
+      },
+      {
+        "name": "col",
+        "inputType": 0,
+        "description": "指定表单元素最多分几列展示，最终一行几列由 col 配置结合[响应式规则](/theme/responsive)决定，",
+        "type": "Enum",
+        "typeRaw": "`'1','2','3','4','5','6'`",
+        "default": "`2`",
+        "typeDefinition": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        "pureDefault": "2"
+      }
+    ],
+    "lib": "@delon/abc",
+    "title": "简易栅格",
+    "description": "简化栅格系统运用的高阶组件，它由 `sg-container` 容器（指令）和 `sg` 组件组合代替一个响应式布局：",
+    "whenToUse": "",
+    "doc": "/components/sg/zh",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sg"
+  },
+  {
+    "_idx": 153,
     "type": "component",
     "selector": "sg",
     "types": {},
@@ -16102,7 +16234,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sg"
   },
   {
-    "_idx": 153,
+    "_idx": 154,
     "type": "component",
     "selector": "sidebar-nav",
     "types": {},
@@ -16144,6 +16276,15 @@
         "pureDefault": "false"
       },
       {
+        "name": "maxLevelIcon",
+        "inputType": 0,
+        "description": "Icon最多显示到第几层",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`3`",
+        "pureDefault": "3"
+      },
+      {
         "name": "select",
         "inputType": 1,
         "description": "点击菜单时回调（包含 `disabled`）",
@@ -16160,7 +16301,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sidebar-nav"
   },
   {
-    "_idx": 154,
+    "_idx": 155,
     "type": "component",
     "selector": "st",
     "types": {
@@ -16410,18 +16551,18 @@
           "pureDefault": "."
         },
         {
-          "name": "global",
+          "name": "keepEmptyKey",
           "inputType": 0,
-          "description": "是否全局多排序模式<br>`true` 表示所有 `st` 默认为多排序<br>`false` 表示需要为每个 `st` 添加 `multiSort` 才会视为多排序模式",
+          "description": "是否保持空值的键名<br>`true` 表示不管是否有排序都会发送 `key` 键名<br>`false` 表示无排序动作时不会发送 `key` 键名",
           "type": "boolean",
           "typeRaw": "`boolean`",
           "default": "`true`",
           "pureDefault": "true"
         },
         {
-          "name": "keepEmptyKey",
+          "name": "global",
           "inputType": 0,
-          "description": "是否保持空值的键名<br>`true` 表示不管是否有排序都会发送 `key` 键名<br>`false` 表示无排序动作时不会发送 `key` 键名",
+          "description": "**仅限全局配置项有效**，是否全局多排序模式<br>`true` 表示所有 `st` 默认为多排序<br>`false` 表示需要为每个 `st` 添加 `multiSort` 才会视为多排序模式",
           "type": "boolean",
           "typeRaw": "`boolean`",
           "default": "`true`",
@@ -16763,99 +16904,8 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/st"
   },
   {
-    "_idx": 155,
-    "type": "component",
-    "selector": "sv-container",
-    "types": {},
-    "properties": [
-      {
-        "name": "size",
-        "inputType": 0,
-        "description": "大小",
-        "type": "Enum",
-        "typeRaw": "`'small','large'`",
-        "default": "`'large'`",
-        "typeDefinition": [
-          "small",
-          "large"
-        ],
-        "pureDefault": "large"
-      },
-      {
-        "name": "layout",
-        "inputType": 0,
-        "description": "布局",
-        "type": "Enum",
-        "typeRaw": "`'horizontal','vertical'`",
-        "default": "`'horizontal'`",
-        "typeDefinition": [
-          "horizontal",
-          "vertical"
-        ],
-        "pureDefault": "horizontal"
-      },
-      {
-        "name": "gutter",
-        "inputType": 0,
-        "description": "间距",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "`32`",
-        "pureDefault": "32"
-      },
-      {
-        "name": "col",
-        "inputType": 0,
-        "description": "指定信息最多分几列展示，最终一行几列由 col 配置结合[响应式规则](/theme/responsive)决定",
-        "type": "Enum",
-        "typeRaw": "`'1','2','3','4','5','6'`",
-        "default": "`3`",
-        "typeDefinition": [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6"
-        ],
-        "pureDefault": "3"
-      },
-      {
-        "name": "labelWidth",
-        "inputType": 0,
-        "description": "默认标签文本宽度",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": ""
-      },
-      {
-        "name": "default",
-        "inputType": 0,
-        "description": "默认是否显示默认文本",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`true`",
-        "pureDefault": "true"
-      },
-      {
-        "name": "title",
-        "inputType": 0,
-        "description": "标题",
-        "type": "string",
-        "typeRaw": "`string,TemplateRef<void>`",
-        "default": ""
-      }
-    ],
-    "lib": "@delon/abc",
-    "title": "查看",
-    "description": "查看栅格系统是在原 [Grid 栅格](https://ng.ant.design/components/grid/zh) 基础上构建更高阶的组件，用于简化查看页布局。",
-    "whenToUse": "",
-    "doc": "/components/sv/zh",
-    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sv"
-  },
-  {
     "_idx": 156,
-    "type": "directive",
+    "type": "component",
     "selector": "sv-container",
     "types": {},
     "properties": [
@@ -16946,6 +16996,97 @@
   },
   {
     "_idx": 157,
+    "type": "directive",
+    "selector": "sv-container",
+    "types": {},
+    "properties": [
+      {
+        "name": "size",
+        "inputType": 0,
+        "description": "大小",
+        "type": "Enum",
+        "typeRaw": "`'small','large'`",
+        "default": "`'large'`",
+        "typeDefinition": [
+          "small",
+          "large"
+        ],
+        "pureDefault": "large"
+      },
+      {
+        "name": "layout",
+        "inputType": 0,
+        "description": "布局",
+        "type": "Enum",
+        "typeRaw": "`'horizontal','vertical'`",
+        "default": "`'horizontal'`",
+        "typeDefinition": [
+          "horizontal",
+          "vertical"
+        ],
+        "pureDefault": "horizontal"
+      },
+      {
+        "name": "gutter",
+        "inputType": 0,
+        "description": "间距",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`32`",
+        "pureDefault": "32"
+      },
+      {
+        "name": "col",
+        "inputType": 0,
+        "description": "指定信息最多分几列展示，最终一行几列由 col 配置结合[响应式规则](/theme/responsive)决定",
+        "type": "Enum",
+        "typeRaw": "`'1','2','3','4','5','6'`",
+        "default": "`3`",
+        "typeDefinition": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        "pureDefault": "3"
+      },
+      {
+        "name": "labelWidth",
+        "inputType": 0,
+        "description": "默认标签文本宽度",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": ""
+      },
+      {
+        "name": "default",
+        "inputType": 0,
+        "description": "默认是否显示默认文本",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`true`",
+        "pureDefault": "true"
+      },
+      {
+        "name": "title",
+        "inputType": 0,
+        "description": "标题",
+        "type": "string",
+        "typeRaw": "`string,TemplateRef<void>`",
+        "default": ""
+      }
+    ],
+    "lib": "@delon/abc",
+    "title": "查看",
+    "description": "查看栅格系统是在原 [Grid 栅格](https://ng.ant.design/components/grid/zh) 基础上构建更高阶的组件，用于简化查看页布局。",
+    "whenToUse": "",
+    "doc": "/components/sv/zh",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sv"
+  },
+  {
+    "_idx": 158,
     "type": "component",
     "selector": "sv",
     "types": {},
@@ -17029,7 +17170,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sv"
   },
   {
-    "_idx": 158,
+    "_idx": 159,
     "type": "component",
     "selector": "sv-title",
     "types": {},
@@ -17042,7 +17183,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sv"
   },
   {
-    "_idx": 159,
+    "_idx": 160,
     "type": "directive",
     "selector": "sv-title",
     "types": {},
@@ -17055,7 +17196,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sv"
   },
   {
-    "_idx": 160,
+    "_idx": 161,
     "type": "component",
     "selector": "tag-select",
     "types": {},
@@ -17086,7 +17227,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/tag-select"
   },
   {
-    "_idx": 161,
+    "_idx": 162,
     "type": "directive",
     "selector": "xlsx",
     "types": {},
@@ -17099,7 +17240,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/xlsx"
   },
   {
-    "_idx": 162,
+    "_idx": 163,
     "type": "component",
     "selector": "g2-bar",
     "types": {},
@@ -17181,6 +17322,14 @@
         "type": "string",
         "typeRaw": "`string | LooseObject`",
         "default": ""
+      },
+      {
+        "name": "clickItem",
+        "inputType": 1,
+        "description": "点击项回调",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<G2BarClickItem>`",
+        "default": ""
       }
     ],
     "lib": "@delon/chart",
@@ -17191,7 +17340,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/bar"
   },
   {
-    "_idx": 163,
+    "_idx": 164,
     "type": "component",
     "selector": "g2-card",
     "types": {},
@@ -17262,7 +17411,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/card"
   },
   {
-    "_idx": 164,
+    "_idx": 165,
     "type": "component",
     "selector": "g2-custom",
     "types": {},
@@ -17334,7 +17483,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/custom"
   },
   {
-    "_idx": 165,
+    "_idx": 166,
     "type": "component",
     "selector": "g2-gauge",
     "types": {},
@@ -17424,7 +17573,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/gauge"
   },
   {
-    "_idx": 166,
+    "_idx": 167,
     "type": "component",
     "selector": "g2-mini-area",
     "types": {},
@@ -17544,6 +17693,14 @@
         "type": "string",
         "typeRaw": "`string | LooseObject`",
         "default": ""
+      },
+      {
+        "name": "clickItem",
+        "inputType": 1,
+        "description": "点击项回调",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<G2MiniAreaClickItem>`",
+        "default": ""
       }
     ],
     "lib": "@delon/chart",
@@ -17554,7 +17711,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/mini-area"
   },
   {
-    "_idx": 167,
+    "_idx": 168,
     "type": "component",
     "selector": "g2-mini-bar",
     "types": {},
@@ -17639,6 +17796,14 @@
         "type": "string",
         "typeRaw": "`string | LooseObject`",
         "default": ""
+      },
+      {
+        "name": "clickItem",
+        "inputType": 1,
+        "description": "点击项回调",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<G2MiniBarClickItem>`",
+        "default": ""
       }
     ],
     "lib": "@delon/chart",
@@ -17649,7 +17814,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/mini-bar"
   },
   {
-    "_idx": 168,
+    "_idx": 169,
     "type": "component",
     "selector": "g2-mini-progress",
     "types": {},
@@ -17695,7 +17860,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/mini-progress"
   },
   {
-    "_idx": 169,
+    "_idx": 170,
     "type": "component",
     "selector": "number-info",
     "types": {},
@@ -17783,7 +17948,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/number-info"
   },
   {
-    "_idx": 170,
+    "_idx": 171,
     "type": "component",
     "selector": "g2-pie",
     "types": {},
@@ -17933,6 +18098,14 @@
         "type": "string",
         "typeRaw": "`string | LooseObject`",
         "default": ""
+      },
+      {
+        "name": "clickItem",
+        "inputType": 1,
+        "description": "点击项回调",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<G2PieClickItem>`",
+        "default": ""
       }
     ],
     "lib": "@delon/chart",
@@ -17943,7 +18116,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/pie"
   },
   {
-    "_idx": 171,
+    "_idx": 172,
     "type": "component",
     "selector": "g2-radar",
     "types": {},
@@ -18014,6 +18187,14 @@
         "type": "string",
         "typeRaw": "`string | LooseObject`",
         "default": ""
+      },
+      {
+        "name": "clickItem",
+        "inputType": 1,
+        "description": "点击项回调",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<G2RadarClickItem>`",
+        "default": ""
       }
     ],
     "lib": "@delon/chart",
@@ -18024,7 +18205,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/radar"
   },
   {
-    "_idx": 172,
+    "_idx": 173,
     "type": "component",
     "selector": "g2-single-bar",
     "types": {},
@@ -18144,7 +18325,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/single-bar"
   },
   {
-    "_idx": 173,
+    "_idx": 174,
     "type": "component",
     "selector": "g2-tag-cloud",
     "types": {},
@@ -18192,6 +18373,14 @@
         "type": "string",
         "typeRaw": "`string | LooseObject`",
         "default": ""
+      },
+      {
+        "name": "clickItem",
+        "inputType": 1,
+        "description": "点击项回调",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<G2TagCloudClickItem>`",
+        "default": ""
       }
     ],
     "lib": "@delon/chart",
@@ -18202,7 +18391,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/tag-cloud"
   },
   {
-    "_idx": 174,
+    "_idx": 175,
     "type": "component",
     "selector": "g2-timeline",
     "types": {
@@ -18370,6 +18559,14 @@
         "type": "string",
         "typeRaw": "`string | LooseObject`",
         "default": ""
+      },
+      {
+        "name": "clickItem",
+        "inputType": 1,
+        "description": "点击项回调",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<G2TimelineClickItem>`",
+        "default": ""
       }
     ],
     "lib": "@delon/chart",
@@ -18380,7 +18577,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/timeline"
   },
   {
-    "_idx": 175,
+    "_idx": 176,
     "type": "component",
     "selector": "trend",
     "types": {},
@@ -18424,11 +18621,20 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/trend"
   },
   {
-    "_idx": 176,
+    "_idx": 177,
     "type": "component",
     "selector": "g2-water-wave",
     "types": {},
     "properties": [
+      {
+        "name": "animate",
+        "inputType": 0,
+        "description": "是否显示动画",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`true`",
+        "pureDefault": "true"
+      },
       {
         "name": "delay",
         "inputType": 0,
@@ -18481,7 +18687,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/water-wave"
   },
   {
-    "_idx": 177,
+    "_idx": 178,
     "type": "component",
     "selector": "sf",
     "types": {
@@ -18655,6 +18861,15 @@
         "pureDefault": "false"
       },
       {
+        "name": "compact",
+        "inputType": 0,
+        "description": "是否紧凑",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
         "name": "cleanValue",
         "inputType": 0,
         "description": "是否清理未定义 Schema 的数据",
@@ -18704,7 +18919,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/form/src"
   },
   {
-    "_idx": 178,
+    "_idx": 179,
     "type": "directive",
     "selector": "sf",
     "types": {
@@ -18878,6 +19093,15 @@
         "pureDefault": "false"
       },
       {
+        "name": "compact",
+        "inputType": 0,
+        "description": "是否紧凑",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
         "name": "cleanValue",
         "inputType": 0,
         "description": "是否清理未定义 Schema 的数据",
@@ -18927,7 +19151,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/form/src"
   },
   {
-    "_idx": 179,
+    "_idx": 180,
     "type": "component",
     "selector": "nz-breadcrumb-item",
     "types": {},
@@ -18944,27 +19168,27 @@
     "description": "布局容器，其下可嵌套 `nz-header` `nz-sider` `nz-content` `nz-footer` 或 `nz-layout` 本身，可以放在任何父容器中。",
     "type": "component",
     "lib": "ng-zorro-antd",
-    "_idx": 180
+    "_idx": 181
   },
   {
     "selector": "nz-header",
     "description": "顶部布局，自带默认样式，其下可嵌套任何元素，只能放在 `nz-layout` 中。",
     "type": "component",
     "lib": "ng-zorro-antd",
-    "_idx": 181
+    "_idx": 182
   },
   {
     "selector": "nz-content",
     "description": "内容部分，自带默认样式，其下可嵌套任何元素，只能放在 `nz-layout` 中。",
     "type": "component",
     "lib": "ng-zorro-antd",
-    "_idx": 182
+    "_idx": 183
   },
   {
     "selector": "nz-footer",
     "description": "底部布局，自带默认样式，其下可嵌套任何元素，只能放在 `nz-layout` 中。",
     "type": "component",
     "lib": "ng-zorro-antd",
-    "_idx": 183
+    "_idx": 184
   }
 ]
