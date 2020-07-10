@@ -298,64 +298,6 @@
     "types": {},
     "properties": [
       {
-        "name": "nzMouseEnterDelay",
-        "inputType": 0,
-        "description": "鼠标移入后延时多少才显示 Tooltip，单位：秒",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "`0.15`",
-        "pureDefault": "0.15",
-        "_common": true
-      },
-      {
-        "name": "nzMouseLeaveDelay",
-        "inputType": 0,
-        "description": "鼠标移出后延时多少才隐藏 Tooltip，单位：秒",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "`0.1`",
-        "pureDefault": "0.1",
-        "_common": true
-      },
-      {
-        "name": "nzOverlayClassName",
-        "inputType": 0,
-        "description": "卡片类名",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": "",
-        "_common": true
-      },
-      {
-        "name": "nzOverlayStyle",
-        "inputType": 0,
-        "description": "卡片样式",
-        "type": "object",
-        "typeRaw": "`object`",
-        "default": "",
-        "_common": true,
-        "forceInputType": 0
-      },
-      {
-        "name": "nzVisible",
-        "inputType": 0,
-        "description": "用于手动控制浮层显隐",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false",
-        "_common": true
-      },
-      {
-        "name": "nzVisibleChange",
-        "inputType": 1,
-        "description": "显示隐藏的回调",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<boolean>`",
-        "default": "",
-        "_common": true
-      },
-      {
         "name": "nzTooltipTitle",
         "inputType": 0,
         "description": "提示文字",
@@ -407,6 +349,57 @@
         "description": "气泡框定位元素",
         "type": "object",
         "typeRaw": "`ElementRef`",
+        "default": ""
+      },
+      {
+        "name": "nzTooltipVisible",
+        "inputType": 0,
+        "description": "显示隐藏气泡框",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzTooltipVisibleChange",
+        "inputType": 1,
+        "description": "显示隐藏的事件",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<boolean>`",
+        "default": ""
+      },
+      {
+        "name": "nzTooltipMouseEnterDelay",
+        "inputType": 0,
+        "description": "鼠标移入后延时多少才显示 Tooltip，单位：秒",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`0.15`",
+        "pureDefault": "0.15"
+      },
+      {
+        "name": "nzTooltipMouseLeaveDelay",
+        "inputType": 0,
+        "description": "鼠标移出后延时多少才隐藏 Tooltip，单位：秒",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`0.1`",
+        "pureDefault": "0.1"
+      },
+      {
+        "name": "nzTooltipOverlayClassName",
+        "inputType": 0,
+        "description": "卡片类名",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
+      },
+      {
+        "name": "nzTooltipOverlayStyle",
+        "inputType": 0,
+        "description": "卡片样式",
+        "type": "object",
+        "typeRaw": "`object`",
         "default": ""
       }
     ],
@@ -2054,7 +2047,7 @@
         "inputType": 1,
         "description": "当编辑器组件初始化完毕之后派发事件",
         "type": "object",
-        "typeRaw": "`IEditor` | `IDiffEditor`",
+        "typeRaw": "`IStandaloneCodeEditor` | `IStandaloneDiffEditor`",
         "default": ""
       }
     ],
@@ -2299,6 +2292,16 @@
         "forceInputType": 0
       },
       {
+        "name": "nzInputReadOnly",
+        "inputType": 0,
+        "description": "为 input 标签设置只读属性（避免在移动设备上触发小键盘）",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false",
+        "_common": true
+      },
+      {
         "name": "nzDisabledDate",
         "inputType": 0,
         "description": "不可选择的日期",
@@ -2527,6 +2530,16 @@
         "forceInputType": 0
       },
       {
+        "name": "nzInputReadOnly",
+        "inputType": 0,
+        "description": "为 input 标签设置只读属性（避免在移动设备上触发小键盘）",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false",
+        "_common": true
+      },
+      {
         "name": "nzDisabledDate",
         "inputType": 0,
         "description": "不可选择的日期",
@@ -2707,6 +2720,16 @@
         "pureDefault": "false",
         "_common": true,
         "forceInputType": 0
+      },
+      {
+        "name": "nzInputReadOnly",
+        "inputType": 0,
+        "description": "为 input 标签设置只读属性（避免在移动设备上触发小键盘）",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false",
+        "_common": true
       },
       {
         "name": "nzDisabledDate",
@@ -2903,6 +2926,16 @@
         "forceInputType": 0
       },
       {
+        "name": "nzInputReadOnly",
+        "inputType": 0,
+        "description": "为 input 标签设置只读属性（避免在移动设备上触发小键盘）",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false",
+        "_common": true
+      },
+      {
         "name": "nzDisabledDate",
         "inputType": 0,
         "description": "不可选择的日期",
@@ -3087,6 +3120,16 @@
         "pureDefault": "false",
         "_common": true,
         "forceInputType": 0
+      },
+      {
+        "name": "nzInputReadOnly",
+        "inputType": 0,
+        "description": "为 input 标签设置只读属性（避免在移动设备上触发小键盘）",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false",
+        "_common": true
       },
       {
         "name": "nzDisabledDate",
@@ -8034,6 +8077,15 @@
         "pureDefault": "1"
       },
       {
+        "name": "nzInputMode",
+        "inputType": 0,
+        "description": "提供了用户在编辑元素或其内容时可能输入的数据类型的提示，详见[MDN](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Global_attributes/inputmode)",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": "`decimal`",
+        "pureDefault": "decimal"
+      },
+      {
         "name": "nzPlaceHolder",
         "inputType": 0,
         "description": "选择框默认文字",
@@ -9462,64 +9514,6 @@
     "types": {},
     "properties": [
       {
-        "name": "nzMouseEnterDelay",
-        "inputType": 0,
-        "description": "鼠标移入后延时多少才显示 Tooltip，单位：秒",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "`0.15`",
-        "pureDefault": "0.15",
-        "_common": true
-      },
-      {
-        "name": "nzMouseLeaveDelay",
-        "inputType": 0,
-        "description": "鼠标移出后延时多少才隐藏 Tooltip，单位：秒",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "`0.1`",
-        "pureDefault": "0.1",
-        "_common": true
-      },
-      {
-        "name": "nzOverlayClassName",
-        "inputType": 0,
-        "description": "卡片类名",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": "",
-        "_common": true
-      },
-      {
-        "name": "nzOverlayStyle",
-        "inputType": 0,
-        "description": "卡片样式",
-        "type": "object",
-        "typeRaw": "`object`",
-        "default": "",
-        "_common": true,
-        "forceInputType": 0
-      },
-      {
-        "name": "nzVisible",
-        "inputType": 0,
-        "description": "用于手动控制浮层显隐",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false",
-        "_common": true
-      },
-      {
-        "name": "nzVisibleChange",
-        "inputType": 1,
-        "description": "显示隐藏的回调",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<boolean>`",
-        "default": "",
-        "_common": true
-      },
-      {
         "name": "nzTooltipTitle",
         "inputType": 0,
         "description": "提示文字",
@@ -9574,6 +9568,57 @@
         "default": ""
       },
       {
+        "name": "nzTooltipVisible",
+        "inputType": 0,
+        "description": "显示隐藏气泡框",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzTooltipVisibleChange",
+        "inputType": 1,
+        "description": "显示隐藏的事件",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<boolean>`",
+        "default": ""
+      },
+      {
+        "name": "nzTooltipMouseEnterDelay",
+        "inputType": 0,
+        "description": "鼠标移入后延时多少才显示 Tooltip，单位：秒",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`0.15`",
+        "pureDefault": "0.15"
+      },
+      {
+        "name": "nzTooltipMouseLeaveDelay",
+        "inputType": 0,
+        "description": "鼠标移出后延时多少才隐藏 Tooltip，单位：秒",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`0.1`",
+        "pureDefault": "0.1"
+      },
+      {
+        "name": "nzTooltipOverlayClassName",
+        "inputType": 0,
+        "description": "卡片类名",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
+      },
+      {
+        "name": "nzTooltipOverlayStyle",
+        "inputType": 0,
+        "description": "卡片样式",
+        "type": "object",
+        "typeRaw": "`object`",
+        "default": ""
+      },
+      {
         "name": "nzPopconfirmTitle",
         "inputType": 0,
         "description": "确认框的描述",
@@ -9625,6 +9670,106 @@
         "description": "气泡框定位元素",
         "type": "object",
         "typeRaw": "`ElementRef`",
+        "default": ""
+      },
+      {
+        "name": "nzPopconfirmVisible",
+        "inputType": 0,
+        "description": "显示隐藏气泡框",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzPopconfirmShowArrow",
+        "inputType": 0,
+        "description": "气泡框是否包含箭头",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`true`",
+        "pureDefault": "true"
+      },
+      {
+        "name": "nzPopconfirmPlacement",
+        "inputType": 0,
+        "description": "确认框位置",
+        "type": "Enum",
+        "typeRaw": "`'top' | 'left' | 'right' | 'bottom' | 'topLeft' | 'topRight' | 'bottomLeft' | 'bottomRight' | 'leftTop' | 'leftBottom' | 'rightTop' | 'rightBottom'`",
+        "default": "`'top'`",
+        "typeDefinition": [
+          "top",
+          "left",
+          "right",
+          "bottom",
+          "topLeft",
+          "topRight",
+          "bottomLeft",
+          "bottomRight",
+          "leftTop",
+          "leftBottom",
+          "rightTop",
+          "rightBottom"
+        ],
+        "pureDefault": "top"
+      },
+      {
+        "name": "nzPopconfirmOrigin",
+        "inputType": 0,
+        "description": "确认框定位元素",
+        "type": "object",
+        "typeRaw": "`ElementRef`",
+        "default": ""
+      },
+      {
+        "name": "nzPopconfirmVisible",
+        "inputType": 0,
+        "description": "显示隐藏确认框",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzPopconfirmVisibleChange",
+        "inputType": 1,
+        "description": "显示隐藏的事件",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<boolean>`",
+        "default": ""
+      },
+      {
+        "name": "nzPopoverMouseEnterDelay",
+        "inputType": 0,
+        "description": "鼠标移入后延时多少才显示确认框，单位：秒",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`0.15`",
+        "pureDefault": "0.15"
+      },
+      {
+        "name": "nzPopoverMouseLeaveDelay",
+        "inputType": 0,
+        "description": "鼠标移出后延时多少才隐藏确认框，单位：秒",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`0.1`",
+        "pureDefault": "0.1"
+      },
+      {
+        "name": "nzPopoverOverlayClassName",
+        "inputType": 0,
+        "description": "卡片类名",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
+      },
+      {
+        "name": "nzPopoverOverlayStyle",
+        "inputType": 0,
+        "description": "卡片样式",
+        "type": "object",
+        "typeRaw": "`object`",
         "default": ""
       },
       {
@@ -9709,64 +9854,6 @@
     "types": {},
     "properties": [
       {
-        "name": "nzMouseEnterDelay",
-        "inputType": 0,
-        "description": "鼠标移入后延时多少才显示 Tooltip，单位：秒",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "`0.15`",
-        "pureDefault": "0.15",
-        "_common": true
-      },
-      {
-        "name": "nzMouseLeaveDelay",
-        "inputType": 0,
-        "description": "鼠标移出后延时多少才隐藏 Tooltip，单位：秒",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "`0.1`",
-        "pureDefault": "0.1",
-        "_common": true
-      },
-      {
-        "name": "nzOverlayClassName",
-        "inputType": 0,
-        "description": "卡片类名",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": "",
-        "_common": true
-      },
-      {
-        "name": "nzOverlayStyle",
-        "inputType": 0,
-        "description": "卡片样式",
-        "type": "object",
-        "typeRaw": "`object`",
-        "default": "",
-        "_common": true,
-        "forceInputType": 0
-      },
-      {
-        "name": "nzVisible",
-        "inputType": 0,
-        "description": "用于手动控制浮层显隐",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false",
-        "_common": true
-      },
-      {
-        "name": "nzVisibleChange",
-        "inputType": 1,
-        "description": "显示隐藏的回调",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<boolean>`",
-        "default": "",
-        "_common": true
-      },
-      {
         "name": "nzTooltipTitle",
         "inputType": 0,
         "description": "提示文字",
@@ -9818,6 +9905,57 @@
         "description": "气泡框定位元素",
         "type": "object",
         "typeRaw": "`ElementRef`",
+        "default": ""
+      },
+      {
+        "name": "nzTooltipVisible",
+        "inputType": 0,
+        "description": "显示隐藏气泡框",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzTooltipVisibleChange",
+        "inputType": 1,
+        "description": "显示隐藏的事件",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<boolean>`",
+        "default": ""
+      },
+      {
+        "name": "nzTooltipMouseEnterDelay",
+        "inputType": 0,
+        "description": "鼠标移入后延时多少才显示 Tooltip，单位：秒",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`0.15`",
+        "pureDefault": "0.15"
+      },
+      {
+        "name": "nzTooltipMouseLeaveDelay",
+        "inputType": 0,
+        "description": "鼠标移出后延时多少才隐藏 Tooltip，单位：秒",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`0.1`",
+        "pureDefault": "0.1"
+      },
+      {
+        "name": "nzTooltipOverlayClassName",
+        "inputType": 0,
+        "description": "卡片类名",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
+      },
+      {
+        "name": "nzTooltipOverlayStyle",
+        "inputType": 0,
+        "description": "卡片样式",
+        "type": "object",
+        "typeRaw": "`object`",
         "default": ""
       },
       {
@@ -9880,6 +10018,57 @@
         "description": "气泡框定位元素",
         "type": "object",
         "typeRaw": "`ElementRef`",
+        "default": ""
+      },
+      {
+        "name": "nzPopoverVisible",
+        "inputType": 0,
+        "description": "显示隐藏气泡框",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzPopoverVisibleChange",
+        "inputType": 1,
+        "description": "显示隐藏的事件",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<boolean>`",
+        "default": ""
+      },
+      {
+        "name": "nzPopoverMouseEnterDelay",
+        "inputType": 0,
+        "description": "鼠标移入后延时多少才显示气泡框，单位：秒",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`0.15`",
+        "pureDefault": "0.15"
+      },
+      {
+        "name": "nzPopoverMouseLeaveDelay",
+        "inputType": 0,
+        "description": "鼠标移出后延时多少才隐藏气泡框，单位：秒",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`0.1`",
+        "pureDefault": "0.1"
+      },
+      {
+        "name": "nzPopoverOverlayClassName",
+        "inputType": 0,
+        "description": "卡片类名",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
+      },
+      {
+        "name": "nzPopoverOverlayStyle",
+        "inputType": 0,
+        "description": "卡片样式",
+        "type": "object",
+        "typeRaw": "`object`",
         "default": ""
       }
     ],
@@ -10329,6 +10518,16 @@
         "typeRaw": "`boolean`",
         "default": "`false`",
         "pureDefault": "false"
+      },
+      {
+        "name": "nzDisabled",
+        "inputType": 0,
+        "description": "禁用",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false",
+        "forceInputType": 0
       },
       {
         "name": "nzResize",
@@ -12135,6 +12334,24 @@
         "pureDefault": "false"
       },
       {
+        "name": "colSpan",
+        "inputType": 0,
+        "description": "每单元格中扩展列的数量",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`null`",
+        "pureDefault": "null"
+      },
+      {
+        "name": "rowSpan",
+        "inputType": 0,
+        "description": "每单元格中扩展行的数量",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`null`",
+        "pureDefault": "null"
+      },
+      {
         "name": "nzColumnKey",
         "inputType": 0,
         "description": "当前列的key，用于服务端筛选和排序使用",
@@ -12966,12 +13183,13 @@
         "inputType": 0,
         "description": "可以改变时间轴和内容的相对位置",
         "type": "Enum",
-        "typeRaw": "`'left' | 'alternate' | 'right'`",
+        "typeRaw": "`'left' | 'alternate' | 'right' | 'custom'`",
         "default": "",
         "typeDefinition": [
           "left",
           "alternate",
-          "right"
+          "right",
+          "custom"
         ]
       }
     ],
@@ -13004,6 +13222,18 @@
         "type": "string",
         "typeRaw": "`string | TemplateRef<void>`",
         "default": ""
+      },
+      {
+        "name": "nzPosition",
+        "inputType": 0,
+        "description": "自定义节点位置，仅当 `nzMode` 为 `custom` 时有效",
+        "type": "Enum",
+        "typeRaw": "`'left' | 'right'`",
+        "default": "",
+        "typeDefinition": [
+          "left",
+          "right"
+        ]
       }
     ],
     "description": "时间轴的每一个节点。",
@@ -14098,6 +14328,14 @@
         "default": ""
       },
       {
+        "name": "nzPreviewIsImage",
+        "inputType": 0,
+        "description": "自定义预览文件是否有效图像，一般用于图像URL为非标准格式；注意：务必使用 `=>` 定义处理方法。",
+        "type": "function",
+        "typeRaw": "`(file: NzUploadFile) => boolean`",
+        "default": ""
+      },
+      {
         "name": "nzRemove",
         "inputType": 0,
         "description": "点击移除文件时的回调，返回值为 false 时不移除。支持返回 `Observable` 对象；注意：务必使用 `=>` 定义处理方法。",
@@ -14136,6 +14374,14 @@
         "description": "自定义显示 icon",
         "type": "TemplateRef",
         "typeRaw": "`TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "nzFileListRender",
+        "inputType": 0,
+        "description": "自定义显示整个列表",
+        "type": "TemplateRef",
+        "typeRaw": "`TemplateRef<{ $implicit: UploadFile[] }>`",
         "default": ""
       }
     ],
@@ -18522,7 +18768,16 @@
       {
         "name": "mask",
         "inputType": 0,
-        "description": "日期格式",
+        "description": "日期格式，使用 [G2 Mask日期格式](https://g2.antv.vision/zh/docs/manual/concepts/data-and-scales#time)",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": "`HH:mm`",
+        "pureDefault": "HH:mm"
+      },
+      {
+        "name": "maskSlider",
+        "inputType": 0,
+        "description": "滑动条日期格式，使用 [date-fns 日期格式](https://www.unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table)",
         "type": "string",
         "typeRaw": "`string`",
         "default": "`HH:mm`",
@@ -18887,6 +19142,14 @@
         "default": ""
       },
       {
+        "name": "formValueChange",
+        "inputType": 1,
+        "description": "值数据变更时回调",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<SFValueChange>`",
+        "default": ""
+      },
+      {
         "name": "formSubmit",
         "inputType": 1,
         "description": "提交表单时回调",
@@ -19116,6 +19379,14 @@
         "description": "数据变更时回调",
         "type": "EventEmitter",
         "typeRaw": "`EventEmitter<{}>`",
+        "default": ""
+      },
+      {
+        "name": "formValueChange",
+        "inputType": 1,
+        "description": "值数据变更时回调",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<SFValueChange>`",
         "default": ""
       },
       {
