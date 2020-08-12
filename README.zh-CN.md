@@ -4,6 +4,16 @@
 
 > 当前为 ZORRO `8.x`，如果你使用 `7.x` 请手动下载 [cipchk.ng-zorro-vscode-7.3.4](https://raw.githubusercontent.com/ng-alain/ng-zorro-vscode/master/cipchk.ng-zorro-vscode-zh-CN-7.3.4.vsix).
 
+## 旧版本
+
+**注意：当前最新版本是基于 `10.0.0-bate.2`**，你依然可以下载其他旧版本：
+
+| 版本号 | 下载链接 |
+|---------|----------|
+| `9.x` | [9.2.0](https://raw.githubusercontent.com/ng-alain/ng-zorro-vscode/master/cipchk.ng-zorro-vscode-zh-CN-9.2.0.vsix) |
+| `8.x` | [8.3.3](https://raw.githubusercontent.com/ng-alain/ng-zorro-vscode/master/cipchk.ng-zorro-vscode-zh-CN-8.3.3.vsix) |
+| `7.x` | [7.3.4](https://raw.githubusercontent.com/ng-alain/ng-zorro-vscode/master/cipchk.ng-zorro-vscode-zh-CN-7.3.4.vsix) |
+
 ## 特征
 
 - 自动补全组件名、属性、复杂参数、可选值
@@ -18,11 +28,11 @@
 
 ## 配置项
 
-| 名称                             | 描述             | 类型           | 默认值  |
-|----------------------------------|----------------|----------------|---------|
-| `ng-zorro-vscode.language`       | 语言             | `zh-CN, en-US` | `en-US` |
-| `ng-zorro-vscode.hover`          | 是否开启悬停     | `boolean`      | `true`  |
-| `ng-zorro-vscode.inlineTemplate` | 是否支持内联模板 | `boolean`      | `true`  |
+| 名称 | 描述 | 类型 | 默认值 |
+|----|----|----|-----|
+| `ng-zorro-vscode.language` | 语言 | `zh-CN, en-US` | `en-US` |
+| `ng-zorro-vscode.hover` | 是否开启悬停 | `boolean` | `true` |
+| `ng-zorro-vscode.inlineTemplate` | 是否支持内联模板 | `boolean` | `true` |
 
 > **注意:** 修改配置必须**重启Visual Studio Code**。
 

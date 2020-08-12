@@ -4,7 +4,15 @@
 
 [中文](README.zh-CN.md)
 
-> Currently for ZORRO `9.x`, if you use `8.x` please download [cipchk.ng-zorro-vscode-8.3.3](https://raw.githubusercontent.com/ng-alain/ng-zorro-vscode/master/cipchk.ng-zorro-vscode-8.3.3.vsix).
+## Old Versions
+
+**Note: The latest version is based on `10.0.0-bate.2`**, you can still download other old versions:
+
+| Version | Download |
+|---------|----------|
+| `9.x` | [9.2.0](https://raw.githubusercontent.com/ng-alain/ng-zorro-vscode/master/cipchk.ng-zorro-vscode-en-US-9.2.0.vsix) |
+| `8.x` | [8.3.3](https://raw.githubusercontent.com/ng-alain/ng-zorro-vscode/master/cipchk.ng-zorro-vscode-8.3.3.vsix) |
+| `7.x` | [7.3.4](https://raw.githubusercontent.com/ng-alain/ng-zorro-vscode/master/cipchk.ng-zorro-vscode-7.3.4.vsix) |
 
 ## Features
 
@@ -20,11 +28,11 @@ In addition, some common completion code snippets are built in and prefix with `
 
 ## Configuration
 
-| Name                             | Description                                                  | Type           | Default |
-|----------------------------------|--------------------------------------------------------------|----------------|---------|
-| `ng-zorro-vscode.language`       | Set language code                                            | `zh-CN, en-US` | `en-US` |
-| `ng-zorro-vscode.hover`          | Whether to enable hover                                      | `boolean`      | `true`  |
-| `ng-zorro-vscode.inlineTemplate` | Whether to enable support inline template in typescript file | `boolean`      | `true`  |
+| Name | Description | Type | Default |
+|------|-------------|------|---------|
+| `ng-zorro-vscode.language` | Set language code | `zh-CN, en-US` | `en-US` |
+| `ng-zorro-vscode.hover` | Whether to enable hover | `boolean` | `true` |
+| `ng-zorro-vscode.inlineTemplate` | Whether to enable support inline template in typescript file | `boolean` | `true` |
 
 > **NOTICE:** Changed configuration must **restart Visual Studio Code**.
 

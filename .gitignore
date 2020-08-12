@@ -12,5 +12,7 @@ yarn.lock
 !/cipchk.ng-zorro-vscode-zh-CN-7.3.4.vsix
 !/cipchk.ng-zorro-vscode-8.3.3.vsix
 !/cipchk.ng-zorro-vscode-zh-CN-8.3.3.vsix
+!/cipchk.ng-zorro-vscode-en-US-9.2.0.vsix
+!/cipchk.ng-zorro-vscode-zh-CN-9.2.0.vsix
 /out
 /snippets

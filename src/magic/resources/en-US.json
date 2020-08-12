@@ -1077,6 +1077,15 @@
         "typeRaw": "`string`",
         "default": "`'breadcrumb'`",
         "pureDefault": "breadcrumb"
+      },
+      {
+        "name": "nzRouteLabelFn",
+        "inputType": 0,
+        "description": "Format breadcrumb item label text，normally used in international app to translate i18n key. It should be used when `nzAutoGenerate` is `true`",
+        "type": "function",
+        "typeRaw": "`(label:string) => string`",
+        "default": "`label => label`",
+        "pureDefault": "label => label"
       }
     ],
     "lib": "ng-zorro-antd",
@@ -1092,6 +1101,16 @@
     "selector": "nz-button",
     "types": {},
     "properties": [
+      {
+        "name": "disabled",
+        "inputType": 0,
+        "description": "prevents user from interacting with the button",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false",
+        "forceInputType": 0
+      },
       {
         "name": "nzGhost",
         "inputType": 0,
@@ -1140,14 +1159,15 @@
       {
         "name": "nzType",
         "inputType": 0,
-        "description": "can be set to `primary` `dashed` `link` or omitted (meaning `default`)",
+        "description": "can be set to `primary` `dashed` `text` `link` or omitted (meaning `default`)",
         "type": "Enum",
-        "typeRaw": "`'primary'|'dashed'|'link'`",
+        "typeRaw": "`'primary'|'dashed'|'link'|'text'`",
         "default": "",
         "typeDefinition": [
           "primary",
           "dashed",
-          "link"
+          "link",
+          "text"
         ]
       },
       {
@@ -2095,6 +2115,15 @@
         "typeRaw": "`boolean`",
         "default": "`true`",
         "pureDefault": "true"
+      },
+      {
+        "name": "nzGhost",
+        "inputType": 0,
+        "description": "Make the collapse borderless and its background transparent",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
       },
       {
         "name": "nzExpandIconPosition",
@@ -3481,6 +3510,15 @@
         "default": ""
       },
       {
+        "name": "nzPlain",
+        "inputType": 0,
+        "description": "Divider text show as plain style",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
         "name": "nzOrientation",
         "inputType": 0,
         "description": "inner text orientation",
@@ -3575,6 +3613,14 @@
         "name": "nzTitle",
         "inputType": 0,
         "description": "The title for Drawer.",
+        "type": "string",
+        "typeRaw": "`string | TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "nzFooter",
+        "inputType": 0,
+        "description": "The footer for Drawer.",
         "type": "string",
         "typeRaw": "`string | TemplateRef<void>`",
         "default": ""
@@ -12621,11 +12667,12 @@
         "inputType": 0,
         "description": "Basic style of tabs",
         "type": "Enum",
-        "typeRaw": "`'line' | 'card'`",
+        "typeRaw": "`'line' | 'card' | 'editable-card'`",
         "default": "`'line'`",
         "typeDefinition": [
           "line",
-          "card"
+          "card",
+          "editable-card"
         ],
         "pureDefault": "line"
       },
@@ -12645,15 +12692,6 @@
         "typeRaw": "`boolean`",
         "default": "`false`",
         "pureDefault": "false"
-      },
-      {
-        "name": "nzShowPagination",
-        "inputType": 0,
-        "description": "Whether show pre or next button when exceed display area",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`true`",
-        "pureDefault": "true"
       },
       {
         "name": "nzLinkRouter",
@@ -12682,6 +12720,15 @@
         "default": ""
       },
       {
+        "name": "nzCentered",
+        "inputType": 0,
+        "description": "Centers tabs",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
         "name": "nzSelectedIndexChange",
         "inputType": 1,
         "description": "Current tab's index change callback",
@@ -12695,22 +12742,6 @@
         "description": "Current tab's change callback",
         "type": "EventEmitter",
         "typeRaw": "`EventEmitter<{index: number,tab: NzTabComponent}>`",
-        "default": ""
-      },
-      {
-        "name": "nzOnNextClick",
-        "inputType": 1,
-        "description": "Callback executed when next button is clicked",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<void>`",
-        "default": ""
-      },
-      {
-        "name": "nzOnPrevClick",
-        "inputType": 1,
-        "description": "Callback executed when prev button is clicked",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<void>`",
         "default": ""
       }
     ],
@@ -14746,7 +14777,7 @@
         "inputType": 0,
         "description": "Parameter of request",
         "type": "object",
-        "typeRaw": "`any`",
+        "typeRaw": "`{}`",
         "default": ""
       },
       {
@@ -14754,7 +14785,7 @@
         "inputType": 0,
         "description": "Body of request",
         "type": "object",
-        "typeRaw": "`any`",
+        "typeRaw": "`{}`",
         "default": ""
       },
       {
@@ -14780,6 +14811,14 @@
         "description": "Specify a file name",
         "type": "string",
         "typeRaw": "`string, (rep: HttpResponse<Blob>) => string`",
+        "default": ""
+      },
+      {
+        "name": "pre",
+        "inputType": 0,
+        "description": "Callback of download",
+        "type": "function",
+        "typeRaw": "`(ev: MouseEvent) => Promise<boolean>`",
         "default": ""
       },
       {
@@ -15836,6 +15875,15 @@
         "default": ""
       },
       {
+        "name": "routeParamMatchMode",
+        "inputType": 0,
+        "description": "Match the pattern when routing parameters are included, for example:`/view/:id`<br> - `strict` Strict mode `/view/1`, `/view/2` Different pages<br> - `loose` Loose mode `/view/1`, `/view/2` Same page and only one tab of component",
+        "type": "string",
+        "typeRaw": "`strict,loose`",
+        "default": "`strict`",
+        "pureDefault": "strict"
+      },
+      {
         "name": "close",
         "inputType": 1,
         "description": "Close callback event",
@@ -16785,6 +16833,15 @@
           "typeRaw": "`string`",
           "default": "`.`",
           "pureDefault": "."
+        },
+        {
+          "name": "arrayParam",
+          "inputType": 0,
+          "description": "Whether to pass parameters as an array<br>`true` Indicates the use of `url?sort=name.asc&sort=age.desc`<br>`false` Indicates the use of `url?sort=name.asc-age.desc`",
+          "type": "boolean",
+          "typeRaw": "`boolean`",
+          "default": "`false`",
+          "pureDefault": "false"
         },
         {
           "name": "keepEmptyKey",
