@@ -6,13 +6,10 @@ description:
 
 ```html
 <nz-drawer
-      [nzBodyStyle]="{}"
-      [nzMaskClosable]="${2|true,false|}"
-      [nzWidth]="720"
-      [nzVisible]="true"
-      nzTitle="Create Drawer"
-      (nzOnClose)="close()"
-      [nzPlacement] = "${3|'top','right','bottom','left'|}" >
-      ${1}
+  [(nzVisible)]="${1:visible}"
+  [nzTitle]="${2:Title}"
+  nzPlacement="${3|top,right,bottom,left|}"
+  (nzOnClose)="close()">
+  $0
 </nz-drawer>
 ```

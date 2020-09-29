@@ -2,11 +2,9 @@
 
 ![Help](help.gif)
 
-> 当前为 ZORRO `8.x`，如果你使用 `7.x` 请手动下载 [cipchk.ng-zorro-vscode-7.3.4](https://raw.githubusercontent.com/ng-alain/ng-zorro-vscode/master/cipchk.ng-zorro-vscode-zh-CN-7.3.4.vsix).
-
 ## 旧版本
 
-**注意：当前最新版本是基于 `10.0.0-bate.2`**，你依然可以下载其他旧版本：
+**注意：当前最新版本是基于 `10.0.0`**，你依然可以下载其他旧版本：
 
 | 版本号 | 下载链接 |
 |---------|----------|
