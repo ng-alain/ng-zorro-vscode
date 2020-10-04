@@ -946,6 +946,14 @@
     "types": {},
     "properties": [
       {
+        "name": "nzStandalone",
+        "inputType": 0,
+        "description": "Whether standalone mode",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": ""
+      },
+      {
         "name": "nzColor",
         "inputType": 0,
         "description": "Customize Badge dot color",
@@ -1017,7 +1025,7 @@
         "inputType": 0,
         "description": "If `nzStatus` is set, `text` sets the display text of the status `dot`",
         "type": "string",
-        "typeRaw": "`string`",
+        "typeRaw": "`string | TemplateRef<void>`",
         "default": ""
       },
       {
@@ -1047,6 +1055,45 @@
   },
   {
     "_idx": 14,
+    "type": "component",
+    "selector": "nz-ribbon",
+    "types": {},
+    "properties": [
+      {
+        "name": "nzColor",
+        "inputType": 0,
+        "description": "Customize Ribbon color",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
+      },
+      {
+        "name": "nzPlacement",
+        "inputType": 0,
+        "description": "The placement of the Ribbon",
+        "type": "string",
+        "typeRaw": "`start` | `end`",
+        "default": "`end`",
+        "pureDefault": "end"
+      },
+      {
+        "name": "nzText",
+        "inputType": 0,
+        "description": "Content inside the Ribbon",
+        "type": "string",
+        "typeRaw": "`string | TemplateRef<void>`",
+        "default": ""
+      }
+    ],
+    "lib": "ng-zorro-antd",
+    "title": "Badge",
+    "description": "Small numerical value or status descriptor for UI elements.",
+    "whenToUse": "Badge normally appears in proximity to notifications or user avatars with eye-catching appeal, typically displaying unread messages count.",
+    "doc": "/components/badge/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/badge"
+  },
+  {
+    "_idx": 15,
     "type": "component",
     "selector": "nz-breadcrumb",
     "types": {},
@@ -1096,7 +1143,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/breadcrumb"
   },
   {
-    "_idx": 15,
+    "_idx": 16,
     "type": "directive",
     "selector": "nz-button",
     "types": {},
@@ -1211,7 +1258,7 @@
     "snippet": "<button __$1>${2|Save,Submit,Cancel,Create,Delete,Search|}</button>"
   },
   {
-    "_idx": 16,
+    "_idx": 17,
     "type": "component",
     "selector": "nz-button-group",
     "types": {},
@@ -1239,7 +1286,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/button"
   },
   {
-    "_idx": 17,
+    "_idx": 18,
     "type": "component",
     "selector": "nz-calendar",
     "types": {},
@@ -1341,7 +1388,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/calendar"
   },
   {
-    "_idx": 18,
+    "_idx": 19,
     "type": "component",
     "selector": "nz-card",
     "types": {},
@@ -1363,13 +1410,13 @@
         "default": ""
       },
       {
-        "name": "nzBordered",
+        "name": "nzBorderless",
         "inputType": 0,
-        "description": "Toggles rendering of the border around the card",
+        "description": "Remove border around the card",
         "type": "boolean",
         "typeRaw": "`boolean`",
-        "default": "`true`",
-        "pureDefault": "true"
+        "default": "`false`",
+        "pureDefault": "false"
       },
       {
         "name": "nzCover",
@@ -1447,7 +1494,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/card"
   },
   {
-    "_idx": 19,
+    "_idx": 20,
     "type": "component",
     "selector": "nz-card-meta",
     "types": {},
@@ -1485,7 +1532,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/card"
   },
   {
-    "_idx": 20,
+    "_idx": 21,
     "type": "directive",
     "selector": "nz-card-grid",
     "types": {},
@@ -1508,7 +1555,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/card"
   },
   {
-    "_idx": 21,
+    "_idx": 22,
     "type": "component",
     "selector": "nz-card-tab",
     "types": {},
@@ -1521,7 +1568,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/card"
   },
   {
-    "_idx": 22,
+    "_idx": 23,
     "type": "component",
     "selector": "nz-carousel",
     "types": {},
@@ -1617,7 +1664,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/carousel"
   },
   {
-    "_idx": 23,
+    "_idx": 24,
     "type": "component",
     "selector": "nz-cascader",
     "types": {},
@@ -1873,7 +1920,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/cascader"
   },
   {
-    "_idx": 24,
+    "_idx": 25,
     "type": "directive",
     "selector": "nz-checkbox",
     "types": {},
@@ -1954,7 +2001,7 @@
     "snippet": "<label __$1>$2</label>"
   },
   {
-    "_idx": 25,
+    "_idx": 26,
     "type": "component",
     "selector": "nz-checkbox-group",
     "types": {},
@@ -1995,7 +2042,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/checkbox"
   },
   {
-    "_idx": 26,
+    "_idx": 27,
     "type": "component",
     "selector": "nz-checkbox-wrapper",
     "types": {},
@@ -2017,7 +2064,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/checkbox"
   },
   {
-    "_idx": 27,
+    "_idx": 28,
     "type": "component",
     "selector": "nz-code-editor",
     "types": {},
@@ -2093,7 +2140,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/code-editor"
   },
   {
-    "_idx": 28,
+    "_idx": 29,
     "type": "component",
     "selector": "nz-collapse",
     "types": {},
@@ -2147,7 +2194,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/collapse"
   },
   {
-    "_idx": 29,
+    "_idx": 30,
     "type": "component",
     "selector": "nz-collapse-panel",
     "types": {},
@@ -2220,7 +2267,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/collapse"
   },
   {
-    "_idx": 30,
+    "_idx": 31,
     "type": "component",
     "selector": "nz-comment",
     "types": {},
@@ -2250,7 +2297,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/comment"
   },
   {
-    "_idx": 31,
+    "_idx": 32,
     "type": "directive",
     "selector": "nz-comment-avatar",
     "types": {},
@@ -2263,7 +2310,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/comment"
   },
   {
-    "_idx": 32,
+    "_idx": 33,
     "type": "component",
     "selector": "nz-comment-content",
     "types": {},
@@ -2276,7 +2323,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/comment"
   },
   {
-    "_idx": 33,
+    "_idx": 34,
     "type": "component",
     "selector": "nz-comment-action",
     "types": {},
@@ -2289,7 +2336,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/comment"
   },
   {
-    "_idx": 34,
+    "_idx": 35,
     "type": "component",
     "selector": "nz-date-picker",
     "types": {},
@@ -2315,13 +2362,12 @@
         "_common": true
       },
       {
-        "name": "nzDateRender",
+        "name": "nzDefaultPickerValue",
         "inputType": 0,
-        "description": "custom rendering function for date cells (Not support by month-picker/year-picker)",
-        "type": "string",
-        "typeRaw": "-",
-        "default": "`TemplateRef<Date> \\| string \\| ((d: Date) => TemplateRef<Date> \\| string)`",
-        "pureDefault": "TemplateRef<Date> \\| string \\| ((d: Date) => TemplateRef<Date> \\| string)",
+        "description": "default picker date",
+        "type": "object",
+        "typeRaw": "`Date` | `Date[]`",
+        "default": "",
         "_common": true
       },
       {
@@ -2336,6 +2382,33 @@
         "forceInputType": 0
       },
       {
+        "name": "nzDisabledDate",
+        "inputType": 0,
+        "description": "specify the date that cannot be selected",
+        "type": "function",
+        "typeRaw": "`(current: Date) => boolean`",
+        "default": "",
+        "_common": true
+      },
+      {
+        "name": "nzDropdownClassName",
+        "inputType": 0,
+        "description": "to customize the className of the popup calendar",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": "",
+        "_common": true
+      },
+      {
+        "name": "nzFormat",
+        "inputType": 0,
+        "description": "to set the date format, see `nzFormat special instructions`",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": "",
+        "_common": true
+      },
+      {
         "name": "nzInputReadOnly",
         "inputType": 0,
         "description": "set the readonly attribute of the input tag (avoids virtual keyboard on touch devices)",
@@ -2343,15 +2416,6 @@
         "typeRaw": "`boolean`",
         "default": "`false`",
         "pureDefault": "false",
-        "_common": true
-      },
-      {
-        "name": "nzDisabledDate",
-        "inputType": 0,
-        "description": "specify the date that cannot be selected",
-        "type": "function",
-        "typeRaw": "`(current: Date) => boolean`",
-        "default": "",
         "_common": true
       },
       {
@@ -2365,11 +2429,21 @@
         "_common": true
       },
       {
-        "name": "nzOpen",
+        "name": "nzMode",
         "inputType": 0,
-        "description": "open state of picker",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
+        "description": "Set picker mode",
+        "type": "Date",
+        "typeRaw": "`'date'` | `'week'` | `'month'` | `'year'`",
+        "default": "`'date'`",
+        "pureDefault": "date",
+        "_common": true
+      },
+      {
+        "name": "nzPlaceHolder",
+        "inputType": 0,
+        "description": "placeholder of date input",
+        "type": "string",
+        "typeRaw": "`string` | `string[]`",
         "default": "",
         "_common": true
       },
@@ -2384,11 +2458,11 @@
         "_common": true
       },
       {
-        "name": "nzDropdownClassName",
+        "name": "nzRenderExtraFooter",
         "inputType": 0,
-        "description": "to customize the className of the popup calendar",
-        "type": "string",
-        "typeRaw": "`string`",
+        "description": "render extra footer in panel",
+        "type": "TemplateRef",
+        "typeRaw": "`TemplateRef | string | (() => TemplateRef | string)`",
         "default": "",
         "_common": true
       },
@@ -2403,15 +2477,6 @@
           "large",
           "small"
         ],
-        "_common": true
-      },
-      {
-        "name": "nzDefaultPickerValue",
-        "inputType": 0,
-        "description": "default picker date",
-        "type": "object",
-        "typeRaw": "`Date` | `Date[]`",
-        "default": "",
         "_common": true
       },
       {
@@ -2438,73 +2503,6 @@
         "description": "Date",
         "type": "object",
         "typeRaw": "`Date`",
-        "default": ""
-      },
-      {
-        "name": "nzDisabledTime",
-        "inputType": 0,
-        "description": "to specify the time that cannot be selected",
-        "type": "function",
-        "typeRaw": "`(current: Date) => { nzDisabledHours, nzDisabledMinutes, nzDisabledSeconds }`",
-        "default": ""
-      },
-      {
-        "name": "nzFormat",
-        "inputType": 0,
-        "description": "to set the date format, see `nzFormat special instructions`",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": "`'yyyy-MM-DD'`",
-        "pureDefault": "yyyy-MM-DD"
-      },
-      {
-        "name": "nzRenderExtraFooter",
-        "inputType": 0,
-        "description": "render extra footer in panel",
-        "type": "TemplateRef",
-        "typeRaw": "`TemplateRef | string | (() => TemplateRef | string)`",
-        "default": ""
-      },
-      {
-        "name": "nzShowTime",
-        "inputType": 0,
-        "description": "to provide an additional time selection",
-        "type": "object",
-        "typeRaw": "`object | boolean`",
-        "default": "[TimePicker Options](/components/time-picker/en#api)",
-        "pureDefault": "[TimePicker Options](/components/time-picker/en#api)"
-      },
-      {
-        "name": "nzShowToday",
-        "inputType": 0,
-        "description": "whether to show 'Today' button",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`true`",
-        "pureDefault": "true"
-      },
-      {
-        "name": "nzPlaceHolder",
-        "inputType": 0,
-        "description": "placeholder of date input",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": ""
-      },
-      {
-        "name": "nzOnOk",
-        "inputType": 1,
-        "description": "callback when click ok button",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<Date>`",
-        "default": ""
-      },
-      {
-        "name": "ngModelChange",
-        "inputType": 1,
-        "description": "Date change callback",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<Date>`",
         "default": ""
       },
       {
@@ -2518,199 +2516,6 @@
         "inputType": 0,
         "type": "string",
         "typeRaw": "`string`"
-      }
-    ],
-    "lib": "ng-zorro-antd",
-    "title": "DatePicker",
-    "description": "To select or input a date.",
-    "whenToUse": "By clicking the input box, you can select a date from a popup calendar.",
-    "doc": "/components/date-picker/en",
-    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/date-picker"
-  },
-  {
-    "_idx": 35,
-    "type": "component",
-    "selector": "nz-year-picker",
-    "types": {},
-    "properties": [
-      {
-        "name": "nzAllowClear",
-        "inputType": 0,
-        "description": "Whether to show clear button",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`true`",
-        "pureDefault": "true",
-        "_common": true
-      },
-      {
-        "name": "nzAutoFocus",
-        "inputType": 0,
-        "description": "get focus when component mounted",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false",
-        "_common": true
-      },
-      {
-        "name": "nzDateRender",
-        "inputType": 0,
-        "description": "custom rendering function for date cells (Not support by month-picker/year-picker)",
-        "type": "string",
-        "typeRaw": "-",
-        "default": "`TemplateRef<Date> \\| string \\| ((d: Date) => TemplateRef<Date> \\| string)`",
-        "pureDefault": "TemplateRef<Date> \\| string \\| ((d: Date) => TemplateRef<Date> \\| string)",
-        "_common": true
-      },
-      {
-        "name": "nzDisabled",
-        "inputType": 0,
-        "description": "determine whether the nz-date-picker is disabled",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false",
-        "_common": true,
-        "forceInputType": 0
-      },
-      {
-        "name": "nzInputReadOnly",
-        "inputType": 0,
-        "description": "set the readonly attribute of the input tag (avoids virtual keyboard on touch devices)",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false",
-        "_common": true
-      },
-      {
-        "name": "nzDisabledDate",
-        "inputType": 0,
-        "description": "specify the date that cannot be selected",
-        "type": "function",
-        "typeRaw": "`(current: Date) => boolean`",
-        "default": "",
-        "_common": true
-      },
-      {
-        "name": "nzLocale",
-        "inputType": 0,
-        "description": "localization configuration",
-        "type": "object",
-        "typeRaw": "`object`",
-        "default": "[default](https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json)",
-        "pureDefault": "[default](https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json)",
-        "_common": true
-      },
-      {
-        "name": "nzOpen",
-        "inputType": 0,
-        "description": "open state of picker",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "",
-        "_common": true
-      },
-      {
-        "name": "nzPopupStyle",
-        "inputType": 0,
-        "description": "to customize the style of the popup calendar",
-        "type": "object",
-        "typeRaw": "`object`",
-        "default": "`{}`",
-        "pureDefault": "{}",
-        "_common": true
-      },
-      {
-        "name": "nzDropdownClassName",
-        "inputType": 0,
-        "description": "to customize the className of the popup calendar",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": "",
-        "_common": true
-      },
-      {
-        "name": "nzSize",
-        "inputType": 0,
-        "description": "determine the size of the input box, the height of `large` and `small`, are 40px and 24px respectively, while default size is 32px",
-        "type": "Enum",
-        "typeRaw": "`'large' | 'small'`",
-        "default": "",
-        "typeDefinition": [
-          "large",
-          "small"
-        ],
-        "_common": true
-      },
-      {
-        "name": "nzDefaultPickerValue",
-        "inputType": 0,
-        "description": "default picker date",
-        "type": "object",
-        "typeRaw": "`Date` | `Date[]`",
-        "default": "",
-        "_common": true
-      },
-      {
-        "name": "nzSuffixIcon",
-        "inputType": 0,
-        "description": "the custom suffix icon",
-        "type": "string",
-        "typeRaw": "`string` | `TemplateRef`",
-        "default": "",
-        "_common": true
-      },
-      {
-        "name": "nzOnOpenChange",
-        "inputType": 1,
-        "description": "a callback emitter, can be executed whether the popup calendar is popped up or closed",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<boolean>`",
-        "default": "",
-        "_common": true
-      },
-      {
-        "name": "ngModel",
-        "inputType": 2,
-        "description": "Date",
-        "type": "object",
-        "typeRaw": "`Date`",
-        "default": ""
-      },
-      {
-        "name": "nzFormat",
-        "inputType": 0,
-        "description": "to set the date format, see `nzFormat special instructions`",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": "`'yyyy'`",
-        "pureDefault": "yyyy"
-      },
-      {
-        "name": "nzRenderExtraFooter",
-        "inputType": 0,
-        "description": "render extra footer in panel",
-        "type": "TemplateRef",
-        "typeRaw": "`TemplateRef | string | (() => TemplateRef | string)`",
-        "default": ""
-      },
-      {
-        "name": "nzPlaceHolder",
-        "inputType": 0,
-        "description": "placeholder of date input",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": ""
-      },
-      {
-        "name": "ngModelChange",
-        "inputType": 1,
-        "description": "Date change callback",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<Date>`",
-        "default": ""
       }
     ],
     "lib": "ng-zorro-antd",
@@ -2722,408 +2527,6 @@
   },
   {
     "_idx": 36,
-    "type": "component",
-    "selector": "nz-month-picker",
-    "types": {},
-    "properties": [
-      {
-        "name": "nzAllowClear",
-        "inputType": 0,
-        "description": "Whether to show clear button",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`true`",
-        "pureDefault": "true",
-        "_common": true
-      },
-      {
-        "name": "nzAutoFocus",
-        "inputType": 0,
-        "description": "get focus when component mounted",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false",
-        "_common": true
-      },
-      {
-        "name": "nzDateRender",
-        "inputType": 0,
-        "description": "custom rendering function for date cells (Not support by month-picker/year-picker)",
-        "type": "string",
-        "typeRaw": "-",
-        "default": "`TemplateRef<Date> \\| string \\| ((d: Date) => TemplateRef<Date> \\| string)`",
-        "pureDefault": "TemplateRef<Date> \\| string \\| ((d: Date) => TemplateRef<Date> \\| string)",
-        "_common": true
-      },
-      {
-        "name": "nzDisabled",
-        "inputType": 0,
-        "description": "determine whether the nz-date-picker is disabled",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false",
-        "_common": true,
-        "forceInputType": 0
-      },
-      {
-        "name": "nzInputReadOnly",
-        "inputType": 0,
-        "description": "set the readonly attribute of the input tag (avoids virtual keyboard on touch devices)",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false",
-        "_common": true
-      },
-      {
-        "name": "nzDisabledDate",
-        "inputType": 0,
-        "description": "specify the date that cannot be selected",
-        "type": "function",
-        "typeRaw": "`(current: Date) => boolean`",
-        "default": "",
-        "_common": true
-      },
-      {
-        "name": "nzLocale",
-        "inputType": 0,
-        "description": "localization configuration",
-        "type": "object",
-        "typeRaw": "`object`",
-        "default": "[default](https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json)",
-        "pureDefault": "[default](https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json)",
-        "_common": true
-      },
-      {
-        "name": "nzOpen",
-        "inputType": 0,
-        "description": "open state of picker",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "",
-        "_common": true
-      },
-      {
-        "name": "nzPopupStyle",
-        "inputType": 0,
-        "description": "to customize the style of the popup calendar",
-        "type": "object",
-        "typeRaw": "`object`",
-        "default": "`{}`",
-        "pureDefault": "{}",
-        "_common": true
-      },
-      {
-        "name": "nzDropdownClassName",
-        "inputType": 0,
-        "description": "to customize the className of the popup calendar",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": "",
-        "_common": true
-      },
-      {
-        "name": "nzSize",
-        "inputType": 0,
-        "description": "determine the size of the input box, the height of `large` and `small`, are 40px and 24px respectively, while default size is 32px",
-        "type": "Enum",
-        "typeRaw": "`'large' | 'small'`",
-        "default": "",
-        "typeDefinition": [
-          "large",
-          "small"
-        ],
-        "_common": true
-      },
-      {
-        "name": "nzDefaultPickerValue",
-        "inputType": 0,
-        "description": "default picker date",
-        "type": "object",
-        "typeRaw": "`Date` | `Date[]`",
-        "default": "",
-        "_common": true
-      },
-      {
-        "name": "nzSuffixIcon",
-        "inputType": 0,
-        "description": "the custom suffix icon",
-        "type": "string",
-        "typeRaw": "`string` | `TemplateRef`",
-        "default": "",
-        "_common": true
-      },
-      {
-        "name": "nzOnOpenChange",
-        "inputType": 1,
-        "description": "a callback emitter, can be executed whether the popup calendar is popped up or closed",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<boolean>`",
-        "default": "",
-        "_common": true
-      },
-      {
-        "name": "ngModel",
-        "inputType": 2,
-        "description": "Date",
-        "type": "object",
-        "typeRaw": "`Date`",
-        "default": ""
-      },
-      {
-        "name": "nzFormat",
-        "inputType": 0,
-        "description": "to set the date format, see `nzFormat special instructions`",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": "`'yyyy-MM'`",
-        "pureDefault": "yyyy-MM"
-      },
-      {
-        "name": "nzRenderExtraFooter",
-        "inputType": 0,
-        "description": "render extra footer in panel",
-        "type": "TemplateRef",
-        "typeRaw": "`TemplateRef | string | (() => TemplateRef | string)`",
-        "default": ""
-      },
-      {
-        "name": "nzPlaceHolder",
-        "inputType": 0,
-        "description": "placeholder of date input",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": ""
-      },
-      {
-        "name": "ngModelChange",
-        "inputType": 1,
-        "description": "Date change callback",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<Date>`",
-        "default": ""
-      },
-      {
-        "name": "formControlName",
-        "inputType": 0,
-        "type": "string",
-        "typeRaw": "`string`"
-      },
-      {
-        "name": "name",
-        "inputType": 0,
-        "type": "string",
-        "typeRaw": "`string`"
-      }
-    ],
-    "lib": "ng-zorro-antd",
-    "title": "DatePicker",
-    "description": "To select or input a date.",
-    "whenToUse": "By clicking the input box, you can select a date from a popup calendar.",
-    "doc": "/components/date-picker/en",
-    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/date-picker"
-  },
-  {
-    "_idx": 37,
-    "type": "component",
-    "selector": "nz-week-picker",
-    "types": {},
-    "properties": [
-      {
-        "name": "nzAllowClear",
-        "inputType": 0,
-        "description": "Whether to show clear button",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`true`",
-        "pureDefault": "true",
-        "_common": true
-      },
-      {
-        "name": "nzAutoFocus",
-        "inputType": 0,
-        "description": "get focus when component mounted",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false",
-        "_common": true
-      },
-      {
-        "name": "nzDateRender",
-        "inputType": 0,
-        "description": "custom rendering function for date cells (Not support by month-picker/year-picker)",
-        "type": "string",
-        "typeRaw": "-",
-        "default": "`TemplateRef<Date> \\| string \\| ((d: Date) => TemplateRef<Date> \\| string)`",
-        "pureDefault": "TemplateRef<Date> \\| string \\| ((d: Date) => TemplateRef<Date> \\| string)",
-        "_common": true
-      },
-      {
-        "name": "nzDisabled",
-        "inputType": 0,
-        "description": "determine whether the nz-date-picker is disabled",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false",
-        "_common": true,
-        "forceInputType": 0
-      },
-      {
-        "name": "nzInputReadOnly",
-        "inputType": 0,
-        "description": "set the readonly attribute of the input tag (avoids virtual keyboard on touch devices)",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false",
-        "_common": true
-      },
-      {
-        "name": "nzDisabledDate",
-        "inputType": 0,
-        "description": "specify the date that cannot be selected",
-        "type": "function",
-        "typeRaw": "`(current: Date) => boolean`",
-        "default": "",
-        "_common": true
-      },
-      {
-        "name": "nzLocale",
-        "inputType": 0,
-        "description": "localization configuration",
-        "type": "object",
-        "typeRaw": "`object`",
-        "default": "[default](https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json)",
-        "pureDefault": "[default](https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json)",
-        "_common": true
-      },
-      {
-        "name": "nzOpen",
-        "inputType": 0,
-        "description": "open state of picker",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "",
-        "_common": true
-      },
-      {
-        "name": "nzPopupStyle",
-        "inputType": 0,
-        "description": "to customize the style of the popup calendar",
-        "type": "object",
-        "typeRaw": "`object`",
-        "default": "`{}`",
-        "pureDefault": "{}",
-        "_common": true
-      },
-      {
-        "name": "nzDropdownClassName",
-        "inputType": 0,
-        "description": "to customize the className of the popup calendar",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": "",
-        "_common": true
-      },
-      {
-        "name": "nzSize",
-        "inputType": 0,
-        "description": "determine the size of the input box, the height of `large` and `small`, are 40px and 24px respectively, while default size is 32px",
-        "type": "Enum",
-        "typeRaw": "`'large' | 'small'`",
-        "default": "",
-        "typeDefinition": [
-          "large",
-          "small"
-        ],
-        "_common": true
-      },
-      {
-        "name": "nzDefaultPickerValue",
-        "inputType": 0,
-        "description": "default picker date",
-        "type": "object",
-        "typeRaw": "`Date` | `Date[]`",
-        "default": "",
-        "_common": true
-      },
-      {
-        "name": "nzSuffixIcon",
-        "inputType": 0,
-        "description": "the custom suffix icon",
-        "type": "string",
-        "typeRaw": "`string` | `TemplateRef`",
-        "default": "",
-        "_common": true
-      },
-      {
-        "name": "nzOnOpenChange",
-        "inputType": 1,
-        "description": "a callback emitter, can be executed whether the popup calendar is popped up or closed",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<boolean>`",
-        "default": "",
-        "_common": true
-      },
-      {
-        "name": "ngModel",
-        "inputType": 2,
-        "description": "Date",
-        "type": "object",
-        "typeRaw": "`Date`",
-        "default": ""
-      },
-      {
-        "name": "nzFormat",
-        "inputType": 0,
-        "description": "to set the date format, see `nzFormat special instructions`",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": "`'yyyy-ww'`",
-        "pureDefault": "yyyy-ww"
-      },
-      {
-        "name": "nzPlaceHolder",
-        "inputType": 0,
-        "description": "placeholder of date input",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": ""
-      },
-      {
-        "name": "ngModelChange",
-        "inputType": 1,
-        "description": "Date change callback",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<Date>`",
-        "default": ""
-      },
-      {
-        "name": "formControlName",
-        "inputType": 0,
-        "type": "string",
-        "typeRaw": "`string`"
-      },
-      {
-        "name": "name",
-        "inputType": 0,
-        "type": "string",
-        "typeRaw": "`string`"
-      }
-    ],
-    "lib": "ng-zorro-antd",
-    "title": "DatePicker",
-    "description": "To select or input a date.",
-    "whenToUse": "By clicking the input box, you can select a date from a popup calendar.",
-    "doc": "/components/date-picker/en",
-    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/date-picker"
-  },
-  {
-    "_idx": 38,
     "type": "component",
     "selector": "nz-range-picker",
     "types": {},
@@ -3149,13 +2552,12 @@
         "_common": true
       },
       {
-        "name": "nzDateRender",
+        "name": "nzDefaultPickerValue",
         "inputType": 0,
-        "description": "custom rendering function for date cells (Not support by month-picker/year-picker)",
-        "type": "string",
-        "typeRaw": "-",
-        "default": "`TemplateRef<Date> \\| string \\| ((d: Date) => TemplateRef<Date> \\| string)`",
-        "pureDefault": "TemplateRef<Date> \\| string \\| ((d: Date) => TemplateRef<Date> \\| string)",
+        "description": "default picker date",
+        "type": "object",
+        "typeRaw": "`Date` | `Date[]`",
+        "default": "",
         "_common": true
       },
       {
@@ -3170,6 +2572,33 @@
         "forceInputType": 0
       },
       {
+        "name": "nzDisabledDate",
+        "inputType": 0,
+        "description": "specify the date that cannot be selected",
+        "type": "function",
+        "typeRaw": "`(current: Date) => boolean`",
+        "default": "",
+        "_common": true
+      },
+      {
+        "name": "nzDropdownClassName",
+        "inputType": 0,
+        "description": "to customize the className of the popup calendar",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": "",
+        "_common": true
+      },
+      {
+        "name": "nzFormat",
+        "inputType": 0,
+        "description": "to set the date format, see `nzFormat special instructions`",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": "",
+        "_common": true
+      },
+      {
         "name": "nzInputReadOnly",
         "inputType": 0,
         "description": "set the readonly attribute of the input tag (avoids virtual keyboard on touch devices)",
@@ -3177,15 +2606,6 @@
         "typeRaw": "`boolean`",
         "default": "`false`",
         "pureDefault": "false",
-        "_common": true
-      },
-      {
-        "name": "nzDisabledDate",
-        "inputType": 0,
-        "description": "specify the date that cannot be selected",
-        "type": "function",
-        "typeRaw": "`(current: Date) => boolean`",
-        "default": "",
         "_common": true
       },
       {
@@ -3199,11 +2619,21 @@
         "_common": true
       },
       {
-        "name": "nzOpen",
+        "name": "nzMode",
         "inputType": 0,
-        "description": "open state of picker",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
+        "description": "Set picker mode",
+        "type": "Date",
+        "typeRaw": "`'date'` | `'week'` | `'month'` | `'year'`",
+        "default": "`'date'`",
+        "pureDefault": "date",
+        "_common": true
+      },
+      {
+        "name": "nzPlaceHolder",
+        "inputType": 0,
+        "description": "placeholder of date input",
+        "type": "string",
+        "typeRaw": "`string` | `string[]`",
         "default": "",
         "_common": true
       },
@@ -3218,11 +2648,11 @@
         "_common": true
       },
       {
-        "name": "nzDropdownClassName",
+        "name": "nzRenderExtraFooter",
         "inputType": 0,
-        "description": "to customize the className of the popup calendar",
-        "type": "string",
-        "typeRaw": "`string`",
+        "description": "render extra footer in panel",
+        "type": "TemplateRef",
+        "typeRaw": "`TemplateRef | string | (() => TemplateRef | string)`",
         "default": "",
         "_common": true
       },
@@ -3237,15 +2667,6 @@
           "large",
           "small"
         ],
-        "_common": true
-      },
-      {
-        "name": "nzDefaultPickerValue",
-        "inputType": 0,
-        "description": "default picker date",
-        "type": "object",
-        "typeRaw": "`Date` | `Date[]`",
-        "default": "",
         "_common": true
       },
       {
@@ -3275,53 +2696,11 @@
         "default": ""
       },
       {
-        "name": "nzDisabledTime",
-        "inputType": 0,
-        "description": "to specify the time that cannot be selected",
-        "type": "function",
-        "typeRaw": "`(current: Date, partial: 'start' | 'end') => { nzDisabledHours, nzDisabledMinutes, nzDisabledSeconds }`",
-        "default": ""
-      },
-      {
-        "name": "nzFormat",
-        "inputType": 0,
-        "description": "to set the date format, see `nzFormat special instructions`",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": "`'yyyy-MM-dd'`",
-        "pureDefault": "yyyy-MM-dd"
-      },
-      {
         "name": "nzRanges",
         "inputType": 0,
         "description": "preseted ranges for quick selection",
         "type": "object",
         "typeRaw": "`{ [ key: string ]: Date[] }  |  { [ key: string ]: () => Date[] }`",
-        "default": ""
-      },
-      {
-        "name": "nzRenderExtraFooter",
-        "inputType": 0,
-        "description": "render extra footer in panel",
-        "type": "TemplateRef",
-        "typeRaw": "`TemplateRef | string | (() => TemplateRef | string)`",
-        "default": ""
-      },
-      {
-        "name": "nzShowTime",
-        "inputType": 0,
-        "description": "to provide an additional time selection",
-        "type": "object",
-        "typeRaw": "`object | boolean`",
-        "default": "[TimePicker Options](/components/time-picker/en#api)",
-        "pureDefault": "[TimePicker Options](/components/time-picker/en#api)"
-      },
-      {
-        "name": "nzPlaceHolder",
-        "inputType": 0,
-        "description": "placeholder of date input",
-        "type": "Array",
-        "typeRaw": "`string[]`",
         "default": ""
       },
       {
@@ -3332,22 +2711,6 @@
         "typeRaw": "`string`",
         "default": "`'~'`",
         "pureDefault": "~"
-      },
-      {
-        "name": "nzOnOk",
-        "inputType": 1,
-        "description": "click ok callback",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<Date[]>`",
-        "default": ""
-      },
-      {
-        "name": "ngModelChange",
-        "inputType": 1,
-        "description": "Date change callback",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<Date[]>`",
-        "default": ""
       },
       {
         "name": "nzOnCalendarChange",
@@ -3378,7 +2741,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/date-picker"
   },
   {
-    "_idx": 39,
+    "_idx": 37,
     "type": "component",
     "selector": "nz-descriptions",
     "types": {},
@@ -3442,7 +2805,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/descriptions"
   },
   {
-    "_idx": 40,
+    "_idx": 38,
     "type": "component",
     "selector": "nz-descriptions-item",
     "types": {},
@@ -3474,7 +2837,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/descriptions"
   },
   {
-    "_idx": 41,
+    "_idx": 39,
     "type": "component",
     "selector": "nz-divider",
     "types": {},
@@ -3482,7 +2845,7 @@
       {
         "name": "nzDashed",
         "inputType": 0,
-        "description": "whether line is dasded",
+        "description": "whether line is dashed",
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
@@ -3541,7 +2904,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/divider"
   },
   {
-    "_idx": 42,
+    "_idx": 40,
     "type": "component",
     "selector": "nz-drawer",
     "types": {},
@@ -3554,6 +2917,15 @@
         "typeRaw": "`boolean`",
         "default": "`true`",
         "pureDefault": "true"
+      },
+      {
+        "name": "nzCloseIcon",
+        "inputType": 0,
+        "description": "自定义关闭图标",
+        "type": "string",
+        "typeRaw": "`string | TemplateRef<void> | null`",
+        "default": "`'close'`",
+        "pureDefault": "close"
       },
       {
         "name": "nzMask",
@@ -3719,7 +3091,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/drawer"
   },
   {
-    "_idx": 43,
+    "_idx": 41,
     "type": "directive",
     "selector": "nz-dropdown",
     "types": {},
@@ -3831,7 +3203,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/dropdown"
   },
   {
-    "_idx": 44,
+    "_idx": 42,
     "type": "component",
     "selector": "nz-dropdown-menu",
     "types": {},
@@ -3844,7 +3216,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/dropdown"
   },
   {
-    "_idx": 45,
+    "_idx": 43,
     "type": "component",
     "selector": "nz-empty",
     "types": {},
@@ -3882,7 +3254,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/empty"
   },
   {
-    "_idx": 46,
+    "_idx": 44,
     "type": "directive",
     "selector": "nz-form",
     "types": {},
@@ -3950,7 +3322,7 @@
     "snippet": "<form __$1>$0</form>"
   },
   {
-    "_idx": 47,
+    "_idx": 45,
     "type": "component",
     "selector": "nz-form-item",
     "types": {},
@@ -4038,7 +3410,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/form"
   },
   {
-    "_idx": 48,
+    "_idx": 46,
     "type": "component",
     "selector": "nz-form-label",
     "types": {},
@@ -4299,7 +3671,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/form"
   },
   {
-    "_idx": 49,
+    "_idx": 47,
     "type": "component",
     "selector": "nz-form-control",
     "types": {},
@@ -4616,7 +3988,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/form"
   },
   {
-    "_idx": 50,
+    "_idx": 48,
     "type": "component",
     "selector": "nz-form-split",
     "types": {},
@@ -4629,7 +4001,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/form"
   },
   {
-    "_idx": 51,
+    "_idx": 49,
     "type": "component",
     "selector": "nz-form-text",
     "types": {},
@@ -4642,7 +4014,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/form"
   },
   {
-    "_idx": 52,
+    "_idx": 50,
     "type": "directive",
     "selector": "nz-icon",
     "types": {},
@@ -7885,7 +7257,7 @@
     "snippet": "<i __$1></i>"
   },
   {
-    "_idx": 53,
+    "_idx": 51,
     "type": "directive",
     "selector": "nz-input",
     "types": {},
@@ -7910,6 +7282,15 @@
         "description": "Only used for `textarea`, height autosize feature, can be set to `boolean` or an object `{ minRows: 2, maxRows: 6 }`",
         "type": "boolean",
         "typeRaw": "`boolean | { minRows: number, maxRows: number }`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzBorderless",
+        "inputType": 0,
+        "description": "Whether hide border",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
         "default": "`false`",
         "pureDefault": "false"
       },
@@ -7961,7 +7342,7 @@
     "snippet": "<input __$1>"
   },
   {
-    "_idx": 54,
+    "_idx": 52,
     "type": "component",
     "selector": "nz-input-group",
     "types": {},
@@ -8030,7 +7411,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/input"
   },
   {
-    "_idx": 55,
+    "_idx": 53,
     "type": "component",
     "selector": "nz-input-number",
     "types": {},
@@ -8213,7 +7594,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/input-number"
   },
   {
-    "_idx": 56,
+    "_idx": 54,
     "type": "component",
     "selector": "nz-sider",
     "types": {},
@@ -8333,7 +7714,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/layout"
   },
   {
-    "_idx": 57,
+    "_idx": 55,
     "type": "component",
     "selector": "nz-list",
     "types": {},
@@ -8418,7 +7799,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/list"
   },
   {
-    "_idx": 58,
+    "_idx": 56,
     "type": "component",
     "selector": "nz-list-empty",
     "types": {},
@@ -8440,7 +7821,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/list"
   },
   {
-    "_idx": 59,
+    "_idx": 57,
     "type": "component",
     "selector": "nz-list-header",
     "types": {},
@@ -8463,7 +7844,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/list"
   },
   {
-    "_idx": 60,
+    "_idx": 58,
     "type": "component",
     "selector": "nz-list-footer",
     "types": {},
@@ -8486,7 +7867,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/list"
   },
   {
-    "_idx": 61,
+    "_idx": 59,
     "type": "component",
     "selector": "nz-list-pagination",
     "types": {},
@@ -8509,7 +7890,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/list"
   },
   {
-    "_idx": 62,
+    "_idx": 60,
     "type": "component",
     "selector": "nz-list-load-more",
     "types": {},
@@ -8532,7 +7913,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/list"
   },
   {
-    "_idx": 63,
+    "_idx": 61,
     "type": "component",
     "selector": "nz-list-item",
     "types": {},
@@ -8555,7 +7936,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/list"
   },
   {
-    "_idx": 64,
+    "_idx": 62,
     "type": "component",
     "selector": "nz-list-item-meta",
     "types": {},
@@ -8593,7 +7974,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/list"
   },
   {
-    "_idx": 65,
+    "_idx": 63,
     "type": "component",
     "selector": "nz-mention",
     "types": {},
@@ -8697,7 +8078,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/mention"
   },
   {
-    "_idx": 66,
+    "_idx": 64,
     "type": "component",
     "selector": "nzMentionTrigger",
     "types": {},
@@ -8710,7 +8091,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/mention"
   },
   {
-    "_idx": 67,
+    "_idx": 65,
     "type": "component",
     "selector": "nzMentionSuggestion",
     "types": {},
@@ -8723,7 +8104,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/mention"
   },
   {
-    "_idx": 68,
+    "_idx": 66,
     "type": "directive",
     "selector": "nz-menu",
     "types": {},
@@ -8798,7 +8179,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/menu"
   },
   {
-    "_idx": 69,
+    "_idx": 67,
     "type": "directive",
     "selector": "nz-menu-item",
     "types": {},
@@ -8849,7 +8230,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/menu"
   },
   {
-    "_idx": 70,
+    "_idx": 68,
     "type": "directive",
     "selector": "nz-submenu",
     "types": {},
@@ -8914,7 +8295,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/menu"
   },
   {
-    "_idx": 71,
+    "_idx": 69,
     "type": "directive",
     "selector": "nz-menu-group",
     "types": {},
@@ -8936,7 +8317,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/menu"
   },
   {
-    "_idx": 72,
+    "_idx": 70,
     "type": "directive",
     "selector": "nz-menu-divider",
     "types": {},
@@ -8949,7 +8330,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/menu"
   },
   {
-    "_idx": 73,
+    "_idx": 71,
     "type": "component",
     "selector": "nz-modal",
     "types": {},
@@ -9244,7 +8625,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/modal"
   },
   {
-    "_idx": 74,
+    "_idx": 72,
     "type": "directive",
     "selector": "nzModalFooter",
     "types": {},
@@ -9257,7 +8638,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/modal"
   },
   {
-    "_idx": 75,
+    "_idx": 73,
     "type": "component",
     "selector": "nz-page-header",
     "types": {},
@@ -9313,7 +8694,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/page-header"
   },
   {
-    "_idx": 76,
+    "_idx": 74,
     "type": "component",
     "selector": "nz-pagination",
     "types": {},
@@ -9461,7 +8842,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/pagination"
   },
   {
-    "_idx": 77,
+    "_idx": 75,
     "type": "directive",
     "selector": "nz-popconfirm",
     "types": {},
@@ -9761,7 +9142,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/popconfirm"
   },
   {
-    "_idx": 78,
+    "_idx": 76,
     "type": "directive",
     "selector": "nz-popover",
     "types": {},
@@ -9993,7 +9374,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/popover"
   },
   {
-    "_idx": 79,
+    "_idx": 77,
     "type": "component",
     "selector": "nz-progress",
     "types": {},
@@ -10092,7 +9473,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/progress"
   },
   {
-    "_idx": 80,
+    "_idx": 78,
     "type": "directive",
     "selector": "nz-radio",
     "types": {},
@@ -10163,7 +9544,7 @@
     "snippet": "<label __$1>$2</label>"
   },
   {
-    "_idx": 81,
+    "_idx": 79,
     "type": "directive",
     "selector": "nz-radio-button",
     "types": {},
@@ -10221,7 +9602,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/radio"
   },
   {
-    "_idx": 82,
+    "_idx": 80,
     "type": "component",
     "selector": "nz-radio-group",
     "types": {},
@@ -10296,7 +9677,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/radio"
   },
   {
-    "_idx": 83,
+    "_idx": 81,
     "type": "component",
     "selector": "nz-rate",
     "types": {},
@@ -10434,7 +9815,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/rate"
   },
   {
-    "_idx": 84,
+    "_idx": 82,
     "type": "directive",
     "selector": "nz-resizable",
     "types": {},
@@ -10573,7 +9954,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/resizable"
   },
   {
-    "_idx": 85,
+    "_idx": 83,
     "type": "component",
     "selector": "nz-resize-handle",
     "types": {},
@@ -10596,7 +9977,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/resizable"
   },
   {
-    "_idx": 86,
+    "_idx": 84,
     "type": "component",
     "selector": "nz-resize-handles",
     "types": {},
@@ -10619,7 +10000,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/resizable"
   },
   {
-    "_idx": 87,
+    "_idx": 85,
     "type": "component",
     "selector": "nz-result",
     "types": {},
@@ -10632,7 +10013,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/result"
   },
   {
-    "_idx": 88,
+    "_idx": 86,
     "type": "component",
     "selector": "nz-select",
     "types": {},
@@ -10805,8 +10186,8 @@
         "description": "Whether to show the drop-down arrow",
         "type": "boolean",
         "typeRaw": "`boolean`",
-        "default": "`true`",
-        "pureDefault": "true"
+        "default": "`true`(for single select), `false`(for multiple select)",
+        "pureDefault": "true`(for single select), `false`(for multiple select"
       },
       {
         "name": "nzShowSearch",
@@ -10994,7 +10375,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/select"
   },
   {
-    "_idx": 89,
+    "_idx": 87,
     "type": "component",
     "selector": "nz-option",
     "types": {},
@@ -11052,7 +10433,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/select"
   },
   {
-    "_idx": 90,
+    "_idx": 88,
     "type": "component",
     "selector": "nz-option-group",
     "types": {},
@@ -11074,7 +10455,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/select"
   },
   {
-    "_idx": 91,
+    "_idx": 89,
     "type": "component",
     "selector": "nz-skeleton",
     "types": {},
@@ -11123,6 +10504,15 @@
         "typeRaw": "`boolean | NzSkeletonTitle`",
         "default": "`true`",
         "pureDefault": "true"
+      },
+      {
+        "name": "nzRound",
+        "inputType": 0,
+        "description": "Show paragraph and title radius when `true`",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
       }
     ],
     "lib": "ng-zorro-antd",
@@ -11133,7 +10523,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/skeleton"
   },
   {
-    "_idx": 92,
+    "_idx": 90,
     "type": "component",
     "selector": "nz-slider",
     "types": {},
@@ -11304,7 +10694,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/slider"
   },
   {
-    "_idx": 93,
+    "_idx": 91,
     "type": "component",
     "selector": "nz-space",
     "types": {},
@@ -11326,6 +10716,14 @@
         "typeRaw": "`vertical` | `horizontal`",
         "default": "`horizontal`",
         "pureDefault": "horizontal"
+      },
+      {
+        "name": "nzAlign",
+        "inputType": 0,
+        "description": "align items",
+        "type": "string",
+        "typeRaw": "`start` | `end` | `baseline` | `horizontal`",
+        "default": ""
       }
     ],
     "lib": "ng-zorro-antd",
@@ -11336,7 +10734,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/space"
   },
   {
-    "_idx": 94,
+    "_idx": 92,
     "type": "component",
     "selector": "nz-spin",
     "types": {},
@@ -11407,7 +10805,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/spin"
   },
   {
-    "_idx": 95,
+    "_idx": 93,
     "type": "component",
     "selector": "nz-statistic",
     "types": {},
@@ -11469,7 +10867,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/statistic"
   },
   {
-    "_idx": 96,
+    "_idx": 94,
     "type": "component",
     "selector": "nz-countdown",
     "types": {},
@@ -11540,7 +10938,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/statistic"
   },
   {
-    "_idx": 97,
+    "_idx": 95,
     "type": "component",
     "selector": "nzFormat",
     "types": {},
@@ -11553,7 +10951,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/statistic"
   },
   {
-    "_idx": 98,
+    "_idx": 96,
     "type": "component",
     "selector": "nz-steps",
     "types": {},
@@ -11669,7 +11067,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/steps"
   },
   {
-    "_idx": 99,
+    "_idx": 97,
     "type": "component",
     "selector": "nz-step",
     "types": {},
@@ -11740,7 +11138,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/steps"
   },
   {
-    "_idx": 100,
+    "_idx": 98,
     "type": "component",
     "selector": "nz-switch",
     "types": {},
@@ -11841,7 +11239,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/switch"
   },
   {
-    "_idx": 101,
+    "_idx": 99,
     "type": "component",
     "selector": "nz-table",
     "types": {},
@@ -11914,6 +11312,15 @@
         "name": "nzBordered",
         "inputType": 0,
         "description": "Whether to show all table borders",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzOutBordered",
+        "inputType": 0,
+        "description": "Whether to show table out borders",
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
@@ -12146,7 +11553,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/table"
   },
   {
-    "_idx": 102,
+    "_idx": 100,
     "type": "component",
     "selector": "th",
     "types": {},
@@ -12360,7 +11767,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/table"
   },
   {
-    "_idx": 103,
+    "_idx": 101,
     "type": "component",
     "selector": "td",
     "types": {},
@@ -12513,7 +11920,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/table"
   },
   {
-    "_idx": 104,
+    "_idx": 102,
     "type": "component",
     "selector": "tr",
     "types": {},
@@ -12535,7 +11942,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/table"
   },
   {
-    "_idx": 105,
+    "_idx": 103,
     "type": "component",
     "selector": "nz-filter-trigger",
     "types": {},
@@ -12582,7 +11989,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/table"
   },
   {
-    "_idx": 106,
+    "_idx": 104,
     "type": "directive",
     "selector": "nz-virtual-scroll",
     "types": {},
@@ -12595,7 +12002,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/table"
   },
   {
-    "_idx": 107,
+    "_idx": 105,
     "type": "component",
     "selector": "nz-tabset",
     "types": {},
@@ -12753,7 +12160,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tabs"
   },
   {
-    "_idx": 108,
+    "_idx": 106,
     "type": "component",
     "selector": "nz-tab",
     "types": {},
@@ -12793,6 +12200,14 @@
         "default": ""
       },
       {
+        "name": "nzContextmenu",
+        "inputType": 1,
+        "description": "title contextmenu callback",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<MouseEvent>`",
+        "default": ""
+      },
+      {
         "name": "nzSelect",
         "inputType": 1,
         "description": "title select callback",
@@ -12817,7 +12232,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tabs"
   },
   {
-    "_idx": 109,
+    "_idx": 107,
     "type": "directive",
     "selector": "nz-tab",
     "types": {},
@@ -12830,20 +12245,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tabs"
   },
   {
-    "_idx": 110,
-    "type": "component",
-    "selector": "nz-tab-link",
-    "types": {},
-    "properties": [],
-    "description": "Show a link in tab's head. Used in router link mode.",
-    "lib": "ng-zorro-antd",
-    "title": "Tabs",
-    "whenToUse": "Ant Design has 3 types of Tabs for different situations.",
-    "doc": "/components/tabs/en",
-    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tabs"
-  },
-  {
-    "_idx": 111,
+    "_idx": 108,
     "type": "component",
     "selector": "nz-tag",
     "types": {},
@@ -12922,7 +12324,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tag"
   },
   {
-    "_idx": 112,
+    "_idx": 109,
     "type": "component",
     "selector": "nz-time-picker",
     "types": {},
@@ -13139,7 +12541,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/time-picker"
   },
   {
-    "_idx": 113,
+    "_idx": 110,
     "type": "component",
     "selector": "nz-timeline",
     "types": {},
@@ -13194,7 +12596,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/timeline"
   },
   {
-    "_idx": 114,
+    "_idx": 111,
     "type": "component",
     "selector": "nz-timeline-item",
     "types": {},
@@ -13237,7 +12639,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/timeline"
   },
   {
-    "_idx": 115,
+    "_idx": 112,
     "type": "component",
     "selector": "nz-transfer",
     "types": {},
@@ -13422,7 +12824,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/transfer"
   },
   {
-    "_idx": 116,
+    "_idx": 113,
     "type": "component",
     "selector": "nz-tree",
     "types": {},
@@ -13618,8 +13020,8 @@
         "description": "The size of the items in the list, same as [cdk itemSize](https://material.angular.io/cdk/scrolling/api)",
         "type": "number",
         "typeRaw": "`number`",
-        "default": "`0`",
-        "pureDefault": "0"
+        "default": "`28`",
+        "pureDefault": "28"
       },
       {
         "name": "nzVirtualMaxBufferPx",
@@ -13627,8 +13029,8 @@
         "description": "The number of pixels worth of buffer to render for when rendering new items, same as [cdk maxBufferPx](https://material.angular.io/cdk/scrolling/api)",
         "type": "number",
         "typeRaw": "`number`",
-        "default": "`200`",
-        "pureDefault": "200"
+        "default": "`500`",
+        "pureDefault": "500"
       },
       {
         "name": "nzVirtualMinBufferPx",
@@ -13636,8 +13038,8 @@
         "description": "The minimum amount of buffer rendered beyond the viewport (in pixels),same as [cdk minBufferPx](https://material.angular.io/cdk/scrolling/api)",
         "type": "number",
         "typeRaw": "`number`",
-        "default": "`100`",
-        "pureDefault": "100"
+        "default": "`28`",
+        "pureDefault": "28"
       },
       {
         "name": "nzClick",
@@ -13744,7 +13146,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tree"
   },
   {
-    "_idx": 117,
+    "_idx": 114,
     "type": "component",
     "selector": "nz-tree-select",
     "types": {},
@@ -13964,6 +13366,41 @@
         "default": ""
       },
       {
+        "name": "nzVirtualHeight",
+        "inputType": 0,
+        "description": "The height of virtual scroll",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
+      },
+      {
+        "name": "nzVirtualItemSize",
+        "inputType": 0,
+        "description": "The size of the items in the list, same as [cdk itemSize](https://material.angular.io/cdk/scrolling/api)",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`28`",
+        "pureDefault": "28"
+      },
+      {
+        "name": "nzVirtualMaxBufferPx",
+        "inputType": 0,
+        "description": "The number of pixels worth of buffer to render for when rendering new items, same as [cdk maxBufferPx](https://material.angular.io/cdk/scrolling/api)",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`500`",
+        "pureDefault": "500"
+      },
+      {
+        "name": "nzVirtualMinBufferPx",
+        "inputType": 0,
+        "description": "The minimum amount of buffer rendered beyond the viewport (in pixels),same as [cdk minBufferPx](https://material.angular.io/cdk/scrolling/api)",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`28`",
+        "pureDefault": "28"
+      },
+      {
         "name": "nzExpandChange",
         "inputType": 1,
         "description": "Callback function for when a treeNode is expanded or collapsed",
@@ -13992,7 +13429,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tree-select"
   },
   {
-    "_idx": 118,
+    "_idx": 115,
     "type": "directive",
     "selector": "nz-typography",
     "types": {},
@@ -14122,7 +13559,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/typography"
   },
   {
-    "_idx": 119,
+    "_idx": 116,
     "type": "component",
     "selector": "nz-upload",
     "types": {},
@@ -14155,7 +13592,7 @@
       {
         "name": "nzBeforeUpload",
         "inputType": 0,
-        "description": "Hook function which will be executed before uploading. Uploading will be stopped with `false` or a Observable. **Warning：this function is not supported in IE9**. NOTICE: Muse be use `=>` to define the method.",
+        "description": "Hook function which will be executed before uploading. Uploading will be stopped with `false` or a Observable. **Warning：this function is not supported in IE9**. NOTICE: Must use `=>` to define the method.",
         "type": "function",
         "typeRaw": "`(file: NzUploadFile, fileList: NzUploadFile[]) => boolean | Observable<boolean>`",
         "default": ""
@@ -14163,7 +13600,7 @@
       {
         "name": "nzCustomRequest",
         "inputType": 0,
-        "description": "override for the default xhr behavior allowing for additional customization and ability to implement your own XMLHttpRequest. NOTICE: Muse be use `=>` to define the method.",
+        "description": "override for the default xhr behavior allowing for additional customization and ability to implement your own XMLHttpRequest. NOTICE: Must use `=>` to define the method.",
         "type": "function",
         "typeRaw": "`(item) => Subscription`",
         "default": ""
@@ -14171,7 +13608,7 @@
       {
         "name": "nzData",
         "inputType": 0,
-        "description": "Uploading params or function which can return uploading params. NOTICE: Muse be use `=>` to define the method.",
+        "description": "Uploading params or function which can return uploading params. NOTICE: Must use `=>` to define the method.",
         "type": "object",
         "typeRaw": "`Object | ((file: NzUploadFile) => Object | Observable<{}>)`",
         "default": ""
@@ -14231,7 +13668,7 @@
       {
         "name": "nzHeaders",
         "inputType": 0,
-        "description": "Set request headers, valid above IE10. NOTICE: Muse be use `=>` to define the method.",
+        "description": "Set request headers, valid above IE10. NOTICE: Must use `=>` to define the method.",
         "type": "object",
         "typeRaw": "`Object | ((file: NzUploadFile) => Object | Observable<{}>)`",
         "default": ""
@@ -14307,7 +13744,7 @@
       {
         "name": "nzPreview",
         "inputType": 0,
-        "description": "A callback function, will be executed when file link or preview icon is clicked. NOTICE: Muse be use `=>` to define the method.",
+        "description": "A callback function, will be executed when file link or preview icon is clicked. NOTICE: Must use `=>` to define the method.",
         "type": "function",
         "typeRaw": "`(file: NzUploadFile) => void`",
         "default": ""
@@ -14315,7 +13752,7 @@
       {
         "name": "nzPreviewFile",
         "inputType": 0,
-        "description": "Customize preview file logic. NOTICE: Muse be use `=>` to define the method.",
+        "description": "Customize preview file logic. NOTICE: Must use `=>` to define the method.",
         "type": "function",
         "typeRaw": "`(file: NzUploadFile) => Observable<dataURL: string>`",
         "default": ""
@@ -14323,7 +13760,7 @@
       {
         "name": "nzPreviewIsImage",
         "inputType": 0,
-        "description": "Customize the preview file is an image, generally used when the image URL is in a non-standard format. NOTICE: Muse be use `=>` to define the method.",
+        "description": "Customize the preview file is an image, generally used when the image URL is in a non-standard format. NOTICE: Must use `=>` to define the method.",
         "type": "function",
         "typeRaw": "`(file: NzUploadFile) => boolean`",
         "default": ""
@@ -14331,7 +13768,7 @@
       {
         "name": "nzRemove",
         "inputType": 0,
-        "description": "A callback function, will be executed when removing file button is clicked, remove event will be prevented when return value is `false` or a Observable. NOTICE: Muse be use `=>` to define the method.",
+        "description": "A callback function, will be executed when removing file button is clicked, remove event will be prevented when return value is `false` or a Observable. NOTICE: Must use `=>` to define the method.",
         "type": "function",
         "typeRaw": "`(file: NzUploadFile) => boolean | Observable<boolean>`",
         "default": ""
@@ -14386,7 +13823,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/upload"
   },
   {
-    "_idx": 120,
+    "_idx": 117,
     "type": "component",
     "selector": "avatar-list",
     "types": {},
@@ -14431,7 +13868,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/avatar-list"
   },
   {
-    "_idx": 121,
+    "_idx": 118,
     "type": "component",
     "selector": "avatar-list-item",
     "types": {},
@@ -14477,7 +13914,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/avatar-list"
   },
   {
-    "_idx": 122,
+    "_idx": 119,
     "type": "component",
     "selector": "count-down",
     "types": {},
@@ -14515,7 +13952,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/count-down"
   },
   {
-    "_idx": 123,
+    "_idx": 120,
     "type": "component",
     "selector": "range-picker",
     "types": {
@@ -14767,7 +14204,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/date-picker"
   },
   {
-    "_idx": 124,
+    "_idx": 121,
     "type": "directive",
     "selector": "down-file",
     "types": {},
@@ -14846,7 +14283,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/down-file"
   },
   {
-    "_idx": 125,
+    "_idx": 122,
     "type": "component",
     "selector": "ellipsis",
     "types": {},
@@ -14903,7 +14340,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/ellipsis"
   },
   {
-    "_idx": 126,
+    "_idx": 123,
     "type": "component",
     "selector": "error-collect",
     "types": {},
@@ -14935,7 +14372,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/error-collect"
   },
   {
-    "_idx": 127,
+    "_idx": 124,
     "type": "directive",
     "selector": "error-collect",
     "types": {},
@@ -14967,7 +14404,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/error-collect"
   },
   {
-    "_idx": 128,
+    "_idx": 125,
     "type": "component",
     "selector": "exception",
     "types": {},
@@ -15018,7 +14455,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/exception"
   },
   {
-    "_idx": 129,
+    "_idx": 126,
     "type": "component",
     "selector": "footer-toolbar",
     "types": {},
@@ -15049,7 +14486,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/footer-toolbar"
   },
   {
-    "_idx": 130,
+    "_idx": 127,
     "type": "component",
     "selector": "full-content",
     "types": {},
@@ -15089,7 +14526,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/full-content"
   },
   {
-    "_idx": 131,
+    "_idx": 128,
     "type": "directive",
     "selector": "full-toggle",
     "types": {},
@@ -15102,7 +14539,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/full-content"
   },
   {
-    "_idx": 132,
+    "_idx": 129,
     "type": "component",
     "selector": "global-footer",
     "types": {
@@ -15161,7 +14598,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/global-footer"
   },
   {
-    "_idx": 133,
+    "_idx": 130,
     "type": "component",
     "selector": "global-footer-item",
     "types": {},
@@ -15192,7 +14629,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/global-footer"
   },
   {
-    "_idx": 134,
+    "_idx": 131,
     "type": "component",
     "selector": "media",
     "types": {},
@@ -15247,7 +14684,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/media"
   },
   {
-    "_idx": 135,
+    "_idx": 132,
     "type": "component",
     "selector": "notice-icon",
     "types": {},
@@ -15319,7 +14756,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/notice-icon"
   },
   {
-    "_idx": 136,
+    "_idx": 133,
     "type": "component",
     "selector": "numberToChinese",
     "types": {},
@@ -15332,7 +14769,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/number-to-chinese"
   },
   {
-    "_idx": 137,
+    "_idx": 134,
     "type": "component",
     "selector": "page-header",
     "types": {},
@@ -15500,7 +14937,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/page-header"
   },
   {
-    "_idx": 138,
+    "_idx": 135,
     "type": "component",
     "selector": "qr",
     "types": {},
@@ -15611,7 +15048,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/qr"
   },
   {
-    "_idx": 139,
+    "_idx": 136,
     "type": "component",
     "selector": "quick-menu",
     "types": {},
@@ -15668,7 +15105,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/quick-menu"
   },
   {
-    "_idx": 140,
+    "_idx": 137,
     "type": "component",
     "selector": "result",
     "types": {},
@@ -15714,7 +15151,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/result"
   },
   {
-    "_idx": 141,
+    "_idx": 138,
     "type": "component",
     "selector": "reuse-tab",
     "types": {
@@ -15908,7 +15345,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/reuse-tab"
   },
   {
-    "_idx": 142,
+    "_idx": 139,
     "type": "component",
     "selector": "se-container",
     "types": {},
@@ -16053,7 +15490,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/se"
   },
   {
-    "_idx": 143,
+    "_idx": 140,
     "type": "directive",
     "selector": "se-container",
     "types": {},
@@ -16198,7 +15635,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/se"
   },
   {
-    "_idx": 144,
+    "_idx": 141,
     "type": "component",
     "selector": "se",
     "types": {},
@@ -16308,7 +15745,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/se"
   },
   {
-    "_idx": 145,
+    "_idx": 142,
     "type": "component",
     "selector": "se-title",
     "types": {},
@@ -16319,156 +15756,156 @@
     "whenToUse": "",
     "doc": "/components/se/en",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/se"
+  },
+  {
+    "_idx": 143,
+    "type": "directive",
+    "selector": "se-title",
+    "types": {},
+    "properties": [],
+    "description": "Display title.",
+    "lib": "@delon/abc",
+    "title": "Edit",
+    "whenToUse": "",
+    "doc": "/components/se/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/se"
+  },
+  {
+    "_idx": 144,
+    "type": "component",
+    "selector": "sg-container",
+    "types": {},
+    "properties": [
+      {
+        "name": "gutter",
+        "inputType": 0,
+        "description": "specify the distance between two items, unit is `px`, only `nzLayout:horizontal`",
+        "type": "Enum",
+        "typeRaw": "`number`",
+        "default": "`32`",
+        "pureDefault": "32",
+        "typeDefinition": [
+          "0",
+          "8",
+          "16",
+          "24",
+          "32",
+          "40",
+          "48",
+          "56",
+          "64"
+        ]
+      },
+      {
+        "name": "sg-container",
+        "inputType": 0,
+        "description": "specify the maximum number of columns to display, the final columns number is determined by col setting combined with [Responsive Rules](/theme/responsive)",
+        "type": "Enum",
+        "typeRaw": "`'1','2','3','4','5','6'`",
+        "default": "",
+        "typeDefinition": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ]
+      },
+      {
+        "name": "col",
+        "inputType": 0,
+        "description": "specify the maximum number of columns to display, the final columns number is determined by col setting combined with [Responsive Rules](/theme/responsive)",
+        "type": "Enum",
+        "typeRaw": "`'1','2','3','4','5','6'`",
+        "default": "`2`",
+        "typeDefinition": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        "pureDefault": "2"
+      }
+    ],
+    "lib": "@delon/abc",
+    "title": "Simple Grid",
+    "description": "A higher-order components of grid systems, that consists of `sg-container` (directive) and `sg` components:",
+    "whenToUse": "",
+    "doc": "/components/sg/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sg"
+  },
+  {
+    "_idx": 145,
+    "type": "directive",
+    "selector": "sg-container",
+    "types": {},
+    "properties": [
+      {
+        "name": "gutter",
+        "inputType": 0,
+        "description": "specify the distance between two items, unit is `px`, only `nzLayout:horizontal`",
+        "type": "Enum",
+        "typeRaw": "`number`",
+        "default": "`32`",
+        "pureDefault": "32",
+        "typeDefinition": [
+          "0",
+          "8",
+          "16",
+          "24",
+          "32",
+          "40",
+          "48",
+          "56",
+          "64"
+        ]
+      },
+      {
+        "name": "sg-container",
+        "inputType": 0,
+        "description": "specify the maximum number of columns to display, the final columns number is determined by col setting combined with [Responsive Rules](/theme/responsive)",
+        "type": "Enum",
+        "typeRaw": "`'1','2','3','4','5','6'`",
+        "default": "",
+        "typeDefinition": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ]
+      },
+      {
+        "name": "col",
+        "inputType": 0,
+        "description": "specify the maximum number of columns to display, the final columns number is determined by col setting combined with [Responsive Rules](/theme/responsive)",
+        "type": "Enum",
+        "typeRaw": "`'1','2','3','4','5','6'`",
+        "default": "`2`",
+        "typeDefinition": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        "pureDefault": "2"
+      }
+    ],
+    "lib": "@delon/abc",
+    "title": "Simple Grid",
+    "description": "A higher-order components of grid systems, that consists of `sg-container` (directive) and `sg` components:",
+    "whenToUse": "",
+    "doc": "/components/sg/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sg"
   },
   {
     "_idx": 146,
-    "type": "directive",
-    "selector": "se-title",
-    "types": {},
-    "properties": [],
-    "description": "Display title.",
-    "lib": "@delon/abc",
-    "title": "Edit",
-    "whenToUse": "",
-    "doc": "/components/se/en",
-    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/se"
-  },
-  {
-    "_idx": 147,
-    "type": "component",
-    "selector": "sg-container",
-    "types": {},
-    "properties": [
-      {
-        "name": "gutter",
-        "inputType": 0,
-        "description": "specify the distance between two items, unit is `px`, only `nzLayout:horizontal`",
-        "type": "Enum",
-        "typeRaw": "`number`",
-        "default": "`32`",
-        "pureDefault": "32",
-        "typeDefinition": [
-          "0",
-          "8",
-          "16",
-          "24",
-          "32",
-          "40",
-          "48",
-          "56",
-          "64"
-        ]
-      },
-      {
-        "name": "sg-container",
-        "inputType": 0,
-        "description": "specify the maximum number of columns to display, the final columns number is determined by col setting combined with [Responsive Rules](/theme/responsive)",
-        "type": "Enum",
-        "typeRaw": "`'1','2','3','4','5','6'`",
-        "default": "",
-        "typeDefinition": [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6"
-        ]
-      },
-      {
-        "name": "col",
-        "inputType": 0,
-        "description": "specify the maximum number of columns to display, the final columns number is determined by col setting combined with [Responsive Rules](/theme/responsive)",
-        "type": "Enum",
-        "typeRaw": "`'1','2','3','4','5','6'`",
-        "default": "`2`",
-        "typeDefinition": [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6"
-        ],
-        "pureDefault": "2"
-      }
-    ],
-    "lib": "@delon/abc",
-    "title": "Simple Grid",
-    "description": "A higher-order components of grid systems, that consists of `sg-container` (directive) and `sg` components:",
-    "whenToUse": "",
-    "doc": "/components/sg/en",
-    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sg"
-  },
-  {
-    "_idx": 148,
-    "type": "directive",
-    "selector": "sg-container",
-    "types": {},
-    "properties": [
-      {
-        "name": "gutter",
-        "inputType": 0,
-        "description": "specify the distance between two items, unit is `px`, only `nzLayout:horizontal`",
-        "type": "Enum",
-        "typeRaw": "`number`",
-        "default": "`32`",
-        "pureDefault": "32",
-        "typeDefinition": [
-          "0",
-          "8",
-          "16",
-          "24",
-          "32",
-          "40",
-          "48",
-          "56",
-          "64"
-        ]
-      },
-      {
-        "name": "sg-container",
-        "inputType": 0,
-        "description": "specify the maximum number of columns to display, the final columns number is determined by col setting combined with [Responsive Rules](/theme/responsive)",
-        "type": "Enum",
-        "typeRaw": "`'1','2','3','4','5','6'`",
-        "default": "",
-        "typeDefinition": [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6"
-        ]
-      },
-      {
-        "name": "col",
-        "inputType": 0,
-        "description": "specify the maximum number of columns to display, the final columns number is determined by col setting combined with [Responsive Rules](/theme/responsive)",
-        "type": "Enum",
-        "typeRaw": "`'1','2','3','4','5','6'`",
-        "default": "`2`",
-        "typeDefinition": [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6"
-        ],
-        "pureDefault": "2"
-      }
-    ],
-    "lib": "@delon/abc",
-    "title": "Simple Grid",
-    "description": "A higher-order components of grid systems, that consists of `sg-container` (directive) and `sg` components:",
-    "whenToUse": "",
-    "doc": "/components/sg/en",
-    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sg"
-  },
-  {
-    "_idx": 149,
     "type": "component",
     "selector": "sg",
     "types": {},
@@ -16498,7 +15935,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sg"
   },
   {
-    "_idx": 150,
+    "_idx": 147,
     "type": "component",
     "selector": "sidebar-nav",
     "types": {},
@@ -16565,7 +16002,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sidebar-nav"
   },
   {
-    "_idx": 151,
+    "_idx": 148,
     "type": "component",
     "selector": "st",
     "types": {
@@ -16861,6 +16298,53 @@
           "default": "`true`",
           "pureDefault": "true"
         }
+      ],
+      "STResizable": [
+        {
+          "name": "disabled",
+          "inputType": 0,
+          "description": "Disable resize",
+          "type": "boolean",
+          "typeRaw": "`boolean`",
+          "default": "`true`",
+          "pureDefault": "true"
+        },
+        {
+          "name": "bounds",
+          "inputType": 0,
+          "description": "Specifies resize boundaries",
+          "type": "string",
+          "typeRaw": "`window, parent, ElementRef<HTMLElement>`",
+          "default": "`window`",
+          "pureDefault": "window"
+        },
+        {
+          "name": "maxWidth",
+          "inputType": 0,
+          "description": "Maximum width of resizable elemen",
+          "type": "number",
+          "typeRaw": "`number`",
+          "default": "`360`",
+          "pureDefault": "360"
+        },
+        {
+          "name": "minWidth",
+          "inputType": 0,
+          "description": "Minimum width of resizable element",
+          "type": "number",
+          "typeRaw": "`number`",
+          "default": "`60`",
+          "pureDefault": "60"
+        },
+        {
+          "name": "preview",
+          "inputType": 0,
+          "description": "Enable preview when resizing",
+          "type": "boolean",
+          "typeRaw": "`boolean`",
+          "default": "`true`",
+          "pureDefault": "true"
+        }
       ]
     },
     "properties": [
@@ -16910,7 +16394,7 @@
       {
         "name": "ps",
         "inputType": 0,
-        "description": "Page size, `0` is no page, default is `10`",
+        "description": "Page size, default is `10`",
         "type": "number",
         "typeRaw": "`number`",
         "default": "`10`",
@@ -17174,6 +16658,15 @@
         "pureDefault": "false"
       },
       {
+        "name": "resizable",
+        "inputType": 0,
+        "description": "Resize header of the current table, **Multiple headers not supported**",
+        "type": "object",
+        "typeRaw": "`STResizable, boolean`",
+        "default": "",
+        "complexType": "STResizable"
+      },
+      {
         "name": "change",
         "inputType": 1,
         "description": "Events",
@@ -17198,7 +16691,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/st"
   },
   {
-    "_idx": 152,
+    "_idx": 149,
     "type": "component",
     "selector": "sv-container",
     "types": {},
@@ -17289,7 +16782,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sv"
   },
   {
-    "_idx": 153,
+    "_idx": 150,
     "type": "directive",
     "selector": "sv-container",
     "types": {},
@@ -17380,7 +16873,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sv"
   },
   {
-    "_idx": 154,
+    "_idx": 151,
     "type": "component",
     "selector": "sv",
     "types": {},
@@ -17456,7 +16949,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sv"
   },
   {
-    "_idx": 155,
+    "_idx": 152,
     "type": "component",
     "selector": "sv-title",
     "types": {},
@@ -17469,7 +16962,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sv"
   },
   {
-    "_idx": 156,
+    "_idx": 153,
     "type": "directive",
     "selector": "sv-title",
     "types": {},
@@ -17482,7 +16975,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sv"
   },
   {
-    "_idx": 157,
+    "_idx": 154,
     "type": "component",
     "selector": "tag-select",
     "types": {},
@@ -17513,7 +17006,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/tag-select"
   },
   {
-    "_idx": 158,
+    "_idx": 155,
     "type": "directive",
     "selector": "xlsx",
     "types": {},
@@ -17526,7 +17019,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/xlsx"
   },
   {
-    "_idx": 159,
+    "_idx": 156,
     "type": "component",
     "selector": "g2-bar",
     "types": {},
@@ -17626,7 +17119,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/bar"
   },
   {
-    "_idx": 160,
+    "_idx": 157,
     "type": "component",
     "selector": "g2-card",
     "types": {},
@@ -17697,7 +17190,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/card"
   },
   {
-    "_idx": 161,
+    "_idx": 158,
     "type": "component",
     "selector": "g2-custom",
     "types": {},
@@ -17769,7 +17262,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/custom"
   },
   {
-    "_idx": 162,
+    "_idx": 159,
     "type": "component",
     "selector": "g2-gauge",
     "types": {},
@@ -17859,7 +17352,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/gauge"
   },
   {
-    "_idx": 163,
+    "_idx": 160,
     "type": "component",
     "selector": "g2-mini-area",
     "types": {},
@@ -17997,7 +17490,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/mini-area"
   },
   {
-    "_idx": 164,
+    "_idx": 161,
     "type": "component",
     "selector": "g2-mini-bar",
     "types": {},
@@ -18100,7 +17593,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/mini-bar"
   },
   {
-    "_idx": 165,
+    "_idx": 162,
     "type": "component",
     "selector": "g2-mini-progress",
     "types": {},
@@ -18146,7 +17639,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/mini-progress"
   },
   {
-    "_idx": 166,
+    "_idx": 163,
     "type": "component",
     "selector": "number-info",
     "types": {},
@@ -18234,7 +17727,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/number-info"
   },
   {
-    "_idx": 167,
+    "_idx": 164,
     "type": "component",
     "selector": "g2-pie",
     "types": {},
@@ -18402,7 +17895,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/pie"
   },
   {
-    "_idx": 168,
+    "_idx": 165,
     "type": "component",
     "selector": "g2-radar",
     "types": {},
@@ -18491,7 +17984,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/radar"
   },
   {
-    "_idx": 169,
+    "_idx": 166,
     "type": "component",
     "selector": "g2-single-bar",
     "types": {},
@@ -18611,7 +18104,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/single-bar"
   },
   {
-    "_idx": 170,
+    "_idx": 167,
     "type": "component",
     "selector": "g2-tag-cloud",
     "types": {},
@@ -18677,7 +18170,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/tag-cloud"
   },
   {
-    "_idx": 171,
+    "_idx": 168,
     "type": "component",
     "selector": "g2-timeline",
     "types": {
@@ -18872,7 +18365,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/timeline"
   },
   {
-    "_idx": 172,
+    "_idx": 169,
     "type": "component",
     "selector": "trend",
     "types": {},
@@ -18916,7 +18409,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/trend"
   },
   {
-    "_idx": 173,
+    "_idx": 170,
     "type": "component",
     "selector": "g2-water-wave",
     "types": {},
@@ -18982,7 +18475,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/water-wave"
   },
   {
-    "_idx": 174,
+    "_idx": 171,
     "type": "component",
     "selector": "sf",
     "types": {
@@ -19208,7 +18701,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/form/src"
   },
   {
-    "_idx": 175,
+    "_idx": 172,
     "type": "directive",
     "selector": "sf",
     "types": {
@@ -19434,7 +18927,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/form/src"
   },
   {
-    "_idx": 176,
+    "_idx": 173,
     "type": "component",
     "selector": "nz-breadcrumb-item",
     "types": {},
@@ -19451,27 +18944,27 @@
     "description": "The layout wrapper, in which `nz-header` `nz-sider` `nz-content` `nz-footer` or `nz-layout` itself can be nested, and can be placed in any parent container.",
     "type": "component",
     "lib": "ng-zorro-antd",
-    "_idx": 177
+    "_idx": 174
   },
   {
     "selector": "nz-header",
     "description": "The top layout with default style, in which any element can be nested, and must be placed in `nz-layout`.",
     "type": "component",
     "lib": "ng-zorro-antd",
-    "_idx": 178
+    "_idx": 175
   },
   {
     "selector": "nz-content",
     "description": "The content layout with default style, in which any element can be nested, and must be placed in `nz-layout`.",
     "type": "component",
     "lib": "ng-zorro-antd",
-    "_idx": 179
+    "_idx": 176
   },
   {
     "selector": "nz-footer",
     "description": "The bottom layout with default style, in which any element can be nested, and must be placed in `nz-layout`.",
     "type": "component",
     "lib": "ng-zorro-antd",
-    "_idx": 180
+    "_idx": 177
   }
 ]

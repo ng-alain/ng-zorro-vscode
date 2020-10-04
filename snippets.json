@@ -64,6 +64,11 @@
     "body": "<nz-week-picker [(ngModel)]=\"${1:value}\" name=\"${1}\" nzPlaceHolder=\"${3|Please select week|}\"></nz-week-picker>",
     "description": "Week picker"
   },
+  "nzs_drawer": {
+    "prefix": "nzs-drawer",
+    "body": "<nz-drawer\n  [(nzVisible)]=\"${1:visible}\"\n  [nzTitle]=\"${2:Title}\"\n  nzPlacement=\"${3|top,right,bottom,left|}\"\n  (nzOnClose)=\"close()\">\n  $0\n</nz-drawer>",
+    "description": "抽屉"
+  },
   "nzs_dropdown_button": {
     "prefix": "nzs-dropdown-button",
     "body": "<nz-dropdown-button>\n  ${1}\n  <ul nz-menu>\n    <li nz-menu-item>$0</li>\n    <li nz-menu-item><a>2nd menu item</a></li>\n  </ul>\n</nz-dropdown-button>",

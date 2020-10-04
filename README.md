@@ -6,7 +6,7 @@
 
 ## Old Versions
 
-**Note: The latest version is based on `10.0.0-bate.2`**, you can still download other old versions:
+**Note: The latest version is based on `10.0.0`**, you can still download other old versions:
 
 | Version | Download |
 |---------|----------|
