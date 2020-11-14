@@ -330,7 +330,7 @@
         "inputType": 0,
         "description": "The position of the tooltip relative to the target",
         "type": "Enum",
-        "typeRaw": "`'top' | 'left' | 'right' | 'bottom' | 'topLeft' | 'topRight' | 'bottomLeft' | 'bottomRight' | 'leftTop' | 'leftBottom' | 'rightTop' | 'rightBottom'`",
+        "typeRaw": "`'top' | 'left' | 'right' | 'bottom' | 'topLeft' | 'topRight' | 'bottomLeft' | 'bottomRight' | 'leftTop' | 'leftBottom' | 'rightTop' | 'rightBottom' | Array<string>`",
         "default": "`'top'`",
         "typeDefinition": [
           "top",
@@ -344,9 +344,18 @@
           "leftTop",
           "leftBottom",
           "rightTop",
-          "rightBottom"
+          "rightBottom",
+          "Array<string>"
         ],
         "pureDefault": "top"
+      },
+      {
+        "name": "nzTooltipColor",
+        "inputType": 0,
+        "description": "The background color",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
       },
       {
         "name": "nzTooltipOrigin",
@@ -810,7 +819,7 @@
       {
         "name": "nzIcon",
         "inputType": 0,
-        "description": "the `Icon` type for an icon avatar, see `Icon`",
+        "description": "The `Icon` type for an icon avatar, see `Icon`",
         "type": "string",
         "typeRaw": "`string`",
         "default": ""
@@ -818,7 +827,7 @@
       {
         "name": "nzShape",
         "inputType": 0,
-        "description": "the shape of avatar",
+        "description": "The shape of avatar",
         "type": "Enum",
         "typeRaw": "`'circle' | 'square'`",
         "default": "`'circle'`",
@@ -831,7 +840,7 @@
       {
         "name": "nzSize",
         "inputType": 0,
-        "description": "the size of the avatar",
+        "description": "The size of the avatar",
         "type": "Enum",
         "typeRaw": "`'large' | 'small' | 'default' | number`",
         "default": "`'default'`",
@@ -844,9 +853,18 @@
         "pureDefault": "default"
       },
       {
+        "name": "nzGap",
+        "inputType": 0,
+        "description": "Letter type unit distance between left and right sides",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`4`",
+        "pureDefault": "4"
+      },
+      {
         "name": "nzSrc",
         "inputType": 0,
-        "description": "the address of the image for an image avatar",
+        "description": "The address of the image for an image avatar",
         "type": "string",
         "typeRaw": "`string`",
         "default": ""
@@ -870,7 +888,7 @@
       {
         "name": "nzText",
         "inputType": 0,
-        "description": "letter type avatar",
+        "description": "Letter type avatar",
         "type": "string",
         "typeRaw": "`string`",
         "default": ""
@@ -878,7 +896,7 @@
       {
         "name": "nzError",
         "inputType": 1,
-        "description": "handler when img load error, call the `preventDefault` method to prevent default fallback behavior",
+        "description": "Handler when img load error, call the `preventDefault` method to prevent default fallback behavior",
         "type": "EventEmitter",
         "typeRaw": "`EventEmitter<Event>`",
         "default": ""
@@ -893,6 +911,19 @@
   },
   {
     "_idx": 12,
+    "type": "component",
+    "selector": "nz-avatar-group",
+    "types": {},
+    "properties": [],
+    "lib": "ng-zorro-antd",
+    "title": "Avatar",
+    "description": "Avatars can be used to represent people or objects. It supports images, `Icon`s, or letters.",
+    "whenToUse": "",
+    "doc": "/components/avatar/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/avatar"
+  },
+  {
+    "_idx": 13,
     "type": "component",
     "selector": "nz-back-top",
     "types": {},
@@ -924,6 +955,15 @@
         "pureDefault": "window"
       },
       {
+        "name": "nzDuration",
+        "inputType": 0,
+        "description": "Time to return to top (ms)",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`450`",
+        "pureDefault": "450"
+      },
+      {
         "name": "nzClick",
         "inputType": 1,
         "description": "a callback function, which can be executed when you click the button",
@@ -940,7 +980,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/back-top"
   },
   {
-    "_idx": 13,
+    "_idx": 14,
     "type": "component",
     "selector": "nz-badge",
     "types": {},
@@ -1054,7 +1094,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/badge"
   },
   {
-    "_idx": 14,
+    "_idx": 15,
     "type": "component",
     "selector": "nz-ribbon",
     "types": {},
@@ -1093,7 +1133,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/badge"
   },
   {
-    "_idx": 15,
+    "_idx": 16,
     "type": "component",
     "selector": "nz-breadcrumb",
     "types": {},
@@ -1143,7 +1183,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/breadcrumb"
   },
   {
-    "_idx": 16,
+    "_idx": 17,
     "type": "directive",
     "selector": "nz-button",
     "types": {},
@@ -1258,7 +1298,7 @@
     "snippet": "<button __$1>${2|Save,Submit,Cancel,Create,Delete,Search|}</button>"
   },
   {
-    "_idx": 17,
+    "_idx": 18,
     "type": "component",
     "selector": "nz-button-group",
     "types": {},
@@ -1286,7 +1326,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/button"
   },
   {
-    "_idx": 18,
+    "_idx": 19,
     "type": "component",
     "selector": "nz-calendar",
     "types": {},
@@ -1388,7 +1428,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/calendar"
   },
   {
-    "_idx": 19,
+    "_idx": 20,
     "type": "component",
     "selector": "nz-card",
     "types": {},
@@ -1494,7 +1534,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/card"
   },
   {
-    "_idx": 20,
+    "_idx": 21,
     "type": "component",
     "selector": "nz-card-meta",
     "types": {},
@@ -1532,7 +1572,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/card"
   },
   {
-    "_idx": 21,
+    "_idx": 22,
     "type": "directive",
     "selector": "nz-card-grid",
     "types": {},
@@ -1555,7 +1595,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/card"
   },
   {
-    "_idx": 22,
+    "_idx": 23,
     "type": "component",
     "selector": "nz-card-tab",
     "types": {},
@@ -1568,7 +1608,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/card"
   },
   {
-    "_idx": 23,
+    "_idx": 24,
     "type": "component",
     "selector": "nz-carousel",
     "types": {},
@@ -1664,7 +1704,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/carousel"
   },
   {
-    "_idx": 24,
+    "_idx": 25,
     "type": "component",
     "selector": "nz-cascader",
     "types": {},
@@ -1731,6 +1771,14 @@
         "forceInputType": 0
       },
       {
+        "name": "nzExpandIcon",
+        "inputType": 0,
+        "description": "Customize the current item expand icon",
+        "type": "string",
+        "typeRaw": "`string|TemplateRef<void>`",
+        "default": ""
+      },
+      {
         "name": "nzExpandTrigger",
         "inputType": 0,
         "description": "expand current item when click or hover, one of 'click' 'hover'",
@@ -1742,6 +1790,31 @@
           "hover"
         ],
         "pureDefault": "click"
+      },
+      {
+        "name": "nzLabelProperty",
+        "inputType": 0,
+        "description": "the label property name of options",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": "`'label'`",
+        "pureDefault": "label"
+      },
+      {
+        "name": "nzLabelRender",
+        "inputType": 0,
+        "description": "render template of displaying selected options",
+        "type": "TemplateRef",
+        "typeRaw": "`TemplateRef<any>`",
+        "default": ""
+      },
+      {
+        "name": "nzLoadData",
+        "inputType": 0,
+        "description": "To load option lazily. If setting `ngModel` with an array value and `nzOptions` is not setting, lazy load will be call immediately",
+        "type": "function",
+        "typeRaw": "`(option: any, index?: index) => PromiseLike<any>`",
+        "default": ""
       },
       {
         "name": "nzMenuClassName",
@@ -1768,36 +1841,11 @@
         "default": ""
       },
       {
-        "name": "nzLabelProperty",
-        "inputType": 0,
-        "description": "the label property name of options",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": "`'label'`",
-        "pureDefault": "label"
-      },
-      {
-        "name": "nzLabelRender",
-        "inputType": 0,
-        "description": "render template of displaying selected options",
-        "type": "TemplateRef",
-        "typeRaw": "`TemplateRef<any>`",
-        "default": ""
-      },
-      {
         "name": "nzOptionRender",
         "inputType": 0,
         "description": "render template of cascader options",
         "type": "TemplateRef",
         "typeRaw": "`TemplateRef<{ $implicit: NzCascaderOption, index: number }>`",
-        "default": ""
-      },
-      {
-        "name": "nzLoadData",
-        "inputType": 0,
-        "description": "To load option lazily. If setting `ngModel` with an array value and `nzOptions` is not setting, lazy load will be call immediately",
-        "type": "function",
-        "typeRaw": "`(option: any, index?: index) => PromiseLike<any>`",
         "default": ""
       },
       {
@@ -1857,6 +1905,14 @@
           "default"
         ],
         "pureDefault": "default"
+      },
+      {
+        "name": "nzSuffixIcon",
+        "inputType": 0,
+        "description": "The custom suffix icon",
+        "type": "string",
+        "typeRaw": "`string|TemplateRef<void>`",
+        "default": ""
       },
       {
         "name": "nzValueProperty",
@@ -1920,7 +1976,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/cascader"
   },
   {
-    "_idx": 25,
+    "_idx": 26,
     "type": "directive",
     "selector": "nz-checkbox",
     "types": {},
@@ -2001,7 +2057,7 @@
     "snippet": "<label __$1>$2</label>"
   },
   {
-    "_idx": 26,
+    "_idx": 27,
     "type": "component",
     "selector": "nz-checkbox-group",
     "types": {},
@@ -2042,7 +2098,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/checkbox"
   },
   {
-    "_idx": 27,
+    "_idx": 28,
     "type": "component",
     "selector": "nz-checkbox-wrapper",
     "types": {},
@@ -2064,7 +2120,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/checkbox"
   },
   {
-    "_idx": 28,
+    "_idx": 29,
     "type": "component",
     "selector": "nz-code-editor",
     "types": {},
@@ -2140,7 +2196,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/code-editor"
   },
   {
-    "_idx": 29,
+    "_idx": 30,
     "type": "component",
     "selector": "nz-collapse",
     "types": {},
@@ -2194,7 +2250,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/collapse"
   },
   {
-    "_idx": 30,
+    "_idx": 31,
     "type": "component",
     "selector": "nz-collapse-panel",
     "types": {},
@@ -2267,7 +2323,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/collapse"
   },
   {
-    "_idx": 31,
+    "_idx": 32,
     "type": "component",
     "selector": "nz-comment",
     "types": {},
@@ -2297,7 +2353,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/comment"
   },
   {
-    "_idx": 32,
+    "_idx": 33,
     "type": "directive",
     "selector": "nz-comment-avatar",
     "types": {},
@@ -2310,7 +2366,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/comment"
   },
   {
-    "_idx": 33,
+    "_idx": 34,
     "type": "component",
     "selector": "nz-comment-content",
     "types": {},
@@ -2323,7 +2379,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/comment"
   },
   {
-    "_idx": 34,
+    "_idx": 35,
     "type": "component",
     "selector": "nz-comment-action",
     "types": {},
@@ -2336,7 +2392,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/comment"
   },
   {
-    "_idx": 35,
+    "_idx": 36,
     "type": "component",
     "selector": "nz-date-picker",
     "types": {},
@@ -2489,6 +2545,16 @@
         "_common": true
       },
       {
+        "name": "nzBorderless",
+        "inputType": 0,
+        "description": "remove the border",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false",
+        "_common": true
+      },
+      {
         "name": "nzOnOpenChange",
         "inputType": 1,
         "description": "a callback emitter, can be executed whether the popup calendar is popped up or closed",
@@ -2526,7 +2592,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/date-picker"
   },
   {
-    "_idx": 36,
+    "_idx": 37,
     "type": "component",
     "selector": "nz-range-picker",
     "types": {},
@@ -2679,6 +2745,16 @@
         "_common": true
       },
       {
+        "name": "nzBorderless",
+        "inputType": 0,
+        "description": "remove the border",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false",
+        "_common": true
+      },
+      {
         "name": "nzOnOpenChange",
         "inputType": 1,
         "description": "a callback emitter, can be executed whether the popup calendar is popped up or closed",
@@ -2741,7 +2817,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/date-picker"
   },
   {
-    "_idx": 37,
+    "_idx": 38,
     "type": "component",
     "selector": "nz-descriptions",
     "types": {},
@@ -2754,6 +2830,14 @@
         "typeRaw": "`string|TemplateRef<void>`",
         "default": "`false`",
         "pureDefault": "false"
+      },
+      {
+        "name": "nzExtra",
+        "inputType": 0,
+        "description": "The action area of the description list, placed at the top-right",
+        "type": "string",
+        "typeRaw": "`string|TemplateRef<void>`",
+        "default": ""
       },
       {
         "name": "nzBordered",
@@ -2805,7 +2889,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/descriptions"
   },
   {
-    "_idx": 38,
+    "_idx": 39,
     "type": "component",
     "selector": "nz-descriptions-item",
     "types": {},
@@ -2837,7 +2921,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/descriptions"
   },
   {
-    "_idx": 39,
+    "_idx": 40,
     "type": "component",
     "selector": "nz-divider",
     "types": {},
@@ -2904,7 +2988,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/divider"
   },
   {
-    "_idx": 40,
+    "_idx": 41,
     "type": "component",
     "selector": "nz-drawer",
     "types": {},
@@ -3091,7 +3175,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/drawer"
   },
   {
-    "_idx": 41,
+    "_idx": 42,
     "type": "directive",
     "selector": "nz-dropdown",
     "types": {},
@@ -3161,15 +3245,6 @@
         "default": ""
       },
       {
-        "name": "nzBackdrop",
-        "inputType": 0,
-        "description": "whether the dropdown has a backdrop when `nzTrigger` is `click`",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`true`",
-        "pureDefault": "true"
-      },
-      {
         "name": "nzOverlayClassName",
         "inputType": 0,
         "description": "Class name of the dropdown root element",
@@ -3203,7 +3278,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/dropdown"
   },
   {
-    "_idx": 42,
+    "_idx": 43,
     "type": "component",
     "selector": "nz-dropdown-menu",
     "types": {},
@@ -3216,7 +3291,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/dropdown"
   },
   {
-    "_idx": 43,
+    "_idx": 44,
     "type": "component",
     "selector": "nz-empty",
     "types": {},
@@ -3254,7 +3329,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/empty"
   },
   {
-    "_idx": 44,
+    "_idx": 45,
     "type": "directive",
     "selector": "nz-form",
     "types": {},
@@ -3274,15 +3349,6 @@
         "pureDefault": "horizontal"
       },
       {
-        "name": "nzNoColon",
-        "inputType": 0,
-        "description": "change default props `[nzNoColon]` value of `nz-form-label`",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false"
-      },
-      {
         "name": "nzAutoTips",
         "inputType": 0,
         "description": "Set default props `[nzAutoTips]` value of `nz-form-control`, please refer to the example: **Auto tips**",
@@ -3299,6 +3365,24 @@
         "typeRaw": "`boolean`",
         "default": "`false`",
         "pureDefault": "false"
+      },
+      {
+        "name": "nzNoColon",
+        "inputType": 0,
+        "description": "Set default props `[nzNoColon]` value of `nz-form-label`",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzTooltipIcon",
+        "inputType": 0,
+        "description": "Set default props `[nzTooltipIcon]` value of `nz-form-label`",
+        "type": "string",
+        "typeRaw": "`string | { type: string; theme: ThemeType }`",
+        "default": "`{ type: 'question-circle', theme: 'outline' }`",
+        "pureDefault": "{ type: 'question-circle', theme: 'outline' }"
       },
       {
         "name": "formGroup",
@@ -3322,7 +3406,7 @@
     "snippet": "<form __$1>$0</form>"
   },
   {
-    "_idx": 45,
+    "_idx": 46,
     "type": "component",
     "selector": "nz-form-item",
     "types": {},
@@ -3400,6 +3484,22 @@
         "type": "string",
         "typeRaw": "`string`",
         "default": ""
+      },
+      {
+        "name": "nzTooltipTitle",
+        "inputType": 0,
+        "description": "Set tooltip info",
+        "type": "string",
+        "typeRaw": "`string | TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "nzTooltipIcon",
+        "inputType": 0,
+        "description": "Set icon of tooltip info",
+        "type": "string",
+        "typeRaw": "`string | NzFormTooltipIcon`",
+        "default": ""
       }
     ],
     "description": "Used to separate the item in forms, contains label(optional) and control field.",
@@ -3410,7 +3510,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/form"
   },
   {
-    "_idx": 46,
+    "_idx": 47,
     "type": "component",
     "selector": "nz-form-label",
     "types": {},
@@ -3661,6 +3761,22 @@
         "type": "string",
         "typeRaw": "`string`",
         "default": ""
+      },
+      {
+        "name": "nzTooltipTitle",
+        "inputType": 0,
+        "description": "Set tooltip info",
+        "type": "string",
+        "typeRaw": "`string | TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "nzTooltipIcon",
+        "inputType": 0,
+        "description": "Set icon of tooltip info",
+        "type": "string",
+        "typeRaw": "`string | NzFormTooltipIcon`",
+        "default": ""
       }
     ],
     "description": "The label of the form item, optional.",
@@ -3671,7 +3787,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/form"
   },
   {
-    "_idx": 47,
+    "_idx": 48,
     "type": "component",
     "selector": "nz-form-control",
     "types": {},
@@ -3988,7 +4104,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/form"
   },
   {
-    "_idx": 48,
+    "_idx": 49,
     "type": "component",
     "selector": "nz-form-split",
     "types": {},
@@ -4001,7 +4117,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/form"
   },
   {
-    "_idx": 49,
+    "_idx": 50,
     "type": "component",
     "selector": "nz-form-text",
     "types": {},
@@ -4014,7 +4130,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/form"
   },
   {
-    "_idx": 50,
+    "_idx": 51,
     "type": "directive",
     "selector": "nz-icon",
     "types": {},
@@ -7257,7 +7373,7 @@
     "snippet": "<i __$1></i>"
   },
   {
-    "_idx": 51,
+    "_idx": 52,
     "type": "directive",
     "selector": "nz-input",
     "types": {},
@@ -7342,7 +7458,7 @@
     "snippet": "<input __$1>"
   },
   {
-    "_idx": 52,
+    "_idx": 53,
     "type": "component",
     "selector": "nz-input-group",
     "types": {},
@@ -7411,7 +7527,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/input"
   },
   {
-    "_idx": 53,
+    "_idx": 54,
     "type": "component",
     "selector": "nz-input-number",
     "types": {},
@@ -7594,7 +7710,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/input-number"
   },
   {
-    "_idx": 54,
+    "_idx": 55,
     "type": "component",
     "selector": "nz-sider",
     "types": {},
@@ -7614,14 +7730,6 @@
           "xl",
           "xxl"
         ]
-      },
-      {
-        "name": "nzCollapsed",
-        "inputType": 0,
-        "description": "to set the current status",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": ""
       },
       {
         "name": "nzCollapsedWidth",
@@ -7714,7 +7822,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/layout"
   },
   {
-    "_idx": 55,
+    "_idx": 56,
     "type": "component",
     "selector": "nz-list",
     "types": {},
@@ -7799,7 +7907,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/list"
   },
   {
-    "_idx": 56,
+    "_idx": 57,
     "type": "component",
     "selector": "nz-list-empty",
     "types": {},
@@ -7821,7 +7929,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/list"
   },
   {
-    "_idx": 57,
+    "_idx": 58,
     "type": "component",
     "selector": "nz-list-header",
     "types": {},
@@ -7844,7 +7952,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/list"
   },
   {
-    "_idx": 58,
+    "_idx": 59,
     "type": "component",
     "selector": "nz-list-footer",
     "types": {},
@@ -7867,7 +7975,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/list"
   },
   {
-    "_idx": 59,
+    "_idx": 60,
     "type": "component",
     "selector": "nz-list-pagination",
     "types": {},
@@ -7890,7 +7998,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/list"
   },
   {
-    "_idx": 60,
+    "_idx": 61,
     "type": "component",
     "selector": "nz-list-load-more",
     "types": {},
@@ -7913,7 +8021,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/list"
   },
   {
-    "_idx": 61,
+    "_idx": 62,
     "type": "component",
     "selector": "nz-list-item",
     "types": {},
@@ -7936,7 +8044,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/list"
   },
   {
-    "_idx": 62,
+    "_idx": 63,
     "type": "component",
     "selector": "nz-list-item-meta",
     "types": {},
@@ -7974,7 +8082,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/list"
   },
   {
-    "_idx": 63,
+    "_idx": 64,
     "type": "component",
     "selector": "nz-mention",
     "types": {},
@@ -8078,7 +8186,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/mention"
   },
   {
-    "_idx": 64,
+    "_idx": 65,
     "type": "component",
     "selector": "nzMentionTrigger",
     "types": {},
@@ -8091,7 +8199,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/mention"
   },
   {
-    "_idx": 65,
+    "_idx": 66,
     "type": "component",
     "selector": "nzMentionSuggestion",
     "types": {},
@@ -8104,7 +8212,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/mention"
   },
   {
-    "_idx": 66,
+    "_idx": 67,
     "type": "directive",
     "selector": "nz-menu",
     "types": {},
@@ -8179,7 +8287,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/menu"
   },
   {
-    "_idx": 67,
+    "_idx": 68,
     "type": "directive",
     "selector": "nz-menu-item",
     "types": {},
@@ -8220,6 +8328,15 @@
         "typeRaw": "`boolean`",
         "default": "`false`",
         "pureDefault": "false"
+      },
+      {
+        "name": "nzDanger",
+        "inputType": 0,
+        "description": "display the danger style",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
       }
     ],
     "lib": "ng-zorro-antd",
@@ -8230,7 +8347,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/menu"
   },
   {
-    "_idx": 68,
+    "_idx": 69,
     "type": "directive",
     "selector": "nz-submenu",
     "types": {},
@@ -8295,7 +8412,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/menu"
   },
   {
-    "_idx": 69,
+    "_idx": 70,
     "type": "directive",
     "selector": "nz-menu-group",
     "types": {},
@@ -8317,7 +8434,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/menu"
   },
   {
-    "_idx": 70,
+    "_idx": 71,
     "type": "directive",
     "selector": "nz-menu-divider",
     "types": {},
@@ -8330,7 +8447,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/menu"
   },
   {
-    "_idx": 71,
+    "_idx": 72,
     "type": "component",
     "selector": "nz-modal",
     "types": {},
@@ -8625,7 +8742,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/modal"
   },
   {
-    "_idx": 72,
+    "_idx": 73,
     "type": "directive",
     "selector": "nzModalFooter",
     "types": {},
@@ -8638,7 +8755,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/modal"
   },
   {
-    "_idx": 73,
+    "_idx": 74,
     "type": "component",
     "selector": "nz-page-header",
     "types": {},
@@ -8694,7 +8811,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/page-header"
   },
   {
-    "_idx": 74,
+    "_idx": 75,
     "type": "component",
     "selector": "nz-pagination",
     "types": {},
@@ -8842,7 +8959,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/pagination"
   },
   {
-    "_idx": 75,
+    "_idx": 76,
     "type": "directive",
     "selector": "nz-popconfirm",
     "types": {},
@@ -8875,7 +8992,7 @@
         "inputType": 0,
         "description": "The position of the tooltip relative to the target",
         "type": "Enum",
-        "typeRaw": "`'top' | 'left' | 'right' | 'bottom' | 'topLeft' | 'topRight' | 'bottomLeft' | 'bottomRight' | 'leftTop' | 'leftBottom' | 'rightTop' | 'rightBottom'`",
+        "typeRaw": "`'top' | 'left' | 'right' | 'bottom' | 'topLeft' | 'topRight' | 'bottomLeft' | 'bottomRight' | 'leftTop' | 'leftBottom' | 'rightTop' | 'rightBottom' | Array<string>`",
         "default": "`'top'`",
         "typeDefinition": [
           "top",
@@ -8889,9 +9006,18 @@
           "leftTop",
           "leftBottom",
           "rightTop",
-          "rightBottom"
+          "rightBottom",
+          "Array<string>"
         ],
         "pureDefault": "top"
+      },
+      {
+        "name": "nzTooltipColor",
+        "inputType": 0,
+        "description": "The background color",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
       },
       {
         "name": "nzTooltipOrigin",
@@ -8980,7 +9106,7 @@
         "inputType": 0,
         "description": "The position of the popconfirm relative to the target",
         "type": "Enum",
-        "typeRaw": "`'top' | 'left' | 'right' | 'bottom' | 'topLeft' | 'topRight' | 'bottomLeft' | 'bottomRight' | 'leftTop' | 'leftBottom' | 'rightTop' | 'rightBottom'`",
+        "typeRaw": "`'top' | 'left' | 'right' | 'bottom' | 'topLeft' | 'topRight' | 'bottomLeft' | 'bottomRight' | 'leftTop' | 'leftBottom' | 'rightTop' | 'rightBottom' | Array<string>`",
         "default": "`'top'`",
         "typeDefinition": [
           "top",
@@ -8994,7 +9120,8 @@
           "leftTop",
           "leftBottom",
           "rightTop",
-          "rightBottom"
+          "rightBottom",
+          "Array<string>"
         ],
         "pureDefault": "top"
       },
@@ -9142,7 +9269,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/popconfirm"
   },
   {
-    "_idx": 76,
+    "_idx": 77,
     "type": "directive",
     "selector": "nz-popover",
     "types": {},
@@ -9175,7 +9302,7 @@
         "inputType": 0,
         "description": "The position of the tooltip relative to the target",
         "type": "Enum",
-        "typeRaw": "`'top' | 'left' | 'right' | 'bottom' | 'topLeft' | 'topRight' | 'bottomLeft' | 'bottomRight' | 'leftTop' | 'leftBottom' | 'rightTop' | 'rightBottom'`",
+        "typeRaw": "`'top' | 'left' | 'right' | 'bottom' | 'topLeft' | 'topRight' | 'bottomLeft' | 'bottomRight' | 'leftTop' | 'leftBottom' | 'rightTop' | 'rightBottom' | Array<string>`",
         "default": "`'top'`",
         "typeDefinition": [
           "top",
@@ -9189,9 +9316,18 @@
           "leftTop",
           "leftBottom",
           "rightTop",
-          "rightBottom"
+          "rightBottom",
+          "Array<string>"
         ],
         "pureDefault": "top"
+      },
+      {
+        "name": "nzTooltipColor",
+        "inputType": 0,
+        "description": "The background color",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
       },
       {
         "name": "nzTooltipOrigin",
@@ -9288,7 +9424,7 @@
         "inputType": 0,
         "description": "The position of the popover relative to the target",
         "type": "Enum",
-        "typeRaw": "`'top' | 'left' | 'right' | 'bottom' | 'topLeft' | 'topRight' | 'bottomLeft' | 'bottomRight' | 'leftTop' | 'leftBottom' | 'rightTop' | 'rightBottom'`",
+        "typeRaw": "`'top' | 'left' | 'right' | 'bottom' | 'topLeft' | 'topRight' | 'bottomLeft' | 'bottomRight' | 'leftTop' | 'leftBottom' | 'rightTop' | 'rightBottom' | Array<string>`",
         "default": "`'top'`",
         "typeDefinition": [
           "top",
@@ -9302,7 +9438,8 @@
           "leftTop",
           "leftBottom",
           "rightTop",
-          "rightBottom"
+          "rightBottom",
+          "Array<string>"
         ],
         "pureDefault": "top"
       },
@@ -9374,7 +9511,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/popover"
   },
   {
-    "_idx": 77,
+    "_idx": 78,
     "type": "component",
     "selector": "nz-progress",
     "types": {},
@@ -9473,7 +9610,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/progress"
   },
   {
-    "_idx": 78,
+    "_idx": 79,
     "type": "directive",
     "selector": "nz-radio",
     "types": {},
@@ -9544,7 +9681,7 @@
     "snippet": "<label __$1>$2</label>"
   },
   {
-    "_idx": 79,
+    "_idx": 80,
     "type": "directive",
     "selector": "nz-radio-button",
     "types": {},
@@ -9602,7 +9739,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/radio"
   },
   {
-    "_idx": 80,
+    "_idx": 81,
     "type": "component",
     "selector": "nz-radio-group",
     "types": {},
@@ -9677,7 +9814,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/radio"
   },
   {
-    "_idx": 81,
+    "_idx": 82,
     "type": "component",
     "selector": "nz-rate",
     "types": {},
@@ -9815,7 +9952,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/rate"
   },
   {
-    "_idx": 82,
+    "_idx": 83,
     "type": "directive",
     "selector": "nz-resizable",
     "types": {},
@@ -9954,7 +10091,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/resizable"
   },
   {
-    "_idx": 83,
+    "_idx": 84,
     "type": "component",
     "selector": "nz-resize-handle",
     "types": {},
@@ -9977,7 +10114,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/resizable"
   },
   {
-    "_idx": 84,
+    "_idx": 85,
     "type": "component",
     "selector": "nz-resize-handles",
     "types": {},
@@ -10000,7 +10137,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/resizable"
   },
   {
-    "_idx": 85,
+    "_idx": 86,
     "type": "component",
     "selector": "nz-result",
     "types": {},
@@ -10013,7 +10150,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/result"
   },
   {
-    "_idx": 86,
+    "_idx": 87,
     "type": "component",
     "selector": "nz-select",
     "types": {},
@@ -10375,7 +10512,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/select"
   },
   {
-    "_idx": 87,
+    "_idx": 88,
     "type": "component",
     "selector": "nz-option",
     "types": {},
@@ -10433,7 +10570,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/select"
   },
   {
-    "_idx": 88,
+    "_idx": 89,
     "type": "component",
     "selector": "nz-option-group",
     "types": {},
@@ -10455,7 +10592,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/select"
   },
   {
-    "_idx": 89,
+    "_idx": 90,
     "type": "component",
     "selector": "nz-skeleton",
     "types": {},
@@ -10523,7 +10660,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/skeleton"
   },
   {
-    "_idx": 90,
+    "_idx": 91,
     "type": "component",
     "selector": "nz-slider",
     "types": {},
@@ -10694,7 +10831,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/slider"
   },
   {
-    "_idx": 91,
+    "_idx": 92,
     "type": "component",
     "selector": "nz-space",
     "types": {},
@@ -10734,7 +10871,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/space"
   },
   {
-    "_idx": 92,
+    "_idx": 93,
     "type": "component",
     "selector": "nz-spin",
     "types": {},
@@ -10805,7 +10942,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/spin"
   },
   {
-    "_idx": 93,
+    "_idx": 94,
     "type": "component",
     "selector": "nz-statistic",
     "types": {},
@@ -10867,7 +11004,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/statistic"
   },
   {
-    "_idx": 94,
+    "_idx": 95,
     "type": "component",
     "selector": "nz-countdown",
     "types": {},
@@ -10938,7 +11075,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/statistic"
   },
   {
-    "_idx": 95,
+    "_idx": 96,
     "type": "component",
     "selector": "nzFormat",
     "types": {},
@@ -10951,7 +11088,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/statistic"
   },
   {
-    "_idx": 96,
+    "_idx": 97,
     "type": "component",
     "selector": "nz-steps",
     "types": {},
@@ -11067,7 +11204,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/steps"
   },
   {
-    "_idx": 97,
+    "_idx": 98,
     "type": "component",
     "selector": "nz-step",
     "types": {},
@@ -11138,7 +11275,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/steps"
   },
   {
-    "_idx": 98,
+    "_idx": 99,
     "type": "component",
     "selector": "nz-switch",
     "types": {},
@@ -11239,7 +11376,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/switch"
   },
   {
-    "_idx": 99,
+    "_idx": 100,
     "type": "component",
     "selector": "nz-table",
     "types": {},
@@ -11247,7 +11384,7 @@
       {
         "name": "nzData",
         "inputType": 0,
-        "description": "Data record array to be displayed",
+        "description": "Data record array to be rendered",
         "type": "object",
         "typeRaw": "`any[]`",
         "default": ""
@@ -11255,7 +11392,7 @@
       {
         "name": "nzFrontPagination",
         "inputType": 0,
-        "description": "Whether paginate data in front side，should set to `false` if you want to paginate data in server side or display all data in table",
+        "description": "Whether to paginate data on client. Should be set to `false` if data is to be paginated on server side or if all the data is to be displayed at once in the table without any pagination",
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`true`",
@@ -11264,7 +11401,7 @@
       {
         "name": "nzTotal",
         "inputType": 0,
-        "description": "Total data count, should set when `nzServerRender` is true",
+        "description": "Total data count. Should set when `nzServerRender` is `true`",
         "type": "number",
         "typeRaw": "`number`",
         "default": ""
@@ -11288,7 +11425,7 @@
       {
         "name": "nzShowPagination",
         "inputType": 0,
-        "description": "Whether show pagination component in bottom of the table",
+        "description": "Whether to show pagination component at bottom of the table",
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`true`",
@@ -11297,7 +11434,7 @@
       {
         "name": "nzPaginationPosition",
         "inputType": 0,
-        "description": "Specify the position of Pagination",
+        "description": "Specify the position of pagination",
         "type": "Enum",
         "typeRaw": "`'top' | 'bottom' | 'both'`",
         "default": "`bottom`",
@@ -11318,9 +11455,9 @@
         "pureDefault": "false"
       },
       {
-        "name": "nzOutBordered",
+        "name": "nzOuterBordered",
         "inputType": 0,
-        "description": "Whether to show table out borders",
+        "description": "Whether to show table outer borders",
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
@@ -11362,7 +11499,7 @@
       {
         "name": "nzLoadingIndicator",
         "inputType": 0,
-        "description": "the spinning indicator",
+        "description": "The loading indicator",
         "type": "TemplateRef",
         "typeRaw": "`TemplateRef<void>`",
         "default": ""
@@ -11370,7 +11507,7 @@
       {
         "name": "nzLoadingDelay",
         "inputType": 0,
-        "description": "Specifies a delay in milliseconds for loading state (prevent flush)",
+        "description": "Specifies a delay in milliseconds for loading state (prevents flush)",
         "type": "number",
         "typeRaw": "`number`",
         "default": "`0`",
@@ -11379,7 +11516,7 @@
       {
         "name": "nzScroll",
         "inputType": 0,
-        "description": "Whether table can be scrolled in x/y direction, `x` or `y` can be a string that indicates the width and height of table body",
+        "description": "Whether table can be scrolled in x/y direction. `x` or `y` can be a string that indicates the width and height of table body",
         "type": "object",
         "typeRaw": "`object`",
         "default": ""
@@ -11446,7 +11583,7 @@
       {
         "name": "nzItemRender",
         "inputType": 0,
-        "description": "to customize Pagination item, same as Pagination",
+        "description": "To customize Pagination item, same as Pagination",
         "type": "TemplateRef",
         "typeRaw": "`TemplateRef<{ $implicit: 'page' | 'prev' | 'next', page: number }>`",
         "default": ""
@@ -11454,7 +11591,7 @@
       {
         "name": "nzHideOnSinglePage",
         "inputType": 0,
-        "description": "Whether to hide pager on single page",
+        "description": "Whether to hide pagination on single page",
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
@@ -11463,7 +11600,7 @@
       {
         "name": "nzSimple",
         "inputType": 0,
-        "description": "whether to use simple mode",
+        "description": "Whether to use simple mode",
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": ""
@@ -11471,7 +11608,7 @@
       {
         "name": "nzTemplateMode",
         "inputType": 0,
-        "description": "template mode，no need to pass data to `nzData`",
+        "description": "Template mode，no need to pass data to `nzData`",
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
@@ -11507,7 +11644,7 @@
       {
         "name": "nzVirtualForTrackBy",
         "inputType": 0,
-        "description": "The TrackByFunction to use for tracking changes.",
+        "description": "The TrackByFunction to be used for tracking changes.",
         "type": "object",
         "typeRaw": "`TrackByFunction<T>`",
         "default": ""
@@ -11515,7 +11652,7 @@
       {
         "name": "nzPageIndexChange",
         "inputType": 1,
-        "description": "pageIndex change callback",
+        "description": "Callback when `pageIndex` changes",
         "type": "EventEmitter",
         "typeRaw": "`EventEmitter<number>`",
         "default": ""
@@ -11523,7 +11660,7 @@
       {
         "name": "nzPageSizeChange",
         "inputType": 1,
-        "description": "pageSize change callback",
+        "description": "Callback when `pageSize` changes",
         "type": "EventEmitter",
         "typeRaw": "`EventEmitter<number>`",
         "default": ""
@@ -11531,7 +11668,7 @@
       {
         "name": "nzCurrentPageDataChange",
         "inputType": 1,
-        "description": "current pageData change callback",
+        "description": "Callback when current pageData changes",
         "type": "EventEmitter",
         "typeRaw": "`EventEmitter<any[]>`",
         "default": ""
@@ -11539,7 +11676,7 @@
       {
         "name": "nzQueryParams",
         "inputType": 1,
-        "description": "Get params when work with server pagination, sort and filter",
+        "description": "Callback with params when working with server side pagination, sorting and filtering",
         "type": "EventEmitter",
         "typeRaw": "`EventEmitter<NzTableQueryParams>`",
         "default": ""
@@ -11548,12 +11685,12 @@
     "lib": "ng-zorro-antd",
     "title": "Table",
     "description": "A table displays rows of data.",
-    "whenToUse": "- To display a collection of structured data.\n- To sort, search, paginate, filter data.",
+    "whenToUse": "- To display a collection of structured data.\n- To sort, search, paginate and filter data.",
     "doc": "/components/table/en",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/table"
   },
   {
-    "_idx": 100,
+    "_idx": 101,
     "type": "component",
     "selector": "th",
     "types": {},
@@ -11561,7 +11698,7 @@
       {
         "name": "nzShowCheckbox",
         "inputType": 0,
-        "description": "Whether add nz-checkbox",
+        "description": "Whether `nz-checkbox` should be shown in the header",
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": ""
@@ -11569,7 +11706,7 @@
       {
         "name": "nzDisabled",
         "inputType": 0,
-        "description": "Whether disable checkbox",
+        "description": "Whether the `nz-checkbox` is disabled",
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "",
@@ -11578,7 +11715,7 @@
       {
         "name": "nzIndeterminate",
         "inputType": 0,
-        "description": "Indeterminate status",
+        "description": "`nz-checkbox` indeterminate status",
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "",
@@ -11595,7 +11732,7 @@
       {
         "name": "nzCheckedChange",
         "inputType": 1,
-        "description": "Checked status change callback",
+        "description": "Callback when checked status changes",
         "type": "EventEmitter",
         "typeRaw": "`EventEmitter<boolean>`",
         "default": ""
@@ -11603,7 +11740,7 @@
       {
         "name": "nzShowRowSelection",
         "inputType": 0,
-        "description": "Whether show selections",
+        "description": "Whether to show row selection options",
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": ""
@@ -11611,7 +11748,7 @@
       {
         "name": "nzSelections",
         "inputType": 0,
-        "description": "Selection options include `text` and `onSelect` function",
+        "description": "Selection options including `text` and `onSelect` callback function",
         "type": "Array",
         "typeRaw": "`Array<{ text: string, onSelect: any }>`",
         "default": ""
@@ -11619,9 +11756,9 @@
       {
         "name": "nzSortFn",
         "inputType": 0,
-        "description": "Sort function, use to sort the data in the browser side(ref to Array.sort compareFunction), set to true when using server sort",
+        "description": "Sort function used to sort the data on client side (ref to Array.sort compareFunction). Should be set to `true` when using server side sorting",
         "type": "function",
-        "typeRaw": "`((a: any, b: any, sortOrder?: string) => number) | boolean`",
+        "typeRaw": "`((a: any, b: any, sortOrder?: string) => number)`",
         "default": ""
       },
       {
@@ -11640,7 +11777,7 @@
       {
         "name": "nzSortDirections",
         "inputType": 0,
-        "description": "supported sort way, could be `'ascend'`, `'descend'`, `null`",
+        "description": "Supported sort order, could be `'ascend'`, `'descend'`, `null`",
         "type": "Array",
         "typeRaw": "`Array<'ascend' | 'descend' | null>`",
         "default": "`['ascend', 'descend', null]`",
@@ -11649,7 +11786,7 @@
       {
         "name": "nzSortOrderChange",
         "inputType": 1,
-        "description": "Sort direction change callback",
+        "description": "Callback when sort direction changes",
         "type": "EventEmitter",
         "typeRaw": "`EventEmitter<'ascend' | 'descend' | null>`",
         "default": ""
@@ -11657,7 +11794,7 @@
       {
         "name": "nzShowFilter",
         "inputType": 0,
-        "description": "Whether show filter",
+        "description": "Whether to show filter",
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": ""
@@ -11665,9 +11802,9 @@
       {
         "name": "nzFilterFn",
         "inputType": 0,
-        "description": "Filter function, use to filter the data in the browser side. Set to true when using server filter",
+        "description": "Filter function used to filter the data on client side. Set to `true` when using server side filtering",
         "type": "function",
-        "typeRaw": "`((value: any, data: any) => boolean;) | boolean`",
+        "typeRaw": "`((value: any, data: any) => boolean;)`",
         "default": ""
       },
       {
@@ -11681,7 +11818,7 @@
       {
         "name": "nzFilterMultiple",
         "inputType": 0,
-        "description": "Whether filter multiple mode",
+        "description": "Whether multiple mode filtering is enabled",
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`true`",
@@ -11690,7 +11827,7 @@
       {
         "name": "nzFilterChange",
         "inputType": 1,
-        "description": "Filter change callback `value`",
+        "description": "Callback when filter `value` changes",
         "type": "EventEmitter",
         "typeRaw": "`EventEmitter<any[] | any>`",
         "default": ""
@@ -11762,12 +11899,12 @@
     "description": "Checkbox property",
     "lib": "ng-zorro-antd",
     "title": "Table",
-    "whenToUse": "- To display a collection of structured data.\n- To sort, search, paginate, filter data.",
+    "whenToUse": "- To display a collection of structured data.\n- To sort, search, paginate and filter data.",
     "doc": "/components/table/en",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/table"
   },
   {
-    "_idx": 101,
+    "_idx": 102,
     "type": "component",
     "selector": "td",
     "types": {},
@@ -11915,12 +12052,12 @@
     "description": "Checkbox property",
     "lib": "ng-zorro-antd",
     "title": "Table",
-    "whenToUse": "- To display a collection of structured data.\n- To sort, search, paginate, filter data.",
+    "whenToUse": "- To display a collection of structured data.\n- To sort, search, paginate and filter data.",
     "doc": "/components/table/en",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/table"
   },
   {
-    "_idx": 102,
+    "_idx": 103,
     "type": "component",
     "selector": "tr",
     "types": {},
@@ -11937,12 +12074,12 @@
     "lib": "ng-zorro-antd",
     "title": "Table",
     "description": "A table displays rows of data.",
-    "whenToUse": "- To display a collection of structured data.\n- To sort, search, paginate, filter data.",
+    "whenToUse": "- To display a collection of structured data.\n- To sort, search, paginate and filter data.",
     "doc": "/components/table/en",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/table"
   },
   {
-    "_idx": 103,
+    "_idx": 104,
     "type": "component",
     "selector": "nz-filter-trigger",
     "types": {},
@@ -11984,12 +12121,12 @@
     "description": "Customized filter panel",
     "lib": "ng-zorro-antd",
     "title": "Table",
-    "whenToUse": "- To display a collection of structured data.\n- To sort, search, paginate, filter data.",
+    "whenToUse": "- To display a collection of structured data.\n- To sort, search, paginate and filter data.",
     "doc": "/components/table/en",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/table"
   },
   {
-    "_idx": 104,
+    "_idx": 105,
     "type": "directive",
     "selector": "nz-virtual-scroll",
     "types": {},
@@ -11997,12 +12134,12 @@
     "description": "virtual scroll directive work with `ng-template`, type: `TemplateRef<{ $implicit: any, index: number }>`.",
     "lib": "ng-zorro-antd",
     "title": "Table",
-    "whenToUse": "- To display a collection of structured data.\n- To sort, search, paginate, filter data.",
+    "whenToUse": "- To display a collection of structured data.\n- To sort, search, paginate and filter data.",
     "doc": "/components/table/en",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/table"
   },
   {
-    "_idx": 105,
+    "_idx": 106,
     "type": "component",
     "selector": "nz-tabset",
     "types": {},
@@ -12160,7 +12297,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tabs"
   },
   {
-    "_idx": 106,
+    "_idx": 107,
     "type": "component",
     "selector": "nz-tab",
     "types": {},
@@ -12232,7 +12369,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tabs"
   },
   {
-    "_idx": 107,
+    "_idx": 108,
     "type": "directive",
     "selector": "nz-tab",
     "types": {},
@@ -12245,7 +12382,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tabs"
   },
   {
-    "_idx": 108,
+    "_idx": 109,
     "type": "component",
     "selector": "nz-tag",
     "types": {},
@@ -12324,7 +12461,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tag"
   },
   {
-    "_idx": 109,
+    "_idx": 110,
     "type": "component",
     "selector": "nz-time-picker",
     "types": {},
@@ -12541,7 +12678,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/time-picker"
   },
   {
-    "_idx": 110,
+    "_idx": 111,
     "type": "component",
     "selector": "nz-timeline",
     "types": {},
@@ -12596,7 +12733,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/timeline"
   },
   {
-    "_idx": 111,
+    "_idx": 112,
     "type": "component",
     "selector": "nz-timeline-item",
     "types": {},
@@ -12639,7 +12776,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/timeline"
   },
   {
-    "_idx": 112,
+    "_idx": 113,
     "type": "component",
     "selector": "nz-transfer",
     "types": {},
@@ -12824,7 +12961,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/transfer"
   },
   {
-    "_idx": 113,
+    "_idx": 114,
     "type": "component",
     "selector": "nz-tree",
     "types": {},
@@ -13146,7 +13283,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tree"
   },
   {
-    "_idx": 114,
+    "_idx": 115,
     "type": "component",
     "selector": "nz-tree-select",
     "types": {},
@@ -13429,7 +13566,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tree-select"
   },
   {
-    "_idx": 115,
+    "_idx": 116,
     "type": "directive",
     "selector": "nz-typography",
     "types": {},
@@ -13459,6 +13596,40 @@
         "typeRaw": "`boolean`",
         "default": "`false`",
         "pureDefault": "false"
+      },
+      {
+        "name": "nzCopyIcons",
+        "inputType": 0,
+        "description": "Custom copy icons",
+        "type": "string",
+        "typeRaw": "`[string | TemplateRef<void>, string | TemplateRef<void>]`",
+        "default": "`['copy', 'check']`",
+        "pureDefault": "['copy', 'check']"
+      },
+      {
+        "name": "nzCopyTooltips",
+        "inputType": 0,
+        "description": "Custom tooltips text, hide when it is `null`",
+        "type": "string",
+        "typeRaw": "`null | [string | TemplateRef<void>, string | TemplateRef<void>]`",
+        "default": ""
+      },
+      {
+        "name": "nzEditIcon",
+        "inputType": 0,
+        "description": "Custom edit icon",
+        "type": "string",
+        "typeRaw": "`string | TemplateRef<void>`",
+        "default": "`'edit'`",
+        "pureDefault": "edit"
+      },
+      {
+        "name": "nzEditTooltip",
+        "inputType": 0,
+        "description": "Custom tooltip text, hide when it is `null`",
+        "type": "string",
+        "typeRaw": "`null | string | TemplateRef<void>`",
+        "default": ""
       },
       {
         "name": "nzEllipsis",
@@ -13518,12 +13689,13 @@
         "inputType": 0,
         "description": "Content type",
         "type": "Enum",
-        "typeRaw": "`'secondary'｜'warning'｜'danger'`",
+        "typeRaw": "`'secondary' | 'warning' | 'danger' | 'success'`",
         "default": "",
         "typeDefinition": [
           "secondary",
           "warning",
-          "danger"
+          "danger",
+          "success"
         ]
       },
       {
@@ -13559,7 +13731,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/typography"
   },
   {
-    "_idx": 116,
+    "_idx": 117,
     "type": "component",
     "selector": "nz-upload",
     "types": {},
@@ -13823,7 +13995,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/upload"
   },
   {
-    "_idx": 117,
+    "_idx": 118,
     "type": "component",
     "selector": "avatar-list",
     "types": {},
@@ -13868,7 +14040,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/avatar-list"
   },
   {
-    "_idx": 118,
+    "_idx": 119,
     "type": "component",
     "selector": "avatar-list-item",
     "types": {},
@@ -13914,7 +14086,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/avatar-list"
   },
   {
-    "_idx": 119,
+    "_idx": 120,
     "type": "component",
     "selector": "count-down",
     "types": {},
@@ -13952,7 +14124,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/count-down"
   },
   {
-    "_idx": 120,
+    "_idx": 121,
     "type": "component",
     "selector": "range-picker",
     "types": {
@@ -14204,7 +14376,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/date-picker"
   },
   {
-    "_idx": 121,
+    "_idx": 122,
     "type": "directive",
     "selector": "down-file",
     "types": {},
@@ -14283,7 +14455,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/down-file"
   },
   {
-    "_idx": 122,
+    "_idx": 123,
     "type": "component",
     "selector": "ellipsis",
     "types": {},
@@ -14340,7 +14512,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/ellipsis"
   },
   {
-    "_idx": 123,
+    "_idx": 124,
     "type": "component",
     "selector": "error-collect",
     "types": {},
@@ -14372,7 +14544,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/error-collect"
   },
   {
-    "_idx": 124,
+    "_idx": 125,
     "type": "directive",
     "selector": "error-collect",
     "types": {},
@@ -14404,7 +14576,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/error-collect"
   },
   {
-    "_idx": 125,
+    "_idx": 126,
     "type": "component",
     "selector": "exception",
     "types": {},
@@ -14455,7 +14627,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/exception"
   },
   {
-    "_idx": 126,
+    "_idx": 127,
     "type": "component",
     "selector": "footer-toolbar",
     "types": {},
@@ -14486,7 +14658,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/footer-toolbar"
   },
   {
-    "_idx": 127,
+    "_idx": 128,
     "type": "component",
     "selector": "full-content",
     "types": {},
@@ -14526,7 +14698,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/full-content"
   },
   {
-    "_idx": 128,
+    "_idx": 129,
     "type": "directive",
     "selector": "full-toggle",
     "types": {},
@@ -14539,7 +14711,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/full-content"
   },
   {
-    "_idx": 129,
+    "_idx": 130,
     "type": "component",
     "selector": "global-footer",
     "types": {
@@ -14598,7 +14770,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/global-footer"
   },
   {
-    "_idx": 130,
+    "_idx": 131,
     "type": "component",
     "selector": "global-footer-item",
     "types": {},
@@ -14629,7 +14801,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/global-footer"
   },
   {
-    "_idx": 131,
+    "_idx": 132,
     "type": "component",
     "selector": "media",
     "types": {},
@@ -14684,7 +14856,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/media"
   },
   {
-    "_idx": 132,
+    "_idx": 133,
     "type": "component",
     "selector": "notice-icon",
     "types": {},
@@ -14756,7 +14928,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/notice-icon"
   },
   {
-    "_idx": 133,
+    "_idx": 134,
     "type": "component",
     "selector": "numberToChinese",
     "types": {},
@@ -14769,7 +14941,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/number-to-chinese"
   },
   {
-    "_idx": 134,
+    "_idx": 135,
     "type": "component",
     "selector": "page-header",
     "types": {},
@@ -14937,7 +15109,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/page-header"
   },
   {
-    "_idx": 135,
+    "_idx": 136,
     "type": "component",
     "selector": "qr",
     "types": {},
@@ -15048,7 +15220,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/qr"
   },
   {
-    "_idx": 136,
+    "_idx": 137,
     "type": "component",
     "selector": "quick-menu",
     "types": {},
@@ -15105,7 +15277,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/quick-menu"
   },
   {
-    "_idx": 137,
+    "_idx": 138,
     "type": "component",
     "selector": "result",
     "types": {},
@@ -15151,7 +15323,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/result"
   },
   {
-    "_idx": 138,
+    "_idx": 139,
     "type": "component",
     "selector": "reuse-tab",
     "types": {
@@ -15345,153 +15517,8 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/reuse-tab"
   },
   {
-    "_idx": 139,
-    "type": "component",
-    "selector": "se-container",
-    "types": {},
-    "properties": [
-      {
-        "name": "gutter",
-        "inputType": 0,
-        "description": "specify the distance between two items, unit is `px`, only `nzLayout:horizontal`",
-        "type": "Enum",
-        "typeRaw": "`number`",
-        "default": "`32`",
-        "pureDefault": "32",
-        "typeDefinition": [
-          "0",
-          "8",
-          "16",
-          "24",
-          "32",
-          "40",
-          "48",
-          "56",
-          "64"
-        ]
-      },
-      {
-        "name": "se-container",
-        "inputType": 0,
-        "description": "specify the maximum number of columns to display, the final columns number is determined by col setting combined with [Responsive Rules](/theme/responsive)",
-        "type": "Enum",
-        "typeRaw": "`'1','2','3','4','5','6'`",
-        "default": "",
-        "typeDefinition": [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6"
-        ]
-      },
-      {
-        "name": "col",
-        "inputType": 0,
-        "description": "specify the maximum number of columns to display, the final columns number is determined by col setting combined with [Responsive Rules](/theme/responsive)",
-        "type": "Enum",
-        "typeRaw": "`'1','2','3','4','5','6'`",
-        "default": "",
-        "typeDefinition": [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6"
-        ]
-      },
-      {
-        "name": "labelWidth",
-        "inputType": 0,
-        "description": "label text of width, unit is `px`",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "`150`",
-        "pureDefault": "150"
-      },
-      {
-        "name": "nzLayout",
-        "inputType": 0,
-        "description": "type of layout when `inline` forced size is `compact`",
-        "type": "Enum",
-        "typeRaw": "`'horizontal','vertical','inline'`",
-        "default": "`'horizontal'`",
-        "typeDefinition": [
-          "horizontal",
-          "vertical",
-          "inline"
-        ],
-        "pureDefault": "horizontal"
-      },
-      {
-        "name": "size",
-        "inputType": 0,
-        "description": "size of edit, forced ingores `error`, `extra`",
-        "type": "Enum",
-        "typeRaw": "`'default','compact'`",
-        "default": "`'default'`",
-        "typeDefinition": [
-          "default",
-          "compact"
-        ],
-        "pureDefault": "default"
-      },
-      {
-        "name": "firstVisual",
-        "inputType": 0,
-        "description": "Immediately show validation error message",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false"
-      },
-      {
-        "name": "ingoreDirty",
-        "inputType": 0,
-        "description": "Whether to ignore the `dirty` check",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false"
-      },
-      {
-        "name": "line",
-        "inputType": 0,
-        "description": "whether separation line style",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false"
-      },
-      {
-        "name": "title",
-        "inputType": 0,
-        "description": "Display title",
-        "type": "string",
-        "typeRaw": "`string,TemplateRef<void>`",
-        "default": ""
-      },
-      {
-        "name": "errors",
-        "inputType": 0,
-        "description": "Batch modify `se` error value",
-        "type": "Array",
-        "typeRaw": "`SEErrorRefresh[]`",
-        "default": ""
-      }
-    ],
-    "lib": "@delon/abc",
-    "title": "Edit",
-    "description": "A higher-order components of the form HTML template. And optimized some details:",
-    "whenToUse": "",
-    "doc": "/components/se/en",
-    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/se"
-  },
-  {
     "_idx": 140,
-    "type": "directive",
+    "type": "component",
     "selector": "se-container",
     "types": {},
     "properties": [
@@ -15636,6 +15663,151 @@
   },
   {
     "_idx": 141,
+    "type": "directive",
+    "selector": "se-container",
+    "types": {},
+    "properties": [
+      {
+        "name": "gutter",
+        "inputType": 0,
+        "description": "specify the distance between two items, unit is `px`, only `nzLayout:horizontal`",
+        "type": "Enum",
+        "typeRaw": "`number`",
+        "default": "`32`",
+        "pureDefault": "32",
+        "typeDefinition": [
+          "0",
+          "8",
+          "16",
+          "24",
+          "32",
+          "40",
+          "48",
+          "56",
+          "64"
+        ]
+      },
+      {
+        "name": "se-container",
+        "inputType": 0,
+        "description": "specify the maximum number of columns to display, the final columns number is determined by col setting combined with [Responsive Rules](/theme/responsive)",
+        "type": "Enum",
+        "typeRaw": "`'1','2','3','4','5','6'`",
+        "default": "",
+        "typeDefinition": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ]
+      },
+      {
+        "name": "col",
+        "inputType": 0,
+        "description": "specify the maximum number of columns to display, the final columns number is determined by col setting combined with [Responsive Rules](/theme/responsive)",
+        "type": "Enum",
+        "typeRaw": "`'1','2','3','4','5','6'`",
+        "default": "",
+        "typeDefinition": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ]
+      },
+      {
+        "name": "labelWidth",
+        "inputType": 0,
+        "description": "label text of width, unit is `px`",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`150`",
+        "pureDefault": "150"
+      },
+      {
+        "name": "nzLayout",
+        "inputType": 0,
+        "description": "type of layout when `inline` forced size is `compact`",
+        "type": "Enum",
+        "typeRaw": "`'horizontal','vertical','inline'`",
+        "default": "`'horizontal'`",
+        "typeDefinition": [
+          "horizontal",
+          "vertical",
+          "inline"
+        ],
+        "pureDefault": "horizontal"
+      },
+      {
+        "name": "size",
+        "inputType": 0,
+        "description": "size of edit, forced ingores `error`, `extra`",
+        "type": "Enum",
+        "typeRaw": "`'default','compact'`",
+        "default": "`'default'`",
+        "typeDefinition": [
+          "default",
+          "compact"
+        ],
+        "pureDefault": "default"
+      },
+      {
+        "name": "firstVisual",
+        "inputType": 0,
+        "description": "Immediately show validation error message",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "ingoreDirty",
+        "inputType": 0,
+        "description": "Whether to ignore the `dirty` check",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "line",
+        "inputType": 0,
+        "description": "whether separation line style",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "title",
+        "inputType": 0,
+        "description": "Display title",
+        "type": "string",
+        "typeRaw": "`string,TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "errors",
+        "inputType": 0,
+        "description": "Batch modify `se` error value",
+        "type": "Array",
+        "typeRaw": "`SEErrorRefresh[]`",
+        "default": ""
+      }
+    ],
+    "lib": "@delon/abc",
+    "title": "Edit",
+    "description": "A higher-order components of the form HTML template. And optimized some details:",
+    "whenToUse": "",
+    "doc": "/components/se/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/se"
+  },
+  {
+    "_idx": 142,
     "type": "component",
     "selector": "se",
     "types": {},
@@ -15745,21 +15917,8 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/se"
   },
   {
-    "_idx": 142,
-    "type": "component",
-    "selector": "se-title",
-    "types": {},
-    "properties": [],
-    "description": "Display title.",
-    "lib": "@delon/abc",
-    "title": "Edit",
-    "whenToUse": "",
-    "doc": "/components/se/en",
-    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/se"
-  },
-  {
     "_idx": 143,
-    "type": "directive",
+    "type": "component",
     "selector": "se-title",
     "types": {},
     "properties": [],
@@ -15772,74 +15931,20 @@
   },
   {
     "_idx": 144,
-    "type": "component",
-    "selector": "sg-container",
+    "type": "directive",
+    "selector": "se-title",
     "types": {},
-    "properties": [
-      {
-        "name": "gutter",
-        "inputType": 0,
-        "description": "specify the distance between two items, unit is `px`, only `nzLayout:horizontal`",
-        "type": "Enum",
-        "typeRaw": "`number`",
-        "default": "`32`",
-        "pureDefault": "32",
-        "typeDefinition": [
-          "0",
-          "8",
-          "16",
-          "24",
-          "32",
-          "40",
-          "48",
-          "56",
-          "64"
-        ]
-      },
-      {
-        "name": "sg-container",
-        "inputType": 0,
-        "description": "specify the maximum number of columns to display, the final columns number is determined by col setting combined with [Responsive Rules](/theme/responsive)",
-        "type": "Enum",
-        "typeRaw": "`'1','2','3','4','5','6'`",
-        "default": "",
-        "typeDefinition": [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6"
-        ]
-      },
-      {
-        "name": "col",
-        "inputType": 0,
-        "description": "specify the maximum number of columns to display, the final columns number is determined by col setting combined with [Responsive Rules](/theme/responsive)",
-        "type": "Enum",
-        "typeRaw": "`'1','2','3','4','5','6'`",
-        "default": "`2`",
-        "typeDefinition": [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6"
-        ],
-        "pureDefault": "2"
-      }
-    ],
+    "properties": [],
+    "description": "Display title.",
     "lib": "@delon/abc",
-    "title": "Simple Grid",
-    "description": "A higher-order components of grid systems, that consists of `sg-container` (directive) and `sg` components:",
+    "title": "Edit",
     "whenToUse": "",
-    "doc": "/components/sg/en",
-    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sg"
+    "doc": "/components/se/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/se"
   },
   {
     "_idx": 145,
-    "type": "directive",
+    "type": "component",
     "selector": "sg-container",
     "types": {},
     "properties": [
@@ -15906,6 +16011,73 @@
   },
   {
     "_idx": 146,
+    "type": "directive",
+    "selector": "sg-container",
+    "types": {},
+    "properties": [
+      {
+        "name": "gutter",
+        "inputType": 0,
+        "description": "specify the distance between two items, unit is `px`, only `nzLayout:horizontal`",
+        "type": "Enum",
+        "typeRaw": "`number`",
+        "default": "`32`",
+        "pureDefault": "32",
+        "typeDefinition": [
+          "0",
+          "8",
+          "16",
+          "24",
+          "32",
+          "40",
+          "48",
+          "56",
+          "64"
+        ]
+      },
+      {
+        "name": "sg-container",
+        "inputType": 0,
+        "description": "specify the maximum number of columns to display, the final columns number is determined by col setting combined with [Responsive Rules](/theme/responsive)",
+        "type": "Enum",
+        "typeRaw": "`'1','2','3','4','5','6'`",
+        "default": "",
+        "typeDefinition": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ]
+      },
+      {
+        "name": "col",
+        "inputType": 0,
+        "description": "specify the maximum number of columns to display, the final columns number is determined by col setting combined with [Responsive Rules](/theme/responsive)",
+        "type": "Enum",
+        "typeRaw": "`'1','2','3','4','5','6'`",
+        "default": "`2`",
+        "typeDefinition": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        "pureDefault": "2"
+      }
+    ],
+    "lib": "@delon/abc",
+    "title": "Simple Grid",
+    "description": "A higher-order components of grid systems, that consists of `sg-container` (directive) and `sg` components:",
+    "whenToUse": "",
+    "doc": "/components/sg/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sg"
+  },
+  {
+    "_idx": 147,
     "type": "component",
     "selector": "sg",
     "types": {},
@@ -15935,7 +16107,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sg"
   },
   {
-    "_idx": 147,
+    "_idx": 148,
     "type": "component",
     "selector": "sidebar-nav",
     "types": {},
@@ -16002,7 +16174,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sidebar-nav"
   },
   {
-    "_idx": 148,
+    "_idx": 149,
     "type": "component",
     "selector": "st",
     "types": {
@@ -16202,6 +16374,22 @@
           "typeRaw": "`number`",
           "default": "`100`",
           "pureDefault": "100"
+        },
+        {
+          "name": "itemRender",
+          "inputType": 0,
+          "description": "To customize Pagination item, same as Pagination",
+          "type": "TemplateRef",
+          "typeRaw": "`TemplateRef<{ $implicit: 'page' | 'prev' | 'next', page: number }>`",
+          "default": ""
+        },
+        {
+          "name": "simple",
+          "inputType": 0,
+          "description": "Whether to use simple mode",
+          "type": "boolean",
+          "typeRaw": "`boolean`",
+          "default": ""
         }
       ],
       "STWidthMode": [
@@ -16691,99 +16879,8 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/st"
   },
   {
-    "_idx": 149,
-    "type": "component",
-    "selector": "sv-container",
-    "types": {},
-    "properties": [
-      {
-        "name": "size",
-        "inputType": 0,
-        "description": "size of view",
-        "type": "Enum",
-        "typeRaw": "`'small','large'`",
-        "default": "`'large'`",
-        "typeDefinition": [
-          "small",
-          "large"
-        ],
-        "pureDefault": "large"
-      },
-      {
-        "name": "layout",
-        "inputType": 0,
-        "description": "type of layout",
-        "type": "Enum",
-        "typeRaw": "`'horizontal','vertical'`",
-        "default": "`'horizontal'`",
-        "typeDefinition": [
-          "horizontal",
-          "vertical"
-        ],
-        "pureDefault": "horizontal"
-      },
-      {
-        "name": "gutter",
-        "inputType": 0,
-        "description": "specify the distance between two items, unit is `px`",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "`32`",
-        "pureDefault": "32"
-      },
-      {
-        "name": "col",
-        "inputType": 0,
-        "description": "specify the maximum number of columns to display, the final columns number is determined by col setting combined with [Responsive Rules](/theme/responsive)",
-        "type": "Enum",
-        "typeRaw": "`'1','2','3','4','5','6'`",
-        "default": "`3`",
-        "typeDefinition": [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6"
-        ],
-        "pureDefault": "3"
-      },
-      {
-        "name": "labelWidth",
-        "inputType": 0,
-        "description": "label text of width",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": ""
-      },
-      {
-        "name": "default",
-        "inputType": 0,
-        "description": "whether default text",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`true`",
-        "pureDefault": "true"
-      },
-      {
-        "name": "title",
-        "inputType": 0,
-        "description": "Display title",
-        "type": "string",
-        "typeRaw": "`string,TemplateRef<void>`",
-        "default": ""
-      }
-    ],
-    "lib": "@delon/abc",
-    "title": "View",
-    "description": "Viewing grid system is a higher-order components based on the original [Grid System] (https://ng.ant.design/components/grid/zh) that server for view pages.",
-    "whenToUse": "",
-    "doc": "/components/sv/en",
-    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sv"
-  },
-  {
     "_idx": 150,
-    "type": "directive",
+    "type": "component",
     "selector": "sv-container",
     "types": {},
     "properties": [
@@ -16874,6 +16971,97 @@
   },
   {
     "_idx": 151,
+    "type": "directive",
+    "selector": "sv-container",
+    "types": {},
+    "properties": [
+      {
+        "name": "size",
+        "inputType": 0,
+        "description": "size of view",
+        "type": "Enum",
+        "typeRaw": "`'small','large'`",
+        "default": "`'large'`",
+        "typeDefinition": [
+          "small",
+          "large"
+        ],
+        "pureDefault": "large"
+      },
+      {
+        "name": "layout",
+        "inputType": 0,
+        "description": "type of layout",
+        "type": "Enum",
+        "typeRaw": "`'horizontal','vertical'`",
+        "default": "`'horizontal'`",
+        "typeDefinition": [
+          "horizontal",
+          "vertical"
+        ],
+        "pureDefault": "horizontal"
+      },
+      {
+        "name": "gutter",
+        "inputType": 0,
+        "description": "specify the distance between two items, unit is `px`",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`32`",
+        "pureDefault": "32"
+      },
+      {
+        "name": "col",
+        "inputType": 0,
+        "description": "specify the maximum number of columns to display, the final columns number is determined by col setting combined with [Responsive Rules](/theme/responsive)",
+        "type": "Enum",
+        "typeRaw": "`'1','2','3','4','5','6'`",
+        "default": "`3`",
+        "typeDefinition": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        "pureDefault": "3"
+      },
+      {
+        "name": "labelWidth",
+        "inputType": 0,
+        "description": "label text of width",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": ""
+      },
+      {
+        "name": "default",
+        "inputType": 0,
+        "description": "whether default text",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`true`",
+        "pureDefault": "true"
+      },
+      {
+        "name": "title",
+        "inputType": 0,
+        "description": "Display title",
+        "type": "string",
+        "typeRaw": "`string,TemplateRef<void>`",
+        "default": ""
+      }
+    ],
+    "lib": "@delon/abc",
+    "title": "View",
+    "description": "Viewing grid system is a higher-order components based on the original [Grid System] (https://ng.ant.design/components/grid/zh) that server for view pages.",
+    "whenToUse": "",
+    "doc": "/components/sv/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sv"
+  },
+  {
+    "_idx": 152,
     "type": "component",
     "selector": "sv",
     "types": {},
@@ -16949,7 +17137,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sv"
   },
   {
-    "_idx": 152,
+    "_idx": 153,
     "type": "component",
     "selector": "sv-title",
     "types": {},
@@ -16962,7 +17150,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sv"
   },
   {
-    "_idx": 153,
+    "_idx": 154,
     "type": "directive",
     "selector": "sv-title",
     "types": {},
@@ -16975,7 +17163,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sv"
   },
   {
-    "_idx": 154,
+    "_idx": 155,
     "type": "component",
     "selector": "tag-select",
     "types": {},
@@ -17006,7 +17194,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/tag-select"
   },
   {
-    "_idx": 155,
+    "_idx": 156,
     "type": "directive",
     "selector": "xlsx",
     "types": {},
@@ -17019,7 +17207,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/xlsx"
   },
   {
-    "_idx": 156,
+    "_idx": 157,
     "type": "component",
     "selector": "g2-bar",
     "types": {},
@@ -17119,7 +17307,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/bar"
   },
   {
-    "_idx": 157,
+    "_idx": 158,
     "type": "component",
     "selector": "g2-card",
     "types": {},
@@ -17190,7 +17378,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/card"
   },
   {
-    "_idx": 158,
+    "_idx": 159,
     "type": "component",
     "selector": "g2-custom",
     "types": {},
@@ -17262,7 +17450,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/custom"
   },
   {
-    "_idx": 159,
+    "_idx": 160,
     "type": "component",
     "selector": "g2-gauge",
     "types": {},
@@ -17352,7 +17540,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/gauge"
   },
   {
-    "_idx": 160,
+    "_idx": 161,
     "type": "component",
     "selector": "g2-mini-area",
     "types": {},
@@ -17490,7 +17678,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/mini-area"
   },
   {
-    "_idx": 161,
+    "_idx": 162,
     "type": "component",
     "selector": "g2-mini-bar",
     "types": {},
@@ -17593,7 +17781,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/mini-bar"
   },
   {
-    "_idx": 162,
+    "_idx": 163,
     "type": "component",
     "selector": "g2-mini-progress",
     "types": {},
@@ -17639,7 +17827,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/mini-progress"
   },
   {
-    "_idx": 163,
+    "_idx": 164,
     "type": "component",
     "selector": "number-info",
     "types": {},
@@ -17727,7 +17915,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/number-info"
   },
   {
-    "_idx": 164,
+    "_idx": 165,
     "type": "component",
     "selector": "g2-pie",
     "types": {},
@@ -17895,7 +18083,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/pie"
   },
   {
-    "_idx": 165,
+    "_idx": 166,
     "type": "component",
     "selector": "g2-radar",
     "types": {},
@@ -17984,7 +18172,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/radar"
   },
   {
-    "_idx": 166,
+    "_idx": 167,
     "type": "component",
     "selector": "g2-single-bar",
     "types": {},
@@ -18037,7 +18225,7 @@
       {
         "name": "min",
         "inputType": 0,
-        "description": "最大值，若小于0表示显示负值",
+        "description": "最小值",
         "type": "number",
         "typeRaw": "`number`",
         "default": "`0`",
@@ -18046,7 +18234,7 @@
       {
         "name": "max",
         "inputType": 0,
-        "description": "最小值",
+        "description": "最大值，若小于0表示显示负值",
         "type": "number",
         "typeRaw": "`number`",
         "default": "`100`",
@@ -18104,7 +18292,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/single-bar"
   },
   {
-    "_idx": 167,
+    "_idx": 168,
     "type": "component",
     "selector": "g2-tag-cloud",
     "types": {},
@@ -18170,7 +18358,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/tag-cloud"
   },
   {
-    "_idx": 168,
+    "_idx": 169,
     "type": "component",
     "selector": "g2-timeline",
     "types": {
@@ -18365,7 +18553,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/timeline"
   },
   {
-    "_idx": 169,
+    "_idx": 170,
     "type": "component",
     "selector": "trend",
     "types": {},
@@ -18409,7 +18597,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/trend"
   },
   {
-    "_idx": 170,
+    "_idx": 171,
     "type": "component",
     "selector": "g2-water-wave",
     "types": {},
@@ -18475,234 +18663,8 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/water-wave"
   },
   {
-    "_idx": 171,
-    "type": "component",
-    "selector": "sf",
-    "types": {
-      "SFButton": [
-        {
-          "name": "submit",
-          "inputType": 0,
-          "description": "Submit text of button",
-          "type": "string",
-          "typeRaw": "`string`",
-          "default": "`提交`",
-          "pureDefault": "提交"
-        },
-        {
-          "name": "reset",
-          "inputType": 0,
-          "description": "Reset text of button",
-          "type": "string",
-          "typeRaw": "`string`",
-          "default": "`重置`",
-          "pureDefault": "重置"
-        },
-        {
-          "name": "search",
-          "inputType": 0,
-          "description": "Search text of button",
-          "type": "string",
-          "typeRaw": "`string`",
-          "default": "`搜索`",
-          "pureDefault": "搜索"
-        },
-        {
-          "name": "edit",
-          "inputType": 0,
-          "description": "Edit text of button",
-          "type": "string",
-          "typeRaw": "`string`",
-          "default": "`保存`",
-          "pureDefault": "保存"
-        },
-        {
-          "name": "render",
-          "inputType": 0,
-          "description": "Button layout",
-          "type": "object",
-          "typeRaw": "`SFRenderButton`",
-          "default": ""
-        }
-      ]
-    },
-    "properties": [
-      {
-        "name": "layout",
-        "inputType": 0,
-        "description": "layout of the form",
-        "type": "string",
-        "typeRaw": "`horizontal,vertical,inline`",
-        "default": "`horizontal`",
-        "pureDefault": "horizontal"
-      },
-      {
-        "name": "schema",
-        "inputType": 0,
-        "description": "**Required** JSON Schema",
-        "type": "object",
-        "typeRaw": "`SFSchema`",
-        "default": ""
-      },
-      {
-        "name": "ui",
-        "inputType": 0,
-        "description": "UI Schema",
-        "type": "object",
-        "typeRaw": "`SFUISchema`",
-        "default": ""
-      },
-      {
-        "name": "formData",
-        "inputType": 0,
-        "description": "Default form values",
-        "type": "object",
-        "typeRaw": "`any`",
-        "default": ""
-      },
-      {
-        "name": "mode",
-        "inputType": 0,
-        "description": "Form type mode",
-        "type": "string",
-        "typeRaw": "`default,search,edit`",
-        "default": "`default`",
-        "pureDefault": "default"
-      },
-      {
-        "name": "button",
-        "inputType": 0,
-        "description": "Submit button of the form",
-        "type": "object",
-        "typeRaw": "`SFButton, 'none'`",
-        "default": "`{}`",
-        "complexType": "SFButton",
-        "pureDefault": "{}"
-      },
-      {
-        "name": "firstVisual",
-        "inputType": 0,
-        "description": "Whether to show visual error immediately",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`true`",
-        "pureDefault": "true"
-      },
-      {
-        "name": "liveValidate",
-        "inputType": 0,
-        "description": "Whether to live validate",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`true`",
-        "pureDefault": "true"
-      },
-      {
-        "name": "autocomplete",
-        "inputType": 0,
-        "description": "autocomplete value of this form",
-        "type": "string",
-        "typeRaw": "`on,off`",
-        "default": "`null`",
-        "pureDefault": "null"
-      },
-      {
-        "name": "disabled",
-        "inputType": 0,
-        "description": "Whether to disabled status",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false",
-        "forceInputType": 0
-      },
-      {
-        "name": "loading",
-        "inputType": 0,
-        "description": "Whether to load status，when `true` reset button is disabled status, submit button is loading status",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false"
-      },
-      {
-        "name": "noColon",
-        "inputType": 0,
-        "description": "Whether to not display `:` after label text.",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false"
-      },
-      {
-        "name": "compact",
-        "inputType": 0,
-        "description": "Whether compact style",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false"
-      },
-      {
-        "name": "cleanValue",
-        "inputType": 0,
-        "description": "Whether to clean up data for undefined Schema",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false"
-      },
-      {
-        "name": "formChange",
-        "inputType": 1,
-        "description": "Callback when data changes",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<{}>`",
-        "default": ""
-      },
-      {
-        "name": "formValueChange",
-        "inputType": 1,
-        "description": "Callback when value changes",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<SFValueChange>`",
-        "default": ""
-      },
-      {
-        "name": "formSubmit",
-        "inputType": 1,
-        "description": "Callback when submitting the form",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<{}>`",
-        "default": ""
-      },
-      {
-        "name": "formReset",
-        "inputType": 1,
-        "description": "Callback when resetting the form",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<{}>`",
-        "default": ""
-      },
-      {
-        "name": "formError",
-        "inputType": 1,
-        "description": "Callback when form check",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<ErrorData[]>`",
-        "default": ""
-      }
-    ],
-    "lib": "@delon/form",
-    "title": "Getting Started",
-    "description": "@delon/form is a dynamic build form based on the [JSON Schema](http://json-schema.org/) standard.",
-    "whenToUse": "",
-    "doc": "/form/getting-started/en",
-    "github": "https://github.com/ng-alain/delon/tree/master/packages/form/src"
-  },
-  {
     "_idx": 172,
-    "type": "directive",
+    "type": "component",
     "selector": "sf",
     "types": {
       "SFButton": [
@@ -18928,6 +18890,232 @@
   },
   {
     "_idx": 173,
+    "type": "directive",
+    "selector": "sf",
+    "types": {
+      "SFButton": [
+        {
+          "name": "submit",
+          "inputType": 0,
+          "description": "Submit text of button",
+          "type": "string",
+          "typeRaw": "`string`",
+          "default": "`提交`",
+          "pureDefault": "提交"
+        },
+        {
+          "name": "reset",
+          "inputType": 0,
+          "description": "Reset text of button",
+          "type": "string",
+          "typeRaw": "`string`",
+          "default": "`重置`",
+          "pureDefault": "重置"
+        },
+        {
+          "name": "search",
+          "inputType": 0,
+          "description": "Search text of button",
+          "type": "string",
+          "typeRaw": "`string`",
+          "default": "`搜索`",
+          "pureDefault": "搜索"
+        },
+        {
+          "name": "edit",
+          "inputType": 0,
+          "description": "Edit text of button",
+          "type": "string",
+          "typeRaw": "`string`",
+          "default": "`保存`",
+          "pureDefault": "保存"
+        },
+        {
+          "name": "render",
+          "inputType": 0,
+          "description": "Button layout",
+          "type": "object",
+          "typeRaw": "`SFRenderButton`",
+          "default": ""
+        }
+      ]
+    },
+    "properties": [
+      {
+        "name": "layout",
+        "inputType": 0,
+        "description": "layout of the form",
+        "type": "string",
+        "typeRaw": "`horizontal,vertical,inline`",
+        "default": "`horizontal`",
+        "pureDefault": "horizontal"
+      },
+      {
+        "name": "schema",
+        "inputType": 0,
+        "description": "**Required** JSON Schema",
+        "type": "object",
+        "typeRaw": "`SFSchema`",
+        "default": ""
+      },
+      {
+        "name": "ui",
+        "inputType": 0,
+        "description": "UI Schema",
+        "type": "object",
+        "typeRaw": "`SFUISchema`",
+        "default": ""
+      },
+      {
+        "name": "formData",
+        "inputType": 0,
+        "description": "Default form values",
+        "type": "object",
+        "typeRaw": "`any`",
+        "default": ""
+      },
+      {
+        "name": "mode",
+        "inputType": 0,
+        "description": "Form type mode",
+        "type": "string",
+        "typeRaw": "`default,search,edit`",
+        "default": "`default`",
+        "pureDefault": "default"
+      },
+      {
+        "name": "button",
+        "inputType": 0,
+        "description": "Submit button of the form",
+        "type": "object",
+        "typeRaw": "`SFButton, 'none'`",
+        "default": "`{}`",
+        "complexType": "SFButton",
+        "pureDefault": "{}"
+      },
+      {
+        "name": "firstVisual",
+        "inputType": 0,
+        "description": "Whether to show visual error immediately",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`true`",
+        "pureDefault": "true"
+      },
+      {
+        "name": "liveValidate",
+        "inputType": 0,
+        "description": "Whether to live validate",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`true`",
+        "pureDefault": "true"
+      },
+      {
+        "name": "autocomplete",
+        "inputType": 0,
+        "description": "autocomplete value of this form",
+        "type": "string",
+        "typeRaw": "`on,off`",
+        "default": "`null`",
+        "pureDefault": "null"
+      },
+      {
+        "name": "disabled",
+        "inputType": 0,
+        "description": "Whether to disabled status",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false",
+        "forceInputType": 0
+      },
+      {
+        "name": "loading",
+        "inputType": 0,
+        "description": "Whether to load status，when `true` reset button is disabled status, submit button is loading status",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "noColon",
+        "inputType": 0,
+        "description": "Whether to not display `:` after label text.",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "compact",
+        "inputType": 0,
+        "description": "Whether compact style",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "cleanValue",
+        "inputType": 0,
+        "description": "Whether to clean up data for undefined Schema",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "formChange",
+        "inputType": 1,
+        "description": "Callback when data changes",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<{}>`",
+        "default": ""
+      },
+      {
+        "name": "formValueChange",
+        "inputType": 1,
+        "description": "Callback when value changes",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<SFValueChange>`",
+        "default": ""
+      },
+      {
+        "name": "formSubmit",
+        "inputType": 1,
+        "description": "Callback when submitting the form",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<{}>`",
+        "default": ""
+      },
+      {
+        "name": "formReset",
+        "inputType": 1,
+        "description": "Callback when resetting the form",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<{}>`",
+        "default": ""
+      },
+      {
+        "name": "formError",
+        "inputType": 1,
+        "description": "Callback when form check",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<ErrorData[]>`",
+        "default": ""
+      }
+    ],
+    "lib": "@delon/form",
+    "title": "Getting Started",
+    "description": "@delon/form is a dynamic build form based on the [JSON Schema](http://json-schema.org/) standard.",
+    "whenToUse": "",
+    "doc": "/form/getting-started/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/form/src"
+  },
+  {
+    "_idx": 174,
     "type": "component",
     "selector": "nz-breadcrumb-item",
     "types": {},
@@ -18944,27 +19132,27 @@
     "description": "The layout wrapper, in which `nz-header` `nz-sider` `nz-content` `nz-footer` or `nz-layout` itself can be nested, and can be placed in any parent container.",
     "type": "component",
     "lib": "ng-zorro-antd",
-    "_idx": 174
+    "_idx": 175
   },
   {
     "selector": "nz-header",
     "description": "The top layout with default style, in which any element can be nested, and must be placed in `nz-layout`.",
     "type": "component",
     "lib": "ng-zorro-antd",
-    "_idx": 175
+    "_idx": 176
   },
   {
     "selector": "nz-content",
     "description": "The content layout with default style, in which any element can be nested, and must be placed in `nz-layout`.",
     "type": "component",
     "lib": "ng-zorro-antd",
-    "_idx": 176
+    "_idx": 177
   },
   {
     "selector": "nz-footer",
     "description": "The bottom layout with default style, in which any element can be nested, and must be placed in `nz-layout`.",
     "type": "component",
     "lib": "ng-zorro-antd",
-    "_idx": 177
+    "_idx": 178
   }
 ]
