@@ -3074,8 +3074,8 @@
       },
       {
         "name": "nzVisible",
-        "inputType": 0,
-        "description": "Drawer 是否可见",
+        "inputType": 2,
+        "description": "Drawer 是否可见，可以使用 `[(nzVisible)]` 双向绑定",
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": ""
@@ -4112,6 +4112,60 @@
   },
   {
     "_idx": 51,
+    "type": "component",
+    "selector": "nz-graph",
+    "types": {},
+    "properties": [
+      {
+        "name": "nzGraphData",
+        "inputType": 0,
+        "description": "数据源",
+        "type": "object",
+        "typeRaw": "`NzGraphData(data: NzGraphDataDef?)`",
+        "default": "``",
+        "pureDefault": ""
+      },
+      {
+        "name": "nzRankDirection",
+        "inputType": 0,
+        "description": "图方向",
+        "type": "object",
+        "typeRaw": "`TB` | `BT` | `LR` | `RL`",
+        "default": "`LR`",
+        "pureDefault": "LR"
+      },
+      {
+        "name": "nzAutoSize",
+        "inputType": 0,
+        "description": "是否根据节点内容自适应高度(默认等高)",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      }
+    ],
+    "lib": "ng-zorro-antd",
+    "title": "流程图",
+    "description": "<blockquote style=\"border-color: #faad14;\">\n<p>NG-ZORRO 实验性功能是指已发布但不稳定或者还未准备好用于生产环境的功能。</p>\n<p>开发者或用户可以选择在正式发布前使用这些功能，但是每次发布版本时都可能存在 <strong>breaking changes</strong>。</p>\n</blockquote>",
+    "whenToUse": "需要在网页上渲染 GRAPH 图时使用。",
+    "doc": "/components/graph/zh",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/graph"
+  },
+  {
+    "_idx": 52,
+    "type": "component",
+    "selector": "nzGraphNode",
+    "types": {},
+    "properties": [],
+    "description": "自定义建议渲染模板",
+    "lib": "ng-zorro-antd",
+    "title": "流程图",
+    "whenToUse": "需要在网页上渲染 GRAPH 图时使用。",
+    "doc": "/components/graph/zh",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/graph"
+  },
+  {
+    "_idx": 53,
     "type": "directive",
     "selector": "nz-icon",
     "types": {},
@@ -7354,7 +7408,7 @@
     "snippet": "<i __$1></i>"
   },
   {
-    "_idx": 52,
+    "_idx": 54,
     "type": "directive",
     "selector": "nz-input",
     "types": {},
@@ -7439,7 +7493,7 @@
     "snippet": "<input __$1>"
   },
   {
-    "_idx": 53,
+    "_idx": 55,
     "type": "component",
     "selector": "nz-input-group",
     "types": {},
@@ -7517,7 +7571,38 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/input"
   },
   {
-    "_idx": 54,
+    "_idx": 56,
+    "type": "component",
+    "selector": "nz-textarea-count",
+    "types": {},
+    "properties": [
+      {
+        "name": "nzMaxCharacterCount",
+        "inputType": 0,
+        "description": "`textarea` 数字提示显示的最大值",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": ""
+      },
+      {
+        "name": "nzComputeCharacterCount",
+        "inputType": 0,
+        "description": "自定义计算 `characterCount` 的函数",
+        "type": "function",
+        "typeRaw": "`(v: string) => number`",
+        "default": "`v => v.length`",
+        "pureDefault": "v => v.length"
+      }
+    ],
+    "lib": "ng-zorro-antd",
+    "title": "输入框",
+    "description": "通过鼠标或键盘输入内容，是最基础的表单域的包装。",
+    "whenToUse": "- 需要用户输入表单域内容时。\n- 提供组合型输入框，带搜索的输入框，还可以进行大小选择。",
+    "doc": "/components/input/zh",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/input"
+  },
+  {
+    "_idx": 57,
     "type": "component",
     "selector": "nz-input-number",
     "types": {},
@@ -7700,7 +7785,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/input-number"
   },
   {
-    "_idx": 55,
+    "_idx": 58,
     "type": "component",
     "selector": "nz-sider",
     "types": {},
@@ -7812,7 +7897,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/layout"
   },
   {
-    "_idx": 56,
+    "_idx": 59,
     "type": "component",
     "selector": "nz-list",
     "types": {},
@@ -7897,7 +7982,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/list"
   },
   {
-    "_idx": 57,
+    "_idx": 60,
     "type": "component",
     "selector": "nz-list-empty",
     "types": {},
@@ -7919,7 +8004,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/list"
   },
   {
-    "_idx": 58,
+    "_idx": 61,
     "type": "component",
     "selector": "nz-list-header",
     "types": {},
@@ -7942,7 +8027,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/list"
   },
   {
-    "_idx": 59,
+    "_idx": 62,
     "type": "component",
     "selector": "nz-list-footer",
     "types": {},
@@ -7965,7 +8050,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/list"
   },
   {
-    "_idx": 60,
+    "_idx": 63,
     "type": "component",
     "selector": "nz-list-pagination",
     "types": {},
@@ -7988,7 +8073,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/list"
   },
   {
-    "_idx": 61,
+    "_idx": 64,
     "type": "component",
     "selector": "nz-list-load-more",
     "types": {},
@@ -8011,7 +8096,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/list"
   },
   {
-    "_idx": 62,
+    "_idx": 65,
     "type": "component",
     "selector": "nz-list-item",
     "types": {},
@@ -8034,7 +8119,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/list"
   },
   {
-    "_idx": 63,
+    "_idx": 66,
     "type": "component",
     "selector": "nz-list-item-action",
     "types": {},
@@ -8072,7 +8157,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/list"
   },
   {
-    "_idx": 64,
+    "_idx": 67,
     "type": "component",
     "selector": "nz-list-item-extra",
     "types": {},
@@ -8110,7 +8195,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/list"
   },
   {
-    "_idx": 65,
+    "_idx": 68,
     "type": "component",
     "selector": "nz-list-item-meta",
     "types": {},
@@ -8148,7 +8233,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/list"
   },
   {
-    "_idx": 66,
+    "_idx": 69,
     "type": "component",
     "selector": "nz-list-item-meta-title",
     "types": {},
@@ -8161,7 +8246,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/list"
   },
   {
-    "_idx": 67,
+    "_idx": 70,
     "type": "component",
     "selector": "nz-list-item-meta-description",
     "types": {},
@@ -8174,7 +8259,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/list"
   },
   {
-    "_idx": 68,
+    "_idx": 71,
     "type": "component",
     "selector": "nz-list-item-meta-avatar",
     "types": {},
@@ -8187,7 +8272,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/list"
   },
   {
-    "_idx": 69,
+    "_idx": 72,
     "type": "component",
     "selector": "nz-mention",
     "types": {},
@@ -8291,7 +8376,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/mention"
   },
   {
-    "_idx": 70,
+    "_idx": 73,
     "type": "component",
     "selector": "nzMentionTrigger",
     "types": {},
@@ -8304,7 +8389,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/mention"
   },
   {
-    "_idx": 71,
+    "_idx": 74,
     "type": "component",
     "selector": "nzMentionSuggestion",
     "types": {},
@@ -8317,7 +8402,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/mention"
   },
   {
-    "_idx": 72,
+    "_idx": 75,
     "type": "directive",
     "selector": "nz-menu",
     "types": {},
@@ -8392,7 +8477,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/menu"
   },
   {
-    "_idx": 73,
+    "_idx": 76,
     "type": "directive",
     "selector": "nz-menu-item",
     "types": {},
@@ -8452,7 +8537,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/menu"
   },
   {
-    "_idx": 74,
+    "_idx": 77,
     "type": "directive",
     "selector": "nz-submenu",
     "types": {},
@@ -8517,7 +8602,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/menu"
   },
   {
-    "_idx": 75,
+    "_idx": 78,
     "type": "directive",
     "selector": "nz-menu-group",
     "types": {},
@@ -8539,7 +8624,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/menu"
   },
   {
-    "_idx": 76,
+    "_idx": 79,
     "type": "directive",
     "selector": "nz-menu-divider",
     "types": {},
@@ -8552,7 +8637,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/menu"
   },
   {
-    "_idx": 77,
+    "_idx": 80,
     "type": "component",
     "selector": "nz-modal",
     "types": {},
@@ -8838,12 +8923,12 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/modal"
   },
   {
-    "_idx": 78,
+    "_idx": 81,
     "type": "directive",
     "selector": "nzModalFooter",
     "types": {},
     "properties": [],
-    "description": "另一种自定义页脚按钮的方式。",
+    "description": "自定义页脚。",
     "lib": "ng-zorro-antd",
     "title": "对话框",
     "whenToUse": "需要用户处理事务，又不希望跳转页面以致打断工作流程时，可以使用 `Modal` 在当前页面正中打开一个浮层，承载相应的操作。",
@@ -8851,7 +8936,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/modal"
   },
   {
-    "_idx": 79,
+    "_idx": 82,
     "type": "component",
     "selector": "nz-page-header",
     "types": {},
@@ -8907,7 +8992,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/page-header"
   },
   {
-    "_idx": 80,
+    "_idx": 83,
     "type": "component",
     "selector": "nz-pagination",
     "types": {},
@@ -9054,7 +9139,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/pagination"
   },
   {
-    "_idx": 81,
+    "_idx": 84,
     "type": "directive",
     "selector": "nz-popconfirm",
     "types": {},
@@ -9404,7 +9489,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/popconfirm"
   },
   {
-    "_idx": 82,
+    "_idx": 85,
     "type": "directive",
     "selector": "nz-popover",
     "types": {},
@@ -9646,7 +9731,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/popover"
   },
   {
-    "_idx": 83,
+    "_idx": 86,
     "type": "directive",
     "selector": "nz-radio",
     "types": {},
@@ -9717,7 +9802,7 @@
     "snippet": "<label __$1>$2</label>"
   },
   {
-    "_idx": 84,
+    "_idx": 87,
     "type": "directive",
     "selector": "nz-radio-button",
     "types": {},
@@ -9775,7 +9860,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/radio"
   },
   {
-    "_idx": 85,
+    "_idx": 88,
     "type": "component",
     "selector": "nz-radio-group",
     "types": {},
@@ -9850,7 +9935,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/radio"
   },
   {
-    "_idx": 86,
+    "_idx": 89,
     "type": "component",
     "selector": "nz-rate",
     "types": {},
@@ -9989,7 +10074,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/rate"
   },
   {
-    "_idx": 87,
+    "_idx": 90,
     "type": "directive",
     "selector": "nz-resizable",
     "types": {},
@@ -10128,7 +10213,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/resizable"
   },
   {
-    "_idx": 88,
+    "_idx": 91,
     "type": "component",
     "selector": "nz-resize-handle",
     "types": {},
@@ -10151,7 +10236,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/resizable"
   },
   {
-    "_idx": 89,
+    "_idx": 92,
     "type": "component",
     "selector": "nz-resize-handles",
     "types": {},
@@ -10174,7 +10259,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/resizable"
   },
   {
-    "_idx": 90,
+    "_idx": 93,
     "type": "component",
     "selector": "nz-result",
     "types": {},
@@ -10187,7 +10272,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/result"
   },
   {
-    "_idx": 91,
+    "_idx": 94,
     "type": "component",
     "selector": "nz-select",
     "types": {},
@@ -10547,7 +10632,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/select"
   },
   {
-    "_idx": 92,
+    "_idx": 95,
     "type": "component",
     "selector": "nz-option",
     "types": {},
@@ -10605,7 +10690,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/select"
   },
   {
-    "_idx": 93,
+    "_idx": 96,
     "type": "component",
     "selector": "nz-option-group",
     "types": {},
@@ -10627,7 +10712,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/select"
   },
   {
-    "_idx": 94,
+    "_idx": 97,
     "type": "component",
     "selector": "nz-skeleton",
     "types": {},
@@ -10695,7 +10780,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/skeleton"
   },
   {
-    "_idx": 95,
+    "_idx": 98,
     "type": "component",
     "selector": "nz-slider",
     "types": {},
@@ -10866,7 +10951,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/slider"
   },
   {
-    "_idx": 96,
+    "_idx": 99,
     "type": "component",
     "selector": "nz-space",
     "types": {},
@@ -10906,7 +10991,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/space"
   },
   {
-    "_idx": 97,
+    "_idx": 100,
     "type": "component",
     "selector": "nz-spin",
     "types": {},
@@ -10977,7 +11062,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/spin"
   },
   {
-    "_idx": 98,
+    "_idx": 101,
     "type": "component",
     "selector": "nz-statistic",
     "types": {},
@@ -11039,7 +11124,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/statistic"
   },
   {
-    "_idx": 99,
+    "_idx": 102,
     "type": "component",
     "selector": "nz-countdown",
     "types": {},
@@ -11110,7 +11195,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/statistic"
   },
   {
-    "_idx": 100,
+    "_idx": 103,
     "type": "component",
     "selector": "nzFormat",
     "types": {},
@@ -11123,7 +11208,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/statistic"
   },
   {
-    "_idx": 101,
+    "_idx": 104,
     "type": "component",
     "selector": "nz-steps",
     "types": {},
@@ -11239,7 +11324,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/steps"
   },
   {
-    "_idx": 102,
+    "_idx": 105,
     "type": "component",
     "selector": "nz-step",
     "types": {},
@@ -11310,7 +11395,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/steps"
   },
   {
-    "_idx": 103,
+    "_idx": 106,
     "type": "component",
     "selector": "nz-switch",
     "types": {},
@@ -11412,7 +11497,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/switch"
   },
   {
-    "_idx": 104,
+    "_idx": 107,
     "type": "component",
     "selector": "nz-table",
     "types": {},
@@ -11717,7 +11802,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/table"
   },
   {
-    "_idx": 105,
+    "_idx": 108,
     "type": "component",
     "selector": "th",
     "types": {},
@@ -11960,7 +12045,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/table"
   },
   {
-    "_idx": 106,
+    "_idx": 109,
     "type": "component",
     "selector": "td",
     "types": {},
@@ -12097,7 +12182,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/table"
   },
   {
-    "_idx": 107,
+    "_idx": 110,
     "type": "component",
     "selector": "tr",
     "types": {},
@@ -12119,7 +12204,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/table"
   },
   {
-    "_idx": 108,
+    "_idx": 111,
     "type": "component",
     "selector": "nz-filter-trigger",
     "types": {},
@@ -12166,7 +12251,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/table"
   },
   {
-    "_idx": 109,
+    "_idx": 112,
     "type": "directive",
     "selector": "nz-virtual-scroll",
     "types": {},
@@ -12179,7 +12264,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/table"
   },
   {
-    "_idx": 110,
+    "_idx": 113,
     "type": "component",
     "selector": "nz-tabset",
     "types": {},
@@ -12337,7 +12422,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tabs"
   },
   {
-    "_idx": 111,
+    "_idx": 114,
     "type": "component",
     "selector": "nz-tab",
     "types": {},
@@ -12409,7 +12494,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tabs"
   },
   {
-    "_idx": 112,
+    "_idx": 115,
     "type": "directive",
     "selector": "nz-tab",
     "types": {},
@@ -12422,7 +12507,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tabs"
   },
   {
-    "_idx": 113,
+    "_idx": 116,
     "type": "component",
     "selector": "nz-tag",
     "types": {},
@@ -12501,7 +12586,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tag"
   },
   {
-    "_idx": 114,
+    "_idx": 117,
     "type": "component",
     "selector": "nz-time-picker",
     "types": {},
@@ -12515,7 +12600,7 @@
         "default": ""
       },
       {
-        "name": "nzAddon",
+        "name": "nzAddOn",
         "inputType": 0,
         "description": "选择框底部显示自定义的内容",
         "type": "TemplateRef",
@@ -12718,7 +12803,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/time-picker"
   },
   {
-    "_idx": 115,
+    "_idx": 118,
     "type": "component",
     "selector": "nz-timeline",
     "types": {},
@@ -12773,7 +12858,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/timeline"
   },
   {
-    "_idx": 116,
+    "_idx": 119,
     "type": "component",
     "selector": "nz-timeline-item",
     "types": {},
@@ -12816,7 +12901,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/timeline"
   },
   {
-    "_idx": 117,
+    "_idx": 120,
     "type": "component",
     "selector": "nz-transfer",
     "types": {},
@@ -13001,7 +13086,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/transfer"
   },
   {
-    "_idx": 118,
+    "_idx": 121,
     "type": "component",
     "selector": "nz-tree",
     "types": {},
@@ -13323,7 +13408,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tree"
   },
   {
-    "_idx": 119,
+    "_idx": 122,
     "type": "component",
     "selector": "nz-tree-select",
     "types": {},
@@ -13606,7 +13691,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tree-select"
   },
   {
-    "_idx": 120,
+    "_idx": 123,
     "type": "directive",
     "selector": "nz-typography",
     "types": {},
@@ -13771,7 +13856,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/typography"
   },
   {
-    "_idx": 121,
+    "_idx": 124,
     "type": "component",
     "selector": "nz-upload",
     "types": {},
@@ -14035,7 +14120,7 @@
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/upload"
   },
   {
-    "_idx": 122,
+    "_idx": 125,
     "type": "component",
     "selector": "avatar-list",
     "types": {},
@@ -14080,7 +14165,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/avatar-list"
   },
   {
-    "_idx": 123,
+    "_idx": 126,
     "type": "component",
     "selector": "avatar-list-item",
     "types": {},
@@ -14126,7 +14211,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/avatar-list"
   },
   {
-    "_idx": 124,
+    "_idx": 127,
     "type": "component",
     "selector": "count-down",
     "types": {},
@@ -14164,7 +14249,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/count-down"
   },
   {
-    "_idx": 125,
+    "_idx": 128,
     "type": "component",
     "selector": "range-picker",
     "types": {
@@ -14408,7 +14493,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/date-picker"
   },
   {
-    "_idx": 126,
+    "_idx": 129,
     "type": "directive",
     "selector": "down-file",
     "types": {},
@@ -14487,7 +14572,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/down-file"
   },
   {
-    "_idx": 127,
+    "_idx": 130,
     "type": "component",
     "selector": "ellipsis",
     "types": {},
@@ -14544,7 +14629,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/ellipsis"
   },
   {
-    "_idx": 128,
+    "_idx": 131,
     "type": "component",
     "selector": "error-collect",
     "types": {},
@@ -14576,7 +14661,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/error-collect"
   },
   {
-    "_idx": 129,
+    "_idx": 132,
     "type": "directive",
     "selector": "error-collect",
     "types": {},
@@ -14608,7 +14693,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/error-collect"
   },
   {
-    "_idx": 130,
+    "_idx": 133,
     "type": "component",
     "selector": "exception",
     "types": {},
@@ -14659,7 +14744,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/exception"
   },
   {
-    "_idx": 131,
+    "_idx": 134,
     "type": "component",
     "selector": "footer-toolbar",
     "types": {},
@@ -14690,7 +14775,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/footer-toolbar"
   },
   {
-    "_idx": 132,
+    "_idx": 135,
     "type": "component",
     "selector": "full-content",
     "types": {},
@@ -14730,7 +14815,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/full-content"
   },
   {
-    "_idx": 133,
+    "_idx": 136,
     "type": "directive",
     "selector": "full-toggle",
     "types": {},
@@ -14743,7 +14828,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/full-content"
   },
   {
-    "_idx": 134,
+    "_idx": 137,
     "type": "component",
     "selector": "global-footer",
     "types": {
@@ -14802,7 +14887,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/global-footer"
   },
   {
-    "_idx": 135,
+    "_idx": 138,
     "type": "component",
     "selector": "global-footer-item",
     "types": {},
@@ -14833,7 +14918,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/global-footer"
   },
   {
-    "_idx": 136,
+    "_idx": 139,
     "type": "component",
     "selector": "media",
     "types": {},
@@ -14888,7 +14973,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/media"
   },
   {
-    "_idx": 137,
+    "_idx": 140,
     "type": "component",
     "selector": "notice-icon",
     "types": {},
@@ -14960,7 +15045,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/notice-icon"
   },
   {
-    "_idx": 138,
+    "_idx": 141,
     "type": "component",
     "selector": "numberToChinese",
     "types": {},
@@ -14973,7 +15058,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/number-to-chinese"
   },
   {
-    "_idx": 139,
+    "_idx": 142,
     "type": "component",
     "selector": "page-header",
     "types": {},
@@ -15141,7 +15226,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/page-header"
   },
   {
-    "_idx": 140,
+    "_idx": 143,
     "type": "component",
     "selector": "qr",
     "types": {},
@@ -15252,7 +15337,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/qr"
   },
   {
-    "_idx": 141,
+    "_idx": 144,
     "type": "component",
     "selector": "quick-menu",
     "types": {},
@@ -15309,7 +15394,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/quick-menu"
   },
   {
-    "_idx": 142,
+    "_idx": 145,
     "type": "component",
     "selector": "result",
     "types": {},
@@ -15355,7 +15440,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/result"
   },
   {
-    "_idx": 143,
+    "_idx": 146,
     "type": "component",
     "selector": "reuse-tab",
     "types": {
@@ -15549,7 +15634,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/reuse-tab"
   },
   {
-    "_idx": 144,
+    "_idx": 147,
     "type": "component",
     "selector": "se-container",
     "types": {},
@@ -15694,7 +15779,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/se"
   },
   {
-    "_idx": 145,
+    "_idx": 148,
     "type": "directive",
     "selector": "se-container",
     "types": {},
@@ -15839,7 +15924,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/se"
   },
   {
-    "_idx": 146,
+    "_idx": 149,
     "type": "component",
     "selector": "se",
     "types": {},
@@ -15890,6 +15975,14 @@
         "description": "标签可选帮助",
         "type": "string",
         "typeRaw": "`string, TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "optionalHelpColor",
+        "inputType": 0,
+        "description": "标签可选帮助背景颜色",
+        "type": "string",
+        "typeRaw": "`string`",
         "default": ""
       },
       {
@@ -15949,167 +16042,167 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/se"
   },
   {
-    "_idx": 147,
-    "type": "component",
-    "selector": "se-title",
-    "types": {},
-    "properties": [],
-    "description": "用于展示标题，单独一行。",
-    "lib": "@delon/abc",
-    "title": "编辑",
-    "whenToUse": "",
-    "doc": "/components/se/zh",
-    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/se"
-  },
-  {
-    "_idx": 148,
-    "type": "directive",
-    "selector": "se-title",
-    "types": {},
-    "properties": [],
-    "description": "用于展示标题，单独一行。",
-    "lib": "@delon/abc",
-    "title": "编辑",
-    "whenToUse": "",
-    "doc": "/components/se/zh",
-    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/se"
-  },
-  {
-    "_idx": 149,
-    "type": "component",
-    "selector": "sg-container",
-    "types": {},
-    "properties": [
-      {
-        "name": "gutter",
-        "inputType": 0,
-        "description": "间距，当 `nzLayout:horizontal` 时有效",
-        "type": "Enum",
-        "typeRaw": "`number`",
-        "default": "`32`",
-        "pureDefault": "32",
-        "typeDefinition": [
-          "0",
-          "8",
-          "16",
-          "24",
-          "32",
-          "40",
-          "48",
-          "56",
-          "64"
-        ]
-      },
-      {
-        "name": "sg-container",
-        "inputType": 0,
-        "description": "指定表单元素最多分几列展示，最终一行几列由 col 配置结合[响应式规则](/theme/responsive)决定，",
-        "type": "Enum",
-        "typeRaw": "`'1','2','3','4','5','6'`",
-        "default": "",
-        "typeDefinition": [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6"
-        ]
-      },
-      {
-        "name": "col",
-        "inputType": 0,
-        "description": "指定表单元素最多分几列展示，最终一行几列由 col 配置结合[响应式规则](/theme/responsive)决定，",
-        "type": "Enum",
-        "typeRaw": "`'1','2','3','4','5','6'`",
-        "default": "`2`",
-        "typeDefinition": [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6"
-        ],
-        "pureDefault": "2"
-      }
-    ],
-    "lib": "@delon/abc",
-    "title": "简易栅格",
-    "description": "简化栅格系统运用的高阶组件，它由 `sg-container` 容器（指令）和 `sg` 组件组合代替一个响应式布局：",
-    "whenToUse": "",
-    "doc": "/components/sg/zh",
-    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sg"
-  },
-  {
     "_idx": 150,
-    "type": "directive",
-    "selector": "sg-container",
+    "type": "component",
+    "selector": "se-title",
     "types": {},
-    "properties": [
-      {
-        "name": "gutter",
-        "inputType": 0,
-        "description": "间距，当 `nzLayout:horizontal` 时有效",
-        "type": "Enum",
-        "typeRaw": "`number`",
-        "default": "`32`",
-        "pureDefault": "32",
-        "typeDefinition": [
-          "0",
-          "8",
-          "16",
-          "24",
-          "32",
-          "40",
-          "48",
-          "56",
-          "64"
-        ]
-      },
-      {
-        "name": "sg-container",
-        "inputType": 0,
-        "description": "指定表单元素最多分几列展示，最终一行几列由 col 配置结合[响应式规则](/theme/responsive)决定，",
-        "type": "Enum",
-        "typeRaw": "`'1','2','3','4','5','6'`",
-        "default": "",
-        "typeDefinition": [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6"
-        ]
-      },
-      {
-        "name": "col",
-        "inputType": 0,
-        "description": "指定表单元素最多分几列展示，最终一行几列由 col 配置结合[响应式规则](/theme/responsive)决定，",
-        "type": "Enum",
-        "typeRaw": "`'1','2','3','4','5','6'`",
-        "default": "`2`",
-        "typeDefinition": [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6"
-        ],
-        "pureDefault": "2"
-      }
-    ],
+    "properties": [],
+    "description": "用于展示标题，单独一行。",
     "lib": "@delon/abc",
-    "title": "简易栅格",
-    "description": "简化栅格系统运用的高阶组件，它由 `sg-container` 容器（指令）和 `sg` 组件组合代替一个响应式布局：",
+    "title": "编辑",
     "whenToUse": "",
-    "doc": "/components/sg/zh",
-    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sg"
+    "doc": "/components/se/zh",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/se"
   },
   {
     "_idx": 151,
+    "type": "directive",
+    "selector": "se-title",
+    "types": {},
+    "properties": [],
+    "description": "用于展示标题，单独一行。",
+    "lib": "@delon/abc",
+    "title": "编辑",
+    "whenToUse": "",
+    "doc": "/components/se/zh",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/se"
+  },
+  {
+    "_idx": 152,
+    "type": "component",
+    "selector": "sg-container",
+    "types": {},
+    "properties": [
+      {
+        "name": "gutter",
+        "inputType": 0,
+        "description": "间距，当 `nzLayout:horizontal` 时有效",
+        "type": "Enum",
+        "typeRaw": "`number`",
+        "default": "`32`",
+        "pureDefault": "32",
+        "typeDefinition": [
+          "0",
+          "8",
+          "16",
+          "24",
+          "32",
+          "40",
+          "48",
+          "56",
+          "64"
+        ]
+      },
+      {
+        "name": "sg-container",
+        "inputType": 0,
+        "description": "指定表单元素最多分几列展示，最终一行几列由 col 配置结合[响应式规则](/theme/responsive)决定，",
+        "type": "Enum",
+        "typeRaw": "`'1','2','3','4','5','6'`",
+        "default": "",
+        "typeDefinition": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ]
+      },
+      {
+        "name": "col",
+        "inputType": 0,
+        "description": "指定表单元素最多分几列展示，最终一行几列由 col 配置结合[响应式规则](/theme/responsive)决定，",
+        "type": "Enum",
+        "typeRaw": "`'1','2','3','4','5','6'`",
+        "default": "`2`",
+        "typeDefinition": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        "pureDefault": "2"
+      }
+    ],
+    "lib": "@delon/abc",
+    "title": "简易栅格",
+    "description": "简化栅格系统运用的高阶组件，它由 `sg-container` 容器（指令）和 `sg` 组件组合代替一个响应式布局：",
+    "whenToUse": "",
+    "doc": "/components/sg/zh",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sg"
+  },
+  {
+    "_idx": 153,
+    "type": "directive",
+    "selector": "sg-container",
+    "types": {},
+    "properties": [
+      {
+        "name": "gutter",
+        "inputType": 0,
+        "description": "间距，当 `nzLayout:horizontal` 时有效",
+        "type": "Enum",
+        "typeRaw": "`number`",
+        "default": "`32`",
+        "pureDefault": "32",
+        "typeDefinition": [
+          "0",
+          "8",
+          "16",
+          "24",
+          "32",
+          "40",
+          "48",
+          "56",
+          "64"
+        ]
+      },
+      {
+        "name": "sg-container",
+        "inputType": 0,
+        "description": "指定表单元素最多分几列展示，最终一行几列由 col 配置结合[响应式规则](/theme/responsive)决定，",
+        "type": "Enum",
+        "typeRaw": "`'1','2','3','4','5','6'`",
+        "default": "",
+        "typeDefinition": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ]
+      },
+      {
+        "name": "col",
+        "inputType": 0,
+        "description": "指定表单元素最多分几列展示，最终一行几列由 col 配置结合[响应式规则](/theme/responsive)决定，",
+        "type": "Enum",
+        "typeRaw": "`'1','2','3','4','5','6'`",
+        "default": "`2`",
+        "typeDefinition": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        "pureDefault": "2"
+      }
+    ],
+    "lib": "@delon/abc",
+    "title": "简易栅格",
+    "description": "简化栅格系统运用的高阶组件，它由 `sg-container` 容器（指令）和 `sg` 组件组合代替一个响应式布局：",
+    "whenToUse": "",
+    "doc": "/components/sg/zh",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sg"
+  },
+  {
+    "_idx": 154,
     "type": "component",
     "selector": "sg",
     "types": {},
@@ -16139,7 +16232,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sg"
   },
   {
-    "_idx": 152,
+    "_idx": 155,
     "type": "component",
     "selector": "sidebar-nav",
     "types": {},
@@ -16206,7 +16299,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sidebar-nav"
   },
   {
-    "_idx": 153,
+    "_idx": 156,
     "type": "component",
     "selector": "st",
     "types": {
@@ -16911,7 +17004,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/st"
   },
   {
-    "_idx": 154,
+    "_idx": 157,
     "type": "component",
     "selector": "sv-container",
     "types": {},
@@ -17002,7 +17095,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sv"
   },
   {
-    "_idx": 155,
+    "_idx": 158,
     "type": "directive",
     "selector": "sv-container",
     "types": {},
@@ -17093,7 +17186,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sv"
   },
   {
-    "_idx": 156,
+    "_idx": 159,
     "type": "component",
     "selector": "sv",
     "types": {},
@@ -17167,6 +17260,14 @@
         "type": "string",
         "typeRaw": "`string, TemplateRef<void>`",
         "default": ""
+      },
+      {
+        "name": "optionalHelpColor",
+        "inputType": 0,
+        "description": "标签可选帮助背景颜色",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
       }
     ],
     "lib": "@delon/abc",
@@ -17177,7 +17278,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sv"
   },
   {
-    "_idx": 157,
+    "_idx": 160,
     "type": "component",
     "selector": "sv-title",
     "types": {},
@@ -17190,7 +17291,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sv"
   },
   {
-    "_idx": 158,
+    "_idx": 161,
     "type": "directive",
     "selector": "sv-title",
     "types": {},
@@ -17203,7 +17304,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sv"
   },
   {
-    "_idx": 159,
+    "_idx": 162,
     "type": "component",
     "selector": "tag-select",
     "types": {},
@@ -17234,7 +17335,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/tag-select"
   },
   {
-    "_idx": 160,
+    "_idx": 163,
     "type": "directive",
     "selector": "xlsx",
     "types": {},
@@ -17247,7 +17348,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/xlsx"
   },
   {
-    "_idx": 161,
+    "_idx": 164,
     "type": "component",
     "selector": "g2-bar",
     "types": {},
@@ -17347,7 +17448,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/bar"
   },
   {
-    "_idx": 162,
+    "_idx": 165,
     "type": "component",
     "selector": "g2-card",
     "types": {},
@@ -17418,7 +17519,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/card"
   },
   {
-    "_idx": 163,
+    "_idx": 166,
     "type": "component",
     "selector": "g2-custom",
     "types": {},
@@ -17490,7 +17591,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/custom"
   },
   {
-    "_idx": 164,
+    "_idx": 167,
     "type": "component",
     "selector": "g2-gauge",
     "types": {},
@@ -17580,7 +17681,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/gauge"
   },
   {
-    "_idx": 165,
+    "_idx": 168,
     "type": "component",
     "selector": "g2-mini-area",
     "types": {},
@@ -17718,7 +17819,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/mini-area"
   },
   {
-    "_idx": 166,
+    "_idx": 169,
     "type": "component",
     "selector": "g2-mini-bar",
     "types": {},
@@ -17821,7 +17922,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/mini-bar"
   },
   {
-    "_idx": 167,
+    "_idx": 170,
     "type": "component",
     "selector": "g2-mini-progress",
     "types": {},
@@ -17867,7 +17968,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/mini-progress"
   },
   {
-    "_idx": 168,
+    "_idx": 171,
     "type": "component",
     "selector": "number-info",
     "types": {},
@@ -17955,7 +18056,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/number-info"
   },
   {
-    "_idx": 169,
+    "_idx": 172,
     "type": "component",
     "selector": "g2-pie",
     "types": {},
@@ -18123,7 +18224,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/pie"
   },
   {
-    "_idx": 170,
+    "_idx": 173,
     "type": "component",
     "selector": "g2-radar",
     "types": {},
@@ -18212,7 +18313,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/radar"
   },
   {
-    "_idx": 171,
+    "_idx": 174,
     "type": "component",
     "selector": "g2-single-bar",
     "types": {},
@@ -18332,7 +18433,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/single-bar"
   },
   {
-    "_idx": 172,
+    "_idx": 175,
     "type": "component",
     "selector": "g2-tag-cloud",
     "types": {},
@@ -18398,7 +18499,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/tag-cloud"
   },
   {
-    "_idx": 173,
+    "_idx": 176,
     "type": "component",
     "selector": "g2-timeline",
     "types": {
@@ -18593,7 +18694,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/timeline"
   },
   {
-    "_idx": 174,
+    "_idx": 177,
     "type": "component",
     "selector": "trend",
     "types": {},
@@ -18637,7 +18738,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/trend"
   },
   {
-    "_idx": 175,
+    "_idx": 178,
     "type": "component",
     "selector": "g2-water-wave",
     "types": {},
@@ -18703,7 +18804,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/water-wave"
   },
   {
-    "_idx": 176,
+    "_idx": 179,
     "type": "component",
     "selector": "sf",
     "types": {
@@ -18943,7 +19044,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/form/src"
   },
   {
-    "_idx": 177,
+    "_idx": 180,
     "type": "directive",
     "selector": "sf",
     "types": {
@@ -19183,7 +19284,7 @@
     "github": "https://github.com/ng-alain/delon/tree/master/packages/form/src"
   },
   {
-    "_idx": 178,
+    "_idx": 181,
     "type": "component",
     "selector": "nz-breadcrumb-item",
     "types": {},
@@ -19200,27 +19301,27 @@
     "description": "布局容器，其下可嵌套 `nz-header` `nz-sider` `nz-content` `nz-footer` 或 `nz-layout` 本身，可以放在任何父容器中。",
     "type": "component",
     "lib": "ng-zorro-antd",
-    "_idx": 179
+    "_idx": 182
   },
   {
     "selector": "nz-header",
     "description": "顶部布局，自带默认样式，其下可嵌套任何元素，只能放在 `nz-layout` 中。",
     "type": "component",
     "lib": "ng-zorro-antd",
-    "_idx": 180
+    "_idx": 183
   },
   {
     "selector": "nz-content",
     "description": "内容部分，自带默认样式，其下可嵌套任何元素，只能放在 `nz-layout` 中。",
     "type": "component",
     "lib": "ng-zorro-antd",
-    "_idx": 181
+    "_idx": 184
   },
   {
     "selector": "nz-footer",
     "description": "底部布局，自带默认样式，其下可嵌套任何元素，只能放在 `nz-layout` 中。",
     "type": "component",
     "lib": "ng-zorro-antd",
-    "_idx": 182
+    "_idx": 185
   }
 ]
