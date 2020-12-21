@@ -1,10 +1,11 @@
 .vscode/**
-node_modules/**
 src/**
 snippets/**
 scripts/**
 build/**
 
+gulpfile.js
+*.zip
 .editorconfig
 .gitignore
 .prettierrc

@@ -1,8 +1,8 @@
 import { ExtensionContext, languages } from 'vscode';
+import { Notifier } from './notifier';
 import NAAutoCompletionItemProvider from './plugin/completion-provider';
 import NAHoverProvider from './plugin/hover-provider';
-import { INIT, CONFIG } from './resources';
-import { Notifier } from './notifier';
+import { CONFIG, INIT } from './resources';
 
 const notifier = new Notifier();
 
@@ -15,9 +15,12 @@ export async function activate(context: ExtensionContext) {
   }
 
   const hoverProvider = new NAHoverProvider();
-  const languageSchemes = [{ scheme: 'file', language: 'html' }, { scheme: 'file', language: 'typescript' }];
+  const languageSchemes = [
+    { scheme: 'file', language: 'html' },
+    { scheme: 'file', language: 'typescript' },
+  ];
 
-  const providers = languageSchemes.map(scheme => {
+  const providers = languageSchemes.map((scheme) => {
     return languages.registerCompletionItemProvider(scheme, new NAAutoCompletionItemProvider(), '<', ' ', '[', '(', '"');
   });
 

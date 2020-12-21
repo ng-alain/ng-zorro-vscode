@@ -1,0 +1,4 @@
+{
+  "ng-zorro-vscode.hover": "Whether to enable hover, default: `true`",
+  "ng-zorro-vscode.inlineTemplate": "Whether to enable support inline template in typescript file, default: `true`"
+}

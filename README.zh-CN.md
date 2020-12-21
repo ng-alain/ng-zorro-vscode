@@ -2,12 +2,15 @@
 
 ![Help](help.gif)
 
+# 注意从 `11.x` 版本开始，显示的语言会跟随 VSCode 的设定，无须安装不同版本 ng-zorro-vscode 插件，因此[简体中文版本](https://marketplace.visualstudio.com/items?itemName=cipchk.ng-zorro-vscode-zh-CN)的插件将不再更新。
+
 ## 旧版本
 
-**注意：当前最新版本是基于 `10.0.0`**，你依然可以下载其他旧版本：
+**注意：当前最新版本是基于 `11.0.0`**，你依然可以下载其他旧版本：
 
 | 版本号 | 下载链接 |
 |---------|----------|
+| `10.x` | [10.0.3](https://raw.githubusercontent.com/ng-alain/ng-zorro-vscode/master/cipchk.ng-zorro-vscode-zh-CN-10.0.3.vsix) |
 | `9.x` | [9.2.0](https://raw.githubusercontent.com/ng-alain/ng-zorro-vscode/master/cipchk.ng-zorro-vscode-zh-CN-9.2.0.vsix) |
 | `8.x` | [8.3.3](https://raw.githubusercontent.com/ng-alain/ng-zorro-vscode/master/cipchk.ng-zorro-vscode-zh-CN-8.3.3.vsix) |
 | `7.x` | [7.3.4](https://raw.githubusercontent.com/ng-alain/ng-zorro-vscode/master/cipchk.ng-zorro-vscode-zh-CN-7.3.4.vsix) |
@@ -28,7 +31,6 @@
 
 | 名称 | 描述 | 类型 | 默认值 |
 |----|----|----|-----|
-| `ng-zorro-vscode.language` | 语言 | `zh-CN, en-US` | `en-US` |
 | `ng-zorro-vscode.hover` | 是否开启悬停 | `boolean` | `true` |
 | `ng-zorro-vscode.inlineTemplate` | 是否支持内联模板 | `boolean` | `true` |
 
@@ -36,8 +38,9 @@
 
 ## 支持语言版本
 
-- [English Version](https://marketplace.visualstudio.com/items?itemName=cipchk.ng-zorro-vscode)
-- [中文版本](https://marketplace.visualstudio.com/items?itemName=cipchk.ng-zorro-vscode-zh-CN)
+支持语言列表：英文、简体中文，会根据 VSCode 当前语言自动切换。
+
+> 关于如何切换 VSCode 语言，请参考 [Changing the Display Language](https://code.visualstudio.com/docs/getstarted/locales#_changing-the-display-language) 章节。
 
 ## 链接
 

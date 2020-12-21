@@ -2,10 +2,9 @@ import { MarkdownString } from 'vscode';
 
 export const NAME = `ng-zorro-vscode`;
 
-export type DirectiveType = 'component' | 'directive';
+export type DirectiveType = 'component' | 'directive' | 'pipe';
 
 export interface Directive {
-  _idx?: number;
   /**
    * e.g: `ng-zorro-antd`, `@delon/abc`
    */

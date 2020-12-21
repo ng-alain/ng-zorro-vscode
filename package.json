@@ -2,20 +2,19 @@
   "name": "ng-zorro-vscode",
   "displayName": "NG-ZORRO Snippets",
   "description": "Snippets based on NG-ZORRO",
-  "version": "10.0.3",
+  "version": "11.0.0",
   "icon": "ng-zorro.png",
   "publisher": "cipchk",
   "license": "MIT",
   "licenseUrl": "LICENSE",
   "scripts": {
-    "build": "bash ./scripts/build/build.sh",
-    "test": "bash ./scripts/build/build.sh -t",
-    "release": "npm run resource && bash ./scripts/build/build.sh -b -p",
-    "watch": "tsc -watch -p ./",
-    "resource": "bash ./scripts/resource/build.sh",
-    "postinstall": "node ./node_modules/vscode/bin/install"
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "build": "gulp build",
+    "watch": "gulp watch",
+    "resource": "bash ./scripts/resource/build.sh && node scripts/snippet.js",
+    "release": "npm run resource && gulp package"
   },
-  "main": "./out/src/magic/extension",
+  "main": "./out/extension",
   "homepage": "https://github.com/cipchk/ng-zorro-vscode/blob/master/README.md",
   "repository": {
     "type": "git",
@@ -50,25 +49,22 @@
     "configuration": {
       "title": "NG-ZORRO Extension Configuration",
       "properties": {
-        "ng-zorro-vscode.language": {
-          "description": "Set language code, can be set 'zh-CN', 'en-US', default: 'en-US'",
-          "type": "string",
-          "default": "en-US"
-        },
         "ng-zorro-vscode.hover": {
-          "description": "Whether to enable hover, default: 'true'",
+          "description": "%ng-zorro-vscode.hover%",
           "type": "boolean",
           "default": true
         },
         "ng-zorro-vscode.inlineTemplate": {
-          "description": "Whether to enable support inline template in typescript file, default: 'true'",
+          "description": "%ng-zorro-vscode.inlineTemplate%",
           "type": "boolean",
           "default": true
         }
       }
     }
   },
-  "dependencies": {},
+  "dependencies": {
+    "vscode-nls": "^5.0.0"
+  },
   "devDependencies": {
     "@types/node": "^12.0.10",
     "@types/mocha": "^5.2.5",
@@ -79,10 +75,18 @@
     "chai": "^4.2.0",
     "yaml-front-matter": "^4.0.0",
     "markdown-it": "^8.4.2",
-    "vscode-snippet-generator": "^1.2.1",
-    "vsce": "^1.75.0",
+    "vscode-snippet-generator": "^1.3.2",
     "typescript": "^3.2.2",
     "vscode": "^1.1.26",
-    "klaw-sync": "^6.0.0"
+    "klaw-sync": "^6.0.0",
+    "vsce": "^1.81.1",
+    "gulp": "^4.0.2",
+    "gulp-filter": "^5.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-typescript": "^5.0.1",
+    "run-sequence": "^2.2.1",
+    "del": "^4.1.1",
+    "event-stream": "^4.0.1",
+    "vscode-nls-dev": "^3.2.6"
   }
 }

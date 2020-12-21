@@ -1,14 +1,15 @@
-import * as path from 'path';
+import * as colors from 'ansi-colors';
 import * as fs from 'fs';
 import * as MarkdownIt from 'markdown-it';
-import * as colors from 'ansi-colors';
+import * as path from 'path';
 const yamlFront = require('yaml-front-matter');
 
-import { Directive, DirectiveProperty, InputAttrType } from '../../../src/magic/interfaces';
+import { Directive, DirectiveProperty, DirectiveType, InputAttrType } from '../../../src/magic/interfaces';
 import { FIX } from '../_fix';
+import { MERGE_DATA } from '../_merge';
 import { COG } from '../config';
 import { AST, AST_KEYS } from './ast';
-import { MERGE_DATA } from '../_merge';
+import { clearHtml } from './utils';
 
 const md = new MarkdownIt();
 let processRes: Directive[] = [];
@@ -39,9 +40,6 @@ export function makeObject(lang: string, filePaths: string[]): Directive[] {
   });
 
   processRes = processRes.concat(...extraComponents, ...genMerge(lang));
-
-  // 修正idx
-  processRes.forEach((i, idx) => (i._idx = idx + 1));
 
   verify(filePaths);
 
@@ -112,13 +110,19 @@ function getDirective(): Directive[] {
     .map((idx) => {
       const selectorList = (ast.getText(idx) || '').split('|').map((s) => s.trim());
       let selector = selectorList[0];
-      if (selectorList.length === 1 && !/^\[?[a-z][-a-zA-Z0-9]+\]?$/g.test(selector) && !COG.VALID_COMPONENT_NAMES.includes(selector)) {
-        return null;
+      let type: DirectiveType = 'component';
+      if (selectorList.length === 1 && !/^\[?[a-z][-a-zA-Z0-9='\`]+\]?$/g.test(selector) && !COG.VALID_COMPONENT_NAMES.includes(selector)) {
+        // pipe process
+        if (selector.startsWith('__')) {
+          selector = selector.replace(/__/g, '');
+          type = 'pipe';
+        } else {
+          return null;
+        }
       }
 
       const item: Directive = {
-        _idx: idx,
-        type: 'component',
+        type,
         selector,
         types: {},
       };
@@ -188,12 +192,12 @@ function getDirective(): Directive[] {
 function getProperties(directive: Directive, data: string[][]): DirectiveProperty[] {
   return data
     .filter((tds) => tds.length >= 4)
-    .map((tds) =>
-      genPropertyItem(
+    .map((tds) => {
+      return genPropertyItem(
         directive,
         tds.map((v) => v || ''),
-      ),
-    )
+      );
+    })
     .filter((w) => !!w);
 }
 
@@ -201,13 +205,14 @@ function genPropertyItem(directive: Directive, data: string[]): DirectivePropert
   if (COG.INGORE_PROPERTIES.includes(data[0])) return null;
   let name = '';
   const orgName = data[0].trim();
-  const standardNameMatch = orgName.match(/((?:\[|\(|\[\()[\-a-zA-Z0-9]+(?:\)\]|\]|\)))/g);
+  const standardNameMatch = orgName.match(/((?:`|\[|\(|\[\()[\-a-zA-Z0-9]+(?:`|\)\]|\]|\)))/g);
   if (standardNameMatch != null && standardNameMatch.length > 0) {
     name = standardNameMatch[0];
   }
   if (name.length <= 0 && /nz[A-Za-z]+/g.test(orgName)) {
     name = orgName;
   }
+
   // ingore includes `Deprecated` in description
   if (name.length <= 0 || data[1].trim().includes('Deprecated')) return null;
 
@@ -232,6 +237,9 @@ function genPropertyItem(directive: Directive, data: string[]): DirectivePropert
   } else if (item.name.startsWith('#')) {
     item.name = item.name.substr(1);
     item.inputType = InputAttrType.Template;
+  } else if (item.name.startsWith('`')) {
+    item.name = trimTag(item.name, '`');
+    item.inputType = InputAttrType.Input;
   }
 
   // type
@@ -265,7 +273,7 @@ function getValidSeparator(text: string): string {
 }
 
 function parseType(directive: Directive, item: DirectiveProperty) {
-  let typeRaw: string = item.typeRaw.replace(/`/g, '');
+  const typeRaw: string = item.typeRaw.replace(/`/g, '');
   // if (typeRaw.indexOf('HTMLElement') !== -1) {
   //   console.log(typeRaw, typeRaw.split(getValidSeparator(typeRaw)));
   //   debugger;
@@ -344,7 +352,7 @@ function parseType(directive: Directive, item: DirectiveProperty) {
   }
 
   // 默认复杂类型，从类型列表中查看到第一个带有定义的复杂类型
-  for (let t of types) {
+  for (const t of types) {
     if (!/^[A-Z][a-zA-Z0-9]+$/g.test(t)) continue;
     if (directive.types[t]) {
       item.complexType = t;
@@ -400,7 +408,7 @@ function metaToItem(zone: string, filePath: string, meta: any): Directive[] {
   const title = getTitle(meta);
   const description = ast.getText(0);
   const whenToUse = ast.getParagraph(zone === 'en' ? 'When To Use' : '何时使用');
-  let list: Directive[] = [];
+  const list: Directive[] = [];
   getDirective()
     .filter((w) => !!w)
     .forEach((i) => {
@@ -415,7 +423,7 @@ function metaToItem(zone: string, filePath: string, meta: any): Directive[] {
     i.lib = lib;
     i.title = title;
     if (typeof i.description === 'undefined') {
-      i.description = description;
+      i.description = clearHtml(description);
     }
     i.whenToUse = whenToUse;
     i.doc = docUrl;
@@ -431,8 +439,14 @@ function metaToItem(zone: string, filePath: string, meta: any): Directive[] {
     }
     // add extra properties
     if (FIX.extraProperty[i.selector]) {
-      i.properties.push(...FIX.extraProperty[i.selector]);
+      (FIX.extraProperty[i.selector] as any[])
+        .filter((ei) => i.properties.findIndex((w) => w.name === ei.name) === -1)
+        .forEach((ei) => {
+          i.properties.push(ei);
+        });
     }
+    addEnforceProperties(i);
+    // 添加
     i.properties.forEach((p) => {
       // override type definition
       if (FIX.typeDefinition[i.selector]) {
@@ -457,11 +471,24 @@ function metaToItem(zone: string, filePath: string, meta: any): Directive[] {
   });
 }
 
+function addEnforceProperties(i: Directive): void {
+  const arr = COG.ENFORCE_PROPERTIES[i.selector] as string[];
+  if (!Array.isArray(arr) || arr.length === 0) return;
+
+  arr.forEach((title) => {
+    const start = ast.offsetAt(title);
+    const properties = getProperties(i, ast.getTable(start));
+    if (properties) {
+      i.properties.push(...properties);
+    }
+  });
+}
+
 function verify(filePaths: string[]) {
   // 获取所有组件KEY，以目录名为准，非完整组件名，但可以区分
   const notExistsList = filePaths
     .map((p) => {
-      if (~p.indexOf('ng-zorro-antd')) {
+      if (p.includes('ng-zorro-antd')) {
         const key = p
           .split('ng-zorro-antd')[1]
           .split(path.sep)

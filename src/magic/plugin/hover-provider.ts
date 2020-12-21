@@ -1,7 +1,7 @@
 import { CancellationToken, Hover, HoverProvider, Position, ProviderResult, TextDocument } from 'vscode';
+import { Directive, DirectiveProperty } from '../interfaces';
 import { first, getDirective as getDirectives } from '../resources';
 import { getTag } from '../utils';
-import { Directive, DirectiveProperty } from '../interfaces';
 
 export default class implements HoverProvider {
   provideHover(doc: TextDocument, pos: Position, token: CancellationToken): ProviderResult<Hover> {
@@ -38,7 +38,7 @@ export default class implements HoverProvider {
         const { property, directive } = this.findProperty(directives, attr.name);
         if (property == null || !property.complexType || property.complexType.length === 0) return null;
         const complexTypeProperties = directive.types[property.complexType];
-        const complexDirective = complexTypeProperties.find(w => w.name === tag.word);
+        const complexDirective = complexTypeProperties.find((w) => w.name === tag.word);
         return complexDirective ? new Hover(complexDirective._doc) : null;
       }
     }
@@ -47,7 +47,7 @@ export default class implements HoverProvider {
 
   private findProperty(directives: Directive[], propertyName: string): { directive: Directive; property: DirectiveProperty } | null {
     for (const directive of directives) {
-      const property = directive.properties.find(w => w.name === propertyName);
+      const property = directive.properties.find((w) => w.name === propertyName);
       if (property) {
         return { directive, property };
       }

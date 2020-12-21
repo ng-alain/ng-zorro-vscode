@@ -1,14 +1,23 @@
-import { Directive, DirectiveType, Tag, NAME, DirectiveTypeDefinition, DirectiveProperty, InputAttrType } from '../interfaces';
-import { i18n } from './local';
-import zh_CN from './zh-CN.json';
-import en_US from './en-US.json';
-import { workspace, MarkdownString } from 'vscode';
-import { Notifier } from '../notifier';
-import { readFileSync, existsSync } from 'fs';
+import { existsSync, readFileSync } from 'fs';
 import { join } from 'path';
+import { env, MarkdownString, workspace } from 'vscode';
+import * as nls from 'vscode-nls';
+import { Directive, DirectiveProperty, DirectiveType, DirectiveTypeDefinition, InputAttrType, NAME, Tag } from '../interfaces';
+import { Notifier } from '../notifier';
+import { DATA, LANG } from './default';
+const localize = nls.config({ messageFormat: nls.MessageFormat.both })();
+const I18N = {
+  document: localize('document', 'OnLine Document'),
+  github: localize('github', 'Source'),
+  whenToUse: localize('whenToUse', 'When To Use:'),
+  type: localize('type', 'Type:'),
+  optionalValue: localize('optionalValue', 'Optional Value:'),
+  defaultValue: localize('defaultValue', 'Default Value:'),
+  library: localize('library', 'Library:'),
+};
 
 export const CONFIG = {
-  language: 'en-US',
+  language: 'en',
   hover: true,
   inlineTemplate: true,
   isAntd: true,
@@ -31,26 +40,28 @@ function getPure(value: string): string {
 
 function getFullDoc(item: Directive): string {
   if (item.doc.startsWith('http')) return item.doc;
+  const isEn = CONFIG.language === 'en';
+  const doc = isEn ? item.doc : item.doc.replace('/en', '/zh');
   if (item.lib === 'ng-zorro-antd') {
     // TODO: Muse be release version
-    return (CONFIG.language === 'zh-CN' ? 'https://ng-zorro.gitee.io' : 'https://ng.ant.design') + item.doc;
+    return (isEn ? 'https://ng.ant.design' : 'https://ng-zorro.gitee.io') + doc;
     // return `https://ng-zorro-master.netlify.com` + item.doc;
   }
-  return (CONFIG.language === 'zh-CN' ? 'https://ng-alain.com' : 'https://ng-alain-doc.surge.sh') + item.doc;
+  return (isEn ? 'https://ng-alain-doc.surge.sh' : 'https://ng-alain.com') + doc;
 }
 
 function genComponentMarkdown(item: Directive): string {
   if (item == null) return '';
 
-  const rows: string[] = [CONFIG.isAlain ? `**${i18n('library')}** ${item.lib}` : null, `**${item.title}**`, item.description];
+  const rows: string[] = [CONFIG.isAlain ? `**${I18N.library}** ${item.lib}` : null, `**${item.title}**`, item.description];
 
-  if (item.whenToUse) {
-    rows.push(`**${i18n('whenToUse')}**`);
+  if (item.whenToUse && item.whenToUse.trim().length > 0) {
+    rows.push(`**${I18N.whenToUse}**`);
     rows.push(item.whenToUse);
   }
 
   if (item.doc) {
-    rows.push(`[${i18n('document')}](${getFullDoc(item)})${item.github ? ` － [${i18n('github')}](${item.github})` : ''}`);
+    rows.push(`[${I18N.document}](${getFullDoc(item)})${item.github ? ` － [${I18N.github}](${item.github})` : ''}`);
   }
 
   return rows.filter((w) => !!w).join('\n\n');
@@ -62,15 +73,13 @@ function genPropertyMarkdown(property: DirectiveProperty): string {
   const rows: string[] = [];
 
   if (property.typeDefinition && Array.isArray(property.typeDefinition) && property.typeDefinition.length > 0) {
-    rows.push(
-      `**${i18n('optionalValue')}** ${property.typeDefinition.map((i: DirectiveTypeDefinition) => '`' + i.label + '`').join(', ')}`,
-    );
+    rows.push(`**${I18N.optionalValue}** ${property.typeDefinition.map((i: DirectiveTypeDefinition) => '`' + i.label + '`').join(', ')}`);
   } else if (property.typeRaw.length > 0) {
-    rows.push(`**${i18n('type')}** ${property.typeRaw}`);
+    rows.push(`**${I18N.type}** ${property.typeRaw}`);
   }
 
   if (property.default.length > 0) {
-    rows.push(`**${i18n('defaultValue')}** ${property.default}`);
+    rows.push(`**${I18N.defaultValue}** ${property.default}`);
   }
 
   rows.push(property.description);
@@ -84,7 +93,7 @@ function fixProperty(p: DirectiveProperty) {
   p.default = notNull(p.default, '-');
   if (p.default === '-') p.default = '';
 
-  p.description = notNull(p.description);
+  p.description = LANG[p.description];
   p.isInputBoolean = notNull(p.isInputBoolean, true);
   p.type = notNull(p.type, 'string');
   p.typeRaw = notNull(p.typeRaw, '').replace(/｜/g, '|');
@@ -103,7 +112,7 @@ function fixProperty(p: DirectiveProperty) {
 
 export async function INIT(notifier: Notifier) {
   const cog = workspace.getConfiguration(NAME);
-  CONFIG.language = cog.language;
+  CONFIG.language = env.language.toLowerCase();
   CONFIG.hover = cog.hover;
   CONFIG.inlineTemplate = cog.inlineTemplate;
   if (workspace.workspaceFolders != null && workspace.workspaceFolders.length > 0) {
@@ -125,7 +134,7 @@ export async function INIT(notifier: Notifier) {
     }
   }
 
-  const data = (CONFIG.language === 'en-US' ? en_US : zh_CN) as Directive[];
+  const data = DATA as Directive[];
   if (CONFIG.isAntd) {
     RESOURCES.push(...data.filter((i) => i.lib === 'ng-zorro-antd'));
   }
@@ -135,10 +144,10 @@ export async function INIT(notifier: Notifier) {
   }
 
   RESOURCES.forEach((i) => {
-    i.description = notNull(i.description);
-    i.whenToUse = notNull(i.whenToUse);
+    i.description = LANG[i.description];
+    i.whenToUse = LANG[i.whenToUse];
     i.doc = notNull(i.doc);
-    i.title = notNull(i.title);
+    i.title = LANG[i.title];
     i.type = notNull(i.type, 'component');
     i.snippet = notNull(i.snippet, '');
     if (i.snippet.length === 0) {
