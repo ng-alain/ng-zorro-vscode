@@ -10,24 +10,28 @@ export function getFiles(langs: string[], buildPath: string) {
     path.join(buildPath, 'ng-zorro-antd', 'components'),
     path.join(buildPath, 'delon', 'packages', 'abc'),
     path.join(buildPath, 'delon', 'packages', 'chart'),
-  ].forEach(dir => {
-    files.push(...klawSync(dir, {
-      nodir: true,
-      filter: item => {
-        if (item.stats.isDirectory()) return true;
-        return FILE_NAMES.includes(path.basename(item.path));
-      }
-    }).map(i => i.path));
+  ].forEach((dir) => {
+    files.push(
+      ...klawSync(dir, {
+        nodir: true,
+        filter: (item) => {
+          if (item.stats.isDirectory()) return true;
+          return FILE_NAMES.includes(path.basename(item.path));
+        },
+      }).map((i) => i.path),
+    );
   });
   // fix sf
-  files.push(...[
-    path.join(buildPath, 'delon', 'packages', 'form', 'docs', 'getting-started.en-US.md'),
-    path.join(buildPath, 'delon', 'packages', 'form', 'docs', 'getting-started.zh-CN.md'),
-  ]);
+  files.push(
+    ...[
+      path.join(buildPath, 'delon', 'packages', 'form', 'docs', 'getting-started.en-US.md'),
+      path.join(buildPath, 'delon', 'packages', 'form', 'docs', 'getting-started.zh-CN.md'),
+    ],
+  );
 
   // split
   const res: { [key: string]: string[] } = {};
-  langs.forEach(l => {
+  langs.forEach((l) => {
     res[l] = [];
     files.forEach((p) => {
       if (p.endsWith(`${l}.md`) || p.endsWith('index.md')) {

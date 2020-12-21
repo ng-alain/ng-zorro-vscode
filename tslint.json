@@ -18,6 +18,7 @@
     "no-conditional-assignment": false,
     "no-bitwise": false,
     "unified-signatures": false,
+    "max-line-length": false
   },
   "rulesDirectory": []
 }

@@ -5,7 +5,6 @@ export const NAME = `ng-zorro-vscode`;
 export type DirectiveType = 'component' | 'directive';
 
 export interface Directive {
-  _idx?: number;
   /**
    * e.g: `ng-zorro-antd`, `@delon/abc`
    */

@@ -5,6 +5,7 @@ snippets/**
 scripts/**
 build/**
 
+gulpfile.js
 .editorconfig
 .gitignore
 .prettierrc

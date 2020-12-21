@@ -29,11 +29,10 @@ export const AST_KEYS = {
 };
 
 export class AST {
-  constructor(private tokens: Token[], private filePath: string, public zone: string) {}
-
   get length(): number {
     return this.tokens.length;
   }
+  constructor(private tokens: Token[], private filePath: string, public zone: string) {}
 
   /** 偏移至某个标题 */
   offsetAt(text: string, start = 0): number {
@@ -78,26 +77,16 @@ export class AST {
     return this.tokens[index].type === type;
   }
 
-  private finds(start: number, end: number, cb: (token: Token) => boolean): number[] {
-    const list = [];
-    this.tokens.slice(start, end === -1 ? this.tokens.length : end).forEach((token, idx) => {
-      if (cb(token)) {
-        list.push(start + idx);
-      }
-    });
-    return list;
-  }
-
   findTagAndTypes(type: string, tag: string, start = 0, end = -1): number[] {
-    return this.finds(start, end, token => token.type === type && token.tag === tag);
+    return this.finds(start, end, (token) => token.type === type && token.tag === tag);
   }
 
   findTags(tag: string, start = 0, end = -1): number[] {
-    return this.finds(start, end, token => token.type.endsWith('_open') && token.tag === tag);
+    return this.finds(start, end, (token) => token.type.endsWith('_open') && token.tag === tag);
   }
 
   findTypes(type: string, start = 0, end = -1): number[] {
-    return this.finds(start, end, token => token.type === type);
+    return this.finds(start, end, (token) => token.type === type);
   }
 
   jumpNext(index: number): number {
@@ -120,15 +109,15 @@ export class AST {
       case AST_KEYS.UlListOpen:
         return this.tokens
           .slice(index, this.getCloseAt(index, AST_KEYS.UlListClose))
-          .filter(i => i.type === AST_KEYS.Inline)
-          .map(i => `- ${i.content}`)
+          .filter((i) => i.type === AST_KEYS.Inline)
+          .map((i) => `- ${i.content}`)
           .join('\n');
     }
     return '';
   }
 
   getCloseAt(start: number, type: string): number {
-    const idx = this.tokens.slice(start).findIndex(w => w.type === type);
+    const idx = this.tokens.slice(start).findIndex((w) => w.type === type);
     return idx === -1 ? -1 : idx + start;
   }
 
@@ -152,8 +141,18 @@ export class AST {
       beginEnd = this.offsetTypeAt('tbody_close', beginStart + 1);
     }
     if (beginStart === -1 || beginEnd === -1) return [];
-    return this.findTags('tr', beginStart, beginEnd).map(start =>
-      this.findTypes(AST_KEYS.Inline, start, this.offsetTypeAt('tr_close', start)).map(idx => this.tokens[idx].content),
+    return this.findTags('tr', beginStart, beginEnd).map((start) =>
+      this.findTypes(AST_KEYS.Inline, start, this.offsetTypeAt('tr_close', start)).map((idx) => this.tokens[idx].content),
     );
+  }
+
+  private finds(start: number, end: number, cb: (token: Token) => boolean): number[] {
+    const list = [];
+    this.tokens.slice(start, end === -1 ? this.tokens.length : end).forEach((token, idx) => {
+      if (cb(token)) {
+        list.push(start + idx);
+      }
+    });
+    return list;
   }
 }

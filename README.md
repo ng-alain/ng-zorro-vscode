@@ -30,7 +30,6 @@ In addition, some common completion code snippets are built in and prefix with `
 
 | Name | Description | Type | Default |
 |------|-------------|------|---------|
-| `ng-zorro-vscode.language` | Set language code | `zh-CN, en-US` | `en-US` |
 | `ng-zorro-vscode.hover` | Whether to enable hover | `boolean` | `true` |
 | `ng-zorro-vscode.inlineTemplate` | Whether to enable support inline template in typescript file | `boolean` | `true` |
 
@@ -38,8 +37,9 @@ In addition, some common completion code snippets are built in and prefix with `
 
 ## Support Language Versions
 
-- [English Version](https://marketplace.visualstudio.com/items?itemName=cipchk.ng-zorro-vscode)
-- [中文版本](https://marketplace.visualstudio.com/items?itemName=cipchk.ng-zorro-vscode-zh-CN)
+Support language list: English, 简体中文, will automatically switch according to the current the display language of VSCode.
+
+> Abort how to changing the display language, pls refer to [Changing the Display Language](https://code.visualstudio.com/docs/getstarted/locales#_changing-the-display-language).
 
 ## Links
 

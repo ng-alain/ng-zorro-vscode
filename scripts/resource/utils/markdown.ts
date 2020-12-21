@@ -1,14 +1,15 @@
-import * as path from 'path';
+import * as colors from 'ansi-colors';
 import * as fs from 'fs';
 import * as MarkdownIt from 'markdown-it';
-import * as colors from 'ansi-colors';
+import * as path from 'path';
 const yamlFront = require('yaml-front-matter');
 
 import { Directive, DirectiveProperty, InputAttrType } from '../../../src/magic/interfaces';
 import { FIX } from '../_fix';
+import { MERGE_DATA } from '../_merge';
 import { COG } from '../config';
 import { AST, AST_KEYS } from './ast';
-import { MERGE_DATA } from '../_merge';
+import { clearHtml } from './utils';
 
 const md = new MarkdownIt();
 let processRes: Directive[] = [];
@@ -39,9 +40,6 @@ export function makeObject(lang: string, filePaths: string[]): Directive[] {
   });
 
   processRes = processRes.concat(...extraComponents, ...genMerge(lang));
-
-  // 修正idx
-  processRes.forEach((i, idx) => (i._idx = idx + 1));
 
   verify(filePaths);
 
@@ -111,13 +109,12 @@ function getDirective(): Directive[] {
     .findTags('h3', start + 1, end)
     .map((idx) => {
       const selectorList = (ast.getText(idx) || '').split('|').map((s) => s.trim());
-      let selector = selectorList[0];
+      const selector = selectorList[0];
       if (selectorList.length === 1 && !/^\[?[a-z][-a-zA-Z0-9]+\]?$/g.test(selector) && !COG.VALID_COMPONENT_NAMES.includes(selector)) {
         return null;
       }
 
       const item: Directive = {
-        _idx: idx,
         type: 'component',
         selector,
         types: {},
@@ -265,7 +262,7 @@ function getValidSeparator(text: string): string {
 }
 
 function parseType(directive: Directive, item: DirectiveProperty) {
-  let typeRaw: string = item.typeRaw.replace(/`/g, '');
+  const typeRaw: string = item.typeRaw.replace(/`/g, '');
   // if (typeRaw.indexOf('HTMLElement') !== -1) {
   //   console.log(typeRaw, typeRaw.split(getValidSeparator(typeRaw)));
   //   debugger;
@@ -344,7 +341,7 @@ function parseType(directive: Directive, item: DirectiveProperty) {
   }
 
   // 默认复杂类型，从类型列表中查看到第一个带有定义的复杂类型
-  for (let t of types) {
+  for (const t of types) {
     if (!/^[A-Z][a-zA-Z0-9]+$/g.test(t)) continue;
     if (directive.types[t]) {
       item.complexType = t;
@@ -400,7 +397,7 @@ function metaToItem(zone: string, filePath: string, meta: any): Directive[] {
   const title = getTitle(meta);
   const description = ast.getText(0);
   const whenToUse = ast.getParagraph(zone === 'en' ? 'When To Use' : '何时使用');
-  let list: Directive[] = [];
+  const list: Directive[] = [];
   getDirective()
     .filter((w) => !!w)
     .forEach((i) => {
@@ -415,7 +412,7 @@ function metaToItem(zone: string, filePath: string, meta: any): Directive[] {
     i.lib = lib;
     i.title = title;
     if (typeof i.description === 'undefined') {
-      i.description = description;
+      i.description = clearHtml(description);
     }
     i.whenToUse = whenToUse;
     i.doc = docUrl;
@@ -431,7 +428,11 @@ function metaToItem(zone: string, filePath: string, meta: any): Directive[] {
     }
     // add extra properties
     if (FIX.extraProperty[i.selector]) {
-      i.properties.push(...FIX.extraProperty[i.selector]);
+      (FIX.extraProperty[i.selector] as any[])
+        .filter((ei) => i.properties.findIndex((w) => w.name === ei.name) === -1)
+        .forEach((ei) => {
+          i.properties.push(ei);
+        });
     }
     i.properties.forEach((p) => {
       // override type definition

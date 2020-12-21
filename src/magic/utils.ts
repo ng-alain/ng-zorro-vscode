@@ -1,6 +1,6 @@
 import { Position, Range, TextDocument } from 'vscode';
-import { Tag, TagAttr, InputAttrType, TagAttrValueType } from './interfaces';
-import { isComponent, CONFIG } from './resources';
+import { InputAttrType, Tag, TagAttr, TagAttrValueType } from './interfaces';
+import { CONFIG, isComponent } from './resources';
 
 function getOffsetText(document: TextDocument, position: Position): { start: number; end: number; cursor: number; text: string } {
   const text = document.getText();
@@ -53,7 +53,7 @@ export function getTag(doc: TextDocument, pos: Position, includeAttr = true): Ta
     attrstr = offsetText.text.substr(index + raw.indexOf(attr));
 
     if (!tag && index <= offsetText.cursor && index + raw.length >= offsetText.cursor) {
-      let range = doc.getWordRangeAtPosition(pos, /\b[\w-:.]+\b/);
+      const range = doc.getWordRangeAtPosition(pos, /\b[\w-:.]+\b/);
       let posWord = '';
       let attrName = '';
       if (range) {
@@ -64,11 +64,11 @@ export function getTag(doc: TextDocument, pos: Position, includeAttr = true): Ta
       if (!isOnTagName && isComponent(posWord)) {
         isOnTagName = true;
       }
-      let isOnAttrValue = attrFlagLine[offsetText.cursor] === '%';
+      const isOnAttrValue = attrFlagLine[offsetText.cursor] === '%';
       if (isOnAttrValue) {
         attrName = getAttrName(attrFlagLine.substring(0, offsetText.cursor));
       }
-      let isOnAttrName = !isOnTagName && !isOnAttrValue && !!posWord;
+      const isOnAttrName = !isOnTagName && !isOnAttrValue && !!posWord;
       tag = {
         name,
         word: posWord,

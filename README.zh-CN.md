@@ -28,7 +28,6 @@
 
 | 名称 | 描述 | 类型 | 默认值 |
 |----|----|----|-----|
-| `ng-zorro-vscode.language` | 语言 | `zh-CN, en-US` | `en-US` |
 | `ng-zorro-vscode.hover` | 是否开启悬停 | `boolean` | `true` |
 | `ng-zorro-vscode.inlineTemplate` | 是否支持内联模板 | `boolean` | `true` |
 
@@ -36,8 +35,9 @@
 
 ## 支持语言版本
 
-- [English Version](https://marketplace.visualstudio.com/items?itemName=cipchk.ng-zorro-vscode)
-- [中文版本](https://marketplace.visualstudio.com/items?itemName=cipchk.ng-zorro-vscode-zh-CN)
+支持语言列表：英文、简体中文，会根据 VSCode 当前语言自动切换。
+
+> 关于如何切换 VSCode 语言，请参考 [Changing the Display Language](https://code.visualstudio.com/docs/getstarted/locales#_changing-the-display-language) 章节。
 
 ## 链接
 
