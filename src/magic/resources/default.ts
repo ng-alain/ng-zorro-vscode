@@ -746,6 +746,33 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-pagination.nzHideOnSinglePage.description': localize('nz-pagination.nzHideOnSinglePage.description', 'Whether to hide pager on single page'),
 'nz-pagination.nzPageIndexChange.description': localize('nz-pagination.nzPageIndexChange.description', 'current page number change callback'),
 'nz-pagination.nzPageSizeChange.description': localize('nz-pagination.nzPageSizeChange.description', 'number of data items per page change callback'),
+'nzSafeNull.title': localize('nzSafeNull.title', 'Pipes'),
+'nzSafeNull.whenToUse': localize('nzSafeNull.whenToUse', '- After introducing Pipe, use it like angular\'s default Pipe'),
+'nzSafeNull.description': localize('nzSafeNull.description', '\nNG-ZORRO experiments are features that are released but not yet considered stable or production ready\nDevelopers and users can opt-in into these features before they are fully released. But breaking changes may occur with any release.\n'),
+'nzSafeNull.replace.description': localize('nzSafeNull.replace.description', 'Replace character'),
+'nzBytes.title': localize('nzBytes.title', 'Pipes'),
+'nzBytes.whenToUse': localize('nzBytes.whenToUse', '- After introducing Pipe, use it like angular\'s default Pipe'),
+'nzBytes.description': localize('nzBytes.description', '\nNG-ZORRO experiments are features that are released but not yet considered stable or production ready\nDevelopers and users can opt-in into these features before they are fully released. But breaking changes may occur with any release.\n'),
+'nzBytes.decimal.description': localize('nzBytes.decimal.description', 'Decimal'),
+'nzBytes.from.description': localize('nzBytes.from.description', 'Unit of current value'),
+'nzBytes.to.description': localize('nzBytes.to.description', 'Units converted to target value'),
+'nzToCssUnit.title': localize('nzToCssUnit.title', 'Pipes'),
+'nzToCssUnit.whenToUse': localize('nzToCssUnit.whenToUse', '- After introducing Pipe, use it like angular\'s default Pipe'),
+'nzToCssUnit.description': localize('nzToCssUnit.description', '\nNG-ZORRO experiments are features that are released but not yet considered stable or production ready\nDevelopers and users can opt-in into these features before they are fully released. But breaking changes may occur with any release.\n'),
+'nzToCssUnit.defaultUnit.description': localize('nzToCssUnit.defaultUnit.description', 'Default Unit'),
+'nzEllipsis.title': localize('nzEllipsis.title', 'Pipes'),
+'nzEllipsis.whenToUse': localize('nzEllipsis.whenToUse', '- After introducing Pipe, use it like angular\'s default Pipe'),
+'nzEllipsis.description': localize('nzEllipsis.description', '\nNG-ZORRO experiments are features that are released but not yet considered stable or production ready\nDevelopers and users can opt-in into these features before they are fully released. But breaking changes may occur with any release.\n'),
+'nzEllipsis.length.description': localize('nzEllipsis.length.description', 'Truncate length'),
+'nzEllipsis.suffix.description': localize('nzEllipsis.suffix.description', 'Replace character'),
+'nzAggregate.title': localize('nzAggregate.title', 'Pipes'),
+'nzAggregate.whenToUse': localize('nzAggregate.whenToUse', '- After introducing Pipe, use it like angular\'s default Pipe'),
+'nzAggregate.description': localize('nzAggregate.description', '\nNG-ZORRO experiments are features that are released but not yet considered stable or production ready\nDevelopers and users can opt-in into these features before they are fully released. But breaking changes may occur with any release.\n'),
+'nzAggregate.type.description': localize('nzAggregate.type.description', 'Aggregation'),
+'nzSanitizer.title': localize('nzSanitizer.title', 'Pipes'),
+'nzSanitizer.whenToUse': localize('nzSanitizer.whenToUse', '- After introducing Pipe, use it like angular\'s default Pipe'),
+'nzSanitizer.description': localize('nzSanitizer.description', '\nNG-ZORRO experiments are features that are released but not yet considered stable or production ready\nDevelopers and users can opt-in into these features before they are fully released. But breaking changes may occur with any release.\n'),
+'nzSanitizer.type.description': localize('nzSanitizer.type.description', 'sanitizer type'),
 'nz-popconfirm.title': localize('nz-popconfirm.title', 'Popconfirm'),
 'nz-popconfirm.whenToUse': localize('nz-popconfirm.whenToUse', 'A simple and compact dialog used for asking for user confirmation.'),
 'nz-popconfirm.description': localize('nz-popconfirm.description', 'A simple and compact confirmation dialog of an action.'),
@@ -892,6 +919,11 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-result.title': localize('nz-result.title', 'Result'),
 'nz-result.whenToUse': localize('nz-result.whenToUse', 'Use when important operations need to inform the user to process the results and the feedback is more complicated.'),
 'nz-result.description': localize('nz-result.description', 'Used to feed back the results of a series of operational tasks.'),
+'nz-result.nzTitle.description': localize('nz-result.nzTitle.description', 'title'),
+'nz-result.nzSubTitle.description': localize('nz-result.nzSubTitle.description', 'subTitle'),
+'nz-result.nzStatus.description': localize('nz-result.nzStatus.description', 'result status, decides icons and colors'),
+'nz-result.nzIcon.description': localize('nz-result.nzIcon.description', 'custom icon'),
+'nz-result.nzExtra.description': localize('nz-result.nzExtra.description', 'operating area'),
 'nz-select.title': localize('nz-select.title', 'Select'),
 'nz-select.whenToUse': localize('nz-select.whenToUse', '- A dropdown menu for displaying choices - an elegant alternative to the native `<select>` element.\n- Utilizing [Radio](/components/radio/en) is recommended when there are fewer total options (less than 5).'),
 'nz-select.description': localize('nz-select.description', 'Select component to select value from options.'),
@@ -956,6 +988,10 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-skeleton.nzParagraph.description': localize('nz-skeleton.nzParagraph.description', 'Show paragraph placeholder'),
 'nz-skeleton.nzTitle.description': localize('nz-skeleton.nzTitle.description', 'Show title placeholder'),
 'nz-skeleton.nzRound.description': localize('nz-skeleton.nzRound.description', 'Show paragraph and title radius when `true`'),
+'nz-skeleton.size.description': localize('nz-skeleton.size.description', 'Set the size of avatar'),
+'nz-skeleton.shape.description': localize('nz-skeleton.shape.description', 'Set the shape of avatar'),
+'nz-skeleton.rows.description': localize('nz-skeleton.rows.description', 'Set the row count of paragraph'),
+'nz-skeleton.width.description': localize('nz-skeleton.width.description', 'Set the width of title'),
 'nz-slider.title': localize('nz-slider.title', 'Slider'),
 'nz-slider.whenToUse': localize('nz-slider.whenToUse', 'To input a value in a range.'),
 'nz-slider.description': localize('nz-slider.description', 'A Slider component for displaying current value and intervals in range.'),
@@ -1497,9 +1533,11 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'exception.title.description': localize('exception.title.description', 'title'),
 'exception.desc.description': localize('exception.desc.description', 'supplementary description'),
 'exception.img.description': localize('exception.img.description', 'the url of background image'),
+'exception.ng-content.description': localize('exception.ng-content.description', 'suggested operations, a default \'Home\' link will show if not set'),
 'footer-toolbar.title': localize('footer-toolbar.title', 'FooterToolbar'),
 'footer-toolbar.whenToUse': localize('footer-toolbar.whenToUse', ' '),
 'footer-toolbar.description': localize('footer-toolbar.description', 'A toolbar fixed at the bottom.'),
+'footer-toolbar.ng-content.description': localize('footer-toolbar.ng-content.description', 'toolbar content, align to the right'),
 'footer-toolbar.errorCollect.description': localize('footer-toolbar.errorCollect.description', 'Whether `error-collect`, make sure to wrap inside the `<form>` element'),
 'footer-toolbar.extra.description': localize('footer-toolbar.extra.description', 'extra information, align to the left'),
 'full-content.title': localize('full-content.title', 'Full Screen Workspace'),
@@ -1522,6 +1560,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'global-footer-item.title': localize('global-footer-item.title', 'Global footer'),
 'global-footer-item.whenToUse': localize('global-footer-item.whenToUse', ' '),
 'global-footer-item.description': localize('global-footer-item.description', 'The footer is part of the global navigation as a supplement to the top navigation.'),
+'global-footer-item.ng-content.description': localize('global-footer-item.ng-content.description', 'Title'),
 'global-footer-item.href.description': localize('global-footer-item.href.description', 'Routing link'),
 'global-footer-item.blankTarget.description': localize('global-footer-item.blankTarget.description', 'Whether to open a new window'),
 'media.title': localize('media.title', 'HTML5 Media'),
@@ -1545,6 +1584,11 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'numberToChinese.title': localize('numberToChinese.title', '人民币大写'),
 'numberToChinese.whenToUse': localize('numberToChinese.whenToUse', ' '),
 'numberToChinese.description': localize('numberToChinese.description', '转化方法，包括三个参数：'),
+'numberToChinese.value.description': localize('numberToChinese.value.description', '值'),
+'numberToChinese.rmb.description': localize('numberToChinese.rmb.description', '是否RMB格式'),
+'numberToChinese.options.description': localize('numberToChinese.options.description', '额外选项'),
+'numberToChinese.minusSymbol.description': localize('numberToChinese.minusSymbol.description', '指定负数符号'),
+'numberToChinese.validThrow.description': localize('numberToChinese.validThrow.description', '当传递值无法数值时抛出异常'),
 'page-header.title': localize('page-header.title', 'Page Header'),
 'page-header.whenToUse': localize('page-header.whenToUse', ' '),
 'page-header.description': localize('page-header.description', 'The page header is used to declare the subject of the page and contains the most important information that the user is concerned about, so that the user can quickly understand what the current page and functions.'),
@@ -1609,6 +1653,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'result.title.description': localize('result.title.description', 'Title for the result'),
 'result.description.description': localize('result.description.description', 'Description for the result'),
 'result.extra.description': localize('result.extra.description', 'Supplemental information, with default gray background'),
+'result.ng-content.description': localize('result.ng-content.description', 'Operation suggestions, Recommended to place jump links, button groups, etc.'),
 'reuse-tab.title': localize('reuse-tab.title', 'Reuse Route Tab'),
 'reuse-tab.whenToUse': localize('reuse-tab.whenToUse', ' '),
 'reuse-tab.description': localize('reuse-tab.description', 'Reuse route tab are extremely common for admin interfaces, and the problem of component data is not lost when switching routes.'),
@@ -11171,6 +11216,171 @@ export const DATA = [
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/pagination"
   },
   {
+    "type": "pipe",
+    "selector": "nzSafeNull",
+    "types": {},
+    "properties": [
+      {
+        "name": "replace",
+        "inputType": 0,
+        "description": "nzSafeNull.replace.description",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": "''",
+        "pureDefault": ""
+      }
+    ],
+    "lib": "ng-zorro-antd",
+    "title": "nzSafeNull.title",
+    "description": "nzSafeNull.description",
+    "whenToUse": "nzSafeNull.whenToUse",
+    "doc": "/components/pipes/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/pipes"
+  },
+  {
+    "type": "pipe",
+    "selector": "nzBytes",
+    "types": {},
+    "properties": [
+      {
+        "name": "decimal",
+        "inputType": 0,
+        "description": "nzBytes.decimal.description",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "'0'",
+        "pureDefault": "0"
+      },
+      {
+        "name": "from",
+        "inputType": 0,
+        "description": "nzBytes.from.description",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": "'B'",
+        "pureDefault": "B"
+      },
+      {
+        "name": "to",
+        "inputType": 0,
+        "description": "nzBytes.to.description",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": "''",
+        "pureDefault": ""
+      }
+    ],
+    "lib": "ng-zorro-antd",
+    "title": "nzBytes.title",
+    "description": "nzBytes.description",
+    "whenToUse": "nzBytes.whenToUse",
+    "doc": "/components/pipes/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/pipes"
+  },
+  {
+    "type": "pipe",
+    "selector": "nzToCssUnit",
+    "types": {},
+    "properties": [
+      {
+        "name": "defaultUnit",
+        "inputType": 0,
+        "description": "nzToCssUnit.defaultUnit.description",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": "'px'",
+        "pureDefault": "px"
+      }
+    ],
+    "lib": "ng-zorro-antd",
+    "title": "nzToCssUnit.title",
+    "description": "nzToCssUnit.description",
+    "whenToUse": "nzToCssUnit.whenToUse",
+    "doc": "/components/pipes/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/pipes"
+  },
+  {
+    "type": "pipe",
+    "selector": "nzEllipsis",
+    "types": {},
+    "properties": [
+      {
+        "name": "length",
+        "inputType": 0,
+        "description": "nzEllipsis.length.description",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "''",
+        "pureDefault": ""
+      },
+      {
+        "name": "suffix",
+        "inputType": 0,
+        "description": "nzEllipsis.suffix.description",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": "''",
+        "pureDefault": ""
+      }
+    ],
+    "lib": "ng-zorro-antd",
+    "title": "nzEllipsis.title",
+    "description": "nzEllipsis.description",
+    "whenToUse": "nzEllipsis.whenToUse",
+    "doc": "/components/pipes/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/pipes"
+  },
+  {
+    "type": "pipe",
+    "selector": "nzAggregate",
+    "types": {},
+    "properties": [
+      {
+        "name": "type",
+        "inputType": 0,
+        "description": "nzAggregate.type.description",
+        "type": "Enum",
+        "typeRaw": "`'sum' | 'max' | 'min' | 'avg'`",
+        "default": "''",
+        "typeDefinition": [
+          "sum",
+          "max",
+          "min",
+          "avg"
+        ],
+        "pureDefault": ""
+      }
+    ],
+    "lib": "ng-zorro-antd",
+    "title": "nzAggregate.title",
+    "description": "nzAggregate.description",
+    "whenToUse": "nzAggregate.whenToUse",
+    "doc": "/components/pipes/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/pipes"
+  },
+  {
+    "type": "pipe",
+    "selector": "nzSanitizer",
+    "types": {},
+    "properties": [
+      {
+        "name": "type",
+        "inputType": 0,
+        "description": "nzSanitizer.type.description",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": "'html'",
+        "pureDefault": "html"
+      }
+    ],
+    "lib": "ng-zorro-antd",
+    "title": "nzSanitizer.title",
+    "description": "nzSanitizer.description",
+    "whenToUse": "nzSanitizer.whenToUse",
+    "doc": "/components/pipes/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/pipes"
+  },
+  {
     "type": "directive",
     "selector": "nz-popconfirm",
     "types": {},
@@ -12423,7 +12633,59 @@ export const DATA = [
     "type": "component",
     "selector": "nz-result",
     "types": {},
-    "properties": [],
+    "properties": [
+      {
+        "name": "nzTitle",
+        "inputType": 0,
+        "description": "nz-result.nzTitle.description",
+        "type": "TemplateRef",
+        "typeRaw": "`TemplateRef<void>` | `string`",
+        "default": ""
+      },
+      {
+        "name": "nzSubTitle",
+        "inputType": 0,
+        "description": "nz-result.nzSubTitle.description",
+        "type": "TemplateRef",
+        "typeRaw": "`TemplateRef<void>` | `string`",
+        "default": ""
+      },
+      {
+        "name": "nzStatus",
+        "inputType": 0,
+        "description": "nz-result.nzStatus.description",
+        "type": "Enum",
+        "typeRaw": "`'success' | 'error' | 'info' | 'warning'| '404' | '403' | '500'` | 'info'",
+        "default": "`'info'`",
+        "typeDefinition": [
+          "success",
+          "error",
+          "info",
+          "warning",
+          "404",
+          "403",
+          "500",
+          "info"
+        ],
+        "pureDefault": "info"
+      },
+      {
+        "name": "nzIcon",
+        "inputType": 0,
+        "description": "nz-result.nzIcon.description",
+        "type": "TemplateRef",
+        "typeRaw": "`TemplateRef<void>` | `string`",
+        "default": ""
+      },
+      {
+        "name": "nzExtra",
+        "inputType": 0,
+        "description": "nz-result.nzExtra.description",
+        "type": "TemplateRef",
+        "typeRaw": "`TemplateRef<void>` | `string`",
+        "default": ""
+      }
+    ],
     "lib": "ng-zorro-antd",
     "title": "nz-result.title",
     "description": "nz-result.description",
@@ -12875,7 +13137,58 @@ export const DATA = [
   {
     "type": "component",
     "selector": "nz-skeleton",
-    "types": {},
+    "types": {
+      "NzSkeletonAvatar": [
+        {
+          "name": "size",
+          "inputType": 0,
+          "description": "nz-skeleton.size.description",
+          "type": "number",
+          "typeRaw": "`number | 'large' | 'small' | 'default'`",
+          "default": ""
+        },
+        {
+          "name": "shape",
+          "inputType": 0,
+          "description": "nz-skeleton.shape.description",
+          "type": "Enum",
+          "typeRaw": "`'circle' | 'square'`",
+          "default": "",
+          "typeDefinition": [
+            "circle",
+            "square"
+          ]
+        }
+      ],
+      "NzSkeletonParagraph": [
+        {
+          "name": "rows",
+          "inputType": 0,
+          "description": "nz-skeleton.rows.description",
+          "type": "number",
+          "typeRaw": "`number`",
+          "default": ""
+        },
+        {
+          "name": "width",
+          "inputType": 0,
+          "description": "nz-skeleton.width.description",
+          "type": "number",
+          "typeRaw": "`number | string | Array<number | string>`",
+          "default": ""
+        }
+      ],
+      "NzSkeletonTitle": [
+        {
+          "name": "width",
+          "inputType": 0,
+          "description": "nz-skeleton.width.description",
+          "type": "number",
+          "typeRaw": "`number | string`",
+          "default": ""
+        }
+      ]
+    },
     "properties": [
       {
         "name": "nzActive",
@@ -12893,6 +13206,7 @@ export const DATA = [
         "type": "boolean",
         "typeRaw": "`boolean | NzSkeletonAvatar`",
         "default": "`false`",
+        "complexType": "NzSkeletonAvatar",
         "pureDefault": "false"
       },
       {
@@ -12911,6 +13225,7 @@ export const DATA = [
         "type": "boolean",
         "typeRaw": "`boolean | NzSkeletonParagraph`",
         "default": "`true`",
+        "complexType": "NzSkeletonParagraph",
         "pureDefault": "true"
       },
       {
@@ -12920,6 +13235,7 @@ export const DATA = [
         "type": "boolean",
         "typeRaw": "`boolean | NzSkeletonTitle`",
         "default": "`true`",
+        "complexType": "NzSkeletonTitle",
         "pureDefault": "true"
       },
       {
@@ -17189,6 +17505,14 @@ export const DATA = [
         "type": "string",
         "typeRaw": "`string`",
         "default": ""
+      },
+      {
+        "name": "ng-content",
+        "inputType": 0,
+        "description": "exception.ng-content.description",
+        "type": "TemplateRef",
+        "typeRaw": "`TemplateRef<void>`",
+        "default": ""
       }
     ],
     "lib": "@delon/abc",
@@ -17203,6 +17527,14 @@ export const DATA = [
     "selector": "footer-toolbar",
     "types": {},
     "properties": [
+      {
+        "name": "ng-content",
+        "inputType": 0,
+        "description": "footer-toolbar.ng-content.description",
+        "type": "string",
+        "typeRaw": "`-`",
+        "default": ""
+      },
       {
         "name": "errorCollect",
         "inputType": 0,
@@ -17342,6 +17674,14 @@ export const DATA = [
     "selector": "global-footer-item",
     "types": {},
     "properties": [
+      {
+        "name": "ng-content",
+        "inputType": 0,
+        "description": "global-footer-item.ng-content.description",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
+      },
       {
         "name": "href",
         "inputType": 0,
@@ -17495,8 +17835,56 @@ export const DATA = [
   {
     "type": "component",
     "selector": "numberToChinese",
-    "types": {},
-    "properties": [],
+    "types": {
+      "NumberToChineseOptions": [
+        {
+          "name": "minusSymbol",
+          "inputType": 0,
+          "description": "numberToChinese.minusSymbol.description",
+          "type": "string",
+          "typeRaw": "`string`",
+          "default": "`负`",
+          "pureDefault": "负"
+        },
+        {
+          "name": "validThrow",
+          "inputType": 0,
+          "description": "numberToChinese.validThrow.description",
+          "type": "boolean",
+          "typeRaw": "`boolean`",
+          "default": "`false`",
+          "pureDefault": "false"
+        }
+      ]
+    },
+    "properties": [
+      {
+        "name": "value",
+        "inputType": 0,
+        "description": "numberToChinese.value.description",
+        "type": "number",
+        "typeRaw": "`number | string`",
+        "default": ""
+      },
+      {
+        "name": "rmb",
+        "inputType": 0,
+        "description": "numberToChinese.rmb.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`true`",
+        "pureDefault": "true"
+      },
+      {
+        "name": "options",
+        "inputType": 0,
+        "description": "numberToChinese.options.description",
+        "type": "object",
+        "typeRaw": "`NumberToChineseOptions`",
+        "default": "",
+        "complexType": "NumberToChineseOptions"
+      }
+    ],
     "description": "numberToChinese.description",
     "lib": "@delon/abc",
     "title": "numberToChinese.title",
@@ -18027,6 +18415,14 @@ export const DATA = [
         "description": "result.extra.description",
         "type": "string",
         "typeRaw": "`string,TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "ng-content",
+        "inputType": 0,
+        "description": "result.ng-content.description",
+        "type": "string",
+        "typeRaw": "`ng-content`",
         "default": ""
       }
     ],

@@ -4,7 +4,7 @@ import * as MarkdownIt from 'markdown-it';
 import * as path from 'path';
 const yamlFront = require('yaml-front-matter');
 
-import { Directive, DirectiveProperty, InputAttrType } from '../../../src/magic/interfaces';
+import { Directive, DirectiveProperty, DirectiveType, InputAttrType } from '../../../src/magic/interfaces';
 import { FIX } from '../_fix';
 import { MERGE_DATA } from '../_merge';
 import { COG } from '../config';
@@ -109,13 +109,20 @@ function getDirective(): Directive[] {
     .findTags('h3', start + 1, end)
     .map((idx) => {
       const selectorList = (ast.getText(idx) || '').split('|').map((s) => s.trim());
-      const selector = selectorList[0];
+      let selector = selectorList[0];
+      let type: DirectiveType = 'component';
       if (selectorList.length === 1 && !/^\[?[a-z][-a-zA-Z0-9='\`]+\]?$/g.test(selector) && !COG.VALID_COMPONENT_NAMES.includes(selector)) {
-        return null;
+        // pipe process
+        if (selector.startsWith('__')) {
+          selector = selector.replace(/__/g, '');
+          type = 'pipe';
+        } else {
+          return null;
+        }
       }
 
       const item: Directive = {
-        type: 'component',
+        type,
         selector,
         types: {},
       };
@@ -185,12 +192,12 @@ function getDirective(): Directive[] {
 function getProperties(directive: Directive, data: string[][]): DirectiveProperty[] {
   return data
     .filter((tds) => tds.length >= 4)
-    .map((tds) =>
-      genPropertyItem(
+    .map((tds) => {
+      return genPropertyItem(
         directive,
         tds.map((v) => v || ''),
-      ),
-    )
+      );
+    })
     .filter((w) => !!w);
 }
 
@@ -198,13 +205,14 @@ function genPropertyItem(directive: Directive, data: string[]): DirectivePropert
   if (COG.INGORE_PROPERTIES.includes(data[0])) return null;
   let name = '';
   const orgName = data[0].trim();
-  const standardNameMatch = orgName.match(/((?:\[|\(|\[\()[\-a-zA-Z0-9]+(?:\)\]|\]|\)))/g);
+  const standardNameMatch = orgName.match(/((?:`|\[|\(|\[\()[\-a-zA-Z0-9]+(?:`|\)\]|\]|\)))/g);
   if (standardNameMatch != null && standardNameMatch.length > 0) {
     name = standardNameMatch[0];
   }
   if (name.length <= 0 && /nz[A-Za-z]+/g.test(orgName)) {
     name = orgName;
   }
+
   // ingore includes `Deprecated` in description
   if (name.length <= 0 || data[1].trim().includes('Deprecated')) return null;
 
@@ -229,6 +237,9 @@ function genPropertyItem(directive: Directive, data: string[]): DirectivePropert
   } else if (item.name.startsWith('#')) {
     item.name = item.name.substr(1);
     item.inputType = InputAttrType.Template;
+  } else if (item.name.startsWith('`')) {
+    item.name = trimTag(item.name, '`');
+    item.inputType = InputAttrType.Input;
   }
 
   // type

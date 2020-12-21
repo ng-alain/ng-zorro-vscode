@@ -1,8 +1,8 @@
 import { ExtensionContext, languages } from 'vscode';
+import { Notifier } from './notifier';
 import NAAutoCompletionItemProvider from './plugin/completion-provider';
 import NAHoverProvider from './plugin/hover-provider';
-import { INIT, CONFIG } from './resources';
-import { Notifier } from './notifier';
+import { CONFIG, INIT } from './resources';
 
 const notifier = new Notifier();
 

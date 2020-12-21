@@ -5,15 +5,15 @@ import {
   CompletionItemKind,
   CompletionItemProvider,
   CompletionList,
+  MarkdownString,
   Position,
   ProviderResult,
+  Range,
   SnippetString,
   TextDocument,
-  Range,
-  MarkdownString,
 } from 'vscode';
-import { DirectiveProperty, Directive, DirectiveTypeDefinition, InputAttrType, DirectiveTypeDefinitionComplex, Tag } from '../interfaces';
-import { getDirective, CONFIG, RESOURCES } from '../resources';
+import { Directive, DirectiveProperty, DirectiveTypeDefinition, DirectiveTypeDefinitionComplex, InputAttrType, Tag } from '../interfaces';
+import { CONFIG, getDirective, RESOURCES } from '../resources';
 import { getTag, inTemplate } from '../utils';
 
 export default class implements CompletionItemProvider {
@@ -24,7 +24,7 @@ export default class implements CompletionItemProvider {
     context: CompletionContext,
   ): ProviderResult<CompletionItem[] | CompletionList> {
     if (!inTemplate(document, position)) return [];
-    let char = context.triggerCharacter;
+    const char = context.triggerCharacter;
     switch (char) {
       // Component
       case '<':
@@ -41,11 +41,11 @@ export default class implements CompletionItemProvider {
   }
 
   private genComponent(char: string): CompletionItem[] {
-    return RESOURCES.map(i => this.renderCompletionItem(char, i, false));
+    return RESOURCES.filter((w) => w.type !== 'pipe').map((i) => this.renderCompletionItem(char, i, false));
   }
 
   private genDirective(): CompletionItem[] {
-    return RESOURCES.filter(w => w.type === 'directive').map(i => this.renderCompletionItem('', i, true));
+    return RESOURCES.filter((w) => w.type === 'directive').map((i) => this.renderCompletionItem('', i, true));
   }
 
   private renderCompletionItem(char: string, i: Directive, isClean: boolean): CompletionItem {
@@ -79,8 +79,8 @@ export default class implements CompletionItemProvider {
     }
 
     const res: CompletionItem[] = [];
-    directives.forEach(directive => {
-      const list = this.genPropertiesByDirective(document, position, triggerCharacter, tag, directive).map(i => {
+    directives.forEach((directive) => {
+      const list = this.genPropertiesByDirective(document, position, triggerCharacter, tag, directive).map((i) => {
         i.label = `${directive.selector}.${i.label}`;
         return i;
       });
@@ -99,7 +99,7 @@ export default class implements CompletionItemProvider {
     if (tag.isOnAttrValue) {
       const attr = tag.attributes[tag.attrName];
       if (attr.value.trim() === '') {
-        const property = directive.properties.find(w => w.name === attr.name);
+        const property = directive.properties.find((w) => w.name === attr.name);
         if (property && property.typeDefinition) {
           let range = document.getWordRangeAtPosition(position, /["]\s*["]/);
           if (range) {
@@ -121,9 +121,9 @@ export default class implements CompletionItemProvider {
         }
       } else if (attr.value.startsWith('{')) {
         // 复杂类型
-        const property = directive.properties.find(w => w.name === attr.name);
+        const property = directive.properties.find((w) => w.name === attr.name);
         if (property && property.complexType) {
-          return directive.types[property.complexType].map(i => {
+          return directive.types[property.complexType].map((i) => {
             const item = new CompletionItem(i.name, CompletionItemKind.Value);
             item.documentation = i._doc;
             return item;
@@ -140,9 +140,9 @@ export default class implements CompletionItemProvider {
         range = new Range(new Position(range.start.line, range.start.character + 1), new Position(range.end.line, range.end.character));
       }
       return directive.properties
-        .filter(w => existsAttrList.indexOf(w.name) === -1)
-        .filter(w => w.inputType === InputAttrType.Input || w.inputType === InputAttrType.InputOutput)
-        .map(i => this.renderAttrCompletionItem(tag, i, 'property', range));
+        .filter((w) => existsAttrList.indexOf(w.name) === -1)
+        .filter((w) => w.inputType === InputAttrType.Input || w.inputType === InputAttrType.InputOutput)
+        .map((i) => this.renderAttrCompletionItem(tag, i, 'property', range));
     }
     if (triggerCharacter === '(') {
       let range = document.getWordRangeAtPosition(position, /\(\s*\)/);
@@ -150,13 +150,13 @@ export default class implements CompletionItemProvider {
         range = new Range(new Position(range.start.line, range.start.character + 1), new Position(range.end.line, range.end.character));
       }
       return directive.properties
-        .filter(w => existsAttrList.indexOf(w.name) === -1)
-        .filter(w => w.inputType === InputAttrType.Output || w.inputType === InputAttrType.InputOutput)
-        .map(i => this.renderAttrCompletionItem(tag, i, 'event', range));
+        .filter((w) => existsAttrList.indexOf(w.name) === -1)
+        .filter((w) => w.inputType === InputAttrType.Output || w.inputType === InputAttrType.InputOutput)
+        .map((i) => this.renderAttrCompletionItem(tag, i, 'event', range));
     }
     return directive.properties
-      .filter(w => existsAttrList.indexOf(w.name) === -1)
-      .map(i => this.renderAttrCompletionItem(tag, i, '', null));
+      .filter((w) => existsAttrList.indexOf(w.name) === -1)
+      .map((i) => this.renderAttrCompletionItem(tag, i, '', null));
   }
 
   private renderAttrCompletionItem(tag: Tag, property: DirectiveProperty, ngBindingType: string, range: Range): CompletionItem {
@@ -168,7 +168,7 @@ export default class implements CompletionItemProvider {
     // 优化复杂类型
     if (property.inputType === InputAttrType.Complex) {
       const complexDefinitionList = this.getComplexDefinition(tag, property.typeDefinition as DirectiveTypeDefinitionComplex)
-        .map(i => i.value)
+        .map((i) => i.value)
         .join(',');
       item.insertText = new SnippetString(`${property.name}="\${1|${complexDefinitionList}|}"$0`);
       return item;
@@ -263,7 +263,7 @@ export default class implements CompletionItemProvider {
   private getComplexDefinition(tag: Tag, definitionComplex: DirectiveTypeDefinitionComplex): DirectiveTypeDefinition[] {
     const expectAttr = tag.attributes[definitionComplex.conditionField];
     const expectValue = expectAttr ? expectAttr.value : '';
-    let expectIndex = definitionComplex.list.findIndex(w => w.conditionValue == expectValue);
+    const expectIndex = definitionComplex.list.findIndex((w) => w.conditionValue === expectValue);
     return definitionComplex.list[expectIndex < 0 ? 0 : expectIndex].values;
   }
 
