@@ -9,10 +9,10 @@
   "licenseUrl": "LICENSE",
   "scripts": {
     "postinstall": "node ./node_modules/vscode/bin/install",
-    "release": "npm run resource && gulp package",
     "build": "gulp build",
     "watch": "gulp watch",
-    "resource": "bash ./scripts/resource/build.sh"
+    "resource": "bash ./scripts/resource/build.sh",
+    "release": "npm run resource && gulp package"
   },
   "main": "./out/extension",
   "homepage": "https://github.com/cipchk/ng-zorro-vscode/blob/master/README.md",

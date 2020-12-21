@@ -29,4 +29,8 @@ export const COG = {
     'nz-form-label': { component: 'nz-col', zh: '[nz-col]', en: '[nz-col]' },
     'nz-form-control': { component: 'nz-col', zh: '[nz-col]', en: '[nz-col]' },
   },
+  /** 强制合并属性至组件内 */
+  ENFORCE_PROPERTIES: {
+    'nz-progress': ['`nzType="line"`', '`nzType="circle"`', '`nzType="dashboard"`'],
+  },
 };

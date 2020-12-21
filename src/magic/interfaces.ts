@@ -2,7 +2,7 @@ import { MarkdownString } from 'vscode';
 
 export const NAME = `ng-zorro-vscode`;
 
-export type DirectiveType = 'component' | 'directive';
+export type DirectiveType = 'component' | 'directive' | 'pipe';
 
 export interface Directive {
   /**

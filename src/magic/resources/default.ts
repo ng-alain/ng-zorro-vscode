@@ -518,6 +518,15 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-icon.nzTwotoneColor.description': localize('nz-icon.nzTwotoneColor.description', 'Only support the two-tone icon. Specific the primary color.'),
 'nz-icon.nzIconfont.description': localize('nz-icon.nzIconfont.description', 'Type of the icon from iconfont'),
 'nz-icon.nzRotate.description': localize('nz-icon.nzRotate.description', 'Rotate degrees'),
+'nz-image.title': localize('nz-image.title', 'Image'),
+'nz-image.whenToUse': localize('nz-image.whenToUse', '- When you need to display pictures.\n- Display when loading a large image or fault tolerant handling when loading fail.'),
+'nz-image.description': localize('nz-image.description', 'Previewable image.'),
+'nz-image.nzSrc.description': localize('nz-image.nzSrc.description', 'Image path'),
+'nz-image.nzFallback.description': localize('nz-image.nzFallback.description', 'Load failure fault-tolerant src'),
+'nz-image.nzPlaceholder.description': localize('nz-image.nzPlaceholder.description', 'Load placeholder src'),
+'nz-image.nzDisablePreview.description': localize('nz-image.nzDisablePreview.description', 'Whether to disable the preview'),
+'nz-image.nzCloseOnNavigation.description': localize('nz-image.nzCloseOnNavigation.description', 'Close preview while navigating'),
+'nz-image.nzDirection.description': localize('nz-image.nzDirection.description', 'Text directionality'),
 'nz-input.title': localize('nz-input.title', 'Input'),
 'nz-input.whenToUse': localize('nz-input.whenToUse', '- A user input in a form field is needed.\n- A search input is required.'),
 'nz-input.description': localize('nz-input.description', 'All props of input supported by [w3c standards](https://www.w3schools.com/tags/tag_input.asp) and Angular can used in `nz-input`.'),
@@ -805,6 +814,11 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-progress.nzStrokeLinecap.description': localize('nz-progress.nzStrokeLinecap.description', 'to set the style of the progress linecap'),
 'nz-progress.nzStrokeColor.description': localize('nz-progress.nzStrokeColor.description', 'color of progress bar, render linear-gradient when passing an object'),
 'nz-progress.nzSuccessPercent.description': localize('nz-progress.nzSuccessPercent.description', 'segmented success percent'),
+'nz-progress.nzStrokeWidth.description': localize('nz-progress.nzStrokeWidth.description', 'to set the width of the dashboard progress bar, unit: percentage of the canvas width'),
+'nz-progress.nzSteps.description': localize('nz-progress.nzSteps.description', 'the total step count'),
+'nz-progress.nzWidth.description': localize('nz-progress.nzWidth.description', 'to set the canvas width of the dashboard progress bar, unit: `px`'),
+'nz-progress.nzGapDegree.description': localize('nz-progress.nzGapDegree.description', 'the gap degree of half circle, 0 ~ 360'),
+'nz-progress.nzGapPosition.description': localize('nz-progress.nzGapPosition.description', 'the gap position'),
 'nz-radio.title': localize('nz-radio.title', 'Radio'),
 'nz-radio.whenToUse': localize('nz-radio.whenToUse', '- Used to select a single state in multiple options.\n- The difference between Select is that Radio is visible to user and can facilitate the comparison of choice. So, when you want to use Radio, option should not be too much.'),
 'nz-radio.description': localize('nz-radio.description', 'Radio.'),
@@ -9473,6 +9487,70 @@ export const DATA = [
   },
   {
     "type": "directive",
+    "selector": "nz-image",
+    "types": {},
+    "properties": [
+      {
+        "name": "nzSrc",
+        "inputType": 0,
+        "description": "nz-image.nzSrc.description",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
+      },
+      {
+        "name": "nzFallback",
+        "inputType": 0,
+        "description": "nz-image.nzFallback.description",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
+      },
+      {
+        "name": "nzPlaceholder",
+        "inputType": 0,
+        "description": "nz-image.nzPlaceholder.description",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
+      },
+      {
+        "name": "nzDisablePreview",
+        "inputType": 0,
+        "description": "nz-image.nzDisablePreview.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzCloseOnNavigation",
+        "inputType": 0,
+        "description": "nz-image.nzCloseOnNavigation.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzDirection",
+        "inputType": 0,
+        "description": "nz-image.nzDirection.description",
+        "type": "object",
+        "typeRaw": "`Direction`",
+        "default": "`'ltr'`",
+        "pureDefault": "ltr"
+      }
+    ],
+    "lib": "ng-zorro-antd",
+    "title": "nz-image.title",
+    "description": "nz-image.description",
+    "whenToUse": "nz-image.whenToUse",
+    "doc": "/components/image/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/image"
+  },
+  {
+    "type": "directive",
     "selector": "nz-input",
     "types": {},
     "properties": [
@@ -11731,6 +11809,83 @@ export const DATA = [
         "typeRaw": "`number`",
         "default": "0",
         "pureDefault": "0"
+      },
+      {
+        "name": "nzStrokeWidth",
+        "inputType": 0,
+        "description": "nz-progress.nzStrokeWidth.description",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`8`",
+        "pureDefault": "8"
+      },
+      {
+        "name": "nzSteps",
+        "inputType": 0,
+        "description": "nz-progress.nzSteps.description",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": ""
+      },
+      {
+        "name": "nzWidth",
+        "inputType": 0,
+        "description": "nz-progress.nzWidth.description",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`132`",
+        "pureDefault": "132"
+      },
+      {
+        "name": "nzStrokeWidth",
+        "inputType": 0,
+        "description": "nz-progress.nzStrokeWidth.description",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`6`",
+        "pureDefault": "6"
+      },
+      {
+        "name": "nzWidth",
+        "inputType": 0,
+        "description": "nz-progress.nzWidth.description",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`132`",
+        "pureDefault": "132"
+      },
+      {
+        "name": "nzStrokeWidth",
+        "inputType": 0,
+        "description": "nz-progress.nzStrokeWidth.description",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`6`",
+        "pureDefault": "6"
+      },
+      {
+        "name": "nzGapDegree",
+        "inputType": 0,
+        "description": "nz-progress.nzGapDegree.description",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`0`",
+        "pureDefault": "0"
+      },
+      {
+        "name": "nzGapPosition",
+        "inputType": 0,
+        "description": "nz-progress.nzGapPosition.description",
+        "type": "Enum",
+        "typeRaw": "`'top' | 'right' | 'bottom' | 'left'`",
+        "default": "`'top'`",
+        "typeDefinition": [
+          "top",
+          "right",
+          "bottom",
+          "left"
+        ],
+        "pureDefault": "top"
       }
     ],
     "lib": "ng-zorro-antd",

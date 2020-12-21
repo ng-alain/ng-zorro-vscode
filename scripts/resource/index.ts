@@ -40,9 +40,6 @@ function genObject(): void {
       langData[lang][genLocalizeKey(i, 'description')] = i.description;
       i.description = genLocalizeKey(i, 'description');
 
-      if (i.selector === 'nz-button') {
-        debugger;
-      }
       (i.properties || []).forEach((p) => {
         langData[lang][genLocalizeKey(i, 'description', p)] = p.description;
         p.description = genLocalizeKey(i, 'description', p);

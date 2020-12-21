@@ -110,7 +110,7 @@ function getDirective(): Directive[] {
     .map((idx) => {
       const selectorList = (ast.getText(idx) || '').split('|').map((s) => s.trim());
       const selector = selectorList[0];
-      if (selectorList.length === 1 && !/^\[?[a-z][-a-zA-Z0-9]+\]?$/g.test(selector) && !COG.VALID_COMPONENT_NAMES.includes(selector)) {
+      if (selectorList.length === 1 && !/^\[?[a-z][-a-zA-Z0-9='\`]+\]?$/g.test(selector) && !COG.VALID_COMPONENT_NAMES.includes(selector)) {
         return null;
       }
 
@@ -434,6 +434,8 @@ function metaToItem(zone: string, filePath: string, meta: any): Directive[] {
           i.properties.push(ei);
         });
     }
+    addEnforceProperties(i);
+    // 添加
     i.properties.forEach((p) => {
       // override type definition
       if (FIX.typeDefinition[i.selector]) {
@@ -458,11 +460,24 @@ function metaToItem(zone: string, filePath: string, meta: any): Directive[] {
   });
 }
 
+function addEnforceProperties(i: Directive): void {
+  const arr = COG.ENFORCE_PROPERTIES[i.selector] as string[];
+  if (!Array.isArray(arr) || arr.length === 0) return;
+
+  arr.forEach((title) => {
+    const start = ast.offsetAt(title);
+    const properties = getProperties(i, ast.getTable(start));
+    if (properties) {
+      i.properties.push(...properties);
+    }
+  });
+}
+
 function verify(filePaths: string[]) {
   // 获取所有组件KEY，以目录名为准，非完整组件名，但可以区分
   const notExistsList = filePaths
     .map((p) => {
-      if (~p.indexOf('ng-zorro-antd')) {
+      if (p.includes('ng-zorro-antd')) {
         const key = p
           .split('ng-zorro-antd')[1]
           .split(path.sep)
