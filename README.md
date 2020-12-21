@@ -10,6 +10,7 @@
 
 | Version | Download |
 |---------|----------|
+| `10.x` | [10.0.0](https://raw.githubusercontent.com/ng-alain/ng-zorro-vscode/master/cipchk.ng-zorro-vscode-en-US-9.2.0.vsix) |
 | `9.x` | [9.2.0](https://raw.githubusercontent.com/ng-alain/ng-zorro-vscode/master/cipchk.ng-zorro-vscode-en-US-9.2.0.vsix) |
 | `8.x` | [8.3.3](https://raw.githubusercontent.com/ng-alain/ng-zorro-vscode/master/cipchk.ng-zorro-vscode-8.3.3.vsix) |
 | `7.x` | [7.3.4](https://raw.githubusercontent.com/ng-alain/ng-zorro-vscode/master/cipchk.ng-zorro-vscode-7.3.4.vsix) |
