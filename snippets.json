@@ -1,367 +1,367 @@
 {
   "nzs_autocomplete_custom-label": {
-    "prefix": "custom-label",
+    "prefix": "nzs-autocomplete-custom-label",
     "body": "<nz-input-group nzSize=\"large\" [nzSuffix]=\"suffixIcon\">\n  <input [(ngModel)]=\"$1\" (input)=\"$2($event.target?.value)\" placeholder=\"$3\" nz-input [nzAutocomplete]=\"${4:auto}\" />\n  <ng-template #suffixIcon>\n    <i nz-icon type=\"search\"></i>\n  </ng-template>\n</nz-input-group>\n<nz-autocomplete nzBackfill #$4>\n  <nz-auto-optgroup *ngFor=\"let group of optionGroups\" [nzLabel]=\"groupTitle\">\n    <ng-template #groupTitle>\n      <span>\n        {{group.title}}\n        <a class=\"more-link\" href=\"https://www.google.com/search?q=ng+zorro\" target=\"_blank\">More</a>\n      </span>\n    </ng-template>\n    <nz-auto-option *ngFor=\"let option of group.children\" [nzValue]=\"option.title\">\n      {{option.title}}\n      <span class=\"certain-search-item-count\">{{option.count}}</span>\n    </nz-auto-option>\n  </nz-auto-optgroup>\n</nz-autocomplete>",
-    "description": "Autocomplete includes custom label\n\n自定义选项"
+    "description": "Autocomplete includes custom label(自定义选项)"
   },
   "nzs_autocomplete_data-source": {
-    "prefix": "data-source",
+    "prefix": "nzs-autocomplete-data-source",
     "body": "<input nz-input [(ngModel)]=\"$1\" [nzAutocomplete]=\"${2:auto}\">\n<nz-autocomplete [nzDataSource]=\"${3:['12345', '23456', '34567']}\" #$2></nz-autocomplete>",
-    "description": "Autocomplete includes data source\n\n指定数据源"
+    "description": "Autocomplete includes data source(指定数据源)"
   },
   "nzs_autocomplete": {
-    "prefix": "default",
+    "prefix": "nzs-autocomplete",
     "body": "<input [(ngModel)]=\"$1\" (input)=\"$2($event.target?.value)\" placeholder=\"$3\" nz-input [nzAutocomplete]=\"${4:auto}\">\n<nz-autocomplete nzBackfill #$4>\n  <nz-auto-option *ngFor=\"let ${6:item} of $5\" [nzValue]=\"${6}\">\n    {{$6}}\n  </nz-auto-option>\n</nz-autocomplete>",
-    "description": "Autocomplete\n\n自动完成"
+    "description": "Autocomplete(自动完成)"
   },
   "nzs_breadcrumb": {
-    "prefix": "default",
+    "prefix": "nzs-breadcrumb",
     "body": "<nz-breadcrumb>\n  <nz-breadcrumb-item><a routerLink=\"/${2}\">${1}</a></nz-breadcrumb-item>\n  $0\n</nz-breadcrumb>",
-    "description": "Breadcrumb\n\n面包屑"
+    "description": "Breadcrumb(面包屑)"
   },
   "nzs_breadcrumb_icon": {
-    "prefix": "icon",
+    "prefix": "nzs-breadcrumb-icon",
     "body": "<nz-breadcrumb-item>\n  <a [routerLink]=\"['/${1}']\"><i nz-icon type=\"${2:home}\"></i>${3:<span>${4:Home}</span>}</a>\n</nz-breadcrumb-item>\n$0",
-    "description": "Breadcrumb includes icon\n\n图标"
+    "description": "Breadcrumb includes icon(图标)"
   },
   "nzs_breadcrumb_item": {
-    "prefix": "item",
+    "prefix": "nzs-breadcrumb-item",
     "body": "<nz-breadcrumb-item><a routerLink=\"/${2}\">${1}</a></nz-breadcrumb-item>\n$0",
-    "description": "Breadcrumb includes item\n\n面包屑项"
+    "description": "Breadcrumb includes item(面包屑项)"
   },
   "nzs_checkbox": {
-    "prefix": "default",
+    "prefix": "nzs-checkbox",
     "body": "<label nz-checkbox [(ngModel)]=\"${1}\" name=\"${1}\">$0</label>",
-    "description": "Checkbox\n\n多选框"
+    "description": "Checkbox(多选框)"
   },
   "nzs_checkbox_group": {
-    "prefix": "group",
+    "prefix": "nzs-checkbox-group",
     "body": "<nz-checkbox-group [(ngModel)]=\"${1}\" name=\"${1}\"${2: (ngModelChange)=\"${3}\"}></nz-checkbox-group>\n$0",
-    "description": "Checkbox group\n\n多选框组"
+    "description": "Checkbox group(多选框组)"
   },
   "nzs_checkbox_layout": {
-    "prefix": "layout",
+    "prefix": "nzs-checkbox-layout",
     "body": "<nz-checkbox-wrapper style=\"width: 100%;\" (nzOnChange)=\"${1:change}($event)\">\n  <nz-row>\n    <nz-col nzSpan=\"8\">\n      <label nz-checkbox nzValue=\"A\" [ngModel]=\"true\">A</label>\n    </nz-col>\n    <nz-col nzSpan=\"8\">\n      <label nz-checkbox nzValue=\"B\">B</label>\n    </nz-col>\n  </nz-row>\n</nz-checkbox-wrapper>",
-    "description": "Checkbox use with Grid\n\n多选框组布局"
+    "description": "Checkbox use with Grid(多选框组布局)"
   },
   "nzs_date": {
-    "prefix": "default",
+    "prefix": "nzs-date",
     "body": "<nz-date-picker [(ngModel)]=\"${1:value}\" name=\"${1}\" nzPlaceHolder=\"${3|Please select data,Please select begin time,Please select end time|}\"${4: nzShowTime}></nz-date-picker>",
-    "description": "Date picker\n\n日期选择框"
+    "description": "Date picker(日期选择框)"
   },
   "nzs_date_month": {
-    "prefix": "month",
+    "prefix": "nzs-date-month",
     "body": "<nz-month-picker [(ngModel)]=\"${1:value}\" name=\"${1}\" nzPlaceHolder=\"${3|Please select month|}\"></nz-month-picker>",
-    "description": "Month picker\n\n月份选择框"
+    "description": "Month picker(月份选择框)"
   },
   "nzs_date_range": {
-    "prefix": "range",
+    "prefix": "nzs-date-range",
     "body": "<nz-range-picker [(ngModel)]=\"${1:value}\" name=\"${1}\" nzPlaceHolder=\"${3|Please select data|}\"${4: nzShowTime}></nz-range-picker>",
-    "description": "Date range picker\n\n日期范围选择框"
+    "description": "Date range picker(日期范围选择框)"
   },
   "nzs_date_week": {
-    "prefix": "week",
+    "prefix": "nzs-date-week",
     "body": "<nz-week-picker [(ngModel)]=\"${1:value}\" name=\"${1}\" nzPlaceHolder=\"${3|Please select week|}\"></nz-week-picker>",
-    "description": "Week picker\n\n周选择框"
+    "description": "Week picker(周选择框)"
   },
   "nzs_drawer": {
-    "prefix": "default",
+    "prefix": "nzs-drawer",
     "body": "<nz-drawer\n  [(nzVisible)]=\"${1:visible}\"\n  [nzTitle]=\"${2:Title}\"\n  nzPlacement=\"${3|top,right,bottom,left|}\"\n  (nzOnClose)=\"close()\">\n  $0\n</nz-drawer>",
-    "description": "抽屉\n\n下拉菜单"
+    "description": "抽屉(下拉菜单)"
   },
   "nzs_dropdown_button": {
-    "prefix": "button",
+    "prefix": "nzs-dropdown-button",
     "body": "<nz-dropdown-button>\n  ${1}\n  <ul nz-menu>\n    <li nz-menu-item>$0</li>\n    <li nz-menu-item><a>2nd menu item</a></li>\n  </ul>\n</nz-dropdown-button>",
-    "description": "Dropdown button style\n\n下拉菜单按钮"
+    "description": "Dropdown button style(下拉菜单按钮)"
   },
   "nzs_dropdown_button.style": {
-    "prefix": "button.style",
+    "prefix": "nzs-dropdown-button.style",
     "body": "<nz-dropdown>\n  <button nz-button nz-dropdown><span>${1}</span><i nz-icon type=\"${2|down,ellipsis|}\"></i></button>\n  <ul nz-menu>\n    <li nz-menu-item>$0</li>\n    <li nz-menu-item><a>2nd menu item</a></li>\n  </ul>\n</nz-dropdown>",
-    "description": "Dropdown button style\n\n下拉菜单按钮内风格"
+    "description": "Dropdown button style(下拉菜单按钮内风格)"
   },
   "nzs_dropdown": {
-    "prefix": "default",
+    "prefix": "nzs-dropdown",
     "body": "<nz-dropdown>\n  <a nz-dropdown>${1} <i nz-icon type=\"${2|down,ellipsis|}\"></i></a>\n  <ul nz-menu nzSelectable>\n    <li nz-menu-item>$0</li>\n    <li nz-menu-item><a>2nd menu item</a></li>\n  </ul>\n</nz-dropdown>",
-    "description": "Dropdown\n\n下拉菜单"
+    "description": "Dropdown(下拉菜单)"
   },
   "nzs_form_control-responsive": {
-    "prefix": "control-responsive",
+    "prefix": "nzs-form-control-responsive",
     "body": "<nz-form-control nzSpan=\"${1:1-24}\" [nzXs]=\"${4:1-24}\" [nzSm]=\"${5:1-24}\" [nzMd]=\"${6:1-24}\" [nzLg]=\"${7:1-24}\" [nzXl]=\"${8:1-24}\" [nzXXl]=\"${9:1-24}\">\n  $0\n</nz-form-control>",
-    "description": "Control is responsive\n\n控件为响应式"
+    "description": "Control is responsive(控件为响应式)"
   },
   "nzs_form_control": {
-    "prefix": "control",
+    "prefix": "nzs-form-control",
     "body": "<nz-form-control nzSpan=\"${1:1-24}\">\n  $0\n</nz-form-control>",
-    "description": "Control\n\n控件"
+    "description": "Control(控件)"
   },
   "nzs_form": {
-    "prefix": "default",
+    "prefix": "nzs-form",
     "body": "<form nz-form [formGroup]=\"${1:groupName}\" (ngSubmit)=\"_submitForm($event, ${1:groupName}.value)\"${2: nzLayout=\"${3|horizontal,vertical,inline|}\"}>\n  $0\n</form>",
-    "description": "Form\n\n表单，向下为表单项"
+    "description": "Form(表单，向下为表单项)"
   },
   "nzs_form_explain-error": {
-    "prefix": "explain-error",
+    "prefix": "nzs-form-explain-error",
     "body": "<nz-form-explain *ngIf=\"(${1:name}.dirty || ${1:name}.touched) && ${1:name}.errors?.${2|required,pattern,email,maxlength,minlength,min,max|}\">$3</nz-form-explain>\n$0",
-    "description": "A error message and only one\n\n表单提示信息带响应式表单错误判断，只能显示一个"
+    "description": "A error message and only one(表单提示信息带响应式表单错误判断，只能显示一个)"
   },
   "nzs_form_item": {
-    "prefix": "item",
+    "prefix": "nzs-form-item",
     "body": "<nz-form-item ${1: nzFlex}>\n  $0\n</nz-form-item>",
-    "description": "Used to separate the item in forms, contains label(optional) and control field.\n\n表单项，向下为标签和控件"
+    "description": "Used to separate the item in forms, contains label(optional) and control field.(表单项，向下为标签和控件)"
   },
   "nzs_form_label-responsive": {
-    "prefix": "label-responsive",
+    "prefix": "nzs-form-label-responsive",
     "body": "<nz-form-label nzFor=\"$1\" nzSpan=\"${2:1-24}\"${3: nzRequired} [nzXs]=\"${4:1-24}\" [nzSm]=\"${5:1-24}\" [nzMd]=\"${6:1-24}\" [nzLg]=\"${7:1-24}\" [nzXl]=\"${8:1-24}\" [nzXXl]=\"${9:1-24}\">\n  $0\n</nz-form-label>",
-    "description": "The label of the form item.\n\n标签为响应式"
+    "description": "The label of the form item.(标签为响应式)"
   },
   "nzs_form_label": {
-    "prefix": "label",
+    "prefix": "nzs-form-label",
     "body": "<nz-form-label nzFor=\"$1\" nzSpan=\"${2:1-24}\"${3: nzRequired}>$0</nz-form-label>",
-    "description": "The label of the form item, optional.\n\n标签"
+    "description": "The label of the form item, optional.(标签)"
   },
   "nzs_grid_col": {
-    "prefix": "col",
+    "prefix": "nzs-grid-col",
     "body": "<div nz-col${1: nzSpan=\"${2:0-24}\"}>\n  $0\n</div>",
-    "description": "column\n\n列"
+    "description": "column(列)"
   },
   "nzs_grid": {
-    "prefix": "default",
+    "prefix": "nzs-grid",
     "body": "<div nz-row${1: nzGutter=\"${2|0,8,16,24,32,64|}\"}>\n  <div nz-col nzSpan=\"${3:0-24}\"${4: nzOffset=\"${5:0-24}\"}>\n    $0\n  </div>\n</div>",
-    "description": "Grids System\n\n栅格系统"
+    "description": "Grids System(栅格系统)"
   },
   "nzs_grid_responsive": {
-    "prefix": "responsive",
+    "prefix": "nzs-grid-responsive",
     "body": "<div nz-col nzXs=\"${1:1-24}\" nzSm=\"${2:1-24}\" nzMd=\"${3:1-24}\" nzLg=\"${4:1-24}\" nzXl=\"${5:1-24}\" nzXXl=\"${6:1-24}\">\n  $0\n</div>",
-    "description": "Responsive grid system\n\n响应式栅格系统"
+    "description": "Responsive grid system(响应式栅格系统)"
   },
   "nzs_grid_row-flex": {
-    "prefix": "row-flex",
+    "prefix": "nzs-grid-row-flex",
     "body": "<div nz-row nzType=\"flex\"${1: nzJustify=\"${2|start,center,end,space-between,space-around|}\"}${3: nzAlign=\"${4|top,middle,bottom|}\"}>\n  $0\n</div>",
-    "description": "Responsive grid system flex layout\n\n响应式栅格系统Flex布局"
+    "description": "Responsive grid system flex layout(响应式栅格系统Flex布局)"
   },
   "nzs_grid_row": {
-    "prefix": "row",
+    "prefix": "nzs-grid-row",
     "body": "<div nz-row${1: nzGutter=\"${2|8,16,24,32,64|}\"}>\n  $0\n</div>",
-    "description": "row\n\n行"
+    "description": "row(行)"
   },
   "nzs_icon_spin": {
-    "prefix": "spin",
+    "prefix": "nzs-icon-spin",
     "body": "<i nz-icon spin type=\"${1|loading,sync|}\"></i>",
-    "description": "Rotate icon\n\n旋转图标"
+    "description": "Rotate icon(旋转图标)"
   },
   "nzs_input_addon-icon": {
-    "prefix": "addon-icon",
+    "prefix": "nzs-input-addon-icon",
     "body": "<nz-input-group${1: nzCompact}${2: nzAddOnBeforeIcon=\"anticon anticon-setting\"}${3: nzAddOnAfterIcon=\"anticon anticon-setting\"}>\n  <input nz-input [(ngModel)]=\"${4:name}\" id=\"${4}\" name=\"${4}\"${5: placeholder=\"${5}\"}>\n</nz-input-group>\n$0",
-    "description": "addon icon\n\n前后置标签按钮"
+    "description": "addon icon(前后置标签按钮)"
   },
   "nzs_input_addon-text": {
-    "prefix": "addon-text",
+    "prefix": "nzs-input-addon-text",
     "body": "<nz-input-group${1: nzCompact}${2: nzAddOnBefore=\"http://\"}${3: nzAddOnAfter=\"RMB\"}>\n  <input nz-input [(ngModel)]=\"${4:name}\" id=\"${4}\" name=\"${4}\"${5: placeholder=\"${5}\"}>\n</nz-input-group>\n$0",
-    "description": "addon text\n\n前后置文本按钮"
+    "description": "addon text(前后置文本按钮)"
   },
   "nzs_input": {
-    "prefix": "default",
+    "prefix": "nzs-input",
     "body": "<input nz-input [(ngModel)]=\"${1:name}\" id=\"${1}\" name=\"${1}\"${2: placeholder=\"${3}\"}>",
-    "description": "Input\n\n输入框"
+    "description": "Input(输入框)"
   },
   "nzs_input_group": {
-    "prefix": "group",
+    "prefix": "nzs-input-group",
     "body": "<nz-input-group${1: nzCompact}${2: nzSearch}>\n  <input nz-input [(ngModel)]=\"${2:name}\" id=\"${2}\" name=\"${2}\"${3: placeholder=\"${4}\"}>\n</nz-input-group>\n$0",
-    "description": "Input group\n\n输入框组合"
+    "description": "Input group(输入框组合)"
   },
   "nzs_input_prefix": {
-    "prefix": "prefix",
+    "prefix": "nzs-input-prefix",
     "body": "<input nz-input [(ngModel)]=\"${1:name}\" id=\"${1}\" name=\"${1}\" nzPrefix=\"anticon anticon-${2:user}\"${3: placeholder=\"${4}\"}>",
-    "description": "Input includes prefix\n\n带有前缀图标的 input"
+    "description": "Input includes prefix(带有前缀图标的 input)"
   },
   "nzs_input_search": {
-    "prefix": "search",
+    "prefix": "nzs-input-search",
     "body": "<nz-input-group nzSearch nzSize=\"${1|small,middle,large,default|}\" [nzSuffix]=\"${2}Tpl\">\n  <input nz-input [(ngModel)]=\"${2:name}\" name=\"${2}\"${3: placeholder=\"${4}\"}>\n  <ng-template #${2}Tpl>\n    <button nz-button nzType=\"primary\" nzSize=\"${1}\" nzSearch>${5|Search,Save,Confirm|}</button>\n  </ng-template>\n</nz-input-group>",
-    "description": "Input includes search\n\n搜索示例"
+    "description": "Input includes search(搜索示例)"
   },
   "nzs_input_suffix": {
-    "prefix": "suffix",
+    "prefix": "nzs-input-suffix",
     "body": "<input nz-input [(ngModel)]=\"${1:name}\" id=\"${1}\" name=\"${1}\" nzSuffix=\"anticon anticon-${2:user}\"${3: placeholder=\"${4}\"}>",
-    "description": "Input includes suffix\n\n带有后缀图标的 input"
+    "description": "Input includes suffix(带有后缀图标的 input)"
   },
   "nzs_input-number": {
-    "prefix": "default",
+    "prefix": "nzs-input-number",
     "body": "<nz-input-number [(ngModel)]=\"${1:num}\" name=\"${1}\" id=\"${1}\" ${2: [nzPlaceHolder]=\"'${3|Please,Required|}'\"}></nz-input-number>",
-    "description": "Input Number\n\n数字输入框"
+    "description": "Input Number(数字输入框)"
   },
   "nzs_list": {
-    "prefix": "default",
+    "prefix": "nzs-list",
     "body": "<nz-list [nzDataSource]=\"$1\" [nzRenderItem]=\"item\">\n  <ng-template #item let-${2:i}>\n    <nz-list-item>\n      <nz-list-item-meta\n        [nzTitle]=\"$2.title\"\n        [nzAvatar]=\"$2.avatar\"\n        [nzDescription]=\"$2.description\">\n        <ng-template #itemTitle>\n          <a>{{$2.title}}</a>\n        </ng-template>\n      </nz-list-item-meta>\n    </nz-list-item>\n  </ng-template>\n</nz-list>",
-    "description": "List\n\n列表，向下为项"
+    "description": "List(列表，向下为项)"
   },
   "nzs_list_item-meta": {
-    "prefix": "item-meta",
+    "prefix": "nzs-list-item-meta",
     "body": "<nz-list-item-meta\n  [nzAvatar]=\"$1\"\n  [nzTitle]=\"$2\"\n  [nzDescription]=\"$3\"></nz-list-item-meta>\n$0",
-    "description": "List includes item and meta\n\n元素"
+    "description": "List includes item and meta(元素)"
   },
   "nzs_list_item": {
-    "prefix": "item",
+    "prefix": "nzs-list-item",
     "body": "<nz-list-item>\n  $0\n</nz-list-item>",
-    "description": "List includes item\n\n项，向下为元素"
+    "description": "List includes item(项，向下为元素)"
   },
   "nzs_list_loadmore": {
-    "prefix": "loadmore",
+    "prefix": "nzs-list-loadmore",
     "body": "<nz-list [nzDataSource]=\"data\" [nzLoading]=\"loading\" [nzRenderItem]=\"item\" [nzLoadMore]=\"loadMore\">\n  <ng-template #item let-item>\n    <nz-list-item [nzContent]=\"'content'\" [nzActions]=\"[editAction,moreAction]\">\n      <ng-template #editAction>\n        <a (click)=\"edit(item)\">edit</a>\n      </ng-template>\n      <ng-template #moreAction>\n        <a (click)=\"edit(item)\">more</a>\n      </ng-template>\n      <nz-list-item-meta [nzTitle]=\"nzTitle\" nzAvatar=\"https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png\" nzDescription=\"Ant Design, a design language for background applications, is refined by Ant UED Team\">\n        <ng-template #nzTitle>\n          <a href=\"https://ng.ant.design\">{{item.name.last}}</a>\n        </ng-template>\n      </nz-list-item-meta>\n    </nz-list-item>\n  </ng-template>\n  <ng-template #loadMore>\n    <div *ngIf=\"showLoadingMore\" class=\"loadmore\">\n      <button nz-button *ngIf=\"!loadingMore\" (click)=\"onLoadMore()\">loading more</button>\n      <nz-spin *ngIf=\"loadingMore\" [nzSpinning]=\"loadingMore\"></nz-spin>\n    </div>\n  </ng-template>\n</nz-list>",
-    "description": "List includes loadmore\n\n加载更多示例"
+    "description": "List includes loadmore(加载更多示例)"
   },
   "nzs_list_simple": {
-    "prefix": "simple",
+    "prefix": "nzs-list-simple",
     "body": "<nz-list nzHeader=\"$1\" nzFooter=\"$2\">\n  <nz-list-item>$3</nz-list-item>\n</nz-list>\n$0",
-    "description": "List\n\n最简单的用法"
+    "description": "List(最简单的用法)"
   },
   "nzs_mention": {
-    "prefix": "default",
+    "prefix": "nzs-mention",
     "body": "<nz-mention [nzSuggestions]=\"$1\" (nzOnSelect)=\"$2($event)\">\n  <input [(ngModel)]=\"$3\" (ngModelChange)=\"$4($event)\" placeholder=\"$5\" nzMentionTrigger nz-input>\n</nz-mention>\n$0",
-    "description": "Mention\n\n提及"
+    "description": "Mention(提及)"
   },
   "nzs_popconfirm_button": {
-    "prefix": "button",
+    "prefix": "nzs-popconfirm-button",
     "body": "<nz-popconfirm nzTitle=\"${1:Are you sure?}\" (nzOnConfirm)=\"${2:del(i)}\">\n  <button nz-popconfirm nz-button nzType=\"danger\">${3|Delete,Clear,Confirm|}</button>\n</nz-popconfirm>\n$0",
-    "description": "Popconfirm button style\n\n按钮风格"
+    "description": "Popconfirm button style(按钮风格)"
   },
   "nzs_popconfirm": {
-    "prefix": "default",
+    "prefix": "nzs-popconfirm",
     "body": "<nz-popconfirm nzTitle=\"${1:Are you sure?}\" (nzOnConfirm)=\"${2:confirm(i)}\">\n  <a nz-popconfirm>${3|Delete,Clear,Confirm|}</a>\n</nz-popconfirm>\n$0",
-    "description": "Popconfirm\n\n气泡确认框"
+    "description": "Popconfirm(气泡确认框)"
   },
   "nzs_popover": {
-    "prefix": "default",
+    "prefix": "nzs-popover",
     "body": "<nz-popover [nzTitle]=\"'${2}'\">\n  <button nz-button nz-popover>${1}</button>\n</nz-popover>\n$0",
-    "description": "Popover\n\n气泡卡片"
+    "description": "Popover(气泡卡片)"
   },
   "nzs_popover_help-html": {
-    "prefix": "help-html",
+    "prefix": "nzs-popover-help-html",
     "body": "<nz-popover [nzContent]=\"${1:help}Tpl\">\n  <ng-template #${1}Tpl>\n    $0\n  </ng-template>\n  <i nz-popover nz-icon type=\"question-circle\"></i>\n</nz-popover>",
-    "description": "Help demo (Include html)\n\nHTML帮助示例"
+    "description": "Help demo (Include html)(HTML帮助示例)"
   },
   "nzs_popover_help": {
-    "prefix": "help",
+    "prefix": "nzs-popover-help",
     "body": "<nz-popover nzContent=\"$0\">\n  <i nz-popover nz-icon type=\"question-circle\"></i>\n</nz-popover>",
-    "description": "Help demo\n\n帮助示例"
+    "description": "Help demo(帮助示例)"
   },
   "nzs_radio_button": {
-    "prefix": "button",
+    "prefix": "nzs-radio-button",
     "body": "<nz-radio-group [(ngModel)]=\"$1\">\n  <label nz-radio-button nzValue=\"A\">A</label>\n  <label *ngFor=\"let ${3:item} of ${2:list}\" nz-radio-button [nzValue]=\"$3\">{{${3}.text}}</label>\n</nz-radio-group>\n$0",
-    "description": "Radio button style\n\n单选框按钮风格"
+    "description": "Radio button style(单选框按钮风格)"
   },
   "nzs_radio": {
-    "prefix": "default",
+    "prefix": "nzs-radio",
     "body": "<nz-radio-group [(ngModel)]=\"$1\">\n  <label nz-radio nzValue=\"A\">A</label>\n  <label *ngFor=\"let ${3:item} of ${2:list}\" nz-radio [nzValue]=\"$3\">{{${3}.text}}</label>\n</nz-radio-group>\n$0",
-    "description": "Radio\n\n单选框"
+    "description": "Radio(单选框)"
   },
   "nzs_radio_simple": {
-    "prefix": "simple",
+    "prefix": "nzs-radio-simple",
     "body": "<label nz-radio [nzValue]=\"${1}\">$0</label>",
-    "description": "Radio\n\n单选框最简单的用法"
+    "description": "Radio(单选框最简单的用法)"
   },
   "nzs_select": {
-    "prefix": "default",
+    "prefix": "nzs-select",
     "body": "<nz-select [(ngModel)]=\"${1:value}\" name=\"${1}\" nzPlaceHolder=\"${2}\"${3: nzAllowClear}>\n  <nz-option\n    *ngFor=\"let ${5:item} of ${4:list}\"\n    [nzLabel]=\"$5.label\"\n    [nzValue]=\"$5.value\"\n    [nzDisabled]=\"$5.disabled\">\n  </nz-option>\n</nz-select>\n$0",
-    "description": "Select\n\n下拉选择器"
+    "description": "Select(下拉选择器)"
   },
   "nzs_select_option-group": {
-    "prefix": "option-group",
+    "prefix": "nzs-select-option-group",
     "body": "<nz-option-group [nzLabel]=\"${1:item}\"></nz-option-group>",
-    "description": "Select option group\n\n组"
+    "description": "Select option group(组)"
   },
   "nzs_select_option": {
-    "prefix": "option",
+    "prefix": "nzs-select-option",
     "body": "<nz-option\n  *ngFor=\"let ${5:item} of ${4:list}\"\n  [nzLabel]=\"$5.label\"\n  [nzValue]=\"$5.value\"\n  [nzDisabled]=\"$5.disabled\"\n  [nzCustomContent]=\"tpl\">\n  <ng-template #tpl>\n    {{ $5 }}\n  </ng-template>\n</nz-option>",
-    "description": "Select option\n\n项"
+    "description": "Select option(项)"
   },
   "nzs_spin": {
-    "prefix": "default",
+    "prefix": "nzs-spin",
     "body": "<nz-spin${1: [nzTip]=\"'${2|Loading...|}'\"}${3: [nzSpinning]=\"false\"}></nz-spin>\n$0",
-    "description": "Spin\n\n加载中"
+    "description": "Spin(加载中)"
   },
   "nzs_steps_custom-dot": {
-    "prefix": "custom-dot",
+    "prefix": "nzs-steps-custom-dot",
     "body": "<nz-steps [(nzCurrent)]=\"${1:current}\" [nzProgressDot]=\"${2:progressTemplate}\">\n  <nz-step nzTitle=\"Finished\" nzDescription=\"You can hover on the dot.\"></nz-step>\n  $0\n</nz-steps>\n<ng-template #${2} let-dot let-status=\"status\" let-index=\"index\">\n</ng-template>",
-    "description": "Custom dot\n\n自定义点"
+    "description": "Custom dot(自定义点)"
   },
   "nzs_steps": {
-    "prefix": "default",
+    "prefix": "nzs-steps",
     "body": "<nz-steps [(nzCurrent)]=\"${1:current}\"${2: [nzStatus]=\"'${3|wait,process,finish,error|}'\"}${4: nzSize=\"small\"}${5: nzDirection=\"${6|horizontal,vertical|}\"}${7: nzProgressDot}>\n  <nz-step [nzTitle]=\"'${8}'\" [nzDescription]=\"'${9}'\"></nz-step>\n  $0\n</nz-steps>\n<div class=\"steps-content\">\n\n</div>",
-    "description": "Steps\n\n步骤条"
+    "description": "Steps(步骤条)"
   },
   "nzs_steps_step-icon": {
-    "prefix": "step-icon",
+    "prefix": "nzs-steps-step-icon",
     "body": "<nz-step [nzIcon]=\"nzIconTpl\" [nzTitle]=\"'${1}'\" [nzDescription]=\"'${2}'\"${3: [nzStatus]=\"'${4|wait,process,finish,error|}'\"}>\n  <ng-template #nzIconTpl>$0</ng-template>\n</nz-step>",
-    "description": "Steps inlcudes step and icon\n\n项带图标"
+    "description": "Steps inlcudes step and icon(项带图标)"
   },
   "nzs_steps_step": {
-    "prefix": "step",
+    "prefix": "nzs-steps-step",
     "body": "<nz-step [nzTitle]=\"'${1}'\" [nzDescription]=\"'${2}'\"${3: [nzStatus]=\"'${4|wait,process,finish,error|}'\"}></nz-step>",
-    "description": "Step in stepds\n\n项"
+    "description": "Step in stepds(项)"
   },
   "nzs_switch": {
-    "prefix": "default",
+    "prefix": "nzs-switch",
     "body": "<nz-switch [(ngModel)]=\"${1}\" name=\"${1}\"></nz-switch>\n$0",
-    "description": "Switch\n\n开关"
+    "description": "Switch(开关)"
   },
   "nzs_switch_icon": {
-    "prefix": "icon",
+    "prefix": "nzs-switch-icon",
     "body": "<nz-switch [(ngModel)]=\"${1}\" name=\"${1}\" [nzCheckedChildren]=\"checkedTemplate\" [nzUnCheckedChildren]=\"unCheckedTemplate\">\n  <ng-template #checkedTemplate><i nz-icon type=\"${2:check}\"></i></ng-template>\n  <ng-template #unCheckedTemplate><i nz-icon type=\"${3:close}\"></i></ng-template>\n</nz-switch>\n$0",
-    "description": "Switch includes icon\n\n自定义图标"
+    "description": "Switch includes icon(自定义图标)"
   },
   "nzs_switch_text": {
-    "prefix": "text",
+    "prefix": "nzs-switch-text",
     "body": "<nz-switch [(ngModel)]=\"${1}\" name=\"${1}\" nzCheckedChildren=\"${2|Opened,Enabled|}\" nzUnCheckedChildren=\"${3|Closed,Disabled|}\"></nz-switch>\n$0",
-    "description": "Switch includes text\n\n自定义文本"
+    "description": "Switch includes text(自定义文本)"
   },
   "nzs_table": {
-    "prefix": "default",
+    "prefix": "nzs-table",
     "body": "<nz-table #nzTable [nzData]=\"${1}\" [nzPageSize]=\"${2:10}\">\n  <thead>\n    <tr>\n      <th>Title</th>\n      $3\n      <th></th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr *ngFor=\"let i of nzTable.data\">\n      <td>{{i.title}}</td>\n      $4\n      <td>\n        <a href=\"#\" (click)=\"edit(i)\">Edit</a>\n        <nz-divider nzType=\"vertical\"></nz-divider>\n        <a href=\"#\" (click)=\"del(i)\">Remove</a>${5:\n        <nz-divider nzType=\"vertical\"></nz-divider>\n        <nz-dropdown>\n          <a class=\"ant-dropdown-link\" nz-dropdown>\n            More <i nz-icon type=\"${6|down,ellipsis|}\"></i>\n          </a>\n          <ul nz-menu>\n            <li nz-menu-item>\n              <a (click)=\"\">active</a>\n            </li>\n          </ul>\n        </nz-dropdown>\n        }\n      </td>\n    </tr>\n  </tbody>\n</nz-table>",
-    "description": "Table\n\n表格"
+    "description": "Table(表格)"
   },
   "nzs_table_static-no-pager": {
-    "prefix": "static-no-pager",
+    "prefix": "nzs-table-static-no-pager",
     "body": "<nz-table [nzData]=\"${1|list,data|}\" [nzShowPagination]=\"false\">\n  <thead>\n    <tr>\n      <th>$0</th>\n      <th nzWidth=\"300px\"></th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr *ngFor=\"let ${2:i} of $1\">\n      <td>{{${2}.title}}</td>\n      <td>\n        <a (click)=\"next(${2})\">Next</a>\n        <nz-divider nzType=\"vertical\"></nz-divider>\n        <a (click)=\"edit(${2})\">Edit</a>\n        <nz-divider nzType=\"vertical\"></nz-divider>\n        <nz-popconfirm [nzTitle]=\"'Are you sure?'\" (nzOnConfirm)=\"del(${2})\">\n          <a nz-popconfirm>Delete</a>\n        </nz-popconfirm>\n      </td>\n    </tr>\n  </tbody>\n</nz-table>",
-    "description": "Table not pagination\n\n不分页静态数据"
+    "description": "Table not pagination(不分页静态数据)"
   },
   "nzs_tabs": {
-    "prefix": "default",
+    "prefix": "nzs-tabs",
     "body": "<nz-tabset>\n  <nz-tab nzTitle=\"Tab 1\">\n    Content of Tab Pane 1\n  </nz-tab>\n  <nz-tab nzTitle=\"Tab 2\">\n    Content of Tab Pane 2\n  </nz-tab>\n  <nz-tab nzTitle=\"Tab 3\">\n    Content of Tab Pane 3\n  </nz-tab>\n</nz-tabset>",
-    "description": "Tabs\n\n标签页"
+    "description": "Tabs(标签页)"
   },
   "nzs_tag": {
-    "prefix": "default",
+    "prefix": "nzs-tag",
     "body": "<nz-tag nzColor=\"${2|magenta,red,volcano,orange,gold,lime,green,cyan,blue,geekblue,purple|}\">$1</nz-tag>",
-    "description": "Tag\n\n标签"
+    "description": "Tag(标签)"
   },
   "nzs_textarea": {
-    "prefix": "default",
+    "prefix": "nzs-textarea",
     "body": "<textarea nz-input [(ngModel)]=\"${1:remark}\" id=\"${1}\" name=\"${1}\" [nzAutosize]=\"${2|true,false,{ minRows: 2 <Change to comma by yourself> maxRows: 6 }|}\"${3: placeholder=\"${4}\"}></textarea>$0",
-    "description": "Textarea\n\n多选文本框"
+    "description": "Textarea(多选文本框)"
   },
   "nzs_time": {
-    "prefix": "default",
+    "prefix": "nzs-time",
     "body": "<nz-time-picker [(ngModel)]=\"${1:value}\" name=\"${1}\" nzPlaceHolder=\"${3|Please select time|}\"></nz-time-picker>",
-    "description": "Time picker\n\n时间选择框"
+    "description": "Time picker(时间选择框)"
   },
   "nzs_tooltip": {
-    "prefix": "default",
+    "prefix": "nzs-tooltip",
     "body": "<a nz-tooltip=\"$2\">$1</a>$0",
-    "description": "Tooltip\n\n文字提示"
+    "description": "Tooltip(文字提示)"
   },
   "nzs_tooltip_template": {
-    "prefix": "template",
+    "prefix": "nzs-tooltip-template",
     "body": "<nz-tooltip>\n  <span nz-tooltip>${1}</span>\n  <ng-template #nzTemplate>\n    <i nz-icon type=\"file\"></i>\n    <span>$0</span>\n  </ng-template>\n</nz-tooltip>",
-    "description": "Tooltip curstom template\n\n自定义内容风格"
+    "description": "Tooltip curstom template(自定义内容风格)"
   },
   "nzs_upload": {
-    "prefix": "default",
+    "prefix": "nzs-upload",
     "body": "<nz-upload nzAction=\"${1:/upload}\">\n  <button nz-button>\n    <i nz-icon type=\"upload\"></i>\n    <span>${2:Upload}</span>\n  </button>\n</nz-upload>\n$0",
-    "description": "Upload\n\n上传"
+    "description": "Upload(上传)"
   },
   "nzs_upload_drag": {
-    "prefix": "drag",
+    "prefix": "nzs-upload-drag",
     "body": "<nz-upload nzType=\"drag\"\n  nzAction=\"${1:/upload}\"\n  (nzChange)=\"handleChange($event)\"\n  [nzMultiple]=\"true\"\n  [nzLimit]=\"${2:5}\">\n  <p class=\"ant-upload-drag-icon\">\n    <i nz-icon type=\"inbox\"></i>\n  </p>\n  <p class=\"ant-upload-text\">Click or drag file to this area to upload</p>\n  <p class=\"ant-upload-hint\">Support for a single or bulk upload. Strictly prohibit from uploading company data or other band files</p>\n</nz-upload>\n$0",
-    "description": "Upload of drag\n\n拖拽风格"
+    "description": "Upload of drag(拖拽风格)"
   }
 }

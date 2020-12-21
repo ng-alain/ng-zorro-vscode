@@ -21,7 +21,7 @@ const ZH_DATA = genData('zh-CN');
 
 Object.keys(EN_DATA).forEach((key) => {
   if (ZH_DATA[key]) {
-    EN_DATA[key].description += `\n\n${ZH_DATA[key].description}`;
+    EN_DATA[key].description += `(${ZH_DATA[key].description})`;
   }
 });
 
