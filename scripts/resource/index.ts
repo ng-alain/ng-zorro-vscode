@@ -13,5 +13,7 @@ Object.keys(langFiles).forEach((l) => {
   const files = langFiles[l];
   // const files = langFiles[l].filter((w) => w.includes('components/auto-complete'));
   const res = makeObject(l, files);
-  fs.writeFileSync(path.join(srcPath, l + '.json'), JSON.stringify(res, null, 2));
+  const savePath = path.join(srcPath, l + '.json');
+  fs.writeFileSync(savePath, JSON.stringify(res, null, 2));
+  console.log(`Save ${savePath}`);
 });

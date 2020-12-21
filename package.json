@@ -8,14 +8,18 @@
   "license": "MIT",
   "licenseUrl": "LICENSE",
   "scripts": {
-    "build": "bash ./scripts/build/build.sh",
-    "test": "bash ./scripts/build/build.sh -t",
-    "release": "npm run resource && bash ./scripts/build/build.sh -b -p",
-    "watch": "tsc -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "release": "gulp package",
+    "build": "gulp build",
+    "watch": "gulp watch",
     "resource": "bash ./scripts/resource/build.sh",
-    "postinstall": "node ./node_modules/vscode/bin/install"
+
+    "old:build": "bash ./scripts/build/build.sh",
+    "old:test": "bash ./scripts/build/build.sh -t",
+    "old:release": "npm run resource && bash ./scripts/build/build.sh -b -p",
+    "old:watch": "tsc -watch -p ./"
   },
-  "main": "./out/src/magic/extension",
+  "main": "./out/magic/extension",
   "homepage": "https://github.com/cipchk/ng-zorro-vscode/blob/master/README.md",
   "repository": {
     "type": "git",
@@ -68,7 +72,9 @@
       }
     }
   },
-  "dependencies": {},
+  "dependencies": {
+    "vscode-nls": "^5.0.0"
+  },
   "devDependencies": {
     "@types/node": "^12.0.10",
     "@types/mocha": "^5.2.5",
@@ -80,9 +86,17 @@
     "yaml-front-matter": "^4.0.0",
     "markdown-it": "^8.4.2",
     "vscode-snippet-generator": "^1.2.1",
-    "vsce": "^1.75.0",
     "typescript": "^3.2.2",
     "vscode": "^1.1.26",
-    "klaw-sync": "^6.0.0"
+    "klaw-sync": "^6.0.0",
+    "vsce": "^1.81.1",
+    "gulp": "^4.0.2",
+    "gulp-filter": "^5.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-typescript": "^5.0.1",
+    "run-sequence": "^2.2.1",
+    "del": "^4.1.1",
+    "event-stream": "^4.0.1",
+    "vscode-nls-dev": "^3.2.6"
   }
 }

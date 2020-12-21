@@ -15,9 +15,12 @@ export async function activate(context: ExtensionContext) {
   }
 
   const hoverProvider = new NAHoverProvider();
-  const languageSchemes = [{ scheme: 'file', language: 'html' }, { scheme: 'file', language: 'typescript' }];
+  const languageSchemes = [
+    { scheme: 'file', language: 'html' },
+    { scheme: 'file', language: 'typescript' },
+  ];
 
-  const providers = languageSchemes.map(scheme => {
+  const providers = languageSchemes.map((scheme) => {
     return languages.registerCompletionItemProvider(scheme, new NAAutoCompletionItemProvider(), '<', ' ', '[', '(', '"');
   });
 
