@@ -1,6 +1,6 @@
 import { existsSync, readFileSync } from 'fs';
 import { join } from 'path';
-import { MarkdownString, workspace } from 'vscode';
+import { env, MarkdownString, workspace } from 'vscode';
 import * as nls from 'vscode-nls';
 import { Directive, DirectiveProperty, DirectiveType, DirectiveTypeDefinition, InputAttrType, NAME, Tag } from '../interfaces';
 import { Notifier } from '../notifier';
@@ -17,7 +17,7 @@ const I18N = {
 };
 
 export const CONFIG = {
-  language: 'en-US',
+  language: 'en',
   hover: true,
   inlineTemplate: true,
   isAntd: true,
@@ -40,12 +40,14 @@ function getPure(value: string): string {
 
 function getFullDoc(item: Directive): string {
   if (item.doc.startsWith('http')) return item.doc;
+  const isEn = CONFIG.language === 'en';
+  const doc = isEn ? item.doc : item.doc.replace('/en', '/zh');
   if (item.lib === 'ng-zorro-antd') {
     // TODO: Muse be release version
-    return (CONFIG.language === 'zh-CN' ? 'https://ng-zorro.gitee.io' : 'https://ng.ant.design') + item.doc;
+    return (isEn ? 'https://ng.ant.design' : 'https://ng-zorro.gitee.io') + doc;
     // return `https://ng-zorro-master.netlify.com` + item.doc;
   }
-  return (CONFIG.language === 'zh-CN' ? 'https://ng-alain.com' : 'https://ng-alain-doc.surge.sh') + item.doc;
+  return (isEn ? 'https://ng-alain-doc.surge.sh' : 'https://ng-alain.com') + doc;
 }
 
 function genComponentMarkdown(item: Directive): string {
@@ -110,7 +112,7 @@ function fixProperty(p: DirectiveProperty) {
 
 export async function INIT(notifier: Notifier) {
   const cog = workspace.getConfiguration(NAME);
-  CONFIG.language = cog.language;
+  CONFIG.language = env.language.toLowerCase();
   CONFIG.hover = cog.hover;
   CONFIG.inlineTemplate = cog.inlineTemplate;
   if (workspace.workspaceFolders != null && workspace.workspaceFolders.length > 0) {
