@@ -14,6 +14,7 @@ const DATA_ENTRY = [
   'nz-input-number',
   'nz-radio',
   'nz-rate',
+  'nz-rate',
   'nz-select',
   'nz-slider',
   'nz-switch',
@@ -167,6 +168,8 @@ export const FIX = {
     },
     'nz-checkbox': '<label __$1>$2</label>',
     'nz-radio': '<label __$1>$2</label>',
+    nzModalFooter: '<div *nzModalFooter>$0</div>',
+    nzMentionSuggestion: '<ng-container *nzMentionSuggestion="let ${1|item|}">$0</ng-container>',
   },
 };
 
@@ -175,5 +178,10 @@ DATA_ENTRY.forEach((selector) => {
   if (!FIX.extraProperty[selector]) {
     FIX.extraProperty[selector] = [];
   }
-  FIX.extraProperty[selector].push(CP.formControlName, CP.name);
+  const list: DirectiveProperty[] = FIX.extraProperty[selector];
+  [CP.ngModel, CP.ngModelChange, CP.formControlName, CP.name].forEach((item) => {
+    if (list.findIndex((w) => w.name === item.name) === -1) {
+      list.push(item);
+    }
+  });
 });

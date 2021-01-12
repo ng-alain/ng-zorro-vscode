@@ -323,6 +323,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-date-picker.nzBorderless.description': localize('nz-date-picker.nzBorderless.description', 'remove the border'),
 'nz-date-picker.nzOnOpenChange.description': localize('nz-date-picker.nzOnOpenChange.description', 'a callback emitter, can be executed whether the popup calendar is popped up or closed'),
 'nz-date-picker.ngModel.description': localize('nz-date-picker.ngModel.description', 'Date'),
+'nz-date-picker.ngModelChange.description': localize('nz-date-picker.ngModelChange.description', ' '),
 'nz-date-picker.formControlName.description': localize('nz-date-picker.formControlName.description', ' '),
 'nz-date-picker.name.description': localize('nz-date-picker.name.description', ' '),
 'nz-range-picker.title': localize('nz-range-picker.title', 'DatePicker'),
@@ -349,6 +350,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-range-picker.nzRanges.description': localize('nz-range-picker.nzRanges.description', 'preseted ranges for quick selection'),
 'nz-range-picker.nzSeparator.description': localize('nz-range-picker.nzSeparator.description', 'separator'),
 'nz-range-picker.nzOnCalendarChange.description': localize('nz-range-picker.nzOnCalendarChange.description', 'The start time or the end time of the range change callback'),
+'nz-range-picker.ngModelChange.description': localize('nz-range-picker.ngModelChange.description', ' '),
 'nz-range-picker.formControlName.description': localize('nz-range-picker.formControlName.description', ' '),
 'nz-range-picker.name.description': localize('nz-range-picker.name.description', ' '),
 'nz-descriptions.title': localize('nz-descriptions.title', 'Descriptions'),
@@ -770,7 +772,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nzAggregate.title': localize('nzAggregate.title', 'Pipes'),
 'nzAggregate.whenToUse': localize('nzAggregate.whenToUse', '- After introducing Pipe, use it like angular\'s default Pipe'),
 'nzAggregate.description': localize('nzAggregate.description', '\nNG-ZORRO experiments are features that are released but not yet considered stable or production ready\nDevelopers and users can opt-in into these features before they are fully released. But breaking changes may occur with any release.\n'),
-'nzAggregate.type.description': localize('nzAggregate.type.description', 'Aggregation'),
+'nzAggregate.method.description': localize('nzAggregate.method.description', 'Aggregation'),
 'nzSanitizer.title': localize('nzSanitizer.title', 'Pipes'),
 'nzSanitizer.whenToUse': localize('nzSanitizer.whenToUse', '- After introducing Pipe, use it like angular\'s default Pipe'),
 'nzSanitizer.description': localize('nzSanitizer.description', '\nNG-ZORRO experiments are features that are released but not yet considered stable or production ready\nDevelopers and users can opt-in into these features before they are fully released. But breaking changes may occur with any release.\n'),
@@ -1178,6 +1180,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-filter-trigger.nzDropdownMenu.description': localize('nz-filter-trigger.nzDropdownMenu.description', 'Dropdown menu'),
 'nz-filter-trigger.nzVisible.description': localize('nz-filter-trigger.nzVisible.description', 'whether the dropdown menu is visible, double binding'),
 'nz-filter-trigger.nzActive.description': localize('nz-filter-trigger.nzActive.description', 'whether the icon status is activated'),
+'nz-filter-trigger.nzHasBackdrop.description': localize('nz-filter-trigger.nzHasBackdrop.description', 'Whether or not attach a backdrop.'),
 'nz-filter-trigger.nzVisibleChange.description': localize('nz-filter-trigger.nzVisibleChange.description', 'a callback function takes an argument: `nzVisible`, is executed when the visible state is changed'),
 'nz-virtual-scroll.title': localize('nz-virtual-scroll.title', 'Table'),
 'nz-virtual-scroll.whenToUse': localize('nz-virtual-scroll.whenToUse', '- To display a collection of structured data.\n- To sort, search, paginate and filter data.'),
@@ -1352,6 +1355,8 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-tree-select.nzVirtualMaxBufferPx.description': localize('nz-tree-select.nzVirtualMaxBufferPx.description', 'The number of pixels worth of buffer to render for when rendering new items, same as [cdk maxBufferPx](https://material.angular.io/cdk/scrolling/api)'),
 'nz-tree-select.nzVirtualMinBufferPx.description': localize('nz-tree-select.nzVirtualMinBufferPx.description', 'The minimum amount of buffer rendered beyond the viewport (in pixels),same as [cdk minBufferPx](https://material.angular.io/cdk/scrolling/api)'),
 'nz-tree-select.nzExpandChange.description': localize('nz-tree-select.nzExpandChange.description', 'Callback function for when a treeNode is expanded or collapsed'),
+'nz-tree-select.ngModel.description': localize('nz-tree-select.ngModel.description', ' '),
+'nz-tree-select.ngModelChange.description': localize('nz-tree-select.ngModelChange.description', ' '),
 'nz-tree-select.formControlName.description': localize('nz-tree-select.formControlName.description', ' '),
 'nz-tree-select.name.description': localize('nz-tree-select.name.description', ' '),
 'nz-tree-view.title': localize('nz-tree-view.title', 'Tree View'),
@@ -4606,6 +4611,13 @@ export const DATA = [
         "default": ""
       },
       {
+        "name": "ngModelChange",
+        "inputType": 1,
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<any>`",
+        "description": "nz-date-picker.ngModelChange.description"
+      },
+      {
         "name": "formControlName",
         "inputType": 0,
         "type": "string",
@@ -4830,6 +4842,13 @@ export const DATA = [
         "type": "EventEmitter",
         "typeRaw": "`EventEmitter<Date[]>`",
         "default": ""
+      },
+      {
+        "name": "ngModelChange",
+        "inputType": 1,
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<any>`",
+        "description": "nz-range-picker.ngModelChange.description"
       },
       {
         "name": "formControlName",
@@ -10473,7 +10492,8 @@ export const DATA = [
     "title": "nzMentionSuggestion.title",
     "whenToUse": "nzMentionSuggestion.whenToUse",
     "doc": "/components/mention/en",
-    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/mention"
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/mention",
+    "snippet": "<ng-container *nzMentionSuggestion=\"let ${1|item|}\">$0</ng-container>"
   },
   {
     "type": "directive",
@@ -11021,7 +11041,8 @@ export const DATA = [
     "title": "nzModalFooter.title",
     "whenToUse": "nzModalFooter.whenToUse",
     "doc": "/components/modal/en",
-    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/modal"
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/modal",
+    "snippet": "<div *nzModalFooter>$0</div>"
   },
   {
     "type": "component",
@@ -11346,9 +11367,9 @@ export const DATA = [
     "types": {},
     "properties": [
       {
-        "name": "type",
+        "name": "method",
         "inputType": 0,
-        "description": "nzAggregate.type.description",
+        "description": "nzAggregate.method.description",
         "type": "Enum",
         "typeRaw": "`'sum' | 'max' | 'min' | 'avg'`",
         "default": "''",
@@ -14706,6 +14727,15 @@ export const DATA = [
         "pureDefault": "false"
       },
       {
+        "name": "nzHasBackdrop",
+        "inputType": 0,
+        "description": "nz-filter-trigger.nzHasBackdrop.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
         "name": "nzVisibleChange",
         "inputType": 1,
         "description": "nz-filter-trigger.nzVisibleChange.description",
@@ -16131,6 +16161,20 @@ export const DATA = [
         "type": "EventEmitter",
         "typeRaw": "`EventEmitter<NzFormatEmitEvent>`",
         "default": ""
+      },
+      {
+        "name": "ngModel",
+        "inputType": 2,
+        "type": "any",
+        "typeRaw": "`any`",
+        "description": "nz-tree-select.ngModel.description"
+      },
+      {
+        "name": "ngModelChange",
+        "inputType": 1,
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<any>`",
+        "description": "nz-tree-select.ngModelChange.description"
       },
       {
         "name": "formControlName",
