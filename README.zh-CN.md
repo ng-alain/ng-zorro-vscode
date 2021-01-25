@@ -34,8 +34,6 @@
 | `ng-zorro-vscode.hover` | 是否开启悬停 | `boolean` | `true` |
 | `ng-zorro-vscode.inlineTemplate` | 是否支持内联模板 | `boolean` | `true` |
 
-> **注意:** 修改配置必须**重启Visual Studio Code**。
-
 ## 支持语言版本
 
 支持语言列表：英文、简体中文，会根据 VSCode 当前语言自动切换。

@@ -36,8 +36,6 @@ In addition, some common completion code snippets are built in and prefix with `
 | `ng-zorro-vscode.hover` | Whether to enable hover | `boolean` | `true` |
 | `ng-zorro-vscode.inlineTemplate` | Whether to enable support inline template in typescript file | `boolean` | `true` |
 
-> **NOTICE:** Changed configuration must **restart Visual Studio Code**.
-
 ## Support Language Versions
 
 Support language list: English, 简体中文, will automatically switch according to the current the display language of VSCode.

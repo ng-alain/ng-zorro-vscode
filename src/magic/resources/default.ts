@@ -323,6 +323,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-date-picker.nzBorderless.description': localize('nz-date-picker.nzBorderless.description', 'remove the border'),
 'nz-date-picker.nzOnOpenChange.description': localize('nz-date-picker.nzOnOpenChange.description', 'a callback emitter, can be executed whether the popup calendar is popped up or closed'),
 'nz-date-picker.ngModel.description': localize('nz-date-picker.ngModel.description', 'Date'),
+'nz-date-picker.nzId.description': localize('nz-date-picker.nzId.description', 'input id attribute inside the component'),
 'nz-date-picker.ngModelChange.description': localize('nz-date-picker.ngModelChange.description', ' '),
 'nz-date-picker.formControlName.description': localize('nz-date-picker.formControlName.description', ' '),
 'nz-date-picker.name.description': localize('nz-date-picker.name.description', ' '),
@@ -692,6 +693,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-modal.nzAfterClose.description': localize('nz-modal.nzAfterClose.description', 'Specify a EventEmitter that will be emitted when modal is closed completely (Can listen for parameters passed in the close/destroy method)'),
 'nz-modal.nzBodyStyle.description': localize('nz-modal.nzBodyStyle.description', 'Body style for modal body element. Such as height, padding etc.'),
 'nz-modal.nzCancelText.description': localize('nz-modal.nzCancelText.description', 'Text of the Cancel button. <i>Set to null to show no cancel button (this value is invalid if the nzFooter parameter is used in normal mode)</i>'),
+'nz-modal.nzCentered.description': localize('nz-modal.nzCentered.description', 'Centered Modal'),
 'nz-modal.nzClosable.description': localize('nz-modal.nzClosable.description', 'Whether a close (x) button is visible on top right of the modal dialog or not. <i>Invalid value in confirm box mode (default will be hidden)</i>'),
 'nz-modal.nzOkLoading.description': localize('nz-modal.nzOkLoading.description', 'Whether to apply loading visual effect for OK button or not'),
 'nz-modal.nzCancelLoading.description': localize('nz-modal.nzCancelLoading.description', 'Whether to apply loading visual effect for Cancel button or not'),
@@ -1098,6 +1100,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-table.nzPageSize.description': localize('nz-table.nzPageSize.description', 'pageSize, double binding'),
 'nz-table.nzShowPagination.description': localize('nz-table.nzShowPagination.description', 'Whether to show pagination component at bottom of the table'),
 'nz-table.nzPaginationPosition.description': localize('nz-table.nzPaginationPosition.description', 'Specify the position of pagination'),
+'nz-table.nzPaginationType.description': localize('nz-table.nzPaginationType.description', 'Specify the size of pagination'),
 'nz-table.nzBordered.description': localize('nz-table.nzBordered.description', 'Whether to show all table borders'),
 'nz-table.nzOuterBordered.description': localize('nz-table.nzOuterBordered.description', 'Whether to show table outer borders'),
 'nz-table.nzWidthConfig.description': localize('nz-table.nzWidthConfig.description', 'Set col width can not used with `[nzWidth]` of `th`'),
@@ -1658,6 +1661,8 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'quick-menu.width.description': localize('quick-menu.width.description', 'Width after opening'),
 'quick-menu.bgColor.description': localize('quick-menu.bgColor.description', 'Background for the quick menu'),
 'quick-menu.borderColor.description': localize('quick-menu.borderColor.description', 'Border for the quick menu'),
+'quick-menu.expand.description': localize('quick-menu.expand.description', 'Current expand status, double binding'),
+'quick-menu.expandChange.description': localize('quick-menu.expandChange.description', 'Expand status change callback'),
 'result.title': localize('result.title', 'Result'),
 'result.whenToUse': localize('result.whenToUse', ' '),
 'result.description': localize('result.description', 'Used to feedback the processing results of a series of tasks performed by the user.'),
@@ -1837,6 +1842,17 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'sv-title.title': localize('sv-title.title', 'View'),
 'sv-title.whenToUse': localize('sv-title.whenToUse', ' '),
 'sv-title.description': localize('sv-title.description', 'Display title.'),
+'sv-title.prefix.description': localize('sv-title.prefix.description', 'Prefix of value'),
+'sv-title.unit.description': localize('sv-title.unit.description', 'Unit of value'),
+'sv-title.tooltip.description': localize('sv-title.tooltip.description', 'Tooltip text of value'),
+'sv-title.size.description': localize('sv-title.size.description', 'Size of value'),
+'sv-value.title': localize('sv-value.title', 'View'),
+'sv-value.whenToUse': localize('sv-value.whenToUse', ' '),
+'sv-value.description': localize('sv-value.description', '值展示。'),
+'sv-value.prefix.description': localize('sv-value.prefix.description', 'Prefix of value'),
+'sv-value.unit.description': localize('sv-value.unit.description', 'Unit of value'),
+'sv-value.tooltip.description': localize('sv-value.tooltip.description', 'Tooltip text of value'),
+'sv-value.size.description': localize('sv-value.size.description', 'Size of value'),
 'tag-select.title': localize('tag-select.title', 'Tag Select'),
 'tag-select.whenToUse': localize('tag-select.whenToUse', ' '),
 'tag-select.description': localize('tag-select.description', 'Increase the label expansion and retraction function.'),
@@ -4608,6 +4624,14 @@ export const DATA = [
         "description": "nz-date-picker.ngModel.description",
         "type": "object",
         "typeRaw": "`Date`",
+        "default": ""
+      },
+      {
+        "name": "nzId",
+        "inputType": 0,
+        "description": "nz-date-picker.nzId.description",
+        "type": "string",
+        "typeRaw": "`string`",
         "default": ""
       },
       {
@@ -10764,6 +10788,15 @@ export const DATA = [
         "pureDefault": "Cancel"
       },
       {
+        "name": "nzCentered",
+        "inputType": 0,
+        "description": "nz-modal.nzCentered.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
         "name": "nzClosable",
         "inputType": 0,
         "description": "nz-modal.nzClosable.description",
@@ -14067,6 +14100,19 @@ export const DATA = [
         "pureDefault": "bottom"
       },
       {
+        "name": "nzPaginationType",
+        "inputType": 0,
+        "description": "nz-table.nzPaginationType.description",
+        "type": "Enum",
+        "typeRaw": "`'default' | 'small'`",
+        "default": "`default`",
+        "typeDefinition": [
+          "default",
+          "small"
+        ],
+        "pureDefault": "default"
+      },
+      {
         "name": "nzBordered",
         "inputType": 0,
         "description": "nz-table.nzBordered.description",
@@ -16926,7 +16972,7 @@ export const DATA = [
         "inputType": 0,
         "description": "nz-upload.nzIconRender.description",
         "type": "TemplateRef",
-        "typeRaw": "`TemplateRef<void>`",
+        "typeRaw": "`TemplateRef<{ $implicit: NzUploadFile }>`",
         "default": ""
       },
       {
@@ -16934,7 +16980,7 @@ export const DATA = [
         "inputType": 0,
         "description": "nz-upload.nzFileListRender.description",
         "type": "TemplateRef",
-        "typeRaw": "`TemplateRef<{ $implicit: UploadFile[] }>`",
+        "typeRaw": "`TemplateRef<{ $implicit: NzUploadFile[] }>`",
         "default": ""
       }
     ],
@@ -18424,6 +18470,22 @@ export const DATA = [
         "description": "quick-menu.borderColor.description",
         "type": "string",
         "typeRaw": "`string`",
+        "default": ""
+      },
+      {
+        "name": "expand",
+        "inputType": 2,
+        "description": "quick-menu.expand.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": ""
+      },
+      {
+        "name": "expandChange",
+        "inputType": 1,
+        "description": "quick-menu.expandChange.description",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<boolean>`",
         "default": ""
       }
     ],
@@ -20307,7 +20369,46 @@ export const DATA = [
     "type": "component",
     "selector": "sv-title",
     "types": {},
-    "properties": [],
+    "properties": [
+      {
+        "name": "prefix",
+        "inputType": 0,
+        "description": "sv-title.prefix.description",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
+      },
+      {
+        "name": "unit",
+        "inputType": 0,
+        "description": "sv-title.unit.description",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
+      },
+      {
+        "name": "tooltip",
+        "inputType": 0,
+        "description": "sv-title.tooltip.description",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
+      },
+      {
+        "name": "size",
+        "inputType": 0,
+        "description": "sv-title.size.description",
+        "type": "Enum",
+        "typeRaw": "`'large','small','default'`",
+        "default": "`default`",
+        "typeDefinition": [
+          "large",
+          "small",
+          "default"
+        ],
+        "pureDefault": "default"
+      }
+    ],
     "description": "sv-title.description",
     "lib": "@delon/abc",
     "title": "sv-title.title",
@@ -20319,11 +20420,101 @@ export const DATA = [
     "type": "directive",
     "selector": "sv-title",
     "types": {},
-    "properties": [],
+    "properties": [
+      {
+        "name": "prefix",
+        "inputType": 0,
+        "description": "sv-title.prefix.description",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
+      },
+      {
+        "name": "unit",
+        "inputType": 0,
+        "description": "sv-title.unit.description",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
+      },
+      {
+        "name": "tooltip",
+        "inputType": 0,
+        "description": "sv-title.tooltip.description",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
+      },
+      {
+        "name": "size",
+        "inputType": 0,
+        "description": "sv-title.size.description",
+        "type": "Enum",
+        "typeRaw": "`'large','small','default'`",
+        "default": "`default`",
+        "typeDefinition": [
+          "large",
+          "small",
+          "default"
+        ],
+        "pureDefault": "default"
+      }
+    ],
     "description": "sv-title.description",
     "lib": "@delon/abc",
     "title": "sv-title.title",
     "whenToUse": "sv-title.whenToUse",
+    "doc": "/components/sv/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sv"
+  },
+  {
+    "type": "component",
+    "selector": "sv-value",
+    "types": {},
+    "properties": [
+      {
+        "name": "prefix",
+        "inputType": 0,
+        "description": "sv-value.prefix.description",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
+      },
+      {
+        "name": "unit",
+        "inputType": 0,
+        "description": "sv-value.unit.description",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
+      },
+      {
+        "name": "tooltip",
+        "inputType": 0,
+        "description": "sv-value.tooltip.description",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
+      },
+      {
+        "name": "size",
+        "inputType": 0,
+        "description": "sv-value.size.description",
+        "type": "Enum",
+        "typeRaw": "`'large','small','default'`",
+        "default": "`default`",
+        "typeDefinition": [
+          "large",
+          "small",
+          "default"
+        ],
+        "pureDefault": "default"
+      }
+    ],
+    "description": "sv-value.description",
+    "lib": "@delon/abc",
+    "title": "sv-value.title",
+    "whenToUse": "sv-value.whenToUse",
     "doc": "/components/sv/en",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sv"
   },
