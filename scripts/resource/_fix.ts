@@ -1,7 +1,7 @@
 import { DirectiveProperty } from '../../src/magic/interfaces';
 import { manifest } from './_icon';
 
-const BASE_GUTTER = ['0', '8', '16', '24', '32', '40', '48', '56', '64'];
+const BASE_GUTTER = ['16', '0', '8', '24', '32', '40', '48', '56', '64'];
 const DATA_ENTRY = [
   'nz-cascader',
   'nz-checkbox',

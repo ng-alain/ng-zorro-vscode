@@ -20,14 +20,17 @@ export const COG = {
     'nz-tooltip': { zh: '共同的 API', en: 'Common API' },
     'nz-popconfirm': { component: 'nz-tooltip', zh: '共同的 API', en: 'Common API' },
     'nz-popover': { component: 'nz-tooltip', zh: '共同的 API', en: 'Common API' },
-    'nz-date-picker': { zh: '共同的 API', en: 'Common API' },
-    'nz-year-picker': { zh: '共同的 API', en: 'Common API' },
-    'nz-month-picker': { zh: '共同的 API', en: 'Common API' },
-    'nz-range-picker': { zh: '共同的 API', en: 'Common API' },
-    'nz-week-picker': { zh: '共同的 API', en: 'Common API' },
     'nz-form-item': { component: 'nz-row', zh: '[nz-row]', en: '[nz-row]' },
     'nz-form-label': { component: 'nz-col', zh: '[nz-col]', en: '[nz-col]' },
     'nz-form-control': { component: 'nz-col', zh: '[nz-col]', en: '[nz-col]' },
+    'nz-date-picker': [
+      { zh: '共同的 API', en: 'Common API' },
+      { zh: `nz-date-picker[nzMode="date"]`, en: `nz-date-picker[nzMode="date"]` },
+    ],
+    'nz-range-picker': [
+      { zh: '共同的 API', en: 'Common API' },
+      { zh: `nz-range-picker[nzMode="date"]`, en: `nz-range-picker[nzMode="date"]` },
+    ],
   },
   /** 强制合并属性至组件内 */
   ENFORCE_PROPERTIES: {

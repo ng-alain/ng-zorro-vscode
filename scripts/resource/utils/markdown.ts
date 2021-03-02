@@ -153,25 +153,30 @@ function getDirective(): Directive[] {
         item.selector = replaceSelector.replace;
       }
       // merge properties
-      const mergeCog = COG.COMMON_PROPERTIES[item.selector];
-      if (mergeCog) {
-        let commonProperties: DirectiveProperty[];
-        // component
-        if (mergeCog.component) {
-          const targetComponent = processRes.find((w) => w.selector === mergeCog.component);
-          if (targetComponent != null) {
-            commonProperties = targetComponent.properties;
-          }
-        } else {
-          const commonHeading = mergeCog[ast.zone];
-          const commonIdx = ast.offsetAt(commonHeading);
-          commonProperties = getProperties(item, ast.getTable(commonIdx, false)).map((i) => {
-            i._common = true;
-            return i;
-          });
+      let mergeCogs: any[] = COG.COMMON_PROPERTIES[item.selector];
+      if (mergeCogs) {
+        if (!Array.isArray(mergeCogs)) {
+          mergeCogs = [mergeCogs];
         }
-        if (commonProperties) {
-          item.properties = commonProperties.concat(...item.properties);
+        // component
+        for (const mergeCog of mergeCogs) {
+          let commonProperties: DirectiveProperty[];
+          if (mergeCog.component) {
+            const targetComponent = processRes.find((w) => w.selector === mergeCog.component);
+            if (targetComponent != null) {
+              commonProperties = targetComponent.properties;
+            }
+          } else {
+            const commonHeading = mergeCog[ast.zone];
+            const commonIdx = ast.offsetAt(commonHeading);
+            commonProperties = getProperties(item, ast.getTable(commonIdx, false)).map((i) => {
+              i._common = true;
+              return i;
+            });
+          }
+          if (commonProperties) {
+            item.properties = commonProperties.concat(...item.properties);
+          }
         }
       }
       // fix description
