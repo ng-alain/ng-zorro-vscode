@@ -213,6 +213,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-cascader.ngModel.description': localize('nz-cascader.ngModel.description', 'selected value'),
 'nz-cascader.nzAllowClear.description': localize('nz-cascader.nzAllowClear.description', 'whether allow clear'),
 'nz-cascader.nzAutoFocus.description': localize('nz-cascader.nzAutoFocus.description', 'whether auto focus the input box'),
+'nz-cascader.nzBackdrop.description': localize('nz-cascader.nzBackdrop.description', 'whether or not the overlay should attach a backdrop'),
 'nz-cascader.nzChangeOn.description': localize('nz-cascader.nzChangeOn.description', 'change value on each selection if this function return `true`'),
 'nz-cascader.nzChangeOnSelect.description': localize('nz-cascader.nzChangeOnSelect.description', 'change value on each selection if set to true, see above demo for details'),
 'nz-cascader.nzColumnClassName.description': localize('nz-cascader.nzColumnClassName.description', 'additional className of column in the popup overlay'),
@@ -313,6 +314,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-date-picker.nzOnOk.description': localize('nz-date-picker.nzOnOk.description', 'callback when click ok button'),
 'nz-date-picker.nzAllowClear.description': localize('nz-date-picker.nzAllowClear.description', 'Whether to show clear button'),
 'nz-date-picker.nzAutoFocus.description': localize('nz-date-picker.nzAutoFocus.description', 'get focus when component mounted'),
+'nz-date-picker.nzBackdrop.description': localize('nz-date-picker.nzBackdrop.description', 'whether or not the overlay should attach a backdrop'),
 'nz-date-picker.nzDefaultPickerValue.description': localize('nz-date-picker.nzDefaultPickerValue.description', 'default picker date'),
 'nz-date-picker.nzDisabled.description': localize('nz-date-picker.nzDisabled.description', 'determine whether the nz-date-picker is disabled'),
 'nz-date-picker.nzDisabledDate.description': localize('nz-date-picker.nzDisabledDate.description', 'specify the date that cannot be selected'),
@@ -342,6 +344,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-range-picker.nzOnOk.description': localize('nz-range-picker.nzOnOk.description', 'click ok callback'),
 'nz-range-picker.nzAllowClear.description': localize('nz-range-picker.nzAllowClear.description', 'Whether to show clear button'),
 'nz-range-picker.nzAutoFocus.description': localize('nz-range-picker.nzAutoFocus.description', 'get focus when component mounted'),
+'nz-range-picker.nzBackdrop.description': localize('nz-range-picker.nzBackdrop.description', 'whether or not the overlay should attach a backdrop'),
 'nz-range-picker.nzDefaultPickerValue.description': localize('nz-range-picker.nzDefaultPickerValue.description', 'default picker date'),
 'nz-range-picker.nzDisabled.description': localize('nz-range-picker.nzDisabled.description', 'determine whether the nz-date-picker is disabled'),
 'nz-range-picker.nzDisabledDate.description': localize('nz-range-picker.nzDisabledDate.description', 'specify the date that cannot be selected'),
@@ -394,7 +397,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-drawer.nzCloseIcon.description': localize('nz-drawer.nzCloseIcon.description', 'Custom close icon'),
 'nz-drawer.nzMask.description': localize('nz-drawer.nzMask.description', 'Whether to show mask or not.'),
 'nz-drawer.nzMaskClosable.description': localize('nz-drawer.nzMaskClosable.description', 'Clicking on the mask (area outside the Drawer) to close the Drawer or not.'),
-'nz-drawer.nzCloseOnNavigation.description': localize('nz-drawer.nzCloseOnNavigation.description', 'Whether to close the drawer when the navigation history changes'),
+'nz-drawer.nzCloseOnNavigation.description': localize('nz-drawer.nzCloseOnNavigation.description', 'Whether to close the drawer when the user goes backwards/forwards in history. Note that this usually doesn\'t include clicking on links (unless the user is using the HashLocationStrategy).'),
 'nz-drawer.nzKeyboard.description': localize('nz-drawer.nzKeyboard.description', 'Whether support press esc to close'),
 'nz-drawer.nzMaskStyle.description': localize('nz-drawer.nzMaskStyle.description', 'Style for Drawer\'s mask element.'),
 'nz-drawer.nzBodyStyle.description': localize('nz-drawer.nzBodyStyle.description', 'Body style for drawer body element. Such as height, padding etc.'),
@@ -542,7 +545,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-image.nzFallback.description': localize('nz-image.nzFallback.description', 'Load failure fault-tolerant src'),
 'nz-image.nzPlaceholder.description': localize('nz-image.nzPlaceholder.description', 'Load placeholder src'),
 'nz-image.nzDisablePreview.description': localize('nz-image.nzDisablePreview.description', 'Whether to disable the preview'),
-'nz-image.nzCloseOnNavigation.description': localize('nz-image.nzCloseOnNavigation.description', 'Close preview while navigating'),
+'nz-image.nzCloseOnNavigation.description': localize('nz-image.nzCloseOnNavigation.description', 'Whether to close the image preview when the user goes backwards/forwards in history. Note that this usually doesn\'t include clicking on links (unless the user is using the HashLocationStrategy).'),
 'nz-image.nzDirection.description': localize('nz-image.nzDirection.description', 'Text directionality'),
 'nz-input.title': localize('nz-input.title', 'Input'),
 'nz-input.whenToUse': localize('nz-input.whenToUse', '- A user input in a form field is needed.\n- A search input is required.'),
@@ -714,7 +717,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-modal.nzKeyboard.description': localize('nz-modal.nzKeyboard.description', 'Whether support press esc to close'),
 'nz-modal.nzMask.description': localize('nz-modal.nzMask.description', 'Whether show mask or not.'),
 'nz-modal.nzMaskClosable.description': localize('nz-modal.nzMaskClosable.description', 'Whether to close the modal dialog when the mask (area outside the modal) is clicked'),
-'nz-modal.nzCloseOnNavigation.description': localize('nz-modal.nzCloseOnNavigation.description', 'Whether to close the modal when the navigation history changes'),
+'nz-modal.nzCloseOnNavigation.description': localize('nz-modal.nzCloseOnNavigation.description', 'Whether to close the modal when the user goes backwards/forwards in history. Note that this usually doesn\'t include clicking on links (unless the user is using the HashLocationStrategy).'),
 'nz-modal.nzDirection.description': localize('nz-modal.nzDirection.description', 'Direction of the text in the modal'),
 'nz-modal.nzMaskStyle.description': localize('nz-modal.nzMaskStyle.description', 'Style for modal\'s mask element.'),
 'nz-modal.nzOkText.description': localize('nz-modal.nzOkText.description', 'Text of the OK button. <i>Set to null to show no ok button (this value is invalid if the nzFooter parameter is used in normal mode)</i>'),
@@ -734,6 +737,9 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-modal.nzComponentParams.description': localize('nz-modal.nzComponentParams.description', 'Will be instance property when `nzContent` is a component，will be template variable when `nzContent` is `TemplateRef`'),
 'nz-modal.nzIconType.description': localize('nz-modal.nzIconType.description', 'Icon type of the Icon component. <i>Only valid in confirm box mode</i>'),
 'nz-modal.nzAutofocus.description': localize('nz-modal.nzAutofocus.description', 'autofocus and the position，disabled when is `null`'),
+'nzModalTitle.title': localize('nzModalTitle.title', 'Modal'),
+'nzModalTitle.whenToUse': localize('nzModalTitle.whenToUse', 'When requiring users to interact with application, but without jumping to a new page to interrupt\nthe user\'s workflow, you can use `Modal` to create a new floating layer over the current page for user\ngetting feedback or information purposes.\nAdditionally, if you need show a simple confirmation dialog, you can use `NzModalService.confirm()`,\nand so on.'),
+'nzModalTitle.description': localize('nzModalTitle.description', 'Customize the title.'),
 'nzModalFooter.title': localize('nzModalFooter.title', 'Modal'),
 'nzModalFooter.whenToUse': localize('nzModalFooter.whenToUse', 'When requiring users to interact with application, but without jumping to a new page to interrupt\nthe user\'s workflow, you can use `Modal` to create a new floating layer over the current page for user\ngetting feedback or information purposes.\nAdditionally, if you need show a simple confirmation dialog, you can use `NzModalService.confirm()`,\nand so on.'),
 'nzModalFooter.description': localize('nzModalFooter.description', 'Customize the footer.'),
@@ -815,6 +821,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-popconfirm.nzPopconfirmMouseLeaveDelay.description': localize('nz-popconfirm.nzPopconfirmMouseLeaveDelay.description', 'Delay in seconds, before popconfirm is hidden on mouse leave'),
 'nz-popconfirm.nzPopconfirmOverlayClassName.description': localize('nz-popconfirm.nzPopconfirmOverlayClassName.description', 'Class name of the popconfirm card'),
 'nz-popconfirm.nzPopconfirmOverlayStyle.description': localize('nz-popconfirm.nzPopconfirmOverlayStyle.description', 'Style of the popconfirm card'),
+'nz-popconfirm.nzPopconfirmBackdrop.description': localize('nz-popconfirm.nzPopconfirmBackdrop.description', 'whether or not the overlay should attach a backdrop'),
 'nz-popconfirm.nzCancelText.description': localize('nz-popconfirm.nzCancelText.description', 'Text of the Cancel button'),
 'nz-popconfirm.nzOkText.description': localize('nz-popconfirm.nzOkText.description', 'Text of the Confirm button'),
 'nz-popconfirm.nzOkType.description': localize('nz-popconfirm.nzOkType.description', 'Button `type` of the Confirm button'),
@@ -847,6 +854,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-popover.nzPopoverMouseLeaveDelay.description': localize('nz-popover.nzPopoverMouseLeaveDelay.description', 'Delay in seconds, before popover is hidden on mouse leave'),
 'nz-popover.nzPopoverOverlayClassName.description': localize('nz-popover.nzPopoverOverlayClassName.description', 'Class name of the popover card'),
 'nz-popover.nzPopoverOverlayStyle.description': localize('nz-popover.nzPopoverOverlayStyle.description', 'Style of the popover card'),
+'nz-popover.nzPopoverBackdrop.description': localize('nz-popover.nzPopoverBackdrop.description', 'whether or not the overlay should attach a backdrop'),
 'nz-progress.title': localize('nz-progress.title', 'Progress'),
 'nz-progress.whenToUse': localize('nz-progress.whenToUse', 'If it will take a long time to complete an operation, you can use `Progress` to show the current progress and status.'),
 'nz-progress.description': localize('nz-progress.description', 'Display the current progress of an operation flow.'),
@@ -949,6 +957,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-select.compareWith.description': localize('nz-select.compareWith.description', 'Same as [SelectControlValueAccessor](https://angular.io/api/forms/SelectControlValueAccessor#caveat-option-selection)'),
 'nz-select.nzAutoClearSearchValue.description': localize('nz-select.nzAutoClearSearchValue.description', 'Whether the current search will be cleared on selecting an item. Only applies when `mode` is set to `multiple` or `tags`.'),
 'nz-select.nzAllowClear.description': localize('nz-select.nzAllowClear.description', 'Show clear button.'),
+'nz-select.nzBackdrop.description': localize('nz-select.nzBackdrop.description', 'whether or not the overlay should attach a backdrop'),
 'nz-select.nzBorderless.description': localize('nz-select.nzBorderless.description', 'whether has borderless style'),
 'nz-select.nzOpen.description': localize('nz-select.nzOpen.description', 'dropdown expand state, double binding'),
 'nz-select.nzAutoFocus.description': localize('nz-select.nzAutoFocus.description', 'Get focus by default'),
@@ -1034,9 +1043,11 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-space.title': localize('nz-space.title', 'Space'),
 'nz-space.whenToUse': localize('nz-space.whenToUse', 'Avoid components clinging together and set a unified space.'),
 'nz-space.description': localize('nz-space.description', 'Set components spacing.'),
-'nz-space.nzSize.description': localize('nz-space.nzSize.description', 'space size'),
-'nz-space.nzDirection.description': localize('nz-space.nzDirection.description', 'space direction'),
-'nz-space.nzAlign.description': localize('nz-space.nzAlign.description', 'align items'),
+'nz-space.nzSize.description': localize('nz-space.nzSize.description', 'The space size'),
+'nz-space.nzDirection.description': localize('nz-space.nzDirection.description', 'The space direction'),
+'nz-space.nzAlign.description': localize('nz-space.nzAlign.description', 'Align items'),
+'nz-space.nzWrap.description': localize('nz-space.nzWrap.description', 'Auto wrap line, when `horizontal` effective'),
+'nz-space.nzSplit.description': localize('nz-space.nzSplit.description', 'Set split'),
 'nz-spin.title': localize('nz-spin.title', 'Spin'),
 'nz-spin.whenToUse': localize('nz-spin.whenToUse', 'When part of the page is waiting for asynchronous data or during a rendering process, an appropriate loading animation can effectively alleviate users\' inquietude.'),
 'nz-spin.description': localize('nz-spin.description', 'A spinner for displaying loading state of a page or a section.'),
@@ -1204,7 +1215,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-tabset.whenToUse': localize('nz-tabset.whenToUse', 'Ant Design has 3 types of Tabs for different situations.'),
 'nz-tabset.description': localize('nz-tabset.description', 'Tabs make it easy to switch between different views.'),
 'nz-tabset.nzSelectedIndex.description': localize('nz-tabset.nzSelectedIndex.description', 'Current tab\'s index'),
-'nz-tabset.nzAnimated.description': localize('nz-tabset.nzAnimated.description', 'Whether to change tabs with animation. Only works while `nzTabPosition="top" \| "bottom"`'),
+'nz-tabset.nzAnimated.description': localize('nz-tabset.nzAnimated.description', 'Whether to change tabs with animation. Only works while `nzTabPosition="top" | "bottom"`'),
 'nz-tabset.nzSize.description': localize('nz-tabset.nzSize.description', 'preset tab bar size'),
 'nz-tabset.nzTabBarExtraContent.description': localize('nz-tabset.nzTabBarExtraContent.description', 'Extra content in tab bar'),
 'nz-tabset.nzTabBarStyle.description': localize('nz-tabset.nzTabBarStyle.description', 'Tab bar style object'),
@@ -1244,6 +1255,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-time-picker.nzAddOn.description': localize('nz-time-picker.nzAddOn.description', 'called from timepicker panel to render some addon to its bottom'),
 'nz-time-picker.nzAllowEmpty.description': localize('nz-time-picker.nzAllowEmpty.description', 'allow clearing text'),
 'nz-time-picker.nzAutoFocus.description': localize('nz-time-picker.nzAutoFocus.description', 'get focus when component mounted'),
+'nz-time-picker.nzBackdrop.description': localize('nz-time-picker.nzBackdrop.description', 'whether or not the overlay should attach a backdrop'),
 'nz-time-picker.nzClearText.description': localize('nz-time-picker.nzClearText.description', 'clear tooltip of icon'),
 'nz-time-picker.nzNowText.description': localize('nz-time-picker.nzNowText.description', 'text of the Now button'),
 'nz-time-picker.nzOkText.description': localize('nz-time-picker.nzOkText.description', 'text of the Ok button'),
@@ -1276,7 +1288,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-timeline-item.title': localize('nz-timeline-item.title', 'Timeline'),
 'nz-timeline-item.whenToUse': localize('nz-timeline-item.whenToUse', '- When a series of information needs to be ordered by time (ascend or descend).\n- When you need a timeline to make a visual connection.'),
 'nz-timeline-item.description': localize('nz-timeline-item.description', 'Node of timeline'),
-'nz-timeline-item.nzColor.description': localize('nz-timeline-item.nzColor.description', 'Set the circle\'s color to `\'blue\' \| \'red\' \| \'green\' \| \'gray\'` or other custom colors (css color)'),
+'nz-timeline-item.nzColor.description': localize('nz-timeline-item.nzColor.description', 'Set the circle\'s color to `\'blue\' | \'red\' | \'green\' | \'gray\'` or other custom colors (css color)'),
 'nz-timeline-item.nzDot.description': localize('nz-timeline-item.nzDot.description', 'Customize timeline dot'),
 'nz-timeline-item.nzPosition.description': localize('nz-timeline-item.nzPosition.description', 'Customize position, only works when `nzMode` is `custom`'),
 'nz-transfer.title': localize('nz-transfer.title', 'Transfer'),
@@ -1373,6 +1385,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-tree-select.nzVirtualItemSize.description': localize('nz-tree-select.nzVirtualItemSize.description', 'The size of the items in the list, same as [cdk itemSize](https://material.angular.io/cdk/scrolling/api)'),
 'nz-tree-select.nzVirtualMaxBufferPx.description': localize('nz-tree-select.nzVirtualMaxBufferPx.description', 'The number of pixels worth of buffer to render for when rendering new items, same as [cdk maxBufferPx](https://material.angular.io/cdk/scrolling/api)'),
 'nz-tree-select.nzVirtualMinBufferPx.description': localize('nz-tree-select.nzVirtualMinBufferPx.description', 'The minimum amount of buffer rendered beyond the viewport (in pixels),same as [cdk minBufferPx](https://material.angular.io/cdk/scrolling/api)'),
+'nz-tree-select.nzBackdrop.description': localize('nz-tree-select.nzBackdrop.description', 'whether or not the overlay should attach a backdrop'),
 'nz-tree-select.nzExpandChange.description': localize('nz-tree-select.nzExpandChange.description', 'Callback function for when a treeNode is expanded or collapsed'),
 'nz-tree-select.ngModel.description': localize('nz-tree-select.ngModel.description', ' '),
 'nz-tree-select.ngModelChange.description': localize('nz-tree-select.ngModelChange.description', ' '),
@@ -1509,8 +1522,6 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'extend.description': localize('extend.description', 'It needs to be used with [nz-range-picker](https://ng.ant.design/components/date-picker/zh#nz-range-picker), for example:'),
 'extend.ngModelEnd.description': localize('extend.ngModelEnd.description', 'End date, start and end values at the same time'),
 'extend.shortcut.description': localize('extend.shortcut.description', 'Set shortcuts'),
-'extend.enabled.description': localize('extend.enabled.description', 'Shortcut list'),
-'extend.closed.description': localize('extend.closed.description', 'Whether to close the panel after clicking'),
 'range-picker.title': localize('range-picker.title', 'Data Range'),
 'range-picker.whenToUse': localize('range-picker.whenToUse', ' '),
 'range-picker.description': localize('range-picker.description', '**Deprecated** Use `nz-range-picker` and `extend` directive to replace `range-picker`, will remove `range-picker` at `12.0.0`.'),
@@ -1597,6 +1608,8 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'notice-icon.clear.description': localize('notice-icon.clear.description', 'Callback for clicking the clear button'),
 'notice-icon.popoverVisible.description': localize('notice-icon.popoverVisible.description', 'Manual control of Popover display'),
 'notice-icon.popoverVisibleChange.description': localize('notice-icon.popoverVisibleChange.description', 'Popover callback'),
+'notice-icon.btnClass.description': localize('notice-icon.btnClass.description', 'Class of the button'),
+'notice-icon.btnIconClass.description': localize('notice-icon.btnIconClass.description', 'Class of the icon in button'),
 'numberToChinese.title': localize('numberToChinese.title', '人民币大写'),
 'numberToChinese.whenToUse': localize('numberToChinese.whenToUse', ' '),
 'numberToChinese.description': localize('numberToChinese.description', '转化方法，包括三个参数：'),
@@ -1778,7 +1791,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'st.virtualMaxBufferPx.description': localize('st.virtualMaxBufferPx.description', 'The number of pixels worth of buffer to render for when rendering new items, same as [cdk maxBufferPx](https://material.angular.io/cdk/scrolling/api)'),
 'st.virtualMinBufferPx.description': localize('st.virtualMinBufferPx.description', 'The minimum amount of buffer rendered beyond the viewport (in pixels),same as [cdk minBufferPx](https://material.angular.io/cdk/scrolling/api)'),
 'st.virtualForTrackBy.description': localize('st.virtualForTrackBy.description', 'The TrackByFunction to use for tracking changes.'),
-'st.singleSort.description': localize('st.singleSort.description', 'Single sort config<br>If not specified, return: `columnName=ascend|descend`<br>If specified, return: `sort=columnName.(ascend|descend)`'),
+'st.singleSort.description': localize('st.singleSort.description', 'Single sort config<br>If not specified, return: `columnName=ascend'),
 'st.multiSort.description': localize('st.multiSort.description', 'Whether to mulit-sort, recommended use in URL data source'),
 'st.rowClickTime.description': localize('st.rowClickTime.description', 'Click twice in the time range for double click, unit is millisecond'),
 'st.header.description': localize('st.header.description', 'Table header renderer'),
@@ -1817,8 +1830,8 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'st.simple.description': localize('st.simple.description', 'Whether to use simple mode'),
 'st.strictBehavior.description': localize('st.strictBehavior.description', 'Behavior type of `strict`'),
 'st.key.description': localize('st.key.description', 'Request parameter name'),
-'st.nameSeparator.description': localize('st.nameSeparator.description', 'Column name and state separator'),
 'st.separator.description': localize('st.separator.description', 'Separator between attributes'),
+'st.nameSeparator.description': localize('st.nameSeparator.description', 'Column name and state separator'),
 'st.arrayParam.description': localize('st.arrayParam.description', 'Whether to pass parameters as an array<br>`true` Indicates the use of `url?sort=name.asc&sort=age.desc`<br>`false` Indicates the use of `url?sort=name.asc-age.desc`'),
 'st.keepEmptyKey.description': localize('st.keepEmptyKey.description', 'Whether to keep send empty key<br>`true` send the `key` name anyway<br>`false` don\'t send `key` when not sorting'),
 'st.global.description': localize('st.global.description', '**Only global config**, Whether global multi sort mode<br>`true` all `st` defaults multi-sort<br>`false` all `st` non-multiple sorting, just only configurable for rule'),
@@ -1870,9 +1883,10 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'xlsx.title': localize('xlsx.title', 'Excel'),
 'xlsx.whenToUse': localize('xlsx.whenToUse', ' '),
 'xlsx.description': localize('xlsx.description', 'xlsx directive.'),
-'g2-bar.title': localize('g2-bar.title', '柱状图'),
+'g2-bar.title': localize('g2-bar.title', 'ECharts'),
 'g2-bar.whenToUse': localize('g2-bar.whenToUse', ' '),
 'g2-bar.description': localize('g2-bar.description', '使用垂直的柱子显示类别之间的数值比较。其中一个轴表示需要对比的分类维度，另一个轴代表相应的数值。'),
+'g2-bar.repaint.description': localize('g2-bar.repaint.description', '数据再次变更时是否重绘'),
 'g2-bar.delay.description': localize('g2-bar.delay.description', '延迟渲染，单位：毫秒'),
 'g2-bar.title.description': localize('g2-bar.title.description', '图表标题'),
 'g2-bar.color.description': localize('g2-bar.color.description', '图表颜色'),
@@ -1906,6 +1920,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'g2-gauge.title': localize('g2-gauge.title', '仪表盘'),
 'g2-gauge.whenToUse': localize('g2-gauge.whenToUse', ' '),
 'g2-gauge.description': localize('g2-gauge.description', '一种进度展示方式，可以更直观的展示当前的进展情况，通常也可表示占比。'),
+'g2-gauge.repaint.description': localize('g2-gauge.repaint.description', '数据再次变更时是否重绘'),
 'g2-gauge.delay.description': localize('g2-gauge.delay.description', '延迟渲染，单位：毫秒'),
 'g2-gauge.title.description': localize('g2-gauge.title.description', '图表标题'),
 'g2-gauge.height.description': localize('g2-gauge.height.description', '图表高度'),
@@ -1918,6 +1933,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'g2-mini-area.title': localize('g2-mini-area.title', '迷你区域图'),
 'g2-mini-area.whenToUse': localize('g2-mini-area.whenToUse', ' '),
 'g2-mini-area.description': localize('g2-mini-area.description', '面积图又叫区域图。 它是在折线图的基础之上形成的, 它将折线图中折线与自变量坐标轴之间的区域使用颜色或者纹理填充，这样一个填充区域我们叫做面积，颜色的填充可以更好的突出趋势信息。'),
+'g2-mini-area.repaint.description': localize('g2-mini-area.repaint.description', '数据再次变更时是否重绘'),
 'g2-mini-area.delay.description': localize('g2-mini-area.delay.description', '延迟渲染，单位：毫秒'),
 'g2-mini-area.color.description': localize('g2-mini-area.color.description', '图表颜色'),
 'g2-mini-area.borderColor.description': localize('g2-mini-area.borderColor.description', '图表边颜色'),
@@ -1935,6 +1951,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'g2-mini-bar.title': localize('g2-mini-bar.title', '迷你柱状图'),
 'g2-mini-bar.whenToUse': localize('g2-mini-bar.whenToUse', ' '),
 'g2-mini-bar.description': localize('g2-mini-bar.description', '迷你柱状图更适合展示简单的区间数据，简洁的表现方式可以很好的减少大数据量的视觉展现压力。'),
+'g2-mini-bar.repaint.description': localize('g2-mini-bar.repaint.description', '数据再次变更时是否重绘'),
 'g2-mini-bar.delay.description': localize('g2-mini-bar.delay.description', '延迟渲染，单位：毫秒'),
 'g2-mini-bar.color.description': localize('g2-mini-bar.color.description', '图表颜色'),
 'g2-mini-bar.height.description': localize('g2-mini-bar.height.description', '图表高度'),
@@ -1966,6 +1983,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'g2-pie.title': localize('g2-pie.title', '饼状图'),
 'g2-pie.whenToUse': localize('g2-pie.whenToUse', ' '),
 'g2-pie.description': localize('g2-pie.description', '用于显示跟速度相关图形再适合不过。'),
+'g2-pie.repaint.description': localize('g2-pie.repaint.description', '数据再次变更时是否重绘'),
 'g2-pie.delay.description': localize('g2-pie.delay.description', '延迟渲染，单位：毫秒'),
 'g2-pie.animate.description': localize('g2-pie.animate.description', '是否显示动画'),
 'g2-pie.color.description': localize('g2-pie.color.description', '图表颜色'),
@@ -1982,11 +2000,13 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'g2-pie.valueFormat.description': localize('g2-pie.valueFormat.description', 'y轴格式化'),
 'g2-pie.data.description': localize('g2-pie.data.description', '数据'),
 'g2-pie.interaction.description': localize('g2-pie.interaction.description', '交互类型，none 无 element-active 图形元素，active-region 图表组件，brush 框选，drag-move 移动'),
+'g2-pie.ratio.description': localize('g2-pie.ratio.description', '百分比配置项'),
 'g2-pie.theme.description': localize('g2-pie.theme.description', '定制图表主题'),
 'g2-pie.clickItem.description': localize('g2-pie.clickItem.description', '点击项回调'),
 'g2-radar.title': localize('g2-radar.title', '雷达图'),
 'g2-radar.whenToUse': localize('g2-radar.whenToUse', ' '),
 'g2-radar.description': localize('g2-radar.description', '雷达图是以相同点开始的轴上表示的三个或更多个定量变量的二维图形的形式显示多变量数据的图形方法。轴的相对位置和角度通常是不知情的。'),
+'g2-radar.repaint.description': localize('g2-radar.repaint.description', '数据再次变更时是否重绘'),
 'g2-radar.delay.description': localize('g2-radar.delay.description', '延迟渲染，单位：毫秒'),
 'g2-radar.title.description': localize('g2-radar.title.description', '图表标题'),
 'g2-radar.height.description': localize('g2-radar.height.description', '图表高度'),
@@ -1999,6 +2019,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'g2-single-bar.title': localize('g2-single-bar.title', '单一柱状图'),
 'g2-single-bar.whenToUse': localize('g2-single-bar.whenToUse', ' '),
 'g2-single-bar.description': localize('g2-single-bar.description', '单一柱状图更适合在列表中展示简单的区间数据，简洁的表现方式可以很好的减少大数据量的视觉展现压力。'),
+'g2-single-bar.repaint.description': localize('g2-single-bar.repaint.description', '数据再次变更时是否重绘'),
 'g2-single-bar.delay.description': localize('g2-single-bar.delay.description', '延迟渲染，单位：毫秒'),
 'g2-single-bar.plusColor.description': localize('g2-single-bar.plusColor.description', '图表颜色'),
 'g2-single-bar.minusColor.description': localize('g2-single-bar.minusColor.description', '负值图表颜色'),
@@ -2014,6 +2035,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'g2-tag-cloud.title': localize('g2-tag-cloud.title', '标签云'),
 'g2-tag-cloud.whenToUse': localize('g2-tag-cloud.whenToUse', ' '),
 'g2-tag-cloud.description': localize('g2-tag-cloud.description', '标签云是一套相关的标签以及与此相应的权重展示方式，一般典型的标签云有 30 至 150 个标签，而权重影响使用的字体大小或其他视觉效果。'),
+'g2-tag-cloud.repaint.description': localize('g2-tag-cloud.repaint.description', '数据再次变更时是否重绘'),
 'g2-tag-cloud.delay.description': localize('g2-tag-cloud.delay.description', '延迟渲染，单位：毫秒'),
 'g2-tag-cloud.height.description': localize('g2-tag-cloud.height.description', '高度值'),
 'g2-tag-cloud.width.description': localize('g2-tag-cloud.width.description', '宽度值，若不指定自动按宿主元素的宽度'),
@@ -2023,6 +2045,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'g2-timeline.title': localize('g2-timeline.title', '折线图'),
 'g2-timeline.whenToUse': localize('g2-timeline.whenToUse', ' '),
 'g2-timeline.description': localize('g2-timeline.description', '使用 `timeline` 组件可以实现带有时间轴的柱状图展现，而其中的 `x` 属性，则是时间值的指向，默认最多支持同时展现两个指标，分别是 `y1` 和 `y2`。'),
+'g2-timeline.repaint.description': localize('g2-timeline.repaint.description', '数据再次变更时是否重绘'),
 'g2-timeline.delay.description': localize('g2-timeline.delay.description', '延迟渲染，单位：毫秒'),
 'g2-timeline.title.description': localize('g2-timeline.title.description', '图表标题'),
 'g2-timeline.maxAxis.description': localize('g2-timeline.maxAxis.description', '最大指标数量'),
@@ -3807,6 +3830,15 @@ export const DATA = [
         "pureDefault": "false"
       },
       {
+        "name": "nzBackdrop",
+        "inputType": 0,
+        "description": "nz-cascader.nzBackdrop.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
         "name": "nzChangeOn",
         "inputType": 0,
         "description": "nz-cascader.nzChangeOn.description",
@@ -4467,8 +4499,8 @@ export const DATA = [
         "description": "nz-date-picker.nzDateRender.description",
         "type": "string",
         "typeRaw": "-",
-        "default": "`TemplateRef<Date> \\| string \\| ((d: Date) => TemplateRef<Date> \\| string)`",
-        "pureDefault": "TemplateRef<Date> \\| string \\| ((d: Date) => TemplateRef<Date> \\| string)",
+        "default": "`TemplateRef<Date> | string | ((d: Date) => TemplateRef<Date> | string)`",
+        "pureDefault": "TemplateRef<Date> | string | ((d: Date) => TemplateRef<Date> | string)",
         "_common": true
       },
       {
@@ -4533,6 +4565,16 @@ export const DATA = [
         "name": "nzAutoFocus",
         "inputType": 0,
         "description": "nz-date-picker.nzAutoFocus.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false",
+        "_common": true
+      },
+      {
+        "name": "nzBackdrop",
+        "inputType": 0,
+        "description": "nz-date-picker.nzBackdrop.description",
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
@@ -4787,6 +4829,16 @@ export const DATA = [
         "name": "nzAutoFocus",
         "inputType": 0,
         "description": "nz-range-picker.nzAutoFocus.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false",
+        "_common": true
+      },
+      {
+        "name": "nzBackdrop",
+        "inputType": 0,
+        "description": "nz-range-picker.nzBackdrop.description",
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
@@ -5093,8 +5145,8 @@ export const DATA = [
         "description": "nz-descriptions-item.nzTitle.description",
         "type": "boolean",
         "typeRaw": "`boolean`",
-        "default": "`string\\|TemplateRef<void>`",
-        "pureDefault": "string\\|TemplateRef<void>"
+        "default": "`string|TemplateRef<void>`",
+        "pureDefault": "string|TemplateRef<void>"
       },
       {
         "name": "nzSpan",
@@ -11181,6 +11233,18 @@ export const DATA = [
   },
   {
     "type": "directive",
+    "selector": "nzModalTitle",
+    "types": {},
+    "properties": [],
+    "description": "nzModalTitle.description",
+    "lib": "ng-zorro-antd",
+    "title": "nzModalTitle.title",
+    "whenToUse": "nzModalTitle.whenToUse",
+    "doc": "/components/modal/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/modal"
+  },
+  {
+    "type": "directive",
     "selector": "nzModalFooter",
     "types": {},
     "properties": [],
@@ -11794,6 +11858,15 @@ export const DATA = [
         "default": ""
       },
       {
+        "name": "nzPopconfirmBackdrop",
+        "inputType": 0,
+        "description": "nz-popconfirm.nzPopconfirmBackdrop.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
         "name": "nzCancelText",
         "inputType": 0,
         "description": "nz-popconfirm.nzCancelText.description",
@@ -12100,6 +12173,15 @@ export const DATA = [
         "type": "object",
         "typeRaw": "`object`",
         "default": ""
+      },
+      {
+        "name": "nzPopoverBackdrop",
+        "inputType": 0,
+        "description": "nz-popover.nzPopoverBackdrop.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
       }
     ],
     "lib": "ng-zorro-antd",
@@ -12921,6 +13003,15 @@ export const DATA = [
         "pureDefault": "false"
       },
       {
+        "name": "nzBackdrop",
+        "inputType": 0,
+        "description": "nz-select.nzBackdrop.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
         "name": "nzBorderless",
         "inputType": 0,
         "description": "nz-select.nzBorderless.description",
@@ -13143,7 +13234,7 @@ export const DATA = [
         "inputType": 0,
         "description": "nz-select.nzOptions.description",
         "type": "Array",
-        "typeRaw": "`Array<{ label: string | TemplateRef<any>; value: any; disabled?: boolean; hide?: boolean; groupLabel?: string | TemplateRef<any>;}>`",
+        "typeRaw": "`Array<{ label: string  | number | TemplateRef<any>; value: any; disabled?: boolean; hide?: boolean; groupLabel?: string | TemplateRef<any>;}>`",
         "default": ""
       },
       {
@@ -13263,7 +13354,7 @@ export const DATA = [
         "inputType": 0,
         "description": "nz-option.nzLabel.description",
         "type": "string",
-        "typeRaw": "`string`",
+        "typeRaw": "`string  | number`",
         "default": ""
       },
       {
@@ -13310,7 +13401,7 @@ export const DATA = [
         "inputType": 0,
         "description": "nz-option-group.nzLabel.description",
         "type": "string",
-        "typeRaw": "`string | TemplateRef<void>`",
+        "typeRaw": "`string  | number | TemplateRef<void>`",
         "default": ""
       }
     ],
@@ -13331,8 +13422,9 @@ export const DATA = [
           "inputType": 0,
           "description": "nz-skeleton.size.description",
           "type": "number",
-          "typeRaw": "`number | 'large' | 'small' | 'default'`",
-          "default": ""
+          "typeRaw": "`number",
+          "default": "\\ 'large' | 'small' | 'default'`",
+          "pureDefault": "\\ 'large' | 'small' | 'default'`"
         },
         {
           "name": "shape",
@@ -13623,26 +13715,59 @@ export const DATA = [
         "name": "nzSize",
         "inputType": 0,
         "description": "nz-space.nzSize.description",
-        "type": "string",
-        "typeRaw": "`small` | `middle` | `large` | `number`",
+        "type": "Enum",
+        "typeRaw": "`'small' | 'middle' | 'large' | number`",
         "default": "`small`",
+        "typeDefinition": [
+          "small",
+          "middle",
+          "large",
+          "number"
+        ],
         "pureDefault": "small"
       },
       {
         "name": "nzDirection",
         "inputType": 0,
         "description": "nz-space.nzDirection.description",
-        "type": "string",
-        "typeRaw": "`vertical` | `horizontal`",
+        "type": "Enum",
+        "typeRaw": "`'vertical' | 'horizontal'`",
         "default": "`horizontal`",
+        "typeDefinition": [
+          "vertical",
+          "horizontal"
+        ],
         "pureDefault": "horizontal"
       },
       {
         "name": "nzAlign",
         "inputType": 0,
         "description": "nz-space.nzAlign.description",
-        "type": "string",
-        "typeRaw": "`start` | `end` | `baseline` | `horizontal`",
+        "type": "Enum",
+        "typeRaw": "`'start' | 'end' | 'baseline' | 'center'`",
+        "default": "",
+        "typeDefinition": [
+          "start",
+          "end",
+          "baseline",
+          "center"
+        ]
+      },
+      {
+        "name": "nzWrap",
+        "inputType": 0,
+        "description": "nz-space.nzWrap.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzSplit",
+        "inputType": 0,
+        "description": "nz-space.nzSplit.description",
+        "type": "TemplateRef",
+        "typeRaw": "`TemplateRef`",
         "default": ""
       }
     ],
@@ -15298,6 +15423,15 @@ export const DATA = [
         "pureDefault": "false"
       },
       {
+        "name": "nzBackdrop",
+        "inputType": 0,
+        "description": "nz-time-picker.nzBackdrop.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
         "name": "nzClearText",
         "inputType": 0,
         "description": "nz-time-picker.nzClearText.description",
@@ -16358,6 +16492,15 @@ export const DATA = [
         "pureDefault": "28"
       },
       {
+        "name": "nzBackdrop",
+        "inputType": 0,
+        "description": "nz-tree-select.nzBackdrop.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
         "name": "nzExpandChange",
         "inputType": 1,
         "description": "nz-tree-select.nzExpandChange.description",
@@ -17278,8 +17421,9 @@ export const DATA = [
         "inputType": 0,
         "description": "count-down.target.description",
         "type": "number",
-        "typeRaw": "`number | Date`",
-        "default": ""
+        "typeRaw": "`number",
+        "default": "Date`",
+        "pureDefault": "Date`"
       },
       {
         "name": "config",
@@ -17308,37 +17452,7 @@ export const DATA = [
   {
     "type": "directive",
     "selector": "extend",
-    "types": {
-      "DateRangePickerShortcut": [
-        {
-          "name": "enabled",
-          "inputType": 0,
-          "description": "extend.enabled.description",
-          "type": "boolean",
-          "typeRaw": "`boolean`",
-          "default": "`false`",
-          "pureDefault": "false"
-        },
-        {
-          "name": "closed",
-          "inputType": 0,
-          "description": "extend.closed.description",
-          "type": "boolean",
-          "typeRaw": "`boolean`",
-          "default": "`true`",
-          "pureDefault": "true"
-        },
-        {
-          "name": "enabled",
-          "inputType": 0,
-          "description": "extend.enabled.description",
-          "type": "Array",
-          "typeRaw": "`DateRangePickerShortcutItem[]`",
-          "default": "`今天,昨天,近3天,近7天,本周,本月,全年`",
-          "pureDefault": "今天,昨天,近3天,近7天,本周,本月,全年"
-        }
-      ]
-    },
+    "types": {},
     "properties": [
       {
         "name": "ngModelEnd",
@@ -17353,10 +17467,9 @@ export const DATA = [
         "inputType": 0,
         "description": "extend.shortcut.description",
         "type": "boolean",
-        "typeRaw": "`boolean | DateRangePickerShortcut`",
-        "default": "`false`",
-        "complexType": "DateRangePickerShortcut",
-        "pureDefault": "false"
+        "typeRaw": "`boolean",
+        "default": "DateRangePickerShortcut`",
+        "pureDefault": "DateRangePickerShortcut`"
       }
     ],
     "description": "extend.description",
@@ -17954,6 +18067,22 @@ export const DATA = [
         "type": "EventEmitter",
         "typeRaw": "`EventEmitter<boolean>`",
         "default": ""
+      },
+      {
+        "name": "btnClass",
+        "inputType": 0,
+        "description": "notice-icon.btnClass.description",
+        "type": "string",
+        "typeRaw": "`ngClass`",
+        "default": ""
+      },
+      {
+        "name": "btnIconClass",
+        "inputType": 0,
+        "description": "notice-icon.btnIconClass.description",
+        "type": "string",
+        "typeRaw": "`ngClass`",
+        "default": ""
       }
     ],
     "lib": "@delon/abc",
@@ -17994,8 +18123,9 @@ export const DATA = [
         "inputType": 0,
         "description": "numberToChinese.value.description",
         "type": "number",
-        "typeRaw": "`number | string`",
-        "default": ""
+        "typeRaw": "`number",
+        "default": "string`",
+        "pureDefault": "string`"
       },
       {
         "name": "rmb",
@@ -18670,9 +18800,9 @@ export const DATA = [
         "inputType": 0,
         "description": "reuse-tab.keepingScrollContainer.description",
         "type": "string",
-        "typeRaw": "`string | Element`",
-        "default": "`window`",
-        "pureDefault": "window"
+        "typeRaw": "`string",
+        "default": "Element`",
+        "pureDefault": "Element`"
       },
       {
         "name": "excludes",
@@ -19685,26 +19815,6 @@ export const DATA = [
           "pureDefault": "truncate"
         }
       ],
-      "STSingleSort": [
-        {
-          "name": "key",
-          "inputType": 0,
-          "description": "st.key.description",
-          "type": "string",
-          "typeRaw": "`string`",
-          "default": "`sort`",
-          "pureDefault": "sort"
-        },
-        {
-          "name": "nameSeparator",
-          "inputType": 0,
-          "description": "st.nameSeparator.description",
-          "type": "string",
-          "typeRaw": "`string`",
-          "default": "`.`",
-          "pureDefault": "."
-        }
-      ],
       "STMultiSort": [
         {
           "name": "key",
@@ -19932,9 +20042,9 @@ export const DATA = [
         "inputType": 0,
         "description": "st.loading.description",
         "type": "boolean",
-        "typeRaw": "`boolean | null`",
-        "default": "`null`",
-        "pureDefault": "null"
+        "typeRaw": "`boolean",
+        "default": "null`",
+        "pureDefault": "null`"
       },
       {
         "name": "loadingIndicator",
@@ -20009,11 +20119,10 @@ export const DATA = [
         "name": "singleSort",
         "inputType": 0,
         "description": "st.singleSort.description",
-        "type": "object",
-        "typeRaw": "`STSingleSort`",
-        "default": "`null`",
-        "complexType": "STSingleSort",
-        "pureDefault": "null"
+        "type": "string",
+        "typeRaw": "descend`<br>If specified, return: `sort=columnName.(ascend",
+        "default": "descend)`",
+        "pureDefault": "descend)`"
       },
       {
         "name": "multiSort",
@@ -20449,7 +20558,7 @@ export const DATA = [
         "inputType": 0,
         "description": "sv-title.tooltip.description",
         "type": "string",
-        "typeRaw": "`string`",
+        "typeRaw": "`string, TemplateRef<void>`",
         "default": ""
       },
       {
@@ -20500,7 +20609,7 @@ export const DATA = [
         "inputType": 0,
         "description": "sv-title.tooltip.description",
         "type": "string",
-        "typeRaw": "`string`",
+        "typeRaw": "`string, TemplateRef<void>`",
         "default": ""
       },
       {
@@ -20551,7 +20660,7 @@ export const DATA = [
         "inputType": 0,
         "description": "sv-value.tooltip.description",
         "type": "string",
-        "typeRaw": "`string`",
+        "typeRaw": "`string, TemplateRef<void>`",
         "default": ""
       },
       {
@@ -20624,6 +20733,15 @@ export const DATA = [
     "types": {},
     "properties": [
       {
+        "name": "repaint",
+        "inputType": 0,
+        "description": "g2-bar.repaint.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`true`",
+        "pureDefault": "true"
+      },
+      {
         "name": "delay",
         "inputType": 0,
         "description": "g2-bar.delay.description",
@@ -20654,9 +20772,9 @@ export const DATA = [
         "inputType": 0,
         "description": "g2-bar.padding.description",
         "type": "Array",
-        "typeRaw": "`Array<number | string> | string`",
-        "default": "`[32, 0, 32, 40]`",
-        "pureDefault": "[32, 0, 32, 40]"
+        "typeRaw": "`Array<number",
+        "default": "string>",
+        "pureDefault": "string>"
       },
       {
         "name": "height",
@@ -20698,8 +20816,9 @@ export const DATA = [
         "inputType": 0,
         "description": "g2-bar.theme.description",
         "type": "string",
-        "typeRaw": "`string | LooseObject`",
-        "default": ""
+        "typeRaw": "`string",
+        "default": "LooseObject`",
+        "pureDefault": "LooseObject`"
       },
       {
         "name": "clickItem",
@@ -20789,6 +20908,106 @@ export const DATA = [
   },
   {
     "type": "component",
+    "selector": "g2-bar",
+    "types": {},
+    "properties": [
+      {
+        "name": "delay",
+        "inputType": 0,
+        "description": "g2-bar.delay.description",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`0`",
+        "pureDefault": "0"
+      },
+      {
+        "name": "title",
+        "inputType": 0,
+        "description": "g2-bar.title.description",
+        "type": "string",
+        "typeRaw": "`string,TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "color",
+        "inputType": 0,
+        "description": "g2-bar.color.description",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": "`rgba(24, 144, 255, 0.85)`",
+        "pureDefault": "rgba(24, 144, 255, 0.85)"
+      },
+      {
+        "name": "padding",
+        "inputType": 0,
+        "description": "g2-bar.padding.description",
+        "type": "Array",
+        "typeRaw": "`Array<number",
+        "default": "string>",
+        "pureDefault": "string>"
+      },
+      {
+        "name": "height",
+        "inputType": 0,
+        "description": "g2-bar.height.description",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": ""
+      },
+      {
+        "name": "data",
+        "inputType": 0,
+        "description": "g2-bar.data.description",
+        "type": "Array",
+        "typeRaw": "`G2BarData[]`",
+        "default": "`[]`",
+        "pureDefault": "[]"
+      },
+      {
+        "name": "autoLabel",
+        "inputType": 0,
+        "description": "g2-bar.autoLabel.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`true`",
+        "pureDefault": "true"
+      },
+      {
+        "name": "interaction",
+        "inputType": 0,
+        "description": "g2-bar.interaction.description",
+        "type": "object",
+        "typeRaw": "`InteractionType`",
+        "default": "`none`",
+        "pureDefault": "none"
+      },
+      {
+        "name": "theme",
+        "inputType": 0,
+        "description": "g2-bar.theme.description",
+        "type": "string",
+        "typeRaw": "`string",
+        "default": "LooseObject`",
+        "pureDefault": "LooseObject`"
+      },
+      {
+        "name": "clickItem",
+        "inputType": 1,
+        "description": "g2-bar.clickItem.description",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<G2BarClickItem>`",
+        "default": ""
+      }
+    ],
+    "lib": "@delon/chart",
+    "title": "g2-bar.title",
+    "description": "g2-bar.description",
+    "whenToUse": "g2-bar.whenToUse",
+    "doc": "/chart/chart-echarts/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/chart-echarts"
+  },
+  {
+    "type": "component",
     "selector": "g2-custom",
     "types": {},
     "properties": [
@@ -20847,8 +21066,9 @@ export const DATA = [
         "inputType": 0,
         "description": "g2-custom.theme.description",
         "type": "string",
-        "typeRaw": "`string | LooseObject`",
-        "default": ""
+        "typeRaw": "`string",
+        "default": "LooseObject`",
+        "pureDefault": "LooseObject`"
       }
     ],
     "lib": "@delon/chart",
@@ -20863,6 +21083,15 @@ export const DATA = [
     "selector": "g2-gauge",
     "types": {},
     "properties": [
+      {
+        "name": "repaint",
+        "inputType": 0,
+        "description": "g2-gauge.repaint.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`true`",
+        "pureDefault": "true"
+      },
       {
         "name": "delay",
         "inputType": 0,
@@ -20919,9 +21148,9 @@ export const DATA = [
         "inputType": 0,
         "description": "g2-gauge.padding.description",
         "type": "Array",
-        "typeRaw": "`Array<number | string>`",
-        "default": "`[10, 10, 30, 10]`",
-        "pureDefault": "[10, 10, 30, 10]"
+        "typeRaw": "`Array<number",
+        "default": "string>`",
+        "pureDefault": "string>`"
       },
       {
         "name": "format",
@@ -20936,8 +21165,9 @@ export const DATA = [
         "inputType": 0,
         "description": "g2-gauge.theme.description",
         "type": "string",
-        "typeRaw": "`string | LooseObject`",
-        "default": ""
+        "typeRaw": "`string",
+        "default": "LooseObject`",
+        "pureDefault": "LooseObject`"
       }
     ],
     "lib": "@delon/chart",
@@ -20952,6 +21182,15 @@ export const DATA = [
     "selector": "g2-mini-area",
     "types": {},
     "properties": [
+      {
+        "name": "repaint",
+        "inputType": 0,
+        "description": "g2-mini-area.repaint.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`true`",
+        "pureDefault": "true"
+      },
       {
         "name": "delay",
         "inputType": 0,
@@ -21065,8 +21304,9 @@ export const DATA = [
         "inputType": 0,
         "description": "g2-mini-area.theme.description",
         "type": "string",
-        "typeRaw": "`string | LooseObject`",
-        "default": ""
+        "typeRaw": "`string",
+        "default": "LooseObject`",
+        "pureDefault": "LooseObject`"
       },
       {
         "name": "clickItem",
@@ -21089,6 +21329,15 @@ export const DATA = [
     "selector": "g2-mini-bar",
     "types": {},
     "properties": [
+      {
+        "name": "repaint",
+        "inputType": 0,
+        "description": "g2-mini-bar.repaint.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`true`",
+        "pureDefault": "true"
+      },
       {
         "name": "delay",
         "inputType": 0,
@@ -21167,8 +21416,9 @@ export const DATA = [
         "inputType": 0,
         "description": "g2-mini-bar.theme.description",
         "type": "string",
-        "typeRaw": "`string | LooseObject`",
-        "default": ""
+        "typeRaw": "`string",
+        "default": "LooseObject`",
+        "pureDefault": "LooseObject`"
       },
       {
         "name": "clickItem",
@@ -21324,6 +21574,15 @@ export const DATA = [
     "types": {},
     "properties": [
       {
+        "name": "repaint",
+        "inputType": 0,
+        "description": "g2-pie.repaint.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`true`",
+        "pureDefault": "true"
+      },
+      {
         "name": "delay",
         "inputType": 0,
         "description": "g2-pie.delay.description",
@@ -21462,12 +21721,22 @@ export const DATA = [
         "pureDefault": "none"
       },
       {
+        "name": "ratio",
+        "inputType": 0,
+        "description": "g2-pie.ratio.description",
+        "type": "object",
+        "typeRaw": "`G2PieRatio`",
+        "default": "`{ text: '占比', inverse: '反比', color: '', inverseColor: '#F0F2F5' }`",
+        "pureDefault": "{ text: '占比', inverse: '反比', color: '', inverseColor: '#F0F2F5' }"
+      },
+      {
         "name": "theme",
         "inputType": 0,
         "description": "g2-pie.theme.description",
         "type": "string",
-        "typeRaw": "`string | LooseObject`",
-        "default": ""
+        "typeRaw": "`string",
+        "default": "LooseObject`",
+        "pureDefault": "LooseObject`"
       },
       {
         "name": "clickItem",
@@ -21490,6 +21759,15 @@ export const DATA = [
     "selector": "g2-radar",
     "types": {},
     "properties": [
+      {
+        "name": "repaint",
+        "inputType": 0,
+        "description": "g2-radar.repaint.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`true`",
+        "pureDefault": "true"
+      },
       {
         "name": "delay",
         "inputType": 0,
@@ -21554,8 +21832,9 @@ export const DATA = [
         "inputType": 0,
         "description": "g2-radar.theme.description",
         "type": "string",
-        "typeRaw": "`string | LooseObject`",
-        "default": ""
+        "typeRaw": "`string",
+        "default": "LooseObject`",
+        "pureDefault": "LooseObject`"
       },
       {
         "name": "clickItem",
@@ -21578,6 +21857,15 @@ export const DATA = [
     "selector": "g2-single-bar",
     "types": {},
     "properties": [
+      {
+        "name": "repaint",
+        "inputType": 0,
+        "description": "g2-single-bar.repaint.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`true`",
+        "pureDefault": "true"
+      },
       {
         "name": "delay",
         "inputType": 0,
@@ -21681,8 +21969,9 @@ export const DATA = [
         "inputType": 0,
         "description": "g2-single-bar.theme.description",
         "type": "string",
-        "typeRaw": "`string | LooseObject`",
-        "default": ""
+        "typeRaw": "`string",
+        "default": "LooseObject`",
+        "pureDefault": "LooseObject`"
       }
     ],
     "lib": "@delon/chart",
@@ -21697,6 +21986,15 @@ export const DATA = [
     "selector": "g2-tag-cloud",
     "types": {},
     "properties": [
+      {
+        "name": "repaint",
+        "inputType": 0,
+        "description": "g2-tag-cloud.repaint.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`true`",
+        "pureDefault": "true"
+      },
       {
         "name": "delay",
         "inputType": 0,
@@ -21738,8 +22036,9 @@ export const DATA = [
         "inputType": 0,
         "description": "g2-tag-cloud.theme.description",
         "type": "string",
-        "typeRaw": "`string | LooseObject`",
-        "default": ""
+        "typeRaw": "`string",
+        "default": "LooseObject`",
+        "pureDefault": "LooseObject`"
       },
       {
         "name": "clickItem",
@@ -21805,6 +22104,15 @@ export const DATA = [
       ]
     },
     "properties": [
+      {
+        "name": "repaint",
+        "inputType": 0,
+        "description": "g2-timeline.repaint.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`true`",
+        "pureDefault": "true"
+      },
       {
         "name": "delay",
         "inputType": 0,
@@ -21932,8 +22240,9 @@ export const DATA = [
         "inputType": 0,
         "description": "g2-timeline.theme.description",
         "type": "string",
-        "typeRaw": "`string | LooseObject`",
-        "default": ""
+        "typeRaw": "`string",
+        "default": "LooseObject`",
+        "pureDefault": "LooseObject`"
       },
       {
         "name": "clickItem",

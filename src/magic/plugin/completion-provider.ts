@@ -188,7 +188,15 @@ export default class implements CompletionItemProvider {
           break;
         // 默认绑定
         default:
-          snippet = this.genDefaultPropertySnippet(property);
+          if (
+            property.type === 'boolean' &&
+            !['disabled', 'loading'].some((key) => property.pureName.toLowerCase().includes(key)) &&
+            property.pureDefault === 'false'
+          ) {
+            snippet = `${property.name}`;
+          } else {
+            snippet = this.genDefaultPropertySnippet(property);
+          }
           break;
       }
     }
@@ -240,7 +248,7 @@ export default class implements CompletionItemProvider {
   private genDefaultPropertyValueSnippet(property: DirectiveProperty): string {
     switch (property.type) {
       case 'boolean':
-        return `"\${1|true,false${CONFIG.isAlain ? ',http.loading' : ''}|}"$0`;
+        return `"\${1|false,true,loading,disabled${CONFIG.isAlain ? ',http.loading' : ''}|}"$0`;
       case 'TemplateRef':
         return property.default ? `"\${1:${property.default}}"$0` : `"\${1:${property.pureName}}Tpl"$0`;
       case 'Array':
