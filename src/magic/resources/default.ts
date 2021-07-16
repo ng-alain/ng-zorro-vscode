@@ -244,6 +244,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-checkbox.title': localize('nz-checkbox.title', 'Checkbox'),
 'nz-checkbox.whenToUse': localize('nz-checkbox.whenToUse', '- Used for selecting multiple values from several options.\n- If you use only one checkbox, it is the same as using Switch to toggle between two states. The difference is that Switch will trigger the state change directly, but Checkbox just marks the state as changed and this needs to be submitted.'),
 'nz-checkbox.description': localize('nz-checkbox.description', 'Checkbox.'),
+'nz-checkbox.nzId.description': localize('nz-checkbox.nzId.description', 'input id attribute inside the component'),
 'nz-checkbox.nzAutoFocus.description': localize('nz-checkbox.nzAutoFocus.description', 'get focus when component mounted'),
 'nz-checkbox.nzDisabled.description': localize('nz-checkbox.nzDisabled.description', 'Disable checkbox'),
 'nz-checkbox.ngModel.description': localize('nz-checkbox.ngModel.description', 'Specifies whether the checkbox is selected, double binding'),
@@ -312,6 +313,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-date-picker.nzShowToday.description': localize('nz-date-picker.nzShowToday.description', 'whether to show \'Today\' button'),
 'nz-date-picker.nzShowNow.description': localize('nz-date-picker.nzShowNow.description', 'whether to show \'Now\' button on panel when `nzShowTime` is set'),
 'nz-date-picker.nzOnOk.description': localize('nz-date-picker.nzOnOk.description', 'callback when click ok button'),
+'nz-date-picker.nzId.description': localize('nz-date-picker.nzId.description', 'input id attribute inside the component'),
 'nz-date-picker.nzAllowClear.description': localize('nz-date-picker.nzAllowClear.description', 'Whether to show clear button'),
 'nz-date-picker.nzAutoFocus.description': localize('nz-date-picker.nzAutoFocus.description', 'get focus when component mounted'),
 'nz-date-picker.nzBackdrop.description': localize('nz-date-picker.nzBackdrop.description', 'whether or not the overlay should attach a backdrop'),
@@ -332,7 +334,6 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-date-picker.nzInline.description': localize('nz-date-picker.nzInline.description', 'inline mode'),
 'nz-date-picker.nzOnOpenChange.description': localize('nz-date-picker.nzOnOpenChange.description', 'a callback emitter, can be executed whether the popup calendar is popped up or closed'),
 'nz-date-picker.ngModel.description': localize('nz-date-picker.ngModel.description', 'Date'),
-'nz-date-picker.nzId.description': localize('nz-date-picker.nzId.description', 'input id attribute inside the component'),
 'nz-date-picker.ngModelChange.description': localize('nz-date-picker.ngModelChange.description', ' '),
 'nz-date-picker.formControlName.description': localize('nz-date-picker.formControlName.description', ' '),
 'nz-date-picker.name.description': localize('nz-date-picker.name.description', ' '),
@@ -342,6 +343,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-range-picker.nzShowTime.description': localize('nz-range-picker.nzShowTime.description', 'to provide an additional time selection'),
 'nz-range-picker.nzDisabledTime.description': localize('nz-range-picker.nzDisabledTime.description', 'to specify the time that cannot be selected'),
 'nz-range-picker.nzOnOk.description': localize('nz-range-picker.nzOnOk.description', 'click ok callback'),
+'nz-range-picker.nzId.description': localize('nz-range-picker.nzId.description', 'input id attribute inside the component'),
 'nz-range-picker.nzAllowClear.description': localize('nz-range-picker.nzAllowClear.description', 'Whether to show clear button'),
 'nz-range-picker.nzAutoFocus.description': localize('nz-range-picker.nzAutoFocus.description', 'get focus when component mounted'),
 'nz-range-picker.nzBackdrop.description': localize('nz-range-picker.nzBackdrop.description', 'whether or not the overlay should attach a backdrop'),
@@ -433,6 +435,16 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-empty.nzNotFoundImage.description': localize('nz-empty.nzNotFoundImage.description', 'Customize image. Will tread as image url when string provided'),
 'nz-empty.nzNotFoundContent.description': localize('nz-empty.nzNotFoundContent.description', 'Custom description'),
 'nz-empty.nzNotFoundFooter.description': localize('nz-empty.nzNotFoundFooter.description', 'Custom Footer'),
+'nz-image.title': localize('nz-image.title', 'Image'),
+'nz-image.whenToUse': localize('nz-image.whenToUse', '- When you need to display pictures.\n- Display when loading a large image or fault tolerant handling when loading fail.'),
+'nz-image.description': localize('nz-image.description', 'Previewable image.'),
+'nz-image.nzSrc.description': localize('nz-image.nzSrc.description', 'Image path'),
+'nz-image.nzAlt.description': localize('nz-image.nzAlt.description', 'Alt'),
+'nz-image.nzWidth.description': localize('nz-image.nzWidth.description', 'Width'),
+'nz-image.nzHeight.description': localize('nz-image.nzHeight.description', 'Height'),
+'nz-image.nzAutoSrcset.description': localize('nz-image.nzAutoSrcset.description', 'Whether to optimize image loading'),
+'nz-image.nzSrcLoader.description': localize('nz-image.nzSrcLoader.description', 'Loader'),
+'nz-image.nzPriority.description': localize('nz-image.nzPriority.description', 'Whether to add [preload](https://developer.mozilla.org/en-US/docs/Web/HTML/Preloading_content) (only SSR)'),
 'nz-form.title': localize('nz-form.title', 'Form'),
 'nz-form.whenToUse': localize('nz-form.whenToUse', ' '),
 'nz-form.description': localize('nz-form.description', 'Form is used to collect, validate, and submit the user input, usually contains various form items including checkbox, radio, input, select, and etc.'),
@@ -538,10 +550,6 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-icon.nzTwotoneColor.description': localize('nz-icon.nzTwotoneColor.description', 'Only support the two-tone icon. Specific the primary color.'),
 'nz-icon.nzIconfont.description': localize('nz-icon.nzIconfont.description', 'Type of the icon from iconfont'),
 'nz-icon.nzRotate.description': localize('nz-icon.nzRotate.description', 'Rotate degrees'),
-'nz-image.title': localize('nz-image.title', 'Image'),
-'nz-image.whenToUse': localize('nz-image.whenToUse', '- When you need to display pictures.\n- Display when loading a large image or fault tolerant handling when loading fail.'),
-'nz-image.description': localize('nz-image.description', 'Previewable image.'),
-'nz-image.nzSrc.description': localize('nz-image.nzSrc.description', 'Image path'),
 'nz-image.nzFallback.description': localize('nz-image.nzFallback.description', 'Load failure fault-tolerant src'),
 'nz-image.nzPlaceholder.description': localize('nz-image.nzPlaceholder.description', 'Load placeholder src'),
 'nz-image.nzDisablePreview.description': localize('nz-image.nzDisablePreview.description', 'Whether to disable the preview'),
@@ -827,6 +835,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-popconfirm.nzOkType.description': localize('nz-popconfirm.nzOkType.description', 'Button `type` of the Confirm button'),
 'nz-popconfirm.nzCondition.description': localize('nz-popconfirm.nzCondition.description', 'Whether to directly emit `onConfirm` without showing Popconfirm'),
 'nz-popconfirm.nzIcon.description': localize('nz-popconfirm.nzIcon.description', 'Customize icon of confirmation'),
+'nz-popconfirm.nzAutoFocus.description': localize('nz-popconfirm.nzAutoFocus.description', 'Autofocus a button'),
 'nz-popconfirm.nzOnCancel.description': localize('nz-popconfirm.nzOnCancel.description', 'Callback of cancel'),
 'nz-popconfirm.nzOnConfirm.description': localize('nz-popconfirm.nzOnConfirm.description', 'Callback of confirmation'),
 'nz-popover.title': localize('nz-popover.title', 'Popover'),
@@ -963,7 +972,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-select.nzAutoFocus.description': localize('nz-select.nzAutoFocus.description', 'Get focus by default'),
 'nz-select.nzDisabled.description': localize('nz-select.nzDisabled.description', 'Whether disabled select'),
 'nz-select.nzDropdownClassName.description': localize('nz-select.nzDropdownClassName.description', 'className of dropdown menu'),
-'nz-select.nzDropdownMatchSelectWidth.description': localize('nz-select.nzDropdownMatchSelectWidth.description', 'Whether dropdown\'s with is same with select.'),
+'nz-select.nzDropdownMatchSelectWidth.description': localize('nz-select.nzDropdownMatchSelectWidth.description', 'Whether dropdown\'s width is same width than select.'),
 'nz-select.nzDropdownStyle.description': localize('nz-select.nzDropdownStyle.description', 'style of dropdown menu'),
 'nz-select.nzCustomTemplate.description': localize('nz-select.nzCustomTemplate.description', 'The custom template of select'),
 'nz-select.nzServerSearch.description': localize('nz-select.nzServerSearch.description', 'nz-option will not be filtered when set to true'),
@@ -1001,7 +1010,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-option.nzLabel.description': localize('nz-option.nzLabel.description', 'The text show in nz-select and dropdown menu'),
 'nz-option.nzValue.description': localize('nz-option.nzValue.description', 'The value passed to ngModel of nz-select'),
 'nz-option.nzHide.description': localize('nz-option.nzHide.description', 'Whether hide the option in the option list'),
-'nz-option.nzCustomContent.description': localize('nz-option.nzCustomContent.description', 'Whether custom nz-option content in drodown menu, the ng-content in nz-option will relace nzLabel when it was set to true'),
+'nz-option.nzCustomContent.description': localize('nz-option.nzCustomContent.description', 'Whether custom nz-option content in drodown menu, the ng-content in nz-option will replace nzLabel when it was set to true'),
 'nz-option-group.title': localize('nz-option-group.title', 'Select'),
 'nz-option-group.whenToUse': localize('nz-option-group.whenToUse', '- A dropdown menu for displaying choices - an elegant alternative to the native `<select>` element.\n- Utilizing [Radio](/components/radio/en) is recommended when there are fewer total options (less than 5).'),
 'nz-option-group.description': localize('nz-option-group.description', 'Select component to select value from options.'),
@@ -1100,6 +1109,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-step.nzTitle.description': localize('nz-step.nzTitle.description', 'title of the step'),
 'nz-step.nzSubtitle.description': localize('nz-step.nzSubtitle.description', 'subTitle of the step'),
 'nz-step.nzDisabled.description': localize('nz-step.nzDisabled.description', 'disable click'),
+'nz-step.nzPercentage.description': localize('nz-step.nzPercentage.description', 'Progress percentage of the step in `process` status (only works on basic Steps)'),
 'nz-switch.title': localize('nz-switch.title', 'Switch'),
 'nz-switch.whenToUse': localize('nz-switch.whenToUse', '- If you need to represent the switching between two states or on-off state.\n- The difference between `Switch` and `Checkbox` is that `Switch` will trigger a state change directly when you toggle it, while `Checkbox` is generally used for state marking, which should work in conjunction with submit operation.'),
 'nz-switch.description': localize('nz-switch.description', 'Switching Selector.'),
@@ -1210,7 +1220,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-filter-trigger.nzVisibleChange.description': localize('nz-filter-trigger.nzVisibleChange.description', 'a callback function takes an argument: `nzVisible`, is executed when the visible state is changed'),
 'nz-virtual-scroll.title': localize('nz-virtual-scroll.title', 'Table'),
 'nz-virtual-scroll.whenToUse': localize('nz-virtual-scroll.whenToUse', '- To display a collection of structured data.\n- To sort, search, paginate and filter data.'),
-'nz-virtual-scroll.description': localize('nz-virtual-scroll.description', 'virtual scroll directive work with `ng-template`, type: `TemplateRef<{ $implicit: any, index: number }>`.'),
+'nz-virtual-scroll.description': localize('nz-virtual-scroll.description', 'virtual scroll directive work with `ng-template`, type: `TemplateRef<{ $implicit: T, index: number }>`.'),
 'nz-tabset.title': localize('nz-tabset.title', 'Tabs'),
 'nz-tabset.whenToUse': localize('nz-tabset.whenToUse', 'Ant Design has 3 types of Tabs for different situations.'),
 'nz-tabset.description': localize('nz-tabset.description', 'Tabs make it easy to switch between different views.'),
@@ -1291,6 +1301,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-timeline-item.nzColor.description': localize('nz-timeline-item.nzColor.description', 'Set the circle\'s color to `\'blue\' | \'red\' | \'green\' | \'gray\'` or other custom colors (css color)'),
 'nz-timeline-item.nzDot.description': localize('nz-timeline-item.nzDot.description', 'Customize timeline dot'),
 'nz-timeline-item.nzPosition.description': localize('nz-timeline-item.nzPosition.description', 'Customize position, only works when `nzMode` is `custom`'),
+'nz-timeline-item.NzLabel.description': localize('nz-timeline-item.NzLabel.description', 'Set the label'),
 'nz-transfer.title': localize('nz-transfer.title', 'Transfer'),
 'nz-transfer.whenToUse': localize('nz-transfer.whenToUse', 'Transfer the elements between two columns in an intuitive and efficient way.'),
 'nz-transfer.description': localize('nz-transfer.description', 'Double column transfer choice box.'),
@@ -1522,9 +1533,6 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'extend.description': localize('extend.description', 'It needs to be used with [nz-range-picker](https://ng.ant.design/components/date-picker/zh#nz-range-picker), for example:'),
 'extend.ngModelEnd.description': localize('extend.ngModelEnd.description', 'End date, start and end values at the same time'),
 'extend.shortcut.description': localize('extend.shortcut.description', 'Set shortcuts'),
-'range-picker.title': localize('range-picker.title', 'Data Range'),
-'range-picker.whenToUse': localize('range-picker.whenToUse', ' '),
-'range-picker.description': localize('range-picker.description', '**Deprecated** Use `nz-range-picker` and `extend` directive to replace `range-picker`, will remove `range-picker` at `12.0.0`.'),
 'down-file.title': localize('down-file.title', 'Download file'),
 'down-file.whenToUse': localize('down-file.whenToUse', ' '),
 'down-file.description': localize('down-file.description', 'A file download based on `blob`.'),
@@ -1610,14 +1618,6 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'notice-icon.popoverVisibleChange.description': localize('notice-icon.popoverVisibleChange.description', 'Popover callback'),
 'notice-icon.btnClass.description': localize('notice-icon.btnClass.description', 'Class of the button'),
 'notice-icon.btnIconClass.description': localize('notice-icon.btnIconClass.description', 'Class of the icon in button'),
-'numberToChinese.title': localize('numberToChinese.title', '人民币大写'),
-'numberToChinese.whenToUse': localize('numberToChinese.whenToUse', ' '),
-'numberToChinese.description': localize('numberToChinese.description', '转化方法，包括三个参数：'),
-'numberToChinese.value.description': localize('numberToChinese.value.description', '值'),
-'numberToChinese.rmb.description': localize('numberToChinese.rmb.description', '是否RMB格式'),
-'numberToChinese.options.description': localize('numberToChinese.options.description', '额外选项'),
-'numberToChinese.minusSymbol.description': localize('numberToChinese.minusSymbol.description', '指定负数符号'),
-'numberToChinese.validThrow.description': localize('numberToChinese.validThrow.description', '当传递值无法数值时抛出异常'),
 'page-header.title': localize('page-header.title', 'Page Header'),
 'page-header.whenToUse': localize('page-header.whenToUse', ' '),
 'page-header.description': localize('page-header.description', 'The page header is used to declare the subject of the page and contains the most important information that the user is concerned about, so that the user can quickly understand what the current page and functions.'),
@@ -1757,15 +1757,6 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'sg.whenToUse': localize('sg.whenToUse', ' '),
 'sg.description': localize('sg.description', 'A higher-order components of grid systems, that consists of `sg-container` (directive) and `sg` components:'),
 'sg.col.description': localize('sg.col.description', 'specify the maximum number of columns to display, the final columns number is determined by col setting combined with [Responsive Rules](/theme/responsive)'),
-'sidebar-nav.title': localize('sidebar-nav.title', 'Sidebar'),
-'sidebar-nav.whenToUse': localize('sidebar-nav.whenToUse', ' '),
-'sidebar-nav.description': localize('sidebar-nav.description', '**Will be removed in 12.0.0, it has been integrated in `@delon/theme/layout-default`.**'),
-'sidebar-nav.disabledAcl.description': localize('sidebar-nav.disabledAcl.description', 'Displayed `disabled` state when `acl` check fails.'),
-'sidebar-nav.autoCloseUnderPad.description': localize('sidebar-nav.autoCloseUnderPad.description', 'When the route width is less than the Pad width, the sidebar is automatically closed.'),
-'sidebar-nav.recursivePath.description': localize('sidebar-nav.recursivePath.description', 'Automatic up recursive lookup, menu data source contains `/ware`, then `/ware/1` is also treated as `/ware`'),
-'sidebar-nav.openStrictly.description': localize('sidebar-nav.openStrictly.description', 'Precise check open status, does not auto closed other open item'),
-'sidebar-nav.maxLevelIcon.description': localize('sidebar-nav.maxLevelIcon.description', 'Icon displays up to which level'),
-'sidebar-nav.select.description': localize('sidebar-nav.select.description', 'Callback when clicking menu (including `disabled`)'),
 'st.title': localize('st.title', 'Table'),
 'st.whenToUse': localize('st.whenToUse', ' '),
 'st.description': localize('st.description', '`st` is not creating another table component, but use **configurable** rendering table on base of `nz-table`. this method can satisfy most scenes in admin interfaces, but it\'s easier to rendering table.'),
@@ -1883,7 +1874,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'xlsx.title': localize('xlsx.title', 'Excel'),
 'xlsx.whenToUse': localize('xlsx.whenToUse', ' '),
 'xlsx.description': localize('xlsx.description', 'xlsx directive.'),
-'g2-bar.title': localize('g2-bar.title', 'ECharts'),
+'g2-bar.title': localize('g2-bar.title', '柱状图'),
 'g2-bar.whenToUse': localize('g2-bar.whenToUse', ' '),
 'g2-bar.description': localize('g2-bar.description', '使用垂直的柱子显示类别之间的数值比较。其中一个轴表示需要对比的分类维度，另一个轴代表相应的数值。'),
 'g2-bar.repaint.description': localize('g2-bar.repaint.description', '数据再次变更时是否重绘'),
@@ -1907,6 +1898,14 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'g2-card.footer.description': localize('g2-card.footer.description', '卡片底部'),
 'g2-card.contentHeight.description': localize('g2-card.contentHeight.description', '内容区域高度（单位：`px`）'),
 'g2-card.bordered.description': localize('g2-card.bordered.description', '是否显示边框'),
+'chart-echarts.title': localize('chart-echarts.title', 'ECharts'),
+'chart-echarts.whenToUse': localize('chart-echarts.whenToUse', ' '),
+'chart-echarts.description': localize('chart-echarts.description', '[ECharts](https://echarts.apache.org/zh/index.html) 一个基于 JavaScript 的开源可视化图表库。使用懒加载 ECharts 脚本，开箱启用。'),
+'chart-echarts.width.description': localize('chart-echarts.width.description', '图表宽度'),
+'chart-echarts.height.description': localize('chart-echarts.height.description', '图表高度'),
+'chart-echarts.option.description': localize('chart-echarts.option.description', '[配置项](https://echarts.apache.org/zh/option.html#title)'),
+'chart-echarts.theme.description': localize('chart-echarts.theme.description', '[主题](https://echarts.apache.org/zh/theme-builder.html)配置'),
+'chart-echarts.events.description': localize('chart-echarts.events.description', '事件回调'),
 'g2-custom.title': localize('g2-custom.title', 'Custom Chart'),
 'g2-custom.whenToUse': localize('g2-custom.whenToUse', ' '),
 'g2-custom.description': localize('g2-custom.description', 'Use `g2-custom` component to package your G2 chart.'),
@@ -4086,6 +4085,14 @@ export const DATA = [
     "types": {},
     "properties": [
       {
+        "name": "nzId",
+        "inputType": 0,
+        "description": "nz-checkbox.nzId.description",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
+      },
+      {
         "name": "nzAutoFocus",
         "inputType": 0,
         "description": "nz-checkbox.nzAutoFocus.description",
@@ -4552,6 +4559,15 @@ export const DATA = [
         "_common": true
       },
       {
+        "name": "nzId",
+        "inputType": 0,
+        "description": "nz-date-picker.nzId.description",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": "",
+        "_common": true
+      },
+      {
         "name": "nzAllowClear",
         "inputType": 0,
         "description": "nz-date-picker.nzAllowClear.description",
@@ -4746,14 +4762,6 @@ export const DATA = [
         "default": ""
       },
       {
-        "name": "nzId",
-        "inputType": 0,
-        "description": "nz-date-picker.nzId.description",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": ""
-      },
-      {
         "name": "ngModelChange",
         "inputType": 1,
         "type": "EventEmitter",
@@ -4812,6 +4820,15 @@ export const DATA = [
         "description": "nz-range-picker.nzOnOk.description",
         "type": "EventEmitter",
         "typeRaw": "`EventEmitter<Date[]>`",
+        "default": "",
+        "_common": true
+      },
+      {
+        "name": "nzId",
+        "inputType": 0,
+        "description": "nz-range-picker.nzId.description",
+        "type": "string",
+        "typeRaw": "`string`",
         "default": "",
         "_common": true
       },
@@ -5567,6 +5584,80 @@ export const DATA = [
     "whenToUse": "nz-empty.whenToUse",
     "doc": "/components/empty/en",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/empty"
+  },
+  {
+    "type": "component",
+    "selector": "nz-image",
+    "types": {},
+    "properties": [
+      {
+        "name": "nzSrc",
+        "inputType": 0,
+        "description": "nz-image.nzSrc.description",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
+      },
+      {
+        "name": "nzAlt",
+        "inputType": 0,
+        "description": "nz-image.nzAlt.description",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
+      },
+      {
+        "name": "nzWidth",
+        "inputType": 0,
+        "description": "nz-image.nzWidth.description",
+        "type": "number",
+        "typeRaw": "`number|string`",
+        "default": "`auto`",
+        "pureDefault": "auto"
+      },
+      {
+        "name": "nzHeight",
+        "inputType": 0,
+        "description": "nz-image.nzHeight.description",
+        "type": "number",
+        "typeRaw": "`number|string`",
+        "default": "`auto`",
+        "pureDefault": "auto"
+      },
+      {
+        "name": "nzAutoSrcset",
+        "inputType": 0,
+        "description": "nz-image.nzAutoSrcset.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzSrcLoader",
+        "inputType": 0,
+        "description": "nz-image.nzSrcLoader.description",
+        "type": "object",
+        "typeRaw": "`NzImageSrcLoader`",
+        "default": "`defaultImageSrcLoader`",
+        "pureDefault": "defaultImageSrcLoader"
+      },
+      {
+        "name": "nzPriority",
+        "inputType": 0,
+        "description": "nz-image.nzPriority.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      }
+    ],
+    "lib": "ng-zorro-antd",
+    "title": "nz-image.title",
+    "description": "nz-image.description",
+    "whenToUse": "nz-image.whenToUse",
+    "doc": "/components/experimental-image/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/experimental-image"
   },
   {
     "type": "directive",
@@ -11918,6 +12009,20 @@ export const DATA = [
         "default": ""
       },
       {
+        "name": "nzAutoFocus",
+        "inputType": 0,
+        "description": "nz-popconfirm.nzAutoFocus.description",
+        "type": "Enum",
+        "typeRaw": "`null | 'ok' | 'cancel'`",
+        "default": "`null`",
+        "typeDefinition": [
+          "null",
+          "ok",
+          "cancel"
+        ],
+        "pureDefault": "null"
+      },
+      {
         "name": "nzOnCancel",
         "inputType": 1,
         "description": "nz-popconfirm.nzOnCancel.description",
@@ -14167,6 +14272,14 @@ export const DATA = [
         "default": "`false`",
         "pureDefault": "false",
         "forceInputType": 0
+      },
+      {
+        "name": "nzPercentage",
+        "inputType": 0,
+        "description": "nz-step.nzPercentage.description",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": ""
       }
     ],
     "description": "nz-step.description",
@@ -14287,8 +14400,8 @@ export const DATA = [
         "name": "nzData",
         "inputType": 0,
         "description": "nz-table.nzData.description",
-        "type": "object",
-        "typeRaw": "`any[]`",
+        "type": "Array",
+        "typeRaw": "`T[]`",
         "default": ""
       },
       {
@@ -14585,7 +14698,7 @@ export const DATA = [
         "inputType": 1,
         "description": "nz-table.nzCurrentPageDataChange.description",
         "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<any[]>`",
+        "typeRaw": "`EventEmitter<T[]>`",
         "default": ""
       },
       {
@@ -14671,8 +14784,8 @@ export const DATA = [
         "name": "nzSortFn",
         "inputType": 0,
         "description": "th.nzSortFn.description",
-        "type": "function",
-        "typeRaw": "`((a: any, b: any, sortOrder?: string) => number)`",
+        "type": "object",
+        "typeRaw": "`NzTableSortFn<T> | boolean`",
         "default": ""
       },
       {
@@ -14717,8 +14830,8 @@ export const DATA = [
         "name": "nzFilterFn",
         "inputType": 0,
         "description": "th.nzFilterFn.description",
-        "type": "function",
-        "typeRaw": "`((value: any, data: any) => boolean;)`",
+        "type": "object",
+        "typeRaw": "`NzTableFilterFn<T> | boolean`",
         "default": ""
       },
       {
@@ -15715,6 +15828,14 @@ export const DATA = [
           "left",
           "right"
         ]
+      },
+      {
+        "name": "NzLabel",
+        "inputType": 0,
+        "description": "nz-timeline-item.NzLabel.description",
+        "type": "string",
+        "typeRaw": "`string | TemplateRef<void>`",
+        "default": ""
       }
     ],
     "description": "nz-timeline-item.description",
@@ -17480,18 +17601,6 @@ export const DATA = [
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/date-picker"
   },
   {
-    "type": "component",
-    "selector": "range-picker",
-    "types": {},
-    "properties": [],
-    "description": "range-picker.description",
-    "lib": "@delon/abc",
-    "title": "range-picker.title",
-    "whenToUse": "range-picker.whenToUse",
-    "doc": "/components/date-picker/en",
-    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/date-picker"
-  },
-  {
     "type": "directive",
     "selector": "down-file",
     "types": {},
@@ -18091,67 +18200,6 @@ export const DATA = [
     "whenToUse": "notice-icon.whenToUse",
     "doc": "/components/notice-icon/en",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/notice-icon"
-  },
-  {
-    "type": "component",
-    "selector": "numberToChinese",
-    "types": {
-      "NumberToChineseOptions": [
-        {
-          "name": "minusSymbol",
-          "inputType": 0,
-          "description": "numberToChinese.minusSymbol.description",
-          "type": "string",
-          "typeRaw": "`string`",
-          "default": "`负`",
-          "pureDefault": "负"
-        },
-        {
-          "name": "validThrow",
-          "inputType": 0,
-          "description": "numberToChinese.validThrow.description",
-          "type": "boolean",
-          "typeRaw": "`boolean`",
-          "default": "`false`",
-          "pureDefault": "false"
-        }
-      ]
-    },
-    "properties": [
-      {
-        "name": "value",
-        "inputType": 0,
-        "description": "numberToChinese.value.description",
-        "type": "number",
-        "typeRaw": "`number",
-        "default": "string`",
-        "pureDefault": "string`"
-      },
-      {
-        "name": "rmb",
-        "inputType": 0,
-        "description": "numberToChinese.rmb.description",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`true`",
-        "pureDefault": "true"
-      },
-      {
-        "name": "options",
-        "inputType": 0,
-        "description": "numberToChinese.options.description",
-        "type": "object",
-        "typeRaw": "`NumberToChineseOptions`",
-        "default": "",
-        "complexType": "NumberToChineseOptions"
-      }
-    ],
-    "description": "numberToChinese.description",
-    "lib": "@delon/abc",
-    "title": "numberToChinese.title",
-    "whenToUse": "numberToChinese.whenToUse",
-    "doc": "/components/number-to-chinese/en",
-    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/number-to-chinese"
   },
   {
     "type": "component",
@@ -19513,72 +19561,6 @@ export const DATA = [
   },
   {
     "type": "component",
-    "selector": "sidebar-nav",
-    "types": {},
-    "properties": [
-      {
-        "name": "disabledAcl",
-        "inputType": 0,
-        "description": "sidebar-nav.disabledAcl.description",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false"
-      },
-      {
-        "name": "autoCloseUnderPad",
-        "inputType": 0,
-        "description": "sidebar-nav.autoCloseUnderPad.description",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`true`",
-        "pureDefault": "true"
-      },
-      {
-        "name": "recursivePath",
-        "inputType": 0,
-        "description": "sidebar-nav.recursivePath.description",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`true`",
-        "pureDefault": "true"
-      },
-      {
-        "name": "openStrictly",
-        "inputType": 0,
-        "description": "sidebar-nav.openStrictly.description",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false"
-      },
-      {
-        "name": "maxLevelIcon",
-        "inputType": 0,
-        "description": "sidebar-nav.maxLevelIcon.description",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "`3`",
-        "pureDefault": "3"
-      },
-      {
-        "name": "select",
-        "inputType": 1,
-        "description": "sidebar-nav.select.description",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<Menu>`",
-        "default": ""
-      }
-    ],
-    "lib": "@delon/abc",
-    "title": "sidebar-nav.title",
-    "description": "sidebar-nav.description",
-    "whenToUse": "sidebar-nav.whenToUse",
-    "doc": "/components/sidebar-nav/en",
-    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/sidebar-nav"
-  },
-  {
-    "type": "component",
     "selector": "st",
     "types": {
       "STReq": [
@@ -20908,101 +20890,56 @@ export const DATA = [
   },
   {
     "type": "component",
-    "selector": "g2-bar",
+    "selector": "chart-echarts",
     "types": {},
     "properties": [
       {
-        "name": "delay",
+        "name": "width",
         "inputType": 0,
-        "description": "g2-bar.delay.description",
+        "description": "chart-echarts.width.description",
         "type": "number",
-        "typeRaw": "`number`",
-        "default": "`0`",
-        "pureDefault": "0"
-      },
-      {
-        "name": "title",
-        "inputType": 0,
-        "description": "g2-bar.title.description",
-        "type": "string",
-        "typeRaw": "`string,TemplateRef<void>`",
-        "default": ""
-      },
-      {
-        "name": "color",
-        "inputType": 0,
-        "description": "g2-bar.color.description",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": "`rgba(24, 144, 255, 0.85)`",
-        "pureDefault": "rgba(24, 144, 255, 0.85)"
-      },
-      {
-        "name": "padding",
-        "inputType": 0,
-        "description": "g2-bar.padding.description",
-        "type": "Array",
-        "typeRaw": "`Array<number",
-        "default": "string>",
-        "pureDefault": "string>"
+        "typeRaw": "`number, string`",
+        "default": "`100%`",
+        "pureDefault": "100%"
       },
       {
         "name": "height",
         "inputType": 0,
-        "description": "g2-bar.height.description",
+        "description": "chart-echarts.height.description",
         "type": "number",
-        "typeRaw": "`number`",
-        "default": ""
+        "typeRaw": "`number, string`",
+        "default": "`400px`",
+        "pureDefault": "400px"
       },
       {
-        "name": "data",
+        "name": "option",
         "inputType": 0,
-        "description": "g2-bar.data.description",
-        "type": "Array",
-        "typeRaw": "`G2BarData[]`",
-        "default": "`[]`",
-        "pureDefault": "[]"
-      },
-      {
-        "name": "autoLabel",
-        "inputType": 0,
-        "description": "g2-bar.autoLabel.description",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`true`",
-        "pureDefault": "true"
-      },
-      {
-        "name": "interaction",
-        "inputType": 0,
-        "description": "g2-bar.interaction.description",
+        "description": "chart-echarts.option.description",
         "type": "object",
-        "typeRaw": "`InteractionType`",
-        "default": "`none`",
-        "pureDefault": "none"
+        "typeRaw": "`ChartEChartsOption`",
+        "default": ""
       },
       {
         "name": "theme",
         "inputType": 0,
-        "description": "g2-bar.theme.description",
+        "description": "chart-echarts.theme.description",
         "type": "string",
-        "typeRaw": "`string",
-        "default": "LooseObject`",
-        "pureDefault": "LooseObject`"
+        "typeRaw": "`string, object`",
+        "default": ""
       },
       {
-        "name": "clickItem",
+        "name": "events",
         "inputType": 1,
-        "description": "g2-bar.clickItem.description",
+        "description": "chart-echarts.events.description",
         "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<G2BarClickItem>`",
+        "typeRaw": "`EventEmitter<ChartEChartsEvent>`",
         "default": ""
       }
     ],
     "lib": "@delon/chart",
-    "title": "g2-bar.title",
-    "description": "g2-bar.description",
-    "whenToUse": "g2-bar.whenToUse",
+    "title": "chart-echarts.title",
+    "description": "chart-echarts.description",
+    "whenToUse": "chart-echarts.whenToUse",
     "doc": "/chart/chart-echarts/en",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/chart-echarts"
   },
