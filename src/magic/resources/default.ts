@@ -25,7 +25,9 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-tooltip.title': localize('nz-tooltip.title', 'Tooltip'),
 'nz-tooltip.whenToUse': localize('nz-tooltip.whenToUse', '- The tip is shown on mouse enter, and is hidden on mouse leave. The Tooltip doesn\'t support complex text or operations.\n- To provide an explanation of a `button/text/operation`. It\'s often used instead of the html `title` attribute.'),
 'nz-tooltip.description': localize('nz-tooltip.description', 'A simple text popup tip.'),
+'nz-tooltip.nzTooltipArrowPointAtCenter.description': localize('nz-tooltip.nzTooltipArrowPointAtCenter.description', 'Arrow point at center of the origin'),
 'nz-tooltip.nzTooltipTitle.description': localize('nz-tooltip.nzTooltipTitle.description', 'The text shown in the tooltip'),
+'nz-tooltip.nzTooltipTitleContext.description': localize('nz-tooltip.nzTooltipTitleContext.description', 'The context of tooltip title'),
 'nz-tooltip.nzTooltipTrigger.description': localize('nz-tooltip.nzTooltipTrigger.description', 'Tooltip trigger mode. If set to `null` it would not be triggered'),
 'nz-tooltip.nzTooltipPlacement.description': localize('nz-tooltip.nzTooltipPlacement.description', 'The position of the tooltip relative to the target'),
 'nz-tooltip.nzTooltipColor.description': localize('nz-tooltip.nzTooltipColor.description', 'The background color'),
@@ -807,7 +809,9 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-popconfirm.title': localize('nz-popconfirm.title', 'Popconfirm'),
 'nz-popconfirm.whenToUse': localize('nz-popconfirm.whenToUse', 'A simple and compact dialog used for asking for user confirmation.'),
 'nz-popconfirm.description': localize('nz-popconfirm.description', 'A simple and compact confirmation dialog of an action.'),
+'nz-popconfirm.nzTooltipArrowPointAtCenter.description': localize('nz-popconfirm.nzTooltipArrowPointAtCenter.description', 'Arrow point at center of the origin'),
 'nz-popconfirm.nzTooltipTitle.description': localize('nz-popconfirm.nzTooltipTitle.description', 'The text shown in the tooltip'),
+'nz-popconfirm.nzTooltipTitleContext.description': localize('nz-popconfirm.nzTooltipTitleContext.description', 'The context of tooltip title'),
 'nz-popconfirm.nzTooltipTrigger.description': localize('nz-popconfirm.nzTooltipTrigger.description', 'Tooltip trigger mode. If set to `null` it would not be triggered'),
 'nz-popconfirm.nzTooltipPlacement.description': localize('nz-popconfirm.nzTooltipPlacement.description', 'The position of the tooltip relative to the target'),
 'nz-popconfirm.nzTooltipColor.description': localize('nz-popconfirm.nzTooltipColor.description', 'The background color'),
@@ -818,6 +822,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-popconfirm.nzTooltipMouseLeaveDelay.description': localize('nz-popconfirm.nzTooltipMouseLeaveDelay.description', 'Delay in seconds, before tooltip is hidden on mouse leave'),
 'nz-popconfirm.nzTooltipOverlayClassName.description': localize('nz-popconfirm.nzTooltipOverlayClassName.description', 'Class name of the tooltip card'),
 'nz-popconfirm.nzTooltipOverlayStyle.description': localize('nz-popconfirm.nzTooltipOverlayStyle.description', 'Style of the tooltip card'),
+'nz-popconfirm.nzPopconfirmArrowPointAtCenter.description': localize('nz-popconfirm.nzPopconfirmArrowPointAtCenter.description', 'Arrow point at center of the origin'),
 'nz-popconfirm.nzPopconfirmTitle.description': localize('nz-popconfirm.nzPopconfirmTitle.description', 'Title of the confirmation box'),
 'nz-popconfirm.nzPopconfirmTrigger.description': localize('nz-popconfirm.nzPopconfirmTrigger.description', 'Popconfirm trigger mode. If set to `null` it would not be triggered'),
 'nz-popconfirm.nzPopconfirmPlacement.description': localize('nz-popconfirm.nzPopconfirmPlacement.description', 'The position of the popconfirm relative to the target'),
@@ -842,7 +847,9 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-popover.title': localize('nz-popover.title', 'Popover'),
 'nz-popover.whenToUse': localize('nz-popover.whenToUse', 'A simple popup menu to provide extra information or operations.'),
 'nz-popover.description': localize('nz-popover.description', 'The floating card popped by clicking or hovering.'),
+'nz-popover.nzTooltipArrowPointAtCenter.description': localize('nz-popover.nzTooltipArrowPointAtCenter.description', 'Arrow point at center of the origin'),
 'nz-popover.nzTooltipTitle.description': localize('nz-popover.nzTooltipTitle.description', 'The text shown in the tooltip'),
+'nz-popover.nzTooltipTitleContext.description': localize('nz-popover.nzTooltipTitleContext.description', 'The context of tooltip title'),
 'nz-popover.nzTooltipTrigger.description': localize('nz-popover.nzTooltipTrigger.description', 'Tooltip trigger mode. If set to `null` it would not be triggered'),
 'nz-popover.nzTooltipPlacement.description': localize('nz-popover.nzTooltipPlacement.description', 'The position of the tooltip relative to the target'),
 'nz-popover.nzTooltipColor.description': localize('nz-popover.nzTooltipColor.description', 'The background color'),
@@ -853,6 +860,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-popover.nzTooltipMouseLeaveDelay.description': localize('nz-popover.nzTooltipMouseLeaveDelay.description', 'Delay in seconds, before tooltip is hidden on mouse leave'),
 'nz-popover.nzTooltipOverlayClassName.description': localize('nz-popover.nzTooltipOverlayClassName.description', 'Class name of the tooltip card'),
 'nz-popover.nzTooltipOverlayStyle.description': localize('nz-popover.nzTooltipOverlayStyle.description', 'Style of the tooltip card'),
+'nz-popover.nzPopoverArrowPointAtCenter.description': localize('nz-popover.nzPopoverArrowPointAtCenter.description', 'Arrow point at center of the origin'),
 'nz-popover.nzPopoverTitle.description': localize('nz-popover.nzPopoverTitle.description', 'Title of the popover'),
 'nz-popover.nzPopoverContent.description': localize('nz-popover.nzPopoverContent.description', 'Content of the popover'),
 'nz-popover.nzPopoverTrigger.description': localize('nz-popover.nzPopoverTrigger.description', 'Popover trigger mode. If set to `null` it would not be triggered'),
@@ -1738,6 +1746,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'se.col.description': localize('se.col.description', 'specify the maximum number of columns to display, the final columns number is determined by col setting combined with [Responsive Rules](/theme/responsive) (Inherited from `se-container`)'),
 'se.label.description': localize('se.label.description', 'Label'),
 'se.labelWidth.description': localize('se.labelWidth.description', 'label text of width, unit is `px` (Inherited from `se-container`)'),
+'se.hideLabel.description': localize('se.hideLabel.description', 'Whether to hide the current label'),
 'se.optional.description': localize('se.optional.description', 'Label optional information'),
 'se.optionalHelp.description': localize('se.optionalHelp.description', 'Label optional help'),
 'se.optionalHelpColor.description': localize('se.optionalHelpColor.description', 'The background color of label optional help'),
@@ -1789,7 +1798,6 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'st.virtualForTrackBy.description': localize('st.virtualForTrackBy.description', 'The TrackByFunction to use for tracking changes.'),
 'st.singleSort.description': localize('st.singleSort.description', 'Single sort config<br>If not specified, return: `columnName=ascend'),
 'st.multiSort.description': localize('st.multiSort.description', 'Whether to mulit-sort, recommended use in URL data source'),
-'st.rowClickTime.description': localize('st.rowClickTime.description', 'Click twice in the time range for double click, unit is millisecond'),
 'st.header.description': localize('st.header.description', 'Table header renderer'),
 'st.showHeader.description': localize('st.showHeader.description', 'Whether show the head of the columns of the table'),
 'st.footer.description': localize('st.footer.description', 'Table footer renderer'),
@@ -2433,11 +2441,28 @@ export const DATA = [
     "types": {},
     "properties": [
       {
+        "name": "nzTooltipArrowPointAtCenter",
+        "inputType": 0,
+        "description": "nz-tooltip.nzTooltipArrowPointAtCenter.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
         "name": "nzTooltipTitle",
         "inputType": 0,
         "description": "nz-tooltip.nzTooltipTitle.description",
         "type": "string",
         "typeRaw": "`string | TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "nzTooltipTitleContext",
+        "inputType": 0,
+        "description": "nz-tooltip.nzTooltipTitleContext.description",
+        "type": "object",
+        "typeRaw": "`object`",
         "default": ""
       },
       {
@@ -11729,11 +11754,28 @@ export const DATA = [
     "types": {},
     "properties": [
       {
+        "name": "nzTooltipArrowPointAtCenter",
+        "inputType": 0,
+        "description": "nz-popconfirm.nzTooltipArrowPointAtCenter.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
         "name": "nzTooltipTitle",
         "inputType": 0,
         "description": "nz-popconfirm.nzTooltipTitle.description",
         "type": "string",
         "typeRaw": "`string | TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "nzTooltipTitleContext",
+        "inputType": 0,
+        "description": "nz-popconfirm.nzTooltipTitleContext.description",
+        "type": "object",
+        "typeRaw": "`object`",
         "default": ""
       },
       {
@@ -11841,6 +11883,15 @@ export const DATA = [
         "type": "object",
         "typeRaw": "`object`",
         "default": ""
+      },
+      {
+        "name": "nzPopconfirmArrowPointAtCenter",
+        "inputType": 0,
+        "description": "nz-popconfirm.nzPopconfirmArrowPointAtCenter.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
       },
       {
         "name": "nzPopconfirmTitle",
@@ -12070,11 +12121,28 @@ export const DATA = [
     "types": {},
     "properties": [
       {
+        "name": "nzTooltipArrowPointAtCenter",
+        "inputType": 0,
+        "description": "nz-popover.nzTooltipArrowPointAtCenter.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
         "name": "nzTooltipTitle",
         "inputType": 0,
         "description": "nz-popover.nzTooltipTitle.description",
         "type": "string",
         "typeRaw": "`string | TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "nzTooltipTitleContext",
+        "inputType": 0,
+        "description": "nz-popover.nzTooltipTitleContext.description",
+        "type": "object",
+        "typeRaw": "`object`",
         "default": ""
       },
       {
@@ -12182,6 +12250,15 @@ export const DATA = [
         "type": "object",
         "typeRaw": "`object`",
         "default": ""
+      },
+      {
+        "name": "nzPopoverArrowPointAtCenter",
+        "inputType": 0,
+        "description": "nz-popover.nzPopoverArrowPointAtCenter.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
       },
       {
         "name": "nzPopoverTitle",
@@ -19340,6 +19417,15 @@ export const DATA = [
         "default": ""
       },
       {
+        "name": "hideLabel",
+        "inputType": 0,
+        "description": "se.hideLabel.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
         "name": "optional",
         "inputType": 0,
         "description": "se.optional.description",
@@ -20177,15 +20263,6 @@ export const DATA = [
         "default": "`false`",
         "complexType": "STMultiSort",
         "pureDefault": "false"
-      },
-      {
-        "name": "rowClickTime",
-        "inputType": 0,
-        "description": "st.rowClickTime.description",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "`200`",
-        "pureDefault": "200"
       },
       {
         "name": "header",
