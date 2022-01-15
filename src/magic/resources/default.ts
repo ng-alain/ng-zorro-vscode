@@ -1903,6 +1903,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'g2-bar.interaction.description': localize('g2-bar.interaction.description', '交互类型，none 无 element-active 图形元素，active-region 图表组件，brush 框选，drag-move 移动'),
 'g2-bar.theme.description': localize('g2-bar.theme.description', '定制图表主题'),
 'g2-bar.clickItem.description': localize('g2-bar.clickItem.description', '点击项回调'),
+'g2-bar.ready.description': localize('g2-bar.ready.description', '当G2完成初始化后调用'),
 'g2-card.title': localize('g2-card.title', '图表卡片'),
 'g2-card.whenToUse': localize('g2-card.whenToUse', ' '),
 'g2-card.description': localize('g2-card.description', '图表卡片，用于展示图表的卡片容器，可以方便的配合其它图表套件展示丰富信息。'),
@@ -1945,6 +1946,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'g2-gauge.padding.description': localize('g2-gauge.padding.description', '内边距'),
 'g2-gauge.format.description': localize('g2-gauge.format.description', '坐标轴格式'),
 'g2-gauge.theme.description': localize('g2-gauge.theme.description', '定制图表主题'),
+'g2-gauge.ready.description': localize('g2-gauge.ready.description', '当G2完成初始化后调用'),
 'g2-mini-area.title': localize('g2-mini-area.title', '迷你区域图'),
 'g2-mini-area.whenToUse': localize('g2-mini-area.whenToUse', ' '),
 'g2-mini-area.description': localize('g2-mini-area.description', '面积图又叫区域图。 它是在折线图的基础之上形成的, 它将折线图中折线与自变量坐标轴之间的区域使用颜色或者纹理填充，这样一个填充区域我们叫做面积，颜色的填充可以更好的突出趋势信息。'),
@@ -1963,6 +1965,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'g2-mini-area.data.description': localize('g2-mini-area.data.description', '数据'),
 'g2-mini-area.theme.description': localize('g2-mini-area.theme.description', '定制图表主题'),
 'g2-mini-area.clickItem.description': localize('g2-mini-area.clickItem.description', '点击项回调'),
+'g2-mini-area.ready.description': localize('g2-mini-area.ready.description', '当G2完成初始化后调用'),
 'g2-mini-bar.title': localize('g2-mini-bar.title', '迷你柱状图'),
 'g2-mini-bar.whenToUse': localize('g2-mini-bar.whenToUse', ' '),
 'g2-mini-bar.description': localize('g2-mini-bar.description', '迷你柱状图更适合展示简单的区间数据，简洁的表现方式可以很好的减少大数据量的视觉展现压力。'),
@@ -1977,6 +1980,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'g2-mini-bar.data.description': localize('g2-mini-bar.data.description', '数据'),
 'g2-mini-bar.theme.description': localize('g2-mini-bar.theme.description', '定制图表主题'),
 'g2-mini-bar.clickItem.description': localize('g2-mini-bar.clickItem.description', '点击项回调'),
+'g2-mini-bar.ready.description': localize('g2-mini-bar.ready.description', '当G2完成初始化后调用'),
 'g2-mini-progress.title': localize('g2-mini-progress.title', '迷你进度条'),
 'g2-mini-progress.whenToUse': localize('g2-mini-progress.whenToUse', ' '),
 'g2-mini-progress.description': localize('g2-mini-progress.description', '用于显示跟速度相关图形再适合不过。'),
@@ -2019,6 +2023,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'g2-pie.ratio.description': localize('g2-pie.ratio.description', '百分比配置项'),
 'g2-pie.theme.description': localize('g2-pie.theme.description', '定制图表主题'),
 'g2-pie.clickItem.description': localize('g2-pie.clickItem.description', '点击项回调'),
+'g2-pie.ready.description': localize('g2-pie.ready.description', '当G2完成初始化后调用'),
 'g2-radar.title': localize('g2-radar.title', '雷达图'),
 'g2-radar.whenToUse': localize('g2-radar.whenToUse', ' '),
 'g2-radar.description': localize('g2-radar.description', '雷达图是以相同点开始的轴上表示的三个或更多个定量变量的二维图形的形式显示多变量数据的图形方法。轴的相对位置和角度通常是不知情的。'),
@@ -2032,6 +2037,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'g2-radar.data.description': localize('g2-radar.data.description', '数据'),
 'g2-radar.theme.description': localize('g2-radar.theme.description', '定制图表主题'),
 'g2-radar.clickItem.description': localize('g2-radar.clickItem.description', '点击项回调'),
+'g2-radar.ready.description': localize('g2-radar.ready.description', '当G2完成初始化后调用'),
 'g2-single-bar.title': localize('g2-single-bar.title', '单一柱状图'),
 'g2-single-bar.whenToUse': localize('g2-single-bar.whenToUse', ' '),
 'g2-single-bar.description': localize('g2-single-bar.description', '单一柱状图更适合在列表中展示简单的区间数据，简洁的表现方式可以很好的减少大数据量的视觉展现压力。'),
@@ -2048,6 +2054,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'g2-single-bar.format.description': localize('g2-single-bar.format.description', '显示值格式'),
 'g2-single-bar.textStyle.description': localize('g2-single-bar.textStyle.description', '显示值样式'),
 'g2-single-bar.theme.description': localize('g2-single-bar.theme.description', '定制图表主题'),
+'g2-single-bar.ready.description': localize('g2-single-bar.ready.description', '当G2完成初始化后调用'),
 'g2-tag-cloud.title': localize('g2-tag-cloud.title', '标签云'),
 'g2-tag-cloud.whenToUse': localize('g2-tag-cloud.whenToUse', ' '),
 'g2-tag-cloud.description': localize('g2-tag-cloud.description', '标签云是一套相关的标签以及与此相应的权重展示方式，一般典型的标签云有 30 至 150 个标签，而权重影响使用的字体大小或其他视觉效果。'),
@@ -2058,6 +2065,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'g2-tag-cloud.data.description': localize('g2-tag-cloud.data.description', '数据'),
 'g2-tag-cloud.theme.description': localize('g2-tag-cloud.theme.description', '定制图表主题'),
 'g2-tag-cloud.clickItem.description': localize('g2-tag-cloud.clickItem.description', '点击项回调'),
+'g2-tag-cloud.ready.description': localize('g2-tag-cloud.ready.description', '当G2完成初始化后调用'),
 'g2-timeline.title': localize('g2-timeline.title', '折线图'),
 'g2-timeline.whenToUse': localize('g2-timeline.whenToUse', ' '),
 'g2-timeline.description': localize('g2-timeline.description', '使用 `timeline` 组件可以实现带有时间轴的柱状图展现，而其中的 `x` 属性，则是时间值的指向，默认最多支持同时展现两个指标，分别是 `y1` 和 `y2`。'),
@@ -2077,6 +2085,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'g2-timeline.slider.description': localize('g2-timeline.slider.description', '是否需要滑动条'),
 'g2-timeline.theme.description': localize('g2-timeline.theme.description', '定制图表主题'),
 'g2-timeline.clickItem.description': localize('g2-timeline.clickItem.description', '点击项回调'),
+'g2-timeline.ready.description': localize('g2-timeline.ready.description', '当G2完成初始化后调用'),
 'g2-timeline.y1.description': localize('g2-timeline.y1.description', '指标1'),
 'g2-timeline.y2.description': localize('g2-timeline.y2.description', '指标2'),
 'g2-timeline.y3.description': localize('g2-timeline.y3.description', '指标3'),
@@ -20975,6 +20984,14 @@ export const DATA = [
         "type": "EventEmitter",
         "typeRaw": "`EventEmitter<G2BarClickItem>`",
         "default": ""
+      },
+      {
+        "name": "ready",
+        "inputType": 1,
+        "description": "g2-bar.ready.description",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<Chart>`",
+        "default": ""
       }
     ],
     "lib": "@delon/chart",
@@ -21279,6 +21296,14 @@ export const DATA = [
         "typeRaw": "`string",
         "default": "LooseObject`",
         "pureDefault": "LooseObject`"
+      },
+      {
+        "name": "ready",
+        "inputType": 1,
+        "description": "g2-gauge.ready.description",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<Chart>`",
+        "default": ""
       }
     ],
     "lib": "@delon/chart",
@@ -21426,6 +21451,14 @@ export const DATA = [
         "type": "EventEmitter",
         "typeRaw": "`EventEmitter<G2MiniAreaClickItem>`",
         "default": ""
+      },
+      {
+        "name": "ready",
+        "inputType": 1,
+        "description": "g2-mini-area.ready.description",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<Chart>`",
+        "default": ""
       }
     ],
     "lib": "@delon/chart",
@@ -21537,6 +21570,14 @@ export const DATA = [
         "description": "g2-mini-bar.clickItem.description",
         "type": "EventEmitter",
         "typeRaw": "`EventEmitter<G2MiniBarClickItem>`",
+        "default": ""
+      },
+      {
+        "name": "ready",
+        "inputType": 1,
+        "description": "g2-mini-bar.ready.description",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<Chart>`",
         "default": ""
       }
     ],
@@ -21864,6 +21905,14 @@ export const DATA = [
         "type": "EventEmitter",
         "typeRaw": "`EventEmitter<G2PieClickItem>`",
         "default": ""
+      },
+      {
+        "name": "ready",
+        "inputType": 1,
+        "description": "g2-pie.ready.description",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<Chart>`",
+        "default": ""
       }
     ],
     "lib": "@delon/chart",
@@ -21961,6 +22010,14 @@ export const DATA = [
         "description": "g2-radar.clickItem.description",
         "type": "EventEmitter",
         "typeRaw": "`EventEmitter<G2RadarClickItem>`",
+        "default": ""
+      },
+      {
+        "name": "ready",
+        "inputType": 1,
+        "description": "g2-radar.ready.description",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<Chart>`",
         "default": ""
       }
     ],
@@ -22091,6 +22148,14 @@ export const DATA = [
         "typeRaw": "`string",
         "default": "LooseObject`",
         "pureDefault": "LooseObject`"
+      },
+      {
+        "name": "ready",
+        "inputType": 1,
+        "description": "g2-single-bar.ready.description",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<Chart>`",
+        "default": ""
       }
     ],
     "lib": "@delon/chart",
@@ -22165,6 +22230,14 @@ export const DATA = [
         "description": "g2-tag-cloud.clickItem.description",
         "type": "EventEmitter",
         "typeRaw": "`EventEmitter<G2TagCloudClickItem>`",
+        "default": ""
+      },
+      {
+        "name": "ready",
+        "inputType": 1,
+        "description": "g2-tag-cloud.ready.description",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<Chart>`",
         "default": ""
       }
     ],
@@ -22369,6 +22442,14 @@ export const DATA = [
         "description": "g2-timeline.clickItem.description",
         "type": "EventEmitter",
         "typeRaw": "`EventEmitter<G2TimelineClickItem>`",
+        "default": ""
+      },
+      {
+        "name": "ready",
+        "inputType": 1,
+        "description": "g2-timeline.ready.description",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<Chart>`",
         "default": ""
       }
     ],
