@@ -9,7 +9,7 @@
   [nzMultiple]="true"
   [nzLimit]="${2:5}">
   <p class="ant-upload-drag-icon">
-    <i nz-icon type="inbox"></i>
+    <span nz-icon type="inbox"></span>
   </p>
   <p class="ant-upload-text">点击或拖动要上传文件至该区域</p>
   <p class="ant-upload-hint">支持单个或批量上传，严格禁止上传公司数据或其他频段文件</p>
@@ -28,7 +28,7 @@ Upload of drag
   [nzMultiple]="true"
   [nzLimit]="${2:5}">
   <p class="ant-upload-drag-icon">
-    <i nz-icon type="inbox"></i>
+    <span nz-icon type="inbox"></span>
   </p>
   <p class="ant-upload-text">Click or drag file to this area to upload</p>
   <p class="ant-upload-hint">Support for a single or bulk upload. Strictly prohibit from uploading company data or other band files</p>

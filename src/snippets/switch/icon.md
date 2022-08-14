@@ -6,8 +6,8 @@ description:
 
 ```html
 <nz-switch [(ngModel)]="${1}" name="${1}" [nzCheckedChildren]="checkedTemplate" [nzUnCheckedChildren]="unCheckedTemplate">
-  <ng-template #checkedTemplate><i nz-icon type="${2:check}"></i></ng-template>
-  <ng-template #unCheckedTemplate><i nz-icon type="${3:close}"></i></ng-template>
+  <ng-template #checkedTemplate><span nz-icon type="${2:check}"></span></ng-template>
+  <ng-template #unCheckedTemplate><span nz-icon type="${3:close}"></span></ng-template>
 </nz-switch>
 $0
 ```

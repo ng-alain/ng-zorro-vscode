@@ -1,7 +1,7 @@
 {
   "nzs_autocomplete_custom-label": {
     "prefix": "nzs-autocomplete-custom-label",
-    "body": "<nz-input-group nzSize=\"large\" [nzSuffix]=\"suffixIcon\">\n  <input [(ngModel)]=\"$1\" (input)=\"$2($event.target?.value)\" placeholder=\"$3\" nz-input [nzAutocomplete]=\"${4:auto}\" />\n  <ng-template #suffixIcon>\n    <i nz-icon type=\"search\"></i>\n  </ng-template>\n</nz-input-group>\n<nz-autocomplete nzBackfill #$4>\n  <nz-auto-optgroup *ngFor=\"let group of optionGroups\" [nzLabel]=\"groupTitle\">\n    <ng-template #groupTitle>\n      <span>\n        {{group.title}}\n        <a class=\"more-link\" href=\"https://www.google.com/search?q=ng+zorro\" target=\"_blank\">More</a>\n      </span>\n    </ng-template>\n    <nz-auto-option *ngFor=\"let option of group.children\" [nzValue]=\"option.title\">\n      {{option.title}}\n      <span class=\"certain-search-item-count\">{{option.count}}</span>\n    </nz-auto-option>\n  </nz-auto-optgroup>\n</nz-autocomplete>",
+    "body": "<nz-input-group nzSize=\"large\" [nzSuffix]=\"suffixIcon\">\n  <input [(ngModel)]=\"$1\" (input)=\"$2($event.target?.value)\" placeholder=\"$3\" nz-input [nzAutocomplete]=\"${4:auto}\" />\n  <ng-template #suffixIcon>\n    <span nz-icon type=\"search\"></span>\n  </ng-template>\n</nz-input-group>\n<nz-autocomplete nzBackfill #$4>\n  <nz-auto-optgroup *ngFor=\"let group of optionGroups\" [nzLabel]=\"groupTitle\">\n    <ng-template #groupTitle>\n      <span>\n        {{group.title}}\n        <a class=\"more-link\" href=\"https://www.google.com/search?q=ng+zorro\" target=\"_blank\">More</a>\n      </span>\n    </ng-template>\n    <nz-auto-option *ngFor=\"let option of group.children\" [nzValue]=\"option.title\">\n      {{option.title}}\n      <span class=\"certain-search-item-count\">{{option.count}}</span>\n    </nz-auto-option>\n  </nz-auto-optgroup>\n</nz-autocomplete>",
     "description": "Autocomplete includes custom label(自定义选项)"
   },
   "nzs_autocomplete_data-source": {
@@ -21,7 +21,7 @@
   },
   "nzs_breadcrumb_icon": {
     "prefix": "nzs-breadcrumb-icon",
-    "body": "<nz-breadcrumb-item>\n  <a [routerLink]=\"['/${1}']\"><i nz-icon type=\"${2:home}\"></i>${3:<span>${4:Home}</span>}</a>\n</nz-breadcrumb-item>\n$0",
+    "body": "<nz-breadcrumb-item>\n  <a [routerLink]=\"['/${1}']\"><span nz-icon type=\"${2:home}\"></span>${3:<span>${4:Home}</span>}</a>\n</nz-breadcrumb-item>\n$0",
     "description": "Breadcrumb includes icon(图标)"
   },
   "nzs_breadcrumb_item": {
@@ -76,12 +76,12 @@
   },
   "nzs_dropdown_button.style": {
     "prefix": "nzs-dropdown-button.style",
-    "body": "<nz-dropdown>\n  <button nz-button nz-dropdown><span>${1}</span><i nz-icon type=\"${2|down,ellipsis|}\"></i></button>\n  <ul nz-menu>\n    <li nz-menu-item>$0</li>\n    <li nz-menu-item><a>2nd menu item</a></li>\n  </ul>\n</nz-dropdown>",
+    "body": "<nz-dropdown>\n  <button nz-button nz-dropdown><span>${1}</span><span nz-icon type=\"${2|down,ellipsis|}\"></span></button>\n  <ul nz-menu>\n    <li nz-menu-item>$0</li>\n    <li nz-menu-item><a>2nd menu item</a></li>\n  </ul>\n</nz-dropdown>",
     "description": "Dropdown button style(下拉菜单按钮内风格)"
   },
   "nzs_dropdown": {
     "prefix": "nzs-dropdown",
-    "body": "<nz-dropdown>\n  <a nz-dropdown>${1} <i nz-icon type=\"${2|down,ellipsis|}\"></i></a>\n  <ul nz-menu nzSelectable>\n    <li nz-menu-item>$0</li>\n    <li nz-menu-item><a>2nd menu item</a></li>\n  </ul>\n</nz-dropdown>",
+    "body": "<nz-dropdown>\n  <a nz-dropdown>${1} <span nz-icon type=\"${2|down,ellipsis|}\"></span></a>\n  <ul nz-menu nzSelectable>\n    <li nz-menu-item>$0</li>\n    <li nz-menu-item><a>2nd menu item</a></li>\n  </ul>\n</nz-dropdown>",
     "description": "Dropdown(下拉菜单)"
   },
   "nzs_form_control-responsive": {
@@ -146,7 +146,7 @@
   },
   "nzs_icon_spin": {
     "prefix": "nzs-icon-spin",
-    "body": "<i nz-icon spin type=\"${1|loading,sync|}\"></i>",
+    "body": "<span nz-icon spin type=\"${1|loading,sync|}\"></span>",
     "description": "Rotate icon(旋转图标)"
   },
   "nzs_input_addon-icon": {
@@ -236,12 +236,12 @@
   },
   "nzs_popover_help-html": {
     "prefix": "nzs-popover-help-html",
-    "body": "<nz-popover [nzContent]=\"${1:help}Tpl\">\n  <ng-template #${1}Tpl>\n    $0\n  </ng-template>\n  <i nz-popover nz-icon type=\"question-circle\"></i>\n</nz-popover>",
+    "body": "<nz-popover [nzContent]=\"${1:help}Tpl\">\n  <ng-template #${1}Tpl>\n    $0\n  </ng-template>\n  <span nz-popover nz-icon type=\"question-circle\"></span>\n</nz-popover>",
     "description": "Help demo (Include html)(HTML帮助示例)"
   },
   "nzs_popover_help": {
     "prefix": "nzs-popover-help",
-    "body": "<nz-popover nzContent=\"$0\">\n  <i nz-popover nz-icon type=\"question-circle\"></i>\n</nz-popover>",
+    "body": "<nz-popover nzContent=\"$0\">\n  <span nz-popover nz-icon type=\"question-circle\"></span>\n</nz-popover>",
     "description": "Help demo(帮助示例)"
   },
   "nzs_radio_button": {
@@ -306,7 +306,7 @@
   },
   "nzs_switch_icon": {
     "prefix": "nzs-switch-icon",
-    "body": "<nz-switch [(ngModel)]=\"${1}\" name=\"${1}\" [nzCheckedChildren]=\"checkedTemplate\" [nzUnCheckedChildren]=\"unCheckedTemplate\">\n  <ng-template #checkedTemplate><i nz-icon type=\"${2:check}\"></i></ng-template>\n  <ng-template #unCheckedTemplate><i nz-icon type=\"${3:close}\"></i></ng-template>\n</nz-switch>\n$0",
+    "body": "<nz-switch [(ngModel)]=\"${1}\" name=\"${1}\" [nzCheckedChildren]=\"checkedTemplate\" [nzUnCheckedChildren]=\"unCheckedTemplate\">\n  <ng-template #checkedTemplate><span nz-icon type=\"${2:check}\"></span></ng-template>\n  <ng-template #unCheckedTemplate><span nz-icon type=\"${3:close}\"></span></ng-template>\n</nz-switch>\n$0",
     "description": "Switch includes icon(自定义图标)"
   },
   "nzs_switch_text": {
@@ -316,7 +316,7 @@
   },
   "nzs_table": {
     "prefix": "nzs-table",
-    "body": "<nz-table #nzTable [nzData]=\"${1}\" [nzPageSize]=\"${2:10}\">\n  <thead>\n    <tr>\n      <th>Title</th>\n      $3\n      <th></th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr *ngFor=\"let i of nzTable.data\">\n      <td>{{i.title}}</td>\n      $4\n      <td>\n        <a href=\"#\" (click)=\"edit(i)\">Edit</a>\n        <nz-divider nzType=\"vertical\"></nz-divider>\n        <a href=\"#\" (click)=\"del(i)\">Remove</a>${5:\n        <nz-divider nzType=\"vertical\"></nz-divider>\n        <nz-dropdown>\n          <a class=\"ant-dropdown-link\" nz-dropdown>\n            More <i nz-icon type=\"${6|down,ellipsis|}\"></i>\n          </a>\n          <ul nz-menu>\n            <li nz-menu-item>\n              <a (click)=\"\">active</a>\n            </li>\n          </ul>\n        </nz-dropdown>\n        }\n      </td>\n    </tr>\n  </tbody>\n</nz-table>",
+    "body": "<nz-table #nzTable [nzData]=\"${1}\" [nzPageSize]=\"${2:10}\">\n  <thead>\n    <tr>\n      <th>Title</th>\n      $3\n      <th></th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr *ngFor=\"let i of nzTable.data\">\n      <td>{{i.title}}</td>\n      $4\n      <td>\n        <a href=\"#\" (click)=\"edit(i)\">Edit</a>\n        <nz-divider nzType=\"vertical\"></nz-divider>\n        <a href=\"#\" (click)=\"del(i)\">Remove</a>${5:\n        <nz-divider nzType=\"vertical\"></nz-divider>\n        <nz-dropdown>\n          <a class=\"ant-dropdown-link\" nz-dropdown>\n            More <span nz-icon type=\"${6|down,ellipsis|}\"></span>\n          </a>\n          <ul nz-menu>\n            <li nz-menu-item>\n              <a (click)=\"\">active</a>\n            </li>\n          </ul>\n        </nz-dropdown>\n        }\n      </td>\n    </tr>\n  </tbody>\n</nz-table>",
     "description": "Table(表格)"
   },
   "nzs_table_static-no-pager": {
@@ -351,17 +351,17 @@
   },
   "nzs_tooltip_template": {
     "prefix": "nzs-tooltip-template",
-    "body": "<nz-tooltip>\n  <span nz-tooltip>${1}</span>\n  <ng-template #nzTemplate>\n    <i nz-icon type=\"file\"></i>\n    <span>$0</span>\n  </ng-template>\n</nz-tooltip>",
+    "body": "<nz-tooltip>\n  <span nz-tooltip>${1}</span>\n  <ng-template #nzTemplate>\n    <span nz-icon type=\"file\"></span>\n    <span>$0</span>\n  </ng-template>\n</nz-tooltip>",
     "description": "Tooltip curstom template(自定义内容风格)"
   },
   "nzs_upload": {
     "prefix": "nzs-upload",
-    "body": "<nz-upload nzAction=\"${1:/upload}\">\n  <button nz-button>\n    <i nz-icon type=\"upload\"></i>\n    <span>${2:Upload}</span>\n  </button>\n</nz-upload>\n$0",
+    "body": "<nz-upload nzAction=\"${1:/upload}\">\n  <button nz-button>\n    <span nz-icon type=\"upload\"></span>\n    <span>${2:Upload}</span>\n  </button>\n</nz-upload>\n$0",
     "description": "Upload(上传)"
   },
   "nzs_upload_drag": {
     "prefix": "nzs-upload-drag",
-    "body": "<nz-upload nzType=\"drag\"\n  nzAction=\"${1:/upload}\"\n  (nzChange)=\"handleChange($event)\"\n  [nzMultiple]=\"true\"\n  [nzLimit]=\"${2:5}\">\n  <p class=\"ant-upload-drag-icon\">\n    <i nz-icon type=\"inbox\"></i>\n  </p>\n  <p class=\"ant-upload-text\">Click or drag file to this area to upload</p>\n  <p class=\"ant-upload-hint\">Support for a single or bulk upload. Strictly prohibit from uploading company data or other band files</p>\n</nz-upload>\n$0",
+    "body": "<nz-upload nzType=\"drag\"\n  nzAction=\"${1:/upload}\"\n  (nzChange)=\"handleChange($event)\"\n  [nzMultiple]=\"true\"\n  [nzLimit]=\"${2:5}\">\n  <p class=\"ant-upload-drag-icon\">\n    <span nz-icon type=\"inbox\"></span>\n  </p>\n  <p class=\"ant-upload-text\">Click or drag file to this area to upload</p>\n  <p class=\"ant-upload-hint\">Support for a single or bulk upload. Strictly prohibit from uploading company data or other band files</p>\n</nz-upload>\n$0",
     "description": "Upload of drag(拖拽风格)"
   }
 }

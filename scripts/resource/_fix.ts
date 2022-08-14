@@ -161,7 +161,7 @@ export const FIX = {
     'nz-form': '<form __$1>$0</form>',
     'nz-input': '<input __$1>',
     'nz-tooltip': '<span __$1>$2</span>',
-    'nz-icon': '<i __$1></i>',
+    'nz-icon': '<span __$1></span>',
     'nz-button': {
       zh: '<button __$1>${2|保存,提交,取消,新建,删除,搜索|}</button>',
       en: '<button __$1>${2|Save,Submit,Cancel,Create,Delete,Search|}</button>',

@@ -6,6 +6,6 @@ description:
 
 ```html
 <nz-popover nzContent="$0">
-  <i nz-popover nz-icon type="question-circle"></i>
+  <span nz-popover nz-icon type="question-circle"></span>
 </nz-popover>
 ```

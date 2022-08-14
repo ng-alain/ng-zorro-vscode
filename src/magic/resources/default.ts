@@ -9923,7 +9923,7 @@ export const DATA = [
     "whenToUse": "nz-icon.whenToUse",
     "doc": "/components/icon/en",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/icon",
-    "snippet": "<i __$1></i>"
+    "snippet": "<span __$1></span>"
   },
   {
     "type": "directive",

@@ -5,7 +5,7 @@
 ```html
 <nz-upload nzAction="${1:/upload}">
   <button nz-button>
-    <i nz-icon type="upload"></i>
+    <span nz-icon type="upload"></span>
     <span>${2:点击上传}</span>
   </button>
 </nz-upload>
@@ -19,7 +19,7 @@ Upload
 ```html
 <nz-upload nzAction="${1:/upload}">
   <button nz-button>
-    <i nz-icon type="upload"></i>
+    <span nz-icon type="upload"></span>
     <span>${2:Upload}</span>
   </button>
 </nz-upload>
