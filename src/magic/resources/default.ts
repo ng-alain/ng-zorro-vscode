@@ -65,13 +65,17 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-anchor.nzBounds.description': localize('nz-anchor.nzBounds.description', 'Bounding distance of anchor area, unit: px'),
 'nz-anchor.nzOffsetTop.description': localize('nz-anchor.nzOffsetTop.description', 'Pixels to offset from top when calculating position of scroll'),
 'nz-anchor.nzShowInkInFixed.description': localize('nz-anchor.nzShowInkInFixed.description', 'Whether show ink-balls in Fixed mode'),
+'nz-anchor.nzTargetOffset.description': localize('nz-anchor.nzTargetOffset.description', 'Anchor scroll offset, default as `offsetTop`, [example](#components-anchor-demo-targetOffset)'),
 'nz-anchor.nzContainer.description': localize('nz-anchor.nzContainer.description', 'Scrolling container'),
+'nz-anchor.nzCurrentAnchor.description': localize('nz-anchor.nzCurrentAnchor.description', 'Customize the anchor highlight'),
 'nz-anchor.nzClick.description': localize('nz-anchor.nzClick.description', 'Click of Anchor item'),
+'nz-anchor.nzChange.description': localize('nz-anchor.nzChange.description', 'Listening for anchor link change'),
 'nz-anchor.nzScroll.description': localize('nz-anchor.nzScroll.description', 'The scroll function that is triggered when scrolling to an anchor.'),
 'nz-link.title': localize('nz-link.title', 'Anchor'),
 'nz-link.whenToUse': localize('nz-link.whenToUse', 'For displaying anchor hyperlinks on page and jumping between them.'),
 'nz-link.description': localize('nz-link.description', 'Hyperlinks to scroll on one page.'),
 'nz-link.nzHref.description': localize('nz-link.nzHref.description', 'target of hyperlink'),
+'nz-link.nzTarget.description': localize('nz-link.nzTarget.description', 'Specifies where to display the linked URL'),
 'nz-link.nzTitle.description': localize('nz-link.nzTitle.description', 'content of  hyperlink'),
 'nzAutocomplete.title': localize('nzAutocomplete.title', 'Autocomplete'),
 'nzAutocomplete.whenToUse': localize('nzAutocomplete.whenToUse', 'When there is a need for autocomplete functionality.'),
@@ -126,6 +130,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-badge.nzShowDot.description': localize('nz-badge.nzShowDot.description', 'Whether to display the red dot'),
 'nz-badge.nzOverflowCount.description': localize('nz-badge.nzOverflowCount.description', 'Max count to show'),
 'nz-badge.nzShowZero.description': localize('nz-badge.nzShowZero.description', 'Whether to show badge when `count` is zero'),
+'nz-badge.nzSize.description': localize('nz-badge.nzSize.description', 'If `nzCount` is set, `size` sets the size of badge'),
 'nz-badge.nzStatus.description': localize('nz-badge.nzStatus.description', 'Set `nz-badge` as a status dot'),
 'nz-badge.nzText.description': localize('nz-badge.nzText.description', 'If `nzStatus` is set, `text` sets the display text of the status `dot`'),
 'nz-badge.nzTitle.description': localize('nz-badge.nzTitle.description', 'Text to show when hovering over the badge（Only Non-standalone), hide when value is `null`'),
@@ -236,6 +241,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-cascader.nzShowInput.description': localize('nz-cascader.nzShowInput.description', 'Whether show input'),
 'nz-cascader.nzShowSearch.description': localize('nz-cascader.nzShowSearch.description', 'Whether support search. Cannot be used with `[nzLoadData]` at the same time'),
 'nz-cascader.nzSize.description': localize('nz-cascader.nzSize.description', 'input size, one of `large` `default` `small`'),
+'nz-cascader.nzStatus.description': localize('nz-cascader.nzStatus.description', 'Set validation status'),
 'nz-cascader.nzSuffixIcon.description': localize('nz-cascader.nzSuffixIcon.description', 'The custom suffix icon'),
 'nz-cascader.nzValueProperty.description': localize('nz-cascader.nzValueProperty.description', 'the value property name of options'),
 'nz-cascader.ngModelChange.description': localize('nz-cascader.ngModelChange.description', 'Emit on values change'),
@@ -332,6 +338,8 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-date-picker.nzPopupStyle.description': localize('nz-date-picker.nzPopupStyle.description', 'to customize the style of the popup calendar'),
 'nz-date-picker.nzRenderExtraFooter.description': localize('nz-date-picker.nzRenderExtraFooter.description', 'render extra footer in panel'),
 'nz-date-picker.nzSize.description': localize('nz-date-picker.nzSize.description', 'determine the size of the input box, the height of `large` and `small`, are 40px and 24px respectively, while default size is 32px'),
+'nz-date-picker.nzStatus.description': localize('nz-date-picker.nzStatus.description', 'Set validation status'),
+'nz-date-picker.nzPlacement.description': localize('nz-date-picker.nzPlacement.description', 'The position where the selection box pops up'),
 'nz-date-picker.nzSuffixIcon.description': localize('nz-date-picker.nzSuffixIcon.description', 'the custom suffix icon'),
 'nz-date-picker.nzBorderless.description': localize('nz-date-picker.nzBorderless.description', 'remove the border'),
 'nz-date-picker.nzInline.description': localize('nz-date-picker.nzInline.description', 'inline mode'),
@@ -362,6 +370,8 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-range-picker.nzPopupStyle.description': localize('nz-range-picker.nzPopupStyle.description', 'to customize the style of the popup calendar'),
 'nz-range-picker.nzRenderExtraFooter.description': localize('nz-range-picker.nzRenderExtraFooter.description', 'render extra footer in panel'),
 'nz-range-picker.nzSize.description': localize('nz-range-picker.nzSize.description', 'determine the size of the input box, the height of `large` and `small`, are 40px and 24px respectively, while default size is 32px'),
+'nz-range-picker.nzStatus.description': localize('nz-range-picker.nzStatus.description', 'Set validation status'),
+'nz-range-picker.nzPlacement.description': localize('nz-range-picker.nzPlacement.description', 'The position where the selection box pops up'),
 'nz-range-picker.nzSuffixIcon.description': localize('nz-range-picker.nzSuffixIcon.description', 'the custom suffix icon'),
 'nz-range-picker.nzBorderless.description': localize('nz-range-picker.nzBorderless.description', 'remove the border'),
 'nz-range-picker.nzInline.description': localize('nz-range-picker.nzInline.description', 'inline mode'),
@@ -566,6 +576,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-input.nzSize.description': localize('nz-input.nzSize.description', 'The size of the input box. Note: in the context of a form, the `large` size is used.'),
 'nz-input.nzAutosize.description': localize('nz-input.nzAutosize.description', 'Only used for `textarea`, height autosize feature, can be set to `boolean` or an object `{ minRows: 2, maxRows: 6 }`'),
 'nz-input.nzBorderless.description': localize('nz-input.nzBorderless.description', 'Whether hide border'),
+'nz-input.nzStatus.description': localize('nz-input.nzStatus.description', 'Set validation status'),
 'nz-input.ngModel.description': localize('nz-input.ngModel.description', ' '),
 'nz-input.ngModelChange.description': localize('nz-input.ngModelChange.description', ' '),
 'nz-input.disabled.description': localize('nz-input.disabled.description', ' '),
@@ -581,6 +592,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-input-group.nzSuffix.description': localize('nz-input-group.nzSuffix.description', 'The suffix icon for the Input, can work with `nzPrefix`'),
 'nz-input-group.nzCompact.description': localize('nz-input-group.nzCompact.description', 'Whether use compact style'),
 'nz-input-group.nzSize.description': localize('nz-input-group.nzSize.description', 'The size of `nz-input-group` specifies the size of the included `nz-input` fields'),
+'nz-input-group.nzStatus.description': localize('nz-input-group.nzStatus.description', 'Set validation status'),
 'nz-textarea-count.title': localize('nz-textarea-count.title', 'Input'),
 'nz-textarea-count.whenToUse': localize('nz-textarea-count.whenToUse', '- A user input in a form field is needed.\n- A search input is required.'),
 'nz-textarea-count.description': localize('nz-textarea-count.description', 'A basic widget for getting the user input is a text field.\nKeyboard and mouse can be used for providing or changing data.'),
@@ -600,6 +612,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-input-number.nzPrecision.description': localize('nz-input-number.nzPrecision.description', 'precision of input value'),
 'nz-input-number.nzPrecisionMode.description': localize('nz-input-number.nzPrecisionMode.description', 'The method for calculating the precision of input value'),
 'nz-input-number.nzSize.description': localize('nz-input-number.nzSize.description', 'width of input box'),
+'nz-input-number.nzStatus.description': localize('nz-input-number.nzStatus.description', 'Set validation status'),
 'nz-input-number.nzStep.description': localize('nz-input-number.nzStep.description', 'The number to which the current value is increased or decreased. It can be an integer or decimal.'),
 'nz-input-number.nzInputMode.description': localize('nz-input-number.nzInputMode.description', 'enumerated attribute that hints at the type of data that might be entered by the user, [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/inputmode)'),
 'nz-input-number.nzPlaceHolder.description': localize('nz-input-number.nzPlaceHolder.description', 'Placeholder of select'),
@@ -609,6 +622,18 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-input-number.nzBlur.description': localize('nz-input-number.nzBlur.description', 'blur callback'),
 'nz-input-number.formControlName.description': localize('nz-input-number.formControlName.description', ' '),
 'nz-input-number.name.description': localize('nz-input-number.name.description', ' '),
+'nz-input-number-group.title': localize('nz-input-number-group.title', 'InputNumber'),
+'nz-input-number-group.whenToUse': localize('nz-input-number-group.whenToUse', 'When a numeric value needs to be provided.'),
+'nz-input-number-group.description': localize('nz-input-number-group.description', 'Enter a number within certain range with the mouse or keyboard.'),
+'nz-input-number-group.nzAddOnAfter.description': localize('nz-input-number-group.nzAddOnAfter.description', 'The label text displayed after (on the right side of) the input number field, can work with `nzAddOnBefore`'),
+'nz-input-number-group.nzAddOnBefore.description': localize('nz-input-number-group.nzAddOnBefore.description', 'The label text displayed before (on the left side of) the input number field, can work with `nzAddOnAfter`'),
+'nz-input-number-group.nzPrefix.description': localize('nz-input-number-group.nzPrefix.description', 'The prefix icon for the Input Number, can work with `nzSuffix`'),
+'nz-input-number-group.nzSuffix.description': localize('nz-input-number-group.nzSuffix.description', 'The suffix icon for the Input Number, can work with `nzPrefix`'),
+'nz-input-number-group.nzPrefixIcon.description': localize('nz-input-number-group.nzPrefixIcon.description', 'The prefix icon for the Input Number'),
+'nz-input-number-group.nzSuffixIcon.description': localize('nz-input-number-group.nzSuffixIcon.description', 'The suffix icon for the Input Number'),
+'nz-input-number-group.nzCompact.description': localize('nz-input-number-group.nzCompact.description', 'Whether use compact style'),
+'nz-input-number-group.nzSize.description': localize('nz-input-number-group.nzSize.description', 'The size of `nz-input-number-group` specifies the size of the included `nz-input-number` fields'),
+'nz-input-number-group.nzStatus.description': localize('nz-input-number-group.nzStatus.description', 'Set validation status'),
 'nz-sider.title': localize('nz-sider.title', 'Layout'),
 'nz-sider.whenToUse': localize('nz-sider.whenToUse', ' '),
 'nz-sider.description': localize('nz-sider.description', 'The sidebar.'),
@@ -672,6 +697,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-mention.nzPlacement.description': localize('nz-mention.nzPlacement.description', 'The position of the suggestion relative to the target, which can be one of top and bottom'),
 'nz-mention.nzPrefix.description': localize('nz-mention.nzPrefix.description', 'Character which will trigger Mention to show mention list'),
 'nz-mention.nzSuggestions.description': localize('nz-mention.nzSuggestions.description', 'Suggestion content'),
+'nz-mention.nzStatus.description': localize('nz-mention.nzStatus.description', 'Set validation status'),
 'nz-mention.nzValueWith.description': localize('nz-mention.nzValueWith.description', 'Function that maps an suggestion\'s value'),
 'nz-mention.nzOnSelect.description': localize('nz-mention.nzOnSelect.description', 'Callback function called when select from suggestions'),
 'nz-mention.nzOnSearchChange.description': localize('nz-mention.nzOnSearchChange.description', 'Callback function called when search content changes'),
@@ -684,12 +710,12 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-menu.title': localize('nz-menu.title', 'Menu'),
 'nz-menu.whenToUse': localize('nz-menu.whenToUse', 'Navigation menu is important for a website, it helps users jump from one site section to another quickly. Mostly, it includes top navigation and side navigation. Top navigation provides all the category and functions of the website. Side navigation provides the Multi-level structure of the website.'),
 'nz-menu.description': localize('nz-menu.description', 'Menu list of Navigation.'),
-'nz-menu.nzInlineCollapsed.description': localize('nz-menu.nzInlineCollapsed.description', 'specifies the collapsed status when menu is inline mode'),
-'nz-menu.nzInlineIndent.description': localize('nz-menu.nzInlineIndent.description', 'indent px of inline menu item on each level'),
-'nz-menu.nzMode.description': localize('nz-menu.nzMode.description', 'type of the menu; `vertical`, `horizontal`, and `inline` modes are supported'),
+'nz-menu.nzInlineCollapsed.description': localize('nz-menu.nzInlineCollapsed.description', 'specifies the collapsed status when menu is `inline` mode'),
+'nz-menu.nzInlineIndent.description': localize('nz-menu.nzInlineIndent.description', 'indent px of `inline` menu item on each level'),
+'nz-menu.nzMode.description': localize('nz-menu.nzMode.description', 'type of the menu; `vertical`、 `horizontal`, and `inline` modes are supported'),
 'nz-menu.nzSelectable.description': localize('nz-menu.nzSelectable.description', 'allow selecting menu items'),
 'nz-menu.nzTheme.description': localize('nz-menu.nzTheme.description', 'color theme of the menu'),
-'nz-menu.nzClick.description': localize('nz-menu.nzClick.description', 'the Output when click nz-menu-item inside nz-menu'),
+'nz-menu.nzClick.description': localize('nz-menu.nzClick.description', 'the Output when click `nz-menu-item` inside nz-menu'),
 'nz-menu-item.title': localize('nz-menu-item.title', 'Menu'),
 'nz-menu-item.whenToUse': localize('nz-menu-item.whenToUse', 'Navigation menu is important for a website, it helps users jump from one site section to another quickly. Mostly, it includes top navigation and side navigation. Top navigation provides all the category and functions of the website. Side navigation provides the Multi-level structure of the website.'),
 'nz-menu-item.description': localize('nz-menu-item.description', 'Menu list of Navigation.'),
@@ -704,7 +730,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-submenu.nzOpen.description': localize('nz-submenu.nzOpen.description', 'whether sub menu is open or not, double binding'),
 'nz-submenu.nzDisabled.description': localize('nz-submenu.nzDisabled.description', 'whether sub menu is disabled or not'),
 'nz-submenu.nzTitle.description': localize('nz-submenu.nzTitle.description', 'set submenu title'),
-'nz-submenu.nzIcon.description': localize('nz-submenu.nzIcon.description', 'icon type in title'),
+'nz-submenu.nzIcon.description': localize('nz-submenu.nzIcon.description', '`icon` type in title'),
 'nz-submenu.nzMenuClassName.description': localize('nz-submenu.nzMenuClassName.description', 'Custom the submenu container\'s class name'),
 'nz-submenu.nzOpenChange.description': localize('nz-submenu.nzOpenChange.description', 'nzOpen callback'),
 'nz-menu-group.title': localize('nz-menu-group.title', 'Menu'),
@@ -846,6 +872,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-popconfirm.nzCondition.description': localize('nz-popconfirm.nzCondition.description', 'Whether to directly emit `onConfirm` without showing Popconfirm'),
 'nz-popconfirm.nzIcon.description': localize('nz-popconfirm.nzIcon.description', 'Customize icon of confirmation'),
 'nz-popconfirm.nzAutoFocus.description': localize('nz-popconfirm.nzAutoFocus.description', 'Autofocus a button'),
+'nz-popconfirm.nzBeforeConfirm.description': localize('nz-popconfirm.nzBeforeConfirm.description', 'The hook before the confirmation operation, decides whether to continue responding to the `nzOnConfirm` callback, supports asynchronous verification.'),
 'nz-popconfirm.nzOnCancel.description': localize('nz-popconfirm.nzOnCancel.description', 'Callback of cancel'),
 'nz-popconfirm.nzOnConfirm.description': localize('nz-popconfirm.nzOnConfirm.description', 'Callback of confirmation'),
 'nz-popover.title': localize('nz-popover.title', 'Popover'),
@@ -997,6 +1024,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-select.nzShowArrow.description': localize('nz-select.nzShowArrow.description', 'Whether to show the drop-down arrow'),
 'nz-select.nzShowSearch.description': localize('nz-select.nzShowSearch.description', 'Whether show search input in single mode.'),
 'nz-select.nzSize.description': localize('nz-select.nzSize.description', 'Size of Select input'),
+'nz-select.nzStatus.description': localize('nz-select.nzStatus.description', 'Set validation status'),
 'nz-select.nzSuffixIcon.description': localize('nz-select.nzSuffixIcon.description', 'The custom suffix icon'),
 'nz-select.nzRemoveIcon.description': localize('nz-select.nzRemoveIcon.description', 'The custom remove icon'),
 'nz-select.nzClearIcon.description': localize('nz-select.nzClearIcon.description', 'The custom clear icon'),
@@ -1029,18 +1057,18 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-option-group.description': localize('nz-option-group.description', 'Select component to select value from options.'),
 'nz-option-group.nzLabel.description': localize('nz-option-group.nzLabel.description', 'Group label'),
 'nz-skeleton.title': localize('nz-skeleton.title', 'Skeleton'),
-'nz-skeleton.whenToUse': localize('nz-skeleton.whenToUse', '- When resource need long time loading, like low network speed.\n- The component contains much information, such as List or Card.\n- Only works when loading data for the first time.\n- Could be replaced by Spin in any situation, but can provide a better user experience.'),
-'nz-skeleton.description': localize('nz-skeleton.description', 'Provide a placeholder while you wait for content to load, or to visualise content that doesn\'t exist yet.'),
+'nz-skeleton.whenToUse': localize('nz-skeleton.whenToUse', '- When resource needs long time loading, like low network speed.\n- The component contains information, such as a List or Card.\n- Only works when loading data for the first time.\n- Could be replaced by Spin in any situation but can provide a better user experience.'),
+'nz-skeleton.description': localize('nz-skeleton.description', 'Provide a placeholder while you wait for content to load or visualize content that doesn\'t exist yet.'),
 'nz-skeleton.nzActive.description': localize('nz-skeleton.nzActive.description', 'Show animation effect'),
 'nz-skeleton.nzAvatar.description': localize('nz-skeleton.nzAvatar.description', 'Show avatar placeholder'),
 'nz-skeleton.nzLoading.description': localize('nz-skeleton.nzLoading.description', 'Display the skeleton when `true`'),
-'nz-skeleton.nzParagraph.description': localize('nz-skeleton.nzParagraph.description', 'Show paragraph placeholder'),
-'nz-skeleton.nzTitle.description': localize('nz-skeleton.nzTitle.description', 'Show title placeholder'),
-'nz-skeleton.nzRound.description': localize('nz-skeleton.nzRound.description', 'Show paragraph and title radius when `true`'),
-'nz-skeleton.size.description': localize('nz-skeleton.size.description', 'Set the size of avatar'),
-'nz-skeleton.shape.description': localize('nz-skeleton.shape.description', 'Set the shape of avatar'),
-'nz-skeleton.rows.description': localize('nz-skeleton.rows.description', 'Set the row count of paragraph'),
-'nz-skeleton.width.description': localize('nz-skeleton.width.description', 'Set the width of title'),
+'nz-skeleton.nzParagraph.description': localize('nz-skeleton.nzParagraph.description', 'Show the paragraph placeholder'),
+'nz-skeleton.nzTitle.description': localize('nz-skeleton.nzTitle.description', 'Show the title placeholder'),
+'nz-skeleton.nzRound.description': localize('nz-skeleton.nzRound.description', 'Show the paragraph and the title radius when `true`'),
+'nz-skeleton.size.description': localize('nz-skeleton.size.description', 'Set the avatar size'),
+'nz-skeleton.shape.description': localize('nz-skeleton.shape.description', 'Set the avatar shape'),
+'nz-skeleton.rows.description': localize('nz-skeleton.rows.description', 'Set the row count of the paragraph'),
+'nz-skeleton.width.description': localize('nz-skeleton.width.description', 'Set the title width'),
 'nz-slider.title': localize('nz-slider.title', 'Slider'),
 'nz-slider.whenToUse': localize('nz-slider.whenToUse', 'To input a value in a range.'),
 'nz-slider.description': localize('nz-slider.description', 'A Slider component for displaying current value and intervals in range.'),
@@ -1126,6 +1154,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-switch.title': localize('nz-switch.title', 'Switch'),
 'nz-switch.whenToUse': localize('nz-switch.whenToUse', '- If you need to represent the switching between two states or on-off state.\n- The difference between `Switch` and `Checkbox` is that `Switch` will trigger a state change directly when you toggle it, while `Checkbox` is generally used for state marking, which should work in conjunction with submit operation.'),
 'nz-switch.description': localize('nz-switch.description', 'Switching Selector.'),
+'nz-switch.nzId.description': localize('nz-switch.nzId.description', 'button id attribute inside the component'),
 'nz-switch.ngModel.description': localize('nz-switch.ngModel.description', 'determine whether the `nz-switch` is checked, double binding'),
 'nz-switch.nzCheckedChildren.description': localize('nz-switch.nzCheckedChildren.description', 'content to be shown when the state is checked'),
 'nz-switch.nzUnCheckedChildren.description': localize('nz-switch.nzUnCheckedChildren.description', 'content to be shown when the state is unchecked'),
@@ -1292,6 +1321,9 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-time-picker.nzHourStep.description': localize('nz-time-picker.nzHourStep.description', 'interval between hours in picker'),
 'nz-time-picker.nzMinuteStep.description': localize('nz-time-picker.nzMinuteStep.description', 'interval between minutes in picker'),
 'nz-time-picker.nzSecondStep.description': localize('nz-time-picker.nzSecondStep.description', 'interval between seconds in picker'),
+'nz-time-picker.nzSize.description': localize('nz-time-picker.nzSize.description', 'width of time picker box'),
+'nz-time-picker.nzStatus.description': localize('nz-time-picker.nzStatus.description', 'Set validation status'),
+'nz-time-picker.nzBorderless.description': localize('nz-time-picker.nzBorderless.description', 'remove the border'),
 'nz-time-picker.nzOpen.description': localize('nz-time-picker.nzOpen.description', 'whether to popup panel, double binding'),
 'nz-time-picker.nzPlaceHolder.description': localize('nz-time-picker.nzPlaceHolder.description', 'display when there\'s no value'),
 'nz-time-picker.nzPopupClassName.description': localize('nz-time-picker.nzPopupClassName.description', 'className of panel'),
@@ -1335,6 +1367,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-transfer.nzCanMove.description': localize('nz-transfer.nzCanMove.description', 'A function to determine what items should be moved (by default all checked items are moved). please refer to the case.'),
 'nz-transfer.nzSelectedKeys.description': localize('nz-transfer.nzSelectedKeys.description', 'A set of keys of selected items.'),
 'nz-transfer.nzTargetKeys.description': localize('nz-transfer.nzTargetKeys.description', 'A set of keys of elements that are listed on the right column.'),
+'nz-transfer.nzStatus.description': localize('nz-transfer.nzStatus.description', 'Set validation status'),
 'nz-transfer.nzChange.description': localize('nz-transfer.nzChange.description', 'A callback function that is executed when the transfer between columns is complete.'),
 'nz-transfer.nzSearchChange.description': localize('nz-transfer.nzSearchChange.description', 'A callback function which is executed when search field are changed'),
 'nz-transfer.nzSelectChange.description': localize('nz-transfer.nzSelectChange.description', 'A callback function which is executed when selected items are changed.'),
@@ -1393,6 +1426,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-tree-select.nzMultiple.description': localize('nz-tree-select.nzMultiple.description', 'Support multiple or not, will be `true` when enable `nzCheckable`.'),
 'nz-tree-select.nzHideUnMatched.description': localize('nz-tree-select.nzHideUnMatched.description', 'Hide unmatched nodes while searching'),
 'nz-tree-select.nzSize.description': localize('nz-tree-select.nzSize.description', 'To set the size of the select input'),
+'nz-tree-select.nzStatus.description': localize('nz-tree-select.nzStatus.description', 'Set validation status'),
 'nz-tree-select.nzCheckable.description': localize('nz-tree-select.nzCheckable.description', 'Whether to show checkbox on the treeNodes'),
 'nz-tree-select.nzCheckStrictly.description': localize('nz-tree-select.nzCheckStrictly.description', 'Check treeNode precisely; parent treeNode and children treeNodes are not associated'),
 'nz-tree-select.nzShowExpand.description': localize('nz-tree-select.nzShowExpand.description', 'Show a Expand Icon before the treeNodes'),
@@ -1632,6 +1666,10 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'notice-icon.popoverVisibleChange.description': localize('notice-icon.popoverVisibleChange.description', 'Popover callback'),
 'notice-icon.btnClass.description': localize('notice-icon.btnClass.description', 'Class of the button'),
 'notice-icon.btnIconClass.description': localize('notice-icon.btnIconClass.description', 'Class of the icon in button'),
+'observeSize.title': localize('observeSize.title', 'Observers'),
+'observeSize.whenToUse': localize('observeSize.whenToUse', ' '),
+'observeSize.description': localize('observeSize.description', 'Watch the DOM size change.'),
+'observeSize.observeSize.description': localize('observeSize.observeSize.description', 'Event'),
 'page-header.title': localize('page-header.title', 'Page Header'),
 'page-header.whenToUse': localize('page-header.whenToUse', ' '),
 'page-header.description': localize('page-header.description', 'The page header is used to declare the subject of the page and contains the most important information that the user is concerned about, so that the user can quickly understand what the current page and functions.'),
@@ -1724,6 +1762,8 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'reuse-tab.routeParamMatchMode.description': localize('reuse-tab.routeParamMatchMode.description', 'Match the pattern when routing parameters are included, for example:`/view/:id`<br> - `strict` Strict mode `/view/1`, `/view/2` Different pages<br> - `loose` Loose mode `/view/1`, `/view/2` Same page and only one tab of component'),
 'reuse-tab.disabled.description': localize('reuse-tab.disabled.description', 'Whether to disabled'),
 'reuse-tab.titleRender.description': localize('reuse-tab.titleRender.description', 'Custom rendering of the title'),
+'reuse-tab.storageState.description': localize('reuse-tab.storageState.description', 'Whether to store the state, keep the last browser state'),
+'reuse-tab.canClose.description': localize('reuse-tab.canClose.description', 'A function to determine what should be closed'),
 'reuse-tab.close.description': localize('reuse-tab.close.description', 'Close'),
 'reuse-tab.change.description': localize('reuse-tab.change.description', 'Callback when switching'),
 'reuse-tab.closeOther.description': localize('reuse-tab.closeOther.description', 'Close other tabs'),
@@ -1818,6 +1858,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'st.error.description': localize('st.error.description', 'Error event'),
 'st.type.description': localize('st.type.description', 'Type of width mode'),
 'st.params.description': localize('st.params.description', 'Request parameters, default to auto append `pi`, `ps` to URL'),
+'st.ignoreParamNull.description': localize('st.ignoreParamNull.description', 'Whether to ignore `null` or `unfind` values in parameters'),
 'st.method.description': localize('st.method.description', 'Request method'),
 'st.headers.description': localize('st.headers.description', 'Request header'),
 'st.reName.description': localize('st.reName.description', 'Map name `total`、`list`, could be set like `a.b.c`'),
@@ -2785,6 +2826,14 @@ export const DATA = [
         "pureDefault": "false"
       },
       {
+        "name": "nzTargetOffset",
+        "inputType": 0,
+        "description": "nz-anchor.nzTargetOffset.description",
+        "type": "number",
+        "typeRaw": "number",
+        "default": ""
+      },
+      {
         "name": "nzContainer",
         "inputType": 0,
         "description": "nz-anchor.nzContainer.description",
@@ -2794,9 +2843,25 @@ export const DATA = [
         "pureDefault": "window"
       },
       {
+        "name": "nzCurrentAnchor",
+        "inputType": 0,
+        "description": "nz-anchor.nzCurrentAnchor.description",
+        "type": "string",
+        "typeRaw": "string",
+        "default": ""
+      },
+      {
         "name": "nzClick",
         "inputType": 1,
         "description": "nz-anchor.nzClick.description",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<string>`",
+        "default": ""
+      },
+      {
+        "name": "nzChange",
+        "inputType": 1,
+        "description": "nz-anchor.nzChange.description",
         "type": "EventEmitter",
         "typeRaw": "`EventEmitter<string>`",
         "default": ""
@@ -2828,6 +2893,14 @@ export const DATA = [
         "description": "nz-link.nzHref.description",
         "type": "string",
         "typeRaw": "`string`",
+        "default": ""
+      },
+      {
+        "name": "nzTarget",
+        "inputType": 0,
+        "description": "nz-link.nzTarget.description",
+        "type": "string",
+        "typeRaw": "string",
         "default": ""
       },
       {
@@ -3210,6 +3283,15 @@ export const DATA = [
         "typeRaw": "`boolean`",
         "default": "`false`",
         "pureDefault": "false"
+      },
+      {
+        "name": "nzSize",
+        "inputType": 0,
+        "description": "nz-badge.nzSize.description",
+        "type": "string",
+        "typeRaw": "`default | small`",
+        "default": "`default`",
+        "pureDefault": "default"
       },
       {
         "name": "nzStatus",
@@ -4065,6 +4147,18 @@ export const DATA = [
         "pureDefault": "default"
       },
       {
+        "name": "nzStatus",
+        "inputType": 0,
+        "description": "nz-cascader.nzStatus.description",
+        "type": "Enum",
+        "typeRaw": "`'error' | 'warning'`",
+        "default": "",
+        "typeDefinition": [
+          "error",
+          "warning"
+        ]
+      },
+      {
         "name": "nzSuffixIcon",
         "inputType": 0,
         "description": "nz-cascader.nzSuffixIcon.description",
@@ -4772,6 +4866,35 @@ export const DATA = [
         "_common": true
       },
       {
+        "name": "nzStatus",
+        "inputType": 0,
+        "description": "nz-date-picker.nzStatus.description",
+        "type": "Enum",
+        "typeRaw": "`'error' | 'warning'`",
+        "default": "",
+        "typeDefinition": [
+          "error",
+          "warning"
+        ],
+        "_common": true
+      },
+      {
+        "name": "nzPlacement",
+        "inputType": 0,
+        "description": "nz-date-picker.nzPlacement.description",
+        "type": "Enum",
+        "typeRaw": "`'bottomLeft' | 'bottomRight' | 'topLeft' | 'topRight'`",
+        "default": "`'bottomLeft'`",
+        "typeDefinition": [
+          "bottomLeft",
+          "bottomRight",
+          "topLeft",
+          "topRight"
+        ],
+        "pureDefault": "bottomLeft",
+        "_common": true
+      },
+      {
         "name": "nzSuffixIcon",
         "inputType": 0,
         "description": "nz-date-picker.nzSuffixIcon.description",
@@ -5034,6 +5157,35 @@ export const DATA = [
           "large",
           "small"
         ],
+        "_common": true
+      },
+      {
+        "name": "nzStatus",
+        "inputType": 0,
+        "description": "nz-range-picker.nzStatus.description",
+        "type": "Enum",
+        "typeRaw": "`'error' | 'warning'`",
+        "default": "",
+        "typeDefinition": [
+          "error",
+          "warning"
+        ],
+        "_common": true
+      },
+      {
+        "name": "nzPlacement",
+        "inputType": 0,
+        "description": "nz-range-picker.nzPlacement.description",
+        "type": "Enum",
+        "typeRaw": "`'bottomLeft' | 'bottomRight' | 'topLeft' | 'topRight'`",
+        "default": "`'bottomLeft'`",
+        "typeDefinition": [
+          "bottomLeft",
+          "bottomRight",
+          "topLeft",
+          "topRight"
+        ],
+        "pureDefault": "bottomLeft",
         "_common": true
       },
       {
@@ -10027,6 +10179,18 @@ export const DATA = [
         "pureDefault": "false"
       },
       {
+        "name": "nzStatus",
+        "inputType": 0,
+        "description": "nz-input.nzStatus.description",
+        "type": "Enum",
+        "typeRaw": "`'error' | 'warning'`",
+        "default": "",
+        "typeDefinition": [
+          "error",
+          "warning"
+        ]
+      },
+      {
         "name": "ngModel",
         "inputType": 2,
         "type": "any",
@@ -10138,6 +10302,18 @@ export const DATA = [
           "default"
         ],
         "pureDefault": "default"
+      },
+      {
+        "name": "nzStatus",
+        "inputType": 0,
+        "description": "nz-input-group.nzStatus.description",
+        "type": "Enum",
+        "typeRaw": "`'error' | 'warning'`",
+        "default": "",
+        "typeDefinition": [
+          "error",
+          "warning"
+        ]
       }
     ],
     "lib": "ng-zorro-antd",
@@ -10291,6 +10467,18 @@ export const DATA = [
         "pureDefault": "default"
       },
       {
+        "name": "nzStatus",
+        "inputType": 0,
+        "description": "nz-input-number.nzStatus.description",
+        "type": "Enum",
+        "typeRaw": "`'error' | 'warning'`",
+        "default": "",
+        "typeDefinition": [
+          "error",
+          "warning"
+        ]
+      },
+      {
         "name": "nzStep",
         "inputType": 0,
         "description": "nz-input-number.nzStep.description",
@@ -10367,6 +10555,102 @@ export const DATA = [
     "title": "nz-input-number.title",
     "description": "nz-input-number.description",
     "whenToUse": "nz-input-number.whenToUse",
+    "doc": "/components/input-number/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/input-number"
+  },
+  {
+    "type": "component",
+    "selector": "nz-input-number-group",
+    "types": {},
+    "properties": [
+      {
+        "name": "nzAddOnAfter",
+        "inputType": 0,
+        "description": "nz-input-number-group.nzAddOnAfter.description",
+        "type": "string",
+        "typeRaw": "`string | TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "nzAddOnBefore",
+        "inputType": 0,
+        "description": "nz-input-number-group.nzAddOnBefore.description",
+        "type": "string",
+        "typeRaw": "`string | TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "nzPrefix",
+        "inputType": 0,
+        "description": "nz-input-number-group.nzPrefix.description",
+        "type": "string",
+        "typeRaw": "`string | TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "nzSuffix",
+        "inputType": 0,
+        "description": "nz-input-number-group.nzSuffix.description",
+        "type": "string",
+        "typeRaw": "`string | TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "nzPrefixIcon",
+        "inputType": 0,
+        "description": "nz-input-number-group.nzPrefixIcon.description",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
+      },
+      {
+        "name": "nzSuffixIcon",
+        "inputType": 0,
+        "description": "nz-input-number-group.nzSuffixIcon.description",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
+      },
+      {
+        "name": "nzCompact",
+        "inputType": 0,
+        "description": "nz-input-number-group.nzCompact.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzSize",
+        "inputType": 0,
+        "description": "nz-input-number-group.nzSize.description",
+        "type": "Enum",
+        "typeRaw": "`'large' | 'small' | 'default'`",
+        "default": "`'default'`",
+        "typeDefinition": [
+          "large",
+          "small",
+          "default"
+        ],
+        "pureDefault": "default"
+      },
+      {
+        "name": "nzStatus",
+        "inputType": 0,
+        "description": "nz-input-number-group.nzStatus.description",
+        "type": "Enum",
+        "typeRaw": "`'error' | 'warning'`",
+        "default": "",
+        "typeDefinition": [
+          "error",
+          "warning"
+        ]
+      }
+    ],
+    "lib": "ng-zorro-antd",
+    "title": "nz-input-number-group.title",
+    "description": "nz-input-number-group.description",
+    "whenToUse": "nz-input-number-group.whenToUse",
     "doc": "/components/input-number/en",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/input-number"
   },
@@ -10803,6 +11087,18 @@ export const DATA = [
         "typeRaw": "`any[]`",
         "default": "`[]`",
         "pureDefault": "[]"
+      },
+      {
+        "name": "nzStatus",
+        "inputType": 0,
+        "description": "nz-mention.nzStatus.description",
+        "type": "Enum",
+        "typeRaw": "`'error' | 'warning'`",
+        "default": "",
+        "typeDefinition": [
+          "error",
+          "warning"
+        ]
       },
       {
         "name": "nzValueWith",
@@ -11957,14 +12253,14 @@ export const DATA = [
         "description": "nz-popconfirm.nzPopconfirmTrigger.description",
         "type": "Enum",
         "typeRaw": "`'click' | 'focus' | 'hover' | null`",
-        "default": "`'hover'`",
+        "default": "`'click'`",
         "typeDefinition": [
           "click",
           "focus",
           "hover",
           "null"
         ],
-        "pureDefault": "hover"
+        "pureDefault": "click"
       },
       {
         "name": "nzPopconfirmPlacement",
@@ -12139,6 +12435,15 @@ export const DATA = [
           "ok",
           "cancel"
         ],
+        "pureDefault": "null"
+      },
+      {
+        "name": "nzBeforeConfirm",
+        "inputType": 0,
+        "description": "nz-popconfirm.nzBeforeConfirm.description",
+        "type": "function",
+        "typeRaw": "`(() => Observable<boolean> | Promise<boolean> | boolean) | null`",
+        "default": "`null`",
         "pureDefault": "null"
       },
       {
@@ -12857,8 +13162,8 @@ export const DATA = [
         "description": "nz-rate.nzCharacter.description",
         "type": "TemplateRef",
         "typeRaw": "`TemplateRef<void>`",
-        "default": "`<i nz-icon nzType=\"star\"></i>`",
-        "pureDefault": "<i nz-icon nzType=\"star\"></i>"
+        "default": "`<span nz-icon nzType=\"star\"></span>`",
+        "pureDefault": "<span nz-icon nzType=\"star\"></span>"
       },
       {
         "name": "nzCount",
@@ -13419,6 +13724,18 @@ export const DATA = [
           "default"
         ],
         "pureDefault": "default"
+      },
+      {
+        "name": "nzStatus",
+        "inputType": 0,
+        "description": "nz-select.nzStatus.description",
+        "type": "Enum",
+        "typeRaw": "`'error' | 'warning'`",
+        "default": "",
+        "typeDefinition": [
+          "error",
+          "warning"
+        ]
       },
       {
         "name": "nzSuffixIcon",
@@ -14439,6 +14756,14 @@ export const DATA = [
     "selector": "nz-switch",
     "types": {},
     "properties": [
+      {
+        "name": "nzId",
+        "inputType": 0,
+        "description": "nz-switch.nzId.description",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
+      },
       {
         "name": "ngModel",
         "inputType": 2,
@@ -15805,6 +16130,41 @@ export const DATA = [
         "pureDefault": "1"
       },
       {
+        "name": "nzSize",
+        "inputType": 0,
+        "description": "nz-time-picker.nzSize.description",
+        "type": "Enum",
+        "typeRaw": "`'large' | 'small' | 'default'`",
+        "default": "`'default'`",
+        "typeDefinition": [
+          "large",
+          "small",
+          "default"
+        ],
+        "pureDefault": "default"
+      },
+      {
+        "name": "nzStatus",
+        "inputType": 0,
+        "description": "nz-time-picker.nzStatus.description",
+        "type": "Enum",
+        "typeRaw": "`'error' | 'warning'`",
+        "default": "",
+        "typeDefinition": [
+          "error",
+          "warning"
+        ]
+      },
+      {
+        "name": "nzBorderless",
+        "inputType": 0,
+        "description": "nz-time-picker.nzBorderless.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
         "name": "nzOpen",
         "inputType": 2,
         "description": "nz-time-picker.nzOpen.description",
@@ -15906,8 +16266,8 @@ export const DATA = [
         "description": "nz-timeline.nzPendingDot.description",
         "type": "string",
         "typeRaw": "`string|TemplateRef<void>`",
-        "default": "`<i nz-icon nzType=\"loading\"></i>`",
-        "pureDefault": "<i nz-icon nzType=\"loading\"></i>"
+        "default": "`<span nz-icon nzType=\"loading\"></span>`",
+        "pureDefault": "<span nz-icon nzType=\"loading\"></span>"
       },
       {
         "name": "nzReverse",
@@ -16141,6 +16501,18 @@ export const DATA = [
         "type": "Array",
         "typeRaw": "`string[]`",
         "default": ""
+      },
+      {
+        "name": "nzStatus",
+        "inputType": 0,
+        "description": "nz-transfer.nzStatus.description",
+        "type": "Enum",
+        "typeRaw": "`'error' | 'warning'`",
+        "default": "",
+        "typeDefinition": [
+          "error",
+          "warning"
+        ]
       },
       {
         "name": "nzChange",
@@ -16617,6 +16989,18 @@ export const DATA = [
           "default"
         ],
         "pureDefault": "default"
+      },
+      {
+        "name": "nzStatus",
+        "inputType": 0,
+        "description": "nz-tree-select.nzStatus.description",
+        "type": "Enum",
+        "typeRaw": "`'error' | 'warning'`",
+        "default": "",
+        "typeDefinition": [
+          "error",
+          "warning"
+        ]
       },
       {
         "name": "nzCheckable",
@@ -18356,6 +18740,27 @@ export const DATA = [
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/notice-icon"
   },
   {
+    "type": "directive",
+    "selector": "observeSize",
+    "types": {},
+    "properties": [
+      {
+        "name": "observeSize",
+        "inputType": 1,
+        "description": "observeSize.observeSize.description",
+        "type": "Array",
+        "typeRaw": "`MutationRecord[]`",
+        "default": ""
+      }
+    ],
+    "description": "observeSize.description",
+    "lib": "@delon/abc",
+    "title": "observeSize.title",
+    "whenToUse": "observeSize.whenToUse",
+    "doc": "/components/observers/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/observers"
+  },
+  {
     "type": "component",
     "selector": "page-header",
     "types": {},
@@ -19101,6 +19506,23 @@ export const DATA = [
         "default": ""
       },
       {
+        "name": "storageState",
+        "inputType": 0,
+        "description": "reuse-tab.storageState.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "canClose",
+        "inputType": 0,
+        "description": "reuse-tab.canClose.description",
+        "type": "function",
+        "typeRaw": "`(options: { item: ReuseItem; includeNonCloseable: boolean }) => Observable<boolean>`",
+        "default": ""
+      },
+      {
         "name": "close",
         "inputType": 1,
         "description": "reuse-tab.close.description",
@@ -19773,6 +20195,15 @@ export const DATA = [
           "default": ""
         },
         {
+          "name": "ignoreParamNull",
+          "inputType": 0,
+          "description": "st.ignoreParamNull.description",
+          "type": "object",
+          "typeRaw": "`Boolean`",
+          "default": "`false`",
+          "pureDefault": "false"
+        },
+        {
           "name": "method",
           "inputType": 0,
           "description": "st.method.description",
@@ -19802,7 +20233,7 @@ export const DATA = [
           "inputType": 0,
           "description": "st.reName.description",
           "type": "object",
-          "typeRaw": "`STReqReNameType`",
+          "typeRaw": "`STReqReNameType, ((result: any, options: { pi: number; ps: number; total: number }) => { total: number; list: T[] })`",
           "default": "`{ pi: 'pi', ps: 'ps', skip: 'skip', limit: 'limit' }`",
           "pureDefault": "{ pi: 'pi', ps: 'ps', skip: 'skip', limit: 'limit' }"
         },
