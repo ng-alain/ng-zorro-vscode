@@ -321,6 +321,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-date-picker.nzShowTime.description': localize('nz-date-picker.nzShowTime.description', 'to provide an additional time selection'),
 'nz-date-picker.nzShowToday.description': localize('nz-date-picker.nzShowToday.description', 'whether to show \'Today\' button'),
 'nz-date-picker.nzShowNow.description': localize('nz-date-picker.nzShowNow.description', 'whether to show \'Now\' button on panel when `nzShowTime` is set'),
+'nz-date-picker.nzShowWeekNumber.description': localize('nz-date-picker.nzShowWeekNumber.description', 'whether to show the week number on each row (Only supported by date picker. Week picker always shows week numbers)'),
 'nz-date-picker.nzOnOk.description': localize('nz-date-picker.nzOnOk.description', 'callback when click ok button'),
 'nz-date-picker.nzId.description': localize('nz-date-picker.nzId.description', 'input id attribute inside the component'),
 'nz-date-picker.nzAllowClear.description': localize('nz-date-picker.nzAllowClear.description', 'Whether to show clear button'),
@@ -353,6 +354,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-range-picker.description': localize('nz-range-picker.description', 'To select or input a date.'),
 'nz-range-picker.nzShowTime.description': localize('nz-range-picker.nzShowTime.description', 'to provide an additional time selection'),
 'nz-range-picker.nzDisabledTime.description': localize('nz-range-picker.nzDisabledTime.description', 'to specify the time that cannot be selected'),
+'nz-range-picker.nzShowWeekNumber.description': localize('nz-range-picker.nzShowWeekNumber.description', 'whether to show the week number on each row (Only supported by date picker. Week picker always shows week numbers)'),
 'nz-range-picker.nzOnOk.description': localize('nz-range-picker.nzOnOk.description', 'click ok callback'),
 'nz-range-picker.nzId.description': localize('nz-range-picker.nzId.description', 'input id attribute inside the component'),
 'nz-range-picker.nzAllowClear.description': localize('nz-range-picker.nzAllowClear.description', 'Whether to show clear button'),
@@ -727,6 +729,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-submenu.title': localize('nz-submenu.title', 'Menu'),
 'nz-submenu.whenToUse': localize('nz-submenu.whenToUse', 'Navigation menu is important for a website, it helps users jump from one site section to another quickly. Mostly, it includes top navigation and side navigation. Top navigation provides all the category and functions of the website. Side navigation provides the Multi-level structure of the website.'),
 'nz-submenu.description': localize('nz-submenu.description', 'You can set the title of `[nz-submenu]` in the following ways.'),
+'nz-submenu.nzPlacement.description': localize('nz-submenu.nzPlacement.description', 'placement of pop menu'),
 'nz-submenu.nzOpen.description': localize('nz-submenu.nzOpen.description', 'whether sub menu is open or not, double binding'),
 'nz-submenu.nzDisabled.description': localize('nz-submenu.nzDisabled.description', 'whether sub menu is disabled or not'),
 'nz-submenu.nzTitle.description': localize('nz-submenu.nzTitle.description', 'set submenu title'),
@@ -1324,6 +1327,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-time-picker.nzSize.description': localize('nz-time-picker.nzSize.description', 'width of time picker box'),
 'nz-time-picker.nzStatus.description': localize('nz-time-picker.nzStatus.description', 'Set validation status'),
 'nz-time-picker.nzBorderless.description': localize('nz-time-picker.nzBorderless.description', 'remove the border'),
+'nz-time-picker.nzInputReadOnly.description': localize('nz-time-picker.nzInputReadOnly.description', 'set the readonly attribute of the input tag (avoids virtual keyboard on touch devices)'),
 'nz-time-picker.nzOpen.description': localize('nz-time-picker.nzOpen.description', 'whether to popup panel, double binding'),
 'nz-time-picker.nzPlaceHolder.description': localize('nz-time-picker.nzPlaceHolder.description', 'display when there\'s no value'),
 'nz-time-picker.nzPopupClassName.description': localize('nz-time-picker.nzPopupClassName.description', 'className of panel'),
@@ -4700,6 +4704,16 @@ export const DATA = [
         "_common": true
       },
       {
+        "name": "nzShowWeekNumber",
+        "inputType": 0,
+        "description": "nz-date-picker.nzShowWeekNumber.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false",
+        "_common": true
+      },
+      {
         "name": "nzOnOk",
         "inputType": 1,
         "description": "nz-date-picker.nzOnOk.description",
@@ -4991,6 +5005,16 @@ export const DATA = [
         "type": "function",
         "typeRaw": "`(current: Date, partial: 'start' | 'end') => { nzDisabledHours, nzDisabledMinutes, nzDisabledSeconds }`",
         "default": "",
+        "_common": true
+      },
+      {
+        "name": "nzShowWeekNumber",
+        "inputType": 0,
+        "description": "nz-range-picker.nzShowWeekNumber.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false",
         "_common": true
       },
       {
@@ -11296,6 +11320,23 @@ export const DATA = [
     "types": {},
     "properties": [
       {
+        "name": "nzPlacement",
+        "inputType": 0,
+        "description": "nz-submenu.nzPlacement.description",
+        "type": "Enum",
+        "typeRaw": "`'bottomLeft' | 'bottomCenter' | 'bottomRight' | 'topLeft' | 'topCenter' | 'topRight'`",
+        "default": "`'bottomLeft'`",
+        "typeDefinition": [
+          "bottomLeft",
+          "bottomCenter",
+          "bottomRight",
+          "topLeft",
+          "topCenter",
+          "topRight"
+        ],
+        "pureDefault": "bottomLeft"
+      },
+      {
         "name": "nzOpen",
         "inputType": 2,
         "description": "nz-submenu.nzOpen.description",
@@ -13608,7 +13649,7 @@ export const DATA = [
         "inputType": 0,
         "description": "nz-select.nzDropdownClassName.description",
         "type": "string",
-        "typeRaw": "`string`",
+        "typeRaw": "`string | string[]`",
         "default": ""
       },
       {
@@ -16159,6 +16200,15 @@ export const DATA = [
         "name": "nzBorderless",
         "inputType": 0,
         "description": "nz-time-picker.nzBorderless.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzInputReadOnly",
+        "inputType": 0,
+        "description": "nz-time-picker.nzInputReadOnly.description",
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
