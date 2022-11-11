@@ -213,6 +213,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-carousel.nzDots.description': localize('nz-carousel.nzDots.description', 'Whether to show the dots at the bottom of the gallery'),
 'nz-carousel.nzEffect.description': localize('nz-carousel.nzEffect.description', 'Transition effect'),
 'nz-carousel.nzEnableSwipe.description': localize('nz-carousel.nzEnableSwipe.description', 'Whether to support swipe gesture'),
+'nz-carousel.nzLoop.description': localize('nz-carousel.nzLoop.description', 'Whether to enable the carousel to go in a loop'),
 'nz-carousel.nzAfterChange.description': localize('nz-carousel.nzAfterChange.description', 'Callback function called after the current index changes'),
 'nz-carousel.nzBeforeChange.description': localize('nz-carousel.nzBeforeChange.description', 'Callback function called before the current index changes'),
 'nz-cascader.title': localize('nz-cascader.title', 'Cascader'),
@@ -313,6 +314,13 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-comment-action.title': localize('nz-comment-action.title', 'Comment'),
 'nz-comment-action.whenToUse': localize('nz-comment-action.whenToUse', 'Comments can be used to enable discussions on an entity such as a page, blog post, issue or other.'),
 'nz-comment-action.description': localize('nz-comment-action.description', 'The element items rendered below the comment content.'),
+'nz-cron-expression.title': localize('nz-cron-expression.title', 'cron form'),
+'nz-cron-expression.whenToUse': localize('nz-cron-expression.whenToUse', 'When you want to use cron in Angular.'),
+'nz-cron-expression.description': localize('nz-cron-expression.description', '\nNG-ZORRO experiments are features that are released but not yet considered stable or production ready\nDevelopers and users can opt-in into these features before they are fully released. But breaking changes may occur with any release.\n'),
+'nz-cron-expression.nzType.description': localize('nz-cron-expression.nzType.description', 'Cron rule type'),
+'nz-cron-expression.nzSize.description': localize('nz-cron-expression.nzSize.description', 'The size of the input box.'),
+'nz-cron-expression.nzCollapseDisable.description': localize('nz-cron-expression.nzCollapseDisable.description', 'Hide collapse'),
+'nz-cron-expression.nzExtra.description': localize('nz-cron-expression.nzExtra.description', 'Render the content on the right'),
 'nz-date-picker.title': localize('nz-date-picker.title', 'DatePicker'),
 'nz-date-picker.whenToUse': localize('nz-date-picker.whenToUse', 'By clicking the input box, you can select a date from a popup calendar.'),
 'nz-date-picker.description': localize('nz-date-picker.description', 'To select or input a date.'),
@@ -1664,6 +1672,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'notice-icon.data.description': localize('notice-icon.data.description', 'Data'),
 'notice-icon.count.description': localize('notice-icon.count.description', 'Total number of messages on the icon'),
 'notice-icon.loading.description': localize('notice-icon.loading.description', 'Pop up card loading status'),
+'notice-icon.centered.description': localize('notice-icon.centered.description', 'Whether the tab is centered'),
 'notice-icon.select.description': localize('notice-icon.select.description', 'Click the callback of the list item'),
 'notice-icon.clear.description': localize('notice-icon.clear.description', 'Callback for clicking the clear button'),
 'notice-icon.popoverVisible.description': localize('notice-icon.popoverVisible.description', 'Manual control of Popover display'),
@@ -3916,6 +3925,15 @@ export const DATA = [
         "pureDefault": "true"
       },
       {
+        "name": "nzLoop",
+        "inputType": 0,
+        "description": "nz-carousel.nzLoop.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`true`",
+        "pureDefault": "true"
+      },
+      {
         "name": "nzAfterChange",
         "inputType": 1,
         "description": "nz-carousel.nzAfterChange.description",
@@ -4648,6 +4666,63 @@ export const DATA = [
     "whenToUse": "nz-comment-action.whenToUse",
     "doc": "/components/comment/en",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/comment"
+  },
+  {
+    "type": "component",
+    "selector": "nz-cron-expression",
+    "types": {},
+    "properties": [
+      {
+        "name": "nzType",
+        "inputType": 0,
+        "description": "nz-cron-expression.nzType.description",
+        "type": "Enum",
+        "typeRaw": "`'linux'｜'spring'`",
+        "default": "`linux`",
+        "typeDefinition": [
+          "linux",
+          "spring"
+        ],
+        "pureDefault": "linux"
+      },
+      {
+        "name": "nzSize",
+        "inputType": 0,
+        "description": "nz-cron-expression.nzSize.description",
+        "type": "Enum",
+        "typeRaw": "`'large'｜'small'｜'default'`",
+        "default": "`default`",
+        "typeDefinition": [
+          "large",
+          "small",
+          "default"
+        ],
+        "pureDefault": "default"
+      },
+      {
+        "name": "nzCollapseDisable",
+        "inputType": 0,
+        "description": "nz-cron-expression.nzCollapseDisable.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzExtra",
+        "inputType": 0,
+        "description": "nz-cron-expression.nzExtra.description",
+        "type": "TemplateRef",
+        "typeRaw": "`TemplateRef<void>`",
+        "default": ""
+      }
+    ],
+    "lib": "ng-zorro-antd",
+    "title": "nz-cron-expression.title",
+    "description": "nz-cron-expression.description",
+    "whenToUse": "nz-cron-expression.whenToUse",
+    "doc": "/components/cron-expression/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/cron-expression"
   },
   {
     "type": "component",
@@ -18727,6 +18802,15 @@ export const DATA = [
         "name": "loading",
         "inputType": 0,
         "description": "notice-icon.loading.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "centered",
+        "inputType": 0,
+        "description": "notice-icon.centered.description",
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
