@@ -322,6 +322,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-cron-expression.nzSize.description': localize('nz-cron-expression.nzSize.description', 'The size of the input box.'),
 'nz-cron-expression.nzCollapseDisable.description': localize('nz-cron-expression.nzCollapseDisable.description', 'Hide collapse'),
 'nz-cron-expression.nzExtra.description': localize('nz-cron-expression.nzExtra.description', 'Render the content on the right'),
+'nz-cron-expression.nzSemantic.description': localize('nz-cron-expression.nzSemantic.description', 'Custom rendering next execution time'),
 'nz-date-picker.title': localize('nz-date-picker.title', 'DatePicker'),
 'nz-date-picker.whenToUse': localize('nz-date-picker.whenToUse', 'By clicking the input box, you can select a date from a popup calendar.'),
 'nz-date-picker.description': localize('nz-date-picker.description', 'To select or input a date.'),
@@ -1048,6 +1049,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-select.nzMaxTagPlaceholder.description': localize('nz-select.nzMaxTagPlaceholder.description', 'Placeholder for not showing tags'),
 'nz-select.nzOptionHeightPx.description': localize('nz-select.nzOptionHeightPx.description', 'Each option height inside the dropdown'),
 'nz-select.nzOptionOverflowSize.description': localize('nz-select.nzOptionOverflowSize.description', 'Max option size inside the dropdown, overflow when exceed the size'),
+'nz-select.nzSelectOnTab.description': localize('nz-select.nzSelectOnTab.description', 'Allows to select an item with TAB key'),
 'nz-select.ngModelChange.description': localize('nz-select.ngModelChange.description', 'Current selected nz-option value change callback.'),
 'nz-select.nzOpenChange.description': localize('nz-select.nzOpenChange.description', 'dropdown expand change callback'),
 'nz-select.nzScrollToBottom.description': localize('nz-select.nzScrollToBottom.description', 'Called when dropdown scrolls to bottom'),
@@ -1430,6 +1432,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-tree-select.nzId.description': localize('nz-tree-select.nzId.description', 'input id attribute inside the component'),
 'nz-tree-select.nzAllowClear.description': localize('nz-tree-select.nzAllowClear.description', 'Whether allow clear'),
 'nz-tree-select.nzPlaceHolder.description': localize('nz-tree-select.nzPlaceHolder.description', 'Placeholder of the select input'),
+'nz-tree-select.nzPlacement.description': localize('nz-tree-select.nzPlacement.description', 'The position where the selection box pops up'),
 'nz-tree-select.nzDisabled.description': localize('nz-tree-select.nzDisabled.description', 'Disabled or not'),
 'nz-tree-select.nzShowIcon.description': localize('nz-tree-select.nzShowIcon.description', 'Shows the icon before a TreeNode\'s title. There is no default style'),
 'nz-tree-select.nzShowSearch.description': localize('nz-tree-select.nzShowSearch.description', 'Whether to display a search input in the dropdown menu(valid only in the single mode)'),
@@ -4726,6 +4729,14 @@ export const DATA = [
         "type": "TemplateRef",
         "typeRaw": "`TemplateRef<void>`",
         "default": ""
+      },
+      {
+        "name": "nzSemantic",
+        "inputType": 0,
+        "description": "nz-cron-expression.nzSemantic.description",
+        "type": "TemplateRef",
+        "typeRaw": "`TemplateRef<void>`",
+        "default": ""
       }
     ],
     "lib": "ng-zorro-antd",
@@ -5357,7 +5368,7 @@ export const DATA = [
         "inputType": 0,
         "description": "nz-range-picker.nzSeparator.description",
         "type": "string",
-        "typeRaw": "`string`",
+        "typeRaw": "`string | TemplateRef`",
         "default": "`'~'`",
         "pureDefault": "~"
       },
@@ -13958,6 +13969,15 @@ export const DATA = [
         "pureDefault": "8"
       },
       {
+        "name": "nzSelectOnTab",
+        "inputType": 0,
+        "description": "nz-select.nzSelectOnTab.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
         "name": "ngModelChange",
         "inputType": 1,
         "description": "nz-select.ngModelChange.description",
@@ -17040,6 +17060,15 @@ export const DATA = [
         "type": "string",
         "typeRaw": "`string`",
         "default": ""
+      },
+      {
+        "name": "nzPlacement",
+        "inputType": 0,
+        "description": "nz-tree-select.nzPlacement.description",
+        "type": "string",
+        "typeRaw": "`bottomLeft` `bottomRight` `topLeft` `topRight`",
+        "default": "bottomLeft",
+        "pureDefault": "bottomLeft"
       },
       {
         "name": "nzDisabled",
