@@ -319,6 +319,8 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-cron-expression.whenToUse': localize('nz-cron-expression.whenToUse', 'When you want to use cron in Angular.'),
 'nz-cron-expression.description': localize('nz-cron-expression.description', '\nNG-ZORRO experiments are features that are released but not yet considered stable or production ready\nDevelopers and users can opt-in into these features before they are fully released. But breaking changes may occur with any release.\n'),
 'nz-cron-expression.nzType.description': localize('nz-cron-expression.nzType.description', 'Cron rule type'),
+'nz-cron-expression.nzDisabled.description': localize('nz-cron-expression.nzDisabled.description', 'Disable'),
+'nz-cron-expression.nzBorderless.description': localize('nz-cron-expression.nzBorderless.description', 'Whether to hide the border'),
 'nz-cron-expression.nzSize.description': localize('nz-cron-expression.nzSize.description', 'The size of the input box.'),
 'nz-cron-expression.nzCollapseDisable.description': localize('nz-cron-expression.nzCollapseDisable.description', 'Hide collapse'),
 'nz-cron-expression.nzExtra.description': localize('nz-cron-expression.nzExtra.description', 'Render the content on the right'),
@@ -481,6 +483,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-form.nzNoColon.description': localize('nz-form.nzNoColon.description', 'Set default props `[nzNoColon]` value of `nz-form-label`'),
 'nz-form.nzTooltipIcon.description': localize('nz-form.nzTooltipIcon.description', 'Set default props `[nzTooltipIcon]` value of `nz-form-label`'),
 'nz-form.nzLabelAlign.description': localize('nz-form.nzLabelAlign.description', 'Set default props `[nzLabelAlign]` value of `nz-form-label`'),
+'nz-form.nzLabelWrap.description': localize('nz-form.nzLabelWrap.description', 'Set default props `[nzLabelWrap]` value of `nz-form-label`'),
 'nz-form.formGroup.description': localize('nz-form.formGroup.description', ' '),
 'nz-form.ngSubmit.description': localize('nz-form.ngSubmit.description', ' '),
 'nz-form-item.title': localize('nz-form-item.title', 'Form'),
@@ -495,6 +498,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-form-item.nzTooltipTitle.description': localize('nz-form-item.nzTooltipTitle.description', 'Set tooltip info'),
 'nz-form-item.nzTooltipIcon.description': localize('nz-form-item.nzTooltipIcon.description', 'Set icon of tooltip info'),
 'nz-form-item.nzLabelAlign.description': localize('nz-form-item.nzLabelAlign.description', 'The text align of label'),
+'nz-form-item.nzLabelWrap.description': localize('nz-form-item.nzLabelWrap.description', 'whether label can be wrap'),
 'nz-form-label.title': localize('nz-form-label.title', 'Form'),
 'nz-form-label.whenToUse': localize('nz-form-label.whenToUse', ' '),
 'nz-form-label.description': localize('nz-form-label.description', 'The label of the form item, optional.'),
@@ -516,6 +520,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-form-label.nzTooltipTitle.description': localize('nz-form-label.nzTooltipTitle.description', 'Set tooltip info'),
 'nz-form-label.nzTooltipIcon.description': localize('nz-form-label.nzTooltipIcon.description', 'Set icon of tooltip info'),
 'nz-form-label.nzLabelAlign.description': localize('nz-form-label.nzLabelAlign.description', 'The text align of label'),
+'nz-form-label.nzLabelWrap.description': localize('nz-form-label.nzLabelWrap.description', 'whether label can be wrap'),
 'nz-form-control.title': localize('nz-form-control.title', 'Form'),
 'nz-form-control.whenToUse': localize('nz-form-control.whenToUse', ' '),
 'nz-form-control.description': localize('nz-form-control.description', 'Note：Due to the lack of partial Observable in [Angular Form](https://github.com/angular/angular/issues/10887), you have to notify `nz-form-control` to update its status with `updateValueAndValidity` when you update form status using methods like `markAsDirty`.'),
@@ -796,6 +801,9 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nzModalTitle.title': localize('nzModalTitle.title', 'Modal'),
 'nzModalTitle.whenToUse': localize('nzModalTitle.whenToUse', 'When requiring users to interact with the application without jumping to a new page to interrupt the user\'s workflow, you can use `Modal` to create a new floating layer over the current page for user-getting feedback or information purposes. Additionally, if you need to show a simple confirmation dialog, you can use `NzModalService.confirm()` and so on.'),
 'nzModalTitle.description': localize('nzModalTitle.description', 'Customize the title.'),
+'nzModalContent.title': localize('nzModalContent.title', 'Modal'),
+'nzModalContent.whenToUse': localize('nzModalContent.whenToUse', 'When requiring users to interact with the application without jumping to a new page to interrupt the user\'s workflow, you can use `Modal` to create a new floating layer over the current page for user-getting feedback or information purposes. Additionally, if you need to show a simple confirmation dialog, you can use `NzModalService.confirm()` and so on.'),
+'nzModalContent.description': localize('nzModalContent.description', 'Customize the content.'),
 'nzModalFooter.title': localize('nzModalFooter.title', 'Modal'),
 'nzModalFooter.whenToUse': localize('nzModalFooter.whenToUse', 'When requiring users to interact with the application without jumping to a new page to interrupt the user\'s workflow, you can use `Modal` to create a new floating layer over the current page for user-getting feedback or information purposes. Additionally, if you need to show a simple confirmation dialog, you can use `NzModalService.confirm()` and so on.'),
 'nzModalFooter.description': localize('nzModalFooter.description', 'Customize the footer.'),
@@ -941,7 +949,9 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-qrcode.description': localize('nz-qrcode.description', 'When To Use'),
 'nz-qrcode.nzValue.description': localize('nz-qrcode.nzValue.description', 'scanned link'),
 'nz-qrcode.nzColor.description': localize('nz-qrcode.nzColor.description', 'QR code Color'),
+'nz-qrcode.nzBgColor.description': localize('nz-qrcode.nzBgColor.description', 'QR code background color'),
 'nz-qrcode.nzSize.description': localize('nz-qrcode.nzSize.description', 'QR code Size'),
+'nz-qrcode.nzPadding.description': localize('nz-qrcode.nzPadding.description', 'QR code Padding'),
 'nz-qrcode.nzIcon.description': localize('nz-qrcode.nzIcon.description', 'Icon address in QR code'),
 'nz-qrcode.nzIconSize.description': localize('nz-qrcode.nzIconSize.description', 'The size of the icon in the QR code'),
 'nz-qrcode.nzBordered.description': localize('nz-qrcode.nzBordered.description', 'Whether has border style'),
@@ -1200,6 +1210,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-table.nzData.description': localize('nz-table.nzData.description', 'Data record array to be rendered'),
 'nz-table.nzFrontPagination.description': localize('nz-table.nzFrontPagination.description', 'Whether to paginate data on client. Should be set to `false` if data is to be paginated on server side or if all the data is to be displayed at once in the table without any pagination'),
 'nz-table.nzTotal.description': localize('nz-table.nzTotal.description', 'Total data count. Should set when `nzFrontPagination` is `false`'),
+'nz-table.nzCustomColumn.description': localize('nz-table.nzCustomColumn.description', 'Control the display and sorting of table columns, (after enabling `nzWidthConfig` and `[nzWidth]` of `th` will not take effect)'),
 'nz-table.nzPageIndex.description': localize('nz-table.nzPageIndex.description', 'pageIndex , double binding'),
 'nz-table.nzPageSize.description': localize('nz-table.nzPageSize.description', 'pageSize, double binding'),
 'nz-table.nzShowPagination.description': localize('nz-table.nzShowPagination.description', 'Whether to show pagination component at bottom of the table'),
@@ -1231,6 +1242,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-table.nzPageIndexChange.description': localize('nz-table.nzPageIndexChange.description', 'Callback when `pageIndex` changes'),
 'nz-table.nzPageSizeChange.description': localize('nz-table.nzPageSizeChange.description', 'Callback when `pageSize` changes'),
 'nz-table.nzCurrentPageDataChange.description': localize('nz-table.nzCurrentPageDataChange.description', 'Callback when current pageData changes'),
+'nz-table.nzCustomColumnChange.description': localize('nz-table.nzCustomColumnChange.description', 'Callback when the table is reordered'),
 'nz-table.nzQueryParams.description': localize('nz-table.nzQueryParams.description', 'Callback with params when working with server side pagination, sorting and filtering'),
 'th.title': localize('th.title', 'Table'),
 'th.whenToUse': localize('th.whenToUse', '- To display a collection of structured data.\n- To sort, search, paginate and filter data.'),
@@ -1256,6 +1268,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'th.nzLeft.description': localize('th.nzLeft.description', 'Left pixels, used to fixed column to left, auto calc when set to `true` and disable fixed when `false`'),
 'th.nzRight.description': localize('th.nzRight.description', 'Right pixels, used to fixed column to right, auto calc when set to `true` and disable fixed when `false`'),
 'th.nzAlign.description': localize('th.nzAlign.description', 'Specify how content is aligned'),
+'th.nzCellControl.description': localize('th.nzCellControl.description', 'Set the position of the column, which is the value of the `value` field in the `NzCustomColumn` type'),
 'th.nzBreakWord.description': localize('th.nzBreakWord.description', 'Whether insert line breaks within words'),
 'th.nzEllipsis.description': localize('th.nzEllipsis.description', 'ellipsis cell content, not working with sorter and filters for now. Only work when nzTableLayout was `fixed`'),
 'th.nzColumnKey.description': localize('th.nzColumnKey.description', 'column key, work with server sort and filter'),
@@ -1275,6 +1288,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'td.nzLeft.description': localize('td.nzLeft.description', 'Left pixels, used to fixed column to left, auto calc when set to `true` and disable fixed when `false`'),
 'td.nzRight.description': localize('td.nzRight.description', 'Right pixels, used to fixed column to right, auto calc when set to `true` and disable fixed when `false`'),
 'td.nzAlign.description': localize('td.nzAlign.description', 'Specify how content is aligned'),
+'td.nzCellControl.description': localize('td.nzCellControl.description', 'Set the position of the column, which is the value of the `value` field in the `NzCustomColumn` type'),
 'td.nzBreakWord.description': localize('td.nzBreakWord.description', 'Whether insert line breaks within words'),
 'td.nzEllipsis.description': localize('td.nzEllipsis.description', 'ellipsis cell content, not working with sorter and filters for now. Only work when nzTableLayout was `fixed`'),
 'td.nzIndentSize.description': localize('td.nzIndentSize.description', 'Indent size in pixels of tree data'),
@@ -1942,10 +1956,11 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'sv-container.title': localize('sv-container.title', 'View'),
 'sv-container.whenToUse': localize('sv-container.whenToUse', ' '),
 'sv-container.description': localize('sv-container.description', 'Viewing grid system is a higher-order components based on the original [Grid System] (https://ng.ant.design/components/grid/zh) that server for view pages.'),
+'sv-container.sv-container.description': localize('sv-container.sv-container.description', 'specify the maximum number of columns to display, the final columns number is determined by col setting combined with [Responsive Rules](/theme/responsive)'),
+'sv-container.col.description': localize('sv-container.col.description', 'specify the maximum number of columns to display, the final columns number is determined by col setting combined with [Responsive Rules](/theme/responsive)'),
 'sv-container.size.description': localize('sv-container.size.description', 'size of view'),
 'sv-container.layout.description': localize('sv-container.layout.description', 'type of layout'),
 'sv-container.gutter.description': localize('sv-container.gutter.description', 'specify the distance between two items, unit is `px`'),
-'sv-container.col.description': localize('sv-container.col.description', 'specify the maximum number of columns to display, the final columns number is determined by col setting combined with [Responsive Rules](/theme/responsive)'),
 'sv-container.labelWidth.description': localize('sv-container.labelWidth.description', 'label text of width'),
 'sv-container.default.description': localize('sv-container.default.description', 'whether default text'),
 'sv-container.title.description': localize('sv-container.title.description', 'Display title'),
@@ -2169,7 +2184,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'g2-timeline.delay.description': localize('g2-timeline.delay.description', '延迟渲染，单位：毫秒'),
 'g2-timeline.title.description': localize('g2-timeline.title.description', '图表标题'),
 'g2-timeline.maxAxis.description': localize('g2-timeline.maxAxis.description', '最大指标数量'),
-'g2-timeline.data.description': localize('g2-timeline.data.description', '数据'),
+'g2-timeline.data.description': localize('g2-timeline.data.description', '数据，注：根据 `maxAxis` 值传递指标数据'),
 'g2-timeline.titleMap.description': localize('g2-timeline.titleMap.description', '指标别名'),
 'g2-timeline.colorMap.description': localize('g2-timeline.colorMap.description', '颜色'),
 'g2-timeline.height.description': localize('g2-timeline.height.description', '高度值'),
@@ -4732,6 +4747,25 @@ export const DATA = [
         "pureDefault": "linux"
       },
       {
+        "name": "nzDisabled",
+        "inputType": 0,
+        "description": "nz-cron-expression.nzDisabled.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false",
+        "forceInputType": 0
+      },
+      {
+        "name": "nzBorderless",
+        "inputType": 0,
+        "description": "nz-cron-expression.nzBorderless.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
         "name": "nzSize",
         "inputType": 0,
         "description": "nz-cron-expression.nzSize.description",
@@ -6108,6 +6142,15 @@ export const DATA = [
         "pureDefault": "right"
       },
       {
+        "name": "nzLabelWrap",
+        "inputType": 0,
+        "description": "nz-form.nzLabelWrap.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
         "name": "formGroup",
         "inputType": 0,
         "type": "object",
@@ -6237,6 +6280,15 @@ export const DATA = [
           "right"
         ],
         "pureDefault": "right"
+      },
+      {
+        "name": "nzLabelWrap",
+        "inputType": 0,
+        "description": "nz-form-item.nzLabelWrap.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
       }
     ],
     "description": "nz-form-item.description",
@@ -6526,6 +6578,15 @@ export const DATA = [
           "right"
         ],
         "pureDefault": "right"
+      },
+      {
+        "name": "nzLabelWrap",
+        "inputType": 0,
+        "description": "nz-form-label.nzLabelWrap.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
       }
     ],
     "description": "nz-form-label.description",
@@ -11925,6 +11986,18 @@ export const DATA = [
   },
   {
     "type": "directive",
+    "selector": "nzModalContent",
+    "types": {},
+    "properties": [],
+    "description": "nzModalContent.description",
+    "lib": "ng-zorro-antd",
+    "title": "nzModalContent.title",
+    "whenToUse": "nzModalContent.whenToUse",
+    "doc": "/components/modal/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/modal"
+  },
+  {
+    "type": "directive",
     "selector": "nzModalFooter",
     "types": {},
     "properties": [],
@@ -13153,6 +13226,15 @@ export const DATA = [
         "pureDefault": "#000"
       },
       {
+        "name": "nzBgColor",
+        "inputType": 0,
+        "description": "nz-qrcode.nzBgColor.description",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": "`#FFFFFF`",
+        "pureDefault": "#FFFFFF"
+      },
+      {
         "name": "nzSize",
         "inputType": 0,
         "description": "nz-qrcode.nzSize.description",
@@ -13160,6 +13242,15 @@ export const DATA = [
         "typeRaw": "`number`",
         "default": "`160`",
         "pureDefault": "160"
+      },
+      {
+        "name": "nzPadding",
+        "inputType": 0,
+        "description": "nz-qrcode.nzPadding.description",
+        "type": "number",
+        "typeRaw": "`number | number[]`",
+        "default": "`0`",
+        "pureDefault": "0"
       },
       {
         "name": "nzIcon",
@@ -15206,6 +15297,14 @@ export const DATA = [
         "default": ""
       },
       {
+        "name": "nzCustomColumn",
+        "inputType": 0,
+        "description": "nz-table.nzCustomColumn.description",
+        "type": "Array",
+        "typeRaw": "`NzCustomColumn[]`",
+        "default": ""
+      },
+      {
         "name": "nzPageIndex",
         "inputType": 2,
         "description": "nz-table.nzPageIndex.description",
@@ -15486,6 +15585,14 @@ export const DATA = [
         "default": ""
       },
       {
+        "name": "nzCustomColumnChange",
+        "inputType": 1,
+        "description": "nz-table.nzCustomColumnChange.description",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<NzCustomColumn[]>`",
+        "default": ""
+      },
+      {
         "name": "nzQueryParams",
         "inputType": 1,
         "description": "nz-table.nzQueryParams.description",
@@ -15689,6 +15796,14 @@ export const DATA = [
         ]
       },
       {
+        "name": "nzCellControl",
+        "inputType": 0,
+        "description": "th.nzCellControl.description",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
+      },
+      {
         "name": "nzBreakWord",
         "inputType": 0,
         "description": "th.nzBreakWord.description",
@@ -15839,6 +15954,14 @@ export const DATA = [
           "right",
           "center"
         ]
+      },
+      {
+        "name": "nzCellControl",
+        "inputType": 0,
+        "description": "td.nzCellControl.description",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
       },
       {
         "name": "nzBreakWord",
@@ -21368,6 +21491,40 @@ export const DATA = [
     "types": {},
     "properties": [
       {
+        "name": "sv-container",
+        "inputType": 0,
+        "description": "sv-container.sv-container.description",
+        "type": "Enum",
+        "typeRaw": "`'1','2','3','4','5','6'`",
+        "default": "`3`",
+        "typeDefinition": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        "pureDefault": "3"
+      },
+      {
+        "name": "col",
+        "inputType": 0,
+        "description": "sv-container.col.description",
+        "type": "Enum",
+        "typeRaw": "`'1','2','3','4','5','6'`",
+        "default": "`3`",
+        "typeDefinition": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        "pureDefault": "3"
+      },
+      {
         "name": "size",
         "inputType": 0,
         "description": "sv-container.size.description",
@@ -21401,23 +21558,6 @@ export const DATA = [
         "typeRaw": "`number`",
         "default": "`32`",
         "pureDefault": "32"
-      },
-      {
-        "name": "col",
-        "inputType": 0,
-        "description": "sv-container.col.description",
-        "type": "Enum",
-        "typeRaw": "`'1','2','3','4','5','6'`",
-        "default": "`3`",
-        "typeDefinition": [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6"
-        ],
-        "pureDefault": "3"
       },
       {
         "name": "labelWidth",
@@ -21467,6 +21607,40 @@ export const DATA = [
     "types": {},
     "properties": [
       {
+        "name": "sv-container",
+        "inputType": 0,
+        "description": "sv-container.sv-container.description",
+        "type": "Enum",
+        "typeRaw": "`'1','2','3','4','5','6'`",
+        "default": "`3`",
+        "typeDefinition": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        "pureDefault": "3"
+      },
+      {
+        "name": "col",
+        "inputType": 0,
+        "description": "sv-container.col.description",
+        "type": "Enum",
+        "typeRaw": "`'1','2','3','4','5','6'`",
+        "default": "`3`",
+        "typeDefinition": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        "pureDefault": "3"
+      },
+      {
         "name": "size",
         "inputType": 0,
         "description": "sv-container.size.description",
@@ -21500,23 +21674,6 @@ export const DATA = [
         "typeRaw": "`number`",
         "default": "`32`",
         "pureDefault": "32"
-      },
-      {
-        "name": "col",
-        "inputType": 0,
-        "description": "sv-container.col.description",
-        "type": "Enum",
-        "typeRaw": "`'1','2','3','4','5','6'`",
-        "default": "`3`",
-        "typeDefinition": [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6"
-        ],
-        "pureDefault": "3"
       },
       {
         "name": "labelWidth",
