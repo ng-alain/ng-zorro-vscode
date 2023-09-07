@@ -151,7 +151,7 @@ export async function INIT(notifier: Notifier) {
     i.type = notNull(i.type, 'component');
     i.snippet = notNull(i.snippet, '');
     if (i.snippet.length === 0) {
-      i.snippet = i.type === 'component' ? `<__$1>$0</__>` : `<div __$1>$0</div>`;
+      i.snippet = i.type === 'component' ? (i.selfClosingTag ? `<__$0 />` : `<__$1>$0</__>`) : `<div __$1>$0</div>`;
     }
     i.snippet = i.snippet.replace(/__/g, i.selector);
 

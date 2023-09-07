@@ -1632,6 +1632,31 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'avatar-list-item.src.description': localize('avatar-list-item.src.description', 'the address of the image for an image avatar'),
 'avatar-list-item.text.description': localize('avatar-list-item.text.description', 'text for avatar item'),
 'avatar-list-item.icon.description': localize('avatar-list-item.icon.description', 'icon for avatar item'),
+'cell.title': localize('cell.title', 'Cell Data'),
+'cell.whenToUse': localize('cell.whenToUse', ' '),
+'cell.description': localize('cell.description', 'Cell formatting is supported for multiple data types, and supports widget mode.'),
+'cell.value.description': localize('cell.value.description', 'Value of the cell'),
+'cell.options.description': localize('cell.options.description', 'Option of the cell'),
+'cell.loading.description': localize('cell.loading.description', 'Whether loading'),
+'cell.type.description': localize('cell.type.description', 'Render type of the cell'),
+'cell.tooltip.description': localize('cell.tooltip.description', 'Text popup tip'),
+'cell.renderType.description': localize('cell.renderType.description', 'Render type of the cell'),
+'cell.size.description': localize('cell.size.description', 'Size of the cell'),
+'cell.unit.description': localize('cell.unit.description', 'Unit, can also be specified by `value: {text: 100, unit: \'RMB\'}`'),
+'cell.default.description': localize('cell.default.description', 'Default text'),
+'cell.mask.description': localize('cell.mask.description', 'Format mask, [Document](https://ng-alain.com/util/format/en#formatMask)'),
+'cell.widget.description': localize('cell.widget.description', 'Widget config'),
+'cell.date.description': localize('cell.date.description', 'Date config, supports `minutes ago` formatting'),
+'cell.mega.description': localize('cell.mega.description', 'Large number format filter, [Document](https://ng-alain.com/util/format/en#mega)'),
+'cell.currency.description': localize('cell.currency.description', 'Currency config'),
+'cell.boolean.description': localize('cell.boolean.description', 'Boolean config'),
+'cell.img.description': localize('cell.img.description', 'Image config, support large image preview'),
+'cell.link.description': localize('cell.link.description', 'Link config'),
+'cell.html.description': localize('cell.html.description', 'HTML config'),
+'cell.badge.description': localize('cell.badge.description', 'Badge config'),
+'cell.tag.description': localize('cell.tag.description', 'Tag config'),
+'cell.checkbox.description': localize('cell.checkbox.description', 'Checkbox config'),
+'cell.radio.description': localize('cell.radio.description', 'Radio config'),
 'count-down.title': localize('count-down.title', 'Count down'),
 'count-down.whenToUse': localize('count-down.whenToUse', ' '),
 'count-down.description': localize('count-down.description', 'The countdown component depends on [ngx-countdown](https://github.com/cipchk/ngx-countdown).'),
@@ -1738,6 +1763,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'page-header.whenToUse': localize('page-header.whenToUse', ' '),
 'page-header.description': localize('page-header.description', 'The page header is used to declare the subject of the page and contains the most important information that the user is concerned about, so that the user can quickly understand what the current page and functions.'),
 'page-header.title.description': localize('page-header.title.description', 'Title of the page'),
+'page-header.titleSub.description': localize('page-header.titleSub.description', 'Sub title of the page'),
 'page-header.autoTitle.description': localize('page-header.autoTitle.description', 'Whether to automatically generate the title and locate it from the main menu with the current route'),
 'page-header.syncTitle.description': localize('page-header.syncTitle.description', 'Whether to automatically synchronize the title to `TitleService`, `ReuseService`, only valid when `title` is of type `string`'),
 'page-header.home.description': localize('page-header.home.description', 'Home page text of the breadcrumb, if empty is specified, it will not be displayed'),
@@ -1965,6 +1991,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'sv-container.default.description': localize('sv-container.default.description', 'whether default text'),
 'sv-container.title.description': localize('sv-container.title.description', 'Display title'),
 'sv-container.noColon.description': localize('sv-container.noColon.description', 'Whether to not display : after label text'),
+'sv-container.bordered.description': localize('sv-container.bordered.description', 'Whether to display the border'),
 'sv.title': localize('sv.title', 'View'),
 'sv.whenToUse': localize('sv.whenToUse', ' '),
 'sv.description': localize('sv.description', 'Viewing grid system is a higher-order components based on the original [Grid System] (https://ng.ant.design/components/grid/zh) that server for view pages.'),
@@ -18667,6 +18694,201 @@ export const DATA = [
   },
   {
     "type": "component",
+    "selector": "cell",
+    "types": {
+      "CellOptions": [
+        {
+          "name": "type",
+          "inputType": 0,
+          "description": "cell.type.description",
+          "type": "string",
+          "typeRaw": "-",
+          "default": ""
+        },
+        {
+          "name": "tooltip",
+          "inputType": 0,
+          "description": "cell.tooltip.description",
+          "type": "string",
+          "typeRaw": "`string`",
+          "default": ""
+        },
+        {
+          "name": "renderType",
+          "inputType": 0,
+          "description": "cell.renderType.description",
+          "type": "string",
+          "typeRaw": "`primary,success,danger,warning`",
+          "default": ""
+        },
+        {
+          "name": "size",
+          "inputType": 0,
+          "description": "cell.size.description",
+          "type": "string",
+          "typeRaw": "`large,small`",
+          "default": ""
+        },
+        {
+          "name": "unit",
+          "inputType": 0,
+          "description": "cell.unit.description",
+          "type": "string",
+          "typeRaw": "`string`",
+          "default": ""
+        },
+        {
+          "name": "default",
+          "inputType": 0,
+          "description": "cell.default.description",
+          "type": "string",
+          "typeRaw": "`string",
+          "default": "CellDefaultText`",
+          "pureDefault": "CellDefaultText`"
+        },
+        {
+          "name": "mask",
+          "inputType": 0,
+          "description": "cell.mask.description",
+          "type": "string",
+          "typeRaw": "`string, FormatMaskOption`",
+          "default": ""
+        },
+        {
+          "name": "widget",
+          "inputType": 0,
+          "description": "cell.widget.description",
+          "type": "object",
+          "typeRaw": "`{key?: string, data?: string}`",
+          "default": ""
+        },
+        {
+          "name": "date",
+          "inputType": 0,
+          "description": "cell.date.description",
+          "type": "object",
+          "typeRaw": "`{format?: string}`",
+          "default": ""
+        },
+        {
+          "name": "mega",
+          "inputType": 0,
+          "description": "cell.mega.description",
+          "type": "object",
+          "typeRaw": "`CurrencyMegaOptions`",
+          "default": ""
+        },
+        {
+          "name": "currency",
+          "inputType": 0,
+          "description": "cell.currency.description",
+          "type": "object",
+          "typeRaw": "`CurrencyFormatOptions`",
+          "default": ""
+        },
+        {
+          "name": "boolean",
+          "inputType": 0,
+          "description": "cell.boolean.description",
+          "type": "object",
+          "typeRaw": "`YNOptions`",
+          "default": ""
+        },
+        {
+          "name": "img",
+          "inputType": 0,
+          "description": "cell.img.description",
+          "type": "object",
+          "typeRaw": "`{ size?: number; big?: boolean }`",
+          "default": ""
+        },
+        {
+          "name": "link",
+          "inputType": 0,
+          "description": "cell.link.description",
+          "type": "object",
+          "typeRaw": "`{ url?: string; target?: string }`",
+          "default": ""
+        },
+        {
+          "name": "html",
+          "inputType": 0,
+          "description": "cell.html.description",
+          "type": "object",
+          "typeRaw": "`{ safe?: string }`",
+          "default": ""
+        },
+        {
+          "name": "badge",
+          "inputType": 0,
+          "description": "cell.badge.description",
+          "type": "object",
+          "typeRaw": "`{ data?: CellBadge }`",
+          "default": ""
+        },
+        {
+          "name": "tag",
+          "inputType": 0,
+          "description": "cell.tag.description",
+          "type": "object",
+          "typeRaw": "`{ data?: CellTag }`",
+          "default": ""
+        },
+        {
+          "name": "checkbox",
+          "inputType": 0,
+          "description": "cell.checkbox.description",
+          "type": "object",
+          "typeRaw": "`{ label?: string }`",
+          "default": ""
+        },
+        {
+          "name": "radio",
+          "inputType": 0,
+          "description": "cell.radio.description",
+          "type": "object",
+          "typeRaw": "`{ label?: string }`",
+          "default": ""
+        }
+      ]
+    },
+    "properties": [
+      {
+        "name": "value",
+        "inputType": 0,
+        "description": "cell.value.description",
+        "type": "string",
+        "typeRaw": "`unknown`",
+        "default": ""
+      },
+      {
+        "name": "options",
+        "inputType": 0,
+        "description": "cell.options.description",
+        "type": "object",
+        "typeRaw": "`CellOptions`",
+        "default": "",
+        "complexType": "CellOptions"
+      },
+      {
+        "name": "loading",
+        "inputType": 0,
+        "description": "cell.loading.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      }
+    ],
+    "lib": "@delon/abc",
+    "title": "cell.title",
+    "description": "cell.description",
+    "whenToUse": "cell.whenToUse",
+    "doc": "/components/cell/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/cell"
+  },
+  {
+    "type": "component",
     "selector": "count-down",
     "types": {},
     "properties": [
@@ -19382,6 +19604,14 @@ export const DATA = [
         "name": "title",
         "inputType": 0,
         "description": "page-header.title.description",
+        "type": "string",
+        "typeRaw": "`string,TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "titleSub",
+        "inputType": 0,
+        "description": "page-header.titleSub.description",
         "type": "string",
         "typeRaw": "`string,TemplateRef<void>`",
         "default": ""
@@ -21592,6 +21822,15 @@ export const DATA = [
         "typeRaw": "`boolean`",
         "default": "`false`",
         "pureDefault": "false"
+      },
+      {
+        "name": "bordered",
+        "inputType": 0,
+        "description": "sv-container.bordered.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
       }
     ],
     "lib": "@delon/abc",
@@ -21704,6 +21943,15 @@ export const DATA = [
         "name": "noColon",
         "inputType": 0,
         "description": "sv-container.noColon.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "bordered",
+        "inputType": 0,
+        "description": "sv-container.bordered.description",
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",

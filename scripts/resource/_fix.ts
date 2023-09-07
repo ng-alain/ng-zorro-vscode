@@ -1,8 +1,9 @@
 import { DirectiveProperty } from '../../src/magic/interfaces';
 import { manifest } from './_icon';
+import type { FixType } from './interface';
 
-const BASE_GUTTER = ['16', '0', '8', '24', '32', '40', '48', '56', '64'];
-const DATA_ENTRY = [
+const BASE_GUTTER: string[] = ['16', '0', '8', '24', '32', '40', '48', '56', '64'];
+const DATA_ENTRY: string[] = [
   'nz-cascader',
   'nz-checkbox',
   'nz-date-picker',
@@ -71,7 +72,7 @@ const CP: { [key: string]: DirectiveProperty } = {
   },
 };
 
-export const FIX = {
+export const FIX: FixType = {
   forceInputType: {
     twoBinding: [],
     input: ['disabled', 'nzDisabled', 'nzLoading', 'nzSpinning', 'nzOverlayStyle', 'nzIndeterminate', 'nzFullscreen'],
@@ -171,6 +172,29 @@ export const FIX = {
     nzModalFooter: '<div *nzModalFooter>$0</div>',
     nzMentionSuggestion: '<ng-container *nzMentionSuggestion="let ${1|item|}">$0</ng-container>',
   },
+  selfClosingTag: [
+    'nz-switch',
+    'nz-divider',
+    'nz-pagination',
+    'nz-autocomplete',
+    'nz-cascader',
+    'nz-date-picker',
+    'nz-range-picker',
+    'nz-input-number',
+    'nz-rate',
+    'nz-option',
+    'nz-slider',
+    'nz-time-picker',
+    'nz-transfer',
+    'nz-tree-select',
+    'nz-avatar',
+    'nz-calendar',
+    'nz-qrcode',
+    'nz-segmented',
+    'nz-statistic',
+    'nz-tree',
+    'nz-alert',
+  ],
 };
 
 // 为所有数据输入增加 `formControlName` 属性

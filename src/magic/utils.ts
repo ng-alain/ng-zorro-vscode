@@ -50,7 +50,7 @@ export function getTag(doc: TextDocument, pos: Position, includeAttr = true): Ta
   let attrstr = '';
 
   pureLine.replace(/<([\-\w]+)(\s+[^>]*)?/g, (raw: string, name: string, attr: string, index: number) => {
-    attrstr = offsetText.text.substr(index + raw.indexOf(attr));
+    attrstr = offsetText.text.substring(index + raw.indexOf(attr));
 
     if (!tag && index <= offsetText.cursor && index + raw.length >= offsetText.cursor) {
       const range = doc.getWordRangeAtPosition(pos, /\b[\w-:.]+\b/);
@@ -123,15 +123,15 @@ export function pureAttrName(name: string): { type: InputAttrType; name: string 
   let type: InputAttrType;
   if (~name.indexOf('[(')) {
     type = InputAttrType.InputOutput;
-    name = name.substr(2, name.length - 4);
+    name = name.substring(2, name.length - 2);
   } else if (~name.indexOf('[')) {
-    name = name.substr(1, name.length - 2);
+    name = name.substring(1, name.length - 1);
   } else if (~name.indexOf('(')) {
     type = InputAttrType.Output;
-    name = name.substr(1, name.length - 2);
+    name = name.substring(1, name.length - 1);
   } else if (~name.indexOf('#')) {
     type = InputAttrType.Template;
-    name = name.substr(1);
+    name = name.substring(1);
   }
   return { type, name };
 }

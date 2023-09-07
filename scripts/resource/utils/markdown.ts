@@ -19,7 +19,7 @@ let Lang: string;
 export function makeObject(lang: string, filePaths: string[]): Directive[] {
   processRes.length = 0;
   Lang = lang;
-  const zone = lang.split('-').shift();
+  const zone = lang.split('-').shift() ?? '';
   filePaths
     // 优先处理包含公共属性的组件文件
     .map((p) => ({ p, s: COG.COMMON_PROPERTIE_PATH_PART.find((k) => p.includes(k)) ? 9999 : 10 }))
@@ -160,7 +160,7 @@ function getDirective(): Directive[] {
         }
         // component
         for (const mergeCog of mergeCogs) {
-          let commonProperties: DirectiveProperty[];
+          let commonProperties: DirectiveProperty[] | undefined;
           if (mergeCog.component) {
             const targetComponent = processRes.find((w) => w.selector === mergeCog.component);
             if (targetComponent != null) {
@@ -195,7 +195,7 @@ function getDirective(): Directive[] {
 }
 
 function getProperties(directive: Directive, data: string[][]): DirectiveProperty[] {
-  return data
+  const res = data
     .filter((tds) => tds.length >= 4)
     .map((tds) => {
       return genPropertyItem(
@@ -204,9 +204,10 @@ function getProperties(directive: Directive, data: string[][]): DirectivePropert
       );
     })
     .filter((w) => !!w);
+  return res as DirectiveProperty[];
 }
 
-function genPropertyItem(directive: Directive, data: string[]): DirectiveProperty {
+function genPropertyItem(directive: Directive, data: string[]): DirectiveProperty | null {
   if (COG.INGORE_PROPERTIES.includes(data[0])) return null;
   let name = '';
   const orgName = data[0].trim();
@@ -219,7 +220,7 @@ function genPropertyItem(directive: Directive, data: string[]): DirectivePropert
   }
 
   // ingore includes `Deprecated` in description
-  if (name.length <= 0 || data[1].trim().includes('Deprecated')) return null;
+  if (name == null || name.length <= 0 || data[1].trim().includes('Deprecated')) return null;
 
   const item: DirectiveProperty = {
     name,
@@ -240,7 +241,7 @@ function genPropertyItem(directive: Directive, data: string[]): DirectivePropert
     item.name = trimTag(item.name, '(');
     item.inputType = InputAttrType.Output;
   } else if (item.name.startsWith('#')) {
-    item.name = item.name.substr(1);
+    item.name = item.name.substring(1);
     item.inputType = InputAttrType.Template;
   } else if (item.name.startsWith('`')) {
     item.name = trimTag(item.name, '`');
@@ -251,7 +252,7 @@ function genPropertyItem(directive: Directive, data: string[]): DirectivePropert
   parseType(directive, item);
 
   // default
-  if (['`-`', '-', '`无`', '无'].includes(item.default)) {
+  if (item.default == null || ['`-`', '-', '`无`', '无'].includes(item.default)) {
     item.default = '';
   }
   if (item.default) {
@@ -261,9 +262,9 @@ function genPropertyItem(directive: Directive, data: string[]): DirectivePropert
   // ngModel
   if (
     item.name === 'ngModel' ||
-    item.description.includes('双向绑定') ||
-    item.description.includes('double binding') ||
-    item.description.includes('Two-way')
+    item.description?.includes('双向绑定') ||
+    item.description?.includes('double binding') ||
+    item.description?.includes('Two-way')
   ) {
     item.inputType = InputAttrType.InputOutput;
   }
@@ -278,7 +279,7 @@ function getValidSeparator(text: string): string {
 }
 
 function parseType(directive: Directive, item: DirectiveProperty) {
-  const typeRaw: string = item.typeRaw.replace(/`/g, '');
+  const typeRaw: string = item.typeRaw?.replace(/`/g, '') ?? '';
   // if (typeRaw.indexOf('HTMLElement') !== -1) {
   //   console.log(typeRaw, typeRaw.split(getValidSeparator(typeRaw)));
   //   debugger;
@@ -291,7 +292,7 @@ function parseType(directive: Directive, item: DirectiveProperty) {
     .map((v) => trimSemicolon(v));
 
   // get first type
-  const firstType = types.length > 0 ? types[0].split(' ').shift() : '';
+  const firstType = types.length > 0 ? types[0].split(' ').shift()! : '';
 
   if (firstType.startsWith('TemplateRef')) {
     item.type = 'TemplateRef';
@@ -359,13 +360,13 @@ function parseType(directive: Directive, item: DirectiveProperty) {
   // 默认复杂类型，从类型列表中查看到第一个带有定义的复杂类型
   for (const t of types) {
     if (!/^[A-Z][a-zA-Z0-9]+$/g.test(t)) continue;
-    if (directive.types[t]) {
+    if (directive.types && directive.types[t]) {
       item.complexType = t;
       break;
     }
     const complexTypeProperties = getComplexTypeProperties(directive, t);
-    if (!complexTypeProperties || complexTypeProperties.length === 0) continue;
-    directive.types[t] = complexTypeProperties;
+    if (complexTypeProperties.length === 0) continue;
+    directive.types![t] = complexTypeProperties;
     item.complexType = t;
     break;
   }
@@ -374,7 +375,7 @@ function parseType(directive: Directive, item: DirectiveProperty) {
 function getComplexTypeProperties(directive: Directive, text: string): DirectiveProperty[] {
   const idx = ast.offsetAt(text);
   const nextIdx = idx + 3;
-  if (idx === -1 || nextIdx > ast.length || !ast.isType('table_open', nextIdx)) return null;
+  if (idx === -1 || nextIdx > ast.length || !ast.isType('table_open', nextIdx)) return [];
   return getProperties(directive, ast.getTable(nextIdx, false));
 }
 
@@ -383,7 +384,7 @@ function getComplexTypeProperties(directive: Directive, text: string): Directive
  */
 function trimTag(text: string, tag = '`'): string {
   if (text.startsWith(tag)) {
-    text = text.substr(tag.length, text.length - tag.length * 2);
+    text = text.substring(tag.length, text.length - tag.length);
   }
   return text.trim();
 }
@@ -393,10 +394,10 @@ function trimTag(text: string, tag = '`'): string {
  */
 function trimSemicolon(text: string): string {
   if (text.startsWith(`'`) || text.startsWith(`"`)) {
-    text = text.substr(1);
+    text = text.substring(1);
   }
   if (text.endsWith(`'`) || text.endsWith(`"`)) {
-    text = text.substr(0, text.length - 1);
+    text = text.substring(0, text.length - 1);
   }
   return text.trim();
 }
@@ -442,17 +443,19 @@ function metaToItem(zone: string, filePath: string, meta: any): Directive[] {
         i.snippet = snippet;
       }
     }
+    // override selfClosingTag
+    // if (FIX.selfClosingTag.includes(i.selector)) i.selfClosingTag = true;
     // add extra properties
     if (FIX.extraProperty[i.selector]) {
       (FIX.extraProperty[i.selector] as any[])
-        .filter((ei) => i.properties.findIndex((w) => w.name === ei.name) === -1)
+        .filter((ei) => i.properties?.findIndex((w) => w.name === ei.name) === -1)
         .forEach((ei) => {
-          i.properties.push(ei);
+          i.properties?.push(ei);
         });
     }
     addEnforceProperties(i);
     // 添加
-    i.properties.forEach((p) => {
+    i.properties?.forEach((p) => {
       // override type definition
       if (FIX.typeDefinition[i.selector]) {
         p.typeDefinition = FIX.typeDefinition[i.selector][p.name] || p.typeDefinition;
@@ -484,7 +487,7 @@ function addEnforceProperties(i: Directive): void {
     const start = ast.offsetAt(title);
     const properties = getProperties(i, ast.getTable(start));
     if (properties) {
-      i.properties.push(...properties);
+      i.properties?.push(...properties);
     }
   });
 }
@@ -507,7 +510,7 @@ function verify(filePaths: string[]) {
       return null;
     })
     .filter((w) => w != null)
-    .filter((w) => !COG.INGORE_COMPONENTS.includes(w))
+    .filter((w) => !COG.INGORE_COMPONENTS.includes(w!))
     .join(',');
   console.error(colors.yellow(`${Lang}-不存在以下组件：`), notExistsList);
 }
