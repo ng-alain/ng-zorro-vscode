@@ -60,7 +60,7 @@ export default class implements CompletionItemProvider {
     }
     // `<` 非单词部分需要提前移除触发词
     if (char === '<') {
-      item.insertText = new SnippetString(i.snippet.substr(1));
+      item.insertText = new SnippetString(i.snippet.substring(1));
     } else {
       item.insertText = new SnippetString(i.snippet);
     }

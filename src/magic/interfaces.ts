@@ -53,6 +53,7 @@ export interface Directive {
    * nz-row: `<div __$1>$0</div>` 转化 `<div nz-row$1>$0</div>`
    */
   snippet?: string;
+  selfClosingTag?: boolean;
   /** 解析后的文档数据 */
   _doc?: MarkdownString;
 }
@@ -62,7 +63,7 @@ export interface DirectiveProperty {
   /**
    * Property name, e.g: `nzType`
    */
-  name?: string;
+  name: string;
   inputType?: InputAttrType;
   forceInputType?: InputAttrType;
   /**
