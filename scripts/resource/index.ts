@@ -33,22 +33,22 @@ function genObject(): void {
     // 生成国际化Key数据
     langData[lang] = {};
     result[lang].forEach((i: Directive) => {
-      langData[lang][genLocalizeKey(i, 'title')] = i.title;
+      langData[lang][genLocalizeKey(i, 'title')] = i.title!;
       i.title = genLocalizeKey(i, 'title');
-      langData[lang][genLocalizeKey(i, 'whenToUse')] = i.whenToUse;
+      langData[lang][genLocalizeKey(i, 'whenToUse')] = i.whenToUse!;
       i.whenToUse = genLocalizeKey(i, 'whenToUse');
-      langData[lang][genLocalizeKey(i, 'description')] = i.description;
+      langData[lang][genLocalizeKey(i, 'description')] = i.description!;
       i.description = genLocalizeKey(i, 'description');
 
       (i.properties || []).forEach((p) => {
-        langData[lang][genLocalizeKey(i, 'description', p)] = p.description;
+        langData[lang][genLocalizeKey(i, 'description', p)] = p.description!;
         p.description = genLocalizeKey(i, 'description', p);
       });
 
       if (i.types) {
         Object.keys(i.types).forEach((key) => {
-          i.types[key].forEach((p) => {
-            langData[lang][genLocalizeKey(i, 'description', p)] = p.description;
+          i.types![key].forEach((p) => {
+            langData[lang][genLocalizeKey(i, 'description', p)] = p.description!;
             p.description = genLocalizeKey(i, 'description', p);
           });
         });

@@ -301,6 +301,35 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-collapse-panel.nzShowArrow.description': localize('nz-collapse-panel.nzShowArrow.description', 'Display arrow or not'),
 'nz-collapse-panel.nzActive.description': localize('nz-collapse-panel.nzActive.description', 'Active status of panel, double binding'),
 'nz-collapse-panel.nzActiveChange.description': localize('nz-collapse-panel.nzActiveChange.description', 'Callback function of the active status'),
+'nz-color-picker.title': localize('nz-color-picker.title', 'ColorPicker'),
+'nz-color-picker.whenToUse': localize('nz-color-picker.whenToUse', 'Used when the user needs to customize the color selection.'),
+'nz-color-picker.description': localize('nz-color-picker.description', 'When To Use'),
+'nz-color-picker.nzFormat.description': localize('nz-color-picker.nzFormat.description', 'Format of color'),
+'nz-color-picker.nzValue.description': localize('nz-color-picker.nzValue.description', 'Value of color'),
+'nz-color-picker.nzSize.description': localize('nz-color-picker.nzSize.description', 'Setting the trigger size'),
+'nz-color-picker.nzDefaultValue.description': localize('nz-color-picker.nzDefaultValue.description', 'Default value of color'),
+'nz-color-picker.nzAllowClear.description': localize('nz-color-picker.nzAllowClear.description', 'Allow clearing color selected'),
+'nz-color-picker.nzTrigger.description': localize('nz-color-picker.nzTrigger.description', 'ColorPicker trigger mode'),
+'nz-color-picker.nzShowText.description': localize('nz-color-picker.nzShowText.description', 'Show color text'),
+'nz-color-picker.nzOpen.description': localize('nz-color-picker.nzOpen.description', 'Whether to show popups'),
+'nz-color-picker.nzDisabled.description': localize('nz-color-picker.nzDisabled.description', 'Disable ColorPicker'),
+'nz-color-picker.nzTitle.description': localize('nz-color-picker.nzTitle.description', 'Setting the title of the color picker'),
+'nz-color-picker.nzOnChange.description': localize('nz-color-picker.nzOnChange.description', 'Callback when value is changed'),
+'nz-color-picker.nzOnClear.description': localize('nz-color-picker.nzOnClear.description', 'Called when clear'),
+'nz-color-picker.nzOnFormatChange.description': localize('nz-color-picker.nzOnFormatChange.description', 'Callback when `format` is changed'),
+'nz-color-picker.nzOnOpenChange.description': localize('nz-color-picker.nzOnOpenChange.description', 'Callback for opening the color panel'),
+'nz-color-picker.toHex.description': localize('nz-color-picker.toHex.description', 'Convert to `hex` format characters, the return type like: `1677ff`'),
+'nz-color-picker.toHexString.description': localize('nz-color-picker.toHexString.description', 'Convert to `hex` format color string, the return type like: `#1677ff`'),
+'nz-color-picker.toHsb.description': localize('nz-color-picker.toHsb.description', 'Convert to `hsb` object'),
+'nz-color-picker.toHsbString.description': localize('nz-color-picker.toHsbString.description', 'Convert to `hsb` format color string, the return type like: `hsb(215, 91%, 100%)`'),
+'nz-color-picker.toRgb.description': localize('nz-color-picker.toRgb.description', 'Convert to `rgb` object'),
+'nz-color-picker.toRgbString.description': localize('nz-color-picker.toRgbString.description', 'Convert to `rgb` format color string, the return type like: `rgb(22, 119, 255)`'),
+'nz-color-block.title': localize('nz-color-block.title', 'ColorPicker'),
+'nz-color-block.whenToUse': localize('nz-color-block.whenToUse', 'Used when the user needs to customize the color selection.'),
+'nz-color-block.description': localize('nz-color-block.description', 'When To Use'),
+'nz-color-block.nzColor.description': localize('nz-color-block.nzColor.description', 'Module colors'),
+'nz-color-block.nzSize.description': localize('nz-color-block.nzSize.description', 'Color block size'),
+'nz-color-block.nzOnClick.description': localize('nz-color-block.nzOnClick.description', 'Callbacks for clicking on color blocks'),
 'nz-comment.title': localize('nz-comment.title', 'Comment'),
 'nz-comment.whenToUse': localize('nz-comment.whenToUse', 'Comments can be used to enable discussions on an entity such as a page, blog post, issue or other.'),
 'nz-comment.description': localize('nz-comment.description', 'A comment displays user feedback and discussion to website content.'),
@@ -597,6 +626,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-input.nzAutosize.description': localize('nz-input.nzAutosize.description', 'Only used for `textarea`, height autosize feature, can be set to `boolean` or an object `{ minRows: 2, maxRows: 6 }`'),
 'nz-input.nzBorderless.description': localize('nz-input.nzBorderless.description', 'Whether hide border'),
 'nz-input.nzStatus.description': localize('nz-input.nzStatus.description', 'Set validation status'),
+'nz-input.nzStepperless.description': localize('nz-input.nzStepperless.description', 'Whether hide stepper when input type is number'),
 'nz-input.ngModel.description': localize('nz-input.ngModel.description', ' '),
 'nz-input.ngModelChange.description': localize('nz-input.ngModelChange.description', ' '),
 'nz-input.disabled.description': localize('nz-input.disabled.description', ' '),
@@ -741,7 +771,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-menu-item.description': localize('nz-menu-item.description', 'Menu list of Navigation.'),
 'nz-menu-item.nzDisabled.description': localize('nz-menu-item.nzDisabled.description', 'whether menu item is disabled or not'),
 'nz-menu-item.nzSelected.description': localize('nz-menu-item.nzSelected.description', 'whether menu item is selected or not'),
-'nz-menu-item.nzMatchRouter.description': localize('nz-menu-item.nzMatchRouter.description', 'whether auto set `nzSelected` according to [routerLink](https://www.angular.cn/api/router/RouterLink)'),
+'nz-menu-item.nzMatchRouter.description': localize('nz-menu-item.nzMatchRouter.description', 'whether auto set `nzSelected` according to [routerLink](https://www.angular.io/api/router/RouterLink)'),
 'nz-menu-item.nzMatchRouterExact.description': localize('nz-menu-item.nzMatchRouterExact.description', 'only match when the url matches the link exactly, same as [routerLinkActiveOptions](https://angular.io/api/router/RouterLinkActive#routerLinkActiveOptions)'),
 'nz-menu-item.nzDanger.description': localize('nz-menu-item.nzDanger.description', 'display the danger style'),
 'nz-submenu.title': localize('nz-submenu.title', 'Menu'),
@@ -1024,10 +1054,11 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-resize-handle.whenToUse': localize('nz-resize-handle.whenToUse', 'When you want to resize elements.'),
 'nz-resize-handle.description': localize('nz-resize-handle.description', 'Define handles and directions.'),
 'nz-resize-handle.nzDirection.description': localize('nz-resize-handle.nzDirection.description', 'Set the direction of resizable'),
+'nz-resize-handle.nzCursorType.description': localize('nz-resize-handle.nzCursorType.description', 'Cursor type for handle'),
 'nz-resize-handles.title': localize('nz-resize-handles.title', 'Resizable'),
 'nz-resize-handles.whenToUse': localize('nz-resize-handles.whenToUse', 'When you want to resize elements.'),
 'nz-resize-handles.description': localize('nz-resize-handles.description', 'Simpler way to define handles.'),
-'nz-resize-handles.nzDirections.description': localize('nz-resize-handles.nzDirections.description', 'Allow directions of resizable'),
+'nz-resize-handles.nzDirections.description': localize('nz-resize-handles.nzDirections.description', 'Allow handle directions or handle options'),
 'nz-result.title': localize('nz-result.title', 'Result'),
 'nz-result.whenToUse': localize('nz-result.whenToUse', 'Use when important operations need to inform the user to process the results and the feedback is more complicated.'),
 'nz-result.description': localize('nz-result.description', 'Used to feed back the results of a series of operational tasks.'),
@@ -1087,8 +1118,10 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-option.whenToUse': localize('nz-option.whenToUse', '- A dropdown menu for displaying choices - an elegant alternative to the native `<select>` element.\n- Utilizing [Radio](/components/radio/en) is recommended when there are fewer total options (less than 5).'),
 'nz-option.description': localize('nz-option.description', 'Select component to select value from options.'),
 'nz-option.nzDisabled.description': localize('nz-option.nzDisabled.description', 'Disable this option'),
+'nz-option.nzTitle.description': localize('nz-option.nzTitle.description', 'Native title hint on this option'),
 'nz-option.nzLabel.description': localize('nz-option.nzLabel.description', 'The text show in nz-select and dropdown menu'),
 'nz-option.nzValue.description': localize('nz-option.nzValue.description', 'The value passed to ngModel of nz-select'),
+'nz-option.nzKey.description': localize('nz-option.nzKey.description', 'Should be passed when typeof nzValue - Object. Key will be used for performance optimizations'),
 'nz-option.nzHide.description': localize('nz-option.nzHide.description', 'Whether hide the option in the option list'),
 'nz-option.nzCustomContent.description': localize('nz-option.nzCustomContent.description', 'Whether custom nz-option content in drodown menu, the ng-content in nz-option will replace nzLabel when it was set to true'),
 'nz-option-group.title': localize('nz-option-group.title', 'Select'),
@@ -4163,7 +4196,7 @@ export const DATA = [
         "inputType": 0,
         "description": "nz-cascader.nzLoadData.description",
         "type": "function",
-        "typeRaw": "`(option: any, index?: index) => PromiseLike<any>`",
+        "typeRaw": "`(option: any, index?: index) => PromiseLike<any> | Observable<any>`",
         "default": ""
       },
       {
@@ -4689,6 +4722,232 @@ export const DATA = [
     "whenToUse": "nz-collapse-panel.whenToUse",
     "doc": "/components/collapse/en",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/collapse"
+  },
+  {
+    "type": "component",
+    "selector": "nz-color-picker",
+    "types": {
+      "NzColor": [
+        {
+          "name": "toHex",
+          "inputType": 0,
+          "description": "nz-color-picker.toHex.description",
+          "type": "function",
+          "typeRaw": "`() => string`",
+          "default": ""
+        },
+        {
+          "name": "toHexString",
+          "inputType": 0,
+          "description": "nz-color-picker.toHexString.description",
+          "type": "function",
+          "typeRaw": "`() => string`",
+          "default": ""
+        },
+        {
+          "name": "toHsb",
+          "inputType": 0,
+          "description": "nz-color-picker.toHsb.description",
+          "type": "function",
+          "typeRaw": "`() => ({ h: number, s: number, b: number, a number })`",
+          "default": ""
+        },
+        {
+          "name": "toHsbString",
+          "inputType": 0,
+          "description": "nz-color-picker.toHsbString.description",
+          "type": "function",
+          "typeRaw": "`() => string`",
+          "default": ""
+        },
+        {
+          "name": "toRgb",
+          "inputType": 0,
+          "description": "nz-color-picker.toRgb.description",
+          "type": "function",
+          "typeRaw": "`() => ({ r: number, g: number, b: number, a number })`",
+          "default": ""
+        },
+        {
+          "name": "toRgbString",
+          "inputType": 0,
+          "description": "nz-color-picker.toRgbString.description",
+          "type": "function",
+          "typeRaw": "`() => string`",
+          "default": ""
+        }
+      ]
+    },
+    "properties": [
+      {
+        "name": "nzFormat",
+        "inputType": 0,
+        "description": "nz-color-picker.nzFormat.description",
+        "type": "string",
+        "typeRaw": "`rgb`｜`hex`｜`hsb`",
+        "default": "`hex`",
+        "pureDefault": "hex"
+      },
+      {
+        "name": "nzValue",
+        "inputType": 0,
+        "description": "nz-color-picker.nzValue.description",
+        "type": "string",
+        "typeRaw": "`string`｜`NzColor`",
+        "default": "",
+        "complexType": "NzColor"
+      },
+      {
+        "name": "nzSize",
+        "inputType": 0,
+        "description": "nz-color-picker.nzSize.description",
+        "type": "string",
+        "typeRaw": "`large`｜`default`｜`small`",
+        "default": "`default`",
+        "pureDefault": "default"
+      },
+      {
+        "name": "nzDefaultValue",
+        "inputType": 0,
+        "description": "nz-color-picker.nzDefaultValue.description",
+        "type": "string",
+        "typeRaw": "`string`｜`NzColor`",
+        "default": "`false`",
+        "complexType": "NzColor",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzAllowClear",
+        "inputType": 0,
+        "description": "nz-color-picker.nzAllowClear.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzTrigger",
+        "inputType": 0,
+        "description": "nz-color-picker.nzTrigger.description",
+        "type": "string",
+        "typeRaw": "`hover`｜`click`",
+        "default": "`click`",
+        "pureDefault": "click"
+      },
+      {
+        "name": "nzShowText",
+        "inputType": 0,
+        "description": "nz-color-picker.nzShowText.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzOpen",
+        "inputType": 0,
+        "description": "nz-color-picker.nzOpen.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzDisabled",
+        "inputType": 0,
+        "description": "nz-color-picker.nzDisabled.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false",
+        "forceInputType": 0
+      },
+      {
+        "name": "nzTitle",
+        "inputType": 0,
+        "description": "nz-color-picker.nzTitle.description",
+        "type": "TemplateRef",
+        "typeRaw": "`TemplateRef<void>`｜`string`",
+        "default": ""
+      },
+      {
+        "name": "nzOnChange",
+        "inputType": 1,
+        "description": "nz-color-picker.nzOnChange.description",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<{ color: NzColor; format: string }>`",
+        "default": ""
+      },
+      {
+        "name": "nzOnClear",
+        "inputType": 1,
+        "description": "nz-color-picker.nzOnClear.description",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<boolean>`",
+        "default": ""
+      },
+      {
+        "name": "nzOnFormatChange",
+        "inputType": 1,
+        "description": "nz-color-picker.nzOnFormatChange.description",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<'rgb'｜'hex'｜'hsb'>`",
+        "default": ""
+      },
+      {
+        "name": "nzOnOpenChange",
+        "inputType": 1,
+        "description": "nz-color-picker.nzOnOpenChange.description",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<boolean>`",
+        "default": ""
+      }
+    ],
+    "lib": "ng-zorro-antd",
+    "title": "nz-color-picker.title",
+    "description": "nz-color-picker.description",
+    "whenToUse": "nz-color-picker.whenToUse",
+    "doc": "/components/color-picker/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/color-picker"
+  },
+  {
+    "type": "component",
+    "selector": "nz-color-block",
+    "types": {},
+    "properties": [
+      {
+        "name": "nzColor",
+        "inputType": 0,
+        "description": "nz-color-block.nzColor.description",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": "`#1677ff`",
+        "pureDefault": "#1677ff"
+      },
+      {
+        "name": "nzSize",
+        "inputType": 0,
+        "description": "nz-color-block.nzSize.description",
+        "type": "string",
+        "typeRaw": "`large`｜`default`｜`small`",
+        "default": "`default`",
+        "pureDefault": "default"
+      },
+      {
+        "name": "nzOnClick",
+        "inputType": 0,
+        "description": "nz-color-block.nzOnClick.description",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<boolean>`",
+        "default": ""
+      }
+    ],
+    "lib": "ng-zorro-antd",
+    "title": "nz-color-block.title",
+    "description": "nz-color-block.description",
+    "whenToUse": "nz-color-block.whenToUse",
+    "doc": "/components/color-picker/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/color-picker"
   },
   {
     "type": "component",
@@ -10471,6 +10730,14 @@ export const DATA = [
         ]
       },
       {
+        "name": "nzStepperless",
+        "inputType": 0,
+        "description": "nz-input.nzStepperless.description",
+        "type": "boolean",
+        "typeRaw": "`'boolean' | 'true'`",
+        "default": ""
+      },
+      {
         "name": "ngModel",
         "inputType": 2,
         "type": "any",
@@ -13837,6 +14104,15 @@ export const DATA = [
         "typeRaw": "`NzResizeDirection`",
         "default": "`'bottomRight'`",
         "pureDefault": "bottomRight"
+      },
+      {
+        "name": "nzCursorType",
+        "inputType": 0,
+        "description": "nz-resize-handle.nzCursorType.description",
+        "type": "object",
+        "typeRaw": "`NzCursorType`",
+        "default": "`'window'`",
+        "pureDefault": "window"
       }
     ],
     "description": "nz-resize-handle.description",
@@ -13855,10 +14131,10 @@ export const DATA = [
         "name": "nzDirections",
         "inputType": 0,
         "description": "nz-resize-handles.nzDirections.description",
-        "type": "Array",
-        "typeRaw": "`NzResizeDirection[]`",
-        "default": "`DEFAULT_RESIZE_DIRECTION`",
-        "pureDefault": "DEFAULT_RESIZE_DIRECTION"
+        "type": "function",
+        "typeRaw": "`(NzResizeDirection | NzResizeHandleOption)[]`",
+        "default": "ALL DIRECTIONS",
+        "pureDefault": "ALL DIRECTIONS"
       }
     ],
     "description": "nz-resize-handles.description",
@@ -14224,7 +14500,7 @@ export const DATA = [
         "inputType": 0,
         "description": "nz-select.nzOptions.description",
         "type": "Array",
-        "typeRaw": "`Array<{ label: string  | number | TemplateRef<any>; value: any; disabled?: boolean; hide?: boolean; groupLabel?: string | TemplateRef<any>;}>`",
+        "typeRaw": "`Array<{ label: string  | number | TemplateRef<any>; value: any; key?: string | number; disabled?: boolean; hide?: boolean; groupLabel?: string | TemplateRef<any>;}>`",
         "default": ""
       },
       {
@@ -14349,6 +14625,14 @@ export const DATA = [
         "forceInputType": 0
       },
       {
+        "name": "nzTitle",
+        "inputType": 0,
+        "description": "nz-option.nzTitle.description",
+        "type": "string",
+        "typeRaw": "`string  | number`",
+        "default": ""
+      },
+      {
         "name": "nzLabel",
         "inputType": 0,
         "description": "nz-option.nzLabel.description",
@@ -14362,6 +14646,14 @@ export const DATA = [
         "description": "nz-option.nzValue.description",
         "type": "object",
         "typeRaw": "`any `",
+        "default": ""
+      },
+      {
+        "name": "nzKey",
+        "inputType": 0,
+        "description": "nz-option.nzKey.description",
+        "type": "string",
+        "typeRaw": "`string | number `",
         "default": ""
       },
       {
