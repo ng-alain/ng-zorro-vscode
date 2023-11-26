@@ -38,13 +38,6 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-tooltip.nzTooltipMouseLeaveDelay.description': localize('nz-tooltip.nzTooltipMouseLeaveDelay.description', 'Delay in seconds, before tooltip is hidden on mouse leave'),
 'nz-tooltip.nzTooltipOverlayClassName.description': localize('nz-tooltip.nzTooltipOverlayClassName.description', 'Class name of the tooltip card'),
 'nz-tooltip.nzTooltipOverlayStyle.description': localize('nz-tooltip.nzTooltipOverlayStyle.description', 'Style of the tooltip card'),
-'nz-affix.title': localize('nz-affix.title', 'Affix'),
-'nz-affix.whenToUse': localize('nz-affix.whenToUse', 'When user browses a long web page, some content need to stick to the viewport. This is common for menus and actions.'),
-'nz-affix.description': localize('nz-affix.description', 'Make an element stick to viewport.'),
-'nz-affix.nzOffsetBottom.description': localize('nz-affix.nzOffsetBottom.description', 'Pixels to offset from bottom when calculating position of scroll'),
-'nz-affix.nzOffsetTop.description': localize('nz-affix.nzOffsetTop.description', 'Pixels to offset from top when calculating position of scroll'),
-'nz-affix.nzTarget.description': localize('nz-affix.nzTarget.description', 'specifies the scrollable area dom node'),
-'nz-affix.nzChange.description': localize('nz-affix.nzChange.description', 'Callback for when affix state is changed'),
 'nz-alert.title': localize('nz-alert.title', 'Alert'),
 'nz-alert.whenToUse': localize('nz-alert.whenToUse', '- When you need to show alert messages to users.\n- When you need a persistent static container which is closable by user actions.'),
 'nz-alert.description': localize('nz-alert.description', 'Alert component for feedback.'),
@@ -313,6 +306,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-color-picker.nzShowText.description': localize('nz-color-picker.nzShowText.description', 'Show color text'),
 'nz-color-picker.nzOpen.description': localize('nz-color-picker.nzOpen.description', 'Whether to show popups'),
 'nz-color-picker.nzDisabled.description': localize('nz-color-picker.nzDisabled.description', 'Disable ColorPicker'),
+'nz-color-picker.nzDisabledAlpha.description': localize('nz-color-picker.nzDisabledAlpha.description', 'Disable Alpha'),
 'nz-color-picker.nzTitle.description': localize('nz-color-picker.nzTitle.description', 'Setting the title of the color picker'),
 'nz-color-picker.nzOnChange.description': localize('nz-color-picker.nzOnChange.description', 'Callback when value is changed'),
 'nz-color-picker.nzOnClear.description': localize('nz-color-picker.nzOnClear.description', 'Called when clear'),
@@ -449,8 +443,8 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-divider.nzPlain.description': localize('nz-divider.nzPlain.description', 'Divider text show as plain style'),
 'nz-divider.nzOrientation.description': localize('nz-divider.nzOrientation.description', 'inner text orientation'),
 'nz-drawer.title': localize('nz-drawer.title', 'Drawer'),
-'nz-drawer.whenToUse': localize('nz-drawer.whenToUse', '- Use a Form to create or edit a set of information.\n- Processing subtasks. When subtasks are too heavy for Popover and we still want to keep the subtasks in the context of the main task, Drawer comes very handy.\n- When a same Form is needed in multiple places.'),
-'nz-drawer.description': localize('nz-drawer.description', 'A Drawer is a panel that is typically overlaid on top of a page and slides in from the side. It contains a set of information or actions. Since that user can interact with the Drawer without leaving the current page, tasks can be achieved more efficient within the same context.'),
+'nz-drawer.whenToUse': localize('nz-drawer.whenToUse', '- Use a Form to create or edit a set of information.\n- Processing subtasks. When subtasks are too heavy for Popover and we still want to keep the subtasks in the context of\nthe main task, Drawer comes very handy.\n- When a same Form is needed in multiple places.'),
+'nz-drawer.description': localize('nz-drawer.description', 'A Drawer is a panel that is typically overlaid on top of a page and slides in from the side. It contains a set of\ninformation or actions. Since that user can interact with the Drawer without leaving the current page, tasks can be\nachieved more efficient within the same context.'),
 'nz-drawer.nzClosable.description': localize('nz-drawer.nzClosable.description', 'Whether a close (x) button is visible on top left of the Drawer dialog or not.'),
 'nz-drawer.nzCloseIcon.description': localize('nz-drawer.nzCloseIcon.description', 'Custom close icon'),
 'nz-drawer.nzExtra.description': localize('nz-drawer.nzExtra.description', 'Extra actions area at corner.'),
@@ -619,6 +613,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-image.nzDisablePreview.description': localize('nz-image.nzDisablePreview.description', 'Whether to disable the preview'),
 'nz-image.nzCloseOnNavigation.description': localize('nz-image.nzCloseOnNavigation.description', 'Whether to close the image preview when the user goes backwards/forwards in history. Note that this usually doesn\'t include clicking on links (unless the user is using the HashLocationStrategy).'),
 'nz-image.nzDirection.description': localize('nz-image.nzDirection.description', 'Text directionality'),
+'nz-image.nzScaleStep.description': localize('nz-image.nzScaleStep.description', '`1 + nzScaleStep` is the step to increase or decrease the scale'),
 'nz-input.title': localize('nz-input.title', 'Input'),
 'nz-input.whenToUse': localize('nz-input.whenToUse', '- A user input in a form field is needed.\n- A search input is required.'),
 'nz-input.description': localize('nz-input.description', 'All props of input supported by [w3c standards](https://www.w3schools.com/tags/tag_input.asp) and Angular can used in `nz-input`.'),
@@ -1283,6 +1278,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'th.nzShowCheckbox.description': localize('th.nzShowCheckbox.description', 'Whether `nz-checkbox` should be shown in the header'),
 'th.nzDisabled.description': localize('th.nzDisabled.description', 'Whether the `nz-checkbox` is disabled'),
 'th.nzIndeterminate.description': localize('th.nzIndeterminate.description', '`nz-checkbox` indeterminate status'),
+'th.nzLabel.description': localize('th.nzLabel.description', 'ARIA label for the `nz-checkbox`'),
 'th.nzChecked.description': localize('th.nzChecked.description', 'Checked status, double binding'),
 'th.nzCheckedChange.description': localize('th.nzCheckedChange.description', 'Callback when checked status changes'),
 'th.nzShowRowSelection.description': localize('th.nzShowRowSelection.description', 'Whether to show row selection options'),
@@ -1311,12 +1307,14 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'td.nzShowCheckbox.description': localize('td.nzShowCheckbox.description', 'Whether add nz-checkbox'),
 'td.nzDisabled.description': localize('td.nzDisabled.description', 'Whether disable checkbox'),
 'td.nzIndeterminate.description': localize('td.nzIndeterminate.description', 'Indeterminate status'),
+'td.nzLabel.description': localize('td.nzLabel.description', 'ARIA label for the `nz-checkbox`'),
 'td.nzChecked.description': localize('td.nzChecked.description', 'Checked status, double binding'),
 'td.nzCheckedChange.description': localize('td.nzCheckedChange.description', 'Checked status change callback'),
 'td.colSpan.description': localize('td.colSpan.description', 'how many columns the cell extends'),
 'td.rowSpan.description': localize('td.rowSpan.description', 'how many rows the cell extends'),
 'td.nzShowExpand.description': localize('td.nzShowExpand.description', 'Whether show expand icon'),
 'td.nzExpand.description': localize('td.nzExpand.description', 'Current expand status, double binding'),
+'td.nzExpandIcon.description': localize('td.nzExpandIcon.description', 'Custom expand icon'),
 'td.nzExpandChange.description': localize('td.nzExpandChange.description', 'Expand status change callback'),
 'td.nzLeft.description': localize('td.nzLeft.description', 'Left pixels, used to fixed column to left, auto calc when set to `true` and disable fixed when `false`'),
 'td.nzRight.description': localize('td.nzRight.description', 'Right pixels, used to fixed column to right, auto calc when set to `true` and disable fixed when `false`'),
@@ -1835,7 +1833,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'pdf.change.description': localize('pdf.change.description', 'change event'),
 'qr.title': localize('qr.title', 'QR'),
 'qr.whenToUse': localize('qr.whenToUse', ' '),
-'qr.description': localize('qr.description', 'Generate a QR code based on [qrious](https://github.com/neocotic/qrious).'),
+'qr.description': localize('qr.description', 'Will be removed in 18.0.0, please use [nz-qrcode](https://ng.ant.design/components/qr-code) instead.'),
 'qr.value.description': localize('qr.value.description', 'Value encoded within the QR code'),
 'qr.background.description': localize('qr.background.description', 'Background colour of the QR code'),
 'qr.backgroundAlpha.description': localize('qr.backgroundAlpha.description', 'Background alpha of the QR code'),
@@ -2760,53 +2758,6 @@ export const DATA = [
     "doc": "/components/tooltip/en",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tooltip",
     "snippet": "<span __$1>$2</span>"
-  },
-  {
-    "type": "component",
-    "selector": "nz-affix",
-    "types": {},
-    "properties": [
-      {
-        "name": "nzOffsetBottom",
-        "inputType": 0,
-        "description": "nz-affix.nzOffsetBottom.description",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": ""
-      },
-      {
-        "name": "nzOffsetTop",
-        "inputType": 0,
-        "description": "nz-affix.nzOffsetTop.description",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "`0`",
-        "pureDefault": "0"
-      },
-      {
-        "name": "nzTarget",
-        "inputType": 0,
-        "description": "nz-affix.nzTarget.description",
-        "type": "string",
-        "typeRaw": "`string | HTMLElement`",
-        "default": "`window`",
-        "pureDefault": "window"
-      },
-      {
-        "name": "nzChange",
-        "inputType": 1,
-        "description": "nz-affix.nzChange.description",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<boolean>`",
-        "default": ""
-      }
-    ],
-    "lib": "ng-zorro-antd",
-    "title": "nz-affix.title",
-    "description": "nz-affix.description",
-    "whenToUse": "nz-affix.whenToUse",
-    "doc": "/components/affix/en",
-    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/affix"
   },
   {
     "type": "component",
@@ -4861,6 +4812,15 @@ export const DATA = [
         "default": "`false`",
         "pureDefault": "false",
         "forceInputType": 0
+      },
+      {
+        "name": "nzDisabledAlpha",
+        "inputType": 0,
+        "description": "nz-color-picker.nzDisabledAlpha.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
       },
       {
         "name": "nzTitle",
@@ -10671,6 +10631,15 @@ export const DATA = [
         "typeRaw": "`Direction`",
         "default": "`'ltr'`",
         "pureDefault": "ltr"
+      },
+      {
+        "name": "nzScaleStep",
+        "inputType": 0,
+        "description": "nz-image.nzScaleStep.description",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "0.5",
+        "pureDefault": "0.5"
       }
     ],
     "lib": "ng-zorro-antd",
@@ -14908,7 +14877,7 @@ export const DATA = [
         "inputType": 0,
         "description": "nz-slider.nzTipFormatter.description",
         "type": "function",
-        "typeRaw": "`(value: number) => string`",
+        "typeRaw": "`(value: number) => string | TemplateRef<void>`",
         "default": ""
       },
       {
@@ -15959,6 +15928,14 @@ export const DATA = [
         "forceInputType": 0
       },
       {
+        "name": "nzLabel",
+        "inputType": 0,
+        "description": "th.nzLabel.description",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
+      },
+      {
         "name": "nzChecked",
         "inputType": 2,
         "description": "th.nzChecked.description",
@@ -16188,6 +16165,14 @@ export const DATA = [
         "forceInputType": 0
       },
       {
+        "name": "nzLabel",
+        "inputType": 0,
+        "description": "td.nzLabel.description",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
+      },
+      {
         "name": "nzChecked",
         "inputType": 2,
         "description": "td.nzChecked.description",
@@ -16235,6 +16220,14 @@ export const DATA = [
         "description": "td.nzExpand.description",
         "type": "boolean",
         "typeRaw": "`boolean`",
+        "default": ""
+      },
+      {
+        "name": "nzExpandIcon",
+        "inputType": 0,
+        "description": "td.nzExpandIcon.description",
+        "type": "TemplateRef",
+        "typeRaw": "`TemplateRef<void>`",
         "default": ""
       },
       {
