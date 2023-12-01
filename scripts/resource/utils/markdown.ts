@@ -109,7 +109,7 @@ function getDirective(): Directive[] {
     .findTags('h3', start + 1, end)
     .map((idx) => {
       const selectorList = (ast.getText(idx) || '').split('|').map((s) => s.trim());
-      let selector = selectorList[0];
+      let selector = selectorList[0]?.replace(':standalone', '');
       let type: DirectiveType = 'component';
       if (selectorList.length === 1 && !/^\[?[a-z][-a-zA-Z0-9='\`]+\]?$/g.test(selector) && !COG.VALID_COMPONENT_NAMES.includes(selector)) {
         // pipe process
@@ -139,7 +139,7 @@ function getDirective(): Directive[] {
         const directives: Directive[] = [];
         selectorList.forEach((sel) => {
           const copyItem = copy(item) as Directive;
-          copyItem.selector = sel;
+          copyItem.selector = sel?.replace(':standalone', '');
           checkType(copyItem);
           directives.push(copyItem);
         });

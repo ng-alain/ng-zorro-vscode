@@ -38,6 +38,13 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-tooltip.nzTooltipMouseLeaveDelay.description': localize('nz-tooltip.nzTooltipMouseLeaveDelay.description', 'Delay in seconds, before tooltip is hidden on mouse leave'),
 'nz-tooltip.nzTooltipOverlayClassName.description': localize('nz-tooltip.nzTooltipOverlayClassName.description', 'Class name of the tooltip card'),
 'nz-tooltip.nzTooltipOverlayStyle.description': localize('nz-tooltip.nzTooltipOverlayStyle.description', 'Style of the tooltip card'),
+'nz-affix.title': localize('nz-affix.title', 'Affix'),
+'nz-affix.whenToUse': localize('nz-affix.whenToUse', 'When user browses a long web page, some content need to stick to the viewport. This is common for menus and actions.'),
+'nz-affix.description': localize('nz-affix.description', 'Make an element stick to viewport.'),
+'nz-affix.nzOffsetBottom.description': localize('nz-affix.nzOffsetBottom.description', 'Pixels to offset from bottom when calculating position of scroll'),
+'nz-affix.nzOffsetTop.description': localize('nz-affix.nzOffsetTop.description', 'Pixels to offset from top when calculating position of scroll'),
+'nz-affix.nzTarget.description': localize('nz-affix.nzTarget.description', 'specifies the scrollable area dom node'),
+'nz-affix.nzChange.description': localize('nz-affix.nzChange.description', 'Callback for when affix state is changed'),
 'nz-alert.title': localize('nz-alert.title', 'Alert'),
 'nz-alert.whenToUse': localize('nz-alert.whenToUse', '- When you need to show alert messages to users.\n- When you need a persistent static container which is closable by user actions.'),
 'nz-alert.description': localize('nz-alert.description', 'Alert component for feedback.'),
@@ -599,6 +606,15 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nzGraphEdge.title': localize('nzGraphEdge.title', 'Graph'),
 'nzGraphEdge.whenToUse': localize('nzGraphEdge.whenToUse', 'When you want to use graph in Angular.'),
 'nzGraphEdge.description': localize('nzGraphEdge.description', 'Customize the graph edge template'),
+'nz-hashCode.title': localize('nz-hashCode.title', 'HashCode'),
+'nz-hashCode.whenToUse': localize('nz-hashCode.whenToUse', ' '),
+'nz-hashCode.description': localize('nz-hashCode.description', 'Import Module'),
+'nz-hashCode.nzValue.description': localize('nz-hashCode.nzValue.description', 'The value of the hash code'),
+'nz-hashCode.nzTitle.description': localize('nz-hashCode.nzTitle.description', 'Description of the content in the upper left corner'),
+'nz-hashCode.nzLogo.description': localize('nz-hashCode.nzLogo.description', 'Display in the upper right corner'),
+'nz-hashCode.nzMode.description': localize('nz-hashCode.nzMode.description', 'Demonstration Mode'),
+'nz-hashCode.nzType.description': localize('nz-hashCode.nzType.description', 'style'),
+'nz-hashCode.nzOnCopy.description': localize('nz-hashCode.nzOnCopy.description', 'Clicking the Copy callback'),
 'nz-icon.title': localize('nz-icon.title', 'Icon'),
 'nz-icon.whenToUse': localize('nz-icon.whenToUse', ' '),
 'nz-icon.description': localize('nz-icon.description', 'Semantic vector graphics.'),
@@ -858,33 +874,6 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-pagination.nzHideOnSinglePage.description': localize('nz-pagination.nzHideOnSinglePage.description', 'Whether to hide pager on single page'),
 'nz-pagination.nzPageIndexChange.description': localize('nz-pagination.nzPageIndexChange.description', 'current page number change callback'),
 'nz-pagination.nzPageSizeChange.description': localize('nz-pagination.nzPageSizeChange.description', 'number of data items per page change callback'),
-'nzSafeNull.title': localize('nzSafeNull.title', 'Pipes'),
-'nzSafeNull.whenToUse': localize('nzSafeNull.whenToUse', '- After introducing Pipe, use it like angular\'s default Pipe'),
-'nzSafeNull.description': localize('nzSafeNull.description', '\nNG-ZORRO experiments are features that are released but not yet considered stable or production ready\nDevelopers and users can opt-in into these features before they are fully released. But breaking changes may occur with any release.\n'),
-'nzSafeNull.replace.description': localize('nzSafeNull.replace.description', 'Replace character'),
-'nzBytes.title': localize('nzBytes.title', 'Pipes'),
-'nzBytes.whenToUse': localize('nzBytes.whenToUse', '- After introducing Pipe, use it like angular\'s default Pipe'),
-'nzBytes.description': localize('nzBytes.description', '\nNG-ZORRO experiments are features that are released but not yet considered stable or production ready\nDevelopers and users can opt-in into these features before they are fully released. But breaking changes may occur with any release.\n'),
-'nzBytes.decimal.description': localize('nzBytes.decimal.description', 'Decimal'),
-'nzBytes.from.description': localize('nzBytes.from.description', 'Unit of current value'),
-'nzBytes.to.description': localize('nzBytes.to.description', 'Units converted to target value'),
-'nzToCssUnit.title': localize('nzToCssUnit.title', 'Pipes'),
-'nzToCssUnit.whenToUse': localize('nzToCssUnit.whenToUse', '- After introducing Pipe, use it like angular\'s default Pipe'),
-'nzToCssUnit.description': localize('nzToCssUnit.description', '\nNG-ZORRO experiments are features that are released but not yet considered stable or production ready\nDevelopers and users can opt-in into these features before they are fully released. But breaking changes may occur with any release.\n'),
-'nzToCssUnit.defaultUnit.description': localize('nzToCssUnit.defaultUnit.description', 'Default Unit'),
-'nzEllipsis.title': localize('nzEllipsis.title', 'Pipes'),
-'nzEllipsis.whenToUse': localize('nzEllipsis.whenToUse', '- After introducing Pipe, use it like angular\'s default Pipe'),
-'nzEllipsis.description': localize('nzEllipsis.description', '\nNG-ZORRO experiments are features that are released but not yet considered stable or production ready\nDevelopers and users can opt-in into these features before they are fully released. But breaking changes may occur with any release.\n'),
-'nzEllipsis.length.description': localize('nzEllipsis.length.description', 'Truncate length'),
-'nzEllipsis.suffix.description': localize('nzEllipsis.suffix.description', 'Replace character'),
-'nzAggregate.title': localize('nzAggregate.title', 'Pipes'),
-'nzAggregate.whenToUse': localize('nzAggregate.whenToUse', '- After introducing Pipe, use it like angular\'s default Pipe'),
-'nzAggregate.description': localize('nzAggregate.description', '\nNG-ZORRO experiments are features that are released but not yet considered stable or production ready\nDevelopers and users can opt-in into these features before they are fully released. But breaking changes may occur with any release.\n'),
-'nzAggregate.method.description': localize('nzAggregate.method.description', 'Aggregation'),
-'nzSanitizer.title': localize('nzSanitizer.title', 'Pipes'),
-'nzSanitizer.whenToUse': localize('nzSanitizer.whenToUse', '- After introducing Pipe, use it like angular\'s default Pipe'),
-'nzSanitizer.description': localize('nzSanitizer.description', '\nNG-ZORRO experiments are features that are released but not yet considered stable or production ready\nDevelopers and users can opt-in into these features before they are fully released. But breaking changes may occur with any release.\n'),
-'nzSanitizer.type.description': localize('nzSanitizer.type.description', 'sanitizer type'),
 'nz-popconfirm.title': localize('nz-popconfirm.title', 'Popconfirm'),
 'nz-popconfirm.whenToUse': localize('nz-popconfirm.whenToUse', 'A simple and compact dialog used for asking for user confirmation.'),
 'nz-popconfirm.description': localize('nz-popconfirm.description', 'A simple and compact confirmation dialog of an action.'),
@@ -952,23 +941,11 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-popover.nzPopoverMouseLeaveDelay.description': localize('nz-popover.nzPopoverMouseLeaveDelay.description', 'Delay in seconds, before popover is hidden on mouse leave'),
 'nz-popover.nzPopoverOverlayClassName.description': localize('nz-popover.nzPopoverOverlayClassName.description', 'Class name of the popover card'),
 'nz-popover.nzPopoverOverlayStyle.description': localize('nz-popover.nzPopoverOverlayStyle.description', 'Style of the popover card'),
-'nz-popover.nzPopoverBackdrop.description': localize('nz-popover.nzPopoverBackdrop.description', 'whether or not the overlay should attach a backdrop'),
 'nz-progress.title': localize('nz-progress.title', 'Progress'),
 'nz-progress.whenToUse': localize('nz-progress.whenToUse', 'If it will take a long time to complete an operation, you can use `Progress` to show the current progress and status.'),
-'nz-progress.description': localize('nz-progress.description', 'Display the current progress of an operation flow.'),
-'nz-progress.nzType.description': localize('nz-progress.nzType.description', 'to set the type'),
-'nz-progress.nzFormat.description': localize('nz-progress.nzFormat.description', 'template function of the content'),
-'nz-progress.nzPercent.description': localize('nz-progress.nzPercent.description', 'to set the completion percentage'),
-'nz-progress.nzShowInfo.description': localize('nz-progress.nzShowInfo.description', 'whether to display the progress value and the status icon'),
-'nz-progress.nzStatus.description': localize('nz-progress.nzStatus.description', 'to set the status of the Progress'),
-'nz-progress.nzStrokeLinecap.description': localize('nz-progress.nzStrokeLinecap.description', 'to set the style of the progress linecap'),
-'nz-progress.nzStrokeColor.description': localize('nz-progress.nzStrokeColor.description', 'color of progress bar, render linear-gradient when passing an object'),
-'nz-progress.nzSuccessPercent.description': localize('nz-progress.nzSuccessPercent.description', 'segmented success percent'),
-'nz-progress.nzStrokeWidth.description': localize('nz-progress.nzStrokeWidth.description', 'to set the width of the dashboard progress bar, unit: percentage of the canvas width'),
+'nz-progress.description': localize('nz-progress.description', '| Property             | Description                                                          | Type                                                                                   | Default                    |\n| -------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------- | --- |\n| `[nzType]`           | to set the type                                                      | `\'line\' \| \'circle\' \| \'dashboard\'`                                                    | `\'line\'`                   |\n| `[nzFormat]`         | template function of the content                                     | `(percent: number) => string \| TemplateRef<{ $implicit: number }>`                    | `percent => percent + \'%\'` |\n| `[nzPercent]`        | to set the completion percentage                                     | `number`                                                                               | `0`                        |\n| `[nzShowInfo]`       | whether to display the progress value and the status icon            | `boolean`                                                                              | `true`                     | ✅  |\n| `[nzStatus]`         | to set the status of the Progress                                    | `\'success\' \| \'exception\' \| \'active\' \| \'normal\'`                                     | -                          |\n| `[nzStrokeLinecap]`  | to set the style of the progress linecap                             | `\'round\' \| \'square\'`                                                                  | `\'round\'`                  | ✅  |\n| `[nzStrokeColor]`    | color of progress bar, render linear-gradient when passing an object | `string \| { from: string; to: string: direction: string; [percent: string]: string }` | -                          | ✅  |\n| `[nzSuccessPercent]` | segmented success percent                                            | `number`                                                                               | 0                          |'),
+'nz-progress.nzStrokeWidth.description': localize('nz-progress.nzStrokeWidth.description', 'to set the width of the progress bar, unit: `px`'),
 'nz-progress.nzSteps.description': localize('nz-progress.nzSteps.description', 'the total step count'),
-'nz-progress.nzWidth.description': localize('nz-progress.nzWidth.description', 'to set the canvas width of the dashboard progress bar, unit: `px`'),
-'nz-progress.nzGapDegree.description': localize('nz-progress.nzGapDegree.description', 'the gap degree of half circle, 0 ~ 360'),
-'nz-progress.nzGapPosition.description': localize('nz-progress.nzGapPosition.description', 'the gap position'),
 'nz-qrcode.title': localize('nz-qrcode.title', 'QRCode'),
 'nz-qrcode.whenToUse': localize('nz-qrcode.whenToUse', 'Used when the link needs to be converted into a QR Code.'),
 'nz-qrcode.description': localize('nz-qrcode.description', 'When To Use'),
@@ -1146,7 +1123,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-slider.nzMax.description': localize('nz-slider.nzMax.description', 'The maximum value the slider can slide to'),
 'nz-slider.nzMin.description': localize('nz-slider.nzMin.description', 'The minimum value the slider can slide to.'),
 'nz-slider.nzRange.description': localize('nz-slider.nzRange.description', 'dual thumb mode'),
-'nz-slider.nzStep.description': localize('nz-slider.nzStep.description', 'The granularity the slider can step through values. Must greater than 0, and be divided by (max - min) . When  `marks` no null, `step` can be `null`.'),
+'nz-slider.nzStep.description': localize('nz-slider.nzStep.description', 'The granularity the slider can step through values. Must greater than 0, and be divided by (max - min) . When `marks` no null, `step` can be `null`.'),
 'nz-slider.nzTipFormatter.description': localize('nz-slider.nzTipFormatter.description', 'Slider will pass its value to `tipFormatter`, and display its value in Tooltip, and hide Tooltip when return value is null.'),
 'nz-slider.ngModel.description': localize('nz-slider.ngModel.description', 'The value of slider. When `range` is `false`, use `number`, otherwise, use `[number, number]`'),
 'nz-slider.nzVertical.description': localize('nz-slider.nzVertical.description', 'If true, the slider will be vertical.'),
@@ -2758,6 +2735,53 @@ export const DATA = [
     "doc": "/components/tooltip/en",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tooltip",
     "snippet": "<span __$1>$2</span>"
+  },
+  {
+    "type": "component",
+    "selector": "nz-affix",
+    "types": {},
+    "properties": [
+      {
+        "name": "nzOffsetBottom",
+        "inputType": 0,
+        "description": "nz-affix.nzOffsetBottom.description",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": ""
+      },
+      {
+        "name": "nzOffsetTop",
+        "inputType": 0,
+        "description": "nz-affix.nzOffsetTop.description",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`0`",
+        "pureDefault": "0"
+      },
+      {
+        "name": "nzTarget",
+        "inputType": 0,
+        "description": "nz-affix.nzTarget.description",
+        "type": "string",
+        "typeRaw": "`string | HTMLElement`",
+        "default": "`window`",
+        "pureDefault": "window"
+      },
+      {
+        "name": "nzChange",
+        "inputType": 1,
+        "description": "nz-affix.nzChange.description",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<boolean>`",
+        "default": ""
+      }
+    ],
+    "lib": "ng-zorro-antd",
+    "title": "nz-affix.title",
+    "description": "nz-affix.description",
+    "whenToUse": "nz-affix.whenToUse",
+    "doc": "/components/affix/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/affix"
   },
   {
     "type": "component",
@@ -7333,6 +7357,70 @@ export const DATA = [
     "whenToUse": "nzGraphEdge.whenToUse",
     "doc": "/components/graph/en",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/graph"
+  },
+  {
+    "type": "component",
+    "selector": "nz-hashCode",
+    "types": {},
+    "properties": [
+      {
+        "name": "nzValue",
+        "inputType": 0,
+        "description": "nz-hashCode.nzValue.description",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
+      },
+      {
+        "name": "nzTitle",
+        "inputType": 0,
+        "description": "nz-hashCode.nzTitle.description",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": "`HashCode`",
+        "pureDefault": "HashCode"
+      },
+      {
+        "name": "nzLogo",
+        "inputType": 0,
+        "description": "nz-hashCode.nzLogo.description",
+        "type": "TemplateRef",
+        "typeRaw": "`TemplateRef<void> | string`",
+        "default": ""
+      },
+      {
+        "name": "nzMode",
+        "inputType": 0,
+        "description": "nz-hashCode.nzMode.description",
+        "type": "string",
+        "typeRaw": "`single | double | strip | rect`",
+        "default": "`double`",
+        "pureDefault": "double"
+      },
+      {
+        "name": "nzType",
+        "inputType": 0,
+        "description": "nz-hashCode.nzType.description",
+        "type": "string",
+        "typeRaw": "`defalut | primary`",
+        "default": "`primary`",
+        "pureDefault": "primary"
+      },
+      {
+        "name": "nzOnCopy",
+        "inputType": 1,
+        "description": "nz-hashCode.nzOnCopy.description",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<string>`",
+        "default": ""
+      }
+    ],
+    "lib": "ng-zorro-antd",
+    "title": "nz-hashCode.title",
+    "description": "nz-hashCode.description",
+    "whenToUse": "nz-hashCode.whenToUse",
+    "doc": "/components/hash-code/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/hash-code"
   },
   {
     "type": "directive",
@@ -12475,171 +12563,6 @@ export const DATA = [
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/pagination"
   },
   {
-    "type": "pipe",
-    "selector": "nzSafeNull",
-    "types": {},
-    "properties": [
-      {
-        "name": "replace",
-        "inputType": 0,
-        "description": "nzSafeNull.replace.description",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": "''",
-        "pureDefault": ""
-      }
-    ],
-    "lib": "ng-zorro-antd",
-    "title": "nzSafeNull.title",
-    "description": "nzSafeNull.description",
-    "whenToUse": "nzSafeNull.whenToUse",
-    "doc": "/components/pipes/en",
-    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/pipes"
-  },
-  {
-    "type": "pipe",
-    "selector": "nzBytes",
-    "types": {},
-    "properties": [
-      {
-        "name": "decimal",
-        "inputType": 0,
-        "description": "nzBytes.decimal.description",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "'0'",
-        "pureDefault": "0"
-      },
-      {
-        "name": "from",
-        "inputType": 0,
-        "description": "nzBytes.from.description",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": "'B'",
-        "pureDefault": "B"
-      },
-      {
-        "name": "to",
-        "inputType": 0,
-        "description": "nzBytes.to.description",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": "''",
-        "pureDefault": ""
-      }
-    ],
-    "lib": "ng-zorro-antd",
-    "title": "nzBytes.title",
-    "description": "nzBytes.description",
-    "whenToUse": "nzBytes.whenToUse",
-    "doc": "/components/pipes/en",
-    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/pipes"
-  },
-  {
-    "type": "pipe",
-    "selector": "nzToCssUnit",
-    "types": {},
-    "properties": [
-      {
-        "name": "defaultUnit",
-        "inputType": 0,
-        "description": "nzToCssUnit.defaultUnit.description",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": "'px'",
-        "pureDefault": "px"
-      }
-    ],
-    "lib": "ng-zorro-antd",
-    "title": "nzToCssUnit.title",
-    "description": "nzToCssUnit.description",
-    "whenToUse": "nzToCssUnit.whenToUse",
-    "doc": "/components/pipes/en",
-    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/pipes"
-  },
-  {
-    "type": "pipe",
-    "selector": "nzEllipsis",
-    "types": {},
-    "properties": [
-      {
-        "name": "length",
-        "inputType": 0,
-        "description": "nzEllipsis.length.description",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "''",
-        "pureDefault": ""
-      },
-      {
-        "name": "suffix",
-        "inputType": 0,
-        "description": "nzEllipsis.suffix.description",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": "''",
-        "pureDefault": ""
-      }
-    ],
-    "lib": "ng-zorro-antd",
-    "title": "nzEllipsis.title",
-    "description": "nzEllipsis.description",
-    "whenToUse": "nzEllipsis.whenToUse",
-    "doc": "/components/pipes/en",
-    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/pipes"
-  },
-  {
-    "type": "pipe",
-    "selector": "nzAggregate",
-    "types": {},
-    "properties": [
-      {
-        "name": "method",
-        "inputType": 0,
-        "description": "nzAggregate.method.description",
-        "type": "Enum",
-        "typeRaw": "`'sum' | 'max' | 'min' | 'avg'`",
-        "default": "''",
-        "typeDefinition": [
-          "sum",
-          "max",
-          "min",
-          "avg"
-        ],
-        "pureDefault": ""
-      }
-    ],
-    "lib": "ng-zorro-antd",
-    "title": "nzAggregate.title",
-    "description": "nzAggregate.description",
-    "whenToUse": "nzAggregate.whenToUse",
-    "doc": "/components/pipes/en",
-    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/pipes"
-  },
-  {
-    "type": "pipe",
-    "selector": "nzSanitizer",
-    "types": {},
-    "properties": [
-      {
-        "name": "type",
-        "inputType": 0,
-        "description": "nzSanitizer.type.description",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": "'html'",
-        "pureDefault": "html"
-      }
-    ],
-    "lib": "ng-zorro-antd",
-    "title": "nzSanitizer.title",
-    "description": "nzSanitizer.description",
-    "whenToUse": "nzSanitizer.whenToUse",
-    "doc": "/components/pipes/en",
-    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/pipes"
-  },
-  {
     "type": "directive",
     "selector": "nz-popconfirm",
     "types": {},
@@ -13273,15 +13196,6 @@ export const DATA = [
         "type": "object",
         "typeRaw": "`object`",
         "default": ""
-      },
-      {
-        "name": "nzPopoverBackdrop",
-        "inputType": 0,
-        "description": "nz-popover.nzPopoverBackdrop.description",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false"
       }
     ],
     "lib": "ng-zorro-antd",
@@ -13296,91 +13210,6 @@ export const DATA = [
     "selector": "nz-progress",
     "types": {},
     "properties": [
-      {
-        "name": "nzType",
-        "inputType": 0,
-        "description": "nz-progress.nzType.description",
-        "type": "Enum",
-        "typeRaw": "`'line' | 'circle' | 'dashboard'`",
-        "default": "`'line'`",
-        "typeDefinition": [
-          "line",
-          "circle",
-          "dashboard"
-        ],
-        "pureDefault": "line"
-      },
-      {
-        "name": "nzFormat",
-        "inputType": 0,
-        "description": "nz-progress.nzFormat.description",
-        "type": "function",
-        "typeRaw": "`(percent: number) => string | TemplateRef<{ $implicit: number }>`",
-        "default": "`percent => percent + '%'`",
-        "pureDefault": "percent => percent + '%"
-      },
-      {
-        "name": "nzPercent",
-        "inputType": 0,
-        "description": "nz-progress.nzPercent.description",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "`0`",
-        "pureDefault": "0"
-      },
-      {
-        "name": "nzShowInfo",
-        "inputType": 0,
-        "description": "nz-progress.nzShowInfo.description",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`true`",
-        "pureDefault": "true"
-      },
-      {
-        "name": "nzStatus",
-        "inputType": 0,
-        "description": "nz-progress.nzStatus.description",
-        "type": "Enum",
-        "typeRaw": "`'success' | 'exception' | 'active' | 'normal'`",
-        "default": "",
-        "typeDefinition": [
-          "success",
-          "exception",
-          "active",
-          "normal"
-        ]
-      },
-      {
-        "name": "nzStrokeLinecap",
-        "inputType": 0,
-        "description": "nz-progress.nzStrokeLinecap.description",
-        "type": "Enum",
-        "typeRaw": "`'round' | 'square'`",
-        "default": "`'round'`",
-        "typeDefinition": [
-          "round",
-          "square"
-        ],
-        "pureDefault": "round"
-      },
-      {
-        "name": "nzStrokeColor",
-        "inputType": 0,
-        "description": "nz-progress.nzStrokeColor.description",
-        "type": "string",
-        "typeRaw": "`string | { from: string; to: string: direction: string; [percent: string]: string }`",
-        "default": ""
-      },
-      {
-        "name": "nzSuccessPercent",
-        "inputType": 0,
-        "description": "nz-progress.nzSuccessPercent.description",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "0",
-        "pureDefault": "0"
-      },
       {
         "name": "nzStrokeWidth",
         "inputType": 0,
@@ -13399,69 +13228,26 @@ export const DATA = [
         "default": ""
       },
       {
-        "name": "nzWidth",
-        "inputType": 0,
-        "description": "nz-progress.nzWidth.description",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "`132`",
-        "pureDefault": "132"
-      },
-      {
         "name": "nzStrokeWidth",
         "inputType": 0,
         "description": "nz-progress.nzStrokeWidth.description",
         "type": "number",
         "typeRaw": "`number`",
-        "default": "`6`",
-        "pureDefault": "6"
+        "default": "`8`",
+        "pureDefault": "8"
       },
       {
-        "name": "nzWidth",
+        "name": "nzSteps",
         "inputType": 0,
-        "description": "nz-progress.nzWidth.description",
+        "description": "nz-progress.nzSteps.description",
         "type": "number",
         "typeRaw": "`number`",
-        "default": "`132`",
-        "pureDefault": "132"
-      },
-      {
-        "name": "nzStrokeWidth",
-        "inputType": 0,
-        "description": "nz-progress.nzStrokeWidth.description",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "`6`",
-        "pureDefault": "6"
-      },
-      {
-        "name": "nzGapDegree",
-        "inputType": 0,
-        "description": "nz-progress.nzGapDegree.description",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "`0`",
-        "pureDefault": "0"
-      },
-      {
-        "name": "nzGapPosition",
-        "inputType": 0,
-        "description": "nz-progress.nzGapPosition.description",
-        "type": "Enum",
-        "typeRaw": "`'top' | 'right' | 'bottom' | 'left'`",
-        "default": "`'top'`",
-        "typeDefinition": [
-          "top",
-          "right",
-          "bottom",
-          "left"
-        ],
-        "pureDefault": "top"
+        "default": ""
       }
     ],
+    "description": "nz-progress.description",
     "lib": "ng-zorro-antd",
     "title": "nz-progress.title",
-    "description": "nz-progress.description",
     "whenToUse": "nz-progress.whenToUse",
     "doc": "/components/progress/en",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/progress"
@@ -14682,9 +14468,8 @@ export const DATA = [
           "inputType": 0,
           "description": "nz-skeleton.size.description",
           "type": "number",
-          "typeRaw": "`number",
-          "default": "\\ 'large' | 'small' | 'default'`",
-          "pureDefault": "\\ 'large' | 'small' | 'default'`"
+          "typeRaw": "`number | 'large' | 'small' | 'default'`",
+          "default": ""
         },
         {
           "name": "shape",
@@ -14933,7 +14718,7 @@ export const DATA = [
         "inputType": 1,
         "description": "nz-slider.nzOnAfterChange.description",
         "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<number[]  |  number>`",
+        "typeRaw": "`EventEmitter<number[] | number>`",
         "default": ""
       },
       {
@@ -14941,7 +14726,7 @@ export const DATA = [
         "inputType": 1,
         "description": "nz-slider.ngModelChange.description",
         "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<number[]  |  number>`",
+        "typeRaw": "`EventEmitter<number[] | number>`",
         "default": ""
       },
       {
@@ -15384,7 +15169,7 @@ export const DATA = [
         "inputType": 0,
         "description": "nz-step.nzIcon.description",
         "type": "string",
-        "typeRaw": "`string | string[] | Set<string> | { [klass: string]: any; }`  |  `TemplateRef<void>`",
+        "typeRaw": "`string | string[] | Set<string> | { [klass: string]: any; }` | `TemplateRef<void>`",
         "default": ""
       },
       {

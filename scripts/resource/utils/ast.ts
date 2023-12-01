@@ -147,7 +147,7 @@ export class AST {
   }
 
   private finds(start: number, end: number, cb: (token: Token) => boolean): number[] {
-    const list = [];
+    const list: number[] = [];
     this.tokens.slice(start, end === -1 ? this.tokens.length : end).forEach((token, idx) => {
       if (cb(token)) {
         list.push(start + idx);
