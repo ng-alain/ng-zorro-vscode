@@ -2300,6 +2300,7 @@ export const DATA = [
     "type": "directive",
     "selector": "nz-row",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzAlign",
@@ -2361,6 +2362,7 @@ export const DATA = [
     "type": "directive",
     "selector": "nz-col",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzFlex",
@@ -2595,6 +2597,7 @@ export const DATA = [
     "type": "directive",
     "selector": "nz-tooltip",
     "types": {},
+    "standalone": true,
     "properties": [
       {
         "name": "nzTooltipArrowPointAtCenter",
@@ -2740,6 +2743,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-affix",
     "types": {},
+    "standalone": true,
     "properties": [
       {
         "name": "nzOffsetBottom",
@@ -2787,6 +2791,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-alert",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzBanner",
@@ -2897,6 +2902,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-anchor",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzAffix",
@@ -2995,6 +3001,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-link",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzHref",
@@ -3032,6 +3039,7 @@ export const DATA = [
     "type": "directive",
     "selector": "nzAutocomplete",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzAutocomplete",
@@ -3053,6 +3061,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-autocomplete",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzBackfill",
@@ -3127,6 +3136,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-auto-option",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzValue",
@@ -3166,6 +3176,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-avatar",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzIcon",
@@ -3264,6 +3275,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-avatar-group",
     "types": {},
+    "standalone": false,
     "properties": [],
     "lib": "ng-zorro-antd",
     "title": "nz-avatar-group.title",
@@ -3276,6 +3288,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-back-top",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzTemplate",
@@ -3332,6 +3345,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-badge",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzStandalone",
@@ -3454,6 +3468,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-ribbon",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzColor",
@@ -3492,6 +3507,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-breadcrumb",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzSeparator",
@@ -3541,6 +3557,7 @@ export const DATA = [
     "type": "directive",
     "selector": "nz-button",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "disabled",
@@ -3649,6 +3666,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-button-group",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzSize",
@@ -3676,6 +3694,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-calendar",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "ngModel",
@@ -3777,6 +3796,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-card",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzActions",
@@ -3882,6 +3902,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-card-meta",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzAvatar",
@@ -3919,6 +3940,7 @@ export const DATA = [
     "type": "directive",
     "selector": "nz-card-grid",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzHoverable",
@@ -3941,6 +3963,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-card-tab",
     "types": {},
+    "standalone": false,
     "properties": [],
     "description": "nz-card-tab.description",
     "lib": "ng-zorro-antd",
@@ -3953,6 +3976,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-carousel",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzAutoPlay",
@@ -4057,6 +4081,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-cascader",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "ngModel",
@@ -4351,6 +4376,7 @@ export const DATA = [
     "type": "directive",
     "selector": "nz-checkbox",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzId",
@@ -4441,6 +4467,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-checkbox-group",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "ngModel",
@@ -4481,6 +4508,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-checkbox-wrapper",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzOnChange",
@@ -4502,6 +4530,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-code-editor",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzEditorMode",
@@ -4577,6 +4606,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-collapse",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzAccordion",
@@ -4630,6 +4660,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-collapse-panel",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzDisabled",
@@ -4753,6 +4784,7 @@ export const DATA = [
         }
       ]
     },
+    "standalone": false,
     "properties": [
       {
         "name": "nzFormat",
@@ -4898,6 +4930,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-color-block",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzColor",
@@ -4937,6 +4970,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-comment",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzAuthor",
@@ -4966,6 +5000,7 @@ export const DATA = [
     "type": "directive",
     "selector": "nz-comment-avatar",
     "types": {},
+    "standalone": false,
     "properties": [],
     "description": "nz-comment-avatar.description",
     "lib": "ng-zorro-antd",
@@ -4978,6 +5013,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-comment-content",
     "types": {},
+    "standalone": false,
     "properties": [],
     "description": "nz-comment-content.description",
     "lib": "ng-zorro-antd",
@@ -4990,6 +5026,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-comment-action",
     "types": {},
+    "standalone": false,
     "properties": [],
     "description": "nz-comment-action.description",
     "lib": "ng-zorro-antd",
@@ -5002,6 +5039,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-cron-expression",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzType",
@@ -5086,6 +5124,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-date-picker",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzDateRender",
@@ -5420,6 +5459,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-range-picker",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzShowTime",
@@ -5749,6 +5789,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-descriptions",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzTitle",
@@ -5820,6 +5861,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-descriptions-item",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzTitle",
@@ -5851,6 +5893,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-divider",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzDashed",
@@ -5917,6 +5960,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-drawer",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzClosable",
@@ -6122,6 +6166,7 @@ export const DATA = [
     "type": "directive",
     "selector": "nz-dropdown",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzDropdownMenu",
@@ -6224,6 +6269,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-dropdown-menu",
     "types": {},
+    "standalone": false,
     "properties": [],
     "description": "nz-dropdown-menu.description",
     "lib": "ng-zorro-antd",
@@ -6236,6 +6282,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-empty",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzNotFoundImage",
@@ -6273,6 +6320,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-image",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzSrc",
@@ -6347,6 +6395,7 @@ export const DATA = [
     "type": "directive",
     "selector": "nz-form",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzLayout",
@@ -6447,6 +6496,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-form-item",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzAlign",
@@ -6572,6 +6622,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-form-label",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzFlex",
@@ -6870,6 +6921,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-form-control",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzFlex",
@@ -7186,6 +7238,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-form-split",
     "types": {},
+    "standalone": false,
     "properties": [],
     "description": "nz-form-split.description",
     "lib": "ng-zorro-antd",
@@ -7198,6 +7251,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-form-text",
     "types": {},
+    "standalone": false,
     "properties": [],
     "description": "nz-form-text.description",
     "lib": "ng-zorro-antd",
@@ -7210,6 +7264,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-graph",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzGraphData",
@@ -7259,6 +7314,7 @@ export const DATA = [
     "type": "directive",
     "selector": "nz-graph-zoom",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzZoom",
@@ -7326,6 +7382,7 @@ export const DATA = [
     "type": "directive",
     "selector": "nzGraphNode",
     "types": {},
+    "standalone": false,
     "properties": [],
     "description": "nzGraphNode.description",
     "lib": "ng-zorro-antd",
@@ -7338,6 +7395,7 @@ export const DATA = [
     "type": "directive",
     "selector": "nzGraphGroupNode",
     "types": {},
+    "standalone": false,
     "properties": [],
     "description": "nzGraphGroupNode.description",
     "lib": "ng-zorro-antd",
@@ -7350,6 +7408,7 @@ export const DATA = [
     "type": "directive",
     "selector": "nzGraphEdge",
     "types": {},
+    "standalone": false,
     "properties": [],
     "description": "nzGraphEdge.description",
     "lib": "ng-zorro-antd",
@@ -7362,6 +7421,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-hashCode",
     "types": {},
+    "standalone": true,
     "properties": [
       {
         "name": "nzValue",
@@ -7426,6 +7486,7 @@ export const DATA = [
     "type": "directive",
     "selector": "nz-icon",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzType",
@@ -10668,6 +10729,7 @@ export const DATA = [
     "type": "directive",
     "selector": "nz-image",
     "types": {},
+    "standalone": true,
     "properties": [
       {
         "name": "nzSrc",
@@ -10741,6 +10803,7 @@ export const DATA = [
     "type": "directive",
     "selector": "nz-input",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzSize",
@@ -10851,6 +10914,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-input-group",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzAddOnAfter",
@@ -10931,6 +10995,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-textarea-count",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzMaxCharacterCount",
@@ -10961,6 +11026,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-input-number",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "ngModel",
@@ -11166,6 +11232,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-input-number-group",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzAddOnAfter",
@@ -11262,6 +11329,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-sider",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzBreakpoint",
@@ -11373,6 +11441,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-list",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzBordered",
@@ -11457,6 +11526,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-list-empty",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzNoResult",
@@ -11478,6 +11548,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-list-header",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzNoFlex",
@@ -11500,6 +11571,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-list-footer",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzNoFlex",
@@ -11522,6 +11594,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-list-pagination",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzNoFlex",
@@ -11544,6 +11617,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-list-load-more",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzNoFlex",
@@ -11566,6 +11640,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-list-item",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzNoFlex",
@@ -11588,6 +11663,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-list-item-meta",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzAvatar",
@@ -11625,6 +11701,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-mention",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzMentionTrigger",
@@ -11740,6 +11817,7 @@ export const DATA = [
     "type": "component",
     "selector": "nzMentionTrigger",
     "types": {},
+    "standalone": false,
     "properties": [],
     "description": "nzMentionTrigger.description",
     "lib": "ng-zorro-antd",
@@ -11752,6 +11830,7 @@ export const DATA = [
     "type": "component",
     "selector": "nzMentionSuggestion",
     "types": {},
+    "standalone": false,
     "properties": [],
     "description": "nzMentionSuggestion.description",
     "lib": "ng-zorro-antd",
@@ -11765,6 +11844,7 @@ export const DATA = [
     "type": "directive",
     "selector": "nz-menu",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzInlineCollapsed",
@@ -11839,6 +11919,7 @@ export const DATA = [
     "type": "directive",
     "selector": "nz-menu-item",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzDisabled",
@@ -11898,6 +11979,7 @@ export const DATA = [
     "type": "directive",
     "selector": "nz-submenu",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzPlacement",
@@ -11979,6 +12061,7 @@ export const DATA = [
     "type": "directive",
     "selector": "nz-menu-group",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzTitle",
@@ -12000,6 +12083,7 @@ export const DATA = [
     "type": "directive",
     "selector": "nz-menu-divider",
     "types": {},
+    "standalone": false,
     "properties": [],
     "description": "nz-menu-divider.description",
     "lib": "ng-zorro-antd",
@@ -12012,6 +12096,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-modal",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzAfterOpen",
@@ -12327,6 +12412,7 @@ export const DATA = [
     "type": "directive",
     "selector": "nzModalTitle",
     "types": {},
+    "standalone": false,
     "properties": [],
     "description": "nzModalTitle.description",
     "lib": "ng-zorro-antd",
@@ -12339,6 +12425,7 @@ export const DATA = [
     "type": "directive",
     "selector": "nzModalContent",
     "types": {},
+    "standalone": false,
     "properties": [],
     "description": "nzModalContent.description",
     "lib": "ng-zorro-antd",
@@ -12351,6 +12438,7 @@ export const DATA = [
     "type": "directive",
     "selector": "nzModalFooter",
     "types": {},
+    "standalone": false,
     "properties": [],
     "description": "nzModalFooter.description",
     "lib": "ng-zorro-antd",
@@ -12364,6 +12452,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-page-header",
     "types": {},
+    "standalone": true,
     "properties": [
       {
         "name": "nzGhost",
@@ -12419,6 +12508,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-pagination",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzTotal",
@@ -12566,6 +12656,7 @@ export const DATA = [
     "type": "directive",
     "selector": "nz-popconfirm",
     "types": {},
+    "standalone": true,
     "properties": [
       {
         "name": "nzTooltipArrowPointAtCenter",
@@ -12942,6 +13033,7 @@ export const DATA = [
     "type": "directive",
     "selector": "nz-popover",
     "types": {},
+    "standalone": true,
     "properties": [
       {
         "name": "nzTooltipArrowPointAtCenter",
@@ -13209,6 +13301,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-progress",
     "types": {},
+    "standalone": true,
     "properties": [
       {
         "name": "nzStrokeWidth",
@@ -13256,6 +13349,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-qrcode",
     "types": {},
+    "standalone": true,
     "properties": [
       {
         "name": "nzValue",
@@ -13370,6 +13464,7 @@ export const DATA = [
     "type": "directive",
     "selector": "nz-radio",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzAutoFocus",
@@ -13442,6 +13537,7 @@ export const DATA = [
     "type": "directive",
     "selector": "nz-radio-button",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzAutoFocus",
@@ -13499,6 +13595,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-radio-group",
     "types": {},
+    "standalone": true,
     "properties": [
       {
         "name": "ngModel",
@@ -13573,6 +13670,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-rate",
     "types": {},
+    "standalone": true,
     "properties": [
       {
         "name": "nzAllowClear",
@@ -13712,6 +13810,7 @@ export const DATA = [
     "type": "directive",
     "selector": "nz-resizable",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzBounds",
@@ -13850,6 +13949,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-resize-handle",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzDirection",
@@ -13881,6 +13981,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-resize-handles",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzDirections",
@@ -13903,6 +14004,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-result",
     "types": {},
+    "standalone": true,
     "properties": [
       {
         "name": "nzTitle",
@@ -13967,6 +14069,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-select",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzId",
@@ -14368,6 +14471,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-option",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzDisabled",
@@ -14441,6 +14545,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-option-group",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzLabel",
@@ -14513,6 +14618,7 @@ export const DATA = [
         }
       ]
     },
+    "standalone": true,
     "properties": [
       {
         "name": "nzActive",
@@ -14583,6 +14689,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-slider",
     "types": {},
+    "standalone": true,
     "properties": [
       {
         "name": "nzDisabled",
@@ -14755,6 +14862,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-space",
     "types": {},
+    "standalone": true,
     "properties": [
       {
         "name": "nzSize",
@@ -14827,6 +14935,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-spin",
     "types": {},
+    "standalone": true,
     "properties": [
       {
         "name": "nzDelay",
@@ -14897,6 +15006,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-statistic",
     "types": {},
+    "standalone": true,
     "properties": [
       {
         "name": "nzPrefix",
@@ -14958,6 +15068,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-countdown",
     "types": {},
+    "standalone": true,
     "properties": [
       {
         "name": "nzFormat",
@@ -15028,6 +15139,7 @@ export const DATA = [
     "type": "component",
     "selector": "nzFormat",
     "types": {},
+    "standalone": false,
     "properties": [],
     "lib": "ng-zorro-antd",
     "title": "nzFormat.title",
@@ -15040,6 +15152,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-steps",
     "types": {},
+    "standalone": true,
     "properties": [
       {
         "name": "nzType",
@@ -15155,6 +15268,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-step",
     "types": {},
+    "standalone": true,
     "properties": [
       {
         "name": "nzDescription",
@@ -15233,6 +15347,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-switch",
     "types": {},
+    "standalone": true,
     "properties": [
       {
         "name": "nzId",
@@ -15343,6 +15458,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-table",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzData",
@@ -15685,6 +15801,7 @@ export const DATA = [
     "type": "component",
     "selector": "th",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzShowCheckbox",
@@ -15922,6 +16039,7 @@ export const DATA = [
     "type": "component",
     "selector": "td",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzShowCheckbox",
@@ -16098,6 +16216,7 @@ export const DATA = [
     "type": "component",
     "selector": "tr",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzExpand",
@@ -16119,6 +16238,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-filter-trigger",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzDropdownMenu",
@@ -16174,6 +16294,7 @@ export const DATA = [
     "type": "directive",
     "selector": "nz-virtual-scroll",
     "types": {},
+    "standalone": false,
     "properties": [],
     "description": "nz-virtual-scroll.description",
     "lib": "ng-zorro-antd",
@@ -16186,6 +16307,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-tabset",
     "types": {},
+    "standalone": true,
     "properties": [
       {
         "name": "nzSelectedIndex",
@@ -16343,6 +16465,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-tab",
     "types": {},
+    "standalone": true,
     "properties": [
       {
         "name": "nzTitle",
@@ -16414,6 +16537,7 @@ export const DATA = [
     "type": "directive",
     "selector": "nz-tab",
     "types": {},
+    "standalone": false,
     "properties": [],
     "description": "nz-tab.description",
     "lib": "ng-zorro-antd",
@@ -16426,6 +16550,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-tag",
     "types": {},
+    "standalone": true,
     "properties": [
       {
         "name": "nzMode",
@@ -16504,6 +16629,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-time-picker",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzId",
@@ -16801,6 +16927,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-timeline",
     "types": {},
+    "standalone": true,
     "properties": [
       {
         "name": "nzPending",
@@ -16855,6 +16982,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-timeline-item",
     "types": {},
+    "standalone": true,
     "properties": [
       {
         "name": "nzColor",
@@ -16905,6 +17033,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-transfer",
     "types": {},
+    "standalone": true,
     "properties": [
       {
         "name": "nzDataSource",
@@ -17101,6 +17230,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-tree",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzData",
@@ -17422,6 +17552,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-tree-select",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "nzId",
@@ -17758,6 +17889,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-tree-view",
     "types": {},
+    "standalone": true,
     "properties": [
       {
         "name": "nzTreeControl",
@@ -17805,6 +17937,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-tree-virtual-scroll-view",
     "types": {},
+    "standalone": true,
     "properties": [
       {
         "name": "nzTreeControl",
@@ -17879,6 +18012,7 @@ export const DATA = [
     "type": "directive",
     "selector": "nzTreeNodeDef",
     "types": {},
+    "standalone": true,
     "properties": [
       {
         "name": "nzTreeNodeDefWhen",
@@ -17900,6 +18034,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-tree-node",
     "types": {},
+    "standalone": true,
     "properties": [
       {
         "name": "nzTreeNodeToggleRecursive",
@@ -17922,6 +18057,7 @@ export const DATA = [
     "type": "directive",
     "selector": "nzTreeNodePadding",
     "types": {},
+    "standalone": true,
     "properties": [
       {
         "name": "nzTreeNodeToggleRecursive",
@@ -17944,6 +18080,7 @@ export const DATA = [
     "type": "component",
     "selector": "nzTreeNodeIndentLine",
     "types": {},
+    "standalone": true,
     "properties": [
       {
         "name": "nzTreeNodeToggleRecursive",
@@ -17966,6 +18103,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-tree-node-toggle",
     "types": {},
+    "standalone": true,
     "properties": [
       {
         "name": "nzTreeNodeToggleRecursive",
@@ -17988,6 +18126,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-tree-node-option",
     "types": {},
+    "standalone": true,
     "properties": [
       {
         "name": "nzSelected",
@@ -18028,6 +18167,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-tree-node-checkbox",
     "types": {},
+    "standalone": true,
     "properties": [
       {
         "name": "nzChecked",
@@ -18078,6 +18218,7 @@ export const DATA = [
     "type": "directive",
     "selector": "nz-typography",
     "types": {},
+    "standalone": true,
     "properties": [
       {
         "name": "nzContent",
@@ -18242,6 +18383,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-upload",
     "types": {},
+    "standalone": true,
     "properties": [
       {
         "name": "nzAccept",
@@ -18553,6 +18695,7 @@ export const DATA = [
         }
       ]
     },
+    "standalone": false,
     "properties": [
       {
         "name": "nzContent",
@@ -18646,6 +18789,7 @@ export const DATA = [
     "type": "directive",
     "selector": "auto-focus",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "enabled",
@@ -18677,6 +18821,7 @@ export const DATA = [
     "type": "component",
     "selector": "avatar-list",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "size",
@@ -18721,6 +18866,7 @@ export const DATA = [
     "type": "component",
     "selector": "avatar-list-item",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "tips",
@@ -18922,6 +19068,7 @@ export const DATA = [
         }
       ]
     },
+    "standalone": false,
     "properties": [
       {
         "name": "value",
@@ -18961,6 +19108,7 @@ export const DATA = [
     "type": "component",
     "selector": "count-down",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "target",
@@ -18999,6 +19147,7 @@ export const DATA = [
     "type": "directive",
     "selector": "extend",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "ngModelEnd",
@@ -19029,6 +19178,7 @@ export const DATA = [
     "type": "directive",
     "selector": "down-file",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "http-data",
@@ -19107,6 +19257,7 @@ export const DATA = [
     "type": "component",
     "selector": "ellipsis",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "tooltip",
@@ -19163,6 +19314,7 @@ export const DATA = [
     "type": "component",
     "selector": "error-collect",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "freq",
@@ -19194,6 +19346,7 @@ export const DATA = [
     "type": "directive",
     "selector": "error-collect",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "freq",
@@ -19225,6 +19378,7 @@ export const DATA = [
     "type": "component",
     "selector": "exception",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "type",
@@ -19292,6 +19446,7 @@ export const DATA = [
     "type": "component",
     "selector": "footer-toolbar",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "ng-content",
@@ -19330,6 +19485,7 @@ export const DATA = [
     "type": "component",
     "selector": "full-content",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "fullscreen",
@@ -19369,6 +19525,7 @@ export const DATA = [
     "type": "directive",
     "selector": "full-toggle",
     "types": {},
+    "standalone": false,
     "properties": [],
     "description": "full-toggle.description",
     "lib": "@delon/abc",
@@ -19409,6 +19566,7 @@ export const DATA = [
         }
       ]
     },
+    "standalone": false,
     "properties": [
       {
         "name": "links",
@@ -19439,6 +19597,7 @@ export const DATA = [
     "type": "component",
     "selector": "global-footer-item",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "ng-content",
@@ -19477,6 +19636,7 @@ export const DATA = [
     "type": "directive",
     "selector": "let",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "let",
@@ -19498,6 +19658,7 @@ export const DATA = [
     "type": "component",
     "selector": "media",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "type",
@@ -19552,6 +19713,7 @@ export const DATA = [
     "type": "component",
     "selector": "notice-icon",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "data",
@@ -19648,6 +19810,7 @@ export const DATA = [
     "type": "directive",
     "selector": "observeSize",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "observeSize",
@@ -19669,6 +19832,7 @@ export const DATA = [
     "type": "component",
     "selector": "page-header",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "title",
@@ -19844,6 +20008,7 @@ export const DATA = [
     "type": "component",
     "selector": "pdf",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "src",
@@ -19999,6 +20164,7 @@ export const DATA = [
     "type": "component",
     "selector": "qr",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "value",
@@ -20110,6 +20276,7 @@ export const DATA = [
     "type": "component",
     "selector": "quick-menu",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "icon",
@@ -20182,6 +20349,7 @@ export const DATA = [
     "type": "component",
     "selector": "result",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "type",
@@ -20270,6 +20438,7 @@ export const DATA = [
         }
       ]
     },
+    "standalone": false,
     "properties": [
       {
         "name": "i18n",
@@ -20463,6 +20632,7 @@ export const DATA = [
     "type": "component",
     "selector": "se-container",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "gutter",
@@ -20616,6 +20786,7 @@ export const DATA = [
     "type": "directive",
     "selector": "se-container",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "gutter",
@@ -20769,6 +20940,7 @@ export const DATA = [
     "type": "component",
     "selector": "se",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "col",
@@ -20904,6 +21076,7 @@ export const DATA = [
     "type": "component",
     "selector": "se-title",
     "types": {},
+    "standalone": false,
     "properties": [],
     "description": "se-title.description",
     "lib": "@delon/abc",
@@ -20916,6 +21089,7 @@ export const DATA = [
     "type": "directive",
     "selector": "se-title",
     "types": {},
+    "standalone": false,
     "properties": [],
     "description": "se-title.description",
     "lib": "@delon/abc",
@@ -20928,6 +21102,7 @@ export const DATA = [
     "type": "component",
     "selector": "sg-container",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "gutter",
@@ -20994,6 +21169,7 @@ export const DATA = [
     "type": "directive",
     "selector": "sg-container",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "gutter",
@@ -21060,6 +21236,7 @@ export const DATA = [
     "type": "component",
     "selector": "sg",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "col",
@@ -21435,6 +21612,7 @@ export const DATA = [
         }
       ]
     },
+    "standalone": false,
     "properties": [
       {
         "name": "columns",
@@ -21789,6 +21967,7 @@ export const DATA = [
     "type": "component",
     "selector": "sv-container",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "sv-container",
@@ -21914,6 +22093,7 @@ export const DATA = [
     "type": "directive",
     "selector": "sv-container",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "sv-container",
@@ -22039,6 +22219,7 @@ export const DATA = [
     "type": "component",
     "selector": "sv",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "col",
@@ -22140,6 +22321,7 @@ export const DATA = [
     "type": "component",
     "selector": "sv-title",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "prefix",
@@ -22191,6 +22373,7 @@ export const DATA = [
     "type": "directive",
     "selector": "sv-title",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "prefix",
@@ -22242,6 +22425,7 @@ export const DATA = [
     "type": "component",
     "selector": "sv-value",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "prefix",
@@ -22293,6 +22477,7 @@ export const DATA = [
     "type": "component",
     "selector": "tag-select",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "expandable",
@@ -22323,6 +22508,7 @@ export const DATA = [
     "type": "directive",
     "selector": "xlsx",
     "types": {},
+    "standalone": false,
     "properties": [],
     "description": "xlsx.description",
     "lib": "@delon/abc",
@@ -22335,6 +22521,7 @@ export const DATA = [
     "type": "component",
     "selector": "g2-bar",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "repaint",
@@ -22452,6 +22639,7 @@ export const DATA = [
     "type": "component",
     "selector": "g2-card",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "title",
@@ -22522,6 +22710,7 @@ export const DATA = [
     "type": "component",
     "selector": "chart-echarts",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "width",
@@ -22585,6 +22774,7 @@ export const DATA = [
     "type": "component",
     "selector": "g2-custom",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "delay",
@@ -22657,6 +22847,7 @@ export const DATA = [
     "type": "component",
     "selector": "g2-gauge",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "repaint",
@@ -22764,6 +22955,7 @@ export const DATA = [
     "type": "component",
     "selector": "g2-mini-area",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "repaint",
@@ -22919,6 +23111,7 @@ export const DATA = [
     "type": "component",
     "selector": "g2-mini-bar",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "repaint",
@@ -23039,6 +23232,7 @@ export const DATA = [
     "type": "component",
     "selector": "g2-mini-progress",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "target",
@@ -23084,6 +23278,7 @@ export const DATA = [
     "type": "component",
     "selector": "number-info",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "title",
@@ -23171,6 +23366,7 @@ export const DATA = [
     "type": "component",
     "selector": "g2-pie",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "repaint",
@@ -23373,6 +23569,7 @@ export const DATA = [
     "type": "component",
     "selector": "g2-radar",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "repaint",
@@ -23479,6 +23676,7 @@ export const DATA = [
     "type": "component",
     "selector": "g2-single-bar",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "repaint",
@@ -23616,6 +23814,7 @@ export const DATA = [
     "type": "component",
     "selector": "g2-tag-cloud",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "repaint",
@@ -23742,6 +23941,7 @@ export const DATA = [
         }
       ]
     },
+    "standalone": false,
     "properties": [
       {
         "name": "repaint",
@@ -23911,6 +24111,7 @@ export const DATA = [
     "type": "component",
     "selector": "trend",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "colorful",
@@ -23954,6 +24155,7 @@ export const DATA = [
     "type": "component",
     "selector": "g2-water-wave",
     "types": {},
+    "standalone": false,
     "properties": [
       {
         "name": "animate",
@@ -24066,6 +24268,7 @@ export const DATA = [
         }
       ]
     },
+    "standalone": false,
     "properties": [
       {
         "name": "layout",
@@ -24300,6 +24503,7 @@ export const DATA = [
         }
       ]
     },
+    "standalone": false,
     "properties": [
       {
         "name": "layout",
@@ -24487,6 +24691,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-breadcrumb-item",
     "types": {},
+    "standalone": false,
     "properties": [],
     "lib": "ng-zorro-antd",
     "title": "nz-breadcrumb-item.title",

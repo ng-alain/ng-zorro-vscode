@@ -54,6 +54,7 @@ export interface Directive {
    */
   snippet?: string;
   selfClosingTag?: boolean;
+  standalone?: boolean;
   /** 解析后的文档数据 */
   _doc?: MarkdownString;
 }

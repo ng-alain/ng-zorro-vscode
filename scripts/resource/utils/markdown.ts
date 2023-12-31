@@ -125,6 +125,7 @@ function getDirective(): Directive[] {
         type,
         selector,
         types: {},
+        standalone: selectorList[0]?.toLowerCase().includes(':standalone')
       };
       const isSplitTable = COG.SPLIT_PROPERTIES.includes(selector);
       item.properties = getProperties(item, ast.getTable(idx, isSplitTable));

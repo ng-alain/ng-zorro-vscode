@@ -14,6 +14,7 @@ const I18N = {
   optionalValue: localize('optionalValue', 'Optional Value:'),
   defaultValue: localize('defaultValue', 'Default Value:'),
   library: localize('library', 'Library:'),
+  standalone: localize('standalone', '(Standalone)'),
 };
 
 export const CONFIG = {
@@ -53,7 +54,11 @@ function getFullDoc(item: Directive): string {
 function genComponentMarkdown(item: Directive): string {
   if (item == null) return '';
 
-  const rows: string[] = [CONFIG.isAlain ? `**${I18N.library}** ${item.lib}` : null, `**${item.title}**`, item.description];
+  const rows: string[] = [
+    CONFIG.isAlain ? `**${I18N.library}** ${item.lib}` : null,
+    `**${item.title}**` + (item.standalone ? ' `' + I18N.standalone + '`' : ''),
+    item.description,
+  ];
 
   if (item.whenToUse && item.whenToUse.trim().length > 0) {
     rows.push(`**${I18N.whenToUse}**`);
