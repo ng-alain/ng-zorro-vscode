@@ -54,11 +54,12 @@ function getFullDoc(item: Directive): string {
 function genComponentMarkdown(item: Directive): string {
   if (item == null) return '';
 
-  const rows: string[] = [
-    CONFIG.isAlain ? `**${I18N.library}** ${item.lib}` : null,
-    `**${item.title}**` + (item.standalone ? ' `' + I18N.standalone + '`' : ''),
-    item.description,
-  ];
+  let title = `**${item.title}**`;
+  // (item.standalone ? ' `' + I18N.standalone + '`' : '')
+  // if (CONFIG.isAlain) title += `, (${I18N.library}: ${item.lib})`;
+  // if (CONFIG.isAlain) title += ` ![NG-ZORRO](https://dummyimage.com/90x22/1890ff/ffffff.png&text=NG-ZORRO)`;
+  if (item.standalone) title += ` ![Standalone](https://cdn-images-1.medium.com/v2/resize:fit:80/1*yjYUfAD0P2osKAqHDnQIaQ.png)`;
+  const rows: string[] = [title, item.description];
 
   if (item.whenToUse && item.whenToUse.trim().length > 0) {
     rows.push(`**${I18N.whenToUse}**`);

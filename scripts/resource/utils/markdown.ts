@@ -125,7 +125,7 @@ function getDirective(): Directive[] {
         type,
         selector,
         types: {},
-        standalone: selectorList[0]?.toLowerCase().includes(':standalone')
+        standalone: selectorList[0]?.toLowerCase().includes(':standalone'),
       };
       const isSplitTable = COG.SPLIT_PROPERTIES.includes(selector);
       item.properties = getProperties(item, ast.getTable(idx, isSplitTable));
@@ -169,7 +169,7 @@ function getDirective(): Directive[] {
             }
           } else {
             const commonHeading = mergeCog[ast.zone];
-            const commonIdx = ast.offsetAt(commonHeading);
+            const commonIdx = ast.offsetAt(commonHeading, { useStartsWith: true });
             commonProperties = getProperties(item, ast.getTable(commonIdx, false)).map((i) => {
               i._common = true;
               return i;

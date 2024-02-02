@@ -436,6 +436,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-descriptions.nzColumn.description': localize('nz-descriptions.nzColumn.description', 'The number of `nz-descriptions-item` in a row. It could be a number or a object like `{ xs: 8, sm: 16, md: 24}`'),
 'nz-descriptions.nzSize.description': localize('nz-descriptions.nzSize.description', 'Set the size of the list. Only works when `nzBordered` is set'),
 'nz-descriptions.nzColon.description': localize('nz-descriptions.nzColon.description', 'Show colon after title'),
+'nz-descriptions.nzLayout.description': localize('nz-descriptions.nzLayout.description', 'Set the layout of the list'),
 'nz-descriptions-item.title': localize('nz-descriptions-item.title', 'Descriptions'),
 'nz-descriptions-item.whenToUse': localize('nz-descriptions-item.whenToUse', 'Commonly displayed on the details page.'),
 'nz-descriptions-item.description': localize('nz-descriptions-item.description', 'Display multiple read-only fields in groups.'),
@@ -504,6 +505,15 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-image.nzAutoSrcset.description': localize('nz-image.nzAutoSrcset.description', 'Whether to optimize image loading'),
 'nz-image.nzSrcLoader.description': localize('nz-image.nzSrcLoader.description', 'Loader'),
 'nz-image.nzPriority.description': localize('nz-image.nzPriority.description', 'Whether to add [preload](https://developer.mozilla.org/en-US/docs/Web/HTML/Preloading_content) (only SSR)'),
+'nz-flex.title': localize('nz-flex.title', 'Flex'),
+'nz-flex.whenToUse': localize('nz-flex.whenToUse', '- Good for setting spacing between elements.\n- Suitable for setting various horizontal and vertical alignments.'),
+'nz-flex.description': localize('nz-flex.description', 'Wrapper for `Display: flex`.'),
+'nz-flex.nzVertical.description': localize('nz-flex.nzVertical.description', 'Is direction of the flex vertical, use `flex-direction: column`'),
+'nz-flex.nzJustify.description': localize('nz-flex.nzJustify.description', 'Sets the alignment of elements in the direction of the main axis'),
+'nz-flex.nzAlign.description': localize('nz-flex.nzAlign.description', 'Sets the alignment of elements in the direction of the cross axis'),
+'nz-flex.nzGap.description': localize('nz-flex.nzGap.description', 'Sets the gap between items'),
+'nz-flex.nzWrap.description': localize('nz-flex.nzWrap.description', 'Set whether the element is displayed in a single line or in multiple lines'),
+'nz-flex.nzFlex.description': localize('nz-flex.nzFlex.description', 'Flex CSS shorthand properties'),
 'nz-form.title': localize('nz-form.title', 'Form'),
 'nz-form.whenToUse': localize('nz-form.whenToUse', ' '),
 'nz-form.description': localize('nz-form.description', 'Form is used to collect, validate, and submit the user input, usually contains various form items including checkbox, radio, input, select, and etc.'),
@@ -943,9 +953,20 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-popover.nzPopoverOverlayStyle.description': localize('nz-popover.nzPopoverOverlayStyle.description', 'Style of the popover card'),
 'nz-progress.title': localize('nz-progress.title', 'Progress'),
 'nz-progress.whenToUse': localize('nz-progress.whenToUse', 'If it will take a long time to complete an operation, you can use `Progress` to show the current progress and status.'),
-'nz-progress.description': localize('nz-progress.description', '| Property             | Description                                                          | Type                                                                                   | Default                    |\n| -------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------- | --- |\n| `[nzType]`           | to set the type                                                      | `\'line\' \| \'circle\' \| \'dashboard\'`                                                    | `\'line\'`                   |\n| `[nzFormat]`         | template function of the content                                     | `(percent: number) => string \| TemplateRef<{ $implicit: number }>`                    | `percent => percent + \'%\'` |\n| `[nzPercent]`        | to set the completion percentage                                     | `number`                                                                               | `0`                        |\n| `[nzShowInfo]`       | whether to display the progress value and the status icon            | `boolean`                                                                              | `true`                     | ✅  |\n| `[nzStatus]`         | to set the status of the Progress                                    | `\'success\' \| \'exception\' \| \'active\' \| \'normal\'`                                     | -                          |\n| `[nzStrokeLinecap]`  | to set the style of the progress linecap                             | `\'round\' \| \'square\'`                                                                  | `\'round\'`                  | ✅  |\n| `[nzStrokeColor]`    | color of progress bar, render linear-gradient when passing an object | `string \| { from: string; to: string: direction: string; [percent: string]: string }` | -                          | ✅  |\n| `[nzSuccessPercent]` | segmented success percent                                            | `number`                                                                               | 0                          |'),
-'nz-progress.nzStrokeWidth.description': localize('nz-progress.nzStrokeWidth.description', 'to set the width of the progress bar, unit: `px`'),
+'nz-progress.description': localize('nz-progress.description', 'Display the current progress of an operation flow.'),
+'nz-progress.nzType.description': localize('nz-progress.nzType.description', 'to set the type'),
+'nz-progress.nzFormat.description': localize('nz-progress.nzFormat.description', 'template function of the content'),
+'nz-progress.nzPercent.description': localize('nz-progress.nzPercent.description', 'to set the completion percentage'),
+'nz-progress.nzShowInfo.description': localize('nz-progress.nzShowInfo.description', 'whether to display the progress value and the status icon'),
+'nz-progress.nzStatus.description': localize('nz-progress.nzStatus.description', 'to set the status of the Progress'),
+'nz-progress.nzStrokeLinecap.description': localize('nz-progress.nzStrokeLinecap.description', 'to set the style of the progress linecap'),
+'nz-progress.nzStrokeColor.description': localize('nz-progress.nzStrokeColor.description', 'color of progress bar, render linear-gradient when passing an object'),
+'nz-progress.nzSuccessPercent.description': localize('nz-progress.nzSuccessPercent.description', 'segmented success percent'),
+'nz-progress.nzStrokeWidth.description': localize('nz-progress.nzStrokeWidth.description', 'to set the width of the dashboard progress bar, unit: percentage of the canvas width'),
 'nz-progress.nzSteps.description': localize('nz-progress.nzSteps.description', 'the total step count'),
+'nz-progress.nzWidth.description': localize('nz-progress.nzWidth.description', 'to set the canvas width of the dashboard progress bar, unit: `px`'),
+'nz-progress.nzGapDegree.description': localize('nz-progress.nzGapDegree.description', 'the gap degree of half circle, 0 ~ 360'),
+'nz-progress.nzGapPosition.description': localize('nz-progress.nzGapPosition.description', 'the gap position'),
 'nz-qrcode.title': localize('nz-qrcode.title', 'QRCode'),
 'nz-qrcode.whenToUse': localize('nz-qrcode.whenToUse', 'Used when the link needs to be converted into a QR Code.'),
 'nz-qrcode.description': localize('nz-qrcode.description', 'When To Use'),
@@ -1007,7 +1028,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-rate.name.description': localize('nz-rate.name.description', ' '),
 'nz-resizable.title': localize('nz-resizable.title', 'Resizable'),
 'nz-resizable.whenToUse': localize('nz-resizable.whenToUse', 'When you want to resize elements.'),
-'nz-resizable.description': localize('nz-resizable.description', 'Resizable element the `position` attribute  must be one of `\'relative\' | \'absolute\' | \'fixed\' |\'sticky\'`，default is `\'relative\'`.'),
+'nz-resizable.description': localize('nz-resizable.description', 'Resizable element the `position` attribute must be one of `\'relative\' | \'absolute\' | \'fixed\' |\'sticky\'`，default is `\'relative\'`.'),
 'nz-resizable.nzBounds.description': localize('nz-resizable.nzBounds.description', 'Specifies resize boundaries.'),
 'nz-resizable.nzMaxHeight.description': localize('nz-resizable.nzMaxHeight.description', 'Maximum height of resizable element'),
 'nz-resizable.nzMaxWidth.description': localize('nz-resizable.nzMaxWidth.description', 'Maximum width of resizable element'),
@@ -1267,7 +1288,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'th.nzSortOrderChange.description': localize('th.nzSortOrderChange.description', 'Callback when sort direction changes'),
 'th.nzShowFilter.description': localize('th.nzShowFilter.description', 'Whether to show filter'),
 'th.nzFilterFn.description': localize('th.nzFilterFn.description', 'Filter function used to filter the data on client side. Set to `true` when using server side filtering'),
-'th.nzFilters.description': localize('th.nzFilters.description', 'Filter options,  `text`, and `value` for callback, `byDefault` to enable filter by default'),
+'th.nzFilters.description': localize('th.nzFilters.description', 'Filter options, `text`, and `value` for callback, `byDefault` to enable filter by default'),
 'th.nzFilterMultiple.description': localize('th.nzFilterMultiple.description', 'Whether multiple mode filtering is enabled'),
 'th.nzFilterChange.description': localize('th.nzFilterChange.description', 'Callback when filter `value` changes'),
 'th.nzWidth.description': localize('th.nzWidth.description', 'Specify the column width (in pixels), can not used when grouping columns'),
@@ -1349,6 +1370,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-tag.nzMode.description': localize('nz-tag.nzMode.description', 'Mode of tag'),
 'nz-tag.nzChecked.description': localize('nz-tag.nzChecked.description', 'Checked status of Tag, double binding, only works when `nzMode="checkable"`'),
 'nz-tag.nzColor.description': localize('nz-tag.nzColor.description', 'Color of the Tag'),
+'nz-tag.nzBordered.description': localize('nz-tag.nzBordered.description', 'Whether has border style'),
 'nz-tag.nzOnClose.description': localize('nz-tag.nzOnClose.description', 'Callback executed when tag is closed, only works when `nzMode="closable"`'),
 'nz-tag.nzCheckedChange.description': localize('nz-tag.nzCheckedChange.description', 'Checked status change call back, only works when `nzMode="checkable"`'),
 'nz-time-picker.title': localize('nz-time-picker.title', 'TimePicker'),
@@ -1396,7 +1418,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-timeline-item.title': localize('nz-timeline-item.title', 'Timeline'),
 'nz-timeline-item.whenToUse': localize('nz-timeline-item.whenToUse', '- When a series of information needs to be ordered by time (ascend or descend).\n- When you need a timeline to make a visual connection.'),
 'nz-timeline-item.description': localize('nz-timeline-item.description', 'Node of timeline'),
-'nz-timeline-item.nzColor.description': localize('nz-timeline-item.nzColor.description', 'Set the circle\'s color to `\'blue\' | \'red\' | \'green\' | \'gray\'`'),
+'nz-timeline-item.nzColor.description': localize('nz-timeline-item.nzColor.description', 'Set the circle\'s color to `\'blue\' | \'red\' | \'green\' | \'gray\'` or other custom colors'),
 'nz-timeline-item.nzDot.description': localize('nz-timeline-item.nzDot.description', 'Customize timeline dot'),
 'nz-timeline-item.nzPosition.description': localize('nz-timeline-item.nzPosition.description', 'Customize position, only works when `nzMode` is `custom`'),
 'nz-timeline-item.nzLabel.description': localize('nz-timeline-item.nzLabel.description', 'Set the label'),
@@ -1425,7 +1447,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'nz-transfer.nzSearchChange.description': localize('nz-transfer.nzSearchChange.description', 'A callback function which is executed when search field are changed'),
 'nz-transfer.nzSelectChange.description': localize('nz-transfer.nzSelectChange.description', 'A callback function which is executed when selected items are changed.'),
 'nz-tree.title': localize('nz-tree.title', 'Tree'),
-'nz-tree.whenToUse': localize('nz-tree.whenToUse', 'Almost anything can be represented in a tree structure. Examples include directories, organization hierarchies, biological classifications, countries, etc. The `Tree` component is a way of representing the hierarchical relationship between these things. You can also  expand, collapse, and select a treeNode within a `Tree`.'),
+'nz-tree.whenToUse': localize('nz-tree.whenToUse', 'Almost anything can be represented in a tree structure. Examples include directories, organization hierarchies, biological classifications, countries, etc. The `Tree` component is a way of representing the hierarchical relationship between these things. You can also expand, collapse, and select a treeNode within a `Tree`.'),
 'nz-tree.description': localize('nz-tree.description', 'Tips: According to the current data structure design, you need to ensure that `nzData` is set first, otherwise other attributes will not take effect. After the asynchronous operation returns data, re-assign other attributes to trigger rendering(including `nzExpandAll` `nzExpandedKeys` `nzCheckedKeys` `nzSelectedKeys` `nzSearchValue`). Please refer to [#5152](https://github.com/NG-ZORRO/ng-zorro-antd/issues/5152) to track the optimization progress.'),
 'nz-tree.nzData.description': localize('nz-tree.nzData.description', 'Tree data (Reference NzTreeNode)'),
 'nz-tree.nzBlockNode.description': localize('nz-tree.nzBlockNode.description', 'Whether treeNode fill remaining horizontal space'),
@@ -1738,6 +1760,10 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'global-footer-item.ng-content.description': localize('global-footer-item.ng-content.description', 'Title'),
 'global-footer-item.href.description': localize('global-footer-item.href.description', 'Routing link'),
 'global-footer-item.blankTarget.description': localize('global-footer-item.blankTarget.description', 'Whether to open a new window'),
+'hotkey.title': localize('hotkey.title', 'Hotkey'),
+'hotkey.whenToUse': localize('hotkey.whenToUse', ' '),
+'hotkey.description': localize('hotkey.description', 'Based on the [@github/hotke](https://github.com/github/hotkey) hotkey library.'),
+'hotkey.hotkey.description': localize('hotkey.hotkey.description', 'Specify [hotkey format](https://github.com/github/hotkey#hotkey-string-format)'),
 'let.title': localize('let.title', 'Let'),
 'let.whenToUse': localize('let.whenToUse', ' '),
 'let.description': localize('let.description', 'Allows to reuse computed value in several places in template to avoid recalculations of getters or many `async` pipes.'),
@@ -1952,6 +1978,7 @@ export const LANG = { 'nz-row.title': localize('nz-row.title', 'Grid'),
 'st.responsive.description': localize('st.responsive.description', 'Whether to turn on responsive'),
 'st.responsiveHideHeaderFooter.description': localize('st.responsiveHideHeaderFooter.description', 'Whether to display the header and footer under the small screen'),
 'st.resizable.description': localize('st.resizable.description', 'Resize header of the current table, **Multiple headers not supported**'),
+'st.trackBy.description': localize('st.trackBy.description', '`TrackByFunction` function of list loop `@for`'),
 'st.change.description': localize('st.change.description', 'Events'),
 'st.error.description': localize('st.error.description', 'Error event'),
 'st.type.description': localize('st.type.description', 'Type of width mode'),
@@ -2300,7 +2327,7 @@ export const DATA = [
     "type": "directive",
     "selector": "nz-row",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzAlign",
@@ -2362,7 +2389,7 @@ export const DATA = [
     "type": "directive",
     "selector": "nz-col",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzFlex",
@@ -2791,7 +2818,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-alert",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzBanner",
@@ -2902,7 +2929,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-anchor",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzAffix",
@@ -3001,7 +3028,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-link",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzHref",
@@ -3039,7 +3066,7 @@ export const DATA = [
     "type": "directive",
     "selector": "nzAutocomplete",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzAutocomplete",
@@ -3061,7 +3088,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-autocomplete",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzBackfill",
@@ -3136,7 +3163,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-auto-option",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzValue",
@@ -3176,7 +3203,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-avatar",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzIcon",
@@ -3275,7 +3302,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-avatar-group",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [],
     "lib": "ng-zorro-antd",
     "title": "nz-avatar-group.title",
@@ -3288,7 +3315,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-back-top",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzTemplate",
@@ -3345,7 +3372,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-badge",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzStandalone",
@@ -3468,7 +3495,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-ribbon",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzColor",
@@ -3507,7 +3534,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-breadcrumb",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzSeparator",
@@ -3557,7 +3584,7 @@ export const DATA = [
     "type": "directive",
     "selector": "nz-button",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "disabled",
@@ -3666,7 +3693,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-button-group",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzSize",
@@ -3694,7 +3721,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-calendar",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "ngModel",
@@ -3796,7 +3823,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-card",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzActions",
@@ -3902,7 +3929,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-card-meta",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzAvatar",
@@ -3940,7 +3967,7 @@ export const DATA = [
     "type": "directive",
     "selector": "nz-card-grid",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzHoverable",
@@ -3963,7 +3990,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-card-tab",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [],
     "description": "nz-card-tab.description",
     "lib": "ng-zorro-antd",
@@ -3976,7 +4003,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-carousel",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzAutoPlay",
@@ -4081,7 +4108,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-cascader",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "ngModel",
@@ -4376,7 +4403,7 @@ export const DATA = [
     "type": "directive",
     "selector": "nz-checkbox",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzId",
@@ -4467,7 +4494,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-checkbox-group",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "ngModel",
@@ -4508,7 +4535,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-checkbox-wrapper",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzOnChange",
@@ -4530,7 +4557,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-code-editor",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzEditorMode",
@@ -4606,7 +4633,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-collapse",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzAccordion",
@@ -4660,7 +4687,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-collapse-panel",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzDisabled",
@@ -4784,7 +4811,7 @@ export const DATA = [
         }
       ]
     },
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzFormat",
@@ -4930,7 +4957,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-color-block",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzColor",
@@ -4970,7 +4997,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-comment",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzAuthor",
@@ -5000,7 +5027,7 @@ export const DATA = [
     "type": "directive",
     "selector": "nz-comment-avatar",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [],
     "description": "nz-comment-avatar.description",
     "lib": "ng-zorro-antd",
@@ -5013,7 +5040,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-comment-content",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [],
     "description": "nz-comment-content.description",
     "lib": "ng-zorro-antd",
@@ -5026,7 +5053,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-comment-action",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [],
     "description": "nz-comment-action.description",
     "lib": "ng-zorro-antd",
@@ -5039,7 +5066,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-cron-expression",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzType",
@@ -5124,7 +5151,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-date-picker",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzDateRender",
@@ -5459,7 +5486,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-range-picker",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzShowTime",
@@ -5736,7 +5763,7 @@ export const DATA = [
         "inputType": 0,
         "description": "nz-range-picker.nzRanges.description",
         "type": "object",
-        "typeRaw": "`{ [ key: string ]: Date[] }  |  { [ key: string ]: () => Date[] }`",
+        "typeRaw": "`{ [ key: string ]: Date[] } | { [ key: string ]: () => Date[] }`",
         "default": ""
       },
       {
@@ -5789,7 +5816,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-descriptions",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzTitle",
@@ -5848,6 +5875,19 @@ export const DATA = [
         "typeRaw": "`boolean`",
         "default": "`true`",
         "pureDefault": "true"
+      },
+      {
+        "name": "nzLayout",
+        "inputType": 0,
+        "description": "nz-descriptions.nzLayout.description",
+        "type": "Enum",
+        "typeRaw": "`'horizontal' | 'vertical'`",
+        "default": "`'horizontal'`",
+        "typeDefinition": [
+          "horizontal",
+          "vertical"
+        ],
+        "pureDefault": "horizontal"
       }
     ],
     "lib": "ng-zorro-antd",
@@ -5861,7 +5901,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-descriptions-item",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzTitle",
@@ -5893,7 +5933,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-divider",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzDashed",
@@ -5960,7 +6000,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-drawer",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzClosable",
@@ -6166,7 +6206,7 @@ export const DATA = [
     "type": "directive",
     "selector": "nz-dropdown",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzDropdownMenu",
@@ -6269,7 +6309,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-dropdown-menu",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [],
     "description": "nz-dropdown-menu.description",
     "lib": "ng-zorro-antd",
@@ -6282,7 +6322,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-empty",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzNotFoundImage",
@@ -6393,9 +6433,84 @@ export const DATA = [
   },
   {
     "type": "directive",
+    "selector": "nz-flex",
+    "types": {},
+    "standalone": true,
+    "properties": [
+      {
+        "name": "nzVertical",
+        "inputType": 0,
+        "description": "nz-flex.nzVertical.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzJustify",
+        "inputType": 0,
+        "description": "nz-flex.nzJustify.description",
+        "type": "string",
+        "typeRaw": "reference [justify-content](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content)",
+        "default": "`'normal'`",
+        "pureDefault": "normal"
+      },
+      {
+        "name": "nzAlign",
+        "inputType": 0,
+        "description": "nz-flex.nzAlign.description",
+        "type": "string",
+        "typeRaw": "reference [align-items](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items)",
+        "default": "`'normal'`",
+        "pureDefault": "normal"
+      },
+      {
+        "name": "nzGap",
+        "inputType": 0,
+        "description": "nz-flex.nzGap.description",
+        "type": "Enum",
+        "typeRaw": "`'small' | 'middle' | 'large' | number | string`",
+        "default": "`0`",
+        "typeDefinition": [
+          "small",
+          "middle",
+          "large",
+          "number",
+          "string"
+        ],
+        "pureDefault": "0"
+      },
+      {
+        "name": "nzWrap",
+        "inputType": 0,
+        "description": "nz-flex.nzWrap.description",
+        "type": "string",
+        "typeRaw": "reference [flex-wrap](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap)",
+        "default": "`'nowrap'`",
+        "pureDefault": "nowrap"
+      },
+      {
+        "name": "nzFlex",
+        "inputType": 0,
+        "description": "nz-flex.nzFlex.description",
+        "type": "string",
+        "typeRaw": "reference [flex](https://developer.mozilla.org/en-US/docs/Web/CSS/flex)",
+        "default": "`'unset'`",
+        "pureDefault": "unset"
+      }
+    ],
+    "lib": "ng-zorro-antd",
+    "title": "nz-flex.title",
+    "description": "nz-flex.description",
+    "whenToUse": "nz-flex.whenToUse",
+    "doc": "/components/flex/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/flex"
+  },
+  {
+    "type": "directive",
     "selector": "nz-form",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzLayout",
@@ -6496,7 +6611,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-form-item",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzAlign",
@@ -6622,7 +6737,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-form-label",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzFlex",
@@ -6921,7 +7036,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-form-control",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzFlex",
@@ -7149,7 +7264,7 @@ export const DATA = [
         "inputType": 0,
         "description": "nz-form-control.nzValidateStatus.description",
         "type": "Enum",
-        "typeRaw": "`'success' | 'warning' | 'error' | 'validating'  |  FormControl  |  NgModel`",
+        "typeRaw": "`'success' | 'warning' | 'error' | 'validating' | FormControl | NgModel`",
         "default": "first `FormControl` or `NgModel` in `nz-form-control`",
         "typeDefinition": [
           "success",
@@ -7175,7 +7290,7 @@ export const DATA = [
         "inputType": 0,
         "description": "nz-form-control.nzExtra.description",
         "type": "string",
-        "typeRaw": "`string  |  TemplateRef<void>`",
+        "typeRaw": "`string | TemplateRef<void>`",
         "default": ""
       },
       {
@@ -7183,7 +7298,7 @@ export const DATA = [
         "inputType": 0,
         "description": "nz-form-control.nzSuccessTip.description",
         "type": "string",
-        "typeRaw": "`string  |  TemplateRef<{ $implicit: FormControl  |  NgModel }>`",
+        "typeRaw": "`string | TemplateRef<{ $implicit: FormControl | NgModel }>`",
         "default": ""
       },
       {
@@ -7191,7 +7306,7 @@ export const DATA = [
         "inputType": 0,
         "description": "nz-form-control.nzWarningTip.description",
         "type": "string",
-        "typeRaw": "`string  |  TemplateRef<{ $implicit: FormControl  |  NgModel }>`",
+        "typeRaw": "`string | TemplateRef<{ $implicit: FormControl | NgModel }>`",
         "default": ""
       },
       {
@@ -7199,7 +7314,7 @@ export const DATA = [
         "inputType": 0,
         "description": "nz-form-control.nzErrorTip.description",
         "type": "string",
-        "typeRaw": "`string  |  TemplateRef<{ $implicit: FormControl  |  NgModel }>`",
+        "typeRaw": "`string | TemplateRef<{ $implicit: FormControl | NgModel }>`",
         "default": ""
       },
       {
@@ -7207,7 +7322,7 @@ export const DATA = [
         "inputType": 0,
         "description": "nz-form-control.nzValidatingTip.description",
         "type": "string",
-        "typeRaw": "`string  |  TemplateRef<{ $implicit: FormControl  |  NgModel }>`",
+        "typeRaw": "`string | TemplateRef<{ $implicit: FormControl | NgModel }>`",
         "default": ""
       },
       {
@@ -7238,7 +7353,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-form-split",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [],
     "description": "nz-form-split.description",
     "lib": "ng-zorro-antd",
@@ -7251,7 +7366,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-form-text",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [],
     "description": "nz-form-text.description",
     "lib": "ng-zorro-antd",
@@ -7264,7 +7379,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-graph",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzGraphData",
@@ -7314,7 +7429,7 @@ export const DATA = [
     "type": "directive",
     "selector": "nz-graph-zoom",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzZoom",
@@ -7486,7 +7601,7 @@ export const DATA = [
     "type": "directive",
     "selector": "nz-icon",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzType",
@@ -10803,7 +10918,7 @@ export const DATA = [
     "type": "directive",
     "selector": "nz-input",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzSize",
@@ -10914,7 +11029,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-input-group",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzAddOnAfter",
@@ -10995,7 +11110,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-textarea-count",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzMaxCharacterCount",
@@ -11026,14 +11141,14 @@ export const DATA = [
     "type": "component",
     "selector": "nz-input-number",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "ngModel",
         "inputType": 2,
         "description": "nz-input-number.ngModel.description",
         "type": "number",
-        "typeRaw": "`number | string`  |  `string`",
+        "typeRaw": "`number | string` | `string`",
         "default": ""
       },
       {
@@ -11232,7 +11347,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-input-number-group",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzAddOnAfter",
@@ -11329,7 +11444,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-sider",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzBreakpoint",
@@ -11441,7 +11556,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-list",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzBordered",
@@ -11526,7 +11641,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-list-empty",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzNoResult",
@@ -11548,7 +11663,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-list-header",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzNoFlex",
@@ -11571,7 +11686,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-list-footer",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzNoFlex",
@@ -11594,7 +11709,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-list-pagination",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzNoFlex",
@@ -11617,7 +11732,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-list-load-more",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzNoFlex",
@@ -11640,7 +11755,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-list-item",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzNoFlex",
@@ -11663,7 +11778,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-list-item-meta",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzAvatar",
@@ -11701,7 +11816,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-mention",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzMentionTrigger",
@@ -11844,7 +11959,7 @@ export const DATA = [
     "type": "directive",
     "selector": "nz-menu",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzInlineCollapsed",
@@ -11919,7 +12034,7 @@ export const DATA = [
     "type": "directive",
     "selector": "nz-menu-item",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzDisabled",
@@ -11979,7 +12094,7 @@ export const DATA = [
     "type": "directive",
     "selector": "nz-submenu",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzPlacement",
@@ -12061,7 +12176,7 @@ export const DATA = [
     "type": "directive",
     "selector": "nz-menu-group",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzTitle",
@@ -12083,7 +12198,7 @@ export const DATA = [
     "type": "directive",
     "selector": "nz-menu-divider",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [],
     "description": "nz-menu-divider.description",
     "lib": "ng-zorro-antd",
@@ -12412,7 +12527,7 @@ export const DATA = [
     "type": "directive",
     "selector": "nzModalTitle",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [],
     "description": "nzModalTitle.description",
     "lib": "ng-zorro-antd",
@@ -12425,7 +12540,7 @@ export const DATA = [
     "type": "directive",
     "selector": "nzModalContent",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [],
     "description": "nzModalContent.description",
     "lib": "ng-zorro-antd",
@@ -12508,7 +12623,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-pagination",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzTotal",
@@ -13304,6 +13419,91 @@ export const DATA = [
     "standalone": true,
     "properties": [
       {
+        "name": "nzType",
+        "inputType": 0,
+        "description": "nz-progress.nzType.description",
+        "type": "Enum",
+        "typeRaw": "`'line' | 'circle' | 'dashboard'`",
+        "default": "`'line'`",
+        "typeDefinition": [
+          "line",
+          "circle",
+          "dashboard"
+        ],
+        "pureDefault": "line"
+      },
+      {
+        "name": "nzFormat",
+        "inputType": 0,
+        "description": "nz-progress.nzFormat.description",
+        "type": "function",
+        "typeRaw": "`(percent: number) => string | TemplateRef<{ $implicit: number }>`",
+        "default": "`percent => percent + '%'`",
+        "pureDefault": "percent => percent + '%"
+      },
+      {
+        "name": "nzPercent",
+        "inputType": 0,
+        "description": "nz-progress.nzPercent.description",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`0`",
+        "pureDefault": "0"
+      },
+      {
+        "name": "nzShowInfo",
+        "inputType": 0,
+        "description": "nz-progress.nzShowInfo.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`true`",
+        "pureDefault": "true"
+      },
+      {
+        "name": "nzStatus",
+        "inputType": 0,
+        "description": "nz-progress.nzStatus.description",
+        "type": "Enum",
+        "typeRaw": "`'success' | 'exception' | 'active' | 'normal'`",
+        "default": "",
+        "typeDefinition": [
+          "success",
+          "exception",
+          "active",
+          "normal"
+        ]
+      },
+      {
+        "name": "nzStrokeLinecap",
+        "inputType": 0,
+        "description": "nz-progress.nzStrokeLinecap.description",
+        "type": "Enum",
+        "typeRaw": "`'round' | 'square'`",
+        "default": "`'round'`",
+        "typeDefinition": [
+          "round",
+          "square"
+        ],
+        "pureDefault": "round"
+      },
+      {
+        "name": "nzStrokeColor",
+        "inputType": 0,
+        "description": "nz-progress.nzStrokeColor.description",
+        "type": "string",
+        "typeRaw": "`string | { from: string; to: string: direction: string; [percent: string]: string }`",
+        "default": ""
+      },
+      {
+        "name": "nzSuccessPercent",
+        "inputType": 0,
+        "description": "nz-progress.nzSuccessPercent.description",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "0",
+        "pureDefault": "0"
+      },
+      {
         "name": "nzStrokeWidth",
         "inputType": 0,
         "description": "nz-progress.nzStrokeWidth.description",
@@ -13321,26 +13521,69 @@ export const DATA = [
         "default": ""
       },
       {
+        "name": "nzWidth",
+        "inputType": 0,
+        "description": "nz-progress.nzWidth.description",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`132`",
+        "pureDefault": "132"
+      },
+      {
         "name": "nzStrokeWidth",
         "inputType": 0,
         "description": "nz-progress.nzStrokeWidth.description",
         "type": "number",
         "typeRaw": "`number`",
-        "default": "`8`",
-        "pureDefault": "8"
+        "default": "`6`",
+        "pureDefault": "6"
       },
       {
-        "name": "nzSteps",
+        "name": "nzWidth",
         "inputType": 0,
-        "description": "nz-progress.nzSteps.description",
+        "description": "nz-progress.nzWidth.description",
         "type": "number",
         "typeRaw": "`number`",
-        "default": ""
+        "default": "`132`",
+        "pureDefault": "132"
+      },
+      {
+        "name": "nzStrokeWidth",
+        "inputType": 0,
+        "description": "nz-progress.nzStrokeWidth.description",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`6`",
+        "pureDefault": "6"
+      },
+      {
+        "name": "nzGapDegree",
+        "inputType": 0,
+        "description": "nz-progress.nzGapDegree.description",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`0`",
+        "pureDefault": "0"
+      },
+      {
+        "name": "nzGapPosition",
+        "inputType": 0,
+        "description": "nz-progress.nzGapPosition.description",
+        "type": "Enum",
+        "typeRaw": "`'top' | 'right' | 'bottom' | 'left'`",
+        "default": "`'top'`",
+        "typeDefinition": [
+          "top",
+          "right",
+          "bottom",
+          "left"
+        ],
+        "pureDefault": "top"
       }
     ],
-    "description": "nz-progress.description",
     "lib": "ng-zorro-antd",
     "title": "nz-progress.title",
+    "description": "nz-progress.description",
     "whenToUse": "nz-progress.whenToUse",
     "doc": "/components/progress/en",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/progress"
@@ -13810,7 +14053,7 @@ export const DATA = [
     "type": "directive",
     "selector": "nz-resizable",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzBounds",
@@ -13949,7 +14192,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-resize-handle",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzDirection",
@@ -13981,7 +14224,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-resize-handles",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzDirections",
@@ -14069,7 +14312,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-select",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzId",
@@ -14238,7 +14481,7 @@ export const DATA = [
         "inputType": 0,
         "description": "nz-select.nzNotFoundContent.description",
         "type": "string",
-        "typeRaw": "`string  |  TemplateRef<void>`",
+        "typeRaw": "`string | TemplateRef<void>`",
         "default": "`'Not Found'`",
         "pureDefault": "Not Found"
       },
@@ -14358,7 +14601,7 @@ export const DATA = [
         "inputType": 0,
         "description": "nz-select.nzOptions.description",
         "type": "Array",
-        "typeRaw": "`Array<{ label: string  | number | TemplateRef<any>; value: any; key?: string | number; disabled?: boolean; hide?: boolean; groupLabel?: string | TemplateRef<any>;}>`",
+        "typeRaw": "`Array<{ label: string | number | TemplateRef<any>; value: any; key?: string | number; disabled?: boolean; hide?: boolean; groupLabel?: string | TemplateRef<any>;}>`",
         "default": ""
       },
       {
@@ -14471,7 +14714,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-option",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzDisabled",
@@ -14488,7 +14731,7 @@ export const DATA = [
         "inputType": 0,
         "description": "nz-option.nzTitle.description",
         "type": "string",
-        "typeRaw": "`string  | number`",
+        "typeRaw": "`string | number`",
         "default": ""
       },
       {
@@ -14496,7 +14739,7 @@ export const DATA = [
         "inputType": 0,
         "description": "nz-option.nzLabel.description",
         "type": "string",
-        "typeRaw": "`string  | number`",
+        "typeRaw": "`string | number`",
         "default": ""
       },
       {
@@ -14545,14 +14788,14 @@ export const DATA = [
     "type": "component",
     "selector": "nz-option-group",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzLabel",
         "inputType": 0,
         "description": "nz-option-group.nzLabel.description",
         "type": "string",
-        "typeRaw": "`string  | number | TemplateRef<void>`",
+        "typeRaw": "`string | number | TemplateRef<void>`",
         "default": ""
       }
     ],
@@ -15458,7 +15701,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-table",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzData",
@@ -16238,7 +16481,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-filter-trigger",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzDropdownMenu",
@@ -16294,7 +16537,7 @@ export const DATA = [
     "type": "directive",
     "selector": "nz-virtual-scroll",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [],
     "description": "nz-virtual-scroll.description",
     "lib": "ng-zorro-antd",
@@ -16602,6 +16845,15 @@ export const DATA = [
         ]
       },
       {
+        "name": "nzBordered",
+        "inputType": 0,
+        "description": "nz-tag.nzBordered.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`true`",
+        "pureDefault": "true"
+      },
+      {
         "name": "nzOnClose",
         "inputType": 1,
         "description": "nz-tag.nzOnClose.description",
@@ -16629,7 +16881,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-time-picker",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzId",
@@ -17230,7 +17482,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-tree",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzData",
@@ -17552,7 +17804,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-tree-select",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzId",
@@ -18695,7 +18947,7 @@ export const DATA = [
         }
       ]
     },
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "nzContent",
@@ -18789,7 +19041,7 @@ export const DATA = [
     "type": "directive",
     "selector": "auto-focus",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "enabled",
@@ -18821,7 +19073,7 @@ export const DATA = [
     "type": "component",
     "selector": "avatar-list",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "size",
@@ -18866,7 +19118,7 @@ export const DATA = [
     "type": "component",
     "selector": "avatar-list-item",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "tips",
@@ -19068,7 +19320,7 @@ export const DATA = [
         }
       ]
     },
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "value",
@@ -19108,7 +19360,7 @@ export const DATA = [
     "type": "component",
     "selector": "count-down",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "target",
@@ -19147,7 +19399,7 @@ export const DATA = [
     "type": "directive",
     "selector": "extend",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "ngModelEnd",
@@ -19178,7 +19430,7 @@ export const DATA = [
     "type": "directive",
     "selector": "down-file",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "http-data",
@@ -19257,7 +19509,7 @@ export const DATA = [
     "type": "component",
     "selector": "ellipsis",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "tooltip",
@@ -19314,7 +19566,7 @@ export const DATA = [
     "type": "component",
     "selector": "error-collect",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "freq",
@@ -19346,7 +19598,7 @@ export const DATA = [
     "type": "directive",
     "selector": "error-collect",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "freq",
@@ -19378,7 +19630,7 @@ export const DATA = [
     "type": "component",
     "selector": "exception",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "type",
@@ -19446,7 +19698,7 @@ export const DATA = [
     "type": "component",
     "selector": "footer-toolbar",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "ng-content",
@@ -19485,7 +19737,7 @@ export const DATA = [
     "type": "component",
     "selector": "full-content",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "fullscreen",
@@ -19525,7 +19777,7 @@ export const DATA = [
     "type": "directive",
     "selector": "full-toggle",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [],
     "description": "full-toggle.description",
     "lib": "@delon/abc",
@@ -19566,7 +19818,7 @@ export const DATA = [
         }
       ]
     },
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "links",
@@ -19597,7 +19849,7 @@ export const DATA = [
     "type": "component",
     "selector": "global-footer-item",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "ng-content",
@@ -19634,9 +19886,31 @@ export const DATA = [
   },
   {
     "type": "directive",
+    "selector": "hotkey",
+    "types": {},
+    "standalone": true,
+    "properties": [
+      {
+        "name": "hotkey",
+        "inputType": 0,
+        "description": "hotkey.hotkey.description",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
+      }
+    ],
+    "lib": "@delon/abc",
+    "title": "hotkey.title",
+    "description": "hotkey.description",
+    "whenToUse": "hotkey.whenToUse",
+    "doc": "/components/hotkey/en",
+    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/hotkey"
+  },
+  {
+    "type": "directive",
     "selector": "let",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "let",
@@ -19655,10 +19929,10 @@ export const DATA = [
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/let"
   },
   {
-    "type": "component",
+    "type": "directive",
     "selector": "media",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "type",
@@ -19713,7 +19987,7 @@ export const DATA = [
     "type": "component",
     "selector": "notice-icon",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "data",
@@ -19810,7 +20084,7 @@ export const DATA = [
     "type": "directive",
     "selector": "observeSize",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "observeSize",
@@ -19832,7 +20106,7 @@ export const DATA = [
     "type": "component",
     "selector": "page-header",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "title",
@@ -20008,7 +20282,7 @@ export const DATA = [
     "type": "component",
     "selector": "pdf",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "src",
@@ -20276,7 +20550,7 @@ export const DATA = [
     "type": "component",
     "selector": "quick-menu",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "icon",
@@ -20349,7 +20623,7 @@ export const DATA = [
     "type": "component",
     "selector": "result",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "type",
@@ -20632,7 +20906,7 @@ export const DATA = [
     "type": "component",
     "selector": "se-container",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "gutter",
@@ -20786,7 +21060,7 @@ export const DATA = [
     "type": "directive",
     "selector": "se-container",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "gutter",
@@ -20940,7 +21214,7 @@ export const DATA = [
     "type": "component",
     "selector": "se",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "col",
@@ -21076,7 +21350,7 @@ export const DATA = [
     "type": "component",
     "selector": "se-title",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [],
     "description": "se-title.description",
     "lib": "@delon/abc",
@@ -21089,7 +21363,7 @@ export const DATA = [
     "type": "directive",
     "selector": "se-title",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [],
     "description": "se-title.description",
     "lib": "@delon/abc",
@@ -21102,7 +21376,7 @@ export const DATA = [
     "type": "component",
     "selector": "sg-container",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "gutter",
@@ -21169,7 +21443,7 @@ export const DATA = [
     "type": "directive",
     "selector": "sg-container",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "gutter",
@@ -21236,7 +21510,7 @@ export const DATA = [
     "type": "component",
     "selector": "sg",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "col",
@@ -21940,6 +22214,14 @@ export const DATA = [
         "complexType": "STResizable"
       },
       {
+        "name": "trackBy",
+        "inputType": 0,
+        "description": "st.trackBy.description",
+        "type": "object",
+        "typeRaw": "`TrackByFunction<T>`",
+        "default": ""
+      },
+      {
         "name": "change",
         "inputType": 1,
         "description": "st.change.description",
@@ -21967,7 +22249,7 @@ export const DATA = [
     "type": "component",
     "selector": "sv-container",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "sv-container",
@@ -22093,7 +22375,7 @@ export const DATA = [
     "type": "directive",
     "selector": "sv-container",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "sv-container",
@@ -22219,7 +22501,7 @@ export const DATA = [
     "type": "component",
     "selector": "sv",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "col",
@@ -22321,7 +22603,7 @@ export const DATA = [
     "type": "component",
     "selector": "sv-title",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "prefix",
@@ -22373,7 +22655,7 @@ export const DATA = [
     "type": "directive",
     "selector": "sv-title",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "prefix",
@@ -22425,7 +22707,7 @@ export const DATA = [
     "type": "component",
     "selector": "sv-value",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "prefix",
@@ -22477,7 +22759,7 @@ export const DATA = [
     "type": "component",
     "selector": "tag-select",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "expandable",
@@ -22521,7 +22803,7 @@ export const DATA = [
     "type": "component",
     "selector": "g2-bar",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "repaint",
@@ -22639,7 +22921,7 @@ export const DATA = [
     "type": "component",
     "selector": "g2-card",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "title",
@@ -22710,7 +22992,7 @@ export const DATA = [
     "type": "component",
     "selector": "chart-echarts",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "width",
@@ -22774,7 +23056,7 @@ export const DATA = [
     "type": "component",
     "selector": "g2-custom",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "delay",
@@ -22847,7 +23129,7 @@ export const DATA = [
     "type": "component",
     "selector": "g2-gauge",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "repaint",
@@ -22955,7 +23237,7 @@ export const DATA = [
     "type": "component",
     "selector": "g2-mini-area",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "repaint",
@@ -23111,7 +23393,7 @@ export const DATA = [
     "type": "component",
     "selector": "g2-mini-bar",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "repaint",
@@ -23232,7 +23514,7 @@ export const DATA = [
     "type": "component",
     "selector": "g2-mini-progress",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "target",
@@ -23278,7 +23560,7 @@ export const DATA = [
     "type": "component",
     "selector": "number-info",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "title",
@@ -23366,7 +23648,7 @@ export const DATA = [
     "type": "component",
     "selector": "g2-pie",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "repaint",
@@ -23569,7 +23851,7 @@ export const DATA = [
     "type": "component",
     "selector": "g2-radar",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "repaint",
@@ -23676,7 +23958,7 @@ export const DATA = [
     "type": "component",
     "selector": "g2-single-bar",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "repaint",
@@ -23814,7 +24096,7 @@ export const DATA = [
     "type": "component",
     "selector": "g2-tag-cloud",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "repaint",
@@ -23941,7 +24223,7 @@ export const DATA = [
         }
       ]
     },
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "repaint",
@@ -24111,7 +24393,7 @@ export const DATA = [
     "type": "component",
     "selector": "trend",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "colorful",
@@ -24155,7 +24437,7 @@ export const DATA = [
     "type": "component",
     "selector": "g2-water-wave",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [
       {
         "name": "animate",
@@ -24691,7 +24973,7 @@ export const DATA = [
     "type": "component",
     "selector": "nz-breadcrumb-item",
     "types": {},
-    "standalone": false,
+    "standalone": true,
     "properties": [],
     "lib": "ng-zorro-antd",
     "title": "nz-breadcrumb-item.title",

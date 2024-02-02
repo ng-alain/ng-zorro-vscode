@@ -35,10 +35,15 @@ export class AST {
   constructor(private tokens: Token[], private filePath: string, public zone: string) {}
 
   /** 偏移至某个标题 */
-  offsetAt(text: string, start = 0): number {
-    for (let i = start; i < this.tokens.length; i++) {
-      if (this.tokens[i].type === AST_KEYS.HeadingOpen && this.tokens[i + 1].content === text) {
-        return i;
+  offsetAt(text: string, options?: { start?: number; useStartsWith?: boolean }): number {
+    const opt = { start: 0, useStartsWith: false, ...options };
+    for (let i = opt.start; i < this.tokens.length; i++) {
+      if (this.tokens[i].type === AST_KEYS.HeadingOpen) {
+        if (opt.useStartsWith) {
+          if (this.tokens[i + 1].content.startsWith(text)) return i;
+        } else {
+          if (this.tokens[i + 1].content === text) return i;
+        }
       }
     }
     return -1;
