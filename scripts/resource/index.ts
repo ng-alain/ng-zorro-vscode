@@ -61,8 +61,8 @@ function genDefaultJson(): void {
   const defaultJson = path.join(rootPath, 'src', 'magic', 'resources', 'default.ts');
   const defaultData = result[defaultLang];
   const langCode: string[] = Object.keys(langData[defaultLang]).map((key) => {
-    const val = (langData[defaultLang][key] || '').replace(/'/g, "\\'").replace(/\n/g, '\\n').trim();
-    return `'${key}': localize('${key}', '${val || ' '}')`;
+    const val = (langData[defaultLang][key] || '').replace(/"/g, '\\"').replace(/\n/g, '\\n').trim();
+    return `'${key}': localize('${key}', "${val || ' '}")`;
   });
   // 保存
   fs.writeFileSync(
