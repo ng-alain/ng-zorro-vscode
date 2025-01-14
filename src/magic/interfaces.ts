@@ -1,14 +1,20 @@
-import { MarkdownString } from 'vscode';
+import { MarkdownString } from "vscode";
 
 export const NAME = `ng-zorro-vscode`;
 
-export type DirectiveType = 'component' | 'directive' | 'pipe';
+export type DirectiveType = "component" | "directive" | "pipe";
+
+export type LibType =
+  | "ng-zorro-antd"
+  | "@delon/abc"
+  | "@delon/chart"
+  | "@delon/form";
 
 export interface Directive {
   /**
    * e.g: `ng-zorro-antd`, `@delon/abc`
    */
-  lib?: string;
+  lib: LibType;
   type: DirectiveType;
   /**
    * Component selector, e.g: `nz-button`
@@ -17,19 +23,19 @@ export interface Directive {
   /**
    * Title for component, e.g: `按钮`
    */
-  title?: string;
+  title: string;
   /**
    * Description for component, e.g: `按钮用于开始一个即时操作。`
    */
-  description?: string;
+  description: string;
   /**
    * When to user for component, e.g: `标记了一个（或封装一组）操作命令，响应用户点击行为，触发相应的业务逻辑。`
    */
-  whenToUse?: string;
+  whenToUse: string;
   /**
    * Properties for component, e.g: `[ 'nzType', 'nzSize' ]`
    */
-  properties?: DirectiveProperty[];
+  properties: DirectiveProperty[];
   /**
    * e.g: `nzAutocomplete`
    */
@@ -37,12 +43,12 @@ export interface Directive {
   /**
    * 类型定义
    */
-  types?: { [key: string]: DirectiveProperty[] };
+  types: { [key: string]: DirectiveProperty[] };
   /**
    * Document for component, e.g: `https://ng.ant.design/components/button/zh`
    */
-  doc?: string;
-  github?: string;
+  doc: string;
+  github: string;
   /**
    * 重新定义片断，变量值：
    * - `__`：表示名称占位符
@@ -73,24 +79,24 @@ export interface DirectiveProperty {
   description?: string;
 
   type?:
-    | 'any'
-    | 'string'
-    | 'TemplateRef'
-    | 'boolean'
-    | 'number'
-    | 'Array'
-    | 'Enum'
-    | 'Date'
-    | 'object'
-    | 'function'
-    | 'HTMLElement'
-    | 'EventEmitter';
+    | "any"
+    | "string"
+    | "TemplateRef"
+    | "boolean"
+    | "number"
+    | "Array"
+    | "Enum"
+    | "Date"
+    | "object"
+    | "function"
+    | "HTMLElement"
+    | "EventEmitter";
   complexType?: string;
   typeRaw?: string;
   /**
    * Definition list for type, e.g: `[ { value: 'primary', label: '主按钮' }, { value: 'danger', label: '危险按钮' } ]`
    */
-  typeDefinition?: Array<string | DirectiveTypeDefinition>;
+  typeDefinition?: Array<string>;
   isInputBoolean?: boolean;
   default?: string;
   pureDefault?: string;
@@ -112,7 +118,7 @@ export interface DirectiveTypeDefinition {
 }
 
 export interface DirectiveTypeDefinitionComplex {
-  type?: 'complex';
+  type?: "complex";
   conditionField?: string;
   list?: DirectiveTypeDefinitionComplexList[];
 }
@@ -124,19 +130,19 @@ export interface DirectiveTypeDefinitionComplexList {
 
 export interface Tag {
   /** Tag名称 */
-  name?: string;
+  name: string;
   /** Tag所有属性清单 */
-  attributes?: { [key: string]: TagAttr };
+  attributes: { [key: string]: TagAttr };
   /** 光标位置是否在Tag名称上 */
-  isOnTagName?: boolean;
+  isOnTagName: boolean;
   /** 光标位置是否在属性名中 */
-  isOnAttrName?: boolean;
+  isOnAttrName: boolean;
   /** 光标位置是否在属性值中 */
-  isOnAttrValue?: boolean;
+  isOnAttrValue: boolean;
   /** 属性名称，当 `isOnAttrName: true` 时有效 */
-  attrName?: string;
+  attrName: string;
   /** 光标所在位置的单词 */
-  word?: string;
+  word: string;
 }
 
 export enum InputAttrType {
@@ -157,6 +163,6 @@ export enum TagAttrValueType {
 export interface TagAttr {
   type?: InputAttrType;
   name?: string;
-  value?: string;
-  valueType?: TagAttrValueType;
+  value: string;
+  valueType: TagAttrValueType;
 }

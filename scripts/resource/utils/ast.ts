@@ -20,22 +20,29 @@ export interface Token {
 }
 
 export const AST_KEYS = {
-  Inline: 'inline',
-  HeadingOpen: 'heading_open',
-  HeadingClose: 'heading_close',
-  ParagraphOpen: 'paragraph_open',
-  UlListOpen: 'bullet_list_open',
-  UlListClose: 'bullet_list_close',
+  Inline: "inline",
+  HeadingOpen: "heading_open",
+  HeadingClose: "heading_close",
+  ParagraphOpen: "paragraph_open",
+  UlListOpen: "bullet_list_open",
+  UlListClose: "bullet_list_close",
 };
 
 export class AST {
   get length(): number {
     return this.tokens.length;
   }
-  constructor(private tokens: Token[], private filePath: string, public zone: string) {}
+  constructor(
+    private tokens: Token[],
+    private filePath: string,
+    public zone: string
+  ) {}
 
   /** 偏移至某个标题 */
-  offsetAt(text: string, options?: { start?: number; useStartsWith?: boolean }): number {
+  offsetAt(
+    text: string,
+    options?: { start?: number; useStartsWith?: boolean }
+  ): number {
     const opt = { start: 0, useStartsWith: false, ...options };
     for (let i = opt.start; i < this.tokens.length; i++) {
       if (this.tokens[i].type === AST_KEYS.HeadingOpen) {
@@ -52,7 +59,7 @@ export class AST {
   /** 偏移至某个标签 */
   offsetTagAt(tag: string, start = 0): number {
     for (let i = start; i < this.tokens.length; i++) {
-      if (this.tokens[i].type.endsWith('_open') && this.tokens[i].tag === tag) {
+      if (this.tokens[i].type.endsWith("_open") && this.tokens[i].tag === tag) {
         return i;
       }
     }
@@ -83,11 +90,19 @@ export class AST {
   }
 
   findTagAndTypes(type: string, tag: string, start = 0, end = -1): number[] {
-    return this.finds(start, end, (token) => token.type === type && token.tag === tag);
+    return this.finds(
+      start,
+      end,
+      (token) => token.type === type && token.tag === tag
+    );
   }
 
   findTags(tag: string, start = 0, end = -1): number[] {
-    return this.finds(start, end, (token) => token.type.endsWith('_open') && token.tag === tag);
+    return this.finds(
+      start,
+      end,
+      (token) => token.type.endsWith("_open") && token.tag === tag
+    );
   }
 
   findTypes(type: string, start = 0, end = -1): number[] {
@@ -99,7 +114,10 @@ export class AST {
   }
 
   isParagraph(index: number): boolean {
-    return this.tokens[index].type === AST_KEYS.ParagraphOpen && this.tokens[index].tag === 'p';
+    return (
+      this.tokens[index].type === AST_KEYS.ParagraphOpen &&
+      this.tokens[index].tag === "p"
+    );
   }
 
   getText(index: number = 0): string {
@@ -116,9 +134,9 @@ export class AST {
           .slice(index, this.getCloseAt(index, AST_KEYS.UlListClose))
           .filter((i) => i.type === AST_KEYS.Inline)
           .map((i) => `- ${i.content}`)
-          .join('\n');
+          .join("\n");
     }
-    return '';
+    return "";
   }
 
   getCloseAt(start: number, type: string): number {
@@ -128,36 +146,49 @@ export class AST {
 
   getParagraph(text: string): string {
     const idx = this.offsetAt(text);
-    return idx === -1 ? '' : this.getText(idx + 3);
+    return idx === -1 ? "" : this.getText(idx + 3);
   }
 
   getTable(index: number, isSplit = false): string[][] {
-    const beginStart = this.offsetTagAt('tbody', index);
+    const beginStart = this.offsetTagAt("tbody", index);
     let beginEnd = -1;
     if (isSplit) {
       // 查找下一个标题，若标题不存在则至结尾
-      const nextHeadingIdx = this.offsetTypeAt(AST_KEYS.HeadingOpen, beginStart + 1);
+      const nextHeadingIdx = this.offsetTypeAt(
+        AST_KEYS.HeadingOpen,
+        beginStart + 1
+      );
       if (nextHeadingIdx === -1) {
         beginEnd = this.tokens.length;
       } else {
         beginEnd = nextHeadingIdx;
       }
     } else {
-      beginEnd = this.offsetTypeAt('tbody_close', beginStart + 1);
+      beginEnd = this.offsetTypeAt("tbody_close", beginStart + 1);
     }
     if (beginStart === -1 || beginEnd === -1) return [];
-    return this.findTags('tr', beginStart, beginEnd).map((start) =>
-      this.findTypes(AST_KEYS.Inline, start, this.offsetTypeAt('tr_close', start)).map((idx) => this.tokens[idx].content),
+    return this.findTags("tr", beginStart, beginEnd).map((start) =>
+      this.findTypes(
+        AST_KEYS.Inline,
+        start,
+        this.offsetTypeAt("tr_close", start)
+      ).map((idx) => this.tokens[idx].content)
     );
   }
 
-  private finds(start: number, end: number, cb: (token: Token) => boolean): number[] {
+  private finds(
+    start: number,
+    end: number,
+    cb: (token: Token) => boolean
+  ): number[] {
     const list: number[] = [];
-    this.tokens.slice(start, end === -1 ? this.tokens.length : end).forEach((token, idx) => {
-      if (cb(token)) {
-        list.push(start + idx);
-      }
-    });
+    this.tokens
+      .slice(start, end === -1 ? this.tokens.length : end)
+      .forEach((token, idx) => {
+        if (cb(token)) {
+          list.push(start + idx);
+        }
+      });
     return list;
   }
 }

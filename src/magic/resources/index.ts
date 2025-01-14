@@ -1,24 +1,37 @@
-import { existsSync, readFileSync } from 'fs';
-import { join } from 'path';
-import { env, MarkdownString, workspace } from 'vscode';
-import * as nls from 'vscode-nls';
-import { Directive, DirectiveProperty, DirectiveType, DirectiveTypeDefinition, InputAttrType, NAME, Tag } from '../interfaces';
-import { Notifier } from '../notifier';
-import { DATA, LANG } from './default';
-const localize = nls.config({ messageFormat: nls.MessageFormat.both })();
+import { env, MarkdownString, workspace, l10n } from "vscode";
+import {
+  Directive,
+  DirectiveProperty,
+  DirectiveType,
+  DirectiveTypeDefinition,
+  InputAttrType,
+  NAME,
+  Tag,
+} from "../interfaces";
+import { Notifier } from "../notifier";
+import { DATA } from "./data";
+import { enUS } from "./lang-en-US";
+import { zhCN } from "./lang-zh-CN";
+import { findUri, readFile } from "../fs";
 const I18N = {
-  document: localize('document', 'OnLine Document'),
-  github: localize('github', 'Source'),
-  whenToUse: localize('whenToUse', 'When To Use:'),
-  type: localize('type', 'Type:'),
-  optionalValue: localize('optionalValue', 'Optional Value:'),
-  defaultValue: localize('defaultValue', 'Default Value:'),
-  library: localize('library', 'Library:'),
-  standalone: localize('standalone', '(Standalone)'),
+  document: l10n.t("OnLine Document"),
+  github: l10n.t("Source"),
+  whenToUse: l10n.t("When To Use:"),
+  type: l10n.t("Type:"),
+  optionalValue: l10n.t("Optional Value:"),
+  defaultValue: l10n.t("Default Value:"),
+  library: l10n.t("Library:"),
+  standalone: l10n.t("(Standalone)"),
 };
+const defaultLangCode = "en-US";
+const LANG_DATAS: Record<string, Record<string, string>> = {
+  [defaultLangCode]: enUS,
+  "zh-CN": zhCN,
+};
+const LANG = getLangData();
 
 export const CONFIG = {
-  language: 'en',
+  language: "en",
   hover: true,
   inlineTemplate: true,
   isAntd: true,
@@ -27,39 +40,44 @@ export const CONFIG = {
 
 export const RESOURCES: Directive[] = [];
 
-export const DIRECTIVE_NAMES = [];
+export const DIRECTIVE_NAMES: string[] = [];
 
-function notNull(value: any, defaultValue: any = '') {
+function notNull(value: any, defaultValue: any = "") {
   if (value == null) return defaultValue;
 
   return value;
 }
 
 function getPure(value: string): string {
-  return value.replace(/nz([A-Z])/g, (_raw: string, val: string) => val.toLowerCase());
+  return value.replace(/nz([A-Z])/g, (_raw: string, val: string) =>
+    val.toLowerCase()
+  );
 }
 
 function getFullDoc(item: Directive): string {
-  if (item.doc.startsWith('http')) return item.doc;
-  const isEn = CONFIG.language === 'en';
-  const doc = isEn ? item.doc : item.doc.replace('/en', '/zh');
-  if (item.lib === 'ng-zorro-antd') {
+  if (item.doc?.startsWith("http")) return item.doc;
+  const isEn = CONFIG.language === "en";
+  const doc = isEn ? item.doc : item.doc?.replace("/en", "/zh");
+  if (item.lib === "ng-zorro-antd") {
     // TODO: Muse be release version
-    return (isEn ? 'https://ng.ant.design' : 'https://ng-zorro.gitee.io') + doc;
+    return (isEn ? "https://ng.ant.design" : "https://ng-zorro.gitee.io") + doc;
     // return `https://ng-zorro-master.netlify.com` + item.doc;
   }
-  return (isEn ? 'https://ng-alain-doc.surge.sh' : 'https://ng-alain.com') + doc;
+  return (
+    (isEn ? "https://ng-alain-doc.surge.sh" : "https://ng-alain.com") + doc
+  );
 }
 
 function genComponentMarkdown(item: Directive): string {
-  if (item == null) return '';
+  if (item == null) return "";
 
   let title = `**${item.title}**`;
   // (item.standalone ? ' `' + I18N.standalone + '`' : '')
   // if (CONFIG.isAlain) title += `, (${I18N.library}: ${item.lib})`;
   // if (CONFIG.isAlain) title += ` ![NG-ZORRO](https://dummyimage.com/90x22/1890ff/ffffff.png&text=NG-ZORRO)`;
-  if (item.standalone) title += ` ![Standalone](https://cdn-images-1.medium.com/v2/resize:fit:80/1*yjYUfAD0P2osKAqHDnQIaQ.png)`;
-  const rows: string[] = [title, item.description];
+  if (item.standalone)
+    title += ` ![Standalone](https://cdn-images-1.medium.com/v2/resize:fit:80/1*yjYUfAD0P2osKAqHDnQIaQ.png)`;
+  const rows: string[] = [title, item.description ?? ""];
 
   if (item.whenToUse && item.whenToUse.trim().length > 0) {
     rows.push(`**${I18N.whenToUse}**`);
@@ -67,53 +85,81 @@ function genComponentMarkdown(item: Directive): string {
   }
 
   if (item.doc) {
-    rows.push(`[${I18N.document}](${getFullDoc(item)})${item.github ? ` － [${I18N.github}](${item.github})` : ''}`);
+    rows.push(
+      `[${I18N.document}](${getFullDoc(item)})${
+        item.github ? ` － [${I18N.github}](${item.github})` : ""
+      }`
+    );
   }
 
-  return rows.filter((w) => !!w).join('\n\n');
+  return rows.filter((w) => !!w).join("\n\n");
 }
 
 function genPropertyMarkdown(property: DirectiveProperty): string {
-  if (property == null) return '';
+  if (property == null) return "";
 
   const rows: string[] = [];
 
-  if (property.typeDefinition && Array.isArray(property.typeDefinition) && property.typeDefinition.length > 0) {
-    rows.push(`**${I18N.optionalValue}** ${property.typeDefinition.map((i: DirectiveTypeDefinition) => '`' + i.label + '`').join(', ')}`);
-  } else if (property.typeRaw.length > 0) {
+  if (
+    Array.isArray(property.typeDefinition) &&
+    property.typeDefinition.length > 0
+  ) {
+    rows.push(
+      `**${I18N.optionalValue}** ${property.typeDefinition
+        .map((i) => "`" + (i as DirectiveTypeDefinition).label + "`")
+        .join(", ")}`
+    );
+  } else if (property.typeRaw && property.typeRaw.length > 0) {
     rows.push(`**${I18N.type}** ${property.typeRaw}`);
   }
 
-  if (property.default.length > 0) {
+  if (property.default && property.default.length > 0) {
     rows.push(`**${I18N.defaultValue}** ${property.default}`);
   }
 
-  rows.push(property.description);
+  if (property.description) {
+    rows.push(property.description);
+  }
 
-  return rows.join('\n\n');
+  return rows.join("\n\n");
 }
 
 function fixProperty(p: DirectiveProperty) {
   p.pureName = getPure(p.name);
 
-  p.default = notNull(p.default, '-');
-  if (p.default === '-') p.default = '';
+  p.default = notNull(p.default, "-");
+  if (p.default === "-") p.default = "";
 
-  p.description = LANG[p.description];
+  p.description = LANG[p.description ?? ""];
   p.isInputBoolean = notNull(p.isInputBoolean, true);
-  p.type = notNull(p.type, 'string');
-  p.typeRaw = notNull(p.typeRaw, '').replace(/｜/g, '|');
+  p.type = notNull(p.type, "string");
+  p.typeRaw = notNull(p.typeRaw, "").replace(/｜/g, "|");
   p.typeDefinition = notNull(p.typeDefinition, []);
   if (Array.isArray(p.typeDefinition)) {
-    p.typeDefinition = p.typeDefinition.map((item: any) => (typeof item === 'string' ? { value: item, label: item } : item));
-    p.typeDefinitionSnippetStr = p.typeDefinition.map((i: DirectiveTypeDefinition) => i.value).join(',');
+    p.typeDefinition = p.typeDefinition.map((item: any) =>
+      typeof item === "string" ? { value: item, label: item } : item
+    );
+    p.typeDefinitionSnippetStr = p.typeDefinition
+      .map((i) => (i as DirectiveTypeDefinition).value)
+      .join(",");
   } else {
-    if (typeof p.typeDefinition === 'object') {
+    if (typeof p.typeDefinition === "object") {
       p.inputType = InputAttrType.Complex;
     }
-    p.typeDefinitionSnippetStr = '';
+    p.typeDefinitionSnippetStr = "";
   }
   p._doc = new MarkdownString(genPropertyMarkdown(p));
+}
+
+function getLangData(): Record<string, string> {
+  const lang = env.language.toLowerCase();
+  if (LANG_DATAS[lang]) return LANG_DATAS[lang];
+  const envLangCode = lang.split("-").shift() ?? "en";
+  for (const lang of Object.keys(LANG_DATAS)) {
+    const curLangCode = lang.split("-").shift() ?? "en";
+    if (envLangCode === curLangCode) return LANG_DATAS[lang];
+  }
+  return LANG_DATAS[defaultLangCode];
 }
 
 export async function INIT(notifier: Notifier) {
@@ -121,16 +167,27 @@ export async function INIT(notifier: Notifier) {
   CONFIG.language = env.language.toLowerCase();
   CONFIG.hover = cog.hover;
   CONFIG.inlineTemplate = cog.inlineTemplate;
-  if (workspace.workspaceFolders != null && workspace.workspaceFolders.length > 0) {
+  if (
+    workspace.workspaceFolders != null &&
+    workspace.workspaceFolders.length > 0
+  ) {
     CONFIG.isAntd = false;
     CONFIG.isAlain = false;
-    const packageJsonPath = join(workspace.workspaceFolders[0].uri.fsPath, 'package.json');
-    if (!existsSync(packageJsonPath)) {
+    const packageJsonUri = await findUri("package.json");
+    if (packageJsonUri == null) {
       notifier.notify(`Not found package.json`);
       return null;
     }
-    const packageJson = JSON.parse(readFileSync(packageJsonPath).toString());
-    const VERSIONS = [...Object.keys(packageJson.dependencies), ...Object.keys(packageJson.devDependencies)];
+    const packageStr = await readFile(packageJsonUri);
+    if (packageStr == null) {
+      notifier.notify(`Can't load package.json file`);
+      return null;
+    }
+    const packageJson = JSON.parse(packageStr);
+    const VERSIONS = [
+      ...Object.keys(packageJson.dependencies),
+      ...Object.keys(packageJson.devDependencies),
+    ];
     if (~VERSIONS.indexOf(`ng-zorro-antd`)) {
       CONFIG.isAntd = true;
     }
@@ -142,11 +199,11 @@ export async function INIT(notifier: Notifier) {
 
   const data = DATA as Directive[];
   if (CONFIG.isAntd) {
-    RESOURCES.push(...data.filter((i) => i.lib === 'ng-zorro-antd'));
+    RESOURCES.push(...data.filter((i) => i.lib === "ng-zorro-antd"));
   }
 
   if (CONFIG.isAlain) {
-    RESOURCES.push(...data.filter((i) => i.lib !== 'ng-zorro-antd'));
+    RESOURCES.push(...data.filter((i) => i.lib !== "ng-zorro-antd"));
   }
 
   RESOURCES.forEach((i) => {
@@ -154,12 +211,17 @@ export async function INIT(notifier: Notifier) {
     i.whenToUse = LANG[i.whenToUse];
     i.doc = notNull(i.doc);
     i.title = LANG[i.title];
-    i.type = notNull(i.type, 'component');
-    i.snippet = notNull(i.snippet, '');
-    if (i.snippet.length === 0) {
-      i.snippet = i.type === 'component' ? (i.selfClosingTag ? `<__$0 />` : `<__$1>$0</__>`) : `<div __$1>$0</div>`;
+    i.type = notNull(i.type, "component");
+    i.snippet = notNull(i.snippet, "");
+    if (i.snippet?.length === 0) {
+      i.snippet =
+        i.type === "component"
+          ? i.selfClosingTag
+            ? `<__$0 />`
+            : `<__$1>$0</__>`
+          : `<div __$1>$0</div>`;
     }
-    i.snippet = i.snippet.replace(/__/g, i.selector);
+    i.snippet = i.snippet!.replace(/__/g, i.selector);
 
     i.properties = notNull(i.properties, []);
     i.properties.forEach((p) => fixProperty(p));
@@ -179,19 +241,21 @@ export async function INIT(notifier: Notifier) {
 }
 
 export function isComponent(text: string): boolean {
-  return text.startsWith('nz-') || DIRECTIVE_NAMES.indexOf(text) !== -1;
+  return text.startsWith("nz-") || DIRECTIVE_NAMES.indexOf(text) !== -1;
 }
 
 export function getDirective(tag: Tag): Directive[] {
-  const dict: { [key: string]: Directive } = {};
+  const dict: { [key: string]: Directive | undefined } = {};
   if (isComponent(tag.name)) {
     dict[tag.name] = first(tag.name);
   }
 
   Object.keys(tag.attributes)
-    .filter((key) => DIRECTIVE_NAMES.indexOf(tag.attributes[key].name) !== -1)
+    .filter(
+      (key) => DIRECTIVE_NAMES.indexOf(tag.attributes[key].name ?? "") !== -1
+    )
     .forEach((key) => {
-      const keyValue = tag.attributes[key].name;
+      const keyValue = tag.attributes[key].name ?? "";
       if (dict[keyValue]) return;
       dict[keyValue] = first(keyValue);
     });
