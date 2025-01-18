@@ -5,5 +5,5 @@ description:
 ---
 
 ```html
-<span nz-icon spin type="${1|loading,sync|}"></span>
+<nz-icon spin type="${1|loading,sync|}" />
 ```

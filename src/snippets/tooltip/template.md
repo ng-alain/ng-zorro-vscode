@@ -8,7 +8,7 @@ description:
 <nz-tooltip>
   <span nz-tooltip>${1}</span>
   <ng-template #nzTemplate>
-    <span nz-icon type="file"></span>
+    <nz-icon type="file" />
     <span>$0</span>
   </ng-template>
 </nz-tooltip>

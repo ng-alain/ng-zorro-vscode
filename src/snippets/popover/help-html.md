@@ -9,6 +9,6 @@ description:
   <ng-template #${1}Tpl>
     $0
   </ng-template>
-  <span nz-popover nz-icon type="question-circle"></span>
+  <nz-icon nz-popover type="question-circle" />
 </nz-popover>
 ```

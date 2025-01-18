@@ -1,4 +1,4 @@
 {
-	"ng-zorro-vscode.hover": "是否开启悬停，默认：`true`",
-	"ng-zorro-vscode.inlineTemplate": "是否支持内联模板，默认：`true`"
+  "ng-zorro-vscode.hover": "是否开启悬停，默认：`true`",
+  "ng-zorro-vscode.inlineTemplate": "是否支持内联模板，默认：`true`"
 }

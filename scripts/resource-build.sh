@@ -2,7 +2,7 @@
 
 set -e
 
-cd $(dirname $0)/../..
+cd $(dirname $0)/..
 
 DIR="$(pwd)/build"
 
@@ -20,4 +20,4 @@ cloneDelonSource() {
 
 cloneZorroSource
 cloneDelonSource
-node scripts/resource/main.js
+npx tsx ./scripts/resource/index.ts

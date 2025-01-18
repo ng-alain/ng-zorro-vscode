@@ -8,7 +8,7 @@ description:
 <nz-input-group nzSize="large" [nzSuffix]="suffixIcon">
   <input [(ngModel)]="$1" (input)="$2($event.target?.value)" placeholder="$3" nz-input [nzAutocomplete]="${4:auto}" />
   <ng-template #suffixIcon>
-    <span nz-icon type="search"></span>
+    <nz-icon type="search" />
   </ng-template>
 </nz-input-group>
 <nz-autocomplete nzBackfill #$4>

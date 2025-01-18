@@ -1,10 +1,24 @@
 .vscode/**
+.vscode-test/**
 src/**
-snippets/**
+.gitignore
+.yarnrc
+esbuild.js
+vsc-extension-quickstart.md
+**/tsconfig.json
+**/eslint.config.mjs
+**/*.map
+**/*.ts
+**/.vscode-test.*
+.github/**
+.yarn/**
+examples/**
+demo.gif
+.cssrem
+.yarnrc.yml
 scripts/**
-build/**
+.nvmrc
 
-gulpfile.js
 *.zip
 .editorconfig
 .gitignore
@@ -15,3 +29,6 @@ tsconfig.json
 tslint.json
 yarn.lock
 TODO.md
+
+build
+out/test
