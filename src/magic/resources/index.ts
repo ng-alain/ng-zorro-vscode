@@ -34,6 +34,7 @@ export const CONFIG = {
   language: "en",
   hover: true,
   inlineTemplate: true,
+  signal: false,
   isAntd: true,
   isAlain: true,
 };
@@ -166,6 +167,7 @@ export async function INIT(notifier: Notifier) {
   const cog = workspace.getConfiguration(NAME);
   CONFIG.language = env.language.toLowerCase();
   CONFIG.hover = cog.hover;
+  CONFIG.signal = cog.signal;
   CONFIG.inlineTemplate = cog.inlineTemplate;
   if (
     workspace.workspaceFolders != null &&

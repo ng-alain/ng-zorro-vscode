@@ -63,6 +63,11 @@
           "description": "%ng-zorro-vscode.inlineTemplate%",
           "type": "boolean",
           "default": true
+        },
+        "ng-zorro-vscode.signal": {
+          "description": "%ng-zorro-vscode.signal%",
+          "type": "boolean",
+          "default": false
         }
       }
     }
