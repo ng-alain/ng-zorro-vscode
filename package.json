@@ -12,7 +12,7 @@
     "vscode:prepublish": "npm run check-types && tsx ./scripts/esbuild.js --production",
     "compile": "yarn run check-types && yarn run lint && tsx ./scripts/esbuild.js",
     "watch": "tsx ./scripts/esbuild.js --watch",
-    "package": "yarn run lint && yarn run check-types && tsx ./scripts/esbuild.js --production",
+    "package": "yarn run lint && yarn run resource && yarn run check-types && tsx ./scripts/esbuild.js --production",
     "compile-tests": "tsc -p . --outDir out",
     "watch-tests": "tsc -p . -w --outDir out",
     "pretest": "yarn run compile-tests && yarn run compile && yarn run lint",
@@ -72,7 +72,7 @@
   },
   "devDependencies": {
     "@types/node": "20.x",
-    "@types/vscode": "^1.96.0",
+    "@types/vscode": "^1.90.0",
     "@typescript-eslint/eslint-plugin": "^8.20.0",
     "@typescript-eslint/parser": "^8.20.0",
     "@vscode/test-cli": "^0.0.10",

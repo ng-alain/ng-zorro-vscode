@@ -3,14 +3,12 @@ import * as path from "path";
 import { Directive, DirectiveProperty } from "../../src/magic/interfaces";
 import { getFiles } from "./utils/files";
 import { makeObject } from "./utils/markdown";
-import enUS from "../l10n/en-US.json";
-import zhCN from "../l10n/zh-CN.json";
 
 const rootPath = path.join(__dirname, "../..");
 const resourcePath = path.join(rootPath, "src", "magic", "resources");
 const mergeLangData = {
-  "en-US": enUS,
-  "zh-CN": zhCN,
+  "en-US": {},
+  "zh-CN": {},
 };
 const allLang = Object.keys(mergeLangData);
 const result: { [key: string]: any[] } = {};
