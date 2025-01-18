@@ -9,7 +9,7 @@
   "licenseUrl": "LICENSE",
   "scripts": {
     "resource": "bash ./scripts/resource-build.sh && node scripts/snippet.js",
-    "vscode:prepublish": "npm run check-types && tsx ./scripts/esbuild.js --production",
+    "vscode:prepublish": "yarn run resource && npm run check-types && tsx ./scripts/esbuild.js --production",
     "compile": "yarn run check-types && yarn run lint && tsx ./scripts/esbuild.js",
     "watch": "tsx ./scripts/esbuild.js --watch",
     "package": "yarn run lint && yarn run resource && yarn run check-types && tsx ./scripts/esbuild.js --production",

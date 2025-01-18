@@ -8346,6 +8346,15 @@ export const DATA: Directive[] = [
         "type": "object",
         "typeRaw": "`object`",
         "default": ""
+      },
+      {
+        "name": "nzPopoverOverlayClickable",
+        "inputType": 0,
+        "description": "nz-popover.nzPopoverOverlayClickable.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`true`",
+        "pureDefault": "true"
       }
     ],
     "types": {},

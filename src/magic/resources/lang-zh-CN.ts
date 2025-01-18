@@ -1,5 +1,4 @@
 export const zhCN: Record<string, string> = {
-  "custom": "自定义",
   "nz-row.title": "栅格",
   "nz-row.whenToUse": "",
   "nz-row.description": "",
@@ -984,6 +983,7 @@ export const zhCN: Record<string, string> = {
   "nz-popover.nzPopoverOverlayClassName.description": "卡片类名",
   "nz-popover.nzPopoverOverlayStyle.description": "卡片样式",
   "nz-popover.nzPopoverBackdrop.description": "浮层是否应带有背景板",
+  "nz-popover.nzPopoverOverlayClickable.description": "点击蒙层关闭气泡框，仅`click`触发行为有效",
   "nz-progress.title": "进度条",
   "nz-progress.whenToUse": "在操作需要较长时间才能完成时，为用户显示该操作的当前进度和状态。",
   "nz-progress.description": "各类型通用的属性。",

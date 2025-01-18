@@ -1,5 +1,4 @@
 export const enUS: Record<string, string> = {
-  "custom": "Custom",
   "nz-row.title": "Grid",
   "nz-row.whenToUse": "",
   "nz-row.description": "",
@@ -961,6 +960,7 @@ export const enUS: Record<string, string> = {
   "nz-popover.nzPopoverMouseLeaveDelay.description": "Delay in seconds, before popover is hidden on mouse leave",
   "nz-popover.nzPopoverOverlayClassName.description": "Class name of the popover card",
   "nz-popover.nzPopoverOverlayStyle.description": "Style of the popover card",
+  "nz-popover.nzPopoverOverlayClickable.description": "Click the mask to close the bubble box. Only the `click` trigger behavior is valid",
   "nz-progress.title": "Progress",
   "nz-progress.whenToUse": "If it will take a long time to complete an operation, you can use `Progress` to show the current progress and status.",
   "nz-progress.description": "",
