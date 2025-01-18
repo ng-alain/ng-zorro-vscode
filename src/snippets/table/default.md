@@ -22,7 +22,7 @@
         <nz-divider nzType="vertical"></nz-divider>
         <nz-dropdown>
           <a class="ant-dropdown-link" nz-dropdown>
-            更多 <span nz-icon type="${6|down,ellipsis|}"></span>
+            更多 <nz-icon type="${6|down,ellipsis|}" />
           </a>
           <ul nz-menu>
             <li nz-menu-item>
@@ -61,7 +61,7 @@ Table
         <nz-divider nzType="vertical"></nz-divider>
         <nz-dropdown>
           <a class="ant-dropdown-link" nz-dropdown>
-            More <span nz-icon type="${6|down,ellipsis|}"></span>
+            More <nz-icon type="${6|down,ellipsis|}" />
           </a>
           <ul nz-menu>
             <li nz-menu-item>
