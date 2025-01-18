@@ -20,6 +20,7 @@
 |----|----|----|-----|
 | `ng-zorro-vscode.hover` | 是否开启悬停 | `boolean` | `true` |
 | `ng-zorro-vscode.inlineTemplate` | 是否支持内联模板 | `boolean` | `true` |
+| `ng-zorro-vscode.signal` | 是否 `signal` 模式，部分变量将自动加上 `()` | `boolean` | `false` |
 
 ## 支持语言版本
 

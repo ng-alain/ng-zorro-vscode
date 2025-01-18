@@ -336,9 +336,8 @@ export default class implements CompletionItemProvider {
   private genDefaultPropertyValueSnippet(property: DirectiveProperty): string {
     switch (property.type) {
       case "boolean":
-        return `"\${1|false,true,loading,disabled${
-          CONFIG.isAlain ? ",http.loading" : ""
-        }|}"$0`;
+        const suffix = CONFIG.signal ? "()" : "";
+        return `"\${1|false,true,loading${suffix},disabled${suffix}|}"$0`;
       case "TemplateRef":
         return property.default
           ? `"\${1:${property.default}}"$0`
