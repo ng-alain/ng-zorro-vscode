@@ -123,7 +123,7 @@ function getDirective(): Directive[] {
     .findTags("h3", start + 1, end)
     .map((idx) => {
       const selectorList = (ast.getText(idx) || "")
-        .split("|")
+        .split(/[|,]/)
         .map((s) => s.trim());
       let selector = selectorList[0]?.replace(":standalone", "");
       let type: DirectiveType = "component";
@@ -137,6 +137,7 @@ function getDirective(): Directive[] {
           selector = selector.replace(/__/g, "");
           type = "pipe";
         } else {
+          // console.warn(`[${selector}] is not a valid component name`);
           return null;
         }
       }
@@ -517,7 +518,9 @@ function metaToItem(zone: string, filePath: string, meta: any): Directive[] {
       }
     }
     // override selfClosingTag
-    // if (FIX.selfClosingTag.includes(i.selector)) i.selfClosingTag = true;
+    if (FIX.selfClosingTag.includes(i.selector)) {
+      i.selfClosingTag = true;
+    }
     // add extra properties
     if (FIX.extraProperty[i.selector]) {
       (FIX.extraProperty[i.selector] as any[])
@@ -536,7 +539,7 @@ function metaToItem(zone: string, filePath: string, meta: any): Directive[] {
         p.typeDefinition =
           FIX.typeDefinition[i.selector][p.name] || p.typeDefinition;
       }
-      if (p.typeDefinition && p.typeDefinition.length > 0) {
+      if (Array.isArray(p.typeDefinition) && p.typeDefinition.length > 0) {
         p.type = "Enum";
       }
       // override force input type

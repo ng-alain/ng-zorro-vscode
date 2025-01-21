@@ -227,6 +227,7 @@ export const FIX: FixType = {
     "nz-statistic",
     "nz-tree",
     "nz-alert",
+    "nz-icon",
   ],
 };
 

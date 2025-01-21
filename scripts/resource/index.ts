@@ -4,6 +4,7 @@ import { Directive, DirectiveProperty } from "../../src/magic/interfaces";
 import { getFiles } from "./utils/files";
 import { makeObject } from "./utils/markdown";
 
+const DEV = process.argv[2] === "DEV";
 const rootPath = path.join(__dirname, "../..");
 const resourcePath = path.join(rootPath, "src", "magic", "resources");
 const mergeLangData = {
@@ -34,8 +35,9 @@ function genLocalizeKey(
 function genObject(): void {
   const allFiles = getFiles(allLang, path.join(rootPath, "build"));
   Object.keys(allFiles).forEach((lang) => {
-    const files = allFiles[lang];
-    // const files = langFiles[l].filter((w) => w.includes('components/auto-complete'));
+    const files = !DEV
+      ? allFiles[lang]
+      : allFiles[lang].filter((w) => w.includes("icon"));
     result[lang] = JSON.parse(JSON.stringify(makeObject(lang, files)));
 
     // 生成国际化Key数据

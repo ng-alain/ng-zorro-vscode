@@ -96,7 +96,7 @@ export interface DirectiveProperty {
   /**
    * Definition list for type, e.g: `[ { value: 'primary', label: '主按钮' }, { value: 'danger', label: '危险按钮' } ]`
    */
-  typeDefinition?: Array<string>;
+  typeDefinition?: Array<string> | DirectiveTypeDefinitionComplex;
   isInputBoolean?: boolean;
   default?: string;
   pureDefault?: string;

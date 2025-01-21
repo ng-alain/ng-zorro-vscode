@@ -28,6 +28,19 @@
       "outFiles": [
         "${workspaceFolder}/**/*.js"
       ]
-    }
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "resource",
+      "program": "${workspaceFolder}/scripts/resource/index.ts",
+      "args": [
+        "DEV"
+      ],
+      "runtimeExecutable": "tsx",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "openOnSessionStart",
+      "skipFiles": []
+    },
   ]
 }
