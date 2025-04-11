@@ -2139,6 +2139,117 @@ export const DATA: Directive[] = [
   },
   {
     "lib": "ng-zorro-antd",
+    "type": "component",
+    "selector": "nz-check-list",
+    "title": "nz-check-list.title",
+    "description": "nz-check-list.description",
+    "whenToUse": "nz-check-list.whenToUse",
+    "properties": [
+      {
+        "name": "nzItems",
+        "inputType": 0,
+        "description": "nz-check-list.nzItems.description",
+        "type": "object",
+        "typeRaw": "`NzItemProps`",
+        "default": "`[]`",
+        "complexType": "NzItemProps",
+        "pureDefault": "[]"
+      },
+      {
+        "name": "nzVisible",
+        "inputType": 0,
+        "description": "nz-check-list.nzVisible.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzIndex",
+        "inputType": 0,
+        "description": "nz-check-list.nzIndex.description",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`1`",
+        "pureDefault": "1"
+      },
+      {
+        "name": "nzProgress",
+        "inputType": 0,
+        "description": "nz-check-list.nzProgress.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`true`",
+        "pureDefault": "true"
+      },
+      {
+        "name": "nzTriggerRender",
+        "inputType": 0,
+        "description": "nz-check-list.nzTriggerRender.description",
+        "type": "TemplateRef",
+        "typeRaw": "`TemplateRef<void> | string`",
+        "default": ""
+      },
+      {
+        "name": "nzTitle",
+        "inputType": 0,
+        "description": "nz-check-list.nzTitle.description",
+        "type": "TemplateRef",
+        "typeRaw": "`TemplateRef<void> | string`",
+        "default": ""
+      },
+      {
+        "name": "nzFooter",
+        "inputType": 0,
+        "description": "nz-check-list.nzFooter.description",
+        "type": "TemplateRef",
+        "typeRaw": "`TemplateRef<void> | string`",
+        "default": ""
+      },
+      {
+        "name": "nzHide",
+        "inputType": 1,
+        "description": "nz-check-list.nzHide.description",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<boolean>`",
+        "default": "`false`",
+        "pureDefault": "false"
+      }
+    ],
+    "types": {
+      "NzItemProps": [
+        {
+          "name": "key",
+          "inputType": 0,
+          "description": "nz-check-list.key.description",
+          "type": "string",
+          "typeRaw": "`string`",
+          "default": ""
+        },
+        {
+          "name": "description",
+          "inputType": 0,
+          "description": "nz-check-list.description.description",
+          "type": "string",
+          "typeRaw": "`string`",
+          "default": ""
+        },
+        {
+          "name": "onClick",
+          "inputType": 0,
+          "description": "nz-check-list.onClick.description",
+          "type": "function",
+          "typeRaw": "`() => void`",
+          "default": ""
+        }
+      ]
+    },
+    "doc": "/components/check-list/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/check-list",
+    "standalone": false
+  },
+  {
+    "lib": "ng-zorro-antd",
     "type": "directive",
     "selector": "nz-checkbox",
     "title": "nz-checkbox.title",
@@ -13762,7 +13873,7 @@ export const DATA: Directive[] = [
         "inputType": 1,
         "description": "nz-menu.nzClick.description",
         "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<NzMenuItemDirective>`",
+        "typeRaw": "`EventEmitter<NzMenuItemComponent>`",
         "default": ""
       }
     ],
@@ -14531,6 +14642,154 @@ export const DATA: Directive[] = [
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/pagination",
     "standalone": false,
     "selfClosingTag": true
+  },
+  {
+    "lib": "ng-zorro-antd",
+    "type": "component",
+    "selector": "nzBytes",
+    "title": "nzBytes.title",
+    "description": "nzBytes.description",
+    "whenToUse": "nzBytes.whenToUse",
+    "properties": [
+      {
+        "name": "decimal",
+        "inputType": 0,
+        "description": "nzBytes.decimal.description",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "'0'",
+        "pureDefault": "0"
+      },
+      {
+        "name": "from",
+        "inputType": 0,
+        "description": "nzBytes.from.description",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": "'B'",
+        "pureDefault": "B"
+      },
+      {
+        "name": "to",
+        "inputType": 0,
+        "description": "nzBytes.to.description",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": "''",
+        "pureDefault": ""
+      }
+    ],
+    "types": {},
+    "doc": "/components/pipes/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/pipes",
+    "standalone": false
+  },
+  {
+    "lib": "ng-zorro-antd",
+    "type": "component",
+    "selector": "nzToCssUnit",
+    "title": "nzToCssUnit.title",
+    "description": "nzToCssUnit.description",
+    "whenToUse": "nzToCssUnit.whenToUse",
+    "properties": [
+      {
+        "name": "defaultUnit",
+        "inputType": 0,
+        "description": "nzToCssUnit.defaultUnit.description",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": "'px'",
+        "pureDefault": "px"
+      }
+    ],
+    "types": {},
+    "doc": "/components/pipes/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/pipes",
+    "standalone": false
+  },
+  {
+    "lib": "ng-zorro-antd",
+    "type": "component",
+    "selector": "nzEllipsis",
+    "title": "nzEllipsis.title",
+    "description": "nzEllipsis.description",
+    "whenToUse": "nzEllipsis.whenToUse",
+    "properties": [
+      {
+        "name": "length",
+        "inputType": 0,
+        "description": "nzEllipsis.length.description",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "''",
+        "pureDefault": ""
+      },
+      {
+        "name": "suffix",
+        "inputType": 0,
+        "description": "nzEllipsis.suffix.description",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": "''",
+        "pureDefault": ""
+      }
+    ],
+    "types": {},
+    "doc": "/components/pipes/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/pipes",
+    "standalone": false
+  },
+  {
+    "lib": "ng-zorro-antd",
+    "type": "component",
+    "selector": "nzAggregate",
+    "title": "nzAggregate.title",
+    "description": "nzAggregate.description",
+    "whenToUse": "nzAggregate.whenToUse",
+    "properties": [
+      {
+        "name": "method",
+        "inputType": 0,
+        "description": "nzAggregate.method.description",
+        "type": "Enum",
+        "typeRaw": "`'sum' | 'max' | 'min' | 'avg'`",
+        "default": "''",
+        "typeDefinition": [
+          "sum",
+          "max",
+          "min",
+          "avg"
+        ],
+        "pureDefault": ""
+      }
+    ],
+    "types": {},
+    "doc": "/components/pipes/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/pipes",
+    "standalone": false
+  },
+  {
+    "lib": "ng-zorro-antd",
+    "type": "component",
+    "selector": "nzSanitizer",
+    "title": "nzSanitizer.title",
+    "description": "nzSanitizer.description",
+    "whenToUse": "nzSanitizer.whenToUse",
+    "properties": [
+      {
+        "name": "type",
+        "inputType": 0,
+        "description": "nzSanitizer.type.description",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": "'html'",
+        "pureDefault": "html"
+      }
+    ],
+    "types": {},
+    "doc": "/components/pipes/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/pipes",
+    "standalone": false
   },
   {
     "lib": "ng-zorro-antd",
@@ -17170,6 +17429,130 @@ export const DATA: Directive[] = [
     "types": {},
     "doc": "/components/spin/en",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/spin",
+    "standalone": false
+  },
+  {
+    "lib": "ng-zorro-antd",
+    "type": "component",
+    "selector": "nz-splitter",
+    "title": "nz-splitter.title",
+    "description": "nz-splitter.description",
+    "whenToUse": "nz-splitter.whenToUse",
+    "properties": [
+      {
+        "name": "nzLayout",
+        "inputType": 0,
+        "description": "nz-splitter.nzLayout.description",
+        "type": "Enum",
+        "typeRaw": "`'horizontal' | 'vertical'`",
+        "default": "`'horizontal'`",
+        "typeDefinition": [
+          "horizontal",
+          "vertical"
+        ],
+        "pureDefault": "horizontal"
+      },
+      {
+        "name": "nzLazy",
+        "inputType": 0,
+        "description": "nz-splitter.nzLazy.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzResizeStart",
+        "inputType": 1,
+        "description": "nz-splitter.nzResizeStart.description",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<number[]>`",
+        "default": ""
+      },
+      {
+        "name": "nzResize",
+        "inputType": 1,
+        "description": "nz-splitter.nzResize.description",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<number[]>`",
+        "default": ""
+      },
+      {
+        "name": "nzResizeEnd",
+        "inputType": 1,
+        "description": "nz-splitter.nzResizeEnd.description",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<number[]>`",
+        "default": ""
+      }
+    ],
+    "types": {},
+    "doc": "/components/splitter/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/splitter",
+    "standalone": false
+  },
+  {
+    "lib": "ng-zorro-antd",
+    "type": "component",
+    "selector": "nz-splitter-panel",
+    "title": "nz-splitter-panel.title",
+    "description": "nz-splitter-panel.description",
+    "whenToUse": "nz-splitter-panel.whenToUse",
+    "properties": [
+      {
+        "name": "nzDefaultSize",
+        "inputType": 0,
+        "description": "nz-splitter-panel.nzDefaultSize.description",
+        "type": "number",
+        "typeRaw": "`number | string`",
+        "default": ""
+      },
+      {
+        "name": "nzMin",
+        "inputType": 0,
+        "description": "nz-splitter-panel.nzMin.description",
+        "type": "number",
+        "typeRaw": "`number | string`",
+        "default": ""
+      },
+      {
+        "name": "nzMax",
+        "inputType": 0,
+        "description": "nz-splitter-panel.nzMax.description",
+        "type": "number",
+        "typeRaw": "`number | string`",
+        "default": ""
+      },
+      {
+        "name": "nzSize",
+        "inputType": 0,
+        "description": "nz-splitter-panel.nzSize.description",
+        "type": "number",
+        "typeRaw": "`number | string`",
+        "default": ""
+      },
+      {
+        "name": "nzCollapsible",
+        "inputType": 0,
+        "description": "nz-splitter-panel.nzCollapsible.description",
+        "type": "boolean",
+        "typeRaw": "`boolean  | { start?: boolean; end?: boolean }`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzResizable",
+        "inputType": 0,
+        "description": "nz-splitter-panel.nzResizable.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`true`",
+        "pureDefault": "true"
+      }
+    ],
+    "types": {},
+    "doc": "/components/splitter/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/splitter",
     "standalone": false
   },
   {
@@ -21178,8 +21561,16 @@ export const DATA: Directive[] = [
         "description": "auto-focus.delay.description",
         "type": "number",
         "typeRaw": "`number`",
-        "default": "`300`",
-        "pureDefault": "300"
+        "default": "`25`",
+        "pureDefault": "25"
+      },
+      {
+        "name": "focus",
+        "inputType": 1,
+        "description": "auto-focus.focus.description",
+        "type": "string",
+        "typeRaw": "`void`",
+        "default": ""
       }
     ],
     "types": {},
@@ -21694,8 +22085,8 @@ export const DATA: Directive[] = [
         "description": "error-collect.freq.description",
         "type": "number",
         "typeRaw": "`number`",
-        "default": "`500`",
-        "pureDefault": "500"
+        "default": "`250`",
+        "pureDefault": "250"
       },
       {
         "name": "offsetTop",
@@ -21726,8 +22117,8 @@ export const DATA: Directive[] = [
         "description": "error-collect.freq.description",
         "type": "number",
         "typeRaw": "`number`",
-        "default": "`500`",
-        "pureDefault": "500"
+        "default": "`250`",
+        "pureDefault": "250"
       },
       {
         "name": "offsetTop",
