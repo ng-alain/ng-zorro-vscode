@@ -1,5 +1,6 @@
 {
   "ng-zorro-vscode.hover": "是否开启悬停，默认：`true`",
   "ng-zorro-vscode.inlineTemplate": "是否支持内联模板，默认：`true`",
-  "ng-zorro-vscode.signal": "是否 `signal` 模式，部分变量将自动加上 `()`，默认：`false`"
+  "ng-zorro-vscode.signal": "是否 `signal` 模式，部分变量将自动加上 `()`，默认：`false`",
+  "ng-zorro-vscode.officialDocument": "始终使用官方文档链接，默认：`true`"
 }

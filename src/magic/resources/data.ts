@@ -2360,7 +2360,7 @@ export const DATA: Directive[] = [
         "inputType": 2,
         "description": "nz-checkbox-group.ngModel.description",
         "type": "Array",
-        "typeRaw": "`Array<{ label: string; value: string; checked?: boolean; }>`",
+        "typeRaw": "`string[] | number[]`",
         "default": "`[]`",
         "pureDefault": "[]"
       },
@@ -2396,7 +2396,7 @@ export const DATA: Directive[] = [
         "inputType": 1,
         "description": "nz-checkbox-group.ngModelChange.description",
         "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<Array<{ label: string; value: string; checked?: boolean; }>>`",
+        "typeRaw": "`EventEmitter<string[] | number[]>`",
         "default": ""
       }
     ],

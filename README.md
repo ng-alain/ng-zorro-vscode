@@ -23,6 +23,7 @@ In addition, some common completion code snippets are built in and prefix with `
 | `ng-zorro-vscode.hover` | Whether to enable hover | `boolean` | `true` |
 | `ng-zorro-vscode.inlineTemplate` | Whether to enable support inline template in typescript file | `boolean` | `true` |
 | `ng-zorro-vscode.signal` | Whether it is `signal` mode, some variables will be automatically added with `()` | `boolean` | `false` |
+| `ng-zorro-vscode.officialDocument` | Always use official documentation links | `boolean` | `true` |
 
 ## Support Language Versions
 

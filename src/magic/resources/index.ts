@@ -34,6 +34,8 @@ export const CONFIG = {
   language: "en",
   hover: true,
   inlineTemplate: true,
+  /** 始终使用官方文档链接 */
+  officialDocument: true,
   signal: false,
   isAntd: true,
   isAlain: true,
@@ -59,13 +61,17 @@ function getFullDoc(item: Directive): string {
   if (item.doc?.startsWith("http")) return item.doc;
   const isEn = CONFIG.language === "en";
   const doc = isEn ? item.doc : item.doc?.replace("/en", "/zh");
-  if (item.lib === "ng-zorro-antd") {
-    // TODO: Muse be release version
-    return (isEn ? "https://ng.ant.design" : "https://ng-zorro.gitee.io") + doc;
-    // return `https://ng-zorro-master.netlify.com` + item.doc;
+  const ANTD_LINK = "https://ng.ant.design";
+  const ALAIN_LINK = "https://ng-alain.com";
+  const isANTD = item.lib === "ng-zorro-antd";
+  if (CONFIG.officialDocument) {
+    return (isANTD ? ANTD_LINK : ALAIN_LINK) + doc;
+  }
+  if (isANTD) {
+    return (isEn ? ANTD_LINK : "https://ng-zorro.gitee.io") + doc;
   }
   return (
-    (isEn ? "https://ng-alain-doc.surge.sh" : "https://ng-alain.com") + doc
+    (isEn ? "https://ng-alain-doc.surge.sh" : ALAIN_LINK) + doc
   );
 }
 
@@ -87,8 +93,7 @@ function genComponentMarkdown(item: Directive): string {
 
   if (item.doc) {
     rows.push(
-      `[${I18N.document}](${getFullDoc(item)})${
-        item.github ? ` － [${I18N.github}](${item.github})` : ""
+      `[${I18N.document}](${getFullDoc(item)})${item.github ? ` － [${I18N.github}](${item.github})` : ""
       }`
     );
   }
@@ -169,6 +174,7 @@ export async function INIT(notifier: Notifier) {
   CONFIG.hover = cog.hover;
   CONFIG.signal = cog.signal;
   CONFIG.inlineTemplate = cog.inlineTemplate;
+  CONFIG.officialDocument = cog.officialDocument;
   if (
     workspace.workspaceFolders != null &&
     workspace.workspaceFolders.length > 0
