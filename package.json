@@ -2,7 +2,7 @@
   "name": "ng-zorro-vscode",
   "displayName": "NG-ZORRO Snippets",
   "description": "Snippets based on NG-ZORRO",
-  "version": "19.1.0",
+  "version": "20.0.0",
   "icon": "ng-zorro.png",
   "publisher": "cipchk",
   "license": "MIT",
@@ -93,8 +93,9 @@
     "markdown-it": "^14.1.0",
     "tsx": "^4.19.2",
     "typescript": "^5.7.3",
+    "vsce": "^2.15.0",
     "vscode-snippet-generator": "^1.3.2",
     "yaml-front-matter": "^4.1.1"
   },
-  "packageManager": "yarn@4.6.0"
+  "packageManager": "yarn@4.9.2"
 }

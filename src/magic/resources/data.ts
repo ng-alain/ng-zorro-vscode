@@ -933,7 +933,7 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-avatar.nzSrcSet.description",
         "type": "string",
-        "typeRaw": "string",
+        "typeRaw": "`string`",
         "default": ""
       },
       {
@@ -941,7 +941,7 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-avatar.nzAlt.description",
         "type": "string",
-        "typeRaw": "string",
+        "typeRaw": "`string`",
         "default": ""
       },
       {
@@ -951,6 +951,34 @@ export const DATA: Directive[] = [
         "type": "string",
         "typeRaw": "`string`",
         "default": ""
+      },
+      {
+        "name": "nzLoading",
+        "inputType": 0,
+        "description": "nz-avatar.nzLoading.description",
+        "type": "Enum",
+        "typeRaw": "`'eager' | 'lazy'`",
+        "default": "`'eager'`",
+        "typeDefinition": [
+          "eager",
+          "lazy"
+        ],
+        "pureDefault": "eager",
+        "forceInputType": 0
+      },
+      {
+        "name": "nzFetchPriority",
+        "inputType": 0,
+        "description": "nz-avatar.nzFetchPriority.description",
+        "type": "Enum",
+        "typeRaw": "`'high' | 'low' | 'auto'`",
+        "default": "`'auto'`",
+        "typeDefinition": [
+          "high",
+          "low",
+          "auto"
+        ],
+        "pureDefault": "auto"
       },
       {
         "name": "nzError",
@@ -1366,34 +1394,6 @@ export const DATA: Directive[] = [
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/button",
     "standalone": false,
     "snippet": "<button __$1>${2|Save,Submit,Cancel,Create,Delete,Search|}</button>"
-  },
-  {
-    "lib": "ng-zorro-antd",
-    "type": "component",
-    "selector": "nz-button-group",
-    "title": "nz-button-group.title",
-    "description": "nz-button-group.description",
-    "whenToUse": "nz-button-group.whenToUse",
-    "properties": [
-      {
-        "name": "nzSize",
-        "inputType": 0,
-        "description": "nz-button-group.nzSize.description",
-        "type": "Enum",
-        "typeRaw": "`'large'|'small'|'default'`",
-        "default": "`'default'`",
-        "typeDefinition": [
-          "large",
-          "small",
-          "default"
-        ],
-        "pureDefault": "default"
-      }
-    ],
-    "types": {},
-    "doc": "/components/button/en",
-    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/button",
-    "standalone": false
   },
   {
     "lib": "ng-zorro-antd",
@@ -2075,6 +2075,21 @@ export const DATA: Directive[] = [
         "typeRaw": "`string`",
         "default": "`'value'`",
         "pureDefault": "value"
+      },
+      {
+        "name": "nzVariant",
+        "inputType": 0,
+        "description": "nz-cascader.nzVariant.description",
+        "type": "Enum",
+        "typeRaw": "`'outlined' | 'borderless' | 'filled' | 'underlined'`",
+        "default": "`outlined`",
+        "typeDefinition": [
+          "outlined",
+          "borderless",
+          "filled",
+          "underlined"
+        ],
+        "pureDefault": "outlined"
       },
       {
         "name": "ngModelChange",
@@ -3296,10 +3311,26 @@ export const DATA: Directive[] = [
         "name": "nzBorderless",
         "inputType": 0,
         "description": "nz-date-picker.nzBorderless.description",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false",
+        "type": "string",
+        "typeRaw": "~~`boolean`~~",
+        "default": "~~`false`~~",
+        "pureDefault": "~~`false`~~",
+        "_common": true
+      },
+      {
+        "name": "nzVariant",
+        "inputType": 0,
+        "description": "nz-date-picker.nzVariant.description",
+        "type": "Enum",
+        "typeRaw": "`'outlined' | 'borderless' | 'filled' | 'underlined'`",
+        "default": "`outlined`",
+        "typeDefinition": [
+          "outlined",
+          "borderless",
+          "filled",
+          "underlined"
+        ],
+        "pureDefault": "outlined",
         "_common": true
       },
       {
@@ -3611,10 +3642,26 @@ export const DATA: Directive[] = [
         "name": "nzBorderless",
         "inputType": 0,
         "description": "nz-range-picker.nzBorderless.description",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false",
+        "type": "string",
+        "typeRaw": "~~`boolean`~~",
+        "default": "~~`false`~~",
+        "pureDefault": "~~`false`~~",
+        "_common": true
+      },
+      {
+        "name": "nzVariant",
+        "inputType": 0,
+        "description": "nz-range-picker.nzVariant.description",
+        "type": "Enum",
+        "typeRaw": "`'outlined' | 'borderless' | 'filled' | 'underlined'`",
+        "default": "`outlined`",
+        "typeDefinition": [
+          "outlined",
+          "borderless",
+          "filled",
+          "underlined"
+        ],
+        "pureDefault": "outlined",
         "_common": true
       },
       {
@@ -12541,10 +12588,25 @@ export const DATA: Directive[] = [
         "name": "nzBorderless",
         "inputType": 0,
         "description": "nz-input.nzBorderless.description",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false"
+        "type": "string",
+        "typeRaw": "~~`boolean`~~",
+        "default": "~~`false`~~",
+        "pureDefault": "~~`false`~~"
+      },
+      {
+        "name": "nzVariant",
+        "inputType": 0,
+        "description": "nz-input.nzVariant.description",
+        "type": "Enum",
+        "typeRaw": "`'outlined' | 'borderless' | 'filled' | 'underlined'`",
+        "default": "`outlined`",
+        "typeDefinition": [
+          "outlined",
+          "borderless",
+          "filled",
+          "underlined"
+        ],
+        "pureDefault": "outlined"
       },
       {
         "name": "nzStatus",
@@ -12563,8 +12625,9 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-input.nzStepperless.description",
         "type": "boolean",
-        "typeRaw": "`'boolean' | 'true'`",
-        "default": ""
+        "typeRaw": "`boolean`",
+        "default": "`true`",
+        "pureDefault": "true"
       },
       {
         "name": "ngModel",
@@ -12656,15 +12719,6 @@ export const DATA: Directive[] = [
         "type": "string",
         "typeRaw": "`string | TemplateRef<void>`",
         "default": ""
-      },
-      {
-        "name": "nzCompact",
-        "inputType": 0,
-        "description": "nz-input-group.nzCompact.description",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false"
       },
       {
         "name": "nzSize",
@@ -12850,10 +12904,25 @@ export const DATA: Directive[] = [
         "name": "nzBordered",
         "inputType": 0,
         "description": "nz-input-number.nzBordered.description",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`true`",
-        "pureDefault": "true"
+        "type": "string",
+        "typeRaw": "~~`boolean`~~",
+        "default": "~~`true`~~",
+        "pureDefault": "~~`true`~~"
+      },
+      {
+        "name": "nzVariant",
+        "inputType": 0,
+        "description": "nz-input-number.nzVariant.description",
+        "type": "Enum",
+        "typeRaw": "`'outlined' | 'borderless' | 'filled' | 'underlined'`",
+        "default": "`outlined`",
+        "typeDefinition": [
+          "outlined",
+          "borderless",
+          "filled",
+          "underlined"
+        ],
+        "pureDefault": "outlined"
       },
       {
         "name": "nzControls",
@@ -12957,6 +13026,22 @@ export const DATA: Directive[] = [
         "description": "nz-input-number.nzOnStep.description",
         "type": "EventEmitter",
         "typeRaw": "`EventEmitter<{ value: number, offset: number, type: 'up' | 'down' }>`",
+        "default": ""
+      },
+      {
+        "name": "nzFocus",
+        "inputType": 1,
+        "description": "nz-input-number.nzFocus.description",
+        "type": "object",
+        "typeRaw": "`OutputRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "nzBlur",
+        "inputType": 1,
+        "description": "nz-input-number.nzBlur.description",
+        "type": "object",
+        "typeRaw": "`OutputRef<void>`",
         "default": ""
       },
       {
@@ -13250,15 +13335,6 @@ export const DATA: Directive[] = [
         "type": "string",
         "typeRaw": "`string`",
         "default": ""
-      },
-      {
-        "name": "nzCompact",
-        "inputType": 0,
-        "description": "nz-input-number-group.nzCompact.description",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false"
       },
       {
         "name": "nzSize",
@@ -14484,8 +14560,8 @@ export const DATA: Directive[] = [
         "description": "nz-page-header.nzBack.description",
         "type": "EventEmitter",
         "typeRaw": "`EventEmitter<void>`",
-        "default": "Call [Location[back]](https://angular.dev/api/common/Location#back) when the event not subscribed（you need import [RouterModule](https://angular.dev/api/router/RouterModule) or register [Location](https://angular.dev/api/common/Location)）",
-        "pureDefault": "Call [Location[back]](https://angular.dev/api/common/Location#back) when the event not subscribed（you need import [RouterModule](https://angular.dev/api/router/RouterModule) or register [Location](https://angular.dev/api/common/Location)）"
+        "default": "Call [Location#back](https://angular.dev/api/common/Location#back) when the event not subscribed（you need import [RouterModule](https://angular.dev/api/router/RouterModule) or register [Location](https://angular.dev/api/common/Location)）",
+        "pureDefault": "Call [Location#back](https://angular.dev/api/common/Location#back) when the event not subscribed（you need import [RouterModule](https://angular.dev/api/router/RouterModule) or register [Location](https://angular.dev/api/common/Location)）"
       }
     ],
     "types": {},
@@ -15072,56 +15148,22 @@ export const DATA: Directive[] = [
         "pureDefault": "false"
       },
       {
-        "name": "nzCancelText",
+        "name": "nzOkButtonProps",
         "inputType": 0,
-        "description": "nz-popconfirm.nzCancelText.description",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": "`'Cancel'`",
-        "pureDefault": "Cancel"
+        "description": "nz-popconfirm.nzOkButtonProps.description",
+        "type": "object",
+        "typeRaw": "`NzPopConfirmButtonProps`",
+        "default": "`null`",
+        "pureDefault": "null"
       },
       {
-        "name": "nzOkText",
+        "name": "nzCancelButtonProps",
         "inputType": 0,
-        "description": "nz-popconfirm.nzOkText.description",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": "`'Confirm'`",
-        "pureDefault": "Confirm"
-      },
-      {
-        "name": "nzOkType",
-        "inputType": 0,
-        "description": "nz-popconfirm.nzOkType.description",
-        "type": "Enum",
-        "typeRaw": "`'primary' | 'ghost' | 'dashed' | 'danger' | 'default'`",
-        "default": "`'primary'`",
-        "typeDefinition": [
-          "primary",
-          "ghost",
-          "dashed",
-          "danger",
-          "default"
-        ],
-        "pureDefault": "primary"
-      },
-      {
-        "name": "nzOkDanger",
-        "inputType": 0,
-        "description": "nz-popconfirm.nzOkDanger.description",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false"
-      },
-      {
-        "name": "nzOkDisabled",
-        "inputType": 0,
-        "description": "nz-popconfirm.nzOkDisabled.description",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false"
+        "description": "nz-popconfirm.nzCancelButtonProps.description",
+        "type": "object",
+        "typeRaw": "`NzPopConfirmButtonProps`",
+        "default": "`null`",
+        "pureDefault": "null"
       },
       {
         "name": "nzCondition",
@@ -15342,11 +15384,27 @@ export const DATA: Directive[] = [
         "default": ""
       },
       {
+        "name": "nzPopoverTitleContext",
+        "inputType": 0,
+        "description": "nz-popover.nzPopoverTitleContext.description",
+        "type": "object",
+        "typeRaw": "`object`",
+        "default": ""
+      },
+      {
         "name": "nzPopoverContent",
         "inputType": 0,
         "description": "nz-popover.nzPopoverContent.description",
         "type": "string",
         "typeRaw": "`string | TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "nzPopoverContentContext",
+        "inputType": 0,
+        "description": "nz-popover.nzPopoverContentContext.description",
+        "type": "object",
+        "typeRaw": "`object`",
         "default": ""
       },
       {
@@ -16292,8 +16350,8 @@ export const DATA: Directive[] = [
         "name": "nzDirections",
         "inputType": 0,
         "description": "nz-resize-handles.nzDirections.description",
-        "type": "function",
-        "typeRaw": "`(NzResizeDirection | NzResizeHandleOption)[]`",
+        "type": "string",
+        "typeRaw": "`<NzResizeDirection | NzResizeHandleOption>[]`",
         "default": "ALL DIRECTIONS",
         "pureDefault": "ALL DIRECTIONS"
       }
@@ -16506,10 +16564,25 @@ export const DATA: Directive[] = [
         "name": "nzBorderless",
         "inputType": 0,
         "description": "nz-select.nzBorderless.description",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false"
+        "type": "string",
+        "typeRaw": "~~`boolean`~~",
+        "default": "~~`false`~~",
+        "pureDefault": "~~`false`~~"
+      },
+      {
+        "name": "nzVariant",
+        "inputType": 0,
+        "description": "nz-select.nzVariant.description",
+        "type": "Enum",
+        "typeRaw": "`'outlined' | 'borderless' | 'filled' | 'underlined'`",
+        "default": "`outlined`",
+        "typeDefinition": [
+          "outlined",
+          "borderless",
+          "filled",
+          "underlined"
+        ],
+        "pureDefault": "outlined"
       },
       {
         "name": "nzOpen",
@@ -16806,6 +16879,14 @@ export const DATA: Directive[] = [
         "description": "nz-select.nzOnSearch.description",
         "type": "EventEmitter",
         "typeRaw": "`EventEmitter<string>`",
+        "default": ""
+      },
+      {
+        "name": "nzOnClear",
+        "inputType": 1,
+        "description": "nz-select.nzOnClear.description",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<any>`",
         "default": ""
       },
       {
@@ -18933,15 +19014,15 @@ export const DATA: Directive[] = [
   {
     "lib": "ng-zorro-antd",
     "type": "component",
-    "selector": "nz-tabset",
-    "title": "nz-tabset.title",
-    "description": "nz-tabset.description",
-    "whenToUse": "nz-tabset.whenToUse",
+    "selector": "nz-tabs",
+    "title": "nz-tabs.title",
+    "description": "nz-tabs.description",
+    "whenToUse": "nz-tabs.whenToUse",
     "properties": [
       {
         "name": "nzSelectedIndex",
         "inputType": 0,
-        "description": "nz-tabset.nzSelectedIndex.description",
+        "description": "nz-tabs.nzSelectedIndex.description",
         "type": "number",
         "typeRaw": "`number`",
         "default": ""
@@ -18949,7 +19030,7 @@ export const DATA: Directive[] = [
       {
         "name": "nzAnimated",
         "inputType": 0,
-        "description": "nz-tabset.nzAnimated.description",
+        "description": "nz-tabs.nzAnimated.description",
         "type": "boolean",
         "typeRaw": "`boolean | {inkBar:boolean, tabPane:boolean}`",
         "default": "`true`, `false` when `type=\"card\"`",
@@ -18958,7 +19039,7 @@ export const DATA: Directive[] = [
       {
         "name": "nzSize",
         "inputType": 0,
-        "description": "nz-tabset.nzSize.description",
+        "description": "nz-tabs.nzSize.description",
         "type": "Enum",
         "typeRaw": "`'large' | 'small' | 'default'`",
         "default": "`'default'`",
@@ -18972,7 +19053,7 @@ export const DATA: Directive[] = [
       {
         "name": "nzTabBarExtraContent",
         "inputType": 0,
-        "description": "nz-tabset.nzTabBarExtraContent.description",
+        "description": "nz-tabs.nzTabBarExtraContent.description",
         "type": "TemplateRef",
         "typeRaw": "`TemplateRef<void>`",
         "default": ""
@@ -18980,7 +19061,7 @@ export const DATA: Directive[] = [
       {
         "name": "nzTabBarStyle",
         "inputType": 0,
-        "description": "nz-tabset.nzTabBarStyle.description",
+        "description": "nz-tabs.nzTabBarStyle.description",
         "type": "object",
         "typeRaw": "`object`",
         "default": ""
@@ -18988,7 +19069,7 @@ export const DATA: Directive[] = [
       {
         "name": "nzTabPosition",
         "inputType": 0,
-        "description": "nz-tabset.nzTabPosition.description",
+        "description": "nz-tabs.nzTabPosition.description",
         "type": "Enum",
         "typeRaw": "`'top' | 'right' | 'bottom' | 'left'`",
         "default": "`'top'`",
@@ -19003,7 +19084,7 @@ export const DATA: Directive[] = [
       {
         "name": "nzType",
         "inputType": 0,
-        "description": "nz-tabset.nzType.description",
+        "description": "nz-tabs.nzType.description",
         "type": "Enum",
         "typeRaw": "`'line' | 'card' | 'editable-card'`",
         "default": "`'line'`",
@@ -19017,7 +19098,7 @@ export const DATA: Directive[] = [
       {
         "name": "nzTabBarGutter",
         "inputType": 0,
-        "description": "nz-tabset.nzTabBarGutter.description",
+        "description": "nz-tabs.nzTabBarGutter.description",
         "type": "number",
         "typeRaw": "`number`",
         "default": ""
@@ -19025,7 +19106,7 @@ export const DATA: Directive[] = [
       {
         "name": "nzHideAll",
         "inputType": 0,
-        "description": "nz-tabset.nzHideAll.description",
+        "description": "nz-tabs.nzHideAll.description",
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
@@ -19034,7 +19115,7 @@ export const DATA: Directive[] = [
       {
         "name": "nzLinkRouter",
         "inputType": 0,
-        "description": "nz-tabset.nzLinkRouter.description",
+        "description": "nz-tabs.nzLinkRouter.description",
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
@@ -19043,7 +19124,7 @@ export const DATA: Directive[] = [
       {
         "name": "nzLinkExact",
         "inputType": 0,
-        "description": "nz-tabset.nzLinkExact.description",
+        "description": "nz-tabs.nzLinkExact.description",
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`true`",
@@ -19052,7 +19133,7 @@ export const DATA: Directive[] = [
       {
         "name": "nzCanDeactivate",
         "inputType": 0,
-        "description": "nz-tabset.nzCanDeactivate.description",
+        "description": "nz-tabs.nzCanDeactivate.description",
         "type": "object",
         "typeRaw": "`NzTabsCanDeactivateFn`",
         "default": ""
@@ -19060,7 +19141,7 @@ export const DATA: Directive[] = [
       {
         "name": "nzCentered",
         "inputType": 0,
-        "description": "nz-tabset.nzCentered.description",
+        "description": "nz-tabs.nzCentered.description",
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
@@ -19069,7 +19150,7 @@ export const DATA: Directive[] = [
       {
         "name": "nzDestroyInactiveTabPane",
         "inputType": 0,
-        "description": "nz-tabset.nzDestroyInactiveTabPane.description",
+        "description": "nz-tabs.nzDestroyInactiveTabPane.description",
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
@@ -19078,7 +19159,7 @@ export const DATA: Directive[] = [
       {
         "name": "nzSelectedIndexChange",
         "inputType": 1,
-        "description": "nz-tabset.nzSelectedIndexChange.description",
+        "description": "nz-tabs.nzSelectedIndexChange.description",
         "type": "EventEmitter",
         "typeRaw": "`EventEmitter<number>`",
         "default": ""
@@ -19086,7 +19167,7 @@ export const DATA: Directive[] = [
       {
         "name": "nzSelectChange",
         "inputType": 1,
-        "description": "nz-tabset.nzSelectChange.description",
+        "description": "nz-tabs.nzSelectChange.description",
         "type": "EventEmitter",
         "typeRaw": "`EventEmitter<{index: number,tab: NzTabComponent}>`",
         "default": ""
@@ -19176,7 +19257,48 @@ export const DATA: Directive[] = [
     "title": "nz-tab.title",
     "description": "nz-tab.description",
     "whenToUse": "nz-tab.whenToUse",
-    "properties": [],
+    "properties": [
+      {
+        "name": "nzTabBarExtraContent",
+        "inputType": 0,
+        "description": "nz-tab.nzTabBarExtraContent.description",
+        "type": "Enum",
+        "typeRaw": "`'start' | 'end'`",
+        "default": "`'end'`",
+        "typeDefinition": [
+          "start",
+          "end"
+        ],
+        "pureDefault": "end"
+      }
+    ],
+    "types": {},
+    "doc": "/components/tabs/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tabs",
+    "standalone": false
+  },
+  {
+    "lib": "ng-zorro-antd",
+    "type": "directive",
+    "selector": "nzTabBarExtraContent",
+    "title": "nzTabBarExtraContent.title",
+    "description": "nzTabBarExtraContent.description",
+    "whenToUse": "nzTabBarExtraContent.whenToUse",
+    "properties": [
+      {
+        "name": "nzTabBarExtraContent",
+        "inputType": 0,
+        "description": "nzTabBarExtraContent.nzTabBarExtraContent.description",
+        "type": "Enum",
+        "typeRaw": "`'start' | 'end'`",
+        "default": "`'end'`",
+        "typeDefinition": [
+          "start",
+          "end"
+        ],
+        "pureDefault": "end"
+      }
+    ],
     "types": {},
     "doc": "/components/tabs/en",
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/tabs",
@@ -19474,10 +19596,25 @@ export const DATA: Directive[] = [
         "name": "nzBorderless",
         "inputType": 0,
         "description": "nz-time-picker.nzBorderless.description",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false"
+        "type": "string",
+        "typeRaw": "~~`boolean`~~",
+        "default": "~~`false`~~",
+        "pureDefault": "~~`false`~~"
+      },
+      {
+        "name": "nzVariant",
+        "inputType": 0,
+        "description": "nz-time-picker.nzVariant.description",
+        "type": "Enum",
+        "typeRaw": "`'outlined' | 'borderless' | 'filled' | 'underlined'`",
+        "default": "`outlined`",
+        "typeDefinition": [
+          "outlined",
+          "borderless",
+          "filled",
+          "underlined"
+        ],
+        "pureDefault": "outlined"
       },
       {
         "name": "nzInputReadOnly",
@@ -20468,6 +20605,21 @@ export const DATA: Directive[] = [
         "type": "TemplateRef",
         "typeRaw": "`TemplateRef<{ $implicit: NzTreeNode }>`",
         "default": ""
+      },
+      {
+        "name": "nzVariant",
+        "inputType": 0,
+        "description": "nz-tree-select.nzVariant.description",
+        "type": "Enum",
+        "typeRaw": "`'outlined' | 'borderless' | 'filled' | 'underlined'`",
+        "default": "`outlined`",
+        "typeDefinition": [
+          "outlined",
+          "borderless",
+          "filled",
+          "underlined"
+        ],
+        "pureDefault": "outlined"
       },
       {
         "name": "nzVirtualHeight",
@@ -21472,7 +21624,7 @@ export const DATA: Directive[] = [
         "description": "nz-water-mark.nzGap.description",
         "type": "string",
         "typeRaw": "`[number, number]`",
-        "default": "[100, 100]",
+        "default": "`[100, 100]`",
         "pureDefault": "[100, 100]"
       },
       {
@@ -21481,7 +21633,7 @@ export const DATA: Directive[] = [
         "description": "nz-water-mark.nzOffset.description",
         "type": "string",
         "typeRaw": "`[number, number]`",
-        "default": "[nzGap[0]/2, nzGap[1]/2]",
+        "default": "`[nzGap[0]/2, nzGap[1]/2]`",
         "pureDefault": "[nzGap[0]/2, nzGap[1]/2]"
       }
     ],
@@ -21493,7 +21645,7 @@ export const DATA: Directive[] = [
           "description": "nz-water-mark.color.description",
           "type": "string",
           "typeRaw": "`string`",
-          "default": "rgba(0,0,0,.15)",
+          "default": "`rgba(0,0,0,.15)`",
           "pureDefault": "rgba(0,0,0,.15)"
         },
         {
@@ -21576,97 +21728,6 @@ export const DATA: Directive[] = [
     "types": {},
     "doc": "/components/auto-focus/en",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/auto-focus",
-    "standalone": false
-  },
-  {
-    "lib": "@delon/abc",
-    "type": "component",
-    "selector": "avatar-list",
-    "title": "avatar-list.title",
-    "description": "avatar-list.description",
-    "whenToUse": "avatar-list.whenToUse",
-    "properties": [
-      {
-        "name": "size",
-        "inputType": 0,
-        "description": "avatar-list.size.description",
-        "type": "Enum",
-        "typeRaw": "`'large','small','mini','default'`",
-        "default": "`'default'`",
-        "typeDefinition": [
-          "large",
-          "small",
-          "mini",
-          "default"
-        ],
-        "pureDefault": "default"
-      },
-      {
-        "name": "maxLength",
-        "inputType": 0,
-        "description": "avatar-list.maxLength.description",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": ""
-      },
-      {
-        "name": "excessItemsStyle",
-        "inputType": 0,
-        "description": "avatar-list.excessItemsStyle.description",
-        "type": "object",
-        "typeRaw": "`{ [key: string]: string }`",
-        "default": ""
-      }
-    ],
-    "types": {},
-    "doc": "/components/avatar-list/en",
-    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/avatar-list",
-    "standalone": false
-  },
-  {
-    "lib": "@delon/abc",
-    "type": "component",
-    "selector": "avatar-list-item",
-    "title": "avatar-list-item.title",
-    "description": "avatar-list-item.description",
-    "whenToUse": "avatar-list-item.whenToUse",
-    "properties": [
-      {
-        "name": "tips",
-        "inputType": 0,
-        "description": "avatar-list-item.tips.description",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": ""
-      },
-      {
-        "name": "src",
-        "inputType": 0,
-        "description": "avatar-list-item.src.description",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": ""
-      },
-      {
-        "name": "text",
-        "inputType": 0,
-        "description": "avatar-list-item.text.description",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": ""
-      },
-      {
-        "name": "icon",
-        "inputType": 0,
-        "description": "avatar-list-item.icon.description",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": ""
-      }
-    ],
-    "types": {},
-    "doc": "/components/avatar-list/en",
-    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/avatar-list",
     "standalone": false
   },
   {
@@ -22997,60 +23058,6 @@ export const DATA: Directive[] = [
   {
     "lib": "@delon/abc",
     "type": "component",
-    "selector": "result",
-    "title": "result.title",
-    "description": "result.description",
-    "whenToUse": "result.whenToUse",
-    "properties": [
-      {
-        "name": "type",
-        "inputType": 0,
-        "description": "result.type.description",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": ""
-      },
-      {
-        "name": "title",
-        "inputType": 0,
-        "description": "result.title.description",
-        "type": "string",
-        "typeRaw": "`string,TemplateRef<void>`",
-        "default": ""
-      },
-      {
-        "name": "description",
-        "inputType": 0,
-        "description": "result.description.description",
-        "type": "string",
-        "typeRaw": "`string,TemplateRef<void>`",
-        "default": ""
-      },
-      {
-        "name": "extra",
-        "inputType": 0,
-        "description": "result.extra.description",
-        "type": "string",
-        "typeRaw": "`string,TemplateRef<void>`",
-        "default": ""
-      },
-      {
-        "name": "ng-content",
-        "inputType": 0,
-        "description": "result.ng-content.description",
-        "type": "string",
-        "typeRaw": "`ng-content`",
-        "default": ""
-      }
-    ],
-    "types": {},
-    "doc": "/components/result/en",
-    "github": "https://github.com/ng-alain/delon/tree/master/packages/abc/result",
-    "standalone": false
-  },
-  {
-    "lib": "@delon/abc",
-    "type": "component",
     "selector": "reuse-tab",
     "title": "reuse-tab.title",
     "description": "reuse-tab.description",
@@ -24070,6 +24077,15 @@ export const DATA: Directive[] = [
         "typeRaw": "`number`",
         "default": "`0`",
         "pureDefault": "0"
+      },
+      {
+        "name": "delay",
+        "inputType": 0,
+        "description": "st.delay.description",
+        "type": "boolean",
+        "typeRaw": "boolean",
+        "default": "false",
+        "pureDefault": "false"
       },
       {
         "name": "scroll",
