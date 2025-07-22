@@ -4475,7 +4475,7 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-float-button-group.nzShape.description",
         "type": "string",
-        "typeRaw": "`circle | square`",
+        "typeRaw": "`circle` | `square`",
         "default": "`circle`",
         "pureDefault": "circle"
       },
@@ -4484,7 +4484,7 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-float-button-group.nzTrigger.description",
         "type": "string",
-        "typeRaw": "`click | hover`",
+        "typeRaw": "`click` | `hover`",
         "default": ""
       },
       {
@@ -4494,6 +4494,15 @@ export const DATA: Directive[] = [
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": ""
+      },
+      {
+        "name": "nzPlacement",
+        "inputType": 0,
+        "description": "nz-float-button-group.nzPlacement.description",
+        "type": "string",
+        "typeRaw": "`top` | `right` | `bottom` | `left`",
+        "default": "`top`",
+        "pureDefault": "top"
       },
       {
         "name": "nzOnOpenChange",
@@ -4531,7 +4540,7 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-float-button-top.nzTarget.description",
         "type": "string",
-        "typeRaw": "`string | Element`",
+        "typeRaw": "`string` | `Element`",
         "default": "`window`",
         "pureDefault": "window"
       },
@@ -5631,7 +5640,7 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-hashCode.nzType.description",
         "type": "string",
-        "typeRaw": "`defalut | primary`",
+        "typeRaw": "`default | primary`",
         "default": "`primary`",
         "pureDefault": "primary"
       },
@@ -17330,15 +17339,9 @@ export const DATA: Directive[] = [
         "name": "nzSize",
         "inputType": 0,
         "description": "nz-space.nzSize.description",
-        "type": "Enum",
-        "typeRaw": "`'small' | 'middle' | 'large' | number`",
+        "type": "object",
+        "typeRaw": "`NzSpaceSize | NzSpaceSize[]`",
         "default": "`small`",
-        "typeDefinition": [
-          "small",
-          "middle",
-          "large",
-          "number"
-        ],
         "pureDefault": "small"
       },
       {

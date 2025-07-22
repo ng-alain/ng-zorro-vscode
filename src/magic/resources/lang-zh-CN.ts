@@ -532,6 +532,7 @@ export const zhCN: Record<string, string> = {
   "nz-float-button-group.nzShape.description": "设置按钮组形状",
   "nz-float-button-group.nzTrigger.description": "触发方式（有触发方式为菜单模式）",
   "nz-float-button-group.nzOpen.description": "受控展开",
+  "nz-float-button-group.nzPlacement.description": "自定义菜单弹出位置",
   "nz-float-button-group.nzOnOpenChange.description": "展开收起时的回调",
   "nz-float-button-top.title": "悬浮按钮",
   "nz-float-button-top.whenToUse": "- 用于网站上的全局功能；\n- 无论浏览到何处都可以看见的按钮。",
