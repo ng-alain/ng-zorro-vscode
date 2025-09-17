@@ -14,7 +14,7 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-row.nzAlign.description",
         "type": "Enum",
-        "typeRaw": "`'top'|'middle'|'bottom'`",
+        "typeRaw": "`'top' | 'middle' | 'bottom'`",
         "default": "",
         "typeDefinition": [
           "top",
@@ -27,7 +27,7 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-row.nzGutter.description",
         "type": "Enum",
-        "typeRaw": "`string|number|object|[number, number]|[object, object]`",
+        "typeRaw": "`string | number | object | [number, number] | [object, object]`",
         "default": "`0`",
         "pureDefault": "0",
         "typeDefinition": [
@@ -47,7 +47,7 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-row.nzJustify.description",
         "type": "Enum",
-        "typeRaw": "`'start'|'end'|'center'|'space-around'|'space-between'`",
+        "typeRaw": "`'start' | 'end' | 'center' | 'space-around' | 'space-between'`",
         "default": "",
         "typeDefinition": [
           "start",
@@ -1086,7 +1086,7 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-badge.nzColor.description",
         "type": "string",
-        "typeRaw": "string",
+        "typeRaw": "`string`",
         "default": ""
       },
       {
@@ -1137,9 +1137,13 @@ export const DATA: Directive[] = [
         "name": "nzSize",
         "inputType": 0,
         "description": "nz-badge.nzSize.description",
-        "type": "string",
-        "typeRaw": "`default | small`",
-        "default": "`default`",
+        "type": "Enum",
+        "typeRaw": "`'default' | 'small'`",
+        "default": "`'default'`",
+        "typeDefinition": [
+          "default",
+          "small"
+        ],
         "pureDefault": "default"
       },
       {
@@ -1208,9 +1212,13 @@ export const DATA: Directive[] = [
         "name": "nzPlacement",
         "inputType": 0,
         "description": "nz-ribbon.nzPlacement.description",
-        "type": "string",
-        "typeRaw": "`start` | `end`",
-        "default": "`end`",
+        "type": "Enum",
+        "typeRaw": "`'start' | 'end'`",
+        "default": "`'end'`",
+        "typeDefinition": [
+          "start",
+          "end"
+        ],
         "pureDefault": "end"
       },
       {
@@ -1552,7 +1560,7 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-card.nzExtra.description",
         "type": "string",
-        "typeRaw": "`string|TemplateRef<void>`",
+        "typeRaw": "`string | TemplateRef<void>`",
         "default": ""
       },
       {
@@ -1579,7 +1587,7 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-card.nzTitle.description",
         "type": "string",
-        "typeRaw": "`string|TemplateRef<void>`",
+        "typeRaw": "`string | TemplateRef<void>`",
         "default": ""
       },
       {
@@ -1598,7 +1606,7 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-card.nzSize.description",
         "type": "Enum",
-        "typeRaw": "`'default'|'small'`",
+        "typeRaw": "`'default' | 'small'`",
         "default": "`'default'`",
         "typeDefinition": [
           "default",
@@ -1633,7 +1641,7 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-card-meta.nzDescription.description",
         "type": "string",
-        "typeRaw": "`string|TemplateRef<void>`",
+        "typeRaw": "`string | TemplateRef<void>`",
         "default": ""
       },
       {
@@ -1641,7 +1649,7 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-card-meta.nzTitle.description",
         "type": "string",
-        "typeRaw": "`string|TemplateRef<void>`",
+        "typeRaw": "`string | TemplateRef<void>`",
         "default": ""
       }
     ],
@@ -1724,9 +1732,15 @@ export const DATA: Directive[] = [
         "name": "nzDotPosition",
         "inputType": 0,
         "description": "nz-carousel.nzDotPosition.description",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": "`bottom`",
+        "type": "Enum",
+        "typeRaw": "`'top' | 'right' | 'bottom' | 'left'`",
+        "default": "`'bottom'`",
+        "typeDefinition": [
+          "top",
+          "right",
+          "bottom",
+          "left"
+        ],
         "pureDefault": "bottom"
       },
       {
@@ -1743,7 +1757,7 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-carousel.nzEffect.description",
         "type": "Enum",
-        "typeRaw": "`'scrollx'|'fade'`",
+        "typeRaw": "`'scrollx' | 'fade'`",
         "default": "`'scrollx'`",
         "typeDefinition": [
           "scrollx",
@@ -1768,6 +1782,15 @@ export const DATA: Directive[] = [
         "typeRaw": "`boolean`",
         "default": "`true`",
         "pureDefault": "true"
+      },
+      {
+        "name": "nzArrows",
+        "inputType": 0,
+        "description": "nz-carousel.nzArrows.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
       },
       {
         "name": "nzAfterChange",
@@ -1874,7 +1897,7 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-cascader.nzExpandIcon.description",
         "type": "string",
-        "typeRaw": "`string|TemplateRef<void>`",
+        "typeRaw": "`string | TemplateRef<void>`",
         "default": ""
       },
       {
@@ -1882,7 +1905,7 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-cascader.nzExpandTrigger.description",
         "type": "Enum",
-        "typeRaw": "`'click'|'hover'`",
+        "typeRaw": "`'click' | 'hover'`",
         "default": "`'click'`",
         "typeDefinition": [
           "click",
@@ -1929,7 +1952,7 @@ export const DATA: Directive[] = [
         "description": "nz-cascader.nzMouseEnterDelay.description",
         "type": "number",
         "typeRaw": "`number`",
-        "default": "150",
+        "default": "`150`",
         "pureDefault": "150"
       },
       {
@@ -1938,7 +1961,7 @@ export const DATA: Directive[] = [
         "description": "nz-cascader.nzMouseLeaveDelay.description",
         "type": "number",
         "typeRaw": "`number`",
-        "default": "150",
+        "default": "`150`",
         "pureDefault": "150"
       },
       {
@@ -1963,7 +1986,7 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-cascader.nzNotFoundContent.description",
         "type": "string",
-        "typeRaw": "`string|TemplateRef<void>`",
+        "typeRaw": "`string | TemplateRef<void>`",
         "default": ""
       },
       {
@@ -1981,6 +2004,15 @@ export const DATA: Directive[] = [
         "type": "object",
         "typeRaw": "`object[]`",
         "default": ""
+      },
+      {
+        "name": "nzOpen",
+        "inputType": 0,
+        "description": "nz-cascader.nzOpen.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
       },
       {
         "name": "nzPlaceHolder",
@@ -2029,7 +2061,7 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-cascader.nzShowSearch.description",
         "type": "boolean",
-        "typeRaw": "`boolean|NzShowSearchOptions`",
+        "typeRaw": "`boolean | NzShowSearchOptions`",
         "default": "`false`",
         "pureDefault": "false"
       },
@@ -2038,7 +2070,7 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-cascader.nzSize.description",
         "type": "Enum",
-        "typeRaw": "`'large'|'small'|'default'`",
+        "typeRaw": "`'large' | 'small' | 'default'`",
         "default": "`'default'`",
         "typeDefinition": [
           "large",
@@ -2058,6 +2090,14 @@ export const DATA: Directive[] = [
           "error",
           "warning"
         ]
+      },
+      {
+        "name": "nzPrefix",
+        "inputType": 0,
+        "description": "nz-cascader.nzPrefix.description",
+        "type": "string",
+        "typeRaw": "`string|TemplateRef<void>`",
+        "default": ""
       },
       {
         "name": "nzSuffixIcon",
@@ -2082,7 +2122,7 @@ export const DATA: Directive[] = [
         "description": "nz-cascader.nzVariant.description",
         "type": "Enum",
         "typeRaw": "`'outlined' | 'borderless' | 'filled' | 'underlined'`",
-        "default": "`outlined`",
+        "default": "`'outlined'`",
         "typeDefinition": [
           "outlined",
           "borderless",
@@ -2250,11 +2290,19 @@ export const DATA: Directive[] = [
           "default": ""
         },
         {
+          "name": "checked",
+          "inputType": 0,
+          "description": "nz-check-list.checked.description",
+          "type": "boolean",
+          "typeRaw": "`boolean`",
+          "default": ""
+        },
+        {
           "name": "onClick",
           "inputType": 0,
           "description": "nz-check-list.onClick.description",
           "type": "function",
-          "typeRaw": "`() => void`",
+          "typeRaw": "`(item: NzItemProps) => void`",
           "default": ""
         }
       ]
@@ -2559,12 +2607,25 @@ export const DATA: Directive[] = [
         "description": "nz-collapse.nzExpandIconPosition.description",
         "type": "Enum",
         "typeRaw": "`'start' | 'end'`",
-        "default": "`start`",
+        "default": "`'start'`",
         "typeDefinition": [
           "start",
           "end"
         ],
         "pureDefault": "start"
+      },
+      {
+        "name": "nzSize",
+        "inputType": 0,
+        "description": "nz-collapse.nzSize.description",
+        "type": "Enum",
+        "typeRaw": "`'small' | 'large'`",
+        "default": "`'middle'`",
+        "typeDefinition": [
+          "small",
+          "large"
+        ],
+        "pureDefault": "middle"
       }
     ],
     "types": {},
@@ -2632,6 +2693,19 @@ export const DATA: Directive[] = [
         "default": ""
       },
       {
+        "name": "nzCollapsible",
+        "inputType": 0,
+        "description": "nz-collapse-panel.nzCollapsible.description",
+        "type": "Enum",
+        "typeRaw": "`'header' | 'icon' | 'disabled'`",
+        "default": "",
+        "typeDefinition": [
+          "header",
+          "icon",
+          "disabled"
+        ]
+      },
+      {
         "name": "nzActiveChange",
         "inputType": 1,
         "description": "nz-collapse-panel.nzActiveChange.description",
@@ -2657,9 +2731,14 @@ export const DATA: Directive[] = [
         "name": "nzFormat",
         "inputType": 0,
         "description": "nz-color-picker.nzFormat.description",
-        "type": "string",
-        "typeRaw": "`rgb`｜`hex`｜`hsb`",
-        "default": "`hex`",
+        "type": "Enum",
+        "typeRaw": "`'rgb' | 'hex' | 'hsb'`",
+        "default": "`'hex'`",
+        "typeDefinition": [
+          "rgb",
+          "hex",
+          "hsb"
+        ],
         "pureDefault": "hex"
       },
       {
@@ -2667,7 +2746,7 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-color-picker.nzValue.description",
         "type": "string",
-        "typeRaw": "`string`｜`NzColor`",
+        "typeRaw": "`string | NzColor`",
         "default": "",
         "complexType": "NzColor"
       },
@@ -2675,9 +2754,14 @@ export const DATA: Directive[] = [
         "name": "nzSize",
         "inputType": 0,
         "description": "nz-color-picker.nzSize.description",
-        "type": "string",
-        "typeRaw": "`large`｜`default`｜`small`",
-        "default": "`default`",
+        "type": "Enum",
+        "typeRaw": "`'large' | 'small' | 'default'`",
+        "default": "`'default'`",
+        "typeDefinition": [
+          "large",
+          "small",
+          "default"
+        ],
         "pureDefault": "default"
       },
       {
@@ -2685,7 +2769,7 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-color-picker.nzDefaultValue.description",
         "type": "string",
-        "typeRaw": "`string`｜`NzColor`",
+        "typeRaw": "`string | NzColor`",
         "default": "`false`",
         "complexType": "NzColor",
         "pureDefault": "false"
@@ -2703,9 +2787,13 @@ export const DATA: Directive[] = [
         "name": "nzTrigger",
         "inputType": 0,
         "description": "nz-color-picker.nzTrigger.description",
-        "type": "string",
-        "typeRaw": "`hover`｜`click`",
-        "default": "`click`",
+        "type": "Enum",
+        "typeRaw": "`'hover' | 'click'`",
+        "default": "`'click'`",
+        "typeDefinition": [
+          "hover",
+          "click"
+        ],
         "pureDefault": "click"
       },
       {
@@ -2750,7 +2838,7 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-color-picker.nzTitle.description",
         "type": "TemplateRef",
-        "typeRaw": "`TemplateRef<void>`｜`string`",
+        "typeRaw": "`TemplateRef<void> | string`",
         "default": ""
       },
       {
@@ -2856,16 +2944,21 @@ export const DATA: Directive[] = [
         "description": "nz-color-block.nzColor.description",
         "type": "string",
         "typeRaw": "`string`",
-        "default": "`#1677ff`",
+        "default": "`'#1677ff'`",
         "pureDefault": "#1677ff"
       },
       {
         "name": "nzSize",
         "inputType": 0,
         "description": "nz-color-block.nzSize.description",
-        "type": "string",
-        "typeRaw": "`large`｜`default`｜`small`",
-        "default": "`default`",
+        "type": "Enum",
+        "typeRaw": "`'large' | 'small' | 'default'`",
+        "default": "`'default'`",
+        "typeDefinition": [
+          "large",
+          "small",
+          "default"
+        ],
         "pureDefault": "default"
       },
       {
@@ -3156,7 +3249,7 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-date-picker.nzDefaultPickerValue.description",
         "type": "object",
-        "typeRaw": "`Date` | `Date[]`",
+        "typeRaw": "`Date | Date[]`",
         "default": "",
         "_common": true
       },
@@ -3233,7 +3326,7 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-date-picker.nzPlaceHolder.description",
         "type": "string",
-        "typeRaw": "`string` | `string[]`",
+        "typeRaw": "`string | string[]`",
         "default": "",
         "_common": true
       },
@@ -3303,7 +3396,7 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-date-picker.nzSuffixIcon.description",
         "type": "string",
-        "typeRaw": "`string` | `TemplateRef`",
+        "typeRaw": "`string | TemplateRef`",
         "default": "",
         "_common": true
       },
@@ -3323,7 +3416,7 @@ export const DATA: Directive[] = [
         "description": "nz-date-picker.nzVariant.description",
         "type": "Enum",
         "typeRaw": "`'outlined' | 'borderless' | 'filled' | 'underlined'`",
-        "default": "`outlined`",
+        "default": "`'outlined'`",
         "typeDefinition": [
           "outlined",
           "borderless",
@@ -3487,7 +3580,7 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-range-picker.nzDefaultPickerValue.description",
         "type": "object",
-        "typeRaw": "`Date` | `Date[]`",
+        "typeRaw": "`Date | Date[]`",
         "default": "",
         "_common": true
       },
@@ -3564,7 +3657,7 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-range-picker.nzPlaceHolder.description",
         "type": "string",
-        "typeRaw": "`string` | `string[]`",
+        "typeRaw": "`string | string[]`",
         "default": "",
         "_common": true
       },
@@ -3634,7 +3727,7 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-range-picker.nzSuffixIcon.description",
         "type": "string",
-        "typeRaw": "`string` | `TemplateRef`",
+        "typeRaw": "`string | TemplateRef`",
         "default": "",
         "_common": true
       },
@@ -3654,7 +3747,7 @@ export const DATA: Directive[] = [
         "description": "nz-range-picker.nzVariant.description",
         "type": "Enum",
         "typeRaw": "`'outlined' | 'borderless' | 'filled' | 'underlined'`",
-        "default": "`outlined`",
+        "default": "`'outlined'`",
         "typeDefinition": [
           "outlined",
           "borderless",
@@ -3766,7 +3859,7 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-descriptions.nzTitle.description",
         "type": "string",
-        "typeRaw": "`string|TemplateRef<void>`",
+        "typeRaw": "`string | TemplateRef<void>`",
         "default": "`false`",
         "pureDefault": "false"
       },
@@ -3775,7 +3868,7 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-descriptions.nzExtra.description",
         "type": "string",
-        "typeRaw": "`string|TemplateRef<void>`",
+        "typeRaw": "`string | TemplateRef<void>`",
         "default": ""
       },
       {
@@ -3792,7 +3885,7 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-descriptions.nzColumn.description",
         "type": "number",
-        "typeRaw": "`number|object`",
+        "typeRaw": "`number | object`",
         "default": "`{ xxl: 3, xl: 3, lg: 3, md: 3, sm: 2, xs: 1 }`",
         "pureDefault": "{ xxl: 3, xl: 3, lg: 3, md: 3, sm: 2, xs: 1 }"
       },
@@ -3852,8 +3945,8 @@ export const DATA: Directive[] = [
         "description": "nz-descriptions-item.nzTitle.description",
         "type": "boolean",
         "typeRaw": "`boolean`",
-        "default": "`string|TemplateRef<void>`",
-        "pureDefault": "string|TemplateRef<void>"
+        "default": "`string | TemplateRef<void>`",
+        "pureDefault": "string | TemplateRef<void>"
       },
       {
         "name": "nzSpan",
@@ -3944,6 +4037,19 @@ export const DATA: Directive[] = [
           "solid"
         ],
         "pureDefault": "solid"
+      },
+      {
+        "name": "nzSize",
+        "inputType": 0,
+        "description": "nz-divider.nzSize.description",
+        "type": "Enum",
+        "typeRaw": "`'small' | 'middle' | 'large'`",
+        "default": "",
+        "typeDefinition": [
+          "small",
+          "middle",
+          "large"
+        ]
       }
     ],
     "types": {},
@@ -4254,6 +4360,15 @@ export const DATA: Directive[] = [
         "type": "EventEmitter",
         "typeRaw": "`EventEmitter<boolean>`",
         "default": ""
+      },
+      {
+        "name": "nzArrow",
+        "inputType": 0,
+        "description": "nz-dropdown.nzArrow.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
       }
     ],
     "types": {},
@@ -4474,18 +4589,41 @@ export const DATA: Directive[] = [
         "name": "nzShape",
         "inputType": 0,
         "description": "nz-float-button-group.nzShape.description",
-        "type": "string",
-        "typeRaw": "`circle` | `square`",
-        "default": "`circle`",
+        "type": "Enum",
+        "typeRaw": "`'circle' | 'square'`",
+        "default": "`'circle'`",
+        "typeDefinition": [
+          "circle",
+          "square"
+        ],
         "pureDefault": "circle"
       },
       {
         "name": "nzTrigger",
         "inputType": 0,
         "description": "nz-float-button-group.nzTrigger.description",
-        "type": "string",
-        "typeRaw": "`click` | `hover`",
-        "default": ""
+        "type": "Enum",
+        "typeRaw": "`'click' | 'hover'`",
+        "default": "",
+        "typeDefinition": [
+          "click",
+          "hover"
+        ]
+      },
+      {
+        "name": "nzPlacement",
+        "inputType": 0,
+        "description": "nz-float-button-group.nzPlacement.description",
+        "type": "Enum",
+        "typeRaw": "`'top' | 'right' | 'bottom' | 'left'`",
+        "default": "`'top'`",
+        "typeDefinition": [
+          "top",
+          "right",
+          "bottom",
+          "left"
+        ],
+        "pureDefault": "top"
       },
       {
         "name": "nzOpen",
@@ -4494,15 +4632,6 @@ export const DATA: Directive[] = [
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": ""
-      },
-      {
-        "name": "nzPlacement",
-        "inputType": 0,
-        "description": "nz-float-button-group.nzPlacement.description",
-        "type": "string",
-        "typeRaw": "`top` | `right` | `bottom` | `left`",
-        "default": "`top`",
-        "pureDefault": "top"
       },
       {
         "name": "nzOnOpenChange",
@@ -4540,7 +4669,7 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-float-button-top.nzTarget.description",
         "type": "string",
-        "typeRaw": "`string` | `Element`",
+        "typeRaw": "`string | Element`",
         "default": "`window`",
         "pureDefault": "window"
       },
@@ -4681,7 +4810,7 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-form-item.nzAlign.description",
         "type": "Enum",
-        "typeRaw": "`'top'|'middle'|'bottom'`",
+        "typeRaw": "`'top' | 'middle' | 'bottom'`",
         "default": "",
         "typeDefinition": [
           "top",
@@ -4694,7 +4823,7 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-form-item.nzGutter.description",
         "type": "Enum",
-        "typeRaw": "`string|number|object|[number, number]|[object, object]`",
+        "typeRaw": "`string | number | object | [number, number] | [object, object]`",
         "default": "`0`",
         "pureDefault": "0",
         "typeDefinition": [
@@ -4714,7 +4843,7 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-form-item.nzJustify.description",
         "type": "Enum",
-        "typeRaw": "`'start'|'end'|'center'|'space-around'|'space-between'`",
+        "typeRaw": "`'start' | 'end' | 'center' | 'space-around' | 'space-between'`",
         "default": "",
         "typeDefinition": [
           "start",
@@ -5596,15 +5725,15 @@ export const DATA: Directive[] = [
   {
     "lib": "ng-zorro-antd",
     "type": "component",
-    "selector": "nz-hashCode",
-    "title": "nz-hashCode.title",
-    "description": "nz-hashCode.description",
-    "whenToUse": "nz-hashCode.whenToUse",
+    "selector": "nz-hash-code",
+    "title": "nz-hash-code.title",
+    "description": "nz-hash-code.description",
+    "whenToUse": "nz-hash-code.whenToUse",
     "properties": [
       {
         "name": "nzValue",
         "inputType": 0,
-        "description": "nz-hashCode.nzValue.description",
+        "description": "nz-hash-code.nzValue.description",
         "type": "string",
         "typeRaw": "`string`",
         "default": ""
@@ -5612,16 +5741,16 @@ export const DATA: Directive[] = [
       {
         "name": "nzTitle",
         "inputType": 0,
-        "description": "nz-hashCode.nzTitle.description",
+        "description": "nz-hash-code.nzTitle.description",
         "type": "string",
         "typeRaw": "`string`",
-        "default": "`HashCode`",
+        "default": "`'HashCode'`",
         "pureDefault": "HashCode"
       },
       {
         "name": "nzLogo",
         "inputType": 0,
-        "description": "nz-hashCode.nzLogo.description",
+        "description": "nz-hash-code.nzLogo.description",
         "type": "TemplateRef",
         "typeRaw": "`TemplateRef<void> | string`",
         "default": ""
@@ -5629,25 +5758,35 @@ export const DATA: Directive[] = [
       {
         "name": "nzMode",
         "inputType": 0,
-        "description": "nz-hashCode.nzMode.description",
-        "type": "string",
-        "typeRaw": "`single | double | strip | rect`",
-        "default": "`double`",
+        "description": "nz-hash-code.nzMode.description",
+        "type": "Enum",
+        "typeRaw": "`'single' | 'double' | 'strip' | 'rect'`",
+        "default": "`'double'`",
+        "typeDefinition": [
+          "single",
+          "double",
+          "strip",
+          "rect"
+        ],
         "pureDefault": "double"
       },
       {
         "name": "nzType",
         "inputType": 0,
-        "description": "nz-hashCode.nzType.description",
-        "type": "string",
-        "typeRaw": "`default | primary`",
-        "default": "`primary`",
+        "description": "nz-hash-code.nzType.description",
+        "type": "Enum",
+        "typeRaw": "`'default' | 'primary'`",
+        "default": "`'primary'`",
+        "typeDefinition": [
+          "default",
+          "primary"
+        ],
         "pureDefault": "primary"
       },
       {
         "name": "nzOnCopy",
         "inputType": 1,
-        "description": "nz-hashCode.nzOnCopy.description",
+        "description": "nz-hash-code.nzOnCopy.description",
         "type": "EventEmitter",
         "typeRaw": "`EventEmitter<string>`",
         "default": ""
@@ -12553,7 +12692,7 @@ export const DATA: Directive[] = [
         "description": "nz-image.nzScaleStep.description",
         "type": "number",
         "typeRaw": "`number`",
-        "default": "0.5",
+        "default": "`0.5`",
         "pureDefault": "0.5"
       }
     ],
@@ -12608,7 +12747,7 @@ export const DATA: Directive[] = [
         "description": "nz-input.nzVariant.description",
         "type": "Enum",
         "typeRaw": "`'outlined' | 'borderless' | 'filled' | 'underlined'`",
-        "default": "`outlined`",
+        "default": "`'outlined'`",
         "typeDefinition": [
           "outlined",
           "borderless",
@@ -12805,7 +12944,7 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-input-otp.disabled.description",
         "type": "boolean",
-        "typeRaw": "boolean",
+        "typeRaw": "`boolean`",
         "default": "`false`",
         "pureDefault": "false",
         "forceInputType": 0
@@ -12833,7 +12972,7 @@ export const DATA: Directive[] = [
         "description": "nz-input-otp.nzLength.description",
         "type": "number",
         "typeRaw": "`number`",
-        "default": "6",
+        "default": "`6`",
         "pureDefault": "6"
       },
       {
@@ -12854,7 +12993,7 @@ export const DATA: Directive[] = [
         "description": "nz-input-otp.nzSize.description",
         "type": "Enum",
         "typeRaw": "`'large' | 'small' | 'default'`",
-        "default": "`default`",
+        "default": "`'default'`",
         "typeDefinition": [
           "large",
           "small",
@@ -12924,7 +13063,7 @@ export const DATA: Directive[] = [
         "description": "nz-input-number.nzVariant.description",
         "type": "Enum",
         "typeRaw": "`'outlined' | 'borderless' | 'filled' | 'underlined'`",
-        "default": "`outlined`",
+        "default": "`'outlined'`",
         "typeDefinition": [
           "outlined",
           "borderless",
@@ -12959,6 +13098,15 @@ export const DATA: Directive[] = [
         "type": "function",
         "typeRaw": "`(value: number) => string`",
         "default": ""
+      },
+      {
+        "name": "nzKeyboard",
+        "inputType": 0,
+        "description": "nz-input-number.nzKeyboard.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`true`",
+        "pureDefault": "true"
       },
       {
         "name": "nzMax",
@@ -13007,17 +13155,26 @@ export const DATA: Directive[] = [
         "name": "nzStatus",
         "inputType": 0,
         "description": "nz-input-number.nzStatus.description",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": ""
+        "type": "Enum",
+        "typeRaw": "`'error' | 'warning'`",
+        "default": "",
+        "typeDefinition": [
+          "error",
+          "warning"
+        ]
       },
       {
         "name": "nzSize",
         "inputType": 0,
         "description": "nz-input-number.nzSize.description",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": "`default`",
+        "type": "Enum",
+        "typeRaw": "`'large' | 'small' | 'default'`",
+        "default": "`'default'`",
+        "typeDefinition": [
+          "large",
+          "small",
+          "default"
+        ],
         "pureDefault": "default"
       },
       {
@@ -13225,7 +13382,7 @@ export const DATA: Directive[] = [
         "description": "nz-input-number.nzInputMode.description",
         "type": "string",
         "typeRaw": "`string`",
-        "default": "`decimal`",
+        "default": "`'decimal'`",
         "pureDefault": "decimal"
       },
       {
@@ -13468,7 +13625,7 @@ export const DATA: Directive[] = [
         "description": "nz-sider.nzTheme.description",
         "type": "Enum",
         "typeRaw": "`'light' | 'dark'`",
-        "default": "`dark`",
+        "default": "`'dark'`",
         "typeDefinition": [
           "light",
           "dark"
@@ -13836,6 +13993,38 @@ export const DATA: Directive[] = [
         ]
       },
       {
+        "name": "nzAllowClear",
+        "inputType": 0,
+        "description": "nz-mention.nzAllowClear.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzClearIcon",
+        "inputType": 0,
+        "description": "nz-mention.nzClearIcon.description",
+        "type": "TemplateRef",
+        "typeRaw": "`TemplateRef<void>`",
+        "default": ""
+      },
+      {
+        "name": "nzVariant",
+        "inputType": 0,
+        "description": "nz-mention.nzVariant.description",
+        "type": "Enum",
+        "typeRaw": "`'outlined' | 'filled' | 'borderless' | 'underlined'`",
+        "default": "`'outlined'`",
+        "typeDefinition": [
+          "outlined",
+          "filled",
+          "borderless",
+          "underlined"
+        ],
+        "pureDefault": "outlined"
+      },
+      {
         "name": "nzValueWith",
         "inputType": 0,
         "description": "nz-mention.nzValueWith.description",
@@ -13857,6 +14046,14 @@ export const DATA: Directive[] = [
         "description": "nz-mention.nzOnSearchChange.description",
         "type": "EventEmitter",
         "typeRaw": "`EventEmitter<MentionOnSearchTypes>`",
+        "default": ""
+      },
+      {
+        "name": "nzOnClear",
+        "inputType": 1,
+        "description": "nz-mention.nzOnClear.description",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<void>`",
         "default": ""
       }
     ],
@@ -14170,7 +14367,7 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-modal.nzAfterOpen.description",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter",
+        "typeRaw": "`EventEmitter`",
         "default": ""
       },
       {
@@ -14178,7 +14375,7 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-modal.nzAfterClose.description",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter",
+        "typeRaw": "`EventEmitter`",
         "default": ""
       },
       {
@@ -14195,7 +14392,7 @@ export const DATA: Directive[] = [
         "description": "nz-modal.nzCancelText.description",
         "type": "string",
         "typeRaw": "`string`",
-        "default": "Cancel",
+        "default": "`'Cancel'`",
         "pureDefault": "Cancel"
       },
       {
@@ -14266,7 +14463,7 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-modal.nzFooter.description",
         "type": "string",
-        "typeRaw": "string<br>TemplateRef<br>ModalButtonOptions",
+        "typeRaw": "`string | TemplateRef<{}> | ModalButtonOptions[] | null`",
         "default": "OK and Cancel buttons",
         "pureDefault": "OK and Cancel buttons"
       },
@@ -14332,16 +14529,22 @@ export const DATA: Directive[] = [
         "description": "nz-modal.nzOkText.description",
         "type": "string",
         "typeRaw": "`string`",
-        "default": "OK",
+        "default": "`'OK'`",
         "pureDefault": "OK"
       },
       {
         "name": "nzOkType",
         "inputType": 0,
         "description": "nz-modal.nzOkType.description",
-        "type": "string",
-        "typeRaw": "`string`",
+        "type": "Enum",
+        "typeRaw": "`'primary' |'dashed' |'link' |'text'`",
         "default": "`primary`",
+        "typeDefinition": [
+          "primary",
+          "dashed",
+          "link",
+          "text"
+        ],
         "pureDefault": "primary"
       },
       {
@@ -14366,7 +14569,7 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-modal.nzCloseIcon.description",
         "type": "string",
-        "typeRaw": "`string|TemplateRef<void>`",
+        "typeRaw": "`string | TemplateRef<void>`",
         "default": ""
       },
       {
@@ -14374,7 +14577,7 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-modal.nzTitle.description",
         "type": "string",
-        "typeRaw": "string / TemplateRef",
+        "typeRaw": "`string | TemplateRef<{}>`",
         "default": ""
       },
       {
@@ -14391,8 +14594,8 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-modal.nzWidth.description",
         "type": "string",
-        "typeRaw": "string<br>number",
-        "default": "520",
+        "typeRaw": "`string | number`",
+        "default": "`520`",
         "pureDefault": "520"
       },
       {
@@ -14417,7 +14620,7 @@ export const DATA: Directive[] = [
         "description": "nz-modal.nzZIndex.description",
         "type": "number",
         "typeRaw": "`number`",
-        "default": "1000",
+        "default": "`1000`",
         "pureDefault": "1000"
       },
       {
@@ -14425,7 +14628,7 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-modal.nzOnCancel.description",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter",
+        "typeRaw": "`EventEmitter`",
         "default": ""
       },
       {
@@ -14433,7 +14636,7 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-modal.nzOnOk.description",
         "type": "EventEmitter",
-        "typeRaw": "EventEmitter",
+        "typeRaw": "`EventEmitter`",
         "default": ""
       },
       {
@@ -14441,7 +14644,7 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-modal.nzContent.description",
         "type": "string",
-        "typeRaw": "string / TemplateRef / Component / ng-content",
+        "typeRaw": "`string | TemplateRef<{}> | Component | ng-content`",
         "default": ""
       },
       {
@@ -14458,7 +14661,7 @@ export const DATA: Directive[] = [
         "description": "nz-modal.nzIconType.description",
         "type": "string",
         "typeRaw": "`string`",
-        "default": "question-circle",
+        "default": "`'question-circle'`",
         "pureDefault": "question-circle"
       },
       {
@@ -15188,7 +15391,7 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-popconfirm.nzIcon.description",
         "type": "string",
-        "typeRaw": "`string | TemplateRef<void>`",
+        "typeRaw": "`string | TemplateRef<void> | null`",
         "default": ""
       },
       {
@@ -15727,8 +15930,8 @@ export const DATA: Directive[] = [
         "description": "nz-qrcode.nzColor.description",
         "type": "string",
         "typeRaw": "`string`",
-        "default": "`#000`",
-        "pureDefault": "#000"
+        "default": "`'#000000'`",
+        "pureDefault": "#000000"
       },
       {
         "name": "nzBgColor",
@@ -15736,7 +15939,7 @@ export const DATA: Directive[] = [
         "description": "nz-qrcode.nzBgColor.description",
         "type": "string",
         "typeRaw": "`string`",
-        "default": "`#FFFFFF`",
+        "default": "`'#FFFFFF'`",
         "pureDefault": "#FFFFFF"
       },
       {
@@ -15789,7 +15992,7 @@ export const DATA: Directive[] = [
         "description": "nz-qrcode.nzStatus.description",
         "type": "Enum",
         "typeRaw": "`'active'｜'expired' ｜'loading'`",
-        "default": "`active`",
+        "default": "`'active'`",
         "typeDefinition": [
           "active",
           "expired",
@@ -15811,7 +16014,7 @@ export const DATA: Directive[] = [
         "description": "nz-qrcode.nzLevel.description",
         "type": "object",
         "typeRaw": "`'L'｜'M'｜'Q'｜'H'`",
-        "default": "`M`",
+        "default": "`'M'`",
         "pureDefault": "M"
       },
       {
@@ -16383,7 +16586,7 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-result.nzTitle.description",
         "type": "TemplateRef",
-        "typeRaw": "`TemplateRef<void>` | `string`",
+        "typeRaw": "`TemplateRef<void> | string`",
         "default": ""
       },
       {
@@ -16391,7 +16594,7 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-result.nzSubTitle.description",
         "type": "TemplateRef",
-        "typeRaw": "`TemplateRef<void>` | `string`",
+        "typeRaw": "`TemplateRef<void> | string`",
         "default": ""
       },
       {
@@ -16399,7 +16602,7 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-result.nzStatus.description",
         "type": "Enum",
-        "typeRaw": "`'success' | 'error' | 'info' | 'warning'| '404' | '403' | '500'` | 'info'",
+        "typeRaw": "`'success' | 'error' | 'info' | 'warning'| '404' | '403' | '500'`",
         "default": "`'info'`",
         "typeDefinition": [
           "success",
@@ -16408,8 +16611,7 @@ export const DATA: Directive[] = [
           "warning",
           "404",
           "403",
-          "500",
-          "info"
+          "500"
         ],
         "pureDefault": "info"
       },
@@ -16418,7 +16620,7 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-result.nzIcon.description",
         "type": "TemplateRef",
-        "typeRaw": "`TemplateRef<void>` | `string`",
+        "typeRaw": "`TemplateRef<void> | string`",
         "default": ""
       },
       {
@@ -16426,7 +16628,7 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-result.nzExtra.description",
         "type": "TemplateRef",
-        "typeRaw": "`TemplateRef<void>` | `string`",
+        "typeRaw": "`TemplateRef<void> | string`",
         "default": ""
       }
     ],
@@ -16449,7 +16651,7 @@ export const DATA: Directive[] = [
         "description": "nz-segmented.nzBlock.description",
         "type": "boolean",
         "typeRaw": "`boolean`",
-        "default": "false",
+        "default": "`false`",
         "pureDefault": "false"
       },
       {
@@ -16458,7 +16660,7 @@ export const DATA: Directive[] = [
         "description": "nz-segmented.nzDisabled.description",
         "type": "boolean",
         "typeRaw": "`boolean`",
-        "default": "false",
+        "default": "`false`",
         "pureDefault": "false",
         "forceInputType": 0
       },
@@ -16476,6 +16678,32 @@ export const DATA: Directive[] = [
         "description": "nz-segmented.nzSize.description",
         "type": "string",
         "typeRaw": "`large | default | small`",
+        "default": ""
+      },
+      {
+        "name": "nzShape",
+        "inputType": 0,
+        "description": "nz-segmented.nzShape.description",
+        "type": "string",
+        "typeRaw": "`default | round`",
+        "default": "`default`",
+        "pureDefault": "default"
+      },
+      {
+        "name": "nzVertical",
+        "inputType": 0,
+        "description": "nz-segmented.nzVertical.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzName",
+        "inputType": 0,
+        "description": "nz-segmented.nzName.description",
+        "type": "string",
+        "typeRaw": "`string`",
         "default": ""
       },
       {
@@ -16584,7 +16812,7 @@ export const DATA: Directive[] = [
         "description": "nz-select.nzVariant.description",
         "type": "Enum",
         "typeRaw": "`'outlined' | 'borderless' | 'filled' | 'underlined'`",
-        "default": "`outlined`",
+        "default": "`'outlined'`",
         "typeDefinition": [
           "outlined",
           "borderless",
@@ -16754,6 +16982,14 @@ export const DATA: Directive[] = [
           "error",
           "warning"
         ]
+      },
+      {
+        "name": "nzPrefix",
+        "inputType": 0,
+        "description": "nz-select.nzPrefix.description",
+        "type": "TemplateRef",
+        "typeRaw": "`TemplateRef<any> | string`",
+        "default": ""
       },
       {
         "name": "nzSuffixIcon",
@@ -17195,8 +17431,8 @@ export const DATA: Directive[] = [
         "description": "nz-slider.nzMarks.description",
         "type": "object",
         "typeRaw": "`object`",
-        "default": "{ number: string/HTML } or { number: { style: object, label: string/HTML } }",
-        "pureDefault": "{ number: string/HTML } or { number: { style: object, label: string/HTML } }"
+        "default": "`{ number: string/HTML }` or `{ number: { style: object, label: string/HTML } }`",
+        "pureDefault": "{ number: string/HTML }` or `{ number: { style: object, label: string/HTML } }"
       },
       {
         "name": "nzMax",
@@ -17274,7 +17510,7 @@ export const DATA: Directive[] = [
         "description": "nz-slider.nzTooltipVisible.description",
         "type": "Enum",
         "typeRaw": "`'default' | 'always' | 'never'`",
-        "default": "`default`",
+        "default": "`'default'`",
         "typeDefinition": [
           "default",
           "always",
@@ -17341,7 +17577,7 @@ export const DATA: Directive[] = [
         "description": "nz-space.nzSize.description",
         "type": "object",
         "typeRaw": "`NzSpaceSize | NzSpaceSize[]`",
-        "default": "`small`",
+        "default": "`'small'`",
         "pureDefault": "small"
       },
       {
@@ -17350,7 +17586,7 @@ export const DATA: Directive[] = [
         "description": "nz-space.nzDirection.description",
         "type": "Enum",
         "typeRaw": "`'vertical' | 'horizontal'`",
-        "default": "`horizontal`",
+        "default": "`'horizontal'`",
         "typeDefinition": [
           "vertical",
           "horizontal"
@@ -17429,12 +17665,12 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-space-compact.nzSize.description",
         "type": "Enum",
-        "typeRaw": "`'large' | 'default' | 'small'`",
+        "typeRaw": "`'large' | 'small' | 'default'`",
         "default": "`'default'`",
         "typeDefinition": [
           "large",
-          "default",
-          "small"
+          "small",
+          "default"
         ],
         "pureDefault": "default"
       }
@@ -17726,7 +17962,7 @@ export const DATA: Directive[] = [
         "description": "nz-countdown.nzFormat.description",
         "type": "string",
         "typeRaw": "`string`",
-        "default": "`\"HH:mm:ss\"`",
+        "default": "`'HH:mm:ss'`",
         "pureDefault": "HH:mm:ss"
       },
       {
@@ -17810,7 +18046,7 @@ export const DATA: Directive[] = [
         "description": "nz-steps.nzType.description",
         "type": "Enum",
         "typeRaw": "`'default' | 'navigation'`",
-        "default": "`default`",
+        "default": "`'default'`",
         "typeDefinition": [
           "default",
           "navigation"
@@ -17832,7 +18068,7 @@ export const DATA: Directive[] = [
         "description": "nz-steps.nzDirection.description",
         "type": "Enum",
         "typeRaw": "`'vertical' | 'horizontal'`",
-        "default": "`horizontal`",
+        "default": "`'horizontal'`",
         "typeDefinition": [
           "vertical",
           "horizontal"
@@ -17845,7 +18081,7 @@ export const DATA: Directive[] = [
         "description": "nz-steps.nzLabelPlacement.description",
         "type": "Enum",
         "typeRaw": "`'vertical' | 'horizontal'`",
-        "default": "`horizontal`",
+        "default": "`'horizontal'`",
         "typeDefinition": [
           "vertical",
           "horizontal"
@@ -18175,7 +18411,7 @@ export const DATA: Directive[] = [
         "description": "nz-table.nzPaginationPosition.description",
         "type": "Enum",
         "typeRaw": "`'top' | 'bottom' | 'both'`",
-        "default": "`bottom`",
+        "default": "`'bottom'`",
         "typeDefinition": [
           "top",
           "bottom",
@@ -18189,7 +18425,7 @@ export const DATA: Directive[] = [
         "description": "nz-table.nzPaginationType.description",
         "type": "Enum",
         "typeRaw": "`'default' | 'small'`",
-        "default": "`default`",
+        "default": "`'default'`",
         "typeDefinition": [
           "default",
           "small"
@@ -18527,52 +18763,6 @@ export const DATA: Directive[] = [
         "description": "th.nzSelections.description",
         "type": "Array",
         "typeRaw": "`Array<{ text: string, onSelect: any }>`",
-        "default": ""
-      },
-      {
-        "name": "nzShowSort",
-        "inputType": 0,
-        "description": "th.nzShowSort.description",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": ""
-      },
-      {
-        "name": "nzSortFn",
-        "inputType": 0,
-        "description": "th.nzSortFn.description",
-        "type": "object",
-        "typeRaw": "`NzTableSortFn<T> | boolean`",
-        "default": ""
-      },
-      {
-        "name": "nzSortOrder",
-        "inputType": 0,
-        "description": "th.nzSortOrder.description",
-        "type": "Enum",
-        "typeRaw": "`'ascend' | 'descend' | null`",
-        "default": "",
-        "typeDefinition": [
-          "ascend",
-          "descend",
-          "null"
-        ]
-      },
-      {
-        "name": "nzSortDirections",
-        "inputType": 0,
-        "description": "th.nzSortDirections.description",
-        "type": "Array",
-        "typeRaw": "`Array<'ascend' | 'descend' | null>`",
-        "default": "`['ascend', 'descend', null]`",
-        "pureDefault": "['ascend', 'descend', null]"
-      },
-      {
-        "name": "nzSortOrderChange",
-        "inputType": 1,
-        "description": "th.nzSortOrderChange.description",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<'ascend' | 'descend' | null>`",
         "default": ""
       },
       {
@@ -19530,7 +19720,7 @@ export const DATA: Directive[] = [
         "description": "nz-time-picker.nzFormat.description",
         "type": "string",
         "typeRaw": "[DatePipe](https://angular.dev/api/common/DatePipe)",
-        "default": "`\"HH:mm:ss\"`",
+        "default": "`'HH:mm:ss'`",
         "pureDefault": "HH:mm:ss"
       },
       {
@@ -19610,7 +19800,7 @@ export const DATA: Directive[] = [
         "description": "nz-time-picker.nzVariant.description",
         "type": "Enum",
         "typeRaw": "`'outlined' | 'borderless' | 'filled' | 'underlined'`",
-        "default": "`outlined`",
+        "default": "`'outlined'`",
         "typeDefinition": [
           "outlined",
           "borderless",
@@ -19643,7 +19833,7 @@ export const DATA: Directive[] = [
         "description": "nz-time-picker.nzPlaceHolder.description",
         "type": "string",
         "typeRaw": "`string`",
-        "default": "`\"Select a time\"`",
+        "default": "`'Select a time'`",
         "pureDefault": "Select a time"
       },
       {
@@ -19669,7 +19859,7 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-time-picker.nzSuffixIcon.description",
         "type": "string",
-        "typeRaw": "`string` | `TemplateRef`",
+        "typeRaw": "`string | TemplateRef`",
         "default": ""
       },
       {
@@ -19722,7 +19912,7 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-timeline.nzPending.description",
         "type": "string",
-        "typeRaw": "`string|boolean|TemplateRef<void>`",
+        "typeRaw": "`string | boolean | TemplateRef<void>`",
         "default": "`false`",
         "pureDefault": "false"
       },
@@ -19731,7 +19921,7 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-timeline.nzPendingDot.description",
         "type": "string",
-        "typeRaw": "`string|TemplateRef<void>`",
+        "typeRaw": "`string | TemplateRef<void>`",
         "default": "`<nz-icon nzType=\"loading\" />`",
         "pureDefault": "<nz-icon nzType=\"loading\" />"
       },
@@ -20391,9 +20581,15 @@ export const DATA: Directive[] = [
         "name": "nzPlacement",
         "inputType": 0,
         "description": "nz-tree-select.nzPlacement.description",
-        "type": "string",
-        "typeRaw": "`bottomLeft` `bottomRight` `topLeft` `topRight`",
-        "default": "bottomLeft",
+        "type": "Enum",
+        "typeRaw": "`'bottomLeft' | 'bottomRight' | 'topLeft' | 'topRight'`",
+        "default": "`'bottomLeft'`",
+        "typeDefinition": [
+          "bottomLeft",
+          "bottomRight",
+          "topLeft",
+          "topRight"
+        ],
         "pureDefault": "bottomLeft"
       },
       {
@@ -20542,6 +20738,22 @@ export const DATA: Directive[] = [
         "pureDefault": "false"
       },
       {
+        "name": "nzPrefix",
+        "inputType": 0,
+        "description": "nz-tree-select.nzPrefix.description",
+        "type": "TemplateRef",
+        "typeRaw": "`TemplateRef<any> | string`",
+        "default": ""
+      },
+      {
+        "name": "nzSuffixIcon",
+        "inputType": 0,
+        "description": "nz-tree-select.nzSuffixIcon.description",
+        "type": "TemplateRef",
+        "typeRaw": "`TemplateRef<any> | string`",
+        "default": ""
+      },
+      {
         "name": "nzAsyncData",
         "inputType": 0,
         "description": "nz-tree-select.nzAsyncData.description",
@@ -20615,7 +20827,7 @@ export const DATA: Directive[] = [
         "description": "nz-tree-select.nzVariant.description",
         "type": "Enum",
         "typeRaw": "`'outlined' | 'borderless' | 'filled' | 'underlined'`",
-        "default": "`outlined`",
+        "default": "`'outlined'`",
         "typeDefinition": [
           "outlined",
           "borderless",
@@ -20731,8 +20943,8 @@ export const DATA: Directive[] = [
         "name": "nzDataSource",
         "inputType": 0,
         "description": "nz-tree-view.nzDataSource.description",
-        "type": "string",
-        "typeRaw": "[DataSource](https://material.angular.io/cdk/tree/overview#data-source)&lt;T&gt; | Observable<T[]> | T[]",
+        "type": "object",
+        "typeRaw": "`DataSource<T> | Observable<T[]> | T[]`, [DataSource](https://material.angular.io/cdk/tree/overview#data-source)",
         "default": ""
       },
       {
@@ -20779,8 +20991,8 @@ export const DATA: Directive[] = [
         "name": "nzDataSource",
         "inputType": 0,
         "description": "nz-tree-virtual-scroll-view.nzDataSource.description",
-        "type": "string",
-        "typeRaw": "[DataSource](https://material.angular.io/cdk/tree/overview#data-source)&lt;T&gt; | Observable<T[]> | T[]",
+        "type": "object",
+        "typeRaw": "`DataSource<T> | Observable<T[]> | T[]`, [DataSource](https://material.angular.io/cdk/tree/overview#data-source)",
         "default": ""
       },
       {
@@ -21525,8 +21737,8 @@ export const DATA: Directive[] = [
         "name": "nzTransformFile",
         "inputType": 0,
         "description": "nz-upload.nzTransformFile.description",
-        "type": "function",
-        "typeRaw": "`(file: NzUploadFile) => NzUploadTransformFileType`",
+        "type": "string",
+        "typeRaw": "~~`(file: NzUploadFile) => NzUploadTransformFileType`~~",
         "default": ""
       },
       {
@@ -21564,7 +21776,7 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-water-mark.nzContent.description",
         "type": "string",
-        "typeRaw": "`string ｜ string[]`",
+        "typeRaw": "`string | string[]`",
         "default": ""
       },
       {
@@ -21573,7 +21785,7 @@ export const DATA: Directive[] = [
         "description": "nz-water-mark.nzWidth.description",
         "type": "number",
         "typeRaw": "`number`",
-        "default": "120",
+        "default": "`120`",
         "pureDefault": "120"
       },
       {
@@ -21582,7 +21794,7 @@ export const DATA: Directive[] = [
         "description": "nz-water-mark.nzHeight.description",
         "type": "number",
         "typeRaw": "`number`",
-        "default": "64",
+        "default": "`64`",
         "pureDefault": "64"
       },
       {
@@ -21591,7 +21803,7 @@ export const DATA: Directive[] = [
         "description": "nz-water-mark.nzRotate.description",
         "type": "number",
         "typeRaw": "`number`",
-        "default": "-22",
+        "default": "`-22`",
         "pureDefault": "-22"
       },
       {
@@ -21600,7 +21812,7 @@ export const DATA: Directive[] = [
         "description": "nz-water-mark.nzZIndex.description",
         "type": "number",
         "typeRaw": "`number`",
-        "default": "9",
+        "default": "`9`",
         "pureDefault": "9"
       },
       {
@@ -21657,16 +21869,22 @@ export const DATA: Directive[] = [
           "description": "nz-water-mark.fontSize.description",
           "type": "number",
           "typeRaw": "`number`",
-          "default": "16",
+          "default": "`16`",
           "pureDefault": "16"
         },
         {
           "name": "fontWeight",
           "inputType": 0,
           "description": "nz-water-mark.fontWeight.description",
-          "type": "string",
-          "typeRaw": "`normal ｜ light ｜ weight ｜ number`",
-          "default": "normal",
+          "type": "Enum",
+          "typeRaw": "`'normal' | 'light' | 'weight' | number`",
+          "default": "`'normal'`",
+          "typeDefinition": [
+            "normal",
+            "light",
+            "weight",
+            "number"
+          ],
           "pureDefault": "normal"
         },
         {
@@ -21675,16 +21893,22 @@ export const DATA: Directive[] = [
           "description": "nz-water-mark.fontFamily.description",
           "type": "string",
           "typeRaw": "`string`",
-          "default": "sans-serif",
+          "default": "`'sans-serif'`",
           "pureDefault": "sans-serif"
         },
         {
           "name": "fontStyle",
           "inputType": 0,
           "description": "nz-water-mark.fontStyle.description",
-          "type": "string",
-          "typeRaw": "`none ｜ normal ｜ italic ｜ oblique`",
-          "default": "normal",
+          "type": "Enum",
+          "typeRaw": "`'none' | 'normal' | 'italic' | 'oblique'`",
+          "default": "`'normal'`",
+          "typeDefinition": [
+            "none",
+            "normal",
+            "italic",
+            "oblique"
+          ],
           "pureDefault": "normal"
         }
       ]
