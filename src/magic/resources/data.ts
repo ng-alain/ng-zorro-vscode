@@ -1011,63 +1011,6 @@ export const DATA: Directive[] = [
   {
     "lib": "ng-zorro-antd",
     "type": "component",
-    "selector": "nz-back-top",
-    "title": "nz-back-top.title",
-    "description": "nz-back-top.description",
-    "whenToUse": "nz-back-top.whenToUse",
-    "properties": [
-      {
-        "name": "nzTemplate",
-        "inputType": 0,
-        "description": "nz-back-top.nzTemplate.description",
-        "type": "TemplateRef",
-        "typeRaw": "`TemplateRef<void>`",
-        "default": ""
-      },
-      {
-        "name": "nzVisibilityHeight",
-        "inputType": 0,
-        "description": "nz-back-top.nzVisibilityHeight.description",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "`400`",
-        "pureDefault": "400"
-      },
-      {
-        "name": "nzTarget",
-        "inputType": 0,
-        "description": "nz-back-top.nzTarget.description",
-        "type": "string",
-        "typeRaw": "`string | Element`",
-        "default": "`window`",
-        "pureDefault": "window"
-      },
-      {
-        "name": "nzDuration",
-        "inputType": 0,
-        "description": "nz-back-top.nzDuration.description",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "`450`",
-        "pureDefault": "450"
-      },
-      {
-        "name": "nzClick",
-        "inputType": 1,
-        "description": "nz-back-top.nzClick.description",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<boolean>`",
-        "default": ""
-      }
-    ],
-    "types": {},
-    "doc": "/components/back-top/en",
-    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/back-top",
-    "standalone": false
-  },
-  {
-    "lib": "ng-zorro-antd",
-    "type": "component",
     "selector": "nz-badge",
     "title": "nz-badge.title",
     "description": "nz-badge.description",
@@ -2471,28 +2414,6 @@ export const DATA: Directive[] = [
   {
     "lib": "ng-zorro-antd",
     "type": "component",
-    "selector": "nz-checkbox-wrapper",
-    "title": "nz-checkbox-wrapper.title",
-    "description": "nz-checkbox-wrapper.description",
-    "whenToUse": "nz-checkbox-wrapper.whenToUse",
-    "properties": [
-      {
-        "name": "nzOnChange",
-        "inputType": 1,
-        "description": "nz-checkbox-wrapper.nzOnChange.description",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<any[]>`",
-        "default": ""
-      }
-    ],
-    "types": {},
-    "doc": "/components/checkbox/en",
-    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/checkbox",
-    "standalone": false
-  },
-  {
-    "lib": "ng-zorro-antd",
-    "type": "component",
     "selector": "nz-code-editor",
     "title": "nz-code-editor.title",
     "description": "nz-code-editor.description",
@@ -2966,7 +2887,7 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-color-block.nzOnClick.description",
         "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<boolean>`",
+        "typeRaw": "`EventEmitter<void>`",
         "default": ""
       }
     ],
@@ -3401,16 +3322,6 @@ export const DATA: Directive[] = [
         "_common": true
       },
       {
-        "name": "nzBorderless",
-        "inputType": 0,
-        "description": "nz-date-picker.nzBorderless.description",
-        "type": "string",
-        "typeRaw": "~~`boolean`~~",
-        "default": "~~`false`~~",
-        "pureDefault": "~~`false`~~",
-        "_common": true
-      },
-      {
         "name": "nzVariant",
         "inputType": 0,
         "description": "nz-date-picker.nzVariant.description",
@@ -3729,16 +3640,6 @@ export const DATA: Directive[] = [
         "type": "string",
         "typeRaw": "`string | TemplateRef`",
         "default": "",
-        "_common": true
-      },
-      {
-        "name": "nzBorderless",
-        "inputType": 0,
-        "description": "nz-range-picker.nzBorderless.description",
-        "type": "string",
-        "typeRaw": "~~`boolean`~~",
-        "default": "~~`false`~~",
-        "pureDefault": "~~`false`~~",
         "_common": true
       },
       {
@@ -4586,19 +4487,6 @@ export const DATA: Directive[] = [
     "whenToUse": "nz-float-button-group.whenToUse",
     "properties": [
       {
-        "name": "nzShape",
-        "inputType": 0,
-        "description": "nz-float-button-group.nzShape.description",
-        "type": "Enum",
-        "typeRaw": "`'circle' | 'square'`",
-        "default": "`'circle'`",
-        "typeDefinition": [
-          "circle",
-          "square"
-        ],
-        "pureDefault": "circle"
-      },
-      {
         "name": "nzTrigger",
         "inputType": 0,
         "description": "nz-float-button-group.nzTrigger.description",
@@ -4681,14 +4569,6 @@ export const DATA: Directive[] = [
         "typeRaw": "`number`",
         "default": "`450`",
         "pureDefault": "450"
-      },
-      {
-        "name": "nzOnClick",
-        "inputType": 1,
-        "description": "nz-float-button-top.nzOnClick.description",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<boolean>`",
-        "default": ""
       }
     ],
     "types": {},
@@ -4775,6 +4655,15 @@ export const DATA: Directive[] = [
         "typeRaw": "`boolean`",
         "default": "`false`",
         "pureDefault": "false"
+      },
+      {
+        "name": "nzRequiredMark",
+        "inputType": 0,
+        "description": "nz-form.nzRequiredMark.description",
+        "type": "object",
+        "typeRaw": "`NzRequiredMark`",
+        "default": "`true`",
+        "pureDefault": "true"
       },
       {
         "name": "formGroup",
@@ -12733,15 +12622,6 @@ export const DATA: Directive[] = [
         "pureDefault": "false"
       },
       {
-        "name": "nzBorderless",
-        "inputType": 0,
-        "description": "nz-input.nzBorderless.description",
-        "type": "string",
-        "typeRaw": "~~`boolean`~~",
-        "default": "~~`false`~~",
-        "pureDefault": "~~`false`~~"
-      },
-      {
         "name": "nzVariant",
         "inputType": 0,
         "description": "nz-input.nzVariant.description",
@@ -12772,10 +12652,10 @@ export const DATA: Directive[] = [
         "name": "nzStepperless",
         "inputType": 0,
         "description": "nz-input.nzStepperless.description",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`true`",
-        "pureDefault": "true"
+        "type": "string",
+        "typeRaw": "~~`boolean`~~",
+        "default": "~~`true`~~",
+        "pureDefault": "~~`true`~~"
       },
       {
         "name": "ngModel",
@@ -12827,6 +12707,150 @@ export const DATA: Directive[] = [
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/input",
     "standalone": false,
     "snippet": "<input __$1>"
+  },
+  {
+    "lib": "ng-zorro-antd",
+    "type": "component",
+    "selector": "nz-input-wrapper",
+    "title": "nz-input-wrapper.title",
+    "description": "nz-input-wrapper.description",
+    "whenToUse": "nz-input-wrapper.whenToUse",
+    "properties": [
+      {
+        "name": "nzAddonBefore",
+        "inputType": 0,
+        "description": "nz-input-wrapper.nzAddonBefore.description",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
+      },
+      {
+        "name": "nzAddonAfter",
+        "inputType": 0,
+        "description": "nz-input-wrapper.nzAddonAfter.description",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
+      },
+      {
+        "name": "nzPrefix",
+        "inputType": 0,
+        "description": "nz-input-wrapper.nzPrefix.description",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
+      },
+      {
+        "name": "nzSuffix",
+        "inputType": 0,
+        "description": "nz-input-wrapper.nzSuffix.description",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
+      },
+      {
+        "name": "nzAllowClear",
+        "inputType": 0,
+        "description": "nz-input-wrapper.nzAllowClear.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzClear",
+        "inputType": 1,
+        "description": "nz-input-wrapper.nzClear.description",
+        "type": "object",
+        "typeRaw": "`OutputEmitterRef<void>`",
+        "default": ""
+      }
+    ],
+    "types": {},
+    "doc": "/components/input/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/input",
+    "standalone": false
+  },
+  {
+    "lib": "ng-zorro-antd",
+    "type": "component",
+    "selector": "nz-input-password",
+    "title": "nz-input-password.title",
+    "description": "nz-input-password.description",
+    "whenToUse": "nz-input-password.whenToUse",
+    "properties": [
+      {
+        "name": "nzVisibilityToggle",
+        "inputType": 0,
+        "description": "nz-input-password.nzVisibilityToggle.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`true`",
+        "pureDefault": "true"
+      },
+      {
+        "name": "nzVisible",
+        "inputType": 0,
+        "description": "nz-input-password.nzVisible.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzVisibleChange",
+        "inputType": 1,
+        "description": "nz-input-password.nzVisibleChange.description",
+        "type": "object",
+        "typeRaw": "`OutputEmitterRef<boolean>`",
+        "default": ""
+      }
+    ],
+    "types": {},
+    "doc": "/components/input/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/input",
+    "standalone": false
+  },
+  {
+    "lib": "ng-zorro-antd",
+    "type": "component",
+    "selector": "nz-input-search",
+    "title": "nz-input-search.title",
+    "description": "nz-input-search.description",
+    "whenToUse": "nz-input-search.whenToUse",
+    "properties": [
+      {
+        "name": "nzEnterButton",
+        "inputType": 0,
+        "description": "nz-input-search.nzEnterButton.description",
+        "type": "boolean",
+        "typeRaw": "`boolean | string`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzLoading",
+        "inputType": 0,
+        "description": "nz-input-search.nzLoading.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false",
+        "forceInputType": 0
+      },
+      {
+        "name": "nzSearch",
+        "inputType": 1,
+        "description": "nz-input-search.nzSearch.description",
+        "type": "object",
+        "typeRaw": "`{ value: string, event: Event, source: 'clear' | 'input' }`",
+        "default": ""
+      }
+    ],
+    "types": {},
+    "doc": "/components/input/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/input",
+    "standalone": false
   },
   {
     "lib": "ng-zorro-antd",
@@ -13049,15 +13073,6 @@ export const DATA: Directive[] = [
         "pureDefault": "false"
       },
       {
-        "name": "nzBordered",
-        "inputType": 0,
-        "description": "nz-input-number.nzBordered.description",
-        "type": "string",
-        "typeRaw": "~~`boolean`~~",
-        "default": "~~`true`~~",
-        "pureDefault": "~~`true`~~"
-      },
-      {
         "name": "nzVariant",
         "inputType": 0,
         "description": "nz-input-number.nzVariant.description",
@@ -13187,6 +13202,38 @@ export const DATA: Directive[] = [
         "pureDefault": "1"
       },
       {
+        "name": "nzAddonBefore",
+        "inputType": 0,
+        "description": "nz-input-number.nzAddonBefore.description",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
+      },
+      {
+        "name": "nzAddonAfter",
+        "inputType": 0,
+        "description": "nz-input-number.nzAddonAfter.description",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
+      },
+      {
+        "name": "nzPrefix",
+        "inputType": 0,
+        "description": "nz-input-number.nzPrefix.description",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
+      },
+      {
+        "name": "nzSuffix",
+        "inputType": 0,
+        "description": "nz-input-number.nzSuffix.description",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
+      },
+      {
         "name": "nzOnStep",
         "inputType": 1,
         "description": "nz-input-number.nzOnStep.description",
@@ -13238,301 +13285,6 @@ export const DATA: Directive[] = [
     "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/input-number",
     "standalone": false,
     "selfClosingTag": true
-  },
-  {
-    "lib": "ng-zorro-antd",
-    "type": "component",
-    "selector": "nz-input-number",
-    "title": "nz-input-number.title",
-    "description": "nz-input-number.description",
-    "whenToUse": "nz-input-number.whenToUse",
-    "properties": [
-      {
-        "name": "ngModel",
-        "inputType": 2,
-        "description": "nz-input-number.ngModel.description",
-        "type": "number",
-        "typeRaw": "`number | string` | `string`",
-        "default": ""
-      },
-      {
-        "name": "nzAutoFocus",
-        "inputType": 0,
-        "description": "nz-input-number.nzAutoFocus.description",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false"
-      },
-      {
-        "name": "nzDisabled",
-        "inputType": 0,
-        "description": "nz-input-number.nzDisabled.description",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false",
-        "forceInputType": 0
-      },
-      {
-        "name": "nzReadOnly",
-        "inputType": 0,
-        "description": "nz-input-number.nzReadOnly.description",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false"
-      },
-      {
-        "name": "nzMax",
-        "inputType": 0,
-        "description": "nz-input-number.nzMax.description",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "`Infinity`",
-        "pureDefault": "Infinity"
-      },
-      {
-        "name": "nzMin",
-        "inputType": 0,
-        "description": "nz-input-number.nzMin.description",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "`-Infinity`",
-        "pureDefault": "-Infinity"
-      },
-      {
-        "name": "nzFormatter",
-        "inputType": 0,
-        "description": "nz-input-number.nzFormatter.description",
-        "type": "function",
-        "typeRaw": "`(value: number | string) => string | number`",
-        "default": ""
-      },
-      {
-        "name": "nzParser",
-        "inputType": 0,
-        "description": "nz-input-number.nzParser.description",
-        "type": "function",
-        "typeRaw": "`(value: string) => string | number`",
-        "default": "`(value: string) => value.trim().replace(/。/g, '.').replace(/[^\\w\\.-]+/g, '')`",
-        "pureDefault": "(value: string) => value.trim().replace(/。/g, '.').replace(/[^\\w\\.-]+/g, '')"
-      },
-      {
-        "name": "nzPrecision",
-        "inputType": 0,
-        "description": "nz-input-number.nzPrecision.description",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": ""
-      },
-      {
-        "name": "nzPrecisionMode",
-        "inputType": 0,
-        "description": "nz-input-number.nzPrecisionMode.description",
-        "type": "Enum",
-        "typeRaw": "`'cut' | 'toFixed' | ((value: number | string, precision?: number) => number)`",
-        "default": "`'toFixed'`",
-        "typeDefinition": [
-          "cut",
-          "toFixed",
-          "((value: number",
-          "string, precision?: number) => number)"
-        ],
-        "pureDefault": "toFixed"
-      },
-      {
-        "name": "nzSize",
-        "inputType": 0,
-        "description": "nz-input-number.nzSize.description",
-        "type": "Enum",
-        "typeRaw": "`'large' | 'small' | 'default'`",
-        "default": "`'default'`",
-        "typeDefinition": [
-          "large",
-          "small",
-          "default"
-        ],
-        "pureDefault": "default"
-      },
-      {
-        "name": "nzStatus",
-        "inputType": 0,
-        "description": "nz-input-number.nzStatus.description",
-        "type": "Enum",
-        "typeRaw": "`'error' | 'warning'`",
-        "default": "",
-        "typeDefinition": [
-          "error",
-          "warning"
-        ]
-      },
-      {
-        "name": "nzStep",
-        "inputType": 0,
-        "description": "nz-input-number.nzStep.description",
-        "type": "number",
-        "typeRaw": "`number | string`",
-        "default": "`1`",
-        "pureDefault": "1"
-      },
-      {
-        "name": "nzInputMode",
-        "inputType": 0,
-        "description": "nz-input-number.nzInputMode.description",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": "`'decimal'`",
-        "pureDefault": "decimal"
-      },
-      {
-        "name": "nzPlaceHolder",
-        "inputType": 0,
-        "description": "nz-input-number.nzPlaceHolder.description",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": ""
-      },
-      {
-        "name": "nzId",
-        "inputType": 0,
-        "description": "nz-input-number.nzId.description",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": ""
-      },
-      {
-        "name": "ngModelChange",
-        "inputType": 1,
-        "description": "nz-input-number.ngModelChange.description",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<number>`",
-        "default": ""
-      },
-      {
-        "name": "nzFocus",
-        "inputType": 1,
-        "description": "nz-input-number.nzFocus.description",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<void>`",
-        "default": ""
-      },
-      {
-        "name": "nzBlur",
-        "inputType": 1,
-        "description": "nz-input-number.nzBlur.description",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<void>`",
-        "default": ""
-      },
-      {
-        "name": "formControlName",
-        "inputType": 0,
-        "type": "string",
-        "typeRaw": "`string`",
-        "description": "nz-input-number.formControlName.description"
-      },
-      {
-        "name": "name",
-        "inputType": 0,
-        "type": "string",
-        "typeRaw": "`string`",
-        "description": "nz-input-number.name.description"
-      }
-    ],
-    "types": {},
-    "doc": "/components/input-number-legacy/en",
-    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/input-number-legacy",
-    "standalone": false,
-    "selfClosingTag": true
-  },
-  {
-    "lib": "ng-zorro-antd",
-    "type": "component",
-    "selector": "nz-input-number-group",
-    "title": "nz-input-number-group.title",
-    "description": "nz-input-number-group.description",
-    "whenToUse": "nz-input-number-group.whenToUse",
-    "properties": [
-      {
-        "name": "nzAddOnAfter",
-        "inputType": 0,
-        "description": "nz-input-number-group.nzAddOnAfter.description",
-        "type": "string",
-        "typeRaw": "`string | TemplateRef<void>`",
-        "default": ""
-      },
-      {
-        "name": "nzAddOnBefore",
-        "inputType": 0,
-        "description": "nz-input-number-group.nzAddOnBefore.description",
-        "type": "string",
-        "typeRaw": "`string | TemplateRef<void>`",
-        "default": ""
-      },
-      {
-        "name": "nzPrefix",
-        "inputType": 0,
-        "description": "nz-input-number-group.nzPrefix.description",
-        "type": "string",
-        "typeRaw": "`string | TemplateRef<void>`",
-        "default": ""
-      },
-      {
-        "name": "nzSuffix",
-        "inputType": 0,
-        "description": "nz-input-number-group.nzSuffix.description",
-        "type": "string",
-        "typeRaw": "`string | TemplateRef<void>`",
-        "default": ""
-      },
-      {
-        "name": "nzPrefixIcon",
-        "inputType": 0,
-        "description": "nz-input-number-group.nzPrefixIcon.description",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": ""
-      },
-      {
-        "name": "nzSuffixIcon",
-        "inputType": 0,
-        "description": "nz-input-number-group.nzSuffixIcon.description",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": ""
-      },
-      {
-        "name": "nzSize",
-        "inputType": 0,
-        "description": "nz-input-number-group.nzSize.description",
-        "type": "Enum",
-        "typeRaw": "`'large' | 'small' | 'default'`",
-        "default": "`'default'`",
-        "typeDefinition": [
-          "large",
-          "small",
-          "default"
-        ],
-        "pureDefault": "default"
-      },
-      {
-        "name": "nzStatus",
-        "inputType": 0,
-        "description": "nz-input-number-group.nzStatus.description",
-        "type": "Enum",
-        "typeRaw": "`'error' | 'warning'`",
-        "default": "",
-        "typeDefinition": [
-          "error",
-          "warning"
-        ]
-      }
-    ],
-    "types": {},
-    "doc": "/components/input-number-legacy/en",
-    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/input-number-legacy",
-    "standalone": false
   },
   {
     "lib": "ng-zorro-antd",
@@ -14907,6 +14659,15 @@ export const DATA: Directive[] = [
         "typeRaw": "`boolean`",
         "default": "`false`",
         "pureDefault": "false"
+      },
+      {
+        "name": "nzAlign",
+        "inputType": 0,
+        "description": "nz-pagination.nzAlign.description",
+        "type": "object",
+        "typeRaw": "`NzPaginationAlign`",
+        "default": "`start`",
+        "pureDefault": "start"
       },
       {
         "name": "nzPageIndexChange",
@@ -16796,15 +16557,6 @@ export const DATA: Directive[] = [
         "typeRaw": "`boolean`",
         "default": "`false`",
         "pureDefault": "false"
-      },
-      {
-        "name": "nzBorderless",
-        "inputType": 0,
-        "description": "nz-select.nzBorderless.description",
-        "type": "string",
-        "typeRaw": "~~`boolean`~~",
-        "default": "~~`false`~~",
-        "pureDefault": "~~`false`~~"
       },
       {
         "name": "nzVariant",
@@ -18766,6 +18518,52 @@ export const DATA: Directive[] = [
         "default": ""
       },
       {
+        "name": "nzShowSort",
+        "inputType": 0,
+        "description": "th.nzShowSort.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": ""
+      },
+      {
+        "name": "nzSortFn",
+        "inputType": 0,
+        "description": "th.nzSortFn.description",
+        "type": "object",
+        "typeRaw": "`NzTableSortFn<T> | boolean`",
+        "default": ""
+      },
+      {
+        "name": "nzSortOrder",
+        "inputType": 0,
+        "description": "th.nzSortOrder.description",
+        "type": "Enum",
+        "typeRaw": "`'descend' | 'ascend' | null`",
+        "default": "",
+        "typeDefinition": [
+          "descend",
+          "ascend",
+          "null"
+        ]
+      },
+      {
+        "name": "nzSortDirections",
+        "inputType": 0,
+        "description": "th.nzSortDirections.description",
+        "type": "Array",
+        "typeRaw": "`Array<'descend' | 'ascend' | null>`",
+        "default": "`['ascend', 'descend', null]`",
+        "pureDefault": "['ascend', 'descend', null]"
+      },
+      {
+        "name": "nzSortOrderChange",
+        "inputType": 1,
+        "description": "th.nzSortOrderChange.description",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<'descend' | 'ascend' | null>`",
+        "default": ""
+      },
+      {
         "name": "nzShowFilter",
         "inputType": 0,
         "description": "th.nzShowFilter.description",
@@ -19784,15 +19582,6 @@ export const DATA: Directive[] = [
           "error",
           "warning"
         ]
-      },
-      {
-        "name": "nzBorderless",
-        "inputType": 0,
-        "description": "nz-time-picker.nzBorderless.description",
-        "type": "string",
-        "typeRaw": "~~`boolean`~~",
-        "default": "~~`false`~~",
-        "pureDefault": "~~`false`~~"
       },
       {
         "name": "nzVariant",
@@ -21766,15 +21555,15 @@ export const DATA: Directive[] = [
   {
     "lib": "ng-zorro-antd",
     "type": "component",
-    "selector": "nz-water-mark",
-    "title": "nz-water-mark.title",
-    "description": "nz-water-mark.description",
-    "whenToUse": "nz-water-mark.whenToUse",
+    "selector": "nz-watermark",
+    "title": "nz-watermark.title",
+    "description": "nz-watermark.description",
+    "whenToUse": "nz-watermark.whenToUse",
     "properties": [
       {
         "name": "nzContent",
         "inputType": 0,
-        "description": "nz-water-mark.nzContent.description",
+        "description": "nz-watermark.nzContent.description",
         "type": "string",
         "typeRaw": "`string | string[]`",
         "default": ""
@@ -21782,7 +21571,7 @@ export const DATA: Directive[] = [
       {
         "name": "nzWidth",
         "inputType": 0,
-        "description": "nz-water-mark.nzWidth.description",
+        "description": "nz-watermark.nzWidth.description",
         "type": "number",
         "typeRaw": "`number`",
         "default": "`120`",
@@ -21791,7 +21580,7 @@ export const DATA: Directive[] = [
       {
         "name": "nzHeight",
         "inputType": 0,
-        "description": "nz-water-mark.nzHeight.description",
+        "description": "nz-watermark.nzHeight.description",
         "type": "number",
         "typeRaw": "`number`",
         "default": "`64`",
@@ -21800,7 +21589,7 @@ export const DATA: Directive[] = [
       {
         "name": "nzRotate",
         "inputType": 0,
-        "description": "nz-water-mark.nzRotate.description",
+        "description": "nz-watermark.nzRotate.description",
         "type": "number",
         "typeRaw": "`number`",
         "default": "`-22`",
@@ -21809,7 +21598,7 @@ export const DATA: Directive[] = [
       {
         "name": "nzZIndex",
         "inputType": 0,
-        "description": "nz-water-mark.nzZIndex.description",
+        "description": "nz-watermark.nzZIndex.description",
         "type": "number",
         "typeRaw": "`number`",
         "default": "`9`",
@@ -21818,7 +21607,7 @@ export const DATA: Directive[] = [
       {
         "name": "nzImage",
         "inputType": 0,
-        "description": "nz-water-mark.nzImage.description",
+        "description": "nz-watermark.nzImage.description",
         "type": "string",
         "typeRaw": "`string`",
         "default": ""
@@ -21826,7 +21615,7 @@ export const DATA: Directive[] = [
       {
         "name": "nzFont",
         "inputType": 0,
-        "description": "nz-water-mark.nzFont.description",
+        "description": "nz-watermark.nzFont.description",
         "type": "object",
         "typeRaw": "`FontType`",
         "default": "FontType",
@@ -21836,7 +21625,7 @@ export const DATA: Directive[] = [
       {
         "name": "nzGap",
         "inputType": 0,
-        "description": "nz-water-mark.nzGap.description",
+        "description": "nz-watermark.nzGap.description",
         "type": "string",
         "typeRaw": "`[number, number]`",
         "default": "`[100, 100]`",
@@ -21845,7 +21634,7 @@ export const DATA: Directive[] = [
       {
         "name": "nzOffset",
         "inputType": 0,
-        "description": "nz-water-mark.nzOffset.description",
+        "description": "nz-watermark.nzOffset.description",
         "type": "string",
         "typeRaw": "`[number, number]`",
         "default": "`[nzGap[0]/2, nzGap[1]/2]`",
@@ -21857,7 +21646,7 @@ export const DATA: Directive[] = [
         {
           "name": "color",
           "inputType": 0,
-          "description": "nz-water-mark.color.description",
+          "description": "nz-watermark.color.description",
           "type": "string",
           "typeRaw": "`string`",
           "default": "`rgba(0,0,0,.15)`",
@@ -21866,7 +21655,7 @@ export const DATA: Directive[] = [
         {
           "name": "fontSize",
           "inputType": 0,
-          "description": "nz-water-mark.fontSize.description",
+          "description": "nz-watermark.fontSize.description",
           "type": "number",
           "typeRaw": "`number`",
           "default": "`16`",
@@ -21875,7 +21664,7 @@ export const DATA: Directive[] = [
         {
           "name": "fontWeight",
           "inputType": 0,
-          "description": "nz-water-mark.fontWeight.description",
+          "description": "nz-watermark.fontWeight.description",
           "type": "Enum",
           "typeRaw": "`'normal' | 'light' | 'weight' | number`",
           "default": "`'normal'`",
@@ -21890,7 +21679,7 @@ export const DATA: Directive[] = [
         {
           "name": "fontFamily",
           "inputType": 0,
-          "description": "nz-water-mark.fontFamily.description",
+          "description": "nz-watermark.fontFamily.description",
           "type": "string",
           "typeRaw": "`string`",
           "default": "`'sans-serif'`",
@@ -21899,7 +21688,7 @@ export const DATA: Directive[] = [
         {
           "name": "fontStyle",
           "inputType": 0,
-          "description": "nz-water-mark.fontStyle.description",
+          "description": "nz-watermark.fontStyle.description",
           "type": "Enum",
           "typeRaw": "`'none' | 'normal' | 'italic' | 'oblique'`",
           "default": "`'normal'`",
@@ -21913,8 +21702,8 @@ export const DATA: Directive[] = [
         }
       ]
     },
-    "doc": "/components/water-mark/en",
-    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/water-mark",
+    "doc": "/components/watermark/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/watermark",
     "standalone": false
   },
   {
