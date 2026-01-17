@@ -2763,6 +2763,14 @@ export const DATA: Directive[] = [
         "default": ""
       },
       {
+        "name": "nzPresets",
+        "inputType": 0,
+        "description": "nz-color-picker.nzPresets.description",
+        "type": "Array",
+        "typeRaw": "`NzColorPickerPresetsItem[]`",
+        "default": ""
+      },
+      {
         "name": "nzOnChange",
         "inputType": 1,
         "description": "nz-color-picker.nzOnChange.description",
@@ -5545,8 +5553,7 @@ export const DATA: Directive[] = [
         "description": "nz-graph-zoom.nzTransformEvent.description",
         "type": "function",
         "typeRaw": "`() => NzZoomTransform`",
-        "default": "``",
-        "pureDefault": ""
+        "default": ""
       },
       {
         "name": "fitCenter",
@@ -12616,10 +12623,10 @@ export const DATA: Directive[] = [
         "name": "nzAutosize",
         "inputType": 0,
         "description": "nz-input.nzAutosize.description",
-        "type": "boolean",
-        "typeRaw": "`boolean | { minRows: number, maxRows: number }`",
-        "default": "`false`",
-        "pureDefault": "false"
+        "type": "string",
+        "typeRaw": "~~`boolean | { minRows: number, maxRows: number }`~~",
+        "default": "~~`false`~~",
+        "pureDefault": "~~`false`~~"
       },
       {
         "name": "nzVariant",
@@ -13118,6 +13125,15 @@ export const DATA: Directive[] = [
         "name": "nzKeyboard",
         "inputType": 0,
         "description": "nz-input-number.nzKeyboard.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`true`",
+        "pureDefault": "true"
+      },
+      {
+        "name": "nzChangeOnWheel",
+        "inputType": 0,
+        "description": "nz-input-number.nzChangeOnWheel.description",
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`true`",
@@ -15682,8 +15698,21 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-qrcode.nzValue.description",
         "type": "string",
-        "typeRaw": "`string`",
+        "typeRaw": "`string | string[]`",
         "default": ""
+      },
+      {
+        "name": "nzType",
+        "inputType": 0,
+        "description": "nz-qrcode.nzType.description",
+        "type": "Enum",
+        "typeRaw": "`'canvas'|'svg'`",
+        "default": "`canvas`",
+        "typeDefinition": [
+          "canvas",
+          "svg"
+        ],
+        "pureDefault": "canvas"
       },
       {
         "name": "nzColor",
@@ -15717,7 +15746,7 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-qrcode.nzPadding.description",
         "type": "number",
-        "typeRaw": "`number | number[]`",
+        "typeRaw": "`number`",
         "default": "`0`",
         "pureDefault": "0"
       },
@@ -15752,12 +15781,13 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-qrcode.nzStatus.description",
         "type": "Enum",
-        "typeRaw": "`'active'｜'expired' ｜'loading'`",
+        "typeRaw": "`'active'|'expired'|'loading'|'scanned'`",
         "default": "`'active'`",
         "typeDefinition": [
           "active",
           "expired",
-          "loading"
+          "loading",
+          "scanned"
         ],
         "pureDefault": "active"
       },
@@ -15774,9 +15804,18 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-qrcode.nzLevel.description",
         "type": "object",
-        "typeRaw": "`'L'｜'M'｜'Q'｜'H'`",
+        "typeRaw": "`'L'|'M'|'Q'|'H'`",
         "default": "`'M'`",
         "pureDefault": "M"
+      },
+      {
+        "name": "nzBoostLevel",
+        "inputType": 0,
+        "description": "nz-qrcode.nzBoostLevel.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`true`",
+        "pureDefault": "true"
       },
       {
         "name": "nzRefresh",
@@ -20721,20 +20760,37 @@ export const DATA: Directive[] = [
     "whenToUse": "nz-tree-view.whenToUse",
     "properties": [
       {
-        "name": "nzTreeControl",
-        "inputType": 0,
-        "description": "nz-tree-view.nzTreeControl.description",
-        "type": "string",
-        "typeRaw": "[TreeControl](https://material.angular.io/cdk/tree/api#TreeControl)",
-        "default": ""
-      },
-      {
         "name": "nzDataSource",
         "inputType": 0,
         "description": "nz-tree-view.nzDataSource.description",
         "type": "object",
         "typeRaw": "`DataSource<T> | Observable<T[]> | T[]`, [DataSource](https://material.angular.io/cdk/tree/overview#data-source)",
         "default": ""
+      },
+      {
+        "name": "nzLevelAccessor",
+        "inputType": 0,
+        "description": "nz-tree-view.nzLevelAccessor.description",
+        "type": "function",
+        "typeRaw": "`(dataNode: T) => number`",
+        "default": ""
+      },
+      {
+        "name": "nzChildrenAccessor",
+        "inputType": 0,
+        "description": "nz-tree-view.nzChildrenAccessor.description",
+        "type": "function",
+        "typeRaw": "`(dataNode: T) => T[]`",
+        "default": ""
+      },
+      {
+        "name": "nzTrackBy",
+        "inputType": 0,
+        "description": "nz-tree-view.nzTrackBy.description",
+        "type": "object",
+        "typeRaw": "`TrackByFunction`",
+        "default": "`(_index, dataNode: T) => dataNode`",
+        "pureDefault": "(_index, dataNode: T) => dataNode"
       },
       {
         "name": "nzDirectoryTree",
@@ -20769,20 +20825,37 @@ export const DATA: Directive[] = [
     "whenToUse": "nz-tree-virtual-scroll-view.whenToUse",
     "properties": [
       {
-        "name": "nzTreeControl",
-        "inputType": 0,
-        "description": "nz-tree-virtual-scroll-view.nzTreeControl.description",
-        "type": "string",
-        "typeRaw": "[TreeControl](https://material.angular.io/cdk/tree/api#TreeControl)",
-        "default": ""
-      },
-      {
         "name": "nzDataSource",
         "inputType": 0,
         "description": "nz-tree-virtual-scroll-view.nzDataSource.description",
         "type": "object",
         "typeRaw": "`DataSource<T> | Observable<T[]> | T[]`, [DataSource](https://material.angular.io/cdk/tree/overview#data-source)",
         "default": ""
+      },
+      {
+        "name": "nzLevelAccessor",
+        "inputType": 0,
+        "description": "nz-tree-virtual-scroll-view.nzLevelAccessor.description",
+        "type": "function",
+        "typeRaw": "`(dataNode: T) => number`",
+        "default": ""
+      },
+      {
+        "name": "nzChildrenAccessor",
+        "inputType": 0,
+        "description": "nz-tree-virtual-scroll-view.nzChildrenAccessor.description",
+        "type": "function",
+        "typeRaw": "`(dataNode: T) => T[]`",
+        "default": ""
+      },
+      {
+        "name": "nzTrackBy",
+        "inputType": 0,
+        "description": "nz-tree-virtual-scroll-view.nzTrackBy.description",
+        "type": "object",
+        "typeRaw": "`TrackByFunction`",
+        "default": "`(_index, dataNode: T) => dataNode`",
+        "pureDefault": "(_index, dataNode: T) => dataNode"
       },
       {
         "name": "nzDirectoryTree",
@@ -20866,9 +20939,9 @@ export const DATA: Directive[] = [
     "whenToUse": "nz-tree-node.whenToUse",
     "properties": [
       {
-        "name": "nzTreeNodeToggleRecursive",
+        "name": "nzExpandable",
         "inputType": 0,
-        "description": "nz-tree-node.nzTreeNodeToggleRecursive.description",
+        "description": "nz-tree-node.nzExpandable.description",
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
@@ -21371,6 +21444,15 @@ export const DATA: Directive[] = [
         "typeRaw": "`number`",
         "default": "`0`",
         "pureDefault": "0"
+      },
+      {
+        "name": "nzMaxCount",
+        "inputType": 0,
+        "description": "nz-upload.nzMaxCount.description",
+        "type": "number",
+        "typeRaw": "`number|undefined`",
+        "default": "`undefined`",
+        "pureDefault": "undefined"
       },
       {
         "name": "nzSize",
@@ -24538,6 +24620,14 @@ export const DATA: Directive[] = [
           "description": "st.simple.description",
           "type": "boolean",
           "typeRaw": "`boolean`",
+          "default": ""
+        },
+        {
+          "name": "checkboxIdMap",
+          "inputType": 0,
+          "description": "st.checkboxIdMap.description",
+          "type": "string",
+          "typeRaw": "`string`",
           "default": ""
         }
       ],
