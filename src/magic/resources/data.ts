@@ -4674,6 +4674,14 @@ export const DATA: Directive[] = [
         "pureDefault": "true"
       },
       {
+        "name": "nzSize",
+        "inputType": 0,
+        "description": "nz-form.nzSize.description",
+        "type": "string",
+        "typeRaw": "`small` | `default` | `large`",
+        "default": ""
+      },
+      {
         "name": "formGroup",
         "inputType": 0,
         "type": "object",
@@ -19689,6 +19697,36 @@ export const DATA: Directive[] = [
         "type": "string",
         "typeRaw": "`string | TemplateRef`",
         "default": ""
+      },
+      {
+        "name": "nzPrefix",
+        "inputType": 0,
+        "description": "nz-time-picker.nzPrefix.description",
+        "type": "string",
+        "typeRaw": "`string | TemplateRef`",
+        "default": ""
+      },
+      {
+        "name": "nzNeedConfirm",
+        "inputType": 0,
+        "description": "nz-time-picker.nzNeedConfirm.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": ""
+      },
+      {
+        "name": "nzPlacement",
+        "inputType": 0,
+        "description": "nz-time-picker.nzPlacement.description",
+        "type": "Enum",
+        "typeRaw": "`'bottomLeft' | 'bottomRight' | 'topLeft' | 'topRight'`",
+        "default": "",
+        "typeDefinition": [
+          "bottomLeft",
+          "bottomRight",
+          "topLeft",
+          "topRight"
+        ]
       },
       {
         "name": "ngModelChange",
