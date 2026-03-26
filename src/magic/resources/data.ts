@@ -607,6 +607,38 @@ export const DATA: Directive[] = [
   {
     "lib": "ng-zorro-antd",
     "type": "component",
+    "selector": "nz-alert-marquee",
+    "title": "nz-alert-marquee.title",
+    "description": "nz-alert-marquee.description",
+    "whenToUse": "nz-alert-marquee.whenToUse",
+    "properties": [
+      {
+        "name": "nzPauseOnHover",
+        "inputType": 0,
+        "description": "nz-alert-marquee.nzPauseOnHover.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzSpeed",
+        "inputType": 0,
+        "description": "nz-alert-marquee.nzSpeed.description",
+        "type": "number",
+        "typeRaw": "`number`",
+        "default": "`50`",
+        "pureDefault": "50"
+      }
+    ],
+    "types": {},
+    "doc": "/components/alert/en",
+    "github": "https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/alert",
+    "standalone": false
+  },
+  {
+    "lib": "ng-zorro-antd",
+    "type": "component",
     "selector": "nz-anchor",
     "title": "nz-anchor.title",
     "description": "nz-anchor.description",
@@ -4680,6 +4712,21 @@ export const DATA: Directive[] = [
         "type": "string",
         "typeRaw": "`small` | `default` | `large`",
         "default": ""
+      },
+      {
+        "name": "nzVariant",
+        "inputType": 0,
+        "description": "nz-form.nzVariant.description",
+        "type": "Enum",
+        "typeRaw": "`'outlined' | 'filled' | 'borderless' | 'underlined'`",
+        "default": "`'outlined'`",
+        "typeDefinition": [
+          "outlined",
+          "filled",
+          "borderless",
+          "underlined"
+        ],
+        "pureDefault": "outlined"
       },
       {
         "name": "formGroup",
@@ -12773,6 +12820,23 @@ export const DATA: Directive[] = [
         "pureDefault": "false"
       },
       {
+        "name": "nzShowCount",
+        "inputType": 0,
+        "description": "nz-input-wrapper.nzShowCount.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "nzCount",
+        "inputType": 0,
+        "description": "nz-input-wrapper.nzCount.description",
+        "type": "object",
+        "typeRaw": "`NzCountConfig`",
+        "default": ""
+      },
+      {
         "name": "nzClear",
         "inputType": 1,
         "description": "nz-input-wrapper.nzClear.description",
@@ -13262,7 +13326,7 @@ export const DATA: Directive[] = [
         "inputType": 1,
         "description": "nz-input-number.nzOnStep.description",
         "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<{ value: number, offset: number, type: 'up' | 'down' }>`",
+        "typeRaw": "`EventEmitter<NzInputNumberStepEvent>`",
         "default": ""
       },
       {
@@ -19195,6 +19259,14 @@ export const DATA: Directive[] = [
         "pureDefault": "false"
       },
       {
+        "name": "nzIndicator",
+        "inputType": 0,
+        "description": "nz-tabs.nzIndicator.description",
+        "type": "object",
+        "typeRaw": "`NzIndicator`",
+        "default": ""
+      },
+      {
         "name": "nzSelectedIndexChange",
         "inputType": 1,
         "description": "nz-tabs.nzSelectedIndexChange.description",
@@ -23361,6 +23433,14 @@ export const DATA: Directive[] = [
         "description": "reuse-tab.canClose.description",
         "type": "function",
         "typeRaw": "`(options: { item: ReuseItem; includeNonCloseable: boolean }) => Observable<boolean>`",
+        "default": ""
+      },
+      {
+        "name": "trackByFn",
+        "inputType": 0,
+        "description": "reuse-tab.trackByFn.description",
+        "type": "function",
+        "typeRaw": "`(item: ReuseItem) => item.url`",
         "default": ""
       },
       {
