@@ -1986,8 +1986,7 @@ export const DATA: Directive[] = [
         "description": "nz-cascader.nzOpen.description",
         "type": "boolean",
         "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false"
+        "default": ""
       },
       {
         "name": "nzPlaceHolder",
@@ -2012,6 +2011,14 @@ export const DATA: Directive[] = [
           "topRight"
         ],
         "pureDefault": "bottomLeft"
+      },
+      {
+        "name": "nzPopupRender",
+        "inputType": 0,
+        "description": "nz-cascader.nzPopupRender.description",
+        "type": "TemplateRef",
+        "typeRaw": "`TemplateRef<{ $implicit: TemplateRef<void> }>`",
+        "default": ""
       },
       {
         "name": "nzShowArrow",
@@ -2123,14 +2130,6 @@ export const DATA: Directive[] = [
         "default": ""
       },
       {
-        "name": "nzVisibleChange",
-        "inputType": 1,
-        "description": "nz-cascader.nzVisibleChange.description",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<boolean>`",
-        "default": ""
-      },
-      {
         "name": "nzRemoved",
         "inputType": 1,
         "description": "nz-cascader.nzRemoved.description",
@@ -2144,6 +2143,22 @@ export const DATA: Directive[] = [
         "description": "nz-cascader.nzSelectionChange.description",
         "type": "EventEmitter",
         "typeRaw": "`EventEmitter<NzCascaderOption[]>`",
+        "default": ""
+      },
+      {
+        "name": "nzOpenChange",
+        "inputType": 1,
+        "description": "nz-cascader.nzOpenChange.description",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<boolean>`",
+        "default": ""
+      },
+      {
+        "name": "nzVisibleChange",
+        "inputType": 1,
+        "description": "nz-cascader.nzVisibleChange.description",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<boolean>`",
         "default": ""
       },
       {
@@ -4559,6 +4574,14 @@ export const DATA: Directive[] = [
         "description": "nz-float-button-group.nzOpen.description",
         "type": "boolean",
         "typeRaw": "`boolean`",
+        "default": ""
+      },
+      {
+        "name": "nzOpenChange",
+        "inputType": 1,
+        "description": "nz-float-button-group.nzOpenChange.description",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<boolean>`",
         "default": ""
       },
       {
