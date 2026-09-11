@@ -14,12 +14,14 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-row.nzAlign.description",
         "type": "Enum",
-        "typeRaw": "`'top' | 'middle' | 'bottom'`",
+        "typeRaw": "`'top' | 'middle' | 'bottom' | 'stretch' | object`",
         "default": "",
         "typeDefinition": [
           "top",
           "middle",
-          "bottom"
+          "bottom",
+          "stretch",
+          "object"
         ]
       },
       {
@@ -27,7 +29,7 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-row.nzGutter.description",
         "type": "Enum",
-        "typeRaw": "`string | number | object | [number, number] | [object, object]`",
+        "typeRaw": "`string | number | object | array`",
         "default": "`0`",
         "pureDefault": "0",
         "typeDefinition": [
@@ -47,15 +49,26 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-row.nzJustify.description",
         "type": "Enum",
-        "typeRaw": "`'start' | 'end' | 'center' | 'space-around' | 'space-between'`",
+        "typeRaw": "`'start' | 'end' | 'center' | 'space-around' | 'space-between' | 'space-evenly' | object`",
         "default": "",
         "typeDefinition": [
           "start",
           "end",
           "center",
           "space-around",
-          "space-between"
+          "space-between",
+          "space-evenly",
+          "object"
         ]
+      },
+      {
+        "name": "nzWrap",
+        "inputType": 0,
+        "description": "nz-row.nzWrap.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`true`",
+        "pureDefault": "true"
       }
     ],
     "types": {},
@@ -291,6 +304,14 @@ export const DATA: Directive[] = [
           "56",
           "64"
         ]
+      },
+      {
+        "name": "nzXXXl",
+        "inputType": 0,
+        "description": "nz-col.nzXXXl.description",
+        "type": "number",
+        "typeRaw": "`number | object`",
+        "default": ""
       }
     ],
     "types": {},
@@ -801,6 +822,15 @@ export const DATA: Directive[] = [
         "pureDefault": "false"
       },
       {
+        "name": "nzDropdownMatchSelectWidth",
+        "inputType": 0,
+        "description": "nz-autocomplete.nzDropdownMatchSelectWidth.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`true`",
+        "pureDefault": "true"
+      },
+      {
         "name": "nzDataSource",
         "inputType": 0,
         "description": "nz-autocomplete.nzDataSource.description",
@@ -933,13 +963,14 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-avatar.nzSize.description",
         "type": "Enum",
-        "typeRaw": "`'large' | 'small' | 'default' | number`",
+        "typeRaw": "`'large' | 'small' | 'default' | number | { xs: number, sm: number, ... }`",
         "default": "`'default'`",
         "typeDefinition": [
           "large",
           "small",
           "default",
-          "number"
+          "number",
+          "{ xs: number, sm: number, ... }"
         ],
         "pureDefault": "default"
       },
@@ -1902,7 +1933,7 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-cascader.nzLabelRender.description",
         "type": "TemplateRef",
-        "typeRaw": "`TemplateRef<any>`",
+        "typeRaw": "`TemplateRef<{ labels: string[], selectedOptions: NzCascaderOption[] }>`",
         "default": ""
       },
       {
@@ -3075,6 +3106,18 @@ export const DATA: Directive[] = [
         "pureDefault": "default"
       },
       {
+        "name": "nzStatus",
+        "inputType": 0,
+        "description": "nz-cron-expression.nzStatus.description",
+        "type": "Enum",
+        "typeRaw": "`'error'｜'warning'`",
+        "default": "",
+        "typeDefinition": [
+          "error",
+          "warning"
+        ]
+      },
+      {
         "name": "nzCollapseDisable",
         "inputType": 0,
         "description": "nz-cron-expression.nzCollapseDisable.description",
@@ -3899,10 +3942,9 @@ export const DATA: Directive[] = [
         "name": "nzTitle",
         "inputType": 0,
         "description": "nz-descriptions-item.nzTitle.description",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`string | TemplateRef<void>`",
-        "pureDefault": "string | TemplateRef<void>"
+        "type": "string",
+        "typeRaw": "`string | TemplateRef<void>`",
+        "default": ""
       },
       {
         "name": "nzSpan",
@@ -4785,12 +4827,14 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-form-item.nzAlign.description",
         "type": "Enum",
-        "typeRaw": "`'top' | 'middle' | 'bottom'`",
+        "typeRaw": "`'top' | 'middle' | 'bottom' | 'stretch' | object`",
         "default": "",
         "typeDefinition": [
           "top",
           "middle",
-          "bottom"
+          "bottom",
+          "stretch",
+          "object"
         ]
       },
       {
@@ -4798,7 +4842,7 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-form-item.nzGutter.description",
         "type": "Enum",
-        "typeRaw": "`string | number | object | [number, number] | [object, object]`",
+        "typeRaw": "`string | number | object | array`",
         "default": "`0`",
         "pureDefault": "0",
         "typeDefinition": [
@@ -4818,79 +4862,38 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-form-item.nzJustify.description",
         "type": "Enum",
-        "typeRaw": "`'start' | 'end' | 'center' | 'space-around' | 'space-between'`",
+        "typeRaw": "`'start' | 'end' | 'center' | 'space-around' | 'space-between' | 'space-evenly' | object`",
         "default": "",
         "typeDefinition": [
           "start",
           "end",
           "center",
           "space-around",
-          "space-between"
+          "space-between",
+          "space-evenly",
+          "object"
         ]
       },
       {
-        "name": "nzRequired",
+        "name": "nzWrap",
         "inputType": 0,
-        "description": "nz-form-item.nzRequired.description",
+        "description": "nz-form-item.nzWrap.description",
         "type": "boolean",
         "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false"
+        "default": "`true`",
+        "pureDefault": "true"
       },
       {
-        "name": "nzNoColon",
+        "name": "nzLayout",
         "inputType": 0,
-        "description": "nz-form-item.nzNoColon.description",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false"
-      },
-      {
-        "name": "nzFor",
-        "inputType": 0,
-        "description": "nz-form-item.nzFor.description",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": ""
-      },
-      {
-        "name": "nzTooltipTitle",
-        "inputType": 0,
-        "description": "nz-form-item.nzTooltipTitle.description",
-        "type": "string",
-        "typeRaw": "`string | TemplateRef<void>`",
-        "default": ""
-      },
-      {
-        "name": "nzTooltipIcon",
-        "inputType": 0,
-        "description": "nz-form-item.nzTooltipIcon.description",
-        "type": "string",
-        "typeRaw": "`string | NzFormTooltipIcon`",
-        "default": ""
-      },
-      {
-        "name": "nzLabelAlign",
-        "inputType": 0,
-        "description": "nz-form-item.nzLabelAlign.description",
+        "description": "nz-form-item.nzLayout.description",
         "type": "Enum",
-        "typeRaw": "`'left' | 'right'`",
-        "default": "`'right'`",
+        "typeRaw": "`'horizontal' | 'vertical'`",
+        "default": "",
         "typeDefinition": [
-          "left",
-          "right"
-        ],
-        "pureDefault": "right"
-      },
-      {
-        "name": "nzLabelWrap",
-        "inputType": 0,
-        "description": "nz-form-item.nzLabelWrap.description",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false"
+          "horizontal",
+          "vertical"
+        ]
       }
     ],
     "types": {},
@@ -5126,6 +5129,14 @@ export const DATA: Directive[] = [
           "56",
           "64"
         ]
+      },
+      {
+        "name": "nzXXXl",
+        "inputType": 0,
+        "description": "nz-form-label.nzXXXl.description",
+        "type": "number",
+        "typeRaw": "`number | object`",
+        "default": ""
       },
       {
         "name": "nzRequired",
@@ -5425,6 +5436,14 @@ export const DATA: Directive[] = [
           "56",
           "64"
         ]
+      },
+      {
+        "name": "nzXXXl",
+        "inputType": 0,
+        "description": "nz-form-control.nzXXXl.description",
+        "type": "number",
+        "typeRaw": "`number | object`",
+        "default": ""
       },
       {
         "name": "nzValidateStatus",
@@ -13410,7 +13429,7 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-sider.nzBreakpoint.description",
         "type": "Enum",
-        "typeRaw": "`'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl'`",
+        "typeRaw": "`'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl' | 'xxxl'`",
         "default": "",
         "typeDefinition": [
           "xs",
@@ -13418,7 +13437,8 @@ export const DATA: Directive[] = [
           "md",
           "lg",
           "xl",
-          "xxl"
+          "xxl",
+          "xxxl"
         ]
       },
       {
@@ -20522,6 +20542,15 @@ export const DATA: Directive[] = [
         "default": ""
       },
       {
+        "name": "nzOpen",
+        "inputType": 2,
+        "description": "nz-tree-select.nzOpen.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
         "name": "nzAllowClear",
         "inputType": 0,
         "description": "nz-tree-select.nzAllowClear.description",
@@ -20848,6 +20877,15 @@ export const DATA: Directive[] = [
         "type": "EventEmitter",
         "typeRaw": "`EventEmitter<NzFormatEmitEvent>`",
         "default": ""
+      },
+      {
+        "name": "nzOpenChange",
+        "inputType": 1,
+        "description": "nz-tree-select.nzOpenChange.description",
+        "type": "EventEmitter",
+        "typeRaw": "`EventEmitter<boolean>`",
+        "default": "`false`",
+        "pureDefault": "false"
       },
       {
         "name": "ngModel",
@@ -21503,6 +21541,14 @@ export const DATA: Directive[] = [
     "whenToUse": "nz-upload.whenToUse",
     "properties": [
       {
+        "name": "nzId",
+        "inputType": 0,
+        "description": "nz-upload.nzId.description",
+        "type": "string",
+        "typeRaw": "`string`",
+        "default": ""
+      },
+      {
         "name": "nzAccept",
         "inputType": 0,
         "description": "nz-upload.nzAccept.description",
@@ -21657,7 +21703,7 @@ export const DATA: Directive[] = [
         "inputType": 0,
         "description": "nz-upload.nzShowUploadList.description",
         "type": "boolean",
-        "typeRaw": "`boolean | { showPreviewIcon?: boolean, showRemoveIcon?: boolean, showDownloadIcon?: boolean }`",
+        "typeRaw": "`boolean | NzShowUploadList`",
         "default": "`true`",
         "pureDefault": "true"
       },
@@ -21736,14 +21782,6 @@ export const DATA: Directive[] = [
         "typeRaw": "`(file: NzUploadFile) => void`",
         "default": "Jump to new TAB",
         "pureDefault": "Jump to new TAB"
-      },
-      {
-        "name": "nzTransformFile",
-        "inputType": 0,
-        "description": "nz-upload.nzTransformFile.description",
-        "type": "string",
-        "typeRaw": "~~`(file: NzUploadFile) => NzUploadTransformFileType`~~",
-        "default": ""
       },
       {
         "name": "nzIconRender",
@@ -25456,259 +25494,6 @@ export const DATA: Directive[] = [
   {
     "lib": "@delon/chart",
     "type": "component",
-    "selector": "g2-bar",
-    "title": "g2-bar.title",
-    "description": "g2-bar.description",
-    "whenToUse": "g2-bar.whenToUse",
-    "properties": [
-      {
-        "name": "repaint",
-        "inputType": 0,
-        "description": "g2-bar.repaint.description",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`true`",
-        "pureDefault": "true"
-      },
-      {
-        "name": "delay",
-        "inputType": 0,
-        "description": "g2-bar.delay.description",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "`0`",
-        "pureDefault": "0"
-      },
-      {
-        "name": "title",
-        "inputType": 0,
-        "description": "g2-bar.title.description",
-        "type": "string",
-        "typeRaw": "`string,TemplateRef<void>`",
-        "default": ""
-      },
-      {
-        "name": "color",
-        "inputType": 0,
-        "description": "g2-bar.color.description",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": "`rgba(24, 144, 255, 0.85)`",
-        "pureDefault": "rgba(24, 144, 255, 0.85)"
-      },
-      {
-        "name": "padding",
-        "inputType": 0,
-        "description": "g2-bar.padding.description",
-        "type": "Array",
-        "typeRaw": "`Array<number",
-        "default": "string>",
-        "pureDefault": "string>"
-      },
-      {
-        "name": "height",
-        "inputType": 0,
-        "description": "g2-bar.height.description",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": ""
-      },
-      {
-        "name": "data",
-        "inputType": 0,
-        "description": "g2-bar.data.description",
-        "type": "Array",
-        "typeRaw": "`G2BarData[]`",
-        "default": "`[]`",
-        "pureDefault": "[]"
-      },
-      {
-        "name": "autoLabel",
-        "inputType": 0,
-        "description": "g2-bar.autoLabel.description",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`true`",
-        "pureDefault": "true"
-      },
-      {
-        "name": "interaction",
-        "inputType": 0,
-        "description": "g2-bar.interaction.description",
-        "type": "object",
-        "typeRaw": "`InteractionType`",
-        "default": "`none`",
-        "pureDefault": "none"
-      },
-      {
-        "name": "theme",
-        "inputType": 0,
-        "description": "g2-bar.theme.description",
-        "type": "string",
-        "typeRaw": "`string",
-        "default": "LooseObject`",
-        "pureDefault": "LooseObject`"
-      },
-      {
-        "name": "clickItem",
-        "inputType": 1,
-        "description": "g2-bar.clickItem.description",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<G2BarClickItem>`",
-        "default": ""
-      },
-      {
-        "name": "ready",
-        "inputType": 1,
-        "description": "g2-bar.ready.description",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<Chart>`",
-        "default": ""
-      }
-    ],
-    "types": {},
-    "doc": "/chart/bar/en",
-    "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/bar",
-    "standalone": false
-  },
-  {
-    "lib": "@delon/chart",
-    "type": "component",
-    "selector": "g2-card",
-    "title": "g2-card.title",
-    "description": "g2-card.description",
-    "whenToUse": "g2-card.whenToUse",
-    "properties": [
-      {
-        "name": "title",
-        "inputType": 0,
-        "description": "g2-card.title.description",
-        "type": "string",
-        "typeRaw": "`string,TemplateRef<void>`",
-        "default": ""
-      },
-      {
-        "name": "avatar",
-        "inputType": 0,
-        "description": "g2-card.avatar.description",
-        "type": "string",
-        "typeRaw": "`string,TemplateRef<void>`",
-        "default": ""
-      },
-      {
-        "name": "action",
-        "inputType": 0,
-        "description": "g2-card.action.description",
-        "type": "string",
-        "typeRaw": "`string,TemplateRef<void>`",
-        "default": ""
-      },
-      {
-        "name": "total",
-        "inputType": 0,
-        "description": "g2-card.total.description",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": ""
-      },
-      {
-        "name": "footer",
-        "inputType": 0,
-        "description": "g2-card.footer.description",
-        "type": "string",
-        "typeRaw": "`string,TemplateRef<void>`",
-        "default": ""
-      },
-      {
-        "name": "contentHeight",
-        "inputType": 0,
-        "description": "g2-card.contentHeight.description",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": ""
-      },
-      {
-        "name": "bordered",
-        "inputType": 0,
-        "description": "g2-card.bordered.description",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false"
-      }
-    ],
-    "types": {},
-    "doc": "/chart/card/en",
-    "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/card",
-    "standalone": false
-  },
-  {
-    "lib": "@delon/chart",
-    "type": "component",
-    "selector": "chart-echarts",
-    "title": "chart-echarts.title",
-    "description": "chart-echarts.description",
-    "whenToUse": "chart-echarts.whenToUse",
-    "properties": [
-      {
-        "name": "width",
-        "inputType": 0,
-        "description": "chart-echarts.width.description",
-        "type": "number",
-        "typeRaw": "`number, string`",
-        "default": "`100%`",
-        "pureDefault": "100%"
-      },
-      {
-        "name": "height",
-        "inputType": 0,
-        "description": "chart-echarts.height.description",
-        "type": "number",
-        "typeRaw": "`number, string`",
-        "default": "`400px`",
-        "pureDefault": "400px"
-      },
-      {
-        "name": "option",
-        "inputType": 0,
-        "description": "chart-echarts.option.description",
-        "type": "object",
-        "typeRaw": "`ChartEChartsOption`",
-        "default": ""
-      },
-      {
-        "name": "theme",
-        "inputType": 0,
-        "description": "chart-echarts.theme.description",
-        "type": "string",
-        "typeRaw": "`string, object`",
-        "default": ""
-      },
-      {
-        "name": "on",
-        "inputType": 0,
-        "description": "chart-echarts.on.description",
-        "type": "Array",
-        "typeRaw": "`ChartEChartsOn[]`",
-        "default": ""
-      },
-      {
-        "name": "events",
-        "inputType": 1,
-        "description": "chart-echarts.events.description",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<ChartEChartsEvent>`",
-        "default": ""
-      }
-    ],
-    "types": {},
-    "doc": "/chart/chart-echarts/en",
-    "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/chart-echarts",
-    "standalone": false
-  },
-  {
-    "lib": "@delon/chart",
-    "type": "component",
     "selector": "g2-custom",
     "title": "g2-custom.title",
     "description": "g2-custom.description",
@@ -25777,437 +25562,6 @@ export const DATA: Directive[] = [
     "types": {},
     "doc": "/chart/custom/en",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/custom",
-    "standalone": false
-  },
-  {
-    "lib": "@delon/chart",
-    "type": "component",
-    "selector": "g2-gauge",
-    "title": "g2-gauge.title",
-    "description": "g2-gauge.description",
-    "whenToUse": "g2-gauge.whenToUse",
-    "properties": [
-      {
-        "name": "repaint",
-        "inputType": 0,
-        "description": "g2-gauge.repaint.description",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`true`",
-        "pureDefault": "true"
-      },
-      {
-        "name": "delay",
-        "inputType": 0,
-        "description": "g2-gauge.delay.description",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "`0`",
-        "pureDefault": "0"
-      },
-      {
-        "name": "title",
-        "inputType": 0,
-        "description": "g2-gauge.title.description",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": ""
-      },
-      {
-        "name": "height",
-        "inputType": 0,
-        "description": "g2-gauge.height.description",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": ""
-      },
-      {
-        "name": "color",
-        "inputType": 0,
-        "description": "g2-gauge.color.description",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": "`#2F9CFF`",
-        "pureDefault": "#2F9CFF"
-      },
-      {
-        "name": "bgColor",
-        "inputType": 0,
-        "description": "g2-gauge.bgColor.description",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": "`#F0F2F5`",
-        "pureDefault": "#F0F2F5"
-      },
-      {
-        "name": "percent",
-        "inputType": 0,
-        "description": "g2-gauge.percent.description",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": ""
-      },
-      {
-        "name": "padding",
-        "inputType": 0,
-        "description": "g2-gauge.padding.description",
-        "type": "Array",
-        "typeRaw": "`Array<number",
-        "default": "string>`",
-        "pureDefault": "string>`"
-      },
-      {
-        "name": "format",
-        "inputType": 0,
-        "description": "g2-gauge.format.description",
-        "type": "function",
-        "typeRaw": "`(text: string, item: {}, index: number) => string`",
-        "default": ""
-      },
-      {
-        "name": "theme",
-        "inputType": 0,
-        "description": "g2-gauge.theme.description",
-        "type": "string",
-        "typeRaw": "`string",
-        "default": "LooseObject`",
-        "pureDefault": "LooseObject`"
-      },
-      {
-        "name": "ready",
-        "inputType": 1,
-        "description": "g2-gauge.ready.description",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<Chart>`",
-        "default": ""
-      }
-    ],
-    "types": {},
-    "doc": "/chart/gauge/en",
-    "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/gauge",
-    "standalone": false
-  },
-  {
-    "lib": "@delon/chart",
-    "type": "component",
-    "selector": "g2-mini-area",
-    "title": "g2-mini-area.title",
-    "description": "g2-mini-area.description",
-    "whenToUse": "g2-mini-area.whenToUse",
-    "properties": [
-      {
-        "name": "repaint",
-        "inputType": 0,
-        "description": "g2-mini-area.repaint.description",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`true`",
-        "pureDefault": "true"
-      },
-      {
-        "name": "delay",
-        "inputType": 0,
-        "description": "g2-mini-area.delay.description",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "`0`",
-        "pureDefault": "0"
-      },
-      {
-        "name": "color",
-        "inputType": 0,
-        "description": "g2-mini-area.color.description",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": "`rgba(24, 144, 255, 0.2)`",
-        "pureDefault": "rgba(24, 144, 255, 0.2)"
-      },
-      {
-        "name": "borderColor",
-        "inputType": 0,
-        "description": "g2-mini-area.borderColor.description",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": "`#1890FF`",
-        "pureDefault": "#1890FF"
-      },
-      {
-        "name": "height",
-        "inputType": 0,
-        "description": "g2-mini-area.height.description",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "`56`",
-        "pureDefault": "56"
-      },
-      {
-        "name": "line",
-        "inputType": 0,
-        "description": "g2-mini-area.line.description",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false"
-      },
-      {
-        "name": "animate",
-        "inputType": 0,
-        "description": "g2-mini-area.animate.description",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`true`",
-        "pureDefault": "true"
-      },
-      {
-        "name": "padding",
-        "inputType": 0,
-        "description": "g2-mini-area.padding.description",
-        "type": "string",
-        "typeRaw": "`array`",
-        "default": "`[8, 8, 8, 8]`",
-        "pureDefault": "[8, 8, 8, 8]"
-      },
-      {
-        "name": "xAxis",
-        "inputType": 0,
-        "description": "g2-mini-area.xAxis.description",
-        "type": "object",
-        "typeRaw": "`object`",
-        "default": ""
-      },
-      {
-        "name": "yAxis",
-        "inputType": 0,
-        "description": "g2-mini-area.yAxis.description",
-        "type": "object",
-        "typeRaw": "`object`",
-        "default": ""
-      },
-      {
-        "name": "yTooltipSuffix",
-        "inputType": 0,
-        "description": "g2-mini-area.yTooltipSuffix.description",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": ""
-      },
-      {
-        "name": "tooltipType",
-        "inputType": 0,
-        "description": "g2-mini-area.tooltipType.description",
-        "type": "Enum",
-        "typeRaw": "`'mini','default'`",
-        "default": "`'default'`",
-        "typeDefinition": [
-          "mini",
-          "default"
-        ],
-        "pureDefault": "default"
-      },
-      {
-        "name": "data",
-        "inputType": 0,
-        "description": "g2-mini-area.data.description",
-        "type": "Array",
-        "typeRaw": "`G2MiniAreaData[]`",
-        "default": ""
-      },
-      {
-        "name": "theme",
-        "inputType": 0,
-        "description": "g2-mini-area.theme.description",
-        "type": "string",
-        "typeRaw": "`string",
-        "default": "LooseObject`",
-        "pureDefault": "LooseObject`"
-      },
-      {
-        "name": "clickItem",
-        "inputType": 1,
-        "description": "g2-mini-area.clickItem.description",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<G2MiniAreaClickItem>`",
-        "default": ""
-      },
-      {
-        "name": "ready",
-        "inputType": 1,
-        "description": "g2-mini-area.ready.description",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<Chart>`",
-        "default": ""
-      }
-    ],
-    "types": {},
-    "doc": "/chart/mini-area/en",
-    "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/mini-area",
-    "standalone": false
-  },
-  {
-    "lib": "@delon/chart",
-    "type": "component",
-    "selector": "g2-mini-bar",
-    "title": "g2-mini-bar.title",
-    "description": "g2-mini-bar.description",
-    "whenToUse": "g2-mini-bar.whenToUse",
-    "properties": [
-      {
-        "name": "repaint",
-        "inputType": 0,
-        "description": "g2-mini-bar.repaint.description",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`true`",
-        "pureDefault": "true"
-      },
-      {
-        "name": "delay",
-        "inputType": 0,
-        "description": "g2-mini-bar.delay.description",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "`0`",
-        "pureDefault": "0"
-      },
-      {
-        "name": "color",
-        "inputType": 0,
-        "description": "g2-mini-bar.color.description",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": "`#1890FF`",
-        "pureDefault": "#1890FF"
-      },
-      {
-        "name": "height",
-        "inputType": 0,
-        "description": "g2-mini-bar.height.description",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": ""
-      },
-      {
-        "name": "yTooltipSuffix",
-        "inputType": 0,
-        "description": "g2-mini-bar.yTooltipSuffix.description",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": ""
-      },
-      {
-        "name": "tooltipType",
-        "inputType": 0,
-        "description": "g2-mini-bar.tooltipType.description",
-        "type": "Enum",
-        "typeRaw": "`'mini','default'`",
-        "default": "`'default'`",
-        "typeDefinition": [
-          "mini",
-          "default"
-        ],
-        "pureDefault": "default"
-      },
-      {
-        "name": "borderWidth",
-        "inputType": 0,
-        "description": "g2-mini-bar.borderWidth.description",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "`5`",
-        "pureDefault": "5"
-      },
-      {
-        "name": "padding",
-        "inputType": 0,
-        "description": "g2-mini-bar.padding.description",
-        "type": "string",
-        "typeRaw": "`array`",
-        "default": "`[8, 8, 8, 8]`",
-        "pureDefault": "[8, 8, 8, 8]"
-      },
-      {
-        "name": "data",
-        "inputType": 0,
-        "description": "g2-mini-bar.data.description",
-        "type": "Array",
-        "typeRaw": "`G2MiniBarData[]`",
-        "default": ""
-      },
-      {
-        "name": "theme",
-        "inputType": 0,
-        "description": "g2-mini-bar.theme.description",
-        "type": "string",
-        "typeRaw": "`string",
-        "default": "LooseObject`",
-        "pureDefault": "LooseObject`"
-      },
-      {
-        "name": "clickItem",
-        "inputType": 1,
-        "description": "g2-mini-bar.clickItem.description",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<G2MiniBarClickItem>`",
-        "default": ""
-      },
-      {
-        "name": "ready",
-        "inputType": 1,
-        "description": "g2-mini-bar.ready.description",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<Chart>`",
-        "default": ""
-      }
-    ],
-    "types": {},
-    "doc": "/chart/mini-bar/en",
-    "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/mini-bar",
-    "standalone": false
-  },
-  {
-    "lib": "@delon/chart",
-    "type": "component",
-    "selector": "g2-mini-progress",
-    "title": "g2-mini-progress.title",
-    "description": "g2-mini-progress.description",
-    "whenToUse": "g2-mini-progress.whenToUse",
-    "properties": [
-      {
-        "name": "target",
-        "inputType": 0,
-        "description": "g2-mini-progress.target.description",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": ""
-      },
-      {
-        "name": "color",
-        "inputType": 0,
-        "description": "g2-mini-progress.color.description",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": ""
-      },
-      {
-        "name": "strokeWidth",
-        "inputType": 0,
-        "description": "g2-mini-progress.strokeWidth.description",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": ""
-      },
-      {
-        "name": "percent",
-        "inputType": 0,
-        "description": "g2-mini-progress.percent.description",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": ""
-      }
-    ],
-    "types": {},
-    "doc": "/chart/mini-progress/en",
-    "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/mini-progress",
     "standalone": false
   },
   {
@@ -26296,861 +25650,6 @@ export const DATA: Directive[] = [
     "types": {},
     "doc": "/chart/number-info/en",
     "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/number-info",
-    "standalone": false
-  },
-  {
-    "lib": "@delon/chart",
-    "type": "component",
-    "selector": "g2-pie",
-    "title": "g2-pie.title",
-    "description": "g2-pie.description",
-    "whenToUse": "g2-pie.whenToUse",
-    "properties": [
-      {
-        "name": "repaint",
-        "inputType": 0,
-        "description": "g2-pie.repaint.description",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`true`",
-        "pureDefault": "true"
-      },
-      {
-        "name": "delay",
-        "inputType": 0,
-        "description": "g2-pie.delay.description",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "`0`",
-        "pureDefault": "0"
-      },
-      {
-        "name": "animate",
-        "inputType": 0,
-        "description": "g2-pie.animate.description",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`true`",
-        "pureDefault": "true"
-      },
-      {
-        "name": "color",
-        "inputType": 0,
-        "description": "g2-pie.color.description",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": "`rgba(24, 144, 255, 0.85)`",
-        "pureDefault": "rgba(24, 144, 255, 0.85)"
-      },
-      {
-        "name": "height",
-        "inputType": 0,
-        "description": "g2-pie.height.description",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": ""
-      },
-      {
-        "name": "hasLegend",
-        "inputType": 0,
-        "description": "g2-pie.hasLegend.description",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false"
-      },
-      {
-        "name": "padding",
-        "inputType": 0,
-        "description": "g2-pie.padding.description",
-        "type": "Array",
-        "typeRaw": "`number[]`",
-        "default": "`[12, 0, 12, 0]`",
-        "pureDefault": "[12, 0, 12, 0]"
-      },
-      {
-        "name": "percent",
-        "inputType": 0,
-        "description": "g2-pie.percent.description",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": ""
-      },
-      {
-        "name": "lineWidth",
-        "inputType": 0,
-        "description": "g2-pie.lineWidth.description",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "`0`",
-        "pureDefault": "0"
-      },
-      {
-        "name": "inner",
-        "inputType": 0,
-        "description": "g2-pie.inner.description",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "`0.75`",
-        "pureDefault": "0.75"
-      },
-      {
-        "name": "blockMaxWidth",
-        "inputType": 0,
-        "description": "g2-pie.blockMaxWidth.description",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "`380`",
-        "pureDefault": "380"
-      },
-      {
-        "name": "tooltip",
-        "inputType": 0,
-        "description": "g2-pie.tooltip.description",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`true`",
-        "pureDefault": "true"
-      },
-      {
-        "name": "subTitle",
-        "inputType": 0,
-        "description": "g2-pie.subTitle.description",
-        "type": "string",
-        "typeRaw": "`string,TemplateRef<void><void>`",
-        "default": ""
-      },
-      {
-        "name": "total",
-        "inputType": 0,
-        "description": "g2-pie.total.description",
-        "type": "string",
-        "typeRaw": "`string,number,TemplateRef<void><void>`",
-        "default": ""
-      },
-      {
-        "name": "valueFormat",
-        "inputType": 0,
-        "description": "g2-pie.valueFormat.description",
-        "type": "function",
-        "typeRaw": "`(y: number) => string`",
-        "default": ""
-      },
-      {
-        "name": "data",
-        "inputType": 0,
-        "description": "g2-pie.data.description",
-        "type": "Array",
-        "typeRaw": "`G2PieData[]`",
-        "default": ""
-      },
-      {
-        "name": "colors",
-        "inputType": 0,
-        "description": "g2-pie.colors.description",
-        "type": "Array",
-        "typeRaw": "`string[]`",
-        "default": ""
-      },
-      {
-        "name": "interaction",
-        "inputType": 0,
-        "description": "g2-pie.interaction.description",
-        "type": "object",
-        "typeRaw": "`InteractionType`",
-        "default": "`none`",
-        "pureDefault": "none"
-      },
-      {
-        "name": "ratio",
-        "inputType": 0,
-        "description": "g2-pie.ratio.description",
-        "type": "object",
-        "typeRaw": "`G2PieRatio`",
-        "default": "`{ text: '占比', inverse: '反比', color: '', inverseColor: '#F0F2F5' }`",
-        "pureDefault": "{ text: '占比', inverse: '反比', color: '', inverseColor: '#F0F2F5' }"
-      },
-      {
-        "name": "theme",
-        "inputType": 0,
-        "description": "g2-pie.theme.description",
-        "type": "string",
-        "typeRaw": "`string",
-        "default": "LooseObject`",
-        "pureDefault": "LooseObject`"
-      },
-      {
-        "name": "clickItem",
-        "inputType": 1,
-        "description": "g2-pie.clickItem.description",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<G2PieClickItem>`",
-        "default": ""
-      },
-      {
-        "name": "ready",
-        "inputType": 1,
-        "description": "g2-pie.ready.description",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<Chart>`",
-        "default": ""
-      }
-    ],
-    "types": {},
-    "doc": "/chart/pie/en",
-    "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/pie",
-    "standalone": false
-  },
-  {
-    "lib": "@delon/chart",
-    "type": "component",
-    "selector": "g2-radar",
-    "title": "g2-radar.title",
-    "description": "g2-radar.description",
-    "whenToUse": "g2-radar.whenToUse",
-    "properties": [
-      {
-        "name": "repaint",
-        "inputType": 0,
-        "description": "g2-radar.repaint.description",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`true`",
-        "pureDefault": "true"
-      },
-      {
-        "name": "delay",
-        "inputType": 0,
-        "description": "g2-radar.delay.description",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "`0`",
-        "pureDefault": "0"
-      },
-      {
-        "name": "title",
-        "inputType": 0,
-        "description": "g2-radar.title.description",
-        "type": "string",
-        "typeRaw": "`string,TemplateRef<void>`",
-        "default": ""
-      },
-      {
-        "name": "height",
-        "inputType": 0,
-        "description": "g2-radar.height.description",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": ""
-      },
-      {
-        "name": "hasLegend",
-        "inputType": 0,
-        "description": "g2-radar.hasLegend.description",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false"
-      },
-      {
-        "name": "padding",
-        "inputType": 0,
-        "description": "g2-radar.padding.description",
-        "type": "string",
-        "typeRaw": "`array`",
-        "default": "`[24, 30, 16, 30]`",
-        "pureDefault": "[24, 30, 16, 30]"
-      },
-      {
-        "name": "colors",
-        "inputType": 0,
-        "description": "g2-radar.colors.description",
-        "type": "Array",
-        "typeRaw": "`string[]`",
-        "default": ""
-      },
-      {
-        "name": "data",
-        "inputType": 0,
-        "description": "g2-radar.data.description",
-        "type": "Array",
-        "typeRaw": "`G2RadarData[]`",
-        "default": ""
-      },
-      {
-        "name": "theme",
-        "inputType": 0,
-        "description": "g2-radar.theme.description",
-        "type": "string",
-        "typeRaw": "`string",
-        "default": "LooseObject`",
-        "pureDefault": "LooseObject`"
-      },
-      {
-        "name": "clickItem",
-        "inputType": 1,
-        "description": "g2-radar.clickItem.description",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<G2RadarClickItem>`",
-        "default": ""
-      },
-      {
-        "name": "ready",
-        "inputType": 1,
-        "description": "g2-radar.ready.description",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<Chart>`",
-        "default": ""
-      }
-    ],
-    "types": {},
-    "doc": "/chart/radar/en",
-    "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/radar",
-    "standalone": false
-  },
-  {
-    "lib": "@delon/chart",
-    "type": "component",
-    "selector": "g2-single-bar",
-    "title": "g2-single-bar.title",
-    "description": "g2-single-bar.description",
-    "whenToUse": "g2-single-bar.whenToUse",
-    "properties": [
-      {
-        "name": "repaint",
-        "inputType": 0,
-        "description": "g2-single-bar.repaint.description",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`true`",
-        "pureDefault": "true"
-      },
-      {
-        "name": "delay",
-        "inputType": 0,
-        "description": "g2-single-bar.delay.description",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "`0`",
-        "pureDefault": "0"
-      },
-      {
-        "name": "plusColor",
-        "inputType": 0,
-        "description": "g2-single-bar.plusColor.description",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": "`#40a9ff`",
-        "pureDefault": "#40a9ff"
-      },
-      {
-        "name": "minusColor",
-        "inputType": 0,
-        "description": "g2-single-bar.minusColor.description",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": "`#ff4d4f`",
-        "pureDefault": "#ff4d4f"
-      },
-      {
-        "name": "height",
-        "inputType": 0,
-        "description": "g2-single-bar.height.description",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "`60`",
-        "pureDefault": "60"
-      },
-      {
-        "name": "barSize",
-        "inputType": 0,
-        "description": "g2-single-bar.barSize.description",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "`30`",
-        "pureDefault": "30"
-      },
-      {
-        "name": "min",
-        "inputType": 0,
-        "description": "g2-single-bar.min.description",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "`0`",
-        "pureDefault": "0"
-      },
-      {
-        "name": "max",
-        "inputType": 0,
-        "description": "g2-single-bar.max.description",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "`100`",
-        "pureDefault": "100"
-      },
-      {
-        "name": "padding",
-        "inputType": 0,
-        "description": "g2-single-bar.padding.description",
-        "type": "object",
-        "typeRaw": "`any`",
-        "default": "`0`",
-        "pureDefault": "0"
-      },
-      {
-        "name": "value",
-        "inputType": 0,
-        "description": "g2-single-bar.value.description",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "`0`",
-        "pureDefault": "0"
-      },
-      {
-        "name": "format",
-        "inputType": 0,
-        "description": "g2-single-bar.format.description",
-        "type": "function",
-        "typeRaw": "`(value: number) => string`",
-        "default": ""
-      },
-      {
-        "name": "textStyle",
-        "inputType": 0,
-        "description": "g2-single-bar.textStyle.description",
-        "type": "object",
-        "typeRaw": "`any`",
-        "default": "`{ fontSize: 12, color: '#595959' }`",
-        "pureDefault": "{ fontSize: 12, color: '#595959' }"
-      },
-      {
-        "name": "theme",
-        "inputType": 0,
-        "description": "g2-single-bar.theme.description",
-        "type": "string",
-        "typeRaw": "`string",
-        "default": "LooseObject`",
-        "pureDefault": "LooseObject`"
-      },
-      {
-        "name": "ready",
-        "inputType": 1,
-        "description": "g2-single-bar.ready.description",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<Chart>`",
-        "default": ""
-      }
-    ],
-    "types": {},
-    "doc": "/chart/single-bar/en",
-    "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/single-bar",
-    "standalone": false
-  },
-  {
-    "lib": "@delon/chart",
-    "type": "component",
-    "selector": "g2-tag-cloud",
-    "title": "g2-tag-cloud.title",
-    "description": "g2-tag-cloud.description",
-    "whenToUse": "g2-tag-cloud.whenToUse",
-    "properties": [
-      {
-        "name": "repaint",
-        "inputType": 0,
-        "description": "g2-tag-cloud.repaint.description",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`true`",
-        "pureDefault": "true"
-      },
-      {
-        "name": "delay",
-        "inputType": 0,
-        "description": "g2-tag-cloud.delay.description",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "`200`",
-        "pureDefault": "200"
-      },
-      {
-        "name": "height",
-        "inputType": 0,
-        "description": "g2-tag-cloud.height.description",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "`200`",
-        "pureDefault": "200"
-      },
-      {
-        "name": "width",
-        "inputType": 0,
-        "description": "g2-tag-cloud.width.description",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "`0`",
-        "pureDefault": "0"
-      },
-      {
-        "name": "data",
-        "inputType": 0,
-        "description": "g2-tag-cloud.data.description",
-        "type": "Array",
-        "typeRaw": "`G2TagCloudData[]`",
-        "default": "`[]`",
-        "pureDefault": "[]"
-      },
-      {
-        "name": "theme",
-        "inputType": 0,
-        "description": "g2-tag-cloud.theme.description",
-        "type": "string",
-        "typeRaw": "`string",
-        "default": "LooseObject`",
-        "pureDefault": "LooseObject`"
-      },
-      {
-        "name": "clickItem",
-        "inputType": 1,
-        "description": "g2-tag-cloud.clickItem.description",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<G2TagCloudClickItem>`",
-        "default": ""
-      },
-      {
-        "name": "ready",
-        "inputType": 1,
-        "description": "g2-tag-cloud.ready.description",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<Chart>`",
-        "default": ""
-      }
-    ],
-    "types": {},
-    "doc": "/chart/tag-cloud/en",
-    "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/tag-cloud",
-    "standalone": false
-  },
-  {
-    "lib": "@delon/chart",
-    "type": "component",
-    "selector": "g2-timeline",
-    "title": "g2-timeline.title",
-    "description": "g2-timeline.description",
-    "whenToUse": "g2-timeline.whenToUse",
-    "properties": [
-      {
-        "name": "repaint",
-        "inputType": 0,
-        "description": "g2-timeline.repaint.description",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`true`",
-        "pureDefault": "true"
-      },
-      {
-        "name": "delay",
-        "inputType": 0,
-        "description": "g2-timeline.delay.description",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "`0`",
-        "pureDefault": "0"
-      },
-      {
-        "name": "title",
-        "inputType": 0,
-        "description": "g2-timeline.title.description",
-        "type": "string",
-        "typeRaw": "`string,TemplateRef<void>`",
-        "default": ""
-      },
-      {
-        "name": "maxAxis",
-        "inputType": 0,
-        "description": "g2-timeline.maxAxis.description",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "`2`",
-        "pureDefault": "2"
-      },
-      {
-        "name": "data",
-        "inputType": 0,
-        "description": "g2-timeline.data.description",
-        "type": "Array",
-        "typeRaw": "`G2TimelineData[]`",
-        "default": ""
-      },
-      {
-        "name": "titleMap",
-        "inputType": 0,
-        "description": "g2-timeline.titleMap.description",
-        "type": "object",
-        "typeRaw": "`G2TimelineMap`",
-        "default": "",
-        "complexType": "G2TimelineMap"
-      },
-      {
-        "name": "colorMap",
-        "inputType": 0,
-        "description": "g2-timeline.colorMap.description",
-        "type": "object",
-        "typeRaw": "`G2TimelineMap`",
-        "default": "`{ y1: '#5B8FF9', y2: '#5AD8A6', y3: '#5D7092', y4: '#F6BD16', y5: '#E86452' }`",
-        "complexType": "G2TimelineMap",
-        "pureDefault": "{ y1: '#5B8FF9', y2: '#5AD8A6', y3: '#5D7092', y4: '#F6BD16', y5: '#E86452' }"
-      },
-      {
-        "name": "height",
-        "inputType": 0,
-        "description": "g2-timeline.height.description",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "`400`",
-        "pureDefault": "400"
-      },
-      {
-        "name": "padding",
-        "inputType": 0,
-        "description": "g2-timeline.padding.description",
-        "type": "Array",
-        "typeRaw": "`number[]`",
-        "default": "`[40, 8, 64, 40]`",
-        "pureDefault": "[40, 8, 64, 40]"
-      },
-      {
-        "name": "borderWidth",
-        "inputType": 0,
-        "description": "g2-timeline.borderWidth.description",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "`2`",
-        "pureDefault": "2"
-      },
-      {
-        "name": "mask",
-        "inputType": 0,
-        "description": "g2-timeline.mask.description",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": "`HH:mm`",
-        "pureDefault": "HH:mm"
-      },
-      {
-        "name": "maskSlider",
-        "inputType": 0,
-        "description": "g2-timeline.maskSlider.description",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": "`HH:mm`",
-        "pureDefault": "HH:mm"
-      },
-      {
-        "name": "position",
-        "inputType": 0,
-        "description": "g2-timeline.position.description",
-        "type": "Enum",
-        "typeRaw": "`'top','right','bottom','left'`",
-        "default": "`'top'`",
-        "typeDefinition": [
-          "top",
-          "right",
-          "bottom",
-          "left"
-        ],
-        "pureDefault": "top"
-      },
-      {
-        "name": "slider",
-        "inputType": 0,
-        "description": "g2-timeline.slider.description",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`true`",
-        "pureDefault": "true"
-      },
-      {
-        "name": "theme",
-        "inputType": 0,
-        "description": "g2-timeline.theme.description",
-        "type": "string",
-        "typeRaw": "`string",
-        "default": "LooseObject`",
-        "pureDefault": "LooseObject`"
-      },
-      {
-        "name": "clickItem",
-        "inputType": 1,
-        "description": "g2-timeline.clickItem.description",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<G2TimelineClickItem>`",
-        "default": ""
-      },
-      {
-        "name": "ready",
-        "inputType": 1,
-        "description": "g2-timeline.ready.description",
-        "type": "EventEmitter",
-        "typeRaw": "`EventEmitter<Chart>`",
-        "default": ""
-      }
-    ],
-    "types": {
-      "G2TimelineMap": [
-        {
-          "name": "y1",
-          "inputType": 0,
-          "description": "g2-timeline.y1.description",
-          "type": "string",
-          "typeRaw": "`string`",
-          "default": ""
-        },
-        {
-          "name": "y2",
-          "inputType": 0,
-          "description": "g2-timeline.y2.description",
-          "type": "string",
-          "typeRaw": "`string`",
-          "default": ""
-        },
-        {
-          "name": "y3",
-          "inputType": 0,
-          "description": "g2-timeline.y3.description",
-          "type": "string",
-          "typeRaw": "`string`",
-          "default": ""
-        },
-        {
-          "name": "y4",
-          "inputType": 0,
-          "description": "g2-timeline.y4.description",
-          "type": "string",
-          "typeRaw": "`string`",
-          "default": ""
-        },
-        {
-          "name": "y5",
-          "inputType": 0,
-          "description": "g2-timeline.y5.description",
-          "type": "string",
-          "typeRaw": "`string`",
-          "default": ""
-        }
-      ]
-    },
-    "doc": "/chart/timeline/en",
-    "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/timeline",
-    "standalone": false
-  },
-  {
-    "lib": "@delon/chart",
-    "type": "component",
-    "selector": "trend",
-    "title": "trend.title",
-    "description": "trend.description",
-    "whenToUse": "trend.whenToUse",
-    "properties": [
-      {
-        "name": "colorful",
-        "inputType": 0,
-        "description": "trend.colorful.description",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`true`",
-        "pureDefault": "true"
-      },
-      {
-        "name": "flag",
-        "inputType": 0,
-        "description": "trend.flag.description",
-        "type": "Enum",
-        "typeRaw": "`'up','down'`",
-        "default": "",
-        "typeDefinition": [
-          "up",
-          "down"
-        ]
-      },
-      {
-        "name": "reverseColor",
-        "inputType": 0,
-        "description": "trend.reverseColor.description",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`false`",
-        "pureDefault": "false"
-      }
-    ],
-    "types": {},
-    "doc": "/chart/trend/en",
-    "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/trend",
-    "standalone": false
-  },
-  {
-    "lib": "@delon/chart",
-    "type": "component",
-    "selector": "g2-water-wave",
-    "title": "g2-water-wave.title",
-    "description": "g2-water-wave.description",
-    "whenToUse": "g2-water-wave.whenToUse",
-    "properties": [
-      {
-        "name": "animate",
-        "inputType": 0,
-        "description": "g2-water-wave.animate.description",
-        "type": "boolean",
-        "typeRaw": "`boolean`",
-        "default": "`true`",
-        "pureDefault": "true"
-      },
-      {
-        "name": "delay",
-        "inputType": 0,
-        "description": "g2-water-wave.delay.description",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "`0`",
-        "pureDefault": "0"
-      },
-      {
-        "name": "title",
-        "inputType": 0,
-        "description": "g2-water-wave.title.description",
-        "type": "string",
-        "typeRaw": "`string,TemplateRef<void>`",
-        "default": ""
-      },
-      {
-        "name": "height",
-        "inputType": 0,
-        "description": "g2-water-wave.height.description",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": "`160`",
-        "pureDefault": "160"
-      },
-      {
-        "name": "color",
-        "inputType": 0,
-        "description": "g2-water-wave.color.description",
-        "type": "string",
-        "typeRaw": "`string`",
-        "default": "`#1890FF`",
-        "pureDefault": "#1890FF"
-      },
-      {
-        "name": "percent",
-        "inputType": 0,
-        "description": "g2-water-wave.percent.description",
-        "type": "number",
-        "typeRaw": "`number`",
-        "default": ""
-      }
-    ],
-    "types": {},
-    "doc": "/chart/water-wave/en",
-    "github": "https://github.com/ng-alain/delon/tree/master/packages/chart/water-wave",
     "standalone": false
   },
   {
@@ -27272,6 +25771,24 @@ export const DATA: Directive[] = [
         "name": "compact",
         "inputType": 0,
         "description": "sf.compact.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "expandable",
+        "inputType": 0,
+        "description": "sf.expandable.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "expanded",
+        "inputType": 0,
+        "description": "sf.expanded.description",
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
@@ -27507,6 +26024,24 @@ export const DATA: Directive[] = [
         "name": "compact",
         "inputType": 0,
         "description": "sf.compact.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "expandable",
+        "inputType": 0,
+        "description": "sf.expandable.description",
+        "type": "boolean",
+        "typeRaw": "`boolean`",
+        "default": "`false`",
+        "pureDefault": "false"
+      },
+      {
+        "name": "expanded",
+        "inputType": 0,
+        "description": "sf.expanded.description",
         "type": "boolean",
         "typeRaw": "`boolean`",
         "default": "`false`",
